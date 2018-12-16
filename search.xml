@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[软件-面向对象六大原则]]></title>
+    <url>%2F2018%2F12%2F16%2F%E8%BD%AF%E4%BB%B6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99%2F</url>
+    <content type="text"><![CDATA[小序系统开发过程中，最难的不是完成系统的开发工作，而是在于后续的升级、维护过程中让系统能够拥抱变化。拥抱变化也就意味着在满足需求且不破坏系统稳定性的前提下保持高可扩展性、高内聚、低耦合，经历各版本的变更之后依然保持清晰、灵活、稳定的系统架构。当然，这是比较理想的情况，但我们必须朝着这个方向去努力，那么遵循面向对象六大原则就是我们走向灵活软件之路所迈出的第一步。 软件的可维护性和可复用性。 好的系统设计应该具备如下三个性质： 可扩展性（Extensibility） 灵活性（Flexibility） 可插入性（Pluggability）]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>面向对象六大原则</tag>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+</search>
