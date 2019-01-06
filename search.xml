@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[android-view-事件分发]]></title>
+    <url>%2Fandroid-view-%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%2F</url>
+    <content type="text"><![CDATA[点击事件的分发，其实就是对MotionEvent事件的分发过程，产生MotionEvent后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。 事件传递的三个阶段： 分发（Dispatch）：事件分发对应dispatchTouchEvent方法。方法返回值true表示事件被当前视图消费掉，不再继续分发事件；方法返回值是super.dispatchTouchEvent表示继续分发该事件。如果当前视图是ViewGroup及其子类，则会调用onInterceptTouchEvent方法判定是否拦截该事件。 拦截（Intercept）：事件拦截对应onInterceptTouchEvent方法，这个方法只在ViewGroup及其子类中存在，在View和Activity中是不存在的。返回true，不会继续传递给子View，返回false或父类同名方法，则事件会继续传递给子View。 消费（Consume）：事件的消费对应着onTouchEvent。方法返回值true表示当前视图可以处理对应的事件，事件不会向上传递给父视图；返回值为false表示当前视图不处理这个事件，事件会传递给父视图的onTouchEvent方法进行处理。]]></content>
+      <categories>
+        <category>android</category>
+        <category>view</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[IDE-AndroidStudio]]></title>
     <url>%2FIDE-AndroidStudio%2F</url>
     <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 配置Logcat颜色 Assert：#8F0005 深红Debug：#0070BB 蓝Error：#FF0006 红Info：#48BB31 绿Verbose：#BBBBBB 白Warning：#BBBB23 黄 断点调试与管理 1 Show Execution Point2 Step Over：单步执行。如果当前行为方法调用（不会跳到方法内部），方法执行完后跳到下一行。3 Step Into：与Step Over不同的是，会跳到方法内部（非类库的方法）。4 Force Step Into：与Step Into不同的是，始终跳到方法内部。5 Step Out：跳出方法，返回到该方法调用处。6 Drop Frame7 Run to Cursor8 Resume Program：程序执行到下一个断点处。9 Stop：停止调试。 变量观察 选中变量，右键选择Add to Watches 修改变量值，调试结果。选择Set Value 条件断点循环体内设置。 日志断点Suspend取消选中，显示日志输入框。 异常断点单击如下图标，在弹窗中新建异常断点。 变量断点 方法断点在方法名所在行添加断点。 Plugins]]></content>
