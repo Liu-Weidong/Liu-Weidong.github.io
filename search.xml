@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[IDE-AndroidStudio]]></title>
+    <url>%2FIDE-AndroidStudio%2F</url>
+    <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 配置Logcat颜色 Assert：#8F0005 深红Debug：#0070BB 蓝Error：#FF0006 红Info：#48BB31 绿Verbose：#BBBBBB 白Warning：#BBBB23 黄 断点调试与管理 1 Show Execution Point2 Step Over：单步执行。如果当前行为方法调用（不会跳到方法内部），方法执行完后跳到下一行。3 Step Into：与Step Over不同的是，会跳到方法内部（非类库的方法）。4 Force Step Into：与Step Into不同的是，始终跳到方法内部。5 Step Out：跳出方法，返回到该方法调用处。6 Drop Frame7 Run to Cursor8 Resume Program：程序执行到下一个断点处。9 Stop：停止调试。 变量观察 选中变量，右键选择Add to Watches 修改变量值，调试结果。选择Set Value 条件断点循环体内设置。 日志断点Suspend取消选中，显示日志输入框。 异常断点单击如下图标，在弹窗中新建异常断点。 变量断点 方法断点在方法名所在行添加断点。 Plugins]]></content>
+      <categories>
+        <category>工具</category>
+        <category>Android Studio</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[android-系统架构]]></title>
     <url>%2Fandroid-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F</url>
     <content type="text"><![CDATA[简介Android是一种基于Linux的自由及开放源代码的操作系统，主要使用在智能手机、平板电脑等设备上。下图所示为Android平台的主要组件。 应用程序层用户直接可见的应用程序。 Java API框架您可通过以Java语言编写的API使用Android OS的整个功能集。这些API形成创建Android应用所需的构建块，它们可简化核心模块化系统组件和服务的重复使用，包括以下组件和服务： 丰富、可扩展的视图系统，可用以构建应用的 UI，包括列表、网格、文本框、按钮甚至可嵌入的网络浏览器 资源管理器，用于访问非代码资源，例如本地化的字符串、图形和布局文件 通知管理器，可让所有应用在状态栏中显示自定义提醒 Activity管理器，用于管理应用的生命周期，提供常见的导航返回栈 内容提供程序，可让应用访问其他应用（例如“联系人”应用）中的数据或者共享其自己的数据开发者可以完全访问Android系统应用使用的框架API。 原生C/C++库许多核心Android系统组件和服务（例如ART和HAL）构建自原生代码，需要以C和C++编写的原生库。Android 平台提供Java框架API以向应用显示其中部分原生库的功能。例如，您可以通过Android框架的Java OpenGL API访问OpenGL ES，以支持在应用中绘制和操作2D和3D图形。如果开发的是需要C或C++代码的应用，可以使用Android NDK直接从原生代码访问某些原生平台库。 Android RuntimeAndroid 5.0（API 21）或更高版本，每个应用都在其自己的进程中运行，并且有其自己的Android Runtime（ART）实例。ART编写为通过执行DEX文件在低内存设备上运行多个虚拟机，DEX文件是一种专为Android设计的字节码格式，经过优化，使用的内存很少。编译工具链（例如Jack）将Java源代码编译为DEX字节码，使其可在Android平台上运行。ART的部分主要功能包括： 预先 (AOT) 和即时 (JIT) 编译 优化的垃圾回收 (GC) 更好的调试支持，包括专用采样分析器、详细的诊断异常和崩溃报告，并且能够设置监视点以监控特定字段 Android 5.0（API 21）之前，Dalvik是Android Runtime。如果您的应用在ART上运行效果很好，那么它应该也可在 Dalvik 上运行，但反过来不一定。 Android还包含一套核心运行时库，可提供Java API框架使用的Java 编程语言大部分功能，包括一些Java 8语言功能。 HAL硬件抽象层（HAL）提供标准界面，向更高级别的Java API框架显示设备硬件功能。HAL包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当Java API框架要求访问设备硬件时，Android系统将为该硬件组件加载库模块。 相机 蓝牙Android 8.0 架构 Linux kernel使用Linux内核可让Android利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。]]></content>
@@ -10,7 +22,6 @@
       </categories>
       <tags>
         <tag>android</tag>
-        <tag>知识解析</tag>
       </tags>
   </entry>
   <entry>
@@ -35,7 +46,6 @@
       </categories>
       <tags>
         <tag>android</tag>
-        <tag>adb</tag>
       </tags>
   </entry>
   <entry>
@@ -82,7 +92,6 @@
         <category>搭建环境</category>
       </categories>
       <tags>
-        <tag>GitHub Pages</tag>
         <tag>Hexo</tag>
         <tag>NexT</tag>
       </tags>
