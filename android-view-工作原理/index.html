@@ -154,28 +154,27 @@
 
 
 
-  <meta name="description" content="简介android-系统架构 android 9.0 - API 282018年8月7日发布，代号Pie。Android 9.0 Pie WIFI RTT进行室内定位Android 9添加了对IEEE 802.11mc Wi-Fi协议（也称为Wi-Fi Round-Trip-Time(RTT)）的平台支持，从而让您的应用可以利用室内定位功能。在运行Android 9且具有硬件支持的设备上，应用可以">
+  <meta name="description" content="UI层级Android UI层级如下图：  Activity是Android的四大组件之一，与用户交互的窗口。 Window是抽象类，具体实现类是PhoneWindow。Android中的视图都是附加在Window上的，因此Window实际是View的直接管理者，Window和View通过ViewRootImpl来建立联系。Activity中的方法setContentView也是通过Window来">
 <meta name="keywords" content="android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android-versions">
-<meta property="og:url" content="https://lwdhub.github.io/android-versions/index.html">
+<meta property="og:title" content="android-view-工作原理">
+<meta property="og:url" content="https://lwdhub.github.io/android-view-工作原理/index.html">
 <meta property="og:site_name" content="漫漫求索">
-<meta property="og:description" content="简介android-系统架构 android 9.0 - API 282018年8月7日发布，代号Pie。Android 9.0 Pie WIFI RTT进行室内定位Android 9添加了对IEEE 802.11mc Wi-Fi协议（也称为Wi-Fi Round-Trip-Time(RTT)）的平台支持，从而让您的应用可以利用室内定位功能。在运行Android 9且具有硬件支持的设备上，应用可以">
+<meta property="og:description" content="UI层级Android UI层级如下图：  Activity是Android的四大组件之一，与用户交互的窗口。 Window是抽象类，具体实现类是PhoneWindow。Android中的视图都是附加在Window上的，因此Window实际是View的直接管理者，Window和View通过ViewRootImpl来建立联系。Activity中的方法setContentView也是通过Window来">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.imgur.com/83cJpNK.png">
-<meta property="og:image" content="https://i.imgur.com/kRlHtNP.png">
-<meta property="og:updated_time" content="2019-01-06T08:59:04.934Z">
+<meta property="og:image" content="https://i.imgur.com/hGTbIT9.png">
+<meta property="og:updated_time" content="2019-01-19T16:01:00.880Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android-versions">
-<meta name="twitter:description" content="简介android-系统架构 android 9.0 - API 282018年8月7日发布，代号Pie。Android 9.0 Pie WIFI RTT进行室内定位Android 9添加了对IEEE 802.11mc Wi-Fi协议（也称为Wi-Fi Round-Trip-Time(RTT)）的平台支持，从而让您的应用可以利用室内定位功能。在运行Android 9且具有硬件支持的设备上，应用可以">
-<meta name="twitter:image" content="https://i.imgur.com/83cJpNK.png">
+<meta name="twitter:title" content="android-view-工作原理">
+<meta name="twitter:description" content="UI层级Android UI层级如下图：  Activity是Android的四大组件之一，与用户交互的窗口。 Window是抽象类，具体实现类是PhoneWindow。Android中的视图都是附加在Window上的，因此Window实际是View的直接管理者，Window和View通过ViewRootImpl来建立联系。Activity中的方法setContentView也是通过Window来">
+<meta name="twitter:image" content="https://i.imgur.com/hGTbIT9.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://lwdhub.github.io/android-versions/">
+  <link rel="canonical" href="https://lwdhub.github.io/android-view-工作原理/">
 
 
 
@@ -185,7 +184,7 @@
   };
 </script>
 
-  <title>android-versions | 漫漫求索</title>
+  <title>android-view-工作原理 | 漫漫求索</title>
   
 
 
@@ -425,7 +424,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lwdhub.github.io/android-versions/">
+    <link itemprop="mainEntityOfPage" href="https://lwdhub.github.io/android-view-工作原理/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuweidong">
@@ -442,7 +441,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">android-versions
+          <h1 class="post-title" itemprop="name headline">android-view-工作原理
 
               
             
@@ -468,7 +467,7 @@
                 
               
 
-              <time title="创建时间：2018-12-21 23:55:49" itemprop="dateCreated datePublished" datetime="2018-12-21T23:55:49+08:00">2018-12-21</time>
+              <time title="创建时间：2019-01-16 22:32:42" itemprop="dateCreated datePublished" datetime="2019-01-16T22:32:42+08:00">2019-01-16</time>
             
 
             
@@ -493,7 +492,7 @@
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/android/versions/" itemprop="url" rel="index"><span itemprop="name">versions</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/android/view/" itemprop="url" rel="index"><span itemprop="name">view</span></a></span>
 
                 
                 
@@ -508,8 +507,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/android-versions/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-versions/" itemprop="commentCount"></span>
+                <a href="/android-view-工作原理/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-view-工作原理/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -544,19 +543,22 @@
       
 
       
-        <h1><span id="简介">简介</span></h1><p><a href="https://lwdhub.github.io/android-系统架构/">android-系统架构</a></p>
-<h1><span id="android-90-api-28">android 9.0 - API 28</span></h1><p>2018年8月7日发布，代号Pie。<br><img src="https://i.imgur.com/83cJpNK.png" width="50%"><br><a href="https://developer.android.google.cn/about/versions/pie/" target="_blank" rel="noopener">Android 9.0 Pie</a></p>
-<h2><span id="wifi-rtt进行室内定位">WIFI RTT进行室内定位</span></h2><p>Android 9添加了对IEEE 802.11mc Wi-Fi协议（也称为Wi-Fi Round-Trip-Time(RTT)）的平台支持，从而让您的应用可以利用室内定位功能。<br>在运行Android 9且具有硬件支持的设备上，应用可以使用<a href="https://developer.android.google.cn/reference/android/net/wifi/rtt/package-summary" target="_blank" rel="noopener">RTT API</a>来测量与附近支持RTT的Wi-Fi接入点(AP)的距离。设备必须已启用位置服务并开启Wi-Fi扫描（在 Settings &gt; Location 下），同时您的应用必须具有<a href="https://developer.android.google.cn/reference/android/Manifest.permission#ACCESS_FINE_LOCATION" target="_blank" rel="noopener">ACCESS_FINE_LOCATION</a>权限。</p>
-<h2><span id="显示屏缺口支持">显示屏缺口支持</span></h2><p>Android 9支持最新的全面屏，其中包含为摄像头和扬声器预留空间的屏幕缺口。通过<a href="https://developer.android.google.cn/reference/android/view/DisplayCutout" target="_blank" rel="noopener">DisplayCutout</a>类可确定非功能区域的位置和形状，这些区域不应显示内容。要确定这些屏幕缺口区域是否存在及其位置，请使用 <a href="https://developer.android.google.cn/reference/android/view/WindowInsets#getDisplayCutout(" target="_blank" rel="noopener">getDisplayCutout()</a>) 函数。</p>
-<h2><span id="通知">通知</span></h2><h2><span id="动画">动画</span></h2><h2><span id="自动填充框架">自动填充框架</span></h2><h2><span id="安全增强功能">安全增强功能</span></h2><h2><span id="android备份">Android备份</span></h2><h2><span id="无障碍功能">无障碍功能</span></h2><h2><span id="旋转">旋转</span></h2><h2><span id="文本">文本</span></h2><h2><span id="设备端系统跟踪">设备端系统跟踪</span></h2><h1><span id="android-81-api-27">android 8.1 - API 27</span></h1><p>2017年12月5日发布。</p>
-<h1><span id="android-80-api-26">android 8.0 - API 26</span></h1><p>2017年8月22日发布，代号Oreo（奥利奥）。<br><img src="https://i.imgur.com/kRlHtNP.png"><br><a href="https://developer.android.google.cn/about/versions/oreo/" target="_blank" rel="noopener">Android 8.0 Oreo</a></p>
-<h1><span id="android-71-api-25">android 7.1 - API 25</span></h1><p>2016年12月5日发布。</p>
-<h1><span id="android-70-api-24">android 7.0 - API 24</span></h1><p>2016年8月22日发布，代号Nougat（牛轧糖）。<br><a href="https://developer.android.google.cn/about/versions/nougat/" target="_blank" rel="noopener">Android 7.0 Nougat</a></p>
-<h1><span id="android-60-api-23">android 6.0 - API 23</span></h1><p>2015年5月28日发布，代号Marshmallow（棉花糖）。<br><a href="https://developer.android.google.cn/about/versions/marshmallow/" target="_blank" rel="noopener">Android 6.0 Marshmallow</a></p>
-<h1><span id="android-51-api-22">android 5.1 - API 22</span></h1><h1><span id="android-50-api-21">android 5.0 - API 21</span></h1><p>2014年10月15日发布，代号Lollipop（）<br><a href="https://developer.android.google.cn/about/versions/lollipop" target="_blank" rel="noopener">Android 5.0 Lollipop</a><br>扩展了Android的应用范围，从手机、平板电脑和可穿戴式设备，扩展到电视和汽车。</p>
-<h2><span id="material-design">Material Design</span></h2><h2><span id="以性能为中心">以性能为中心</span></h2><h2><span id="通知">通知</span></h2><h1><span id="android-44w-api-20">android 4.4W - API 20</span></h1><h1><span id="android-44-api-19">android 4.4 - API 19</span></h1><p><a href="https://developer.android.google.cn/about/versions/kitkat" target="_blank" rel="noopener">Android 4.4 KitKat</a></p>
-<h1><span id="android-43-api-18">android 4.3 - API 18</span></h1><h1><span id="android-42-422-api-17">android 4.2-4.2.2 - API 17</span></h1><h1><span id="android-41-411-api-16">android 4.1-4.1.1 - API 16</span></h1><h1><span id="android-403404-api-15">android 4.0.3–4.0.4 - API 15</span></h1><h1><span id="android-40-api-14">android 4.0 - API 14</span></h1><h1><span id="android-32-api-13">android 3.2 - API 13</span></h1><h1><span id="android-31-api-12">android 3.1 - API 12</span></h1><h1><span id="android-30-api-11">android 3.0 - API 11</span></h1><h1><span id="android-233-api-10">android 2.3.3 - API 10</span></h1><h1><span id="android-23-api-9">android 2.3 - API 9</span></h1><h1><span id="android-22-api-8">android 2.2 - API 8</span></h1><h1><span id="android-21-api-7">android 2.1 - API 7</span></h1><h1><span id="android-201-api-6">android 2.0.1 - API 6</span></h1><h1><span id="android-16-api-4">android 1.6 - API 4</span></h1><h1><span id="android-15-api-3">android 1.5 - API 3</span></h1><h1><span id="android-11-api-2">android 1.1 - API 2</span></h1><h1><span id="android-10-api-1">android 1.0 - API 1</span></h1><p>2008年，在Google I/O大会上，谷歌提出了Android HAL架构图。2008年9月，正式发布了Android 1.0系统。</p>
-<h1><span id="文章参考">文章参考</span></h1><p><a href="https://developer.android.google.cn/about/versions/pie/" target="_blank" rel="noopener">https://developer.android.google.cn/about/versions/pie/</a></p>
+        <h1><span id="ui层级">UI层级</span></h1><p>Android UI层级如下图：<br><img src="https://i.imgur.com/hGTbIT9.png" width="30%" height="40%"></p>
+<ul>
+<li>Activity是Android的四大组件之一，与用户交互的窗口。</li>
+<li>Window是抽象类，具体实现类是<strong>PhoneWindow</strong>。Android中的视图都是附加在Window上的，因此Window实际是View的直接管理者，Window和View通过ViewRootImpl来建立联系。Activity中的方法setContentView也是通过Window来完成的。（接口<strong>WindowManager</strong>继承ViewManager）</li>
+<li>Activity对象被创建完毕后，会将DecorView添加到Window中，同时会创建ViewRootImpl对象，并将ViewRootImpl对象和DecorView建立关联。</li>
+</ul>
+<h1><span id="view绘制流程">View绘制流程</span></h1><ul>
+<li><p><font color="#ff0000">Measure</font>（测量）：<br><strong>[View的测量过程]</strong> View的<code>measure</code>（final，子类不能重写该方法）方法进行测量，measure方法会调用View的<code>onMeasure</code>方法。源码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onMeasure</span><span class="params">(<span class="keyword">int</span> widthMeasureSpec, <span class="keyword">int</span> heightMeasureSpec)</span> </span>&#123;</span><br><span class="line">    setMeasuredDimension(getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec),</span><br><span class="line">            getDefaultSize(getSuggestedMinimumHeight(), heightMeasureSpec));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Utility to return a default size. Uses the supplied size if the</span></span><br><span class="line"><span class="comment"> * MeasureSpec imposed no constraints. Will get larger if allowed</span></span><br><span class="line"><span class="comment"> * by the MeasureSpec.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> size Default size for this view</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> measureSpec Constraints imposed by the parent</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> The size this view should be.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getDefaultSize</span><span class="params">(<span class="keyword">int</span> size, <span class="keyword">int</span> measureSpec)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> result = size;</span><br><span class="line">    <span class="keyword">int</span> specMode = MeasureSpec.getMode(measureSpec);</span><br><span class="line">    <span class="keyword">int</span> specSize = MeasureSpec.getSize(measureSpec);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">switch</span> (specMode) &#123;</span><br><span class="line">    <span class="keyword">case</span> MeasureSpec.UNSPECIFIED:</span><br><span class="line">        result = size;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MeasureSpec.AT_MOST:</span><br><span class="line">    <span class="keyword">case</span> MeasureSpec.EXACTLY:</span><br><span class="line">        result = specSize;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>[ViewGroup的测量过程]</strong> ViewGroup测量完自身后，还会遍历调用所有子View的measure方法。ViewGroup为抽象类，因此没有重写View的onMeasure方法，但是提供了方法<code>measureChildren</code>。源码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Ask all of the children of this view to measure themselves, taking into</span></span><br><span class="line"><span class="comment"> * account both the MeasureSpec requirements for this view and its padding.</span></span><br><span class="line"><span class="comment"> * We skip children that are in the GONE state The heavy lifting is done in</span></span><br><span class="line"><span class="comment"> * getChildMeasureSpec.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> widthMeasureSpec The width requirements for this view</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> heightMeasureSpec The height requirements for this view</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">measureChildren</span><span class="params">(<span class="keyword">int</span> widthMeasureSpec, <span class="keyword">int</span> heightMeasureSpec)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> size = mChildrenCount;</span><br><span class="line">    <span class="keyword">final</span> View[] children = mChildren;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; ++i) &#123;</span><br><span class="line">        <span class="keyword">final</span> View child = children[i];</span><br><span class="line">        <span class="keyword">if</span> ((child.mViewFlags &amp; VISIBILITY_MASK) != GONE) &#123;</span><br><span class="line">            measureChild(child, widthMeasureSpec, heightMeasureSpec);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Ask one of the children of this view to measure itself, taking into</span></span><br><span class="line"><span class="comment"> * account both the MeasureSpec requirements for this view and its padding.</span></span><br><span class="line"><span class="comment"> * The heavy lifting is done in getChildMeasureSpec.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> child The child to measure</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> parentWidthMeasureSpec The width requirements for this view</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> parentHeightMeasureSpec The height requirements for this view</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">measureChild</span><span class="params">(View child, <span class="keyword">int</span> parentWidthMeasureSpec,</span></span></span><br><span class="line"><span class="function"><span class="params">    <span class="keyword">int</span> parentHeightMeasureSpec)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">final</span> LayoutParams lp = child.getLayoutParams();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> childWidthMeasureSpec = getChildMeasureSpec(parentWidthMeasureSpec,</span><br><span class="line">            mPaddingLeft + mPaddingRight, lp.width);</span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> childHeightMeasureSpec = getChildMeasureSpec(parentHeightMeasureSpec,</span><br><span class="line">            mPaddingTop + mPaddingBottom, lp.height);</span><br><span class="line"></span><br><span class="line">    child.measure(childWidthMeasureSpec, childHeightMeasureSpec);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：测量完成后，通过<code>getMeasuredWidth</code>与<code>getMeasuredHeight</code>获取宽高。onMeasure方法中可能不准确，在onLayout方法中获取比较靠谱。<br><strong>Activity中获取View宽高的方式：</strong><br>方法1：view.post(runnable)<br>方法2：Activity中重写方法onWindowFocusChanged。页面焦点改变时，该方法就会被调用。<br>方法3：ViewTreeObserver - onGlobalLayoutListener<br>方法4：</p>
+</li>
+<li><font color="#ff0000">Layout</font>（布局）：</li>
+<li><font color="#ff0000">Draw</font>（绘制）：</li>
+</ul>
 
       
     </div>
@@ -625,7 +627,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://lwdhub.github.io/android-versions/" title="android-versions">https://lwdhub.github.io/android-versions/</a>
+    <a href="https://lwdhub.github.io/android-view-工作原理/" title="android-view-工作原理">https://lwdhub.github.io/android-view-工作原理/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -651,8 +653,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/计算机基础-UML类图/" rel="next" title="计算机基础-UML类图">
-                <i class="fa fa-chevron-left"></i> 计算机基础-UML类图
+              <a href="/android-view-事件分发/" rel="next" title="android-view-事件分发">
+                <i class="fa fa-chevron-left"></i> android-view-事件分发
               </a>
             
           </div>
@@ -661,8 +663,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/android-adb/" rel="prev" title="android-adb">
-                android-adb <i class="fa fa-chevron-right"></i>
+              <a href="/android-view-滑动/" rel="prev" title="android-view-滑动">
+                android-view-滑动 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -872,7 +874,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">android 9.0 - API 28</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">WIFI RTT进行室内定位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.2.</span> <span class="nav-text">显示屏缺口支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.3.</span> <span class="nav-text">通知</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.4.</span> <span class="nav-text">动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.5.</span> <span class="nav-text">自动填充框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.6.</span> <span class="nav-text">安全增强功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.7.</span> <span class="nav-text">Android备份</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.8.</span> <span class="nav-text">无障碍功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.9.</span> <span class="nav-text">旋转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.10.</span> <span class="nav-text">文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.11.</span> <span class="nav-text">设备端系统跟踪</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">android 8.1 - API 27</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">android 8.0 - API 26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">android 7.1 - API 25</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">android 7.0 - API 24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">android 6.0 - API 23</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">android 5.1 - API 22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">9.</span> <span class="nav-text">android 5.0 - API 21</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">9.1.</span> <span class="nav-text">Material Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">9.2.</span> <span class="nav-text">以性能为中心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">9.3.</span> <span class="nav-text">通知</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">10.</span> <span class="nav-text">android 4.4W - API 20</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">11.</span> <span class="nav-text">android 4.4 - API 19</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">12.</span> <span class="nav-text">android 4.3 - API 18</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">13.</span> <span class="nav-text">android 4.2-4.2.2 - API 17</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">14.</span> <span class="nav-text">android 4.1-4.1.1 - API 16</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">15.</span> <span class="nav-text">android 4.0.3–4.0.4 - API 15</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">16.</span> <span class="nav-text">android 4.0 - API 14</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">17.</span> <span class="nav-text">android 3.2 - API 13</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">18.</span> <span class="nav-text">android 3.1 - API 12</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">19.</span> <span class="nav-text">android 3.0 - API 11</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">20.</span> <span class="nav-text">android 2.3.3 - API 10</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">21.</span> <span class="nav-text">android 2.3 - API 9</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">22.</span> <span class="nav-text">android 2.2 - API 8</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">23.</span> <span class="nav-text">android 2.1 - API 7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">24.</span> <span class="nav-text">android 2.0.1 - API 6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">25.</span> <span class="nav-text">android 1.6 - API 4</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">26.</span> <span class="nav-text">android 1.5 - API 3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">27.</span> <span class="nav-text">android 1.1 - API 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">28.</span> <span class="nav-text">android 1.0 - API 1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">29.</span> <span class="nav-text">文章参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">UI层级</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">View绘制流程</span></a></li></ol></div>
             
 
           </div>

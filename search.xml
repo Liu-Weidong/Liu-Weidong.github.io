@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[android-API-Support-Library]]></title>
+    <url>%2Fandroid-API-Support-Library%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>android</category>
+        <category>API</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[android-API-Platform]]></title>
+    <url>%2Fandroid-API-Platform%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>android</category>
+        <category>API</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[android-view-滑动]]></title>
+    <url>%2Fandroid-view-%E6%BB%91%E5%8A%A8%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>android</category>
+        <category>view</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[android-view-工作原理]]></title>
+    <url>%2Fandroid-view-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[UI层级Android UI层级如下图： Activity是Android的四大组件之一，与用户交互的窗口。 Window是抽象类，具体实现类是PhoneWindow。Android中的视图都是附加在Window上的，因此Window实际是View的直接管理者，Window和View通过ViewRootImpl来建立联系。Activity中的方法setContentView也是通过Window来完成的。（接口WindowManager继承ViewManager） Activity对象被创建完毕后，会将DecorView添加到Window中，同时会创建ViewRootImpl对象，并将ViewRootImpl对象和DecorView建立关联。 View绘制流程 Measure（测量）：[View的测量过程] View的measure（final，子类不能重写该方法）方法进行测量，measure方法会调用View的onMeasure方法。源码如下： 123456789101112131415161718192021222324252627282930protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) &#123; setMeasuredDimension(getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec), getDefaultSize(getSuggestedMinimumHeight(), heightMeasureSpec));&#125;/** * Utility to return a default size. Uses the supplied size if the * MeasureSpec imposed no constraints. Will get larger if allowed * by the MeasureSpec. * * @param size Default size for this view * @param measureSpec Constraints imposed by the parent * @return The size this view should be. */public static int getDefaultSize(int size, int measureSpec) &#123; int result = size; int specMode = MeasureSpec.getMode(measureSpec); int specSize = MeasureSpec.getSize(measureSpec); switch (specMode) &#123; case MeasureSpec.UNSPECIFIED: result = size; break; case MeasureSpec.AT_MOST: case MeasureSpec.EXACTLY: result = specSize; break; &#125; return result;&#125; [ViewGroup的测量过程] ViewGroup测量完自身后，还会遍历调用所有子View的measure方法。ViewGroup为抽象类，因此没有重写View的onMeasure方法，但是提供了方法measureChildren。源码如下： 12345678910111213141516171819202122232425262728293031323334353637383940/** * Ask all of the children of this view to measure themselves, taking into * account both the MeasureSpec requirements for this view and its padding. * We skip children that are in the GONE state The heavy lifting is done in * getChildMeasureSpec. * * @param widthMeasureSpec The width requirements for this view * @param heightMeasureSpec The height requirements for this view */protected void measureChildren(int widthMeasureSpec, int heightMeasureSpec) &#123; final int size = mChildrenCount; final View[] children = mChildren; for (int i = 0; i &lt; size; ++i) &#123; final View child = children[i]; if ((child.mViewFlags &amp; VISIBILITY_MASK) != GONE) &#123; measureChild(child, widthMeasureSpec, heightMeasureSpec); &#125; &#125;&#125;/** * Ask one of the children of this view to measure itself, taking into * account both the MeasureSpec requirements for this view and its padding. * The heavy lifting is done in getChildMeasureSpec. * * @param child The child to measure * @param parentWidthMeasureSpec The width requirements for this view * @param parentHeightMeasureSpec The height requirements for this view */protected void measureChild(View child, int parentWidthMeasureSpec, int parentHeightMeasureSpec) &#123; final LayoutParams lp = child.getLayoutParams(); final int childWidthMeasureSpec = getChildMeasureSpec(parentWidthMeasureSpec, mPaddingLeft + mPaddingRight, lp.width); final int childHeightMeasureSpec = getChildMeasureSpec(parentHeightMeasureSpec, mPaddingTop + mPaddingBottom, lp.height); child.measure(childWidthMeasureSpec, childHeightMeasureSpec);&#125; 注意：测量完成后，通过getMeasuredWidth与getMeasuredHeight获取宽高。onMeasure方法中可能不准确，在onLayout方法中获取比较靠谱。Activity中获取View宽高的方式：方法1：view.post(runnable)方法2：Activity中重写方法onWindowFocusChanged。页面焦点改变时，该方法就会被调用。方法3：ViewTreeObserver - onGlobalLayoutListener方法4： Layout（布局）： Draw（绘制）：]]></content>
+      <categories>
+        <category>android</category>
+        <category>view</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[android-view-事件分发]]></title>
     <url>%2Fandroid-view-%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%2F</url>
     <content type="text"><![CDATA[点击事件的分发，其实就是对MotionEvent事件的分发过程，产生MotionEvent后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。 事件传递的三个阶段： 分发（Dispatch）：事件分发对应dispatchTouchEvent方法。方法返回值true表示事件被当前视图消费掉，不再继续分发事件；方法返回值是super.dispatchTouchEvent表示继续分发该事件。如果当前视图是ViewGroup及其子类，则会调用onInterceptTouchEvent方法判定是否拦截该事件。 拦截（Intercept）：事件拦截对应onInterceptTouchEvent方法，这个方法只在ViewGroup及其子类中存在，在View和Activity中是不存在的。返回true，不会继续传递给子View，返回false或父类同名方法，则事件会继续传递给子View。 消费（Consume）：事件的消费对应着onTouchEvent。方法返回值true表示当前视图可以处理对应的事件，事件不会向上传递给父视图；返回值为false表示当前视图不处理这个事件，事件会传递给父视图的onTouchEvent方法进行处理。]]></content>
