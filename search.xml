@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[android-API-Support-Library]]></title>
-    <url>%2Fandroid-API-Support-Library%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>android</category>
-        <category>API</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[android-API-Platform]]></title>
-    <url>%2Fandroid-API-Platform%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>android</category>
-        <category>API</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[android-view-滑动]]></title>
     <url>%2Fandroid-view-%E6%BB%91%E5%8A%A8%2F</url>
     <content type="text"></content>
