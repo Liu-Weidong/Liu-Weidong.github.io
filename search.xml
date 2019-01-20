@@ -78,7 +78,6 @@
     <content type="text"><![CDATA[简介 adb命令 adb shell命令 简介Android Debug Bridge（ADB），用于通过电脑端与设备交互。ADB是一个C/S架构的命令行工具，端口5037，如下图所示：adb client：运行在PC端；所有的client都是通过5037端口与adb server进行通信的。adb server：作为一个后台的程序运行在PC端的，负责管理client进程以及adb daemon之间的通信。当一个server开启的时候，会自动绑定并且监听5037端口，接收client通过该端口发送过来的命令。同时server扫描设备端口，进行对已连接设备的定位。adb daemon：每个设备/模拟器连接到PC端时，总会开启这么一个后台进程，并且为其分配了两个连续的端口。端口范围5554-5585，adb连接手机的最大数量是16。偶数端口用于server与设备进行交互的，可以让server直接从设备中读取数据，而奇数端口是用来与设备的adb进行连接通信的。 adb命令adb shell命令]]></content>
       <categories>
         <category>android</category>
-        <category>adb</category>
       </categories>
       <tags>
         <tag>android</tag>
