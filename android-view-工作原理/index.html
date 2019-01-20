@@ -442,7 +442,6 @@
         
         
           <h1 class="post-title" itemprop="name headline">android-view-工作原理
-
               
             
           </h1>
@@ -543,19 +542,19 @@
       
 
       
-        <h1><span id="ui-ceng-ji">UI层级</span><a href="#ui-ceng-ji" class="header-anchor"></a></h1><p>Android UI层级如下图：<br><img src="https://i.imgur.com/hGTbIT9.png" width="30%" height="40%"></p>
+        <h1 id="UI层级"><a href="#UI层级" class="headerlink" title="UI层级"></a>UI层级</h1><p>Android UI层级如下图：<br><img src="https://i.imgur.com/hGTbIT9.png" width="30%" height="40%"></p>
 <ul>
 <li>Activity是Android的四大组件之一，与用户交互的窗口。</li>
 <li>Window是抽象类，具体实现类是<code>PhoneWindow</code>。Android中的视图都是附加在Window上的，因此Window实际是View的直接管理者，Window和View通过<code>ViewRootImpl</code>来建立联系。Activity中的方法setContentView也是通过Window来完成的。（接口<strong>WindowManager</strong>继承ViewManager）</li>
 <li>Activity对象被创建完毕后，会将DecorView添加到Window中，同时会创建ViewRootImpl对象，并将ViewRootImpl对象和DecorView建立关联。</li>
 </ul>
-<h1><span id="ji-chu-zhi-shi">基础知识</span><a href="#ji-chu-zhi-shi" class="header-anchor"></a></h1><h2><span id="measurespec">MeasureSpec</span><a href="#measurespec" class="header-anchor"></a></h2><p>32位int值，高2位表示<code>SpecMode</code>测量模式，低30位表示<code>SpecSize</code>某种测量模式下的规格大小。</p>
-<h3><span id="specmode">SpecMode</span><a href="#specmode" class="header-anchor"></a></h3><ul>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="MeasureSpec"><a href="#MeasureSpec" class="headerlink" title="MeasureSpec"></a>MeasureSpec</h2><p>32位int值，高2位表示<code>SpecMode</code>测量模式，低30位表示<code>SpecSize</code>某种测量模式下的规格大小。</p>
+<h3 id="SpecMode"><a href="#SpecMode" class="headerlink" title="SpecMode"></a>SpecMode</h3><ul>
 <li>UNSPECIFIED：不指定测量模式。父视图没有限制子视图的大小，子视图可以是想要的任何尺寸。</li>
 <li>EXACTLY：精确测量模式。View的测量值就是SpecSize。match_parent</li>
 <li>AT_MOST：最大值模式。子视图的尺寸可以是不超过父视图允许的最大尺寸的任何尺寸。wrap_content</li>
 </ul>
-<h2><span id="layoutparams">LayoutParams</span><a href="#layoutparams" class="header-anchor"></a></h2><h1><span id="view-hui-zhi-liu-cheng">View绘制流程</span><a href="#view-hui-zhi-liu-cheng" class="header-anchor"></a></h1><ul>
+<h2 id="LayoutParams"><a href="#LayoutParams" class="headerlink" title="LayoutParams"></a>LayoutParams</h2><h1 id="View绘制流程"><a href="#View绘制流程" class="headerlink" title="View绘制流程"></a>View绘制流程</h1><ul>
 <li><p><font color="#ff0000">Measure</font>（测量）：<br><strong>[View的测量过程]</strong> View的<code>measure</code>（final，子类不能重写该方法）方法进行测量，measure方法会调用View的<code>onMeasure</code>方法。源码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onMeasure</span><span class="params">(<span class="keyword">int</span> widthMeasureSpec, <span class="keyword">int</span> heightMeasureSpec)</span> </span>&#123;</span><br><span class="line">    setMeasuredDimension(getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec),</span><br><span class="line">            getDefaultSize(getSuggestedMinimumHeight(), heightMeasureSpec));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Utility to return a default size. Uses the supplied size if the</span></span><br><span class="line"><span class="comment"> * MeasureSpec imposed no constraints. Will get larger if allowed</span></span><br><span class="line"><span class="comment"> * by the MeasureSpec.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> size Default size for this view</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> measureSpec Constraints imposed by the parent</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> The size this view should be.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getDefaultSize</span><span class="params">(<span class="keyword">int</span> size, <span class="keyword">int</span> measureSpec)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> result = size;</span><br><span class="line">    <span class="keyword">int</span> specMode = MeasureSpec.getMode(measureSpec);</span><br><span class="line">    <span class="keyword">int</span> specSize = MeasureSpec.getSize(measureSpec);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">switch</span> (specMode) &#123;</span><br><span class="line">    <span class="keyword">case</span> MeasureSpec.UNSPECIFIED:</span><br><span class="line">        result = size;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> MeasureSpec.AT_MOST:</span><br><span class="line">    <span class="keyword">case</span> MeasureSpec.EXACTLY:</span><br><span class="line">        result = specSize;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>[ViewGroup的测量过程]</strong> ViewGroup测量完自身后，还会遍历调用所有子View的measure方法。ViewGroup为抽象类，因此没有重写View的onMeasure方法，但是提供了方法<code>measureChildren</code>。源码如下：</p>
@@ -575,7 +574,6 @@
     
     
 
-
     
 	
 	<div>
@@ -589,7 +587,7 @@
 	</div>
 
     
-      
+       
     
     
       <div>
@@ -732,7 +730,7 @@
         </ul>
       
 
-      <div class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -868,16 +866,14 @@
           
             
           
-		  
           
 
-		  
         </div>
-      </div>
+      </section>
 
       
       <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
@@ -885,11 +881,11 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">UI层级</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">MeasureSpec</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.1.</span> <span class="nav-text">SpecMode</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.2.</span> <span class="nav-text">LayoutParams</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">View绘制流程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UI层级"><span class="nav-number">1.</span> <span class="nav-text">UI层级</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基础知识"><span class="nav-number">2.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MeasureSpec"><span class="nav-number">2.1.</span> <span class="nav-text">MeasureSpec</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SpecMode"><span class="nav-number">2.1.1.</span> <span class="nav-text">SpecMode</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LayoutParams"><span class="nav-number">2.2.</span> <span class="nav-text">LayoutParams</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#View绘制流程"><span class="nav-number">3.</span> <span class="nav-text">View绘制流程</span></a></li></ol></div>
             
 
           </div>
-        </div>
+        </section>
       <!--/noindex-->
       
 
@@ -926,7 +922,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共6.6k字</span>
+  <span class="post-count">全站共6.4k字</span>
 </div>
 
         

@@ -154,19 +154,19 @@
 
 
 
-  <meta name="description" content="简介 adb命令 adb shell命令    简介Android Debug Bridge（ADB），用于通过电脑端与设备交互。ADB是一个C/S架构的命令行工具，端口5037，如下图所示：adb client：运行在PC端；所有的client都是通过5037端口与adb server进行通信的。adb server：作为一个后台的程序运行在PC端的，负责管理client进程以及adb">
+  <meta name="description" content="简介Android Debug Bridge（ADB），用于通过电脑端与设备交互。ADB是一个C/S架构的命令行工具，端口5037，如下图所示：adb client：运行在PC端；所有的client都是通过5037端口与adb server进行通信的。adb server：作为一个后台的程序运行在PC端的，负责管理client进程以及adb daemon之间的通信。当一个server开启的时候，">
 <meta name="keywords" content="android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="android-adb">
 <meta property="og:url" content="https://lwdhub.github.io/android-adb/index.html">
 <meta property="og:site_name" content="漫漫求索">
-<meta property="og:description" content="简介 adb命令 adb shell命令    简介Android Debug Bridge（ADB），用于通过电脑端与设备交互。ADB是一个C/S架构的命令行工具，端口5037，如下图所示：adb client：运行在PC端；所有的client都是通过5037端口与adb server进行通信的。adb server：作为一个后台的程序运行在PC端的，负责管理client进程以及adb">
+<meta property="og:description" content="简介Android Debug Bridge（ADB），用于通过电脑端与设备交互。ADB是一个C/S架构的命令行工具，端口5037，如下图所示：adb client：运行在PC端；所有的client都是通过5037端口与adb server进行通信的。adb server：作为一个后台的程序运行在PC端的，负责管理client进程以及adb daemon之间的通信。当一个server开启的时候，">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.imgur.com/RXA59I0.png">
 <meta property="og:updated_time" content="2019-01-20T10:49:19.801Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android-adb">
-<meta name="twitter:description" content="简介 adb命令 adb shell命令    简介Android Debug Bridge（ADB），用于通过电脑端与设备交互。ADB是一个C/S架构的命令行工具，端口5037，如下图所示：adb client：运行在PC端；所有的client都是通过5037端口与adb server进行通信的。adb server：作为一个后台的程序运行在PC端的，负责管理client进程以及adb">
+<meta name="twitter:description" content="简介Android Debug Bridge（ADB），用于通过电脑端与设备交互。ADB是一个C/S架构的命令行工具，端口5037，如下图所示：adb client：运行在PC端；所有的client都是通过5037端口与adb server进行通信的。adb server：作为一个后台的程序运行在PC端的，负责管理client进程以及adb daemon之间的通信。当一个server开启的时候，">
 <meta name="twitter:image" content="https://i.imgur.com/RXA59I0.png">
 
 
@@ -442,7 +442,6 @@
         
         
           <h1 class="post-title" itemprop="name headline">android-adb
-
               
             
           </h1>
@@ -536,18 +535,9 @@
       
 
       
-        <div class="toc">
-
-<!-- toc -->
-<ul>
-<li><a href="#jian-jie">简介</a></li>
-<li><a href="#adb-ming-ling">adb命令</a></li>
-<li><a href="#adb-shell-ming-ling">adb shell命令</a></li>
-</ul>
-<!-- tocstop -->
-<p></p></div><p></p>
-<h1><span id="jian-jie">简介</span><a href="#jian-jie" class="header-anchor"></a></h1><p>Android Debug Bridge（ADB），用于通过电脑端与设备交互。<br>ADB是一个C/S架构的命令行工具，端口5037，如下图所示：<br><img src="https://i.imgur.com/RXA59I0.png" alt="adb"><br><strong>adb client：</strong>运行在PC端；所有的client都是通过5037端口与adb server进行通信的。<br><strong>adb server：</strong>作为一个后台的程序运行在PC端的，负责管理client进程以及adb daemon之间的通信。当一个server开启的时候，会自动绑定并且监听5037端口，接收client通过该端口发送过来的命令。同时server扫描设备端口，进行对已连接设备的定位。<br><strong>adb daemon：</strong>每个设备/模拟器连接到PC端时，总会开启这么一个后台进程，并且为其分配了两个连续的端口。端口范围5554-5585，adb连接手机的最大数量是16。偶数端口用于server与设备进行交互的，可以让server直接从设备中读取数据，而奇数端口是用来与设备的adb进行连接通信的。</p>
-<h1><span id="adb-ming-ling">adb命令</span><a href="#adb-ming-ling" class="header-anchor"></a></h1><h1><span id="adb-shell-ming-ling">adb shell命令</span><a href="#adb-shell-ming-ling" class="header-anchor"></a></h1>
+        <!-- toc -->
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Android Debug Bridge（ADB），用于通过电脑端与设备交互。<br>ADB是一个C/S架构的命令行工具，端口5037，如下图所示：<br><img src="https://i.imgur.com/RXA59I0.png" alt="adb"><br><strong>adb client：</strong>运行在PC端；所有的client都是通过5037端口与adb server进行通信的。<br><strong>adb server：</strong>作为一个后台的程序运行在PC端的，负责管理client进程以及adb daemon之间的通信。当一个server开启的时候，会自动绑定并且监听5037端口，接收client通过该端口发送过来的命令。同时server扫描设备端口，进行对已连接设备的定位。<br><strong>adb daemon：</strong>每个设备/模拟器连接到PC端时，总会开启这么一个后台进程，并且为其分配了两个连续的端口。端口范围5554-5585，adb连接手机的最大数量是16。偶数端口用于server与设备进行交互的，可以让server直接从设备中读取数据，而奇数端口是用来与设备的adb进行连接通信的。</p>
+<h1 id="adb命令"><a href="#adb命令" class="headerlink" title="adb命令"></a>adb命令</h1><h1 id="adb-shell命令"><a href="#adb-shell命令" class="headerlink" title="adb shell命令"></a>adb shell命令</h1>
       
     </div>
 
@@ -556,7 +546,6 @@
     
     
     
-
 
     
 	
@@ -571,7 +560,7 @@
 	</div>
 
     
-      
+       
     
     
       <div>
@@ -714,7 +703,7 @@
         </ul>
       
 
-      <div class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -850,16 +839,14 @@
           
             
           
-		  
           
 
-		  
         </div>
-      </div>
+      </section>
 
       
       <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
@@ -867,11 +854,11 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">adb命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">adb shell命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#adb命令"><span class="nav-number">2.</span> <span class="nav-text">adb命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#adb-shell命令"><span class="nav-number">3.</span> <span class="nav-text">adb shell命令</span></a></li></ol></div>
             
 
           </div>
-        </div>
+        </section>
       <!--/noindex-->
       
 
@@ -908,7 +895,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共6.6k字</span>
+  <span class="post-count">全站共6.4k字</span>
 </div>
 
         
