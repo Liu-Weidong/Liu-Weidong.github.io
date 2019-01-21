@@ -154,25 +154,23 @@
 
 
 
-  <meta name="description" content="点击事件的分发，其实就是对MotionEvent事件的分发过程，产生MotionEvent后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。  事件传递的三个阶段：  分发（Dispatch）：事件分发对应dispatchTouchEvent方法。方法返回值true表示事件被当前视图消费掉，不再继续分发事件；方法返回值是super.dispatchTouchEvent">
-<meta name="keywords" content="android">
-<meta property="og:type" content="article">
-<meta property="og:title" content="android-view-事件分发">
-<meta property="og:url" content="https://lwdhub.github.io/android-view-事件分发/index.html">
+  <meta name="description" content="读万卷书，行万里路。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="漫漫求索">
+<meta property="og:url" content="https://lwdhub.github.io/categories/架构/index.html">
 <meta property="og:site_name" content="漫漫求索">
-<meta property="og:description" content="点击事件的分发，其实就是对MotionEvent事件的分发过程，产生MotionEvent后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。  事件传递的三个阶段：  分发（Dispatch）：事件分发对应dispatchTouchEvent方法。方法返回值true表示事件被当前视图消费掉，不再继续分发事件；方法返回值是super.dispatchTouchEvent">
+<meta property="og:description" content="读万卷书，行万里路。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-06T12:15:59.213Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android-view-事件分发">
-<meta name="twitter:description" content="点击事件的分发，其实就是对MotionEvent事件的分发过程，产生MotionEvent后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。  事件传递的三个阶段：  分发（Dispatch）：事件分发对应dispatchTouchEvent方法。方法返回值true表示事件被当前视图消费掉，不再继续分发事件；方法返回值是super.dispatchTouchEvent">
+<meta name="twitter:title" content="漫漫求索">
+<meta name="twitter:description" content="读万卷书，行万里路。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://lwdhub.github.io/android-view-事件分发/">
+  <link rel="canonical" href="https://lwdhub.github.io/categories/架构/">
 
 
 
@@ -182,7 +180,7 @@
   };
 </script>
 
-  <title>android-view-事件分发 | 漫漫求索</title>
+  <title>分类: 架构 | 漫漫求索</title>
   
 
 
@@ -230,7 +228,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -288,7 +286,7 @@
         
         
           
-          <li class="menu-item menu-item-categories">
+          <li class="menu-item menu-item-categories menu-item-active">
 
     
     
@@ -402,287 +400,80 @@
           
             
 
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
           
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block category">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>架构<small>分类</small>
+        </h1>
+      </div>
 
-  
-  
-  
-
-  
+      
+        
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lwdhub.github.io/android-view-事件分发/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuweidong">
-      <meta itemprop="description" content="读万卷书，行万里路。">
-      <meta itemprop="image" content="/images/lufei.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="漫漫求索">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+            <a class="post-title-link" href="/架构-MVC-MVP-MVVM/" itemprop="url">
+              
+                <span itemprop="name">架构-MVC-MVP-MVVM</span>
+              
+            </a>
         
-          <h1 class="post-title" itemprop="name headline">android-view-事件分发
-              
-            
-          </h1>
-        
+      </h2>
 
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-01-06 20:05:34" itemprop="dateCreated datePublished" datetime="2019-01-06T20:05:34+08:00">2019-01-06</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/android/view/" itemprop="url" rel="index"><span itemprop="name">view</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/android-view-事件分发/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-view-事件分发/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-            <i class="fa fa-eye"></i>
-             阅读次数： 
-            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
-            </span>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <blockquote>
-<p>点击事件的分发，其实就是对MotionEvent事件的分发过程，产生MotionEvent后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。</p>
-</blockquote>
-<p><strong>事件传递的三个阶段：</strong></p>
-<ul>
-<li><font color="#ff0000"><strong>分发（Dispatch）</strong></font>：事件分发对应dispatchTouchEvent方法。方法返回值true表示事件被当前视图消费掉，不再继续分发事件；方法返回值是super.dispatchTouchEvent表示继续分发该事件。如果当前视图是ViewGroup及其子类，则会调用onInterceptTouchEvent方法判定是否拦截该事件。</li>
-<li><font color="#ff0000"><strong>拦截（Intercept）</strong></font>：事件拦截对应onInterceptTouchEvent方法，这个方法只在ViewGroup及其子类中存在，在View和Activity中是不存在的。返回true，不会继续传递给子View，返回false或父类同名方法，则事件会继续传递给子View。</li>
-<li><font color="#ff0000"><strong>消费（Consume）</strong></font>：事件的消费对应着onTouchEvent。方法返回值true表示当前视图可以处理对应的事件，事件不会向上传递给父视图；返回值为false表示当前视图不处理这个事件，事件会传递给父视图的onTouchEvent方法进行处理。</li>
-</ul>
-
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-	
-	<div>
-	  
-        <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-    
-</div>
-      
-	</div>
-
-    
-       
-    
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.png" alt="liuweidong 微信支付">
-        <p>微信支付</p>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-01-21T23:31:43+08:00" content="2019-01-21">
+          01-21
+        </time>
       </div>
-    
 
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
-    
-
-    
-      <div>
-        
-
-
-
-  
-
-
-
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>liuweidong</li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    
-    <a href="https://lwdhub.github.io/android-view-事件分发/" title="android-view-事件分发">https://lwdhub.github.io/android-view-事件分发/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
-</ul>
-
-      </div>
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/android/" rel="tag"><i class="fa fa-tag"></i> android</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/IDE-AndroidStudio/" rel="next" title="IDE-AndroidStudio">
-                <i class="fa fa-chevron-left"></i> IDE-AndroidStudio
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/android-view-工作原理/" rel="prev" title="android-view-工作原理">
-                android-view-工作原理 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
+      
+    </div>
+
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
           
-
-  
-    <div class="comments" id="comments">
-    </div>
-
-  
-
-
 
         </div>
         
@@ -1021,10 +812,6 @@
 
 
   
-  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
-<script src="/js/src/post-details.js?v=6.6.0"></script>
-
-
 
   
 

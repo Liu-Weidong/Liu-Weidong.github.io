@@ -154,25 +154,25 @@
 
 
 
-  <meta name="description" content="点击事件的分发，其实就是对MotionEvent事件的分发过程，产生MotionEvent后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。  事件传递的三个阶段：  分发（Dispatch）：事件分发对应dispatchTouchEvent方法。方法返回值true表示事件被当前视图消费掉，不再继续分发事件；方法返回值是super.dispatchTouchEvent">
-<meta name="keywords" content="android">
+  <meta name="description" content="MVCModel-View-Controller（模型-视图-控制器）1978年由Trygve Reenskaug在Smalltalk-80系统上首次提出。  Model：“Models represent knowledge.A model could be a singleobject(rather uninteresting),or it could be some structure of">
+<meta name="keywords" content="MVC,MVP,MVVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android-view-事件分发">
-<meta property="og:url" content="https://lwdhub.github.io/android-view-事件分发/index.html">
+<meta property="og:title" content="架构-MVC-MVP-MVVM">
+<meta property="og:url" content="https://lwdhub.github.io/架构-MVC-MVP-MVVM/index.html">
 <meta property="og:site_name" content="漫漫求索">
-<meta property="og:description" content="点击事件的分发，其实就是对MotionEvent事件的分发过程，产生MotionEvent后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。  事件传递的三个阶段：  分发（Dispatch）：事件分发对应dispatchTouchEvent方法。方法返回值true表示事件被当前视图消费掉，不再继续分发事件；方法返回值是super.dispatchTouchEvent">
+<meta property="og:description" content="MVCModel-View-Controller（模型-视图-控制器）1978年由Trygve Reenskaug在Smalltalk-80系统上首次提出。  Model：“Models represent knowledge.A model could be a singleobject(rather uninteresting),or it could be some structure of">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-06T12:15:59.213Z">
+<meta property="og:updated_time" content="2019-01-21T15:43:39.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android-view-事件分发">
-<meta name="twitter:description" content="点击事件的分发，其实就是对MotionEvent事件的分发过程，产生MotionEvent后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。  事件传递的三个阶段：  分发（Dispatch）：事件分发对应dispatchTouchEvent方法。方法返回值true表示事件被当前视图消费掉，不再继续分发事件；方法返回值是super.dispatchTouchEvent">
+<meta name="twitter:title" content="架构-MVC-MVP-MVVM">
+<meta name="twitter:description" content="MVCModel-View-Controller（模型-视图-控制器）1978年由Trygve Reenskaug在Smalltalk-80系统上首次提出。  Model：“Models represent knowledge.A model could be a singleobject(rather uninteresting),or it could be some structure of">
 
 
 
 
 
 
-  <link rel="canonical" href="https://lwdhub.github.io/android-view-事件分发/">
+  <link rel="canonical" href="https://lwdhub.github.io/架构-MVC-MVP-MVVM/">
 
 
 
@@ -182,7 +182,7 @@
   };
 </script>
 
-  <title>android-view-事件分发 | 漫漫求索</title>
+  <title>架构-MVC-MVP-MVVM | 漫漫求索</title>
   
 
 
@@ -422,7 +422,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lwdhub.github.io/android-view-事件分发/">
+    <link itemprop="mainEntityOfPage" href="https://lwdhub.github.io/架构-MVC-MVP-MVVM/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuweidong">
@@ -439,7 +439,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">android-view-事件分发
+          <h1 class="post-title" itemprop="name headline">架构-MVC-MVP-MVVM
               
             
           </h1>
@@ -464,7 +464,7 @@
                 
               
 
-              <time title="创建时间：2019-01-06 20:05:34" itemprop="dateCreated datePublished" datetime="2019-01-06T20:05:34+08:00">2019-01-06</time>
+              <time title="创建时间：2019-01-21 23:31:43" itemprop="dateCreated datePublished" datetime="2019-01-21T23:31:43+08:00">2019-01-21</time>
             
 
             
@@ -482,14 +482,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/android/view/" itemprop="url" rel="index"><span itemprop="name">view</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
 
                 
                 
@@ -504,8 +497,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/android-view-事件分发/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-view-事件分发/" itemprop="commentCount"></span>
+                <a href="/架构-MVC-MVP-MVVM/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/架构-MVC-MVP-MVVM/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -540,15 +533,15 @@
       
 
       
-        <blockquote>
-<p>点击事件的分发，其实就是对MotionEvent事件的分发过程，产生MotionEvent后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。</p>
-</blockquote>
-<p><strong>事件传递的三个阶段：</strong></p>
+        <h1 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h1><p>Model-View-Controller（模型-视图-控制器）<br>1978年由Trygve Reenskaug在Smalltalk-80系统上首次提出。</p>
 <ul>
-<li><font color="#ff0000"><strong>分发（Dispatch）</strong></font>：事件分发对应dispatchTouchEvent方法。方法返回值true表示事件被当前视图消费掉，不再继续分发事件；方法返回值是super.dispatchTouchEvent表示继续分发该事件。如果当前视图是ViewGroup及其子类，则会调用onInterceptTouchEvent方法判定是否拦截该事件。</li>
-<li><font color="#ff0000"><strong>拦截（Intercept）</strong></font>：事件拦截对应onInterceptTouchEvent方法，这个方法只在ViewGroup及其子类中存在，在View和Activity中是不存在的。返回true，不会继续传递给子View，返回false或父类同名方法，则事件会继续传递给子View。</li>
-<li><font color="#ff0000"><strong>消费（Consume）</strong></font>：事件的消费对应着onTouchEvent。方法返回值true表示当前视图可以处理对应的事件，事件不会向上传递给父视图；返回值为false表示当前视图不处理这个事件，事件会传递给父视图的onTouchEvent方法进行处理。</li>
+<li>Model：“Models represent knowledge.A model could be a single<br>object(rather uninteresting),or it could be some structure of     objects.”——Model可以是一个独立的对象，也可以是一系列对象的集    合体。</li>
+<li>View：“A view is a(visual) representation of its model.It would ordinarily highlight certain attributes of the model and suppress others.It is thus acting as a presentation filter.”——View是Model中一些重要数据在视觉上的体现。</li>
+<li>Controller：“A controller is the link between a user and the system.(…)The controller receives such user output,translates it into the appropriate messages and pass these messages on to one or more of the views.”——Controller用于连接User和System，比如当Controller接收到用户的输出时，会将其转换成合适的事件消息，并将该事件消息传递给一个或多个View。</li>
 </ul>
+<p><strong>演变：</strong>经典MVC、Application Model MVC、Model2<br><code>MVC是一种框架模式而非设计模式，GOF把MVC看作是3种设计模式：观察者模式、策略模式与组合模式的合体，而且其核心在观察者模式，也就是一个基于发布/订阅者模型的框架。</code><br>框架面向于一系列相同行为代码的重用，而设计则面向的是一系列相同结构代码的重用。简而言之：框架是大智慧，用来对软件设计进行分工；设计模式是小技巧，对具体问题提出解决方案，以提高代码复用率，降低耦合度。</p>
+<h1 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h1><p>Model-View-Presenter</p>
+<h1 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h1><p>Model-View-ViewModel</p>
 
       
     </div>
@@ -616,7 +609,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://lwdhub.github.io/android-view-事件分发/" title="android-view-事件分发">https://lwdhub.github.io/android-view-事件分发/</a>
+    <a href="https://lwdhub.github.io/架构-MVC-MVP-MVVM/" title="架构-MVC-MVP-MVVM">https://lwdhub.github.io/架构-MVC-MVP-MVVM/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -629,7 +622,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/android/" rel="tag"><i class="fa fa-tag"></i> android</a>
+            <a href="/tags/MVC/" rel="tag"><i class="fa fa-tag"></i> MVC</a>
+          
+            <a href="/tags/MVP/" rel="tag"><i class="fa fa-tag"></i> MVP</a>
+          
+            <a href="/tags/MVVM/" rel="tag"><i class="fa fa-tag"></i> MVVM</a>
           
         </div>
       
@@ -642,8 +639,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/IDE-AndroidStudio/" rel="next" title="IDE-AndroidStudio">
-                <i class="fa fa-chevron-left"></i> IDE-AndroidStudio
+              <a href="/android-view-滑动/" rel="next" title="android-view-滑动">
+                <i class="fa fa-chevron-left"></i> android-view-滑动
               </a>
             
           </div>
@@ -651,10 +648,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/android-view-工作原理/" rel="prev" title="android-view-工作原理">
-                android-view-工作原理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -705,8 +698,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -855,6 +857,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MVC"><span class="nav-number">1.</span> <span class="nav-text">MVC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MVP"><span class="nav-number">2.</span> <span class="nav-text">MVP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MVVM"><span class="nav-number">3.</span> <span class="nav-text">MVVM</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

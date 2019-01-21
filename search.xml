@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[架构-MVC-MVP-MVVM]]></title>
+    <url>%2F%E6%9E%B6%E6%9E%84-MVC-MVP-MVVM%2F</url>
+    <content type="text"><![CDATA[MVCModel-View-Controller（模型-视图-控制器）1978年由Trygve Reenskaug在Smalltalk-80系统上首次提出。 Model：“Models represent knowledge.A model could be a singleobject(rather uninteresting),or it could be some structure of objects.”——Model可以是一个独立的对象，也可以是一系列对象的集 合体。 View：“A view is a(visual) representation of its model.It would ordinarily highlight certain attributes of the model and suppress others.It is thus acting as a presentation filter.”——View是Model中一些重要数据在视觉上的体现。 Controller：“A controller is the link between a user and the system.(…)The controller receives such user output,translates it into the appropriate messages and pass these messages on to one or more of the views.”——Controller用于连接User和System，比如当Controller接收到用户的输出时，会将其转换成合适的事件消息，并将该事件消息传递给一个或多个View。 演变：经典MVC、Application Model MVC、Model2MVC是一种框架模式而非设计模式，GOF把MVC看作是3种设计模式：观察者模式、策略模式与组合模式的合体，而且其核心在观察者模式，也就是一个基于发布/订阅者模型的框架。框架面向于一系列相同行为代码的重用，而设计则面向的是一系列相同结构代码的重用。简而言之：框架是大智慧，用来对软件设计进行分工；设计模式是小技巧，对具体问题提出解决方案，以提高代码复用率，降低耦合度。 MVPModel-View-Presenter MVVMModel-View-ViewModel]]></content>
+      <categories>
+        <category>架构</category>
+      </categories>
+      <tags>
+        <tag>MVC</tag>
+        <tag>MVP</tag>
+        <tag>MVVM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[android-view-滑动]]></title>
     <url>%2Fandroid-view-%E6%BB%91%E5%8A%A8%2F</url>
     <content type="text"><![CDATA[滑动是实现绚丽的自定义控件的基础。 基础知识MotionEvent事件类型 ACTION_DOWN：手指刚接触屏幕 ACTION_MOVE：手指在屏幕上移动 ACTION_UP：手指从屏幕上松开的一瞬间 getX/getY：相对于当前View左上角的坐标getRawX/getRawY：相对于手机屏幕左上角的坐标 TouchSlop系统所能识别的滑动最小距离。常量值，与设备有关。1ViewConfiguration.get(getContext()).getScaledTouchSlop() VelocityTracker速度追踪，手指在滑动过程中的速度（一段时间内手指滑过的像素数）。123456789101112// onTouchEvent方法中使用VelocityTracker velocityTracker = VelocityTracker.obtain();velocityTracker.addMovement(event);// 滑动速度velocityTracker.computeCurrentVelocity(1000);int xVelocity = (int) velocityTracker.getXVelocity();int yVelocity = (int) velocityTracker.getYVelocity();// 重置回收velocityTracker.clear();velocityTracker.recycle(); 滑动冲突]]></content>
