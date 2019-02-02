@@ -1,8 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[框架-MVC-MVP-MVVM-MVI]]></title>
-    <url>%2F%E6%A1%86%E6%9E%B6-MVC-MVP-MVVM-MVI%2F</url>
+    <title><![CDATA[java-基础知识]]></title>
+    <url>%2Fjava-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux]]></title>
+    <url>%2F%E3%80%90OS%E3%80%91Linux%2F</url>
+    <content type="text"><![CDATA[小序Linux内核由Linux Torvalds在1991年开发。硬件 –&gt; 内核 –&gt; 系统调用 –&gt; 应用程序（加粗部分为操作系统）内核： 系统内存管理 软件程序管理 硬件设备管理 文件系统管理]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[计算机网络]]></title>
+    <url>%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>计算机</category>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[计算机系统]]></title>
+    <url>%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>计算机</category>
+        <category>计算机系统</category>
+      </categories>
+      <tags>
+        <tag>计算机系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MVC-MVP-MVVM-MVI]]></title>
+    <url>%2F%E3%80%90%E6%A1%86%E6%9E%B6%E3%80%91MVC-MVP-MVVM-MVI%2F</url>
     <content type="text"><![CDATA[小序框架面向于一系列相同行为代码的重用，而设计则面向的是一系列相同结构代码的重用。简而言之：框架是大智慧，用来对软件设计进行分工；设计模式是小技巧，对具体问题提出解决方案，以提高代码复用率，降低耦合度。 对待框架演变的态度：所谓真理只是在特定领域条件下成立的教条理论罢了。 MVCModel-View-Controller（模型-视图-控制器）MVC是一种框架模式而非设计模式，GOF把MVC看作是3种设计模式：观察者模式、策略模式与组合模式的合体，而且其核心在观察者模式，也就是一个基于发布/订阅者模型的框架。 经典MVC1978年由Trygve Reenskaug在Smalltalk-80系统上首次提出。MVC本质是分层解耦，将表现层与逻辑进行分离。 Model：Model可以是一个独立的对象，也可以是一系列对象的集合体。 View：View是Model中一些重要数据在视觉上的体现。 Controller：Controller用于连接User和System，比如当Controller接收到用户的输出时，会将其转换成合适的事件消息，并将该事件消息传递给一个或多个View。 Application Model MVCModel21998年，Model2被首次提出。Model2被应用于Web开发中，将JavaBean、JSP、Servlet对应于MVC的三个部分。Model2改进了事件流向。 User –&gt; Controller –&gt; Model –&gt; Controller –&gt; View –&gt; UserView与Model不再有耦合，接近于MVP，不同的是MVP捕获用户交互请求的是View而不是Controller。 MVPModel-View-Presenter（数据层-UI层-业务逻辑层） MVVMModel-View-ViewModel2005年被微软的WPF和Silverlight的架构师John Gossman提出，并且应用在微软的项目开发中，前身是Martin Fowler在2004年发表的Presentation Model（PM）设计模式。 DataBinding配置12345android &#123; dataBinding &#123; enabled true &#125;&#125; 布局结构首先根节点为layout；其次，布局文件中声名所使用到的数据实体类；然后才是传统布局节点。123456789101112131415161718192021&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;layout xmlns:android="http://schemas.android.com/apk/res/android"&gt; &lt;!--data节点声名数据模型--&gt; &lt;data&gt; &lt;variable name="userModel" type="com.test.demo.testdemo.UserModel" /&gt; &lt;/data&gt; &lt;!--传统布局--&gt; &lt;LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical"&gt; &lt;Button android:layout_width="match_parent" android:layout_height="50dp" android:text="@&#123;userModel.btnText&#125;" /&gt; &lt;/LinearLayout&gt;&lt;/layout&gt; 数据绑定12345678@Overrideprotected void onCreate(@Nullable Bundle savedInstanceState) &#123; super.onCreate(savedInstanceState); DataBindingTestBinding binding = DataBindingUtil.setContentView(this, R.layout.data_binding_test); UserModel model = new UserModel(); model.setBtnText("中国"); binding.setUserModel(model);&#125; MVIModel-View-Intent（数据层-UI层-业务逻辑层） Model：代表一种状态。]]></content>
       <categories>
         <category>框架</category>
@@ -52,14 +98,13 @@
   </entry>
   <entry>
     <title><![CDATA[IDE-AndroidStudio]]></title>
-    <url>%2FIDE-AndroidStudio%2F</url>
+    <url>%2F%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91IDE-AndroidStudio%2F</url>
     <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 配置Logcat颜色 Assert：#8F0005 深红Debug：#0070BB 蓝Error：#FF0006 红Info：#48BB31 绿Verbose：#BBBBBB 白Warning：#BBBB23 黄 断点调试与管理 1 Show Execution Point2 Step Over：单步执行。如果当前行为方法调用（不会跳到方法内部），方法执行完后跳到下一行。3 Step Into：与Step Over不同的是，会跳到方法内部（非类库的方法）。4 Force Step Into：与Step Into不同的是，始终跳到方法内部。5 Step Out：跳出方法，返回到该方法调用处。6 Drop Frame7 Run to Cursor8 Resume Program：程序执行到下一个断点处。9 Stop：停止调试。 变量观察 选中变量，右键选择Add to Watches 修改变量值，调试结果。选择Set Value 条件断点循环体内设置。 日志断点Suspend取消选中，显示日志输入框。 异常断点单击如下图标，在弹窗中新建异常断点。 变量断点 方法断点在方法名所在行添加断点。 Plugins]]></content>
       <categories>
         <category>工具</category>
-        <category>Android Studio</category>
       </categories>
       <tags>
-        <tag>android</tag>
+        <tag>Android Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -76,11 +121,10 @@
   </entry>
   <entry>
     <title><![CDATA[Markdown语法]]></title>
-    <url>%2FMarkdown%E8%AF%AD%E6%B3%95%2F</url>
+    <url>%2F%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91Markdown%E8%AF%AD%E6%B3%95%2F</url>
     <content type="text"><![CDATA[简介Markdown是一种轻量级的标记语言，将作者从繁杂的排版工作中解放出来，实现易读易写的文章写作。 Windows平台编辑器 MarkdownPad一款全功能的编辑器。 标题 #：H1 ##：H2 ###：H3 文本 加粗：文本左右分别添加两个* 斜体：文本左右分别添加一个* 加粗斜体：文本左右分别添加三个* 删除线：文本左右分别添加两个~ 文本颜色： 1&lt;font color="#ff0000"&gt;颜色文本&lt;/font&gt; 文本增加背景色：文本左右分别添加一个反引号 ` 引用在引用的文本前面添加&gt;，且可以嵌套，&gt;&gt;或&gt;&gt;&gt; 图片 Markdown显示图片语法： 1![图片说明](https://i.imgur.com/4u0hKYA.jpg) 效果如下图： 固定图片显示大小： 1&lt;img src="https://i.imgur.com/4u0hKYA.jpg" width=200 height=200 /&gt; 效果如下图： 图片按比例显示： 1&lt;img src="https://i.imgur.com/4u0hKYA.jpg" width=25% height=25% /&gt; 效果如下图： 链接Markdown显示连接语法：1[链接显示文本]（https://www.baidu.com） 列表 无序列表 有序列表：数字 + . + 空格 第一点 第二点 分隔线一行连续使用三个或以上的-或* 代码 每一行前面加一个tab或4个空格可以标记一个代码片段，效果如下图：public int main() { reutrn 0; } 连续三个反引号`（需要代码高亮的话，加上代码类型），键盘上数字1前面按键，如下图：效果如下图：12345public class main &#123; public static void main(String[] args)&#123; System.out.println("hello java"); &#125; &#125; 表格123|标题1|标题2|标题3||:---|:---:|---:||第一行第一列|01|第一行第三列| 注意：表格语句上一行必须为空行，否则表格无效。效果如下图： 标题1 标题2 标题3 第一行第一列 01 第一行第三列 说明： :-表示居左对齐；:-:表示居中对齐；-:表示居右对齐 -至少有一个 流程图]]></content>
       <categories>
         <category>工具</category>
-        <category>Markdown</category>
       </categories>
       <tags>
         <tag>Markdown</tag>
@@ -110,11 +154,11 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[计算机基础-UML类图]]></title>
-    <url>%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-UML%E7%B1%BB%E5%9B%BE%2F</url>
+    <title><![CDATA[UML类图]]></title>
+    <url>%2FUML%E7%B1%BB%E5%9B%BE%2F</url>
     <content type="text"><![CDATA[Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。]]></content>
       <categories>
-        <category>计算机基础</category>
+        <category>计算机</category>
       </categories>
       <tags>
         <tag>UML类图</tag>
@@ -122,8 +166,8 @@
   </entry>
   <entry>
     <title><![CDATA[Hexo-NexT主题配置]]></title>
-    <url>%2FHexo-NexT%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[小序博客的搭建，可以参考我的博文 搭建个人博客-GitHub-PagesHexo配置文件_config.yml分两种：站点配置文件、主题配置文件。站点配置文件参考Hexo，主题配置文件参考NexT本文主要讲解主题配置文件_config.yml（文件路径：root\themes\next\_config.yml） NexTGitHub hexo-theme-next v6.6.0Site Information Settings设置站点信息favicon:修改网站图标，图片保存在目录\themes\next\source\images中。footer:站点底部 since:2018站点创建时间creative_commons:文章底部添加版权信息 Menu Settings 菜单项（名称和链接） 菜单项的显示文本 菜单项对应的图标。NexT使用的是Font Awesome提供的图标，Font Awesome提供了600+的图标，可以满足绝大多数的场景。 注意：菜单点击可能报Cannot GET **，创建page就可以了，命令如下：12// name为categories、tags、about等，文件存储路径为：root\sourcehexo new page &apos;name&apos; 在source目录下会生成菜单对应文件夹，修改文件夹中的index.md文件，新增type属性，如下：12345---title: 分类date: 2018-12-16 17:03:04type: &quot;categories&quot;--- Scheme SettingsScheme是NexT提供的一种特性，可以设置不同的外观。同时，几乎所有的配置都可以在Scheme之间共用。目前NexT支持以下几种Scheme: Muse-默认Scheme，NexT最初的版本，黑白色调，大量留白 Mist-Muse的紧凑版本，整洁有序的单栏外观 Pisces-双栏Scheme，小家碧玉似的清新 Gemini-左侧网站信息及目录，块+片段结构布局 Sidebar Settings设置侧栏 sidebar:侧栏的位置 sidebar:侧栏显示的时机 avatar:头像 social:社交链接 github_banner:（网站右上角显示关注GitHub图标） Blog rolls友情链接 toc:文章目录 Post Settings reward:打赏 wechat_subscriber:微信订阅 Third Party Services Settingslocal_search:网站添加搜索needmoreshare2:内容分享 在博客根目录执行如下命令： 1git clone https://github.com/theme-next/theme-next-needmoreshare2 themes/next/source/lib/needsharebutton 主题配置文件中，搜索needmoreshare2: 评论系统 畅言 官网 12345# changyanchangyan: enable: false appid: appkey: Valine 官网 DaoVoice修改文章内链接样式在文件\themes\next\source\css_common\components\post\post.styl末尾，添加如下代码：1234567891011// 文章内链接文本样式.post-body p a&#123; color: #0593d3; //原始链接颜色 border-bottom: none; border-bottom: 1px solid #0593d3; //底部分割线颜色 &amp;:hover &#123; color: #fc6423; //鼠标经过颜色 border-bottom: none; border-bottom: 1px solid #fc6423; //底部分割线颜色 &#125;&#125; 修改文章底部带#的标签实现效果图： \themes\next\layout_macro\post.swig中找到rel=”tag”&gt;#，将#替换为1&lt;i class="fa fa-tag"&gt;&lt;/i&gt; 文章末尾添加结束标语实现效果图： \themes\next\layout_macro中新建passage-end-tag.swig文件，添加如下代码： 12345&lt;div&gt; &#123;% if not is_index %&#125; &lt;div style="text-align:center;color: #ccc;font-size:14px;"&gt;-------------本文结束&lt;i class="fa fa-paw"&gt;&lt;/i&gt;感谢您的阅读-------------&lt;/div&gt; &#123;% endif %&#125;&lt;/div&gt; 打开\themes\next\layout_macro\post.swig文件，在post-body后，post-footer前，添加如下代码： 12345&lt;div&gt; &#123;% if not is_index %&#125; &#123;% include 'passage-end-tag.swig' %&#125; &#123;% endif %&#125;&lt;/div&gt; 修改主题配置文件_config.yml，末尾添加如下内容： 123# 文章末尾添加“本文结束”标记passage_end_tag: enabled: true 网站底部添加总访客量、总访问量方法一： 打开\themes\next\layout_partials\footer.swig文件，在copyright之前添加如下代码：1&lt;script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt; 单个用户连续点击n篇文章，记录n次访问量。123&lt;span id="busuanzi_container_site_pv"&gt; 总访问量&lt;span id="busuanzi_value_site_pv"&gt;&lt;/span&gt;次&lt;/span&gt; 单个用户连续点击n篇文章，只记录1次访客数。123&lt;span id="busuanzi_container_site_uv"&gt; 总访客数&lt;span id="busuanzi_value_site_uv"&gt;&lt;/span&gt;人次&lt;/span&gt; 方法二：主题配置文件_config.yml，搜索busuanzi_count:注：本地预览时，数字存在异常，部署云端即可恢复正常。 网站底部添加字数统计npm install hexo-wordcount –save打开文件\themes\next\layout_partials\footer.swig，末尾加上如下代码：1234&lt;div class="theme-info"&gt; &lt;div class="powered-by"&gt;&lt;/div&gt; &lt;span class="post-count"&gt;全站共&#123;&#123; totalcount(site) &#125;&#125;字&lt;/span&gt;&lt;/div&gt; 点击出现爱心效果 在目录\themes\next\source\js\src中新建文件love.js，添加如下代码： 1!function (e, t, a) &#123; function n() &#123; c(".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"), o(), r() &#125; function r() &#123; for (var e = 0; e &lt; d.length; e++)d[e].alpha &lt;= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y-- , d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = "left:" + d[e].x + "px;top:" + d[e].y + "px;opacity:" + d[e].alpha + ";transform:scale(" + d[e].scale + "," + d[e].scale + ") rotate(45deg);background:" + d[e].color + ";z-index:99999"); requestAnimationFrame(r) &#125; function o() &#123; var t = "function" == typeof e.onclick &amp;&amp; e.onclick; e.onclick = function (e) &#123; t &amp;&amp; t(), i(e) &#125; &#125; function i(e) &#123; var a = t.createElement("div"); a.className = "heart", d.push(&#123; el: a, x: e.clientX - 5, y: e.clientY - 5, scale: 1, alpha: 1, color: s() &#125;), t.body.appendChild(a) &#125; function c(e) &#123; var a = t.createElement("style"); a.type = "text/css"; try &#123; a.appendChild(t.createTextNode(e)) &#125; catch (t) &#123; a.styleSheet.cssText = e &#125; t.getElementsByTagName("head")[0].appendChild(a) &#125; function s() &#123; return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")" &#125; var d = []; e.requestAnimationFrame = function () &#123; return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) &#123; setTimeout(e, 1e3 / 60) &#125; &#125;(), n() &#125;(window, document); 打开文件\themes\next\layout_layout.swig，末尾加上如下代码： 12&lt;!-- 页面点击小红心 --&gt;&lt;script type="text/javascript" src="/js/src/love.js"&gt;&lt;/script&gt; 添加网易云音乐\themes\next\layout_macro\sidebar.swig 添加依赖在目录\themes\next下，开启Git Bash，执行命令。 设置动态背景canvas_nest:1git clone https://github.com/theme-next/theme-next-canvas-nest source/lib/canvas-nest 站点顶部进度条pace:1git clone https://github.com/theme-next/theme-next-pace source/lib/pace 参考文章https://theme-next.org/]]></content>
+    <url>%2F%E3%80%90%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83%E3%80%91Hexo-NexT%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[小序博客搭建，可以参考博文 搭建个人博客-GitHub-PagesHexo的配置文件_config.yml分两种：站点配置文件、主题配置文件。站点配置文件参考Hexo，主题配置文件参考NexT本文主要讲解主题配置文件_config.yml（文件路径：hexo目录\themes\next\_config.yml）GitHub hexo-theme-next Site Information Settings设置站点信息favicon:修改网站图标，图片保存在目录\themes\next\source\images中。footer:站点底部 since:2018站点创建时间creative_commons:文章底部添加版权信息 Menu Settings 菜单项（名称和链接） 菜单项的显示文本 菜单项对应的图标。NexT使用的是Font Awesome提供的图标，Font Awesome提供了600+的图标，可以满足绝大多数的场景。 注意：菜单点击可能报Cannot GET **，创建page就可以了，命令如下：12// name为categories、tags、about等，文件存储路径为：root\sourcehexo new page &apos;name&apos; 在source目录下会生成菜单对应文件夹，修改文件夹中的index.md文件，新增type属性，如下：12345---title: 分类date: 2018-12-16 17:03:04type: &quot;categories&quot;--- Scheme SettingsScheme是NexT提供的一种特性，可以设置不同的外观。同时，几乎所有的配置都可以在Scheme之间共用。目前NexT支持以下几种Scheme: Muse-默认Scheme，NexT最初的版本，黑白色调，大量留白 Mist-Muse的紧凑版本，整洁有序的单栏外观 Pisces-双栏Scheme，小家碧玉似的清新 Gemini-左侧网站信息及目录，块+片段结构布局 Sidebar Settings设置侧栏 sidebar:侧栏的位置 sidebar:侧栏显示的时机 avatar:头像 social:社交链接 github_banner:（网站右上角显示关注GitHub图标） Blog rolls友情链接 toc:文章目录 Post Settings reward:打赏 wechat_subscriber:微信订阅 Third Party Services Settingslocal_search:网站添加搜索needmoreshare2:内容分享 在博客根目录执行如下命令： 1git clone https://github.com/theme-next/theme-next-needmoreshare2 themes/next/source/lib/needsharebutton 主题配置文件中，搜索needmoreshare2: 评论系统 畅言 官网 12345# changyanchangyan: enable: false appid: appkey: Valine 官网 DaoVoice修改文章内链接样式在文件\themes\next\source\css_common\components\post\post.styl末尾，添加如下代码：1234567891011// 文章内链接文本样式.post-body p a&#123; color: #0593d3; //原始链接颜色 border-bottom: none; border-bottom: 1px solid #0593d3; //底部分割线颜色 &amp;:hover &#123; color: #fc6423; //鼠标经过颜色 border-bottom: none; border-bottom: 1px solid #fc6423; //底部分割线颜色 &#125;&#125; 修改文章底部带#的标签实现效果图： \themes\next\layout_macro\post.swig中找到rel=”tag”&gt;#，将#替换为1&lt;i class="fa fa-tag"&gt;&lt;/i&gt; 文章末尾添加结束标语实现效果图： \themes\next\layout_macro中新建passage-end-tag.swig文件，添加如下代码： 12345&lt;div&gt; &#123;% if not is_index %&#125; &lt;div style="text-align:center;color: #ccc;font-size:14px;"&gt;-------------本文结束&lt;i class="fa fa-paw"&gt;&lt;/i&gt;感谢您的阅读-------------&lt;/div&gt; &#123;% endif %&#125;&lt;/div&gt; 打开\themes\next\layout_macro\post.swig文件，在post-body后，post-footer前，添加如下代码： 12345&lt;div&gt; &#123;% if not is_index %&#125; &#123;% include 'passage-end-tag.swig' %&#125; &#123;% endif %&#125;&lt;/div&gt; 修改主题配置文件_config.yml，末尾添加如下内容： 123# 文章末尾添加“本文结束”标记passage_end_tag: enabled: true 网站底部添加总访客量、总访问量方法一： 打开\themes\next\layout_partials\footer.swig文件，在copyright之前添加如下代码：1&lt;script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt; 单个用户连续点击n篇文章，记录n次访问量。123&lt;span id="busuanzi_container_site_pv"&gt; 总访问量&lt;span id="busuanzi_value_site_pv"&gt;&lt;/span&gt;次&lt;/span&gt; 单个用户连续点击n篇文章，只记录1次访客数。123&lt;span id="busuanzi_container_site_uv"&gt; 总访客数&lt;span id="busuanzi_value_site_uv"&gt;&lt;/span&gt;人次&lt;/span&gt; 方法二：主题配置文件_config.yml，搜索busuanzi_count:注：本地预览时，数字存在异常，部署云端即可恢复正常。 网站底部添加字数统计npm install hexo-wordcount –save打开文件\themes\next\layout_partials\footer.swig，末尾加上如下代码：1234&lt;div class="theme-info"&gt; &lt;div class="powered-by"&gt;&lt;/div&gt; &lt;span class="post-count"&gt;全站共&#123;&#123; totalcount(site) &#125;&#125;字&lt;/span&gt;&lt;/div&gt; 点击出现爱心效果 在目录\themes\next\source\js\src中新建文件love.js，添加如下代码： 1!function (e, t, a) &#123; function n() &#123; c(".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"), o(), r() &#125; function r() &#123; for (var e = 0; e &lt; d.length; e++)d[e].alpha &lt;= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y-- , d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = "left:" + d[e].x + "px;top:" + d[e].y + "px;opacity:" + d[e].alpha + ";transform:scale(" + d[e].scale + "," + d[e].scale + ") rotate(45deg);background:" + d[e].color + ";z-index:99999"); requestAnimationFrame(r) &#125; function o() &#123; var t = "function" == typeof e.onclick &amp;&amp; e.onclick; e.onclick = function (e) &#123; t &amp;&amp; t(), i(e) &#125; &#125; function i(e) &#123; var a = t.createElement("div"); a.className = "heart", d.push(&#123; el: a, x: e.clientX - 5, y: e.clientY - 5, scale: 1, alpha: 1, color: s() &#125;), t.body.appendChild(a) &#125; function c(e) &#123; var a = t.createElement("style"); a.type = "text/css"; try &#123; a.appendChild(t.createTextNode(e)) &#125; catch (t) &#123; a.styleSheet.cssText = e &#125; t.getElementsByTagName("head")[0].appendChild(a) &#125; function s() &#123; return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")" &#125; var d = []; e.requestAnimationFrame = function () &#123; return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) &#123; setTimeout(e, 1e3 / 60) &#125; &#125;(), n() &#125;(window, document); 打开文件\themes\next\layout_layout.swig，末尾加上如下代码： 12&lt;!-- 页面点击小红心 --&gt;&lt;script type="text/javascript" src="/js/src/love.js"&gt;&lt;/script&gt; 添加网易云音乐\themes\next\layout_macro\sidebar.swig 添加依赖在目录\themes\next下，开启Git Bash，执行命令。 设置动态背景canvas_nest:1git clone https://github.com/theme-next/theme-next-canvas-nest source/lib/canvas-nest 站点顶部进度条pace:1git clone https://github.com/theme-next/theme-next-pace source/lib/pace 参考https://theme-next.org/]]></content>
       <categories>
         <category>搭建环境</category>
       </categories>
@@ -133,8 +177,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[搭建个人博客-GitHub-Pages]]></title>
-    <url>%2F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-GitHub-Pages%2F</url>
+    <title><![CDATA[个人博客-GitHub-Pages]]></title>
+    <url>%2F%E3%80%90%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83%E3%80%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-GitHub-Pages%2F</url>
     <content type="text"><![CDATA[小序 创建GitHub Pages 安装Git 安装Node.js 安装hexo GitHub Pages 注册GitHub账号，新建仓库，仓库名格式为（用户名.github.io），用户名必须与GitHub保持一致。 仓库中点击Settings菜单，找到GitHub Pages Choose a theme HexoHexo是一个快速、简洁且高效的博客框架。使用Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。Windows搭建Hexo博客系统并部署到GitHub 安装hexo本地环境，使用命令：npm install -g hexo 计算机本地新建保存博客文件夹 初始化hexo博客工程：hexo init 执行编译与预览命令后，hexo预览http://localhost:4000/ 命令命令[hexo n “博客名称”] 新建博客 themes主题设置 博客根目录：git clone https://github.com/theme-next/hexo-theme-next themes/next 修改站点配置文件_config.yml中theme为目标主题名称 theme-NexT主题配置文件_config.yml scheme:目前NexT支持四种Scheme menu:设置菜单 sidebar:设置侧边栏 avatar:设置头像 favicon:设置网站缩略图 plugins 安装：npm install hexo-xxx –save 卸载：npm remove hexo-xxx –save hexo部署插件 npm install hexo-deployer-git –save 修改站点配置文件_config.yml，在deploy下指定仓库路径和部署的协议 hexo g hexo d hexo-adminnpm install hexo-admin –saveHexo Admin hexo-tocnpm install hexo-toc –save文章中添加目录，在站点配置文件_config.yml中，添加如下信息：12345678910# 文章顶部添加&lt;!-- toc --&gt;，会在标题下方生成文章目录。toc: maxdepth: 3 class: toc slugify: transliteration decodeEntities: false anchor: position: after symbol: &apos;&apos; style: header-anchor 注意坑：主题为NexT时，不要安装该插件，会导致sidebar中文章目录显示错误且不跳转。 jekylljekyll jekyll themes]]></content>
       <categories>
         <category>搭建环境</category>
@@ -145,8 +189,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[软件-面向对象六大原则]]></title>
-    <url>%2F%E8%BD%AF%E4%BB%B6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99%2F</url>
+    <title><![CDATA[面向对象六大原则]]></title>
+    <url>%2F%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99%2F</url>
     <content type="text"><![CDATA[小序系统开发过程中，最难的不是完成系统的开发工作，而是在于后续的升级、维护过程中让系统能够拥抱变化。拥抱变化也就意味着在满足需求且不破坏系统稳定性的前提下保持高可扩展性、高内聚、低耦合，经历各版本的变更之后依然保持清晰、灵活、稳定的系统架构。当然，这是比较理想的情况，但我们必须朝着这个方向去努力，那么遵循面向对象六大原则就是我们走向灵活软件之路所迈出的第一步。 软件的可维护性和可复用性。 好的系统设计应该具备如下三个性质： 可扩展性（Extensibility） 灵活性（Flexibility） 可插入性（Pluggability） 可维护性较低的系统设计，通常有如下几个原因： 复用率低（Immobility） 黏度过高（Viscosity） 脆弱 僵硬 常用的面向对象设计原则包括7个，这些原则并不是孤立存在的，它们相互依赖，相互补充。 开闭原则（OCP）Open Close Principle，缩写OCP。开闭原则由Bertrand Meyer（勃兰特·梅耶）于1988年出版的《面向对象软件构造》一书中提出。抽象化是开闭原则的关键。 定义：软件中的对象（类、模块、函数等）应该对于扩展是开放的，对于修改是封闭的。 软件开发过程中，最不会变化的就是变化本事。 依赖倒置原则（DIP）Dependence Inversion Principle，缩写DIP。 定义：依赖倒置原则指代了一种特定的解耦形式，使得高层次的模块不依赖于低层次模块的实现细节的目的，依赖模块被颠倒了。 高层模块不应该依赖低层模块，两者都应该依赖其抽象 抽象不应该依赖细节 细节应该依赖抽象 java语言中，抽象就是指接口或抽象类，两者都不可以直接被实例化；细节就是实现类。高层模块就是调用端，低层模块就是具体实现类。 里氏替换原则（LSP）Liskov Substitution Principle，缩写LSP。 定义：所有引用基类的地方必须能透明地使用其子类的对象。 单一职责原则（SRP）Single Responsibility Principle，缩写SRP。 定义：就一个类而言，应该仅有一个引起它变化的原因。 接口隔离原则（ISP）InterfaceSegregation Principles，缩写ISP。 定义：客户端不应该依赖它不需要的接口。 迪米特原则（LOD）Law of Demeter，缩写LOD，也称为最少知识原则。 定义：一个对象应该对其他对象有最少的了解。 Only talk to your immedate friends。只与直接的朋友通信。？？？每个对象都必然会与其他对象有耦合关系，两个对象之间的耦合就称为朋友关系，如依赖、关联、组合、聚合等。 类应该对自己需要耦合或调用的类知道得最少，类的内部如何实现与调用者或依赖者没有关系，调用者或者依赖者只需要知道它需要的方法即可，其他的可一概不用管。类与类之间关系越密切，耦合度越大，当一个类发生改变时，对另一个类的影响也越大。软件总的原则：低耦合、高内聚。]]></content>
       <categories>
         <category>设计模式</category>
