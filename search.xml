@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[java-versions]]></title>
     <url>%2Fjava-versions%2F</url>
-    <content type="text"><![CDATA[简介JDK（Java SE Development Kit），Java标准版开发包。JRE（Java Runtime Environment），Java运行时环境。运行Java程序所必须环境的集合，包含JVM标准实现及Java核心类库。 JDK目录 bin：该路径存放了JDK的各种工具命令，javac、java等。 db：该路径安装Java DB的路径。 include：一些平台特定的头文件。 jre：运行Java程序所必需的JRE环境。 lib：存放JDK工具命令的实际执行程序 Java SE 82014/3/18，Oracle发布Java SE 8。 新特性 Lambda表达式 Java SE 72011/7/28，Oracle发布Java SE 7，代号Dolphin（海豚） 新特性 引入二进制整数 支持字符串的switch语句 菱形语法 多异常捕捉 自动关闭资源的try语句 2009/4/20，Oracle收购SunJDK 1.62006/12（Java SE 6） JDK 1.52004/10（改名为Java SE 5.0、Java EE和Java ME）泛型、增强的for语句、可变数量的形参、注释、自动拆箱和装箱等 JDK 1.21998/12Java分成J2EE、J2SE、J2ME三个版本J2ME：主要用于控制移动设备和信息家电等有限存储的设备。J2SE：整个Java技术的核心和基础。J2EE：提供企业应用开发相关的完整解决方案。 JDK 1.01996]]></content>
+    <content type="text"><![CDATA[简介JDK（Java SE Development Kit），Java标准版开发包。JRE（Java Runtime Environment），Java运行时环境。运行Java程序所必须环境的集合，包含JVM标准实现及Java核心类库。 JDK目录 bin：该路径存放了JDK的各种工具命令，javac、java等。 db：该路径安装Java DB的路径。 include：一些平台特定的头文件。 jre：运行Java程序所必需的JRE环境。 lib：存放JDK工具命令的实际执行程序 Java SE 112018年9月25日，Java 11（LTS长期支持2026年9月）发布。下载 新特性Java SE 102018年3月20日，Java 10发布。 Java SE 92017年9月，Java 9发布。 Java SE 82014/3/18，Oracle发布Java SE 8。 新特性 Lambda表达式 Java SE 72011/7/28，Oracle发布Java SE 7，代号Dolphin（海豚） 新特性 引入二进制整数 支持字符串的switch语句 菱形语法 多异常捕捉 自动关闭资源的try语句 2009/4/20，Oracle收购SunJDK 1.62006/12（Java SE 6） JDK 1.52004/10（改名为Java SE 5.0、Java EE和Java ME）泛型、增强的for语句、可变数量的形参、注释、自动拆箱和装箱等 JDK 1.21998/12Java分成J2EE、J2SE、J2ME三个版本J2ME：主要用于控制移动设备和信息家电等有限存储的设备。J2SE：整个Java技术的核心和基础。J2EE：提供企业应用开发相关的完整解决方案。 JDK 1.01996]]></content>
       <categories>
         <category>java</category>
       </categories>
