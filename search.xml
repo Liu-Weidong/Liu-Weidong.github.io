@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[java-versions]]></title>
     <url>%2Fjava-versions%2F</url>
-    <content type="text"><![CDATA[简介JDK（Java SE Development Kit），Java标准版开发包。JRE（Java Runtime Environment），Java运行时环境。运行Java程序所必须环境的集合，包含JVM标准实现及Java核心类库。 JDK目录 bin：该路径存放了JDK的各种工具命令，javac、java等。 db：该路径安装Java DB的路径。 include：一些平台特定的头文件。 jre：运行Java程序所必需的JRE环境。 lib：存放JDK工具命令的实际执行程序 Java SE 112018年9月25日，Java 11（LTS长期支持2026年9月）发布。下载 新特性Java SE 102018年3月20日，Java 10发布。 Java SE 92017年9月，Java 9发布。 Java SE 82014/3/18，Oracle发布Java SE 8。 新特性 Lambda表达式 Java SE 72011/7/28，Oracle发布Java SE 7，代号Dolphin（海豚） 新特性 引入二进制整数 支持字符串的switch语句 菱形语法 多异常捕捉 自动关闭资源的try语句 2009/4/20，Oracle收购SunJDK 1.62006/12（Java SE 6） JDK 1.52004/10（改名为Java SE 5.0、Java EE和Java ME）泛型、增强的for语句、可变数量的形参、注释、自动拆箱和装箱等 JDK 1.21998/12Java分成J2EE、J2SE、J2ME三个版本J2ME：主要用于控制移动设备和信息家电等有限存储的设备。J2SE：整个Java技术的核心和基础。J2EE：提供企业应用开发相关的完整解决方案。 JDK 1.01996]]></content>
+    <content type="text"><![CDATA[简介JDK（Java SE Development Kit），Java标准版开发包。JRE（Java Runtime Environment），Java运行时环境。运行Java程序所必须环境的集合，包含JVM标准实现及Java核心类库。 JDK目录 bin：该路径存放了JDK的各种工具命令，javac、java等。 db：该路径安装Java DB的路径。 include：一些平台特定的头文件。 jre：运行Java程序所必需的JRE环境。 lib：存放JDK工具命令的实际执行程序 Java SE 112018年9月25日，Oracle正式发布Java 11（LTS长期支持2026年9月），Java 8以后的首个长期版本。下载 新特性Java SE 102018年3月20日，Java 10发布。 Java SE 92017年9月，Java 9发布。 Java SE 82014/3/18，Oracle发布Java SE 8。 新特性 Lambda表达式 Java SE 72011/7/28，Oracle发布Java SE 7，代号Dolphin（海豚） 新特性 引入二进制整数 支持字符串的switch语句 菱形语法 多异常捕捉 自动关闭资源的try语句 2009/4/20，Oracle收购SunJDK 1.62006/12（Java SE 6） JDK 1.52004/10（改名为Java SE 5.0、Java EE和Java ME）泛型、增强的for语句、可变数量的形参、注释、自动拆箱和装箱等 JDK 1.21998/12Java分成J2EE、J2SE、J2ME三个版本J2ME：主要用于控制移动设备和信息家电等有限存储的设备。J2SE：整个Java技术的核心和基础。J2EE：提供企业应用开发相关的完整解决方案。 JDK 1.01996]]></content>
       <categories>
         <category>java</category>
       </categories>
@@ -34,12 +34,12 @@
   <entry>
     <title><![CDATA[【阅读】TCP-IP详解]]></title>
     <url>%2F%E3%80%90%E9%98%85%E8%AF%BB%E3%80%91TCP-IP%E8%AF%A6%E8%A7%A3%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。 链路层IPPing“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。 UDP（用户数据报协议）DNS域名系统（DNS）是一种用于TCP/IP应用程序的分布式数据库，它提供主机名称和IP地址之间的转换及有关电子邮件的选路信息。 TCP（传输控制协议）TCP提供一种面向连接的、可靠的字节流服务。TCP通过下列方式提供可靠性： 应用数据被分割成TCP认为最适合发送的数据块。 TCP连接的建立与终止TCP超时与重传]]></content>
       <categories>
         <category>阅读</category>
       </categories>
       <tags>
-        <tag>TCP</tag>
+        <tag>TCP|IP</tag>
       </tags>
   </entry>
   <entry>
@@ -52,7 +52,7 @@
   </entry>
   <entry>
     <title><![CDATA[MVC-MVP-MVVM-MVI]]></title>
-    <url>%2F%E6%A1%86%E6%9E%B6-MVC-MVP-MVVM-MVI%2F</url>
+    <url>%2F%E3%80%90%E6%A1%86%E6%9E%B6%E3%80%91MVC-MVP-MVVM-MVI%2F</url>
     <content type="text"><![CDATA[小序框架面向于一系列相同行为代码的重用，而设计则面向的是一系列相同结构代码的重用。简而言之：框架是大智慧，用来对软件设计进行分工；设计模式是小技巧，对具体问题提出解决方案，以提高代码复用率，降低耦合度。 对待框架演变的态度：所谓真理只是在特定领域条件下成立的教条理论罢了。 MVCModel-View-Controller（模型-视图-控制器）MVC是一种框架模式而非设计模式，GOF把MVC看作是3种设计模式：观察者模式、策略模式与组合模式的合体，而且其核心在观察者模式，也就是一个基于发布/订阅者模型的框架。 经典MVC1978年由Trygve Reenskaug在Smalltalk-80系统上首次提出。MVC本质是分层解耦，将表现层与逻辑进行分离。 Model：Model可以是一个独立的对象，也可以是一系列对象的集合体。 View：View是Model中一些重要数据在视觉上的体现。 Controller：Controller用于连接User和System，比如当Controller接收到用户的输出时，会将其转换成合适的事件消息，并将该事件消息传递给一个或多个View。 Application Model MVCModel21998年，Model2被首次提出。Model2被应用于Web开发中，将JavaBean、JSP、Servlet对应于MVC的三个部分。Model2改进了事件流向。 User –&gt; Controller –&gt; Model –&gt; Controller –&gt; View –&gt; UserView与Model不再有耦合，接近于MVP，不同的是MVP捕获用户交互请求的是View而不是Controller。 MVPModel-View-Presenter（数据层-UI层-业务逻辑层） MVVMModel-View-ViewModel2005年被微软的WPF和Silverlight的架构师John Gossman提出，并且应用在微软的项目开发中，前身是Martin Fowler在2004年发表的Presentation Model（PM）设计模式。 DataBinding配置12345android &#123; dataBinding &#123; enabled true &#125;&#125; 布局结构首先根节点为layout；其次，布局文件中声名所使用到的数据实体类；然后才是传统布局节点。123456789101112131415161718192021&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;layout xmlns:android="http://schemas.android.com/apk/res/android"&gt; &lt;!--data节点声名数据模型--&gt; &lt;data&gt; &lt;variable name="userModel" type="com.test.demo.testdemo.UserModel" /&gt; &lt;/data&gt; &lt;!--传统布局--&gt; &lt;LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical"&gt; &lt;Button android:layout_width="match_parent" android:layout_height="50dp" android:text="@&#123;userModel.btnText&#125;" /&gt; &lt;/LinearLayout&gt;&lt;/layout&gt; 数据绑定12345678@Overrideprotected void onCreate(@Nullable Bundle savedInstanceState) &#123; super.onCreate(savedInstanceState); DataBindingTestBinding binding = DataBindingUtil.setContentView(this, R.layout.data_binding_test); UserModel model = new UserModel(); model.setBtnText("中国"); binding.setUserModel(model);&#125; MVIModel-View-Intent（数据层-UI层-业务逻辑层） Model：代表一种状态。]]></content>
       <categories>
         <category>框架</category>
