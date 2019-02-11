@@ -154,18 +154,20 @@
 
 
 
-  <meta name="description" content="概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。 链路层IPPing“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。 UDP（用户数据报协议）DNS域名系统（DNS）是一种用于TCP/IP应用程序的分布式数据库，它提供主机名称和IP地址之间的转换及有关电子邮件的选路信息。 TCP（传输控制协议）TCP">
+  <meta name="description" content="概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。 链路层TCP/IP支持多种不同的链路层协议，这取决于网络所使用的硬件，如以太网、令牌环网、FDDI（光纤分布式数据接口）及RS-232串行线路等。 IP（网际协议）Ping程序“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。 UDP（用户数据报协议）引">
 <meta name="keywords" content="TCP|IP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【阅读】TCP-IP详解">
 <meta property="og:url" content="https://lwdhub.github.io/【阅读】TCP-IP详解/index.html">
 <meta property="og:site_name" content="漫漫求索">
-<meta property="og:description" content="概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。 链路层IPPing“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。 UDP（用户数据报协议）DNS域名系统（DNS）是一种用于TCP/IP应用程序的分布式数据库，它提供主机名称和IP地址之间的转换及有关电子邮件的选路信息。 TCP（传输控制协议）TCP">
+<meta property="og:description" content="概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。 链路层TCP/IP支持多种不同的链路层协议，这取决于网络所使用的硬件，如以太网、令牌环网、FDDI（光纤分布式数据接口）及RS-232串行线路等。 IP（网际协议）Ping程序“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。 UDP（用户数据报协议）引">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-05T09:31:24.439Z">
+<meta property="og:image" content="https://i.imgur.com/dAqkptK.png">
+<meta property="og:updated_time" content="2019-02-11T14:38:28.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【阅读】TCP-IP详解">
-<meta name="twitter:description" content="概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。 链路层IPPing“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。 UDP（用户数据报协议）DNS域名系统（DNS）是一种用于TCP/IP应用程序的分布式数据库，它提供主机名称和IP地址之间的转换及有关电子邮件的选路信息。 TCP（传输控制协议）TCP">
+<meta name="twitter:description" content="概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。 链路层TCP/IP支持多种不同的链路层协议，这取决于网络所使用的硬件，如以太网、令牌环网、FDDI（光纤分布式数据接口）及RS-232串行线路等。 IP（网际协议）Ping程序“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。 UDP（用户数据报协议）引">
+<meta name="twitter:image" content="https://i.imgur.com/dAqkptK.png">
 
 
 
@@ -534,9 +536,55 @@
 
       
         <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="互联网地址"><a href="#互联网地址" class="headerlink" title="互联网地址"></a>互联网地址</h2><p>互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。</p>
-<h1 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h1><h1 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h1><h1 id="Ping"><a href="#Ping" class="headerlink" title="Ping"></a>Ping</h1><p>“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。</p>
-<h1 id="UDP（用户数据报协议）"><a href="#UDP（用户数据报协议）" class="headerlink" title="UDP（用户数据报协议）"></a>UDP（用户数据报协议）</h1><h1 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h1><p>域名系统（DNS）是一种用于TCP/IP应用程序的分布式数据库，它提供主机名称和IP地址之间的转换及有关电子邮件的选路信息。</p>
-<h1 id="TCP（传输控制协议）"><a href="#TCP（传输控制协议）" class="headerlink" title="TCP（传输控制协议）"></a>TCP（传输控制协议）</h1><p>TCP提供一种面向连接的、可靠的字节流服务。<br>TCP通过下列方式提供可靠性：</p>
+<h1 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h1><p>TCP/IP支持多种不同的链路层协议，这取决于网络所使用的硬件，如以太网、令牌环网、FDDI（光纤分布式数据接口）及RS-232串行线路等。</p>
+<h1 id="IP（网际协议）"><a href="#IP（网际协议）" class="headerlink" title="IP（网际协议）"></a>IP（网际协议）</h1><h1 id="Ping程序"><a href="#Ping程序" class="headerlink" title="Ping程序"></a>Ping程序</h1><p>“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。</p>
+<h1 id="UDP（用户数据报协议）"><a href="#UDP（用户数据报协议）" class="headerlink" title="UDP（用户数据报协议）"></a>UDP（用户数据报协议）</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>UDP是一个简单的面向数据报的运输层协议：进程的每个输出操作都正好产生一个UDP数据报，并组装成一份待发送的IP数据报。<br>UDP不提供可靠性。</p>
+<h1 id="DNS（域名系统）"><a href="#DNS（域名系统）" class="headerlink" title="DNS（域名系统）"></a>DNS（域名系统）</h1><h2 id="引言-1"><a href="#引言-1" class="headerlink" title="引言"></a>引言</h2><p>DNS（Domain Name System，域名系统）是一种用于TCP/IP应用程序的分布式数据库，它提供主机名称和IP地址之间的转换及有关电子邮件的选路信息。<br><strong>注意：</strong>网络信息中心NIC负责分配顶级域和委派其他指定地区域的授权机构。</p>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p><img src="https://i.imgur.com/dAqkptK.png" width="70%" height="50%"><br><strong>顶级域名分为三个部分：</strong></p>
+<ul>
+<li>arpa一个用作地址到名字转换的特殊域。</li>
+<li>7个3字符长的普通域。</li>
+<li>2个字符的域是基于ISO3166中定义的国家代码，称为国家域。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">域</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">com</td>
+<td style="text-align:left">商业组织</td>
+</tr>
+<tr>
+<td style="text-align:left">edu</td>
+<td style="text-align:left">教育机构</td>
+</tr>
+<tr>
+<td style="text-align:left">gov</td>
+<td style="text-align:left">其他美国政府部门</td>
+</tr>
+<tr>
+<td style="text-align:left">int</td>
+<td style="text-align:left">国际组织</td>
+</tr>
+<tr>
+<td style="text-align:left">mil</td>
+<td style="text-align:left">美国军事网点</td>
+</tr>
+<tr>
+<td style="text-align:left">net</td>
+<td style="text-align:left">网络</td>
+</tr>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">其他组织</td>
+</tr>
+</tbody>
+</table>
+<h2 id="报文格式"><a href="#报文格式" class="headerlink" title="报文格式"></a>报文格式</h2><h1 id="TCP（传输控制协议）"><a href="#TCP（传输控制协议）" class="headerlink" title="TCP（传输控制协议）"></a>TCP（传输控制协议）</h1><p>TCP提供一种面向连接的、可靠的字节流服务。<br>TCP通过下列方式提供可靠性：</p>
 <ul>
 <li>应用数据被分割成TCP认为最适合发送的数据块。</li>
 </ul>
@@ -871,7 +919,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网地址"><span class="nav-number">1.1.</span> <span class="nav-text">互联网地址</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#链路层"><span class="nav-number">2.</span> <span class="nav-text">链路层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IP"><span class="nav-number">3.</span> <span class="nav-text">IP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ping"><span class="nav-number">4.</span> <span class="nav-text">Ping</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UDP（用户数据报协议）"><span class="nav-number">5.</span> <span class="nav-text">UDP（用户数据报协议）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DNS"><span class="nav-number">6.</span> <span class="nav-text">DNS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP（传输控制协议）"><span class="nav-number">7.</span> <span class="nav-text">TCP（传输控制协议）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP连接的建立与终止"><span class="nav-number">8.</span> <span class="nav-text">TCP连接的建立与终止</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP超时与重传"><span class="nav-number">9.</span> <span class="nav-text">TCP超时与重传</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网地址"><span class="nav-number">1.1.</span> <span class="nav-text">互联网地址</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#链路层"><span class="nav-number">2.</span> <span class="nav-text">链路层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IP（网际协议）"><span class="nav-number">3.</span> <span class="nav-text">IP（网际协议）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ping程序"><span class="nav-number">4.</span> <span class="nav-text">Ping程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UDP（用户数据报协议）"><span class="nav-number">5.</span> <span class="nav-text">UDP（用户数据报协议）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">5.1.</span> <span class="nav-text">引言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DNS（域名系统）"><span class="nav-number">6.</span> <span class="nav-text">DNS（域名系统）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言-1"><span class="nav-number">6.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">6.2.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报文格式"><span class="nav-number">6.3.</span> <span class="nav-text">报文格式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP（传输控制协议）"><span class="nav-number">7.</span> <span class="nav-text">TCP（传输控制协议）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP连接的建立与终止"><span class="nav-number">8.</span> <span class="nav-text">TCP连接的建立与终止</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP超时与重传"><span class="nav-number">9.</span> <span class="nav-text">TCP超时与重传</span></a></li></ol></div>
             
 
           </div>
@@ -912,7 +960,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共8.3k字</span>
+  <span class="post-count">全站共8.5k字</span>
 </div>
 
         

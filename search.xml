@@ -34,7 +34,7 @@
   <entry>
     <title><![CDATA[【阅读】TCP-IP详解]]></title>
     <url>%2F%E3%80%90%E9%98%85%E8%AF%BB%E3%80%91TCP-IP%E8%AF%A6%E8%A7%A3%2F</url>
-    <content type="text"><![CDATA[概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。 链路层IPPing“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。 UDP（用户数据报协议）DNS域名系统（DNS）是一种用于TCP/IP应用程序的分布式数据库，它提供主机名称和IP地址之间的转换及有关电子邮件的选路信息。 TCP（传输控制协议）TCP提供一种面向连接的、可靠的字节流服务。TCP通过下列方式提供可靠性： 应用数据被分割成TCP认为最适合发送的数据块。 TCP连接的建立与终止TCP超时与重传]]></content>
+    <content type="text"><![CDATA[概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。 链路层TCP/IP支持多种不同的链路层协议，这取决于网络所使用的硬件，如以太网、令牌环网、FDDI（光纤分布式数据接口）及RS-232串行线路等。 IP（网际协议）Ping程序“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。 UDP（用户数据报协议）引言UDP是一个简单的面向数据报的运输层协议：进程的每个输出操作都正好产生一个UDP数据报，并组装成一份待发送的IP数据报。UDP不提供可靠性。 DNS（域名系统）引言DNS（Domain Name System，域名系统）是一种用于TCP/IP应用程序的分布式数据库，它提供主机名称和IP地址之间的转换及有关电子邮件的选路信息。注意：网络信息中心NIC负责分配顶级域和委派其他指定地区域的授权机构。 基础顶级域名分为三个部分： arpa一个用作地址到名字转换的特殊域。 7个3字符长的普通域。 2个字符的域是基于ISO3166中定义的国家代码，称为国家域。 域 描述 com 商业组织 edu 教育机构 gov 其他美国政府部门 int 国际组织 mil 美国军事网点 net 网络 org 其他组织 报文格式TCP（传输控制协议）TCP提供一种面向连接的、可靠的字节流服务。TCP通过下列方式提供可靠性： 应用数据被分割成TCP认为最适合发送的数据块。 TCP连接的建立与终止TCP超时与重传]]></content>
       <categories>
         <category>阅读</category>
       </categories>
