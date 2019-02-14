@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[android-框架-ARouter]]></title>
+    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-ARouter%2F</url>
+    <content type="text"><![CDATA[A framework for assisting in the renovation of Android componentization.帮助Android APP进行组件化改造的路由框架。 ARouter项目地址：https://github.com/alibaba/ARouter模块：arouter-apiarouter-compilerarouter-registerarouter-idea-plugin：使用IDE插件导航到目标类，Android Studio插件市场中搜索ARouter Helper 背景随着项目的发展，功能模块增多，无法避免面临以下问题： 项目编译时间变长 代码牵一发而动全身，项目维护难度增大 耦合代码与业务造成冲突，极大降低开发效率 组件化应运而生： 使功能模块可以独立开发、编译调试，降低项目编译时间提高开发效率 使功能模块间进行解耦 组件化问题：代码解耦的同时阻断了彼此的通信。Android原生可以实现，但是造成代码耦合，违背组件化目的，有没有简单易管理的通信方案？ARouter应运而生 应用场景 外部URL映射到内部页面，以及参数传递与解析 跨模块页面跳转，模块间解耦 拦截跳转过程，处理登录、埋点等逻辑 跨模块API调用，通过控制反转来做组件解耦 工作原理源码解析源码分为arouter-annotation、arouter-api、arouter-compiler三部分 arouter-annotation声名注解： @Autowired @Interceptor @Route 123456789101112131415161718192021222324252627282930@Target(&#123;ElementType.TYPE&#125;)@Retention(RetentionPolicy.CLASS)public @interface Route &#123; /** * Path of route */ String path(); /** * Used to merger routes, the group name MUST BE USE THE COMMON WORDS !!! */ String group() default ""; /** * Name of route, used to generate javadoc. */ String name() default ""; /** * Extra data, can be set by user. * Ps. U should use the integer num sign the switch, by bits. 10001010101010 */ int extras() default Integer.MIN_VALUE; /** * The priority of route. */ int priority() default -1;&#125;]]></content>
+      <categories>
+        <category>android</category>
+        <category>框架</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+        <tag>ARouter</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[java-versions]]></title>
     <url>%2Fjava-versions%2F</url>
     <content type="text"><![CDATA[简介JDK（Java SE Development Kit），Java标准版开发包。JRE（Java Runtime Environment），Java运行时环境。运行Java程序所必须环境的集合，包含JVM标准实现及Java核心类库。 JDK目录 bin：该路径存放了JDK的各种工具命令，javac、java等。 db：该路径安装Java DB的路径。 include：一些平台特定的头文件。 jre：运行Java程序所必需的JRE环境。 lib：存放JDK工具命令的实际执行程序 Java SE 112018年9月25日，Oracle正式发布Java 11（LTS长期支持2026年9月），Java 8以后的首个长期版本。下载 新特性Java SE 102018年3月20日，Java 10发布。 Java SE 92017年9月，Java 9发布。 Java SE 82014/3/18，Oracle发布Java SE 8。 新特性 Lambda表达式 Java SE 72011/7/28，Oracle发布Java SE 7，代号Dolphin（海豚） 新特性 引入二进制整数 支持字符串的switch语句 菱形语法 多异常捕捉 自动关闭资源的try语句 2009/4/20，Oracle收购SunJDK 1.62006/12（Java SE 6） JDK 1.52004/10（改名为Java SE 5.0、Java EE和Java ME）泛型、增强的for语句、可变数量的形参、注释、自动拆箱和装箱等 JDK 1.21998/12Java分成J2EE、J2SE、J2ME三个版本J2ME：主要用于控制移动设备和信息家电等有限存储的设备。J2SE：整个Java技术的核心和基础。J2EE：提供企业应用开发相关的完整解决方案。 JDK 1.01996]]></content>
