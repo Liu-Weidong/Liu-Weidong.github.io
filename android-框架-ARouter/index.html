@@ -154,18 +154,18 @@
 
 
 
-  <meta name="description" content="A framework for assisting in the renovation of Android componentization.帮助Android APP进行组件化改造的路由框架。  ARouter项目地址：https://github.com/alibaba/ARouter模块：arouter-apiarouter-compilerarouter-registerarouter">
+  <meta name="description" content="A framework for assisting in the renovation of Android componentization.帮助Android APP进行组件化改造的路由框架——支持模块间的路由、通信、解耦  背景随着项目的发展，功能模块增多，无法避免面临以下问题：  项目编译时间变长 代码牵一发而动全身，项目维护难度增大 耦合代码与业务造成冲突，极大降低开发效率  组件化应">
 <meta name="keywords" content="android,ARouter">
 <meta property="og:type" content="article">
 <meta property="og:title" content="android-框架-ARouter">
 <meta property="og:url" content="http://liuweidong.club/android-框架-ARouter/index.html">
 <meta property="og:site_name" content="漫漫求索">
-<meta property="og:description" content="A framework for assisting in the renovation of Android componentization.帮助Android APP进行组件化改造的路由框架。  ARouter项目地址：https://github.com/alibaba/ARouter模块：arouter-apiarouter-compilerarouter-registerarouter">
+<meta property="og:description" content="A framework for assisting in the renovation of Android componentization.帮助Android APP进行组件化改造的路由框架——支持模块间的路由、通信、解耦  背景随着项目的发展，功能模块增多，无法避免面临以下问题：  项目编译时间变长 代码牵一发而动全身，项目维护难度增大 耦合代码与业务造成冲突，极大降低开发效率  组件化应">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-14T15:42:59.842Z">
+<meta property="og:updated_time" content="2019-02-16T14:22:33.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android-框架-ARouter">
-<meta name="twitter:description" content="A framework for assisting in the renovation of Android componentization.帮助Android APP进行组件化改造的路由框架。  ARouter项目地址：https://github.com/alibaba/ARouter模块：arouter-apiarouter-compilerarouter-registerarouter">
+<meta name="twitter:description" content="A framework for assisting in the renovation of Android componentization.帮助Android APP进行组件化改造的路由框架——支持模块间的路由、通信、解耦  背景随着项目的发展，功能模块增多，无法避免面临以下问题：  项目编译时间变长 代码牵一发而动全身，项目维护难度增大 耦合代码与业务造成冲突，极大降低开发效率  组件化应">
 
 
 
@@ -541,9 +541,8 @@
 
       
         <blockquote>
-<p>A framework for assisting in the renovation of Android componentization.<br>帮助Android APP进行组件化改造的路由框架。</p>
+<p>A framework for assisting in the renovation of Android componentization.<br>帮助Android APP进行组件化改造的路由框架——支持模块间的路由、通信、解耦</p>
 </blockquote>
-<p><strong>ARouter项目地址：</strong><br><a href="https://github.com/alibaba/ARouter" target="_blank" rel="noopener">https://github.com/alibaba/ARouter</a><br><strong>模块：</strong><br>arouter-api<br>arouter-compiler<br>arouter-register<br>arouter-idea-plugin：使用IDE插件导航到目标类，Android Studio插件市场中搜索<code>ARouter Helper</code></p>
 <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>随着项目的发展，功能模块增多，无法避免面临以下问题：</p>
 <ul>
 <li>项目编译时间变长</li>
@@ -556,6 +555,7 @@
 <li>使功能模块间进行解耦</li>
 </ul>
 <p><strong>组件化问题：</strong>代码解耦的同时阻断了彼此的通信。Android原生可以实现，但是造成代码耦合，违背组件化目的，有没有简单易管理的通信方案？ARouter应运而生</p>
+<h1 id="ARouter项目"><a href="#ARouter项目" class="headerlink" title="ARouter项目"></a>ARouter项目</h1><p><a href="https://github.com/alibaba/ARouter" target="_blank" rel="noopener">https://github.com/alibaba/ARouter</a><br><strong>模块：</strong><br>arouter-api<br>arouter-compiler<br>arouter-register<br>arouter-idea-plugin：使用IDE插件导航到目标类，Android Studio插件市场中搜索<code>ARouter Helper</code></p>
 <h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><ol>
 <li>外部URL映射到内部页面，以及参数传递与解析</li>
 <li>跨模块页面跳转，模块间解耦</li>
@@ -902,7 +902,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用场景"><span class="nav-number">2.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工作原理"><span class="nav-number">3.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#源码解析"><span class="nav-number">4.</span> <span class="nav-text">源码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#arouter-annotation"><span class="nav-number">4.1.</span> <span class="nav-text">arouter-annotation</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ARouter项目"><span class="nav-number">2.</span> <span class="nav-text">ARouter项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用场景"><span class="nav-number">3.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工作原理"><span class="nav-number">4.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#源码解析"><span class="nav-number">5.</span> <span class="nav-text">源码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#arouter-annotation"><span class="nav-number">5.1.</span> <span class="nav-text">arouter-annotation</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -943,7 +943,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共12k字</span>
+  <span class="post-count">全站共12.3k字</span>
 </div>
 
         
