@@ -141,7 +141,7 @@
   </entry>
   <entry>
     <title><![CDATA[版本控制系统详解]]></title>
-    <url>%2F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3%2F</url>
+    <url>%2F%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 版本控制系统（VCS）版本控制系统（Version Control System），是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 本地版本控制系统 CVSSubversionGit引言分布式版本控制系统]]></content>
       <categories>
         <category>工具</category>
@@ -200,7 +200,6 @@
       </categories>
       <tags>
         <tag>面向对象六大原则</tag>
-        <tag>设计模式</tag>
       </tags>
   </entry>
   <entry>
@@ -217,7 +216,7 @@
   </entry>
   <entry>
     <title><![CDATA[http-https]]></title>
-    <url>%2F%E7%9F%A5%E8%AF%86%E7%82%B9-http-https%2F</url>
+    <url>%2F%E3%80%90%E7%9F%A5%E8%AF%86%E7%82%B9%E3%80%91http-https%2F</url>
     <content type="text"></content>
       <categories>
         <category>知识点</category>
@@ -225,6 +224,17 @@
       <tags>
         <tag>http</tag>
         <tag>https</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[持续集成CI]]></title>
+    <url>%2F%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90CI%2F</url>
+    <content type="text"><![CDATA[引言持续集成是一种软件开发实践，团队内开发成员经常集成工作，。每次集成通过自动化的构建（编译、自动化测试）来验证，从而尽早发现集成错误。Martin Fowler文章：https://martinfowler.com/articles/continuousIntegration.html Jenkins简介Jenkins最初由Sun Microsystems公司在2005年作为Hudson发布的。多年来，已经成长为Java社区最流行的CI系统。Jenkins的强大之处在于它的插件系统。如果构建系统中有新的功能需求，可以创建一个新的插件来扩展Jenkins的能力。 设置 Manage Jenkins | Configure System，Global properties添加如下环境变量：ANDROID_HOME和JAVA_HOME Manage Jenkins | Manage Plugins，安装Gradle插件。 配置VCS仓库，以便Jenkins知道从哪里获取项目源码。 Invoke Gradle script PluginsSonarQubeSonarQube Scanner for Jenkins TeamCityTravis CI如果项目仓库是在GitHub上托管的，则可以使用Travis CI来自动构建。]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Jenkins</tag>
       </tags>
   </entry>
   <entry>
@@ -274,7 +284,7 @@
   </entry>
   <entry>
     <title><![CDATA[UML类图]]></title>
-    <url>%2F%E7%9F%A5%E8%AF%86%E7%82%B9-UML%E7%B1%BB%E5%9B%BE%2F</url>
+    <url>%2F%E3%80%90%E7%9F%A5%E8%AF%86%E7%82%B9%E3%80%91UML%E7%B1%BB%E5%9B%BE%2F</url>
     <content type="text"><![CDATA[Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。]]></content>
       <categories>
         <category>知识点</category>
@@ -285,7 +295,7 @@
   </entry>
   <entry>
     <title><![CDATA[URI-URL-URN]]></title>
-    <url>%2F%E7%9F%A5%E8%AF%86%E7%82%B9-URI-URL-URN%2F</url>
+    <url>%2F%E3%80%90%E7%9F%A5%E8%AF%86%E7%82%B9%E3%80%91URI-URL-URN%2F</url>
     <content type="text"><![CDATA[URI（Uniform Resource Identifier，统一资源标识符）URL（Uniform Resource Locator，统一资源定位符）URN（Uniform Resource Name，统一资源名称）scheme://host/path]]></content>
       <categories>
         <category>知识点</category>
@@ -308,8 +318,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Android Studio]]></title>
-    <url>%2F%E3%80%90IDE%E3%80%91AndroidStudio%2F</url>
+    <title><![CDATA[IDE-Android Studio]]></title>
+    <url>%2F%E3%80%90%E5%B7%A5%E5%85%B7%E3%80%91IDE-AndroidStudio%2F</url>
     <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 配置Logcat颜色 Assert：#8F0005 深红Debug：#0070BB 蓝Error：#FF0006 红Info：#48BB31 绿Verbose：#BBBBBB 白Warning：#BBBB23 黄 断点调试与管理 1 Show Execution Point2 Step Over：单步执行。如果当前行为方法调用（不会跳到方法内部），方法执行完后跳到下一行。3 Step Into：与Step Over不同的是，会跳到方法内部（非类库的方法）。4 Force Step Into：与Step Into不同的是，始终跳到方法内部。5 Step Out：跳出方法，返回到该方法调用处。6 Drop Frame7 Run to Cursor8 Resume Program：程序执行到下一个断点处。9 Stop：停止调试。 变量观察 选中变量，右键选择Add to Watches 修改变量值，调试结果。选择Set Value 条件断点循环体内设置。 日志断点Suspend取消选中，显示日志输入框。 异常断点单击如下图标，在弹窗中新建异常断点。 变量断点 方法断点在方法名所在行添加断点。 Plugins]]></content>
       <categories>
         <category>工具</category>
