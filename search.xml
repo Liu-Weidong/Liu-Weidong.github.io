@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【阅读】算法导论-第三版]]></title>
+    <url>%2F%E3%80%90%E9%98%85%E8%AF%BB%E3%80%91%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-%E7%AC%AC%E4%B8%89%E7%89%88%2F</url>
+    <content type="text"><![CDATA[算法基础排序堆排序堆排序的时间复杂度是O(nlgn)。 快速排序线性时间排序数据结构基本数据结构栈和队列栈和队列都是动态集合，且在其上进行DELETE操作所移除的元素是预先设定的。在栈（stack）中，被删除的是最近插入的元素：栈实现的是一种后进先出（last-in，first-out，LIFO）策略。类似的，队列（queue）中，被删去的总是在集合中存在时间最长的那个元素：队列实现的是一种先进先出（first-in，first-out，FIFO）策略。 栈上的INSERT操作称为压入（PUSH），而无元素参数的DELETE操作称为弹出（POP）。 队列 链表散列表二叉搜索树红黑树高级数据结构B树图算法基本的图算法最小生成树]]></content>
+      <categories>
+        <category>阅读</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[软件架构]]></title>
     <url>%2F%E3%80%90%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E3%80%91%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%2F</url>
     <content type="text"><![CDATA[引言 软件架构（Software Architecture）是一系列相关的抽象模式，用于指导大型软件系统各个方面的设计。软件架构是一个系统的草图。软件架构描述的对象是直接构成系统的抽象组件。各个组件之间的连接则明确和相对细致地描述组件之间的通讯。在实现阶段，这些抽象组件被细化为实际的组件，如具体某个类或对象。轻量级JavaEE（Struts+Spring+Hibernate）重量级JavaEE（JSF+EJB+JPA） 架构模式是描述软件系统里的基本的结构组织或纲要。从定义上来看，它是在指导我们如何组织代码，是一种具有指导意义的思想，如解决系统的数据与显示分离的问题，AOP、IOC、ORM、MVC等。 框架是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法；另一种定义认为，框架是可被应用开发者定制的应用骨架。前者是从应用方面而后者是从目的方面给出的定义。Struts、MyBatis等。 设计模式是一套被反复使用、多数人知道的、经过分类编目的、代码设计经验的总结。从定义上看，它涉及到了代码级别，侧重于解决实际的现实问题。 分层架构分层架构（layered architecture）是最常见的软件架构，也是事实上的标准架构。将软件分成若干个水平层，每一层都有清晰的角色和分工，不需要知道其他层的细节。层与层之间通过接口通信。虽然没有明确约定，软件一定要分成多少层，但是四层的结构最常见。 表现层（presentation）：用户界面，负责视觉和用户互动 业务层（business）：实现业务逻辑 持久层（persistence）：提供数据，SQL语句放在这一层 数据层（database）：保存数据 事件驱动架构事件驱动架构（Event Driven Architecture，EDA）一个事件驱动框架（EDA）定义了一个设计和实现一个应用系统的方法学，在这个系统里事件可传输于松散耦合的组件和服务之间。 微核架构微核架构（microkernel architecture）又称为”插件架构”（plug-in architecture），指的是软件的内核相对较小，主要功能和业务逻辑都通过插件实现。内核（core）通常只包含系统运行的最小功能。插件则是互相独立的，插件之间的通信，应该减少到最低，避免出现互相依赖的问题。优点： 良好的功能延伸性（extensibility），需要什么功能，开发一个插件即可 功能之间是隔离的，插件可以独立的加载和卸载，使得它比较容易部署 可定制性高，适应不同的开发需要 可以渐进式地开发，逐步增加功能 缺点： 扩展性（scalability）差，内核通常是一个独立单元，不容易做成分布式 开发难度相对较高，因为涉及到插件与内核的通信，以及内部的插件登记机制 微服务架构微服务架构（microservices architecture）是服务导向架构（service-oriented architecture，缩写 SOA）的升级。每一个服务就是一个独立的部署单元（separately deployed unit）。这些单元都是分布式的，互相解耦，通过远程通信协议（比如REST、SOAP）联系。 云架构云结构（cloud architecture）主要解决扩展性和并发的问题，是最容易扩展的架构。它的高扩展性，主要原因是没使用中央数据库，而是把数据都复制到内存中，变成可复制的内存数据单元。然后，业务处理能力封装成一个个处理单元（prcessing unit）。访问量增加，就新建处理单元；访问量减少，就关闭处理单元。由于没有中央数据库，所以扩展性的最大瓶颈消失了。由于每个处理单元的数据都在内存里，最好要进行数据持久化。这个模式主要分成两部分：处理单元（processing unit）和虚拟中间件（virtualized middleware）。 处理单元：实现业务逻辑 虚拟中间件：负责通信、保持sessions、数据复制、分布式处理、处理单元的部署。]]></content>
@@ -85,6 +96,13 @@
     <title><![CDATA[android-框架-view-图表]]></title>
     <url>%2Fandroid-%E6%A1%86%E6%9E%B6-view-%E5%9B%BE%E8%A1%A8%2F</url>
     <content type="text"><![CDATA[MPAndroidChartHelloChartsWilliamChart]]></content>
+      <categories>
+        <category>android</category>
+        <category>框架</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[【阅读】TCP-IP详解]]></title>
@@ -178,6 +196,28 @@
       <tags>
         <tag>android</tag>
         <tag>RxJava</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[构建工具-gradle]]></title>
+    <url>%2F%E3%80%90%E5%88%A9%E5%99%A8%E3%80%91%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7-gradle%2F</url>
+    <content type="text"><![CDATA[2013年5月，谷歌发布Android Studio，并对Gradle进行了支持。基于JetBrains的IntelliJ IDEA，Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。Groovy是基于Java虚拟机的动态语言。 Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。 Gradle有约定优于配置的原则，即为设置和属性提供默认值。 项目和任务每一次构建都包括至少一个项目，每一个项目又包括一个或多个任务。每个build.gradle文件都代表着一个项目，任务定义在构建脚本里。当初始化构建过程时，Gradle会基于build文件组装项目和任务对象。一个任务对象包含一系列动作对象，这些动作对象之后会按顺序执行。一个单独的动作对象就是一个待执行的代码块，它和Java中的方法类似。构建生命周期 初始化 配置 执行 Gradle Wrapper项目根目录，在terminal上运行gradlew -v或在命令行上运行gradlew.bat -v检查项目中的Gradle Wrapper是否可用。https://gradle.org/releases/ gradle文件 settings.gradle：位于项目的根目录 1include ':app' build.gradle：位于项目的根目录 12345678910111213141516buildscript &#123; repositories &#123; jcenter() &#125; dependencies &#123; // Gradle的Android插件 classpath 'com.android.tools.build:gradle:2.3.0' &#125;&#125;allprojects &#123; repositories &#123; jcenter() google() &#125;&#125; build.gradle：位于Module的根目录，可以覆盖顶层build.gradle中的任何属性。 12345678910111213141516171819202122232425262728293031323334353637android &#123; compileSdkVersion 27 buildToolsVersion '27.0.3' defaultConfig &#123; applicationId "com.test" minSdkVersion 14 targetSdkVersion 27 versionCode 1 versionName "1.0.0" &#125; signingConfigs &#123; debug &#123; storeFile file("./doc/debug/debug.keystore") storePassword "android" keyAlias "androiddebugkey" keyPassword "android" &#125; &#125; buildTypes &#123; debug &#123; minifyEnabled false signingConfig signingConfigs.debug &#125; release &#123; minifyEnabled true signingConfig signingConfigs.debug proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro' &#125; &#125;&#125;dependencies &#123;&#125; applicationId：定义在manifest文件中的package，继续用在你的源代码和R类中，而之前被用作设备和Google Play唯一标识的package name，现在则被称之为applicationId。 BuildConfigSDK工具版本升级到17之后，构建工具都会生成一个叫作BuildConfig的类，该类包含一个按照构建类型设置值得DEBUG常量。1234567891011android &#123; buildTypes &#123; debug &#123; buildConfigField "boolean","IS_LOG","true" buildConfigField "String","URL","\"http://test.example.com\"" &#125; release &#123; buildConfigField "boolean","IS_LOG","false" &#125; &#125;&#125; 字符串值必须用转义双引号括起来，这样才会生成实际意义上的字符串。Java代码中可以这样用BuildConfig.IS_LOG和BuildConfig.URL buildConfigField resValue 基本语法extGradle允许在Project对象上添加额外属性。这意味着任何build.gradle文件都能定义额外的属性，添加额外属性需要通过ext代码块。顶层构建文件添加如下代码块：1234ext &#123; compileSdkVersion = 23 buildToolsVersion = '23.0.3'&#125; 模块层的构建文件使用rootProject获取属性：1234android &#123; compileSdkVersion rootProject.ext.compileSdkVersion buildToolsVersion rootProject.ext.buildToolsVersion&#125; 依赖管理远程仓库12345repositories &#123; maven&#123; url "自己的服务器地址" &#125;&#125; 本地仓库12345repositories &#123; maven&#123; url "../test" &#125;&#125; 通过使用flatDirs添加一个常用文件夹作为仓库。12345repositories &#123; flatDir &#123; dirs 'libs', '../Framework/libs' &#125;&#125; 本地依赖12345678dependencies &#123; // 依赖单个JAR文件 compile files('libs/test.jar') // 依赖所有文件 compile fileTree('libs') // 依赖指定文件格式，如JAR compile fileTree(dir: 'libs', include: ['*.jar'])&#125; 原生依赖库.so文件：在模块的main目录下新建jniLibs文件夹，然后为每个平台（armeabi、mips、x86）创建子文件夹。如果此约定不生效，可以在构建文件中设置相关设置：12345android &#123; sourceSets.main &#123; jniLibs.srcDir 'src/main/libs' &#125;&#125; 依赖项目：123dependencies &#123; compile project(':Test')&#125; .aar文件： 添加依赖仓库文件夹 添加依赖，如下 123dependencies &#123; compile(name: 'aarName', ext: 'aar')&#125; 语义化版本将依赖添加到JCenter等依赖仓库时，约定遵循了一套版本化规则，称为语义化版本。版本数字的格式一般为major.minor.patch 当做不兼容的API变化时，major版本增加。 当以向后兼容的方式添加功能时，minor版本增加。 当修复一些bug时，patch版本增加。 基于以上规则，可以添加动态化版本。+ 构建variant构建类型12345678910111213141516171819android &#123; buildTypes &#123; debug &#123; &#125; release &#123; minifyEnabled false proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro' &#125; // 用已有的构建类型属性初始化新的构建类型 staging.initWith(buildTypes.debug) staging &#123; applicationIdSuffix ".staging" versionNameSuffix "-staging" &#125; &#125;&#125; 可以根据构建类型来添加依赖。如debugCompile ‘com.android.support:***:1.0.0’ product flavor1234567891011android &#123; productFlavors &#123; free &#123; &#125; charge &#123; &#125; &#125;&#125; 签名配置123456789101112android &#123; signingConfigs &#123; staging.initWith(signingConfigs.debug) release &#123; storeFile file("../key/debug.keystore") storePassword "android" keyAlias "androiddebugkey" keyPassword "android" &#125; &#125;&#125; GroovyGroovy是从Java衍生出来的，运行在Java虚拟机上的敏捷语言。 类和成员变量def：声名变量 方法在Groovy中，方法的最后一行通常默认返回，即使没有使用return关键字。 ClosuresClosures是匿名代码块，可以接受参数和返回值。 集合List和Map123456List list = [1, 2, 3, 4]list.each() &#123; element -&gt; println element&#125;Map prices = [apple:10, car:100] 123apply plugin: 'com.android.application'// apply()是Project类的一个方法。参数是key为plugin，value为com.android.application的Map。project.apply([plugin: 'com.android.application']) 加速构建Jack和JillJack（Java Android Compiler Kit）是一个新的Android构建工具链，其可以直接编译Java源码为Android Dalvik的可执行格式。它有自己的.jack依赖库格式，也采用了打包和缩减。Jill（Jack Intermediate Library Linker）是一个可以将.aar和.jar文件转换成.jack依赖库的工具。useJack = true]]></content>
+      <categories>
+        <category>利器</category>
+      </categories>
+      <tags>
+        <tag>gradle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Maven]]></title>
+    <url>%2F%E3%80%90%E5%88%A9%E5%99%A8%E3%80%91Maven%2F</url>
+    <content type="text"><![CDATA[Maven简介Eclipse + Ant组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。Android Studio + Gradle组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。Maven仓库分为两类：本地仓库和远程仓库。 远程仓库又分为：中央仓库、Nexus和其他公共库。 本地仓库就是本地存放jar包的位置，Maven的本地仓库在最开始的时候并不会创建，而是第一次启动Maven时，在当前用户的文件夹下建立一个.m2文件，其中存放Maven本地仓库的所有jar包。 配置http://maven.apache.org/download.cgi环境变量 MAVEN_HOME——安装路径 PATH——%MAVEN_HOME%\bin; 【mvn -v】命令行输入，查看配置是否成功。 服务源 JCenter托管在Bintray上面的Maven仓库。 Maven Central托管在Sonatype上面的Maven仓库。 JitPack JCenter优点: 基于CDN分布函数库，JCenter提供了更快的下载速度。 JCenter是最大的Java仓库，可以说Maven Central是JCenter的一个子集，托管在Maven Central中的函数库，几乎都托管在JCenter上面。 上传简单，Bintray的用户界面对用户友好。 获取函数库的原理完整的函数库依赖字符串包含三部分：GROUP_ID:ARTIFACT_ID:VERSIONGradle根据依赖配置，向Maven Repository服务器查询是否存在该版本的函数库，如果存在，则会根据服务器类型拼接下载请求url。 JCenter：http://jcenter.bintray.com/... Maven Central：https://oss.sonatype.org/content/repositories/releases... Maven私服私服是架设在局域网内的远程仓库，目的是代理远程仓库及部署第三方构件。 Sonatype Nexus搭建默认端口：8081http://127.0.0.1:8081/http://localhost:8081/默认配置文件：C:\swTools\nexus-3.13.0-01\etc\nexus-default.properties默认登录：admin/admin123 常用命令【nexus.exe/install】安装nexus为系统服务【nexus.exe/uninstall】卸载nexus为系统服务【nexus.exe/start】启动nexus服务【nexus.exe/stop】停止nexus服务【nexus.exe/run】启动服务 Apache ArchivaJFrog Artifactory]]></content>
+      <categories>
+        <category>利器</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
