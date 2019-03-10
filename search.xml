@@ -1,35 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[【阅读】算法导论-第三版]]></title>
-    <url>%2F%E3%80%90%E9%98%85%E8%AF%BB%E3%80%91%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-%E7%AC%AC%E4%B8%89%E7%89%88%2F</url>
-    <content type="text"><![CDATA[算法基础排序堆排序堆排序的时间复杂度是O(nlgn)。 快速排序线性时间排序数据结构基本数据结构栈和队列栈和队列都是动态集合，且在其上进行DELETE操作所移除的元素是预先设定的。在栈（stack）中，被删除的是最近插入的元素：栈实现的是一种后进先出（last-in，first-out，LIFO）策略。类似的，队列（queue）中，被删去的总是在集合中存在时间最长的那个元素：队列实现的是一种先进先出（first-in，first-out，FIFO）策略。 栈上的INSERT操作称为压入（PUSH），而无元素参数的DELETE操作称为弹出（POP）。 队列 链表散列表二叉搜索树红黑树高级数据结构B树图算法基本的图算法最小生成树]]></content>
-      <categories>
-        <category>阅读</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[软件架构]]></title>
     <url>%2F%E3%80%90%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E3%80%91%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%2F</url>
     <content type="text"><![CDATA[引言 软件架构（Software Architecture）是一系列相关的抽象模式，用于指导大型软件系统各个方面的设计。软件架构是一个系统的草图。软件架构描述的对象是直接构成系统的抽象组件。各个组件之间的连接则明确和相对细致地描述组件之间的通讯。在实现阶段，这些抽象组件被细化为实际的组件，如具体某个类或对象。轻量级JavaEE（Struts+Spring+Hibernate）重量级JavaEE（JSF+EJB+JPA） 架构模式是描述软件系统里的基本的结构组织或纲要。从定义上来看，它是在指导我们如何组织代码，是一种具有指导意义的思想，如解决系统的数据与显示分离的问题，AOP、IOC、ORM、MVC等。 框架是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法；另一种定义认为，框架是可被应用开发者定制的应用骨架。前者是从应用方面而后者是从目的方面给出的定义。Struts、MyBatis等。 设计模式是一套被反复使用、多数人知道的、经过分类编目的、代码设计经验的总结。从定义上看，它涉及到了代码级别，侧重于解决实际的现实问题。 分层架构分层架构（layered architecture）是最常见的软件架构，也是事实上的标准架构。将软件分成若干个水平层，每一层都有清晰的角色和分工，不需要知道其他层的细节。层与层之间通过接口通信。虽然没有明确约定，软件一定要分成多少层，但是四层的结构最常见。 表现层（presentation）：用户界面，负责视觉和用户互动 业务层（business）：实现业务逻辑 持久层（persistence）：提供数据，SQL语句放在这一层 数据层（database）：保存数据 事件驱动架构事件驱动架构（Event Driven Architecture，EDA）一个事件驱动框架（EDA）定义了一个设计和实现一个应用系统的方法学，在这个系统里事件可传输于松散耦合的组件和服务之间。 微核架构微核架构（microkernel architecture）又称为”插件架构”（plug-in architecture），指的是软件的内核相对较小，主要功能和业务逻辑都通过插件实现。内核（core）通常只包含系统运行的最小功能。插件则是互相独立的，插件之间的通信，应该减少到最低，避免出现互相依赖的问题。优点： 良好的功能延伸性（extensibility），需要什么功能，开发一个插件即可 功能之间是隔离的，插件可以独立的加载和卸载，使得它比较容易部署 可定制性高，适应不同的开发需要 可以渐进式地开发，逐步增加功能 缺点： 扩展性（scalability）差，内核通常是一个独立单元，不容易做成分布式 开发难度相对较高，因为涉及到插件与内核的通信，以及内部的插件登记机制 微服务架构微服务架构（microservices architecture）是服务导向架构（service-oriented architecture，缩写 SOA）的升级。每一个服务就是一个独立的部署单元（separately deployed unit）。这些单元都是分布式的，互相解耦，通过远程通信协议（比如REST、SOAP）联系。 云架构云结构（cloud architecture）主要解决扩展性和并发的问题，是最容易扩展的架构。它的高扩展性，主要原因是没使用中央数据库，而是把数据都复制到内存中，变成可复制的内存数据单元。然后，业务处理能力封装成一个个处理单元（prcessing unit）。访问量增加，就新建处理单元；访问量减少，就关闭处理单元。由于没有中央数据库，所以扩展性的最大瓶颈消失了。由于每个处理单元的数据都在内存里，最好要进行数据持久化。这个模式主要分成两部分：处理单元（processing unit）和虚拟中间件（virtualized middleware）。 处理单元：实现业务逻辑 虚拟中间件：负责通信、保持sessions、数据复制、分布式处理、处理单元的部署。]]></content>
       <categories>
         <category>软件架构</category>
       </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[android-框架-Log]]></title>
-    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-Log%2F</url>
-    <content type="text"><![CDATA[Logger引言Logger项目工作原理源码解析]]></content>
-      <categories>
-        <category>android</category>
-        <category>框架</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[android-框架-图片加载]]></title>
@@ -93,6 +70,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[【阅读】算法导论-第三版]]></title>
+    <url>%2F%E3%80%90%E9%98%85%E8%AF%BB%E3%80%91%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-%E7%AC%AC%E4%B8%89%E7%89%88%2F</url>
+    <content type="text"><![CDATA[算法基础排序堆排序堆排序的时间复杂度是O(nlgn)。 快速排序线性时间排序数据结构基本数据结构栈和队列栈和队列都是动态集合，且在其上进行DELETE操作所移除的元素是预先设定的。在栈（stack）中，被删除的是最近插入的元素：栈实现的是一种后进先出（last-in，first-out，LIFO）策略。类似的，队列（queue）中，被删去的总是在集合中存在时间最长的那个元素：队列实现的是一种先进先出（first-in，first-out，FIFO）策略。 栈上的INSERT操作称为压入（PUSH），而无元素参数的DELETE操作称为弹出（POP）。 队列 链表散列表二叉搜索树红黑树高级数据结构B树图算法基本的图算法最小生成树]]></content>
+      <categories>
+        <category>阅读</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[android-框架-view-图表]]></title>
     <url>%2Fandroid-%E6%A1%86%E6%9E%B6-view-%E5%9B%BE%E8%A1%A8%2F</url>
     <content type="text"><![CDATA[MPAndroidChartHelloChartsWilliamChart]]></content>
@@ -102,17 +90,6 @@
       </categories>
       <tags>
         <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[【阅读】TCP-IP详解]]></title>
-    <url>%2F%E3%80%90%E9%98%85%E8%AF%BB%E3%80%91TCP-IP%E8%AF%A6%E8%A7%A3%2F</url>
-    <content type="text"><![CDATA[概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。 链路层TCP/IP支持多种不同的链路层协议，这取决于网络所使用的硬件，如以太网、令牌环网、FDDI（光纤分布式数据接口）及RS-232串行线路等。 IP（网际协议）Ping程序“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。 UDP（用户数据报协议）引言UDP是一个简单的面向数据报的运输层协议：进程的每个输出操作都正好产生一个UDP数据报，并组装成一份待发送的IP数据报。UDP不提供可靠性。 DNS（域名系统）引言DNS（Domain Name System，域名系统）是一种用于TCP/IP应用程序的分布式数据库，它提供主机名称和IP地址之间的转换及有关电子邮件的选路信息。注意：网络信息中心NIC负责分配顶级域和委派其他指定地区域的授权机构。 基础顶级域名分为三个部分： arpa一个用作地址到名字转换的特殊域。 7个3字符长的普通域。 2个字符的域是基于ISO3166中定义的国家代码，称为国家域。 域 描述 com 商业组织 edu 教育机构 gov 其他美国政府部门 int 国际组织 mil 美国军事网点 net 网络 org 其他组织 报文格式TCP（传输控制协议）TCP提供一种面向连接的、可靠的字节流服务。TCP通过下列方式提供可靠性： 应用数据被分割成TCP认为最适合发送的数据块。 TCP连接的建立与终止TCP超时与重传]]></content>
-      <categories>
-        <category>阅读</category>
-      </categories>
-      <tags>
-        <tag>TCP|IP</tag>
       </tags>
   </entry>
   <entry>
@@ -166,6 +143,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[【阅读】TCP-IP详解]]></title>
+    <url>%2F%E3%80%90%E9%98%85%E8%AF%BB%E3%80%91TCP-IP%E8%AF%A6%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。 链路层TCP/IP支持多种不同的链路层协议，这取决于网络所使用的硬件，如以太网、令牌环网、FDDI（光纤分布式数据接口）及RS-232串行线路等。 IP（网际协议）Ping程序“ping”源于声呐定位操作。Ping程序由Mike Muuss编写，目的是测试另一台主机是否可达。 UDP（用户数据报协议）引言UDP是一个简单的面向数据报的运输层协议：进程的每个输出操作都正好产生一个UDP数据报，并组装成一份待发送的IP数据报。UDP不提供可靠性。 DNS（域名系统）引言DNS（Domain Name System，域名系统）是一种用于TCP/IP应用程序的分布式数据库，它提供主机名称和IP地址之间的转换及有关电子邮件的选路信息。注意：网络信息中心NIC负责分配顶级域和委派其他指定地区域的授权机构。 基础顶级域名分为三个部分： arpa一个用作地址到名字转换的特殊域。 7个3字符长的普通域。 2个字符的域是基于ISO3166中定义的国家代码，称为国家域。 域 描述 com 商业组织 edu 教育机构 gov 其他美国政府部门 int 国际组织 mil 美国军事网点 net 网络 org 其他组织 报文格式TCP（传输控制协议）TCP提供一种面向连接的、可靠的字节流服务。TCP通过下列方式提供可靠性： 应用数据被分割成TCP认为最适合发送的数据块。 TCP连接的建立与终止TCP超时与重传]]></content>
+      <categories>
+        <category>阅读</category>
+      </categories>
+      <tags>
+        <tag>TCP|IP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[版本控制系统详解]]></title>
     <url>%2F%E3%80%90%E5%88%A9%E5%99%A8%E3%80%91%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 版本控制系统（VCS）版本控制系统（Version Control System），是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 本地版本控制系统集中化的版本控制系统（CVCS）如CVS、Subversion、Perforce等，都有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。 分布式版本控制系统分布式版本控制系统（Distributed Version Control System，DVCS），如Git、Mercurial、Bazaar、Darcs等，客户端并不只是提取最新版本的文件快照，而是把代码仓库完整地镜像下来。 CVSSubversion简介Subversion（SVN）是一个自由开源的版本控制系统，相对于CVS，采用了分支管理系统，它的设计目标就是取代CVS。2000年，CollabNet开始寻找CVS替代产品的开发人员。 TortoiseSVNBitKeeperGit简介分布式版本控制系统 Workspace：工作区 Index/Stage：暂存区 Repository：仓库区（本地仓库） Remote：（远程仓库） Git命令【git init】在当前目录新建一个Git代码库【git init [project-name]】【git clone url】下载一个项目和整个代码历史【git branch】列出所有本地分支【git branch -r】列出所有远程分支【git status】显示有变更的文件【git log】显示当前分支的版本历史【git pull [remote] [branch]】取回远程仓库的变化，并与本地分支合并【git pull origin master –allow-unrelated-histories】【git push [remote] [branch]】上传本地分支到远程仓库【git push [remote] -force】强行推送当前分支到远程仓库，即使有冲突 可视化界面软件SourceTree拥有可视化界面的项目版本控制软件，适用于git项目管理。分支共有5种类型： master：最终发布版本，整个项目中有且只有一个 develop：项目的开发分支，原则上项目中有且只有一个 feature：功能分支，用于开发一个新的功能 release：预发布版本，介于master与develop之间的版本，主要用于测试 hotfix：修复补丁，用于修复master上的bug，直接作用于master 在线代码仓库GitHubGitHub是在线的基于Git的代码托管服务。GitHub是2008年由Ruby on Rails编写而成。 GitLabGitLab是利用Ruby on Rails开源的版本管理系统，实现一个自托管的Git项目仓库，可通过Web界面进行访问公开的或私人项目。依赖组件：Ruby 1.9.3+，MySQL，Git，Redis，sidekiq BitbucketGitEEMercurialMercurial是一种轻量级分布式版本控制系统，采用Python语言实现，易于学习和使用，扩展性强。基于GNU General Public License（GPL）授权的开源项目。]]></content>
@@ -196,6 +184,18 @@
       <tags>
         <tag>android</tag>
         <tag>RxJava</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[android-框架-Log]]></title>
+    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-Log%2F</url>
+    <content type="text"><![CDATA[Logger引言Logger项目工作原理源码解析]]></content>
+      <categories>
+        <category>android</category>
+        <category>框架</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
       </tags>
   </entry>
   <entry>
