@@ -162,7 +162,7 @@
 <meta property="og:site_name" content="漫漫求索">
 <meta property="og:description" content="一次编译，到处运行。  简介Class是对象的抽象；对象则是Class的实例。 java程序运行机制java源文件 –javac编译–&amp;gt; *.class字节码文件（与平台无关，面向JVM） –java解释执行–&amp;gt; 特定平台的机器码（先编译、后解释）计算机高级语言按程序执行方式分为编译型和解释型两种。  编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码一次性“翻译”成该平">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-07T14:54:52.053Z">
+<meta property="og:updated_time" content="2019-03-11T15:29:55.631Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java-知识框架">
 <meta name="twitter:description" content="一次编译，到处运行。  简介Class是对象的抽象；对象则是Class的实例。 java程序运行机制java源文件 –javac编译–&amp;gt; *.class字节码文件（与平台无关，面向JVM） –java解释执行–&amp;gt; 特定平台的机器码（先编译、后解释）计算机高级语言按程序执行方式分为编译型和解释型两种。  编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码一次性“翻译”成该平">
@@ -607,11 +607,14 @@
 <li>同步性：HashMap是线程不安全的；Hashtable是线程安全的。</li>
 <li>值：HashMap可以将null作为key或value</li>
 </ul>
-<h2 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h2><h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><p>Java中获得Class对象通常三种方式：</p>
+<h2 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h2><h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><p><a href="https://www.cnblogs.com/whgk/p/6122036.html" target="_blank" rel="noopener">https://www.cnblogs.com/whgk/p/6122036.html</a><br>Java中获得Class对象通常三种方式：</p>
 <ul>
 <li>Class.forName(String className)</li>
 <li>调用某个类的class属性来获取该类对应的Class对象。</li>
-<li>调用某个对象的getClass()方法。java.lang.Object，所以所有的Java对象都可以调用该方法。<br>1和2都是直接根据类来取得该类的Class对象，相比之下，第二种优势：</li>
+<li>调用某个对象的getClass()方法。</li>
+</ul>
+<p>1和2都是直接根据类来取得该类的Class对象，相比之下，第二种优势：</p>
+<ul>
 <li>代码更安全。编译阶段可以检查需要访问的Class对象是否存在。</li>
 <li>程序性能更好。因无需调用方法。</li>
 </ul>
@@ -732,7 +735,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/【知识点】UML类图/" rel="next" title="UML类图">
+              <a href="/【综合】UML类图/" rel="next" title="UML类图">
                 <i class="fa fa-chevron-left"></i> UML类图
               </a>
             
@@ -822,7 +825,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -924,9 +927,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1041,7 +1042,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共18.3k字</span>
+  <span class="post-count">全站共19.6k字</span>
 </div>
 
         
