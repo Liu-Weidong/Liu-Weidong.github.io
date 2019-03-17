@@ -23,7 +23,7 @@
   <entry>
     <title><![CDATA[android-框架-网络请求]]></title>
     <url>%2Fandroid-%E6%A1%86%E6%9E%B6-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%2F</url>
-    <content type="text"><![CDATA[引言网络请求框架本质上是将网络请求方法封装好的类库，实现异步请求和处理数据，从而实现整个网络请求模块的功能。 RetrofitOkHttpVolley引言Volley是2013年Google I/O上发布的一款Android平台上的网络通信库。适合数据量大，需要频繁通信的网络操作。不适用文件的上传下载操作。 Android-Async-HttpAndroid源生网络请求Apache HttpClient已经不推荐使用，6.0上被删除。Google推荐在Android上使用HttpURLConnection HttpURLConnection问题 没有针对异步调用进行封装 没有线程池，网络缓存，不能重复利用请求，性能不佳 没有json解析框架]]></content>
+    <content type="text"><![CDATA[引言网络请求框架本质上是将网络请求方法封装好的类库，实现异步请求和处理数据，从而实现整个网络请求模块的功能。 Retrofit简介项目工作原理源码解析OkHttp简介 An HTTP+HTTP/2 client for Android and Java applications. The OkHttp 3.12.x branch supports Android 2.3+ (API level 9+) and Java 7+. These platforms lack support for TLS 1.2 and should not be used. But because upgrading is difficult we will backport critical fixes to the 3.12.x branch through December 31, 2020. 项目项目地址：https://github.com/square/okhttp 工作原理源码解析Volley简介Volley是2013年Google I/O上发布的一款Android平台上的网络通信库。适合数据量大，需要频繁通信的网络操作。不适用文件的上传下载操作。 Android-Async-HttpAndroid源生网络请求Apache HttpClient已经不推荐使用，6.0上被删除。Google推荐在Android上使用HttpURLConnection HttpURLConnection问题 没有针对异步调用进行封装 没有线程池，网络缓存，不能重复利用请求，性能不佳 没有json解析框架]]></content>
       <categories>
         <category>android</category>
         <category>框架</category>
@@ -35,7 +35,7 @@
   <entry>
     <title><![CDATA[android-框架-ARouter]]></title>
     <url>%2Fandroid-%E6%A1%86%E6%9E%B6-ARouter%2F</url>
-    <content type="text"><![CDATA[A framework for assisting in the renovation of Android componentization.帮助Android APP进行组件化改造的路由框架——支持模块间的路由、通信、解耦 背景随着项目的发展，功能模块增多，无法避免面临以下问题： 项目编译时间变长 代码牵一发而动全身，项目维护难度增大 耦合代码与业务造成冲突，极大降低开发效率 组件化应运而生： 使功能模块可以独立开发、编译调试，降低项目编译时间提高开发效率 使功能模块间进行解耦 组件化问题：代码解耦的同时阻断了彼此的通信。Android原生可以实现，但是造成代码耦合，违背组件化目的，有没有简单易管理的通信方案？ARouter应运而生 ARouter项目https://github.com/alibaba/ARouter模块：arouter-apiarouter-compilerarouter-registerarouter-idea-plugin：使用IDE插件导航到目标类，Android Studio插件市场中搜索ARouter Helper 应用场景 外部URL映射到内部页面，以及参数传递与解析 跨模块页面跳转，模块间解耦 拦截跳转过程，处理登录、埋点等逻辑 跨模块API调用，通过控制反转来做组件解耦 工作原理源码解析源码分为arouter-annotation、arouter-api、arouter-compiler三部分 arouter-annotation声名注解： @Autowired @Interceptor @Route 123456789101112131415161718192021222324252627282930@Target(&#123;ElementType.TYPE&#125;)@Retention(RetentionPolicy.CLASS)public @interface Route &#123; /** * Path of route */ String path(); /** * Used to merger routes, the group name MUST BE USE THE COMMON WORDS !!! */ String group() default ""; /** * Name of route, used to generate javadoc. */ String name() default ""; /** * Extra data, can be set by user. * Ps. U should use the integer num sign the switch, by bits. 10001010101010 */ int extras() default Integer.MIN_VALUE; /** * The priority of route. */ int priority() default -1;&#125;]]></content>
+    <content type="text"><![CDATA[简介 A framework for assisting in the renovation of Android componentization.帮助Android APP进行组件化改造的路由框架——支持模块间的路由、通信、解耦 背景随着项目的发展，功能模块增多，无法避免面临以下问题： 项目编译时间变长 代码牵一发而动全身，项目维护难度增大 耦合代码与业务造成冲突，极大降低开发效率 组件化应运而生： 使功能模块可以独立开发、编译调试，降低项目编译时间提高开发效率 使功能模块间进行解耦 组件化问题：代码解耦的同时阻断了彼此的通信。Android原生可以实现，但是造成代码耦合，违背组件化目的，有没有简单易管理的通信方案？ARouter应运而生 项目项目地址：https://github.com/alibaba/ARouter模块：arouter-apiarouter-compilerarouter-registerarouter-idea-plugin：使用IDE插件导航到目标类，Android Studio插件市场中搜索ARouter Helper 工作原理源码解析源码分为arouter-annotation、arouter-api、arouter-compiler三部分 arouter-annotation声名注解： @Autowired @Interceptor @Route 123456789101112131415161718192021222324252627282930@Target(&#123;ElementType.TYPE&#125;)@Retention(RetentionPolicy.CLASS)public @interface Route &#123; /** * Path of route */ String path(); /** * Used to merger routes, the group name MUST BE USE THE COMMON WORDS !!! */ String group() default ""; /** * Name of route, used to generate javadoc. */ String name() default ""; /** * Extra data, can be set by user. * Ps. U should use the integer num sign the switch, by bits. 10001010101010 */ int extras() default Integer.MIN_VALUE; /** * The priority of route. */ int priority() default -1;&#125; 应用场景 外部URL映射到内部页面，以及参数传递与解析 跨模块页面跳转，模块间解耦 拦截跳转过程，处理登录、埋点等逻辑 跨模块API调用，通过控制反转来做组件解耦]]></content>
       <categories>
         <category>android</category>
         <category>框架</category>
@@ -182,7 +182,7 @@
   <entry>
     <title><![CDATA[版本控制系统详解]]></title>
     <url>%2F%E3%80%90%E5%88%A9%E5%99%A8%E3%80%91%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3%2F</url>
-    <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 版本控制系统（VCS）版本控制系统（Version Control System），是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 本地版本控制系统集中化的版本控制系统（CVCS）如CVS、Subversion、Perforce等，都有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。 分布式版本控制系统分布式版本控制系统（Distributed Version Control System，DVCS），如Git、Mercurial、Bazaar、Darcs等，客户端并不只是提取最新版本的文件快照，而是把代码仓库完整地镜像下来。 CVSSubversion简介Subversion（SVN）是一个自由开源的版本控制系统，相对于CVS，采用了分支管理系统，它的设计目标就是取代CVS。2000年，CollabNet开始寻找CVS替代产品的开发人员。 TortoiseSVNBitKeeperGit简介分布式版本控制系统 Workspace：工作区 Index/Stage：暂存区 Repository：仓库区（本地仓库） Remote：（远程仓库） Git命令【git init】在当前目录新建一个Git代码库【git init [project-name]】【git clone url】下载一个项目和整个代码历史【git branch】列出所有本地分支【git branch -r】列出所有远程分支【git status】显示有变更的文件【git log】显示当前分支的版本历史【git pull [remote] [branch]】取回远程仓库的变化，并与本地分支合并【git pull origin master –allow-unrelated-histories】【git push [remote] [branch]】上传本地分支到远程仓库【git push [remote] -force】强行推送当前分支到远程仓库，即使有冲突 可视化界面软件SourceTree拥有可视化界面的项目版本控制软件，适用于git项目管理。分支共有5种类型： master：最终发布版本，整个项目中有且只有一个 develop：项目的开发分支，原则上项目中有且只有一个 feature：功能分支，用于开发一个新的功能 release：预发布版本，介于master与develop之间的版本，主要用于测试 hotfix：修复补丁，用于修复master上的bug，直接作用于master 在线代码仓库GitHubGitHub是在线的基于Git的代码托管服务。GitHub是2008年由Ruby on Rails编写而成。 GitLabGitLab是利用Ruby on Rails开源的版本管理系统，实现一个自托管的Git项目仓库，可通过Web界面进行访问公开的或私人项目。依赖组件：Ruby 1.9.3+，MySQL，Git，Redis，sidekiq BitbucketGitEEMercurialMercurial是一种轻量级分布式版本控制系统，采用Python语言实现，易于学习和使用，扩展性强。基于GNU General Public License（GPL）授权的开源项目。]]></content>
+    <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 版本控制系统（VCS）版本控制系统（Version Control System），是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 本地版本控制系统集中化的版本控制系统（CVCS）如CVS、Subversion、Perforce等，都有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。 分布式版本控制系统分布式版本控制系统（Distributed Version Control System，DVCS），如Git、Mercurial、Bazaar、Darcs等，客户端并不只是提取最新版本的文件快照，而是把代码仓库完整地镜像下来。 CVSCVS（Concurrent Versions System）并发版本系统。 Subversion简介2000年，CollabNet开始寻找CVS替代产品的开发人员。Subversion（SVN）是一个自由开源的版本控制系统，相对于CVS，采用了分支管理系统，设计目标就是取代CVS。SVN是一种集中式文件版本管理系统。文件的版本信息都存放在服务器上。 TortoiseSVNTortoiseSVN是Subversion版本控制系统的一个免费开源客户端，可以超越时间的管理文件和目录。 BitKeeperBitKeeper允许真正的分布式开发，每个人都拥有自己的主副本 master copy。 Git简介分布式与集中式的区别： 开发者可以本地提交，每个开发者机器上都有一个服务数据库。 分布式版本控制系统 Workspace：工作区 Index/Stage：暂存区 Repository：仓库区（本地仓库） Remote：（远程仓库） Git命令【git config –global user.name “用户名”】设置用户名【git config –global user.email “邮箱”】设置邮箱【git init】在当前目录新建一个Git代码库【git init [project-name]】【git clone url】下载一个项目和整个代码历史【git branch】列出所有本地分支【git branch -r】列出所有远程分支【git status】显示有变更的文件【git log】显示当前分支的版本历史【git pull [remote] [branch]】取回远程仓库的变化，并与本地分支合并【git pull origin master –allow-unrelated-histories】【git commit 】【git push [remote] [branch]】上传本地分支到远程仓库【git push [remote] -force】强行推送当前分支到远程仓库，即使有冲突 可视化界面软件SourceTree拥有可视化界面的项目版本控制软件，适用于git项目管理。分支共有5种类型： master：最终发布版本，整个项目中有且只有一个 develop：项目的开发分支，原则上项目中有且只有一个 feature：功能分支，用于开发一个新的功能 release：预发布版本，介于master与develop之间的版本，主要用于测试 hotfix：修复补丁，用于修复master上的bug，直接作用于master 在线代码仓库GitHubGitHub是在线的基于Git的代码托管服务。GitHub是2008年由Ruby on Rails编写而成。克隆方式： HTTPS：每次都需要登录验证。git clone https://github.com/用户名/***.git SSH：一次验证即可。git clone git@github.com:用户名/***.git SSH： 【cd ~/.ssh】查询本地是否存在ssh密钥 【ssh-keygen -t rsa -C “邮箱”】生成ssh密钥对。执行命令后，按3次回车，密码一般为空即可。在C盘用户目录下会生成一个.ssh的文件夹，里面包含id_rsa和id_rsa.pub两个文件。 添加公钥到GitHub账户。New SSH Key，填写SSH Keys的名称和本地公钥文件id_rsa.pub的内容。 【ssh -T git@github.com】测试密钥，连接GitHub。 Android Studio项目上传到GitHub： VCS—&gt;Enable Version Control Integration，会生成更新和提交两个按钮。 在Android Studio内部配置Git和GitHub账号 VCS—&gt;Import into Version Control—&gt;Share Project on GitHub GitLabGitLab是利用Ruby on Rails开源的版本管理系统，实现一个自托管的Git项目仓库，可通过Web界面进行访问公开的或私人项目。依赖组件：Ruby 1.9.3+，MySQL，Git，Redis，sidekiq BitbucketGitEEMercurialMercurial是一种轻量级分布式版本控制系统，采用Python语言实现，易于学习和使用，扩展性强。基于GNU General Public License（GPL）授权的开源项目。]]></content>
       <categories>
         <category>利器</category>
       </categories>
@@ -382,20 +382,31 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[IDE-Android Studio]]></title>
-    <url>%2F%E3%80%90%E5%88%A9%E5%99%A8%E3%80%91IDE-AndroidStudio%2F</url>
+    <title><![CDATA[Android Studio]]></title>
+    <url>%2F%E3%80%90%E5%88%A9%E5%99%A8%E3%80%91AndroidStudio%2F</url>
     <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 配置Logcat颜色 Assert：#8F0005 深红Debug：#0070BB 蓝Error：#FF0006 红Info：#48BB31 绿Verbose：#BBBBBB 白Warning：#BBBB23 黄 断点调试与管理 1 Show Execution Point2 Step Over：单步执行。如果当前行为方法调用（不会跳到方法内部），方法执行完后跳到下一行。3 Step Into：与Step Over不同的是，会跳到方法内部（非类库的方法）。4 Force Step Into：与Step Into不同的是，始终跳到方法内部。5 Step Out：跳出方法，返回到该方法调用处。6 Drop Frame7 Run to Cursor8 Resume Program：程序执行到下一个断点处。9 Stop：停止调试。 变量观察 选中变量，右键选择Add to Watches 修改变量值，调试结果。选择Set Value 条件断点循环体内设置。 日志断点Suspend取消选中，显示日志输入框。 异常断点单击如下图标，在弹窗中新建异常断点。 变量断点 方法断点在方法名所在行添加断点。 Plugins]]></content>
       <categories>
         <category>利器</category>
       </categories>
       <tags>
-        <tag>Android Studio</tag>
+        <tag>IDE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[IntelliJ IDEA]]></title>
+    <url>%2F%E3%80%90%E5%88%A9%E5%99%A8%E3%80%91IntelliJ-IDEA%2F</url>
+    <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 简介IDEA是JetBrains公司的产品，总部位于捷克共和国的首都布拉格。IDEA，全称IntelliJ IDEA，是java编程语言开发的集成环境。被业界公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、各类版本工具（git、svn等）、JUnit、代码分析、创新的GUI设计等。版本： Ultimate（旗舰版，收费） Community（社区版，免费） 官方使用文档：https://www.jetbrains.com/help/idea/meet-intellij-idea.html 安装目录 \IntelliJ IDEA 2018.3.5\bin中idea64.exe.vmoptions文件，修改内存大小配置。 常用设置 Editor -&gt; General 设置鼠标滚轮修改字体大小 设置鼠标悬浮提示 设置自动导包 添加方法分隔符 -&gt; Appearance 忽略大小写提示 -&gt; Code Completion 取消单行显示tabs操作 -&gt; Editor Tabs Editor -&gt; Color Scheme 设置主题 IDEA主题 设置注释颜色 -&gt; Language Defaults -&gt; Comments Editor -&gt; Code Style Editor -&gt; File and Code Templates：设置文件头部信息/*\ @author 001* @date ${DATE}* @desc*/ Editor -&gt; File Encodings：设置项目文件编码UTF-8 Build, Execution, Deployment -&gt; Compiler：设置自动编译 File -&gt; Power Save Mode：设置为省电模式 设置快捷键（Keymap）模板（Template）常用模板 File | Settings | Editor | Live Templates（可以自定义） File | Settings | Editor | General | Postfix Completion（不可以自定义） 输出 sout（输出） soutp（打印形参） soutm（”当前类名.当前方法名”） soutv（打印变量值） xxx.sout for循环 fori（普通for循环） iter（增强for循环） itar（普通for循环） list遍历 list.for（增强for循环） list.fori（普通for循环遍历） list.forr（倒序遍历） 条件判断 ifn（对象==null） inn（对象!=null） xxx.nn xxx.null private static final（prsf）public static final psf psfi（int类型） psfs（String类型） 自定义模板创建Java Web Project静态Java Web动态Java WebNew Module -&gt; Java -&gt; Web Application]]></content>
+      <categories>
+        <category>利器</category>
+      </categories>
+      <tags>
+        <tag>IDE</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[记忆百科]]></title>
     <url>%2F%E3%80%90%E7%BB%BC%E5%90%88%E3%80%91%E8%AE%B0%E5%BF%86%E7%99%BE%E7%A7%91%2F</url>
-    <content type="text"><![CDATA[护眼色 色调：85；饱和度：123；亮度：205 R：199；G：237；B：204 色值：#C7EDCC]]></content>
+    <content type="text"><![CDATA[IT界三大定律 摩尔定律 反摩尔定律 安迪比尔定律What Andy gives, Bill takes away. 软件产品版本标识按照测试过程标识： Alpha版：内部测试版，一般不向外部发布，会有很多Bug。 Beta版：公测版。 RC版：Release Candidate候选版本。也叫做Gamma版本。 护眼色 色调：85；饱和度：123；亮度：205 R：199；G：237；B：204 色值：#C7EDCC]]></content>
       <categories>
         <category>综合</category>
       </categories>
