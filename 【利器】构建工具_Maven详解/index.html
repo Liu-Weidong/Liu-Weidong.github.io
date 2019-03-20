@@ -154,33 +154,25 @@
 
 
 
-  <meta name="description" content="工欲善其事，必先利其器。——《论语·卫灵公》  配置Logcat颜色 Assert：#8F0005 深红Debug：#0070BB 蓝Error：#FF0006 红Info：#48BB31 绿Verbose：#BBBBBB 白Warning：#BBBB23 黄 断点调试与管理 1 Show Execution Point2 Step Over：单步执行。如果当前行为方法调用（不会跳到方法内部），">
-<meta name="keywords" content="IDE">
+  <meta name="description" content="Maven简介Eclipse + Ant组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。Android Studio + Gradle组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。Maven仓库分为两类：本地仓库和远程仓库。  远程仓库又分为：中央仓库、Nexus和其他公共库。 本地仓库就是本地存放jar包的位置，Maven的本">
+<meta name="keywords" content="Maven">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Studio">
-<meta property="og:url" content="http://liuweidong.club/【利器】AndroidStudio/index.html">
+<meta property="og:title" content="Maven详解">
+<meta property="og:url" content="http://liuweidong.club/【利器】构建工具_Maven详解/index.html">
 <meta property="og:site_name" content="漫漫求索">
-<meta property="og:description" content="工欲善其事，必先利其器。——《论语·卫灵公》  配置Logcat颜色 Assert：#8F0005 深红Debug：#0070BB 蓝Error：#FF0006 红Info：#48BB31 绿Verbose：#BBBBBB 白Warning：#BBBB23 黄 断点调试与管理 1 Show Execution Point2 Step Over：单步执行。如果当前行为方法调用（不会跳到方法内部），">
+<meta property="og:description" content="Maven简介Eclipse + Ant组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。Android Studio + Gradle组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。Maven仓库分为两类：本地仓库和远程仓库。  远程仓库又分为：中央仓库、Nexus和其他公共库。 本地仓库就是本地存放jar包的位置，Maven的本">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.imgur.com/4X9XecN.png">
-<meta property="og:image" content="https://i.imgur.com/x4EHHRv.png">
-<meta property="og:image" content="https://i.imgur.com/mmRVOqe.png">
-<meta property="og:image" content="https://i.imgur.com/gZZh2X7.png">
-<meta property="og:image" content="https://i.imgur.com/jyJn4Ku.png">
-<meta property="og:image" content="https://i.imgur.com/v2nJxTt.png">
-<meta property="og:image" content="https://i.imgur.com/vNCM4sD.png">
-<meta property="og:updated_time" content="2019-03-17T10:47:35.090Z">
+<meta property="og:updated_time" content="2019-03-20T14:02:47.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android Studio">
-<meta name="twitter:description" content="工欲善其事，必先利其器。——《论语·卫灵公》  配置Logcat颜色 Assert：#8F0005 深红Debug：#0070BB 蓝Error：#FF0006 红Info：#48BB31 绿Verbose：#BBBBBB 白Warning：#BBBB23 黄 断点调试与管理 1 Show Execution Point2 Step Over：单步执行。如果当前行为方法调用（不会跳到方法内部），">
-<meta name="twitter:image" content="https://i.imgur.com/4X9XecN.png">
+<meta name="twitter:title" content="Maven详解">
+<meta name="twitter:description" content="Maven简介Eclipse + Ant组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。Android Studio + Gradle组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。Maven仓库分为两类：本地仓库和远程仓库。  远程仓库又分为：中央仓库、Nexus和其他公共库。 本地仓库就是本地存放jar包的位置，Maven的本">
 
 
 
 
 
 
-  <link rel="canonical" href="http://liuweidong.club/【利器】AndroidStudio/">
+  <link rel="canonical" href="http://liuweidong.club/【利器】构建工具_Maven详解/">
 
 
 
@@ -190,7 +182,7 @@
   };
 </script>
 
-  <title>Android Studio | 漫漫求索</title>
+  <title>Maven详解 | 漫漫求索</title>
   
 
 
@@ -430,7 +422,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuweidong.club/【利器】AndroidStudio/">
+    <link itemprop="mainEntityOfPage" href="http://liuweidong.club/【利器】构建工具_Maven详解/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuweidong">
@@ -447,7 +439,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Android Studio
+          <h1 class="post-title" itemprop="name headline">Maven详解
               
             
           </h1>
@@ -472,7 +464,7 @@
                 
               
 
-              <time title="创建时间：2018-02-15 21:34:15" itemprop="dateCreated datePublished" datetime="2018-02-15T21:34:15+08:00">2018-02-15</time>
+              <time title="创建时间：2018-10-01 21:54:33" itemprop="dateCreated datePublished" datetime="2018-10-01T21:54:33+08:00">2018-10-01</time>
             
 
             
@@ -505,8 +497,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/【利器】AndroidStudio/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/【利器】AndroidStudio/" itemprop="commentCount"></span>
+                <a href="/【利器】构建工具_Maven详解/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/【利器】构建工具_Maven详解/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -541,23 +533,38 @@
       
 
       
-        <blockquote>
-<p>工欲善其事，必先利其器。——《论语·卫灵公》</p>
-</blockquote>
-<h1 id="配置Logcat颜色"><a href="#配置Logcat颜色" class="headerlink" title="配置Logcat颜色"></a>配置Logcat颜色</h1><p><img src="https://i.imgur.com/4X9XecN.png" width="85%" height="85%"></p>
-<p>Assert：#8F0005 深红<br>Debug：#0070BB 蓝<br>Error：#FF0006 红<br>Info：#48BB31 绿<br>Verbose：#BBBBBB 白<br>Warning：#BBBB23 黄</p>
-<h1 id="断点调试与管理"><a href="#断点调试与管理" class="headerlink" title="断点调试与管理"></a>断点调试与管理</h1><p><img src="https://i.imgur.com/x4EHHRv.png" alt="debug"></p>
-<p>1 Show Execution Point<br>2 Step Over：单步执行。如果当前行为方法调用（<strong>不会跳到方法内部</strong>），方法执行完后跳到下一行。<br>3 Step Into：与Step Over不同的是，会跳到方法内部（<strong>非类库的方法</strong>）。<br>4 Force Step Into：与Step Into不同的是，始终跳到方法内部。<br>5 Step Out：<strong>跳出方法</strong>，返回到该方法调用处。<br>6 Drop Frame<br>7 Run to Cursor<br>8 Resume Program：程序执行到下一个断点处。<br>9 Stop：停止调试。</p>
-<h2 id="变量观察"><a href="#变量观察" class="headerlink" title="变量观察"></a>变量观察</h2><ul>
-<li>选中变量，右键选择Add to Watches</li>
-<li>修改变量值，调试结果。选择Set Value</li>
+        <h1 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Eclipse + Ant组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。<br>Android Studio + Gradle组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。<br>Maven仓库分为两类：<strong>本地仓库</strong>和<strong>远程仓库</strong>。</p>
+<ul>
+<li>远程仓库又分为：中央仓库、Nexus和其他公共库。</li>
+<li>本地仓库就是本地存放jar包的位置，Maven的本地仓库在最开始的时候并不会创建，而是第一次启动Maven时，在当前用户的文件夹下建立一个.m2文件，其中存放Maven本地仓库的所有jar包。</li>
 </ul>
-<h2 id="条件断点"><a href="#条件断点" class="headerlink" title="条件断点"></a>条件断点</h2><p>循环体内设置。<br><img src="https://i.imgur.com/mmRVOqe.png" alt=""></p>
-<h2 id="日志断点"><a href="#日志断点" class="headerlink" title="日志断点"></a>日志断点</h2><p>Suspend取消选中，显示日志输入框。<br><img src="https://i.imgur.com/gZZh2X7.png" width="65%" height="65%"></p>
-<h2 id="异常断点"><a href="#异常断点" class="headerlink" title="异常断点"></a>异常断点</h2><p>单击如下图标，在弹窗中新建异常断点。<br><img src="https://i.imgur.com/jyJn4Ku.png" alt=""></p>
-<h2 id="变量断点"><a href="#变量断点" class="headerlink" title="变量断点"></a>变量断点</h2><p><img src="https://i.imgur.com/v2nJxTt.png" alt=""></p>
-<h2 id="方法断点"><a href="#方法断点" class="headerlink" title="方法断点"></a>方法断点</h2><p>在方法名所在行添加断点。<br><img src="https://i.imgur.com/vNCM4sD.png" alt=""></p>
-<h1 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h1>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">http://maven.apache.org/download.cgi</a><br><strong>环境变量</strong></p>
+<ul>
+<li>MAVEN_HOME——安装路径</li>
+<li>PATH——%MAVEN_HOME%\bin;</li>
+<li>【mvn -v】命令行输入，查看配置是否成功。</li>
+</ul>
+<h2 id="服务源"><a href="#服务源" class="headerlink" title="服务源"></a>服务源</h2><ul>
+<li><strong>JCenter</strong><br>托管在<code>Bintray</code>上面的Maven仓库。</li>
+<li><strong>Maven Central</strong><br>托管在<code>Sonatype</code>上面的Maven仓库。</li>
+<li><strong>JitPack</strong></li>
+</ul>
+<p><strong>JCenter优点:</strong></p>
+<ul>
+<li>基于CDN分布函数库，JCenter提供了更快的下载速度。</li>
+<li>JCenter是最大的Java仓库，可以说Maven Central是JCenter的一个子集，托管在Maven Central中的函数库，几乎都托管在JCenter上面。</li>
+<li>上传简单，Bintray的用户界面对用户友好。</li>
+</ul>
+<h2 id="获取函数库的原理"><a href="#获取函数库的原理" class="headerlink" title="获取函数库的原理"></a>获取函数库的原理</h2><p>完整的函数库依赖字符串包含三部分：<br>GROUP_ID:ARTIFACT_ID:VERSION<br>Gradle根据依赖配置，向Maven Repository服务器查询是否存在该版本的函数库，如果存在，则会根据服务器类型拼接下载请求url。</p>
+<ul>
+<li>JCenter：<a href="http://jcenter.bintray.com/.." target="_blank" rel="noopener">http://jcenter.bintray.com/..</a>.</li>
+<li>Maven Central：<br><a href="https://oss.sonatype.org/content/repositories/releases.." target="_blank" rel="noopener">https://oss.sonatype.org/content/repositories/releases..</a>.</li>
+</ul>
+<h1 id="Maven私服"><a href="#Maven私服" class="headerlink" title="Maven私服"></a>Maven私服</h1><p>私服是架设在局域网内的远程仓库，目的是代理远程仓库及部署第三方构件。</p>
+<h2 id="Sonatype-Nexus"><a href="#Sonatype-Nexus" class="headerlink" title="Sonatype Nexus"></a>Sonatype Nexus</h2><h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><p>默认端口：8081<br><a href="http://127.0.0.1:8081/" target="_blank" rel="noopener">http://127.0.0.1:8081/</a><br><a href="http://localhost:8081/" target="_blank" rel="noopener">http://localhost:8081/</a><br>默认配置文件：<br>C:\swTools\nexus-3.13.0-01\etc\nexus-default.properties<br>默认登录：admin/admin123</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>【nexus.exe/install】安装nexus为系统服务<br>【nexus.exe/uninstall】卸载nexus为系统服务<br>【nexus.exe/start】启动nexus服务<br>【nexus.exe/stop】停止nexus服务<br>【nexus.exe/run】启动服务</p>
+<h2 id="Apache-Archiva"><a href="#Apache-Archiva" class="headerlink" title="Apache Archiva"></a>Apache Archiva</h2><h2 id="JFrog-Artifactory"><a href="#JFrog-Artifactory" class="headerlink" title="JFrog Artifactory"></a>JFrog Artifactory</h2><h1 id="Maven镜像"><a href="#Maven镜像" class="headerlink" title="Maven镜像"></a>Maven镜像</h1><p><a href="https://maven.aliyun.com/" target="_blank" rel="noopener">https://maven.aliyun.com/</a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>repo2<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>repo2 maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://repo2.maven.org/maven2<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -624,7 +631,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://liuweidong.club/【利器】AndroidStudio/" title="Android Studio">http://liuweidong.club/【利器】AndroidStudio/</a>
+    <a href="http://liuweidong.club/【利器】构建工具_Maven详解/" title="Maven详解">http://liuweidong.club/【利器】构建工具_Maven详解/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -637,7 +644,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/IDE/" rel="tag"><i class="fa fa-tag"></i> IDE</a>
+            <a href="/tags/Maven/" rel="tag"><i class="fa fa-tag"></i> Maven</a>
           
         </div>
       
@@ -650,8 +657,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/【利器】IntelliJ-IDEA/" rel="next" title="IntelliJ IDEA">
-                <i class="fa fa-chevron-left"></i> IntelliJ IDEA
+              <a href="/【阅读】鸟哥的Linux私房菜-基础学习篇/" rel="next" title="【阅读】鸟哥的Linux私房菜 基础学习篇">
+                <i class="fa fa-chevron-left"></i> 【阅读】鸟哥的Linux私房菜 基础学习篇
               </a>
             
           </div>
@@ -660,8 +667,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/java-versions/" rel="prev" title="java-versions">
-                java-versions <i class="fa fa-chevron-right"></i>
+              <a href="/【利器】构建工具_Gradle详解/" rel="prev" title="构建工具_Gradle详解">
+                构建工具_Gradle详解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -740,7 +747,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">40</span>
+                    <span class="site-state-item-count">41</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -773,7 +780,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -832,7 +841,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -902,7 +913,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置Logcat颜色"><span class="nav-number">1.</span> <span class="nav-text">配置Logcat颜色</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#断点调试与管理"><span class="nav-number">2.</span> <span class="nav-text">断点调试与管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量观察"><span class="nav-number">2.1.</span> <span class="nav-text">变量观察</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件断点"><span class="nav-number">2.2.</span> <span class="nav-text">条件断点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日志断点"><span class="nav-number">2.3.</span> <span class="nav-text">日志断点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常断点"><span class="nav-number">2.4.</span> <span class="nav-text">异常断点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量断点"><span class="nav-number">2.5.</span> <span class="nav-text">变量断点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法断点"><span class="nav-number">2.6.</span> <span class="nav-text">方法断点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Plugins"><span class="nav-number">3.</span> <span class="nav-text">Plugins</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven"><span class="nav-number">1.</span> <span class="nav-text">Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">1.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务源"><span class="nav-number">1.3.</span> <span class="nav-text">服务源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取函数库的原理"><span class="nav-number">1.4.</span> <span class="nav-text">获取函数库的原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven私服"><span class="nav-number">2.</span> <span class="nav-text">Maven私服</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sonatype-Nexus"><span class="nav-number">2.1.</span> <span class="nav-text">Sonatype Nexus</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建"><span class="nav-number">2.1.1.</span> <span class="nav-text">搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">2.1.2.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apache-Archiva"><span class="nav-number">2.2.</span> <span class="nav-text">Apache Archiva</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JFrog-Artifactory"><span class="nav-number">2.3.</span> <span class="nav-text">JFrog Artifactory</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven镜像"><span class="nav-number">3.</span> <span class="nav-text">Maven镜像</span></a></li></ol></div>
             
 
           </div>
@@ -943,7 +954,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共21.2k字</span>
+  <span class="post-count">全站共22.5k字</span>
 </div>
 
         
