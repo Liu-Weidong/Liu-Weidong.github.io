@@ -12,6 +12,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[java-Web-框架]]></title>
+    <url>%2Fjava-Web-%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[SSHSpringStruts/Struts2HibernateSSMSpringSpringMVCSpringMVC是Spring实现的一个Web层，相当于Struts的框架，但是比Struts更加灵活和强大 MybatisMybatis是一个持久层的框架，在使用上相比Hibernate更加灵活，可以控制sql的编写，使用 XML或注解进行相关的配置。 Spring Boot]]></content>
+      <categories>
+        <category>java</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[软件架构]]></title>
     <url>%2F%E3%80%90%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E3%80%91%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%2F</url>
     <content type="text"><![CDATA[引言 软件架构（Software Architecture）是一系列相关的抽象模式，用于指导大型软件系统各个方面的设计。软件架构是一个系统的草图。软件架构描述的对象是直接构成系统的抽象组件。各个组件之间的连接则明确和相对细致地描述组件之间的通讯。在实现阶段，这些抽象组件被细化为实际的组件，如具体某个类或对象。轻量级JavaEE（Struts+Spring+Hibernate）重量级JavaEE（JSF+EJB+JPA） 架构模式是描述软件系统里的基本的结构组织或纲要。从定义上来看，它是在指导我们如何组织代码，是一种具有指导意义的思想，如解决系统的数据与显示分离的问题，AOP、IOC、ORM、MVC等。 框架是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法；另一种定义认为，框架是可被应用开发者定制的应用骨架。前者是从应用方面而后者是从目的方面给出的定义。Struts、MyBatis等。 设计模式是一套被反复使用、多数人知道的、经过分类编目的、代码设计经验的总结。从定义上看，它涉及到了代码级别，侧重于解决实际的现实问题。 分层架构分层架构（layered architecture）是最常见的软件架构，也是事实上的标准架构。将软件分成若干个水平层，每一层都有清晰的角色和分工，不需要知道其他层的细节。层与层之间通过接口通信。虽然没有明确约定，软件一定要分成多少层，但是四层的结构最常见。 表现层（presentation）：用户界面，负责视觉和用户互动 业务层（business）：实现业务逻辑 持久层（persistence）：提供数据，SQL语句放在这一层 数据层（database）：保存数据 事件驱动架构事件驱动架构（Event Driven Architecture，EDA）一个事件驱动框架（EDA）定义了一个设计和实现一个应用系统的方法学，在这个系统里事件可传输于松散耦合的组件和服务之间。 微核架构微核架构（microkernel architecture）又称为”插件架构”（plug-in architecture），指的是软件的内核相对较小，主要功能和业务逻辑都通过插件实现。内核（core）通常只包含系统运行的最小功能。插件则是互相独立的，插件之间的通信，应该减少到最低，避免出现互相依赖的问题。优点： 良好的功能延伸性（extensibility），需要什么功能，开发一个插件即可 功能之间是隔离的，插件可以独立的加载和卸载，使得它比较容易部署 可定制性高，适应不同的开发需要 可以渐进式地开发，逐步增加功能 缺点： 扩展性（scalability）差，内核通常是一个独立单元，不容易做成分布式 开发难度相对较高，因为涉及到插件与内核的通信，以及内部的插件登记机制 微服务架构微服务架构（microservices architecture）是服务导向架构（service-oriented architecture，缩写 SOA）的升级。每一个服务就是一个独立的部署单元（separately deployed unit）。这些单元都是分布式的，互相解耦，通过远程通信协议（比如REST、SOAP）联系。 云架构云结构（cloud architecture）主要解决扩展性和并发的问题，是最容易扩展的架构。它的高扩展性，主要原因是没使用中央数据库，而是把数据都复制到内存中，变成可复制的内存数据单元。然后，业务处理能力封装成一个个处理单元（prcessing unit）。访问量增加，就新建处理单元；访问量减少，就关闭处理单元。由于没有中央数据库，所以扩展性的最大瓶颈消失了。由于每个处理单元的数据都在内存里，最好要进行数据持久化。这个模式主要分成两部分：处理单元（processing unit）和虚拟中间件（virtualized middleware）。 处理单元：实现业务逻辑 虚拟中间件：负责通信、保持sessions、数据复制、分布式处理、处理单元的部署。]]></content>
