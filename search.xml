@@ -12,15 +12,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[java-Web-框架]]></title>
-    <url>%2Fjava-Web-%E6%A1%86%E6%9E%B6%2F</url>
-    <content type="text"><![CDATA[SSHSpringStruts/Struts2HibernateSSMSpringSpringMVCSpringMVC是Spring实现的一个Web层，相当于Struts的框架，但是比Struts更加灵活和强大 MybatisMybatis是一个持久层的框架，在使用上相比Hibernate更加灵活，可以控制sql的编写，使用 XML或注解进行相关的配置。 Spring Boot]]></content>
+    <title><![CDATA[java-JavaEE-Web]]></title>
+    <url>%2Fjava-JavaEE-Web%2F</url>
+    <content type="text"><![CDATA[JavaEE简介Java EE，Java平台企业版（Java Platform Enterprise Edition），之前称为Java 2 Platform，Enterprise Edition (J2EE)，2018年3月更名为Jakarta EE。是Sun公司为企业级应用推出的标准平台，用来开发B/S架构软件。Java EE可以说是一个框架，也可以说是一种规范。 体系结构JavaEE体系结构：从上到下分别是表示层（Web）、业务逻辑层（Service）、持久层（DAO）。Struts和SpringMVC是Web层的框架，Spring是业务层的框架，Hibernate和MyBatis是持久层的框架。 JSPJSP（Java Server Pages），其根本是一个简化的Servlet设计。JSP页面内容由两部分组成： 静态部分：标准的HTML标签、静态的页面内容。 动态部分：&lt;%%&gt; JSP文件必须在JSP服务器内运行。 JSP文件必须生成Servlet才能执行。 每个JSP页面的第一个访问者速度很慢，因为必须等待JSP编译成Servlet。 基本语法 JSP声明的语法格式：&lt;%! 声明部分 %&gt; JSP输出表达式语法格式：&lt;%=表达式%&gt; JSP注释格式：&lt;%-- 注释内容 --%&gt; ServletServlet通常被称为服务器端小程序，是运行在服务器端的程序，用于处理及响应客户端的请求。Servlet是个特殊的Java类，这个Java类必须继承HttpServlet。每个Servlet可以响应客户端的请求。Servlet提供不同的方法用于响应客户端请求。 doGet doPost doPut doDelete service()：响应客户端的所有请求。 FilterFilter可以认为是Servlet的一种加强版，主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理，是个典型的处理链。 ListenerSSH框架SpringStruts/Struts2Hibernate传统的Java应用都是采用JDBC来访问数据库的，但传统的JDBC采用的是一种基于SQL的操作方式，这种操作方式与Java语言的面向对象特征不太一致，所以Java EE应用需要一种技术，通过这种技术能让Java以面向对象的方式操作关系数据库。ORM（Object Relation Mapping），最早的ORM是Entity EJB（Enterprise JavaBean），许多人觉得EJB非常繁琐。这种背景下，Hibernate框架应运而生。 SSM框架SpringSpring是一个开源框架，它由Rod Johnson创建。它是为了解决企业应用开发的复杂性而创建的。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益。Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。 SpringMVCSpringMVC是Spring实现的一个Web层，相当于Struts的框架，但是比Struts更加灵活和强大 MybatisMybatis是一个持久层的框架，在使用上相比Hibernate更加灵活，可以控制sql的编写，使用 XML或注解进行相关的配置。 Spring Boot]]></content>
       <categories>
         <category>java</category>
         <category>Web</category>
       </categories>
       <tags>
-        <tag>web</tag>
+        <tag>JavaEE</tag>
       </tags>
   </entry>
   <entry>
