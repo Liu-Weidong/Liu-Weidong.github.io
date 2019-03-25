@@ -12,9 +12,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[java-Java EE]]></title>
-    <url>%2Fjava-JavaEE%2F</url>
-    <content type="text"><![CDATA[JavaEE简介Java EE（Java Platform Enterprise Edition，Java平台企业版），最初称为J2EE，2018年3月更名为Jakarta EE。是Sun公司为企业级应用推出的标准平台，用来开发B/S架构软件。Java EE是一系列技术和标准的集合，它包括了从前端Web界面到中间件，再到后端数据库系统的一系列技术和规范。 体系结构JavaEE体系结构：从上到下分别是表现层（Web）、业务层（Service）、持久层（DAO，提供数据，SQL语句）。Struts和SpringMVC是Web层的框架，Spring是业务层的框架，Hibernate和MyBatis是持久层的框架。 核心技术JSPJSP（Java Server Pages），其根本是一个简化的Servlet设计。JSP页面内容由两部分组成： 静态部分：标准的HTML标签、静态的页面内容。 动态部分：&lt;%%&gt; JSP文件必须在JSP服务器内运行。 JSP文件必须生成Servlet才能执行。 每个JSP页面的第一个访问者速度很慢，因为必须等待JSP编译成Servlet。 基本语法 JSP声明的语法格式：&lt;%! 声明部分 %&gt; JSP输出表达式语法格式：&lt;%=表达式%&gt; JSP注释格式：&lt;%-- 注释内容 --%&gt; JDBC&lt;&lt;Web前端开发基础&gt;&gt;Web设计三层：结构层（HTML）、样式层（CSS）、行为层（JavaScript和文档对象模型DOM） HTMLCSSJavaScript1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。 jQueryjQuery是一个快速、简洁的JavaScript框架，继Prototype之后又一个优秀的JavaScript代码库。jQuery设计的宗旨是“Write Less,Do More”。发布者：John ResigjQuery 1.0：2006/01 Ajax（网络请求）Ajax（Asynchronous JavaScript and XML） Web.xmlServletServlet通常被称为服务器端小程序，是运行在服务器端的程序，用于处理及响应客户端的请求。Servlet是个特殊的Java类，这个Java类必须继承HttpServlet。每个Servlet可以响应客户端的请求。Servlet提供不同的方法用于响应客户端请求。 doGet doPost doPut doDelete service()：响应客户端的所有请求。FilterFilter可以认为是Servlet的一种加强版，主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理，是个典型的处理链。Listener &lt;&lt;Web前端开发框架&gt;&gt;MiniUIlayuiVueVue只关注视图层，采用自底向上增量开发的设计。 ReactAngularJS&lt;&lt;后端开发&gt;&gt;SSH框架SpringStruts/Struts2Hibernate传统的Java应用都是采用JDBC来访问数据库的，但传统的JDBC采用的是一种基于SQL的操作方式，这种操作方式与Java语言的面向对象特征不太一致，所以Java EE应用需要一种技术，通过这种技术能让Java以面向对象的方式操作关系数据库。ORM（Object Relation Mapping），最早的ORM是Entity EJB（Enterprise JavaBean），许多人觉得EJB非常繁琐。这种背景下，Hibernate框架应运而生。 SSM框架SpringSpring是一个开源框架，它由Rod Johnson创建。它是为了解决企业应用开发的复杂性而创建的。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益。Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。 SpringMVCSpringMVC是Spring实现的一个Web层，相当于Struts的框架，但是比Struts更加灵活和强大 MybatisMybatis是一个持久层的框架，在使用上相比Hibernate更加灵活，可以控制sql的编写，使用XML或注解进行相关的配置。 Spring BootRedis&lt;&lt;微服务架构&gt;&gt;DubboSpring CloudZookeeper&lt;&lt;高并发&gt;&gt;负载均衡消息队列缓存技术数据库Node.js]]></content>
+    <title><![CDATA[java-Java EE知识框架]]></title>
+    <url>%2Fjava-JavaEE%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[JavaEE简介Java EE（Java Platform Enterprise Edition，Java平台企业版），最初称为J2EE，2018年3月更名为Jakarta EE。是Sun公司为企业级应用推出的标准平台，用来开发B/S架构软件。Java EE是一系列技术和标准的集合，它包括了从前端Web界面到中间件，再到后端数据库系统的一系列技术和规范。 体系结构JavaEE体系结构：从上到下分别是表现层（Web）、业务层（Service）、持久层（DAO，提供数据，SQL语句）。Struts和SpringMVC是Web层的框架，Spring是业务层的框架，Hibernate和MyBatis是持久层的框架。 核心技术JSPJSP（Java Server Pages），其根本是一个简化的Servlet设计。JSP页面内容由两部分组成： 静态部分：标准的HTML标签、静态的页面内容。 动态部分：&lt;%%&gt; JSP文件必须在JSP服务器内运行。 JSP文件必须生成Servlet才能执行。 每个JSP页面的第一个访问者速度很慢，因为必须等待JSP编译成Servlet。 基本语法 JSP声明的语法格式：&lt;%! 声明部分 %&gt; JSP输出表达式语法格式：&lt;%=表达式%&gt; JSP注释格式：&lt;%-- 注释内容 --%&gt; JDBC 持久化（Persistence），数据保存到可掉电式存储设备中以供之后使用。 JDBC（Java DataBase Connectivity，java数据库连接）是一种用于执行SQL语句的Java API，可以为多种关系数据库提供统一访问。 发展历程：JDBC -&gt; JDO -&gt; HibernateJDBC API包括两个层次： 面向应用的API：JDBC API，提供了应用程序对JDBC的管理连接。java.sql.* 面向数据库的API：Java Driver API，支持JDBC管理到驱动器连接。 JDBC API常用接口和类： Connection DriverManager JDBC URL示例：jdbc:mysql://localhost:3306/test &lt;&lt;Web前端开发基础&gt;&gt;Web设计三层：结构层（HTML）、样式层（CSS）、行为层（JavaScript和文档对象模型DOM） HTMLCSSJavaScript1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。 jQueryjQuery是一个快速、简洁的JavaScript框架，继Prototype之后又一个优秀的JavaScript代码库。jQuery设计的宗旨是“Write Less,Do More”。发布者：John ResigjQuery 1.0：2006/01 Ajax（网络请求）Ajax（Asynchronous JavaScript and XML） Web.xmlServletServlet通常被称为服务器端小程序，是运行在服务器端的程序，用于处理及响应客户端的请求。Servlet是个特殊的Java类，这个Java类必须继承HttpServlet。每个Servlet可以响应客户端的请求。Servlet提供不同的方法用于响应客户端请求。 doGet doPost doPut doDelete service()：响应客户端的所有请求。FilterFilter可以认为是Servlet的一种加强版，主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理，是个典型的处理链。Listener &lt;&lt;Web前端开发框架&gt;&gt;MiniUIlayuiVueVue只关注视图层，采用自底向上增量开发的设计。 ReactAngularJS&lt;&lt;&lt;后端开发&gt;&gt;&gt;&lt;&lt;SSH框架&gt;&gt;Spring + Struts/Struts2 + Hibernate Spring简介Spring是于2003年兴起的一个轻量级的Java开发框架，由Rod Johnson创建。解决的是业务逻辑层和其他各层的松耦合问题。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。 EJB -&gt; Spring Framework -&gt; Spring Boot -&gt; Spring Cloud Spring Framework 5Spring BootSpring CloudSpring使用Spring Initializrhttps://start.spring.io/ Struts/Struts2Hibernate传统的Java应用都是采用JDBC来访问数据库的，但传统的JDBC采用的是一种基于SQL的操作方式，这种操作方式与Java语言的面向对象特征不太一致，所以Java EE应用需要一种技术，通过这种技术能让Java以面向对象的方式操作关系数据库。ORM（Object Relation Mapping），最早的ORM是Entity EJB（Enterprise JavaBean），许多人觉得EJB非常繁琐。这种背景下，Hibernate框架应运而生。 &lt;&lt;SSM框架&gt;&gt;Spring + Spring MVC + Mybatis SpringMVCSpringMVC是Spring实现的一个Web层，相当于Struts的框架，但是比Struts更加灵活和强大 MybatisMybatis是一个持久层的框架，在使用上相比Hibernate更加灵活，可以控制sql的编写，使用XML或注解进行相关的配置。 Redis&lt;&lt;微服务架构&gt;&gt;DubboSpring CloudZookeeper&lt;&lt;高并发&gt;&gt;负载均衡消息队列缓存技术数据库其他Node.js]]></content>
       <categories>
         <category>java</category>
         <category>Java EE</category>
@@ -146,7 +146,7 @@
   <entry>
     <title><![CDATA[android-框架-RxJava]]></title>
     <url>%2Fandroid-%E6%A1%86%E6%9E%B6-RxJava%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[简介项目项目地址：https://github.com/ReactiveX/RxJava版本2.x Javadoc 工作原理源码解析]]></content>
       <categories>
         <category>android</category>
         <category>框架</category>
@@ -300,12 +300,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[http-https]]></title>
-    <url>%2F%E3%80%90%E7%BB%BC%E5%90%88%E3%80%91http-https%2F</url>
-    <content type="text"></content>
+    <title><![CDATA[开发知识点]]></title>
+    <url>%2F%E3%80%90%E7%BB%BC%E5%90%88%E3%80%91%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[http-httpsCookie-Session-Token-JWTCookieCookie是客户端技术，程序把每个用户的数据以cookie的形式写给用户各自的浏览器。 SessionSession是对于服务端来说的，客户端是没有Session一说的。Session是服务器和客户端建立连接时添加客户端连接标志，最终会在服务器软件（Apache、Tomcat、JBoss）转化为一个临时Cookie发送给客户端。 TokenToken是用户身份的验证方式，通常叫它：令牌。 JWTJWT（JSON Web Token）是目前最流行的跨域身份验证解决方案。 URI-URL-URNURI（Uniform Resource Identifier，统一资源标识符）URL（Uniform Resource Locator，统一资源定位符）URN（Uniform Resource Name，统一资源名称）scheme://host/path]]></content>
       <categories>
         <category>综合</category>
       </categories>
+      <tags>
+        <tag>URI</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[持续集成CI]]></title>
@@ -387,17 +390,6 @@
       </categories>
       <tags>
         <tag>UML类图</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[URI-URL-URN]]></title>
-    <url>%2F%E3%80%90%E7%BB%BC%E5%90%88%E3%80%91URI-URL-URN%2F</url>
-    <content type="text"><![CDATA[URI（Uniform Resource Identifier，统一资源标识符）URL（Uniform Resource Locator，统一资源定位符）URN（Uniform Resource Name，统一资源名称）scheme://host/path]]></content>
-      <categories>
-        <category>综合</category>
-      </categories>
-      <tags>
-        <tag>URI</tag>
       </tags>
   </entry>
   <entry>

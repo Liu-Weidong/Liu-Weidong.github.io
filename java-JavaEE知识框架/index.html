@@ -157,14 +157,14 @@
   <meta name="description" content="JavaEE简介Java EE（Java Platform Enterprise Edition，Java平台企业版），最初称为J2EE，2018年3月更名为Jakarta EE。是Sun公司为企业级应用推出的标准平台，用来开发B/S架构软件。Java EE是一系列技术和标准的集合，它包括了从前端Web界面到中间件，再到后端数据库系统的一系列技术和规范。 体系结构JavaEE体系结构：从上到下分别">
 <meta name="keywords" content="java,Java EE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java-Java EE">
-<meta property="og:url" content="http://liuweidong.club/java-JavaEE/index.html">
+<meta property="og:title" content="java-Java EE知识框架">
+<meta property="og:url" content="http://liuweidong.club/java-JavaEE知识框架/index.html">
 <meta property="og:site_name" content="漫漫求索">
 <meta property="og:description" content="JavaEE简介Java EE（Java Platform Enterprise Edition，Java平台企业版），最初称为J2EE，2018年3月更名为Jakarta EE。是Sun公司为企业级应用推出的标准平台，用来开发B/S架构软件。Java EE是一系列技术和标准的集合，它包括了从前端Web界面到中间件，再到后端数据库系统的一系列技术和规范。 体系结构JavaEE体系结构：从上到下分别">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-23T15:18:36.179Z">
+<meta property="og:updated_time" content="2019-03-25T15:17:05.044Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java-Java EE">
+<meta name="twitter:title" content="java-Java EE知识框架">
 <meta name="twitter:description" content="JavaEE简介Java EE（Java Platform Enterprise Edition，Java平台企业版），最初称为J2EE，2018年3月更名为Jakarta EE。是Sun公司为企业级应用推出的标准平台，用来开发B/S架构软件。Java EE是一系列技术和标准的集合，它包括了从前端Web界面到中间件，再到后端数据库系统的一系列技术和规范。 体系结构JavaEE体系结构：从上到下分别">
 
 
@@ -172,7 +172,7 @@
 
 
 
-  <link rel="canonical" href="http://liuweidong.club/java-JavaEE/">
+  <link rel="canonical" href="http://liuweidong.club/java-JavaEE知识框架/">
 
 
 
@@ -182,7 +182,7 @@
   };
 </script>
 
-  <title>java-Java EE | 漫漫求索</title>
+  <title>java-Java EE知识框架 | 漫漫求索</title>
   
 
 
@@ -422,7 +422,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuweidong.club/java-JavaEE/">
+    <link itemprop="mainEntityOfPage" href="http://liuweidong.club/java-JavaEE知识框架/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuweidong">
@@ -439,7 +439,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java-Java EE
+          <h1 class="post-title" itemprop="name headline">java-Java EE知识框架
               
             
           </h1>
@@ -504,8 +504,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/java-JavaEE/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/java-JavaEE/" itemprop="commentCount"></span>
+                <a href="/java-JavaEE知识框架/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/java-JavaEE知识框架/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,7 +557,22 @@
 <li>JSP输出表达式语法格式：<code>&lt;%=表达式%&gt;</code></li>
 <li>JSP注释格式：<code>&lt;%-- 注释内容 --%&gt;</code></li>
 </ol>
-<h2 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h2><h1 id="lt-lt-Web前端开发基础-gt-gt"><a href="#lt-lt-Web前端开发基础-gt-gt" class="headerlink" title="&lt;&lt;Web前端开发基础&gt;&gt;"></a>&lt;&lt;Web前端开发基础&gt;&gt;</h1><p>Web设计三层：结构层（HTML）、样式层（CSS）、行为层（JavaScript和文档对象模型DOM）</p>
+<h2 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h2><ul>
+<li><strong>持久化</strong>（Persistence），数据保存到可掉电式存储设备中以供之后使用。</li>
+<li><strong>JDBC</strong>（Java DataBase Connectivity，java数据库连接）是一种用于执行SQL语句的Java API，可以为多种关系数据库提供统一访问。</li>
+</ul>
+<p><strong>发展历程：</strong><font color="#ff0000">JDBC -&gt; JDO -&gt; Hibernate</font><br><strong>JDBC API包括两个层次：</strong></p>
+<ul>
+<li>面向应用的API：JDBC API，提供了应用程序对JDBC的管理连接。java.sql.*</li>
+<li>面向数据库的API：Java Driver API，支持JDBC管理到驱动器连接。</li>
+</ul>
+<p><strong>JDBC API常用接口和类：</strong></p>
+<ol>
+<li>Connection</li>
+<li>DriverManager</li>
+</ol>
+<p><strong>JDBC URL示例：</strong><br>jdbc:mysql://localhost:3306/test</p>
+<h1 id="lt-lt-Web前端开发基础-gt-gt"><a href="#lt-lt-Web前端开发基础-gt-gt" class="headerlink" title="&lt;&lt;Web前端开发基础&gt;&gt;"></a>&lt;&lt;Web前端开发基础&gt;&gt;</h1><p>Web设计三层：结构层（HTML）、样式层（CSS）、行为层（JavaScript和文档对象模型DOM）</p>
 <h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><p>1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。</p>
 <h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h2><p>jQuery是一个快速、简洁的JavaScript框架，继Prototype之后又一个优秀的JavaScript代码库。jQuery设计的宗旨是“Write Less,Do More”。<br>发布者：John Resig<br>jQuery 1.0：2006/01</p>
 <h2 id="Ajax（网络请求）"><a href="#Ajax（网络请求）" class="headerlink" title="Ajax（网络请求）"></a>Ajax（网络请求）</h2><p>Ajax（Asynchronous JavaScript and XML）</p>
@@ -570,11 +585,15 @@
 <li>service()：响应客户端的所有请求。<h3 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h3>Filter可以认为是Servlet的一种加强版，主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理，是个典型的处理链。<h3 id="Listener"><a href="#Listener" class="headerlink" title="Listener"></a>Listener</h3></li>
 </ol>
 <h1 id="lt-lt-Web前端开发框架-gt-gt"><a href="#lt-lt-Web前端开发框架-gt-gt" class="headerlink" title="&lt;&lt;Web前端开发框架&gt;&gt;"></a>&lt;&lt;Web前端开发框架&gt;&gt;</h1><h2 id="MiniUI"><a href="#MiniUI" class="headerlink" title="MiniUI"></a>MiniUI</h2><h2 id="layui"><a href="#layui" class="headerlink" title="layui"></a>layui</h2><h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><p>Vue只关注视图层，采用自底向上增量开发的设计。</p>
-<h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h2 id="AngularJS"><a href="#AngularJS" class="headerlink" title="AngularJS"></a>AngularJS</h2><h1 id="lt-lt-后端开发-gt-gt"><a href="#lt-lt-后端开发-gt-gt" class="headerlink" title="&lt;&lt;后端开发&gt;&gt;"></a>&lt;&lt;后端开发&gt;&gt;</h1><h1 id="SSH框架"><a href="#SSH框架" class="headerlink" title="SSH框架"></a>SSH框架</h1><h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><h2 id="Struts-Struts2"><a href="#Struts-Struts2" class="headerlink" title="Struts/Struts2"></a>Struts/Struts2</h2><h2 id="Hibernate"><a href="#Hibernate" class="headerlink" title="Hibernate"></a>Hibernate</h2><p>传统的Java应用都是采用JDBC来访问数据库的，但传统的JDBC采用的是一种基于SQL的操作方式，这种操作方式与Java语言的面向对象特征不太一致，所以Java EE应用需要一种技术，通过这种技术能让Java以面向对象的方式操作关系数据库。ORM（Object Relation Mapping），最早的ORM是Entity EJB（Enterprise JavaBean），许多人觉得EJB非常繁琐。这种背景下，Hibernate框架应运而生。</p>
-<h1 id="SSM框架"><a href="#SSM框架" class="headerlink" title="SSM框架"></a>SSM框架</h1><h2 id="Spring-1"><a href="#Spring-1" class="headerlink" title="Spring"></a>Spring</h2><p>Spring是一个开源框架，它由Rod Johnson创建。它是为了解决企业应用开发的复杂性而创建的。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益。<br>Spring是一个轻量级的<strong>控制反转(IoC)和面向切面(AOP)</strong>的容器框架。</p>
-<h2 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h2><p>SpringMVC是Spring实现的一个Web层，相当于Struts的框架，但是比Struts更加灵活和强大</p>
-<h2 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h2><p>Mybatis是一个持久层的框架，在使用上相比Hibernate更加灵活，可以控制sql的编写，使用XML或注解进行相关的配置。</p>
-<h1 id="Spring-Boot"><a href="#Spring-Boot" class="headerlink" title="Spring Boot"></a>Spring Boot</h1><h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h1 id="lt-lt-微服务架构-gt-gt"><a href="#lt-lt-微服务架构-gt-gt" class="headerlink" title="&lt;&lt;微服务架构&gt;&gt;"></a>&lt;&lt;微服务架构&gt;&gt;</h1><h2 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h2><h2 id="Spring-Cloud"><a href="#Spring-Cloud" class="headerlink" title="Spring Cloud"></a>Spring Cloud</h2><h2 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h2><h1 id="lt-lt-高并发-gt-gt"><a href="#lt-lt-高并发-gt-gt" class="headerlink" title="&lt;&lt;高并发&gt;&gt;"></a>&lt;&lt;高并发&gt;&gt;</h1><h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><h2 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h2><h2 id="缓存技术"><a href="#缓存技术" class="headerlink" title="缓存技术"></a>缓存技术</h2><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1>
+<h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h2 id="AngularJS"><a href="#AngularJS" class="headerlink" title="AngularJS"></a>AngularJS</h2><h1 id="lt-lt-lt-后端开发-gt-gt-gt"><a href="#lt-lt-lt-后端开发-gt-gt-gt" class="headerlink" title="&lt;&lt;&lt;后端开发&gt;&gt;&gt;"></a>&lt;&lt;&lt;后端开发&gt;&gt;&gt;</h1><h1 id="lt-lt-SSH框架-gt-gt"><a href="#lt-lt-SSH框架-gt-gt" class="headerlink" title="&lt;&lt;SSH框架&gt;&gt;"></a>&lt;&lt;SSH框架&gt;&gt;</h1><p>Spring + Struts/Struts2 + Hibernate</p>
+<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h2><p><a href="https://spring.io/" target="_blank" rel="noopener">Spring</a>是于2003年兴起的一个轻量级的Java开发框架，由<strong>Rod Johnson</strong>创建。解决的是业务逻辑层和其他各层的松耦合问题。Spring使用基本的<strong>JavaBean</strong>来完成以前只可能由<strong>EJB</strong>完成的事情。<br>Spring是一个轻量级的<strong>控制反转(IoC)</strong>和<strong>面向切面(AOP)</strong>的容器框架。</p>
+<p><font color="#ff0000">EJB -&gt; Spring Framework -&gt; Spring Boot -&gt; Spring Cloud</font></p>
+<h2 id="Spring-Framework-5"><a href="#Spring-Framework-5" class="headerlink" title="Spring Framework 5"></a>Spring Framework 5</h2><h2 id="Spring-Boot"><a href="#Spring-Boot" class="headerlink" title="Spring Boot"></a>Spring Boot</h2><h2 id="Spring-Cloud"><a href="#Spring-Cloud" class="headerlink" title="Spring Cloud"></a>Spring Cloud</h2><h2 id="Spring使用"><a href="#Spring使用" class="headerlink" title="Spring使用"></a>Spring使用</h2><h3 id="Spring-Initializr"><a href="#Spring-Initializr" class="headerlink" title="Spring Initializr"></a>Spring Initializr</h3><p><a href="https://start.spring.io/" target="_blank" rel="noopener">https://start.spring.io/</a></p>
+<h1 id="Struts-Struts2"><a href="#Struts-Struts2" class="headerlink" title="Struts/Struts2"></a>Struts/Struts2</h1><h1 id="Hibernate"><a href="#Hibernate" class="headerlink" title="Hibernate"></a>Hibernate</h1><p>传统的Java应用都是采用JDBC来访问数据库的，但传统的JDBC采用的是一种基于SQL的操作方式，这种操作方式与Java语言的面向对象特征不太一致，所以Java EE应用需要一种技术，通过这种技术能让Java以面向对象的方式操作关系数据库。ORM（Object Relation Mapping），最早的ORM是Entity EJB（Enterprise JavaBean），许多人觉得EJB非常繁琐。这种背景下，Hibernate框架应运而生。</p>
+<h1 id="lt-lt-SSM框架-gt-gt"><a href="#lt-lt-SSM框架-gt-gt" class="headerlink" title="&lt;&lt;SSM框架&gt;&gt;"></a>&lt;&lt;SSM框架&gt;&gt;</h1><p>Spring + Spring MVC + Mybatis</p>
+<h1 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h1><p>SpringMVC是Spring实现的一个Web层，相当于Struts的框架，但是比Struts更加灵活和强大</p>
+<h1 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h1><p>Mybatis是一个持久层的框架，在使用上相比Hibernate更加灵活，可以控制sql的编写，使用XML或注解进行相关的配置。</p>
+<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h1 id="lt-lt-微服务架构-gt-gt"><a href="#lt-lt-微服务架构-gt-gt" class="headerlink" title="&lt;&lt;微服务架构&gt;&gt;"></a>&lt;&lt;微服务架构&gt;&gt;</h1><h2 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h2><h2 id="Spring-Cloud-1"><a href="#Spring-Cloud-1" class="headerlink" title="Spring Cloud"></a>Spring Cloud</h2><h2 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h2><h1 id="lt-lt-高并发-gt-gt"><a href="#lt-lt-高并发-gt-gt" class="headerlink" title="&lt;&lt;高并发&gt;&gt;"></a>&lt;&lt;高并发&gt;&gt;</h1><h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><h2 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h2><h2 id="缓存技术"><a href="#缓存技术" class="headerlink" title="缓存技术"></a>缓存技术</h2><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2>
       
     </div>
 
@@ -641,7 +660,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://liuweidong.club/java-JavaEE/" title="java-Java EE">http://liuweidong.club/java-JavaEE/</a>
+    <a href="http://liuweidong.club/java-JavaEE知识框架/" title="java-Java EE知识框架">http://liuweidong.club/java-JavaEE知识框架/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -759,7 +778,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">42</span>
+                    <span class="site-state-item-count">41</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -929,7 +948,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaEE"><span class="nav-number">1.</span> <span class="nav-text">JavaEE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#体系结构"><span class="nav-number">1.2.</span> <span class="nav-text">体系结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#核心技术"><span class="nav-number">2.</span> <span class="nav-text">核心技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP"><span class="nav-number">2.1.</span> <span class="nav-text">JSP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本语法"><span class="nav-number">2.1.1.</span> <span class="nav-text">基本语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC"><span class="nav-number">2.2.</span> <span class="nav-text">JDBC</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-Web前端开发基础-gt-gt"><span class="nav-number">3.</span> <span class="nav-text">&lt;&lt;Web前端开发基础&gt;&gt;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML"><span class="nav-number">3.1.</span> <span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS"><span class="nav-number">3.2.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript"><span class="nav-number">3.3.</span> <span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery"><span class="nav-number">3.4.</span> <span class="nav-text">jQuery</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax（网络请求）"><span class="nav-number">3.5.</span> <span class="nav-text">Ajax（网络请求）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Web-xml"><span class="nav-number">3.6.</span> <span class="nav-text">Web.xml</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet"><span class="nav-number">3.6.1.</span> <span class="nav-text">Servlet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Filter"><span class="nav-number">3.6.2.</span> <span class="nav-text">Filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Listener"><span class="nav-number">3.6.3.</span> <span class="nav-text">Listener</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-Web前端开发框架-gt-gt"><span class="nav-number">4.</span> <span class="nav-text">&lt;&lt;Web前端开发框架&gt;&gt;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MiniUI"><span class="nav-number">4.1.</span> <span class="nav-text">MiniUI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#layui"><span class="nav-number">4.2.</span> <span class="nav-text">layui</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue"><span class="nav-number">4.3.</span> <span class="nav-text">Vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React"><span class="nav-number">4.4.</span> <span class="nav-text">React</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AngularJS"><span class="nav-number">4.5.</span> <span class="nav-text">AngularJS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-后端开发-gt-gt"><span class="nav-number">5.</span> <span class="nav-text">&lt;&lt;后端开发&gt;&gt;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSH框架"><span class="nav-number">6.</span> <span class="nav-text">SSH框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring"><span class="nav-number">6.1.</span> <span class="nav-text">Spring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Struts-Struts2"><span class="nav-number">6.2.</span> <span class="nav-text">Struts/Struts2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hibernate"><span class="nav-number">6.3.</span> <span class="nav-text">Hibernate</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSM框架"><span class="nav-number">7.</span> <span class="nav-text">SSM框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-1"><span class="nav-number">7.1.</span> <span class="nav-text">Spring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringMVC"><span class="nav-number">7.2.</span> <span class="nav-text">SpringMVC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mybatis"><span class="nav-number">7.3.</span> <span class="nav-text">Mybatis</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring-Boot"><span class="nav-number">8.</span> <span class="nav-text">Spring Boot</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis"><span class="nav-number">9.</span> <span class="nav-text">Redis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-微服务架构-gt-gt"><span class="nav-number">10.</span> <span class="nav-text">&lt;&lt;微服务架构&gt;&gt;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dubbo"><span class="nav-number">10.1.</span> <span class="nav-text">Dubbo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Cloud"><span class="nav-number">10.2.</span> <span class="nav-text">Spring Cloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Zookeeper"><span class="nav-number">10.3.</span> <span class="nav-text">Zookeeper</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-高并发-gt-gt"><span class="nav-number">11.</span> <span class="nav-text">&lt;&lt;高并发&gt;&gt;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#负载均衡"><span class="nav-number">11.1.</span> <span class="nav-text">负载均衡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#消息队列"><span class="nav-number">11.2.</span> <span class="nav-text">消息队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存技术"><span class="nav-number">11.3.</span> <span class="nav-text">缓存技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">11.4.</span> <span class="nav-text">数据库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Node-js"><span class="nav-number">12.</span> <span class="nav-text">Node.js</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaEE"><span class="nav-number">1.</span> <span class="nav-text">JavaEE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#体系结构"><span class="nav-number">1.2.</span> <span class="nav-text">体系结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#核心技术"><span class="nav-number">2.</span> <span class="nav-text">核心技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP"><span class="nav-number">2.1.</span> <span class="nav-text">JSP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本语法"><span class="nav-number">2.1.1.</span> <span class="nav-text">基本语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC"><span class="nav-number">2.2.</span> <span class="nav-text">JDBC</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-Web前端开发基础-gt-gt"><span class="nav-number">3.</span> <span class="nav-text">&lt;&lt;Web前端开发基础&gt;&gt;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML"><span class="nav-number">3.1.</span> <span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS"><span class="nav-number">3.2.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript"><span class="nav-number">3.3.</span> <span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery"><span class="nav-number">3.4.</span> <span class="nav-text">jQuery</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax（网络请求）"><span class="nav-number">3.5.</span> <span class="nav-text">Ajax（网络请求）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Web-xml"><span class="nav-number">3.6.</span> <span class="nav-text">Web.xml</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet"><span class="nav-number">3.6.1.</span> <span class="nav-text">Servlet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Filter"><span class="nav-number">3.6.2.</span> <span class="nav-text">Filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Listener"><span class="nav-number">3.6.3.</span> <span class="nav-text">Listener</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-Web前端开发框架-gt-gt"><span class="nav-number">4.</span> <span class="nav-text">&lt;&lt;Web前端开发框架&gt;&gt;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MiniUI"><span class="nav-number">4.1.</span> <span class="nav-text">MiniUI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#layui"><span class="nav-number">4.2.</span> <span class="nav-text">layui</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue"><span class="nav-number">4.3.</span> <span class="nav-text">Vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React"><span class="nav-number">4.4.</span> <span class="nav-text">React</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AngularJS"><span class="nav-number">4.5.</span> <span class="nav-text">AngularJS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-lt-后端开发-gt-gt-gt"><span class="nav-number">5.</span> <span class="nav-text">&lt;&lt;&lt;后端开发&gt;&gt;&gt;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-SSH框架-gt-gt"><span class="nav-number">6.</span> <span class="nav-text">&lt;&lt;SSH框架&gt;&gt;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring"><span class="nav-number">7.</span> <span class="nav-text">Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介-1"><span class="nav-number">7.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Framework-5"><span class="nav-number">7.2.</span> <span class="nav-text">Spring Framework 5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot"><span class="nav-number">7.3.</span> <span class="nav-text">Spring Boot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Cloud"><span class="nav-number">7.4.</span> <span class="nav-text">Spring Cloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring使用"><span class="nav-number">7.5.</span> <span class="nav-text">Spring使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Initializr"><span class="nav-number">7.5.1.</span> <span class="nav-text">Spring Initializr</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Struts-Struts2"><span class="nav-number">8.</span> <span class="nav-text">Struts/Struts2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hibernate"><span class="nav-number">9.</span> <span class="nav-text">Hibernate</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-SSM框架-gt-gt"><span class="nav-number">10.</span> <span class="nav-text">&lt;&lt;SSM框架&gt;&gt;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SpringMVC"><span class="nav-number">11.</span> <span class="nav-text">SpringMVC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mybatis"><span class="nav-number">12.</span> <span class="nav-text">Mybatis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis"><span class="nav-number">13.</span> <span class="nav-text">Redis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-微服务架构-gt-gt"><span class="nav-number">14.</span> <span class="nav-text">&lt;&lt;微服务架构&gt;&gt;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dubbo"><span class="nav-number">14.1.</span> <span class="nav-text">Dubbo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Cloud-1"><span class="nav-number">14.2.</span> <span class="nav-text">Spring Cloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Zookeeper"><span class="nav-number">14.3.</span> <span class="nav-text">Zookeeper</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-lt-高并发-gt-gt"><span class="nav-number">15.</span> <span class="nav-text">&lt;&lt;高并发&gt;&gt;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#负载均衡"><span class="nav-number">15.1.</span> <span class="nav-text">负载均衡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#消息队列"><span class="nav-number">15.2.</span> <span class="nav-text">消息队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存技术"><span class="nav-number">15.3.</span> <span class="nav-text">缓存技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">15.4.</span> <span class="nav-text">数据库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">16.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js"><span class="nav-number">16.1.</span> <span class="nav-text">Node.js</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -970,7 +989,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共24.3k字</span>
+  <span class="post-count">全站共24.6k字</span>
 </div>
 
         
