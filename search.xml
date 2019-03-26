@@ -277,8 +277,41 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[设计模式-创建型-Builder模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%88%9B%E5%BB%BA%E5%9E%8B-Builder%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[简介 Builder模式为了将构建复杂对象的过程和它的部件解耦，使得构建过程和部件的表示隔离开来。]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-创建型-单例模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%88%9B%E5%BB%BA%E5%9E%8B-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[简介 单例模式（Singleton），保证一个类仅有一个实例，并提供一个访问它的全局访问点。 实现单例模式主要有如下几个关键点： private构造方法，不对外开放； 通过一个公有静态方法或枚举返回单例类对象； 确保单例类的对象有且只有一个，尤其是在多线程环境下； 确保单例类对象在反序列化时不会重新构建对象。 123456789101112131415class Singleton &#123; private static Singleton instance; // 私有构造方法 private Singleton() &#123; &#125; // 获取本类实例的唯一全局访问点 public static Singleton getInstance() &#123; if (instance == null) &#123; instance = new Singleton(); &#125; return instance; &#125;&#125; 单例模式划分 懒汉式：声明一个静态对象，在第一次调用getInstance时进行初始化。缺点：第一次加载时需要及时进行实例化，反应稍慢。 饿汉式：在类加载时就完成了初始化。 单例实现方式 方法加锁（synchronized）。缺点：每次调用都进行同步，造成不必要的同步开销。12public static synchronized Singleton getInstance() &#123;&#125; 双重检查锁（DCL，Double Check Lock）。先判断对象是否已经初始化，再决定是否加锁。 123456789101112131415161718class Singleton &#123; // volatile会禁止指令重排。修饰的变量会强制将修改的值立即写入主存，主存中的值更新会使缓存中的值失效。 private volatile static Singleton instance; private Singleton() &#123; &#125; public static Singleton getInstance() &#123; if (instance == null) &#123; synchronized (Singleton.class) &#123; if (instance == null) &#123; instance = new Singleton(); &#125; &#125; &#125; return instance; &#125;&#125; 实例化对象instance = new Singleton();不是一个原子操作，会被编译成多条汇编指令： 给Singleton的实例分配内存； 调用构造方法，初始化对象； 将instance对象指向分配的内存空间。 由于Java编译器允许处理器乱序执行，以及JDK 1.5之前JMM（Java Memory Model，Java内存模型）中Cache、寄存器到主内存回写顺序的规定，上面的第二和第三的顺序是无法保证的。如果线程A执行完3，2未执行之前，切换到线程B上，再使用时就会出错，这就是DCL失效问题。JDK 1.5，SUN注意到这种问题，调整了JVM，具体化了volatile关键字，保证instance对象每次都是从主内存中读取。 静态内部类单例模式 123456789101112class Singleton &#123; private Singleton() &#123; &#125; public static Singleton getInstance() &#123; return SingletonHolder.instance; &#125; private static class SingletonHolder &#123; private static final Singleton instance = new Singleton(); &#125;&#125; 枚举单例上述的几种单例模式实现中，在反序列化的情况下会出现重新创建对象。 123enum SingletonEnum &#123; INSTANCE;&#125; 使用容器实现单例模式 优缺点优点：缺点： 单例对象如果持有Context，容易引发内存泄漏，此时需要注意传递给单例对象的Context最好是Application Context。 备注对象属于引用数据类型，和基本数据类型最大的不同在于引用数据类型需要进行内存分配，关键字new主要的功能就是开辟内存空间。]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式(23)]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F(23)%2F</url>
+    <content type="text"><![CDATA[创建型模式(5) 单例模式 Builder模式 工厂方法模式 抽象工厂模式 原型模式 结构型模式(7) 代理模式 组合模式 适配器模式 装饰模式 享元模式 外观模式 桥接模式 行为型模式(11) 策略模式 状态模式 责任链模式 解释器模式 命令模式 观察者模式 备忘录模式 迭代器模式 模板方法模式 访问者模式 中介者模式]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[面向对象六大原则]]></title>
-    <url>%2F%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99%2F</url>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99%2F</url>
     <content type="text"><![CDATA[小序系统开发过程中，最难的不是完成系统的开发工作，而是在于后续的升级、维护过程中让系统能够拥抱变化。拥抱变化也就意味着在满足需求且不破坏系统稳定性的前提下保持高可扩展性、高内聚、低耦合，经历各版本的变更之后依然保持清晰、灵活、稳定的系统架构。当然，这是比较理想的情况，但我们必须朝着这个方向去努力，那么遵循面向对象六大原则就是我们走向灵活软件之路所迈出的第一步。 软件的可维护性和可复用性。 好的系统设计应该具备如下三个性质： 可扩展性（Extensibility） 灵活性（Flexibility） 可插入性（Pluggability） 可维护性较低的系统设计，通常有如下几个原因： 复用率低（Immobility） 黏度过高（Viscosity） 脆弱 僵硬 常用的面向对象设计原则包括7个，这些原则并不是孤立存在的，它们相互依赖，相互补充。 开闭原则（OCP）Open Close Principle，缩写OCP。开闭原则由Bertrand Meyer（勃兰特·梅耶）于1988年出版的《面向对象软件构造》一书中提出。抽象化是开闭原则的关键。 定义：软件中的对象（类、模块、函数等）应该对于扩展是开放的，对于修改是封闭的。 软件开发过程中，最不会变化的就是变化本事。 依赖倒置原则（DIP）Dependence Inversion Principle，缩写DIP。 定义：依赖倒置原则指代了一种特定的解耦形式，使得高层次的模块不依赖于低层次模块的实现细节的目的，依赖模块被颠倒了。 高层模块不应该依赖低层模块，两者都应该依赖其抽象 抽象不应该依赖细节 细节应该依赖抽象 java语言中，抽象就是指接口或抽象类，两者都不可以直接被实例化；细节就是实现类。高层模块就是调用端，低层模块就是具体实现类。 里氏替换原则（LSP）Liskov Substitution Principle，缩写LSP。 定义：所有引用基类的地方必须能透明地使用其子类的对象。 单一职责原则（SRP）Single Responsibility Principle，缩写SRP。 定义：就一个类而言，应该仅有一个引起它变化的原因。 接口隔离原则（ISP）InterfaceSegregation Principles，缩写ISP。 定义：客户端不应该依赖它不需要的接口。 迪米特原则（LOD）Law of Demeter，缩写LOD，也称为最少知识原则。 定义：一个对象应该对其他对象有最少的了解。 Only talk to your immedate friends。只与直接的朋友通信。？？？每个对象都必然会与其他对象有耦合关系，两个对象之间的耦合就称为朋友关系，如依赖、关联、组合、聚合等。 类应该对自己需要耦合或调用的类知道得最少，类的内部如何实现与调用者或依赖者没有关系，调用者或者依赖者只需要知道它需要的方法即可，其他的可一概不用管。类与类之间关系越密切，耦合度越大，当一个类发生改变时，对另一个类的影响也越大。软件总的原则：低耦合、高内聚。]]></content>
       <categories>
         <category>设计模式</category>
@@ -384,7 +417,7 @@
   <entry>
     <title><![CDATA[UML类图]]></title>
     <url>%2F%E3%80%90%E7%BB%BC%E5%90%88%E3%80%91UML%E7%B1%BB%E5%9B%BE%2F</url>
-    <content type="text"><![CDATA[Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。]]></content>
+    <content type="text"><![CDATA[Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。 类表示类图分3层。第一层表示类的名称，如果是抽象类，则用斜线表示；第二层是类的特性，通常表示字段或属性；第三层是类的操作，通常是方法或行为。注：第二层与第三层前面存在符号，“+”代表public，“-”代表private，“#”代表protected。 类关系表示 关联（Association）：一种拥有的关系，它使一个类知道另一个类的属性和方法。UML中，关联关系采用带普通箭头的实心线表示，指向被拥有者。双向的关联可以有两个箭头或者没有箭头，单向关联有一个箭头。 聚合（Aggregation）：整体与部分的关系。成员对象是整体对象的一部分，但是成员对象可以脱离整体对象独立存在。UML中，聚合关系采用带空心菱形的实心线表示，菱形指向整体，箭头指向部分。如：轮胎是汽车的组成部分，但是轮胎可以独立存在，因此，汽车和轮胎是聚合关系。 组合（Composition）：整体与部分的关系，但部分不能离开整体而单独存在。UML中，组合关系用带实心菱形的实心线表示，菱形指向整体，箭头指向部分。如：头与嘴巴就是组合关系。 依赖（Dependency）：使用关系。与管线关系不同的是，它是一种临时性的关系，通常在运行期间产生，并且随着运行时的变化，依赖关系也可能发生变化。依赖也有方向，双向依赖是一种非常糟糕的结构，应该杜绝产生。UML中，依赖关系用带箭头的虚线表示，箭头指向被使用者，由依赖的一方指向被依赖的一方。 泛化（Generalization）：也就是继承关系。UML中，泛化关系用带空心三角形的直线来表示，三角形指向父类。 实现（Realization）：类与接口的关系。UML中，实现关系用带空心三角形的虚线来表示，三角形指向接口。 说明各种关系的强弱顺序：泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖]]></content>
       <categories>
         <category>综合</category>
       </categories>
