@@ -22,11 +22,9 @@
 <meta name="theme-color" content="#222">
 
 
-
   
   
   <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
 
 
   <script>
@@ -44,11 +42,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
-
-
-
-
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
 
 
 
@@ -96,7 +90,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|console:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|console:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
   
 
 
@@ -104,20 +98,18 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-lwd.png?v=6.6.0">
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-lwd.png?v=6.6.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-lwd.png?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-lwd.png?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-lwd.png?v=7.0.1">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-lwd.png?v=7.0.1">
 
 
 
@@ -131,8 +123,8 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '6.6.0',
-    sidebar: {"position":"left","display":"always","offset":13,"b2t":false,"scrollpercent":true,"onmobile":true},
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"always","offset":13,"b2t":false,"scrollpercent":true,"onmobile":true,"dimmer":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -196,26 +188,26 @@
 
   <noscript>
   <style>
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion .logo-line-before i { left: initial; }
-    .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
@@ -234,7 +226,7 @@
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -248,6 +240,7 @@
       
         <p class="site-subtitle">闲来无事，消遣自己</p>
       
+    
     
   </div>
 
@@ -391,7 +384,7 @@
 
   
 
-    <a href="https://github.com/lwdhub" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+  <a href="https://github.com/lwdhub" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
 
 
 
@@ -441,7 +434,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/数据库/" class="post-title-link" itemprop="http://liuweidong.club/index.html">数据库</a>
+                <a href="/数据库/" class="post-title-link" itemprop="url">数据库</a>
               
             
           </h1>
@@ -494,13 +487,17 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/数据库/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/数据库/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/数据库/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -530,10 +527,12 @@
       
         
           
-          SQL（Structured Query Language，结构化查询语言）
+            <p>
+              SQL（Structured Query Language，结构化查询语言）
 关系型数据库关系型数据库管理系统（Relational Database Management System，RDBMS）
 OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分布式数据库为核心的一组
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -554,13 +553,12 @@ OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分�
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -621,7 +619,7 @@ OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分�
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/java-JavaEE知识框架/" class="post-title-link" itemprop="http://liuweidong.club/index.html">java-Java EE知识框架</a>
+                <a href="/java-JavaEE知识框架/" class="post-title-link" itemprop="url">java-Java EE知识框架</a>
               
             
           </h1>
@@ -681,13 +679,17 @@ OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分�
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/java-JavaEE知识框架/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/java-JavaEE知识框架/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/java-JavaEE知识框架/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -717,8 +719,10 @@ OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分�
       
         
           
-          JavaEE简介Java EE（Java Platform Enterprise Edition，Java平台企业版），最初称为J2EE，2018年3月更名为Jakarta EE。是Sun公司为企业级应用推出的标准平台，用来开发B/S架构软件。Java EE是一系列技术和标准的集合，它包括了从前端W
-          ...
+            <p>
+              JavaEE简介Java EE（Java Platform Enterprise Edition，Java平台企业版），最初称为J2EE，2018年3月更名为Jakarta EE。是Sun公司为企业级应用推出的标准平台，用来开发B/S架构软件。Java EE是一系列技术和标准的集合，它包括了从前端W
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -739,13 +743,12 @@ OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分�
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -806,7 +809,7 @@ OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分�
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/【软件架构】软件架构/" class="post-title-link" itemprop="http://liuweidong.club/index.html">软件架构</a>
+                <a href="/【软件架构】软件架构/" class="post-title-link" itemprop="url">软件架构</a>
               
             
           </h1>
@@ -859,13 +862,17 @@ OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分�
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/【软件架构】软件架构/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/【软件架构】软件架构/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/【软件架构】软件架构/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -895,9 +902,11 @@ OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分�
       
         
           
-          引言
+            <p>
+              引言
 软件架构（Software Architecture）是一系列相关的抽象模式，用于指导大型软件系统各个方面的设计。软件架构是一个系统的草图。软件架构描述的对象是直接构成系统的抽象组件。各个组件之间的连接则明确和相对细致地描述组件之间的通讯。在实现阶段，这些抽象组件被细化为实际的组件，如具体某个
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -918,13 +927,12 @@ OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分�
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -985,7 +993,7 @@ OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分�
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/android-框架-图片加载/" class="post-title-link" itemprop="http://liuweidong.club/index.html">android-框架-图片加载</a>
+                <a href="/android-框架-图片加载/" class="post-title-link" itemprop="url">android-框架-图片加载</a>
               
             
           </h1>
@@ -1045,13 +1053,17 @@ OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分�
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/android-框架-图片加载/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-框架-图片加载/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-框架-图片加载/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1081,13 +1093,15 @@ OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分�
       
         
           
-          Fresco引言2015年3月Facebook开源的图片框架。https://www.fresco-cn.org/docs/index.html
+            <p>
+              Fresco引言2015年3月Facebook开源的图片框架。https://www.fresco-cn.org/docs/index.html
 Fresco项目https://github.com/facebook/fresco
 工作原理源码解析优缺点优点：缺点：
 
 框架大，影响APK大小
 使用繁
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1108,13 +1122,12 @@ Fresco项目https://github.com/facebook/fresco
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -1175,7 +1188,7 @@ Fresco项目https://github.com/facebook/fresco
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/android-框架-网络请求/" class="post-title-link" itemprop="http://liuweidong.club/index.html">android-框架-网络请求</a>
+                <a href="/android-框架-网络请求/" class="post-title-link" itemprop="url">android-框架-网络请求</a>
               
             
           </h1>
@@ -1235,13 +1248,17 @@ Fresco项目https://github.com/facebook/fresco
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/android-框架-网络请求/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-框架-网络请求/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-框架-网络请求/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1271,12 +1288,14 @@ Fresco项目https://github.com/facebook/fresco
       
         
           
-          引言网络请求框架本质上是将网络请求方法封装好的类库，实现异步请求和处理数据，从而实现整个网络请求模块的功能。
+            <p>
+              引言网络请求框架本质上是将网络请求方法封装好的类库，实现异步请求和处理数据，从而实现整个网络请求模块的功能。
 Retrofit简介项目工作原理源码解析OkHttp简介
 An HTTP+HTTP/2 client for Android and Java applications. 
 
 The OkH
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1297,13 +1316,12 @@ The OkH
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -1364,7 +1382,7 @@ The OkH
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/android-框架-ARouter/" class="post-title-link" itemprop="http://liuweidong.club/index.html">android-框架-ARouter</a>
+                <a href="/android-框架-ARouter/" class="post-title-link" itemprop="url">android-框架-ARouter</a>
               
             
           </h1>
@@ -1424,13 +1442,17 @@ The OkH
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/android-框架-ARouter/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-框架-ARouter/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-框架-ARouter/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1460,13 +1482,15 @@ The OkH
       
         
           
-          简介
+            <p>
+              简介
 A framework for assisting in the renovation of Android componentization.帮助Android APP进行组件化改造的路由框架——支持模块间的路由、通信、解耦
 
 背景随着项目的发展，功能模块增多，无法避免面临以下问题：
 
 项目
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1487,13 +1511,12 @@ A framework for assisting in the renovation of Android componentization.帮助An
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -1554,7 +1577,7 @@ A framework for assisting in the renovation of Android componentization.帮助An
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/android-安全/" class="post-title-link" itemprop="http://liuweidong.club/index.html">android-安全</a>
+                <a href="/android-安全/" class="post-title-link" itemprop="url">android-安全</a>
               
             
           </h1>
@@ -1614,13 +1637,17 @@ A framework for assisting in the renovation of Android componentization.帮助An
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/android-安全/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-安全/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-安全/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1650,7 +1677,8 @@ A framework for assisting in the renovation of Android componentization.帮助An
       
         
           
-          混淆反编译加固梆梆加固、爱加密、娜迦、360加固保、腾讯加固、百度加固
+            <p>
+              混淆反编译加固梆梆加固、爱加密、娜迦、360加固保、腾讯加固、百度加固
 常见APP漏洞及风险
 静态破解：ApkTool、dex2jar、jd-gui、DDMS、签名工具
 二次打包
@@ -1660,7 +1688,8 @@ A framework for assisting in the renovation of Android componentization.帮助An
 协议抓取
 
 
-          
+              
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1681,13 +1710,12 @@ A framework for assisting in the renovation of Android componentization.帮助An
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -1748,7 +1776,7 @@ A framework for assisting in the renovation of Android componentization.帮助An
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/android-性能优化/" class="post-title-link" itemprop="http://liuweidong.club/index.html">android-性能优化</a>
+                <a href="/android-性能优化/" class="post-title-link" itemprop="url">android-性能优化</a>
               
             
           </h1>
@@ -1808,13 +1836,17 @@ A framework for assisting in the renovation of Android componentization.帮助An
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/android-性能优化/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-性能优化/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-性能优化/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1844,7 +1876,8 @@ A framework for assisting in the renovation of Android componentization.帮助An
       
         
           
-          布局优化
+            <p>
+              布局优化
 include标签共享布局
 ViewStub标签实现延迟加载：页面是从服务端获取数据进行展现的。
 merge标签减少布局层次
@@ -1858,7 +1891,8 @@ merge标签减少布局层次
 Java中引用方式
 强引用
 软引用：当内
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1879,13 +1913,12 @@ Java中引用方式
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -1946,7 +1979,7 @@ Java中引用方式
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/【阅读】算法导论-第三版/" class="post-title-link" itemprop="http://liuweidong.club/index.html">【阅读】算法导论-第三版</a>
+                <a href="/【阅读】算法导论-第三版/" class="post-title-link" itemprop="url">【阅读】算法导论-第三版</a>
               
             
           </h1>
@@ -1999,13 +2032,17 @@ Java中引用方式
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/【阅读】算法导论-第三版/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/【阅读】算法导论-第三版/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/【阅读】算法导论-第三版/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2035,9 +2072,11 @@ Java中引用方式
       
         
           
-          算法基础排序堆排序堆排序的时间复杂度是O(nlgn)。
+            <p>
+              算法基础排序堆排序堆排序的时间复杂度是O(nlgn)。
 快速排序线性时间排序数据结构基本数据结构栈和队列栈和队列都是动态集合，且在其上进行DELETE操作所移除的元素是预先设定的。在栈（stack）中，被删除的是最近插入的元素：栈实现的是一种后进先出（last-in，first-out，LIFO）策
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -2058,13 +2097,12 @@ Java中引用方式
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -2125,7 +2163,7 @@ Java中引用方式
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/android-框架-View-图表/" class="post-title-link" itemprop="http://liuweidong.club/index.html">android-框架-View-图表</a>
+                <a href="/android-框架-View-图表/" class="post-title-link" itemprop="url">android-框架-View-图表</a>
               
             
           </h1>
@@ -2185,13 +2223,17 @@ Java中引用方式
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/android-框架-View-图表/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-框架-View-图表/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-框架-View-图表/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2221,8 +2263,10 @@ Java中引用方式
       
         
           
-          MPAndroidChartHelloChartsWilliamChart
-          
+            <p>
+              MPAndroidChartHelloChartsWilliamChart
+              
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -2243,13 +2287,12 @@ Java中引用方式
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -2300,16 +2343,13 @@ Java中引用方式
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
-      <div id="sidebar-dimmer"></div>
-    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -2469,6 +2509,7 @@ Java中引用方式
           
              <div class="cc-license motion-element" itemprop="license">
               
+              
                 
               
               
@@ -2486,7 +2527,7 @@ Java中引用方式
           
 
         </div>
-      </section>
+      </div>
 
       
 
@@ -2494,6 +2535,7 @@ Java中引用方式
 
     </div>
   </aside>
+  
 
 
         
@@ -2502,7 +2544,7 @@ Java中引用方式
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2514,32 +2556,41 @@ Java中引用方式
 </div>
 
 
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
+  <span class="post-meta-divider">|</span>
 
 
 
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
 
-<div class="theme-info">
-  <div class="powered-by"></div>
-  <span class="post-count">全站共26.1k字</span>
-</div>
+
+
 
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv" title="总访客量">
+    <span class="post-meta-item-icon">
       <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
     </span>
   
 
   
-    <span class="site-pv" title="总访问量">
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
       <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
     </span>
   
@@ -2602,7 +2653,7 @@ Java中引用方式
 
   
     
-      
+    
   
   <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
@@ -2616,95 +2667,86 @@ Java中引用方式
 
 
 
-
-
-  
-  
-    <script src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script src="/js/src/utils.js?v=6.6.0"></script>
-
-  <script src="/js/src/motion.js?v=6.6.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/src/affix.js?v=6.6.0"></script>
-
-  <script src="/js/src/schemes/pisces.js?v=6.6.0"></script>
-
-
-
-  
-
-  
-
-
-  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
-
-
-
   
 
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
 
 
 
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
   
   
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
-  <script>
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'hl8cvrpRr17EbmkT9sNQeoPA-gzGzoHsz',
-        appKey: 'Bvt3DVy11TWAsAf2NM0SLaGz',
-        placeholder: 'Just go go',
-        avatar:'robohash',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: false
-    });
-  </script>
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
 
 
 
 
   
 
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.1"></script>
+
+
+  
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'hl8cvrpRr17EbmkT9sNQeoPA-gzGzoHsz',
+    appKey: 'Bvt3DVy11TWAsAf2NM0SLaGz',
+    placeholder: 'Just go go',
+    avatar: 'robohash',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
+
+
+
+  
   <script>
     // Popup Window;
     var isfetched = false;
@@ -2791,7 +2833,7 @@ Java中引用方式
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
                 
                 var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
                 var indexOfTitle = [];
                 var indexOfContent = [];
                 // only match articles with not empty titles
@@ -2960,9 +3002,9 @@ Java中引用方式
               })
             };
             if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
             } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
                 if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
@@ -3040,28 +3082,28 @@ Java中引用方式
   
 
   
+
+  
   
   
   <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
   <script>
     
     
       flOptions = {};
       
-          flOptions.iconStyle = "box";
+        flOptions.iconStyle = "box";
       
-          flOptions.boxForm = "vertical";
+        flOptions.boxForm = "vertical";
       
-          flOptions.position = "middleRight";
+        flOptions.position = "middleRight";
       
-          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       
       new needShareButton('#needsharebutton-float', flOptions);
     
   </script>
 
-  
 
   
 
@@ -3074,9 +3116,84 @@ Java中引用方式
   
 
   
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+      
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      
+        right: 4px;
+        top: 8px;
+      
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1;
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; // Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); // For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
 
 </body>
 </html>
-<!-- 页面点击小红心 -->
+<!-- ҳ����С���� -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-

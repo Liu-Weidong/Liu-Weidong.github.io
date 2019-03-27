@@ -22,11 +22,9 @@
 <meta name="theme-color" content="#222">
 
 
-
   
   
   <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
 
 
   <script>
@@ -44,11 +42,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
-
-
-
-
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
 
 
 
@@ -96,7 +90,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|console:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|console:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
   
 
 
@@ -104,20 +98,18 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-lwd.png?v=6.6.0">
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-lwd.png?v=6.6.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-lwd.png?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-lwd.png?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-lwd.png?v=7.0.1">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-lwd.png?v=7.0.1">
 
 
 
@@ -131,8 +123,8 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '6.6.0',
-    sidebar: {"position":"left","display":"always","offset":13,"b2t":false,"scrollpercent":true,"onmobile":true},
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"always","offset":13,"b2t":false,"scrollpercent":true,"onmobile":true,"dimmer":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -196,26 +188,26 @@
 
   <noscript>
   <style>
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion .logo-line-before i { left: initial; }
-    .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
@@ -234,7 +226,7 @@
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -248,6 +240,7 @@
       
         <p class="site-subtitle">闲来无事，消遣自己</p>
       
+    
     
   </div>
 
@@ -391,7 +384,7 @@
 
   
 
-    <a href="https://github.com/lwdhub" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+  <a href="https://github.com/lwdhub" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
 
 
 
@@ -441,7 +434,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/【软件架构】MVC-MVP-MVVM-MVI/" class="post-title-link" itemprop="http://liuweidong.club/page/2/index.html">架构模式_MVC-MVP-MVVM-MVI</a>
+                <a href="/【软件架构】MVC-MVP-MVVM-MVI/" class="post-title-link" itemprop="url">架构模式_MVC-MVP-MVVM-MVI</a>
               
             
           </h1>
@@ -494,13 +487,17 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/【软件架构】MVC-MVP-MVVM-MVI/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/【软件架构】MVC-MVP-MVVM-MVI/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/【软件架构】MVC-MVP-MVVM-MVI/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -530,12 +527,14 @@
       
         
           
-          小序框架面向于一系列相同行为代码的重用，而设计则面向的是一系列相同结构代码的重用。简而言之：框架是大智慧，用来对软件设计进行分工；设计模式是小技巧，对具体问题提出解决方案，以提高代码复用率，降低耦合度。
+            <p>
+              小序框架面向于一系列相同行为代码的重用，而设计则面向的是一系列相同结构代码的重用。简而言之：框架是大智慧，用来对软件设计进行分工；设计模式是小技巧，对具体问题提出解决方案，以提高代码复用率，降低耦合度。
 
 对待框架演变的态度：所谓真理只是在特定领域条件下成立的教条理论罢了。
 
 MVCModel-Vi
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -556,13 +555,12 @@ MVCModel-Vi
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -623,7 +621,7 @@ MVCModel-Vi
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/android-框架-事件总线/" class="post-title-link" itemprop="http://liuweidong.club/page/2/index.html">android-框架-事件总线</a>
+                <a href="/android-框架-事件总线/" class="post-title-link" itemprop="url">android-框架-事件总线</a>
               
             
           </h1>
@@ -683,13 +681,17 @@ MVCModel-Vi
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/android-框架-事件总线/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-框架-事件总线/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-框架-事件总线/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -719,9 +721,11 @@ MVCModel-Vi
       
         
           
-          RxJava目前大多数开发者使用EventBus或Otto作为事件总线通信库，对于RxJava使用者来说，RxJava也可以轻松实现事件总线。
+            <p>
+              RxJava目前大多数开发者使用EventBus或Otto作为事件总线通信库，对于RxJava使用者来说，RxJava也可以轻松实现事件总线。
 EventBusOtto
-          
+              
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -742,13 +746,12 @@ EventBusOtto
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -809,7 +812,7 @@ EventBusOtto
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/android-框架-RxJava/" class="post-title-link" itemprop="http://liuweidong.club/page/2/index.html">android-框架-RxJava</a>
+                <a href="/android-框架-RxJava/" class="post-title-link" itemprop="url">android-框架-RxJava</a>
               
             
           </h1>
@@ -869,13 +872,17 @@ EventBusOtto
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/android-框架-RxJava/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-框架-RxJava/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-框架-RxJava/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -905,9 +912,11 @@ EventBusOtto
       
         
           
-          简介项目项目地址：https://github.com/ReactiveX/RxJava版本2.x Javadoc
+            <p>
+              简介项目项目地址：https://github.com/ReactiveX/RxJava版本2.x Javadoc
 工作原理源码解析
-          
+              
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -928,13 +937,12 @@ EventBusOtto
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -995,7 +1003,7 @@ EventBusOtto
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/android-View-滑动/" class="post-title-link" itemprop="http://liuweidong.club/page/2/index.html">android-View-滑动</a>
+                <a href="/android-View-滑动/" class="post-title-link" itemprop="url">android-View-滑动</a>
               
             
           </h1>
@@ -1055,13 +1063,17 @@ EventBusOtto
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/android-View-滑动/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-View-滑动/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-View-滑动/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1091,7 +1103,8 @@ EventBusOtto
       
         
           
-          
+            <p>
+              
 滑动是实现绚丽的自定义控件的基础。
 
 基础知识MotionEvent事件类型
@@ -1101,7 +1114,8 @@ ACTION_MOVE：手指在屏幕上移动
 ACTION_UP：手指从屏幕上松开的一瞬间
 
 getX/getY：相对于当前View左上角的坐标getRawX/getRawY：相对于
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1122,13 +1136,12 @@ getX/getY：相对于当前View左上角的坐标getRawX/getRawY：相对于
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -1189,7 +1202,7 @@ getX/getY：相对于当前View左上角的坐标getRawX/getRawY：相对于
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/android-View-事件分发/" class="post-title-link" itemprop="http://liuweidong.club/page/2/index.html">android-View-事件分发</a>
+                <a href="/android-View-事件分发/" class="post-title-link" itemprop="url">android-View-事件分发</a>
               
             
           </h1>
@@ -1249,13 +1262,17 @@ getX/getY：相对于当前View左上角的坐标getRawX/getRawY：相对于
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/android-View-事件分发/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-View-事件分发/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-View-事件分发/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1285,13 +1302,15 @@ getX/getY：相对于当前View左上角的坐标getRawX/getRawY：相对于
       
         
           
-          
+            <p>
+              
 点击事件的分发，其实就是对MotionEvent事件的分发过程，产生MotionEvent后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。
 
 事件传递的三个阶段：
 
 分发（Dispatch）：事件分发对应dispatchTouchEvent方法。方法返回值true表示
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1312,13 +1331,12 @@ getX/getY：相对于当前View左上角的坐标getRawX/getRawY：相对于
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -1379,7 +1397,7 @@ getX/getY：相对于当前View左上角的坐标getRawX/getRawY：相对于
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/android-View-工作原理/" class="post-title-link" itemprop="http://liuweidong.club/page/2/index.html">android-View-工作原理</a>
+                <a href="/android-View-工作原理/" class="post-title-link" itemprop="url">android-View-工作原理</a>
               
             
           </h1>
@@ -1439,13 +1457,17 @@ getX/getY：相对于当前View左上角的坐标getRawX/getRawY：相对于
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/android-View-工作原理/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-View-工作原理/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-View-工作原理/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1475,11 +1497,13 @@ getX/getY：相对于当前View左上角的坐标getRawX/getRawY：相对于
       
         
           
-          UI层级Android UI层级如下图：
+            <p>
+              UI层级Android UI层级如下图：
 
 Activity是Android的四大组件之一，与用户交互的窗口。
 Window是抽象类，具体实现类是PhoneWindow。Android中的视图都是附加在Window上的，因此Window实际是View的直接管理者，Window和View通过ViewR
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1500,13 +1524,12 @@ Window是抽象类，具体实现类是PhoneWindow。Android中的视图都是�
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -1567,7 +1590,7 @@ Window是抽象类，具体实现类是PhoneWindow。Android中的视图都是�
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/【阅读】TCP-IP详解/" class="post-title-link" itemprop="http://liuweidong.club/page/2/index.html">【阅读】TCP-IP详解</a>
+                <a href="/【阅读】TCP-IP详解/" class="post-title-link" itemprop="url">【阅读】TCP-IP详解</a>
               
             
           </h1>
@@ -1620,13 +1643,17 @@ Window是抽象类，具体实现类是PhoneWindow。Android中的视图都是�
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/【阅读】TCP-IP详解/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/【阅读】TCP-IP详解/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/【阅读】TCP-IP详解/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1656,10 +1683,12 @@ Window是抽象类，具体实现类是PhoneWindow。Android中的视图都是�
       
         
           
-          概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。
+            <p>
+              概述互联网地址互联网上的每个接口必须有一个唯一的Internet地址（IP地址，32bit）。
 链路层TCP/IP支持多种不同的链路层协议，这取决于网络所使用的硬件，如以太网、令牌环网、FDDI（光纤分布式数据接口）及RS-232串行线路等。
 IP（网际协议）Ping程序“ping”源于声呐定位操作
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1680,13 +1709,12 @@ IP（网际协议）Ping程序“ping”源于声呐定位操作
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -1747,7 +1775,7 @@ IP（网际协议）Ping程序“ping”源于声呐定位操作
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/【利器】版本控制/" class="post-title-link" itemprop="http://liuweidong.club/page/2/index.html">版本控制</a>
+                <a href="/【利器】版本控制/" class="post-title-link" itemprop="url">版本控制</a>
               
             
           </h1>
@@ -1800,13 +1828,17 @@ IP（网际协议）Ping程序“ping”源于声呐定位操作
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/【利器】版本控制/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/【利器】版本控制/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/【利器】版本控制/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1836,12 +1868,14 @@ IP（网际协议）Ping程序“ping”源于声呐定位操作
       
         
           
-          
+            <p>
+              
 工欲善其事，必先利其器。——《论语·卫灵公》
 
 版本控制系统（VCS）版本控制系统（Version Control System），是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。
 本地版本控制系统集中化的版本控制系统（CVCS）如CVS、Subversion、Perforc
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1862,13 +1896,12 @@ IP（网际协议）Ping程序“ping”源于声呐定位操作
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -1929,7 +1962,7 @@ IP（网际协议）Ping程序“ping”源于声呐定位操作
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/【阅读】深入理解计算机系统/" class="post-title-link" itemprop="http://liuweidong.club/page/2/index.html">【阅读】深入理解计算机系统</a>
+                <a href="/【阅读】深入理解计算机系统/" class="post-title-link" itemprop="url">【阅读】深入理解计算机系统</a>
               
             
           </h1>
@@ -1982,13 +2015,17 @@ IP（网际协议）Ping程序“ping”源于声呐定位操作
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/【阅读】深入理解计算机系统/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/【阅读】深入理解计算机系统/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/【阅读】深入理解计算机系统/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2018,11 +2055,13 @@ IP（网际协议）Ping程序“ping”源于声呐定位操作
       
         
           
-          计算机系统漫游硬件组成
+            <p>
+              计算机系统漫游硬件组成
 总线：贯穿整个系统的是一组电子管道，称作总线，携带信息字节并负责在各个部件间传递。
 I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I/O设备都通过一个控制器或适配器与I/O总线相连。
 主存：主存是一个临时存储设备，在处理器执行程序时，用来存放程序和程序处理的数据。
-          ...
+              ...
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -2043,13 +2082,12 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -2110,7 +2148,7 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/android-框架-Log/" class="post-title-link" itemprop="http://liuweidong.club/page/2/index.html">android-框架-Log</a>
+                <a href="/android-框架-Log/" class="post-title-link" itemprop="url">android-框架-Log</a>
               
             
           </h1>
@@ -2170,13 +2208,17 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
                 <a href="/android-框架-Log/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/android-框架-Log/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-框架-Log/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2206,8 +2248,10 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
       
         
           
-          Logger引言Logger项目工作原理源码解析
-          
+            <p>
+              Logger引言Logger项目工作原理源码解析
+              
+            </p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -2228,13 +2272,12 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
     
 
     
-	
 	<div>
 	  
 	</div>
 
     
-       
+      
     
     
 
@@ -2285,16 +2328,13 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
-      <div id="sidebar-dimmer"></div>
-    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -2454,6 +2494,7 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
           
              <div class="cc-license motion-element" itemprop="license">
               
+              
                 
               
               
@@ -2471,7 +2512,7 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
           
 
         </div>
-      </section>
+      </div>
 
       
 
@@ -2479,6 +2520,7 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
 
     </div>
   </aside>
+  
 
 
         
@@ -2487,7 +2529,7 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -2499,32 +2541,41 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
 </div>
 
 
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
+  <span class="post-meta-divider">|</span>
 
 
 
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
 
-<div class="theme-info">
-  <div class="powered-by"></div>
-  <span class="post-count">全站共26.1k字</span>
-</div>
+
+
 
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv" title="总访客量">
+    <span class="post-meta-item-icon">
       <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
     </span>
   
 
   
-    <span class="site-pv" title="总访问量">
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
       <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
     </span>
   
@@ -2587,7 +2638,7 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
 
   
     
-      
+    
   
   <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
@@ -2601,95 +2652,86 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
 
 
 
-
-
-  
-  
-    <script src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script src="/js/src/utils.js?v=6.6.0"></script>
-
-  <script src="/js/src/motion.js?v=6.6.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/src/affix.js?v=6.6.0"></script>
-
-  <script src="/js/src/schemes/pisces.js?v=6.6.0"></script>
-
-
-
-  
-
-  
-
-
-  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
-
-
-
   
 
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
 
 
 
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
   
   
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
-  <script>
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'hl8cvrpRr17EbmkT9sNQeoPA-gzGzoHsz',
-        appKey: 'Bvt3DVy11TWAsAf2NM0SLaGz',
-        placeholder: 'Just go go',
-        avatar:'robohash',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: false
-    });
-  </script>
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
 
 
 
 
   
 
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.1"></script>
+
+
+  
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'hl8cvrpRr17EbmkT9sNQeoPA-gzGzoHsz',
+    appKey: 'Bvt3DVy11TWAsAf2NM0SLaGz',
+    placeholder: 'Just go go',
+    avatar: 'robohash',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
+
+
+
+  
   <script>
     // Popup Window;
     var isfetched = false;
@@ -2776,7 +2818,7 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
                 
                 var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
                 var indexOfTitle = [];
                 var indexOfContent = [];
                 // only match articles with not empty titles
@@ -2945,9 +2987,9 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
               })
             };
             if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
             } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
                 if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
@@ -3025,28 +3067,28 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
   
 
   
+
+  
   
   
   <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
   <script>
     
     
       flOptions = {};
       
-          flOptions.iconStyle = "box";
+        flOptions.iconStyle = "box";
       
-          flOptions.boxForm = "vertical";
+        flOptions.boxForm = "vertical";
       
-          flOptions.position = "middleRight";
+        flOptions.position = "middleRight";
       
-          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       
       new needShareButton('#needsharebutton-float', flOptions);
     
   </script>
 
-  
 
   
 
@@ -3059,9 +3101,84 @@ I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I
   
 
   
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+      
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      
+        right: 4px;
+        top: 8px;
+      
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1;
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; // Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); // For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
 
 </body>
 </html>
-<!-- 页面点击小红心 -->
+<!-- ҳ����С���� -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-
