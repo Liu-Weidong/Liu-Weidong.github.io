@@ -146,18 +146,18 @@
 
 
 
-  <meta name="description" content="Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。  类表示类图分3层。第一层表示类的名称，如果是抽象类，则用斜线表示；第二层是类的特性，通常表示字段或属性；第三层是类的操作，通常是方法或行为。注：第二层与第三层前面存在符号，“+”">
+  <meta name="description" content="Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。  类表示类图分3层：  第一层表示类的名称，如果是抽象类，则用斜线表示； 第二层是类的特性，通常表示字段或属性； 第三层是类的操作，通常是方法或行为。  注：第二层与第三层前面存在">
 <meta name="keywords" content="UML类图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UML类图">
 <meta property="og:url" content="http://liuweidong.club/【综合】UML类图/index.html">
 <meta property="og:site_name" content="漫漫求索">
-<meta property="og:description" content="Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。  类表示类图分3层。第一层表示类的名称，如果是抽象类，则用斜线表示；第二层是类的特性，通常表示字段或属性；第三层是类的操作，通常是方法或行为。注：第二层与第三层前面存在符号，“+”">
+<meta property="og:description" content="Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。  类表示类图分3层：  第一层表示类的名称，如果是抽象类，则用斜线表示； 第二层是类的特性，通常表示字段或属性； 第三层是类的操作，通常是方法或行为。  注：第二层与第三层前面存在">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-26T14:12:20.481Z">
+<meta property="og:updated_time" content="2019-03-31T14:11:25.037Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UML类图">
-<meta name="twitter:description" content="Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。  类表示类图分3层。第一层表示类的名称，如果是抽象类，则用斜线表示；第二层是类的特性，通常表示字段或属性；第三层是类的操作，通常是方法或行为。注：第二层与第三层前面存在符号，“+”">
+<meta name="twitter:description" content="Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。  类表示类图分3层：  第一层表示类的名称，如果是抽象类，则用斜线表示； 第二层是类的特性，通常表示字段或属性； 第三层是类的操作，通常是方法或行为。  注：第二层与第三层前面存在">
 
 
 
@@ -536,13 +536,19 @@
         <blockquote>
 <p>Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。</p>
 </blockquote>
-<h1 id="类表示"><a href="#类表示" class="headerlink" title="类表示"></a>类表示</h1><p>类图分3层。第一层表示类的名称，如果是抽象类，则用斜线表示；第二层是类的特性，通常表示字段或属性；第三层是类的操作，通常是方法或行为。注：第二层与第三层前面存在符号，“+”代表public，“-”代表private，“#”代表protected。</p>
+<h1 id="类表示"><a href="#类表示" class="headerlink" title="类表示"></a>类表示</h1><p><strong>类图分3层：</strong></p>
+<ol>
+<li>第一层表示类的名称，如果是抽象类，则用斜线表示；</li>
+<li>第二层是类的特性，通常表示字段或属性；</li>
+<li>第三层是类的操作，通常是方法或行为。</li>
+</ol>
+<p><strong>注：</strong>第二层与第三层前面存在符号，<strong>“+”代表public，“-”代表private，“#”代表protected</strong>。</p>
 <h1 id="类关系表示"><a href="#类关系表示" class="headerlink" title="类关系表示"></a>类关系表示</h1><ul>
 <li><strong>关联（Association）</strong>：一种拥有的关系，它使一个类知道另一个类的属性和方法。UML中，关联关系采用带<font color="#ff0000">普通箭头的实心线表示</font>，指向被拥有者。双向的关联可以有两个箭头或者没有箭头，单向关联有一个箭头。</li>
 <li><strong>聚合（Aggregation）</strong>：整体与部分的关系。成员对象是整体对象的一部分，但是成员对象可以脱离整体对象独立存在。UML中，聚合关系采用带<font color="#ff0000">空心菱形的实心线表示</font>，菱形指向整体，箭头指向部分。如：轮胎是汽车的组成部分，但是轮胎可以独立存在，因此，汽车和轮胎是聚合关系。</li>
 <li><strong>组合（Composition）</strong>：整体与部分的关系，但部分不能离开整体而单独存在。UML中，组合关系用带<font color="#ff0000">实心菱形的实心线表示</font>，菱形指向整体，箭头指向部分。如：头与嘴巴就是组合关系。</li>
 <li><strong>依赖（Dependency）</strong>：使用关系。与管线关系不同的是，它是一种临时性的关系，通常在运行期间产生，并且随着运行时的变化，依赖关系也可能发生变化。依赖也有方向，双向依赖是一种非常糟糕的结构，应该杜绝产生。UML中，依赖关系用<font color="#ff0000">带箭头的虚线表示</font>，箭头指向被使用者，由依赖的一方指向被依赖的一方。</li>
-<li><strong>泛化（Generalization）</strong>：也就是继承关系。UML中，泛化关系用带<font color="#ff0000">空心三角形的直线</font>来表示，三角形指向父类。</li>
+<li><strong>泛化（Generalization）</strong>：也就是<code>继承关系</code>。UML中，泛化关系用带<font color="#ff0000">空心三角形的直线</font>来表示，三角形指向父类。</li>
 <li><strong>实现（Realization）</strong>：类与接口的关系。UML中，实现关系用带<font color="#ff0000">空心三角形的虚线</font>来表示，三角形指向接口。</li>
 </ul>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>各种关系的强弱顺序：泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖</p>
@@ -726,7 +732,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">44</span>
+                    <span class="site-state-item-count">56</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -828,7 +834,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">24</span>
+                      
+                    
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

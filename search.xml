@@ -277,6 +277,127 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[设计模式-行为型-策略模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A1%8C%E4%B8%BA%E5%9E%8B-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-结构型-桥接模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%BB%93%E6%9E%84%E5%9E%8B-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-结构型-外观模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%BB%93%E6%9E%84%E5%9E%8B-%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-结构型-享元模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%BB%93%E6%9E%84%E5%9E%8B-%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-结构型-装饰模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%BB%93%E6%9E%84%E5%9E%8B-%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-结构型-适配器模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%BB%93%E6%9E%84%E5%9E%8B-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-结构型-组合模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%BB%93%E6%9E%84%E5%9E%8B-%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-结构型-代理模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%BB%93%E6%9E%84%E5%9E%8B-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[简介 为其他对象提供一种代理以控制对这个对象的访问。 UML类图]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-创建型-原型模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%88%9B%E5%BB%BA%E5%9E%8B-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-创建型-抽象工厂模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%88%9B%E5%BB%BA%E5%9E%8B-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[简介 为创建一组相关或者是相互依赖的对象提供一个接口，而不需要指定它们的具体类。]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-创建型-工厂方法模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%88%9B%E5%BB%BA%E5%9E%8B-%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[简介 定义一个用于创建对象的接口，让子类决定实例化哪个类。 UML类图通用模式分为如下角色： 抽象工厂，其为工厂方法模式的核心； 具体工厂，实现具体的业务逻辑； 抽象产品； 具体产品，实现抽象产品的某个具体产品的对象。]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[设计模式-创建型-Builder模式]]></title>
     <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%88%9B%E5%BB%BA%E5%9E%8B-Builder%E6%A8%A1%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[简介 Builder模式为了将构建复杂对象的过程和它的部件解耦，使得构建过程和部件的表示隔离开来。]]></content>
@@ -333,9 +454,20 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Cookie-Session-Token-JWT]]></title>
+    <url>%2FCookie-Session-Token-JWT%2F</url>
+    <content type="text"><![CDATA[CookieCookie技术产生源于HTTP协议在互联网上的急速发展。随着互联网的深层次发展，带宽等限制不存在了，人们需要更复杂的互联网交互活动，就必须同服务器保持活动状态。于是，在浏览器发展初期，为了适应用户的需求，技术上推出了各种保持Web浏览状态的手段，其中就包括了Cookie技术。1993年，网景公司雇员Lou Montulli为了让用户在访问某网站时，进一步提高访问速度，同时也为了进一步实现个人化网络，发明了今天广泛使用的Cookie。Cookie在计算机中是个存储在浏览器目录中的文本文件，当浏览器运行时，存储在RAM中发挥作用（此种Cookies称作Session Cookies），一旦用户从该网站或服务器退出，Cookie可存储在用户本地的硬盘上（此种Cookies称作Persistent Cookies）。特点： Cookie时效性 同一个页面中设置Cookie，实际上是按从后往前的顺序进行的。 Cookie必须在HTML文件的内容输出之前设置 不同的浏览器对Cookie的处理不一致，使用时一定要考虑。 客户端，一个浏览器能创建的Cookie数量最多为300个，并且每个不能超过4KB，每个Web站点能设置的Cookie总数不能超过20个。 工作流程： Web Client - HTTP Request -&gt; Web Server Web Server - HTTP Response + Set-Cookie -&gt; Web Client Web Client - HTTP Request + Cookie -&gt; Web Server Web Server - HTTP Response -&gt; Web Client SessionSession是对于服务端来说的，客户端是没有Session一说的。Session是服务器和客户端建立连接时添加客户端连接标志，最终会在服务器软件（Apache、Tomcat、JBoss）转化为一个临时Cookie发送给客户端。Session就是在一次会话中解决2次HTTP的请求的关联，让两个页面都能读取到这个全局的session信息。 TokenToken是用户身份的验证方式，通常叫它：令牌。 JWTJWT（JSON Web Token）是目前最流行的跨域身份验证解决方案。]]></content>
+      <categories>
+        <category>综合</category>
+      </categories>
+      <tags>
+        <tag>Cookie</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[开发知识点]]></title>
     <url>%2F%E3%80%90%E7%BB%BC%E5%90%88%E3%80%91%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E7%82%B9%2F</url>
-    <content type="text"><![CDATA[http-httpsCookie-Session-Token-JWTCookieCookie是客户端技术，程序把每个用户的数据以cookie的形式写给用户各自的浏览器。 SessionSession是对于服务端来说的，客户端是没有Session一说的。Session是服务器和客户端建立连接时添加客户端连接标志，最终会在服务器软件（Apache、Tomcat、JBoss）转化为一个临时Cookie发送给客户端。 TokenToken是用户身份的验证方式，通常叫它：令牌。 JWTJWT（JSON Web Token）是目前最流行的跨域身份验证解决方案。 URI-URL-URNURI（Uniform Resource Identifier，统一资源标识符）URL（Uniform Resource Locator，统一资源定位符）URN（Uniform Resource Name，统一资源名称）scheme://host/path]]></content>
+    <content type="text"><![CDATA[http-httpsURI-URL-URNURI（Uniform Resource Identifier，统一资源标识符）URL（Uniform Resource Locator，统一资源定位符）URN（Uniform Resource Name，统一资源名称）scheme://host/path]]></content>
       <categories>
         <category>综合</category>
       </categories>
@@ -417,7 +549,7 @@
   <entry>
     <title><![CDATA[UML类图]]></title>
     <url>%2F%E3%80%90%E7%BB%BC%E5%90%88%E3%80%91UML%E7%B1%BB%E5%9B%BE%2F</url>
-    <content type="text"><![CDATA[Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。 类表示类图分3层。第一层表示类的名称，如果是抽象类，则用斜线表示；第二层是类的特性，通常表示字段或属性；第三层是类的操作，通常是方法或行为。注：第二层与第三层前面存在符号，“+”代表public，“-”代表private，“#”代表protected。 类关系表示 关联（Association）：一种拥有的关系，它使一个类知道另一个类的属性和方法。UML中，关联关系采用带普通箭头的实心线表示，指向被拥有者。双向的关联可以有两个箭头或者没有箭头，单向关联有一个箭头。 聚合（Aggregation）：整体与部分的关系。成员对象是整体对象的一部分，但是成员对象可以脱离整体对象独立存在。UML中，聚合关系采用带空心菱形的实心线表示，菱形指向整体，箭头指向部分。如：轮胎是汽车的组成部分，但是轮胎可以独立存在，因此，汽车和轮胎是聚合关系。 组合（Composition）：整体与部分的关系，但部分不能离开整体而单独存在。UML中，组合关系用带实心菱形的实心线表示，菱形指向整体，箭头指向部分。如：头与嘴巴就是组合关系。 依赖（Dependency）：使用关系。与管线关系不同的是，它是一种临时性的关系，通常在运行期间产生，并且随着运行时的变化，依赖关系也可能发生变化。依赖也有方向，双向依赖是一种非常糟糕的结构，应该杜绝产生。UML中，依赖关系用带箭头的虚线表示，箭头指向被使用者，由依赖的一方指向被依赖的一方。 泛化（Generalization）：也就是继承关系。UML中，泛化关系用带空心三角形的直线来表示，三角形指向父类。 实现（Realization）：类与接口的关系。UML中，实现关系用带空心三角形的虚线来表示，三角形指向接口。 说明各种关系的强弱顺序：泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖]]></content>
+    <content type="text"><![CDATA[Unified Model Language（UML），统一建模语言。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。 类表示类图分3层： 第一层表示类的名称，如果是抽象类，则用斜线表示； 第二层是类的特性，通常表示字段或属性； 第三层是类的操作，通常是方法或行为。 注：第二层与第三层前面存在符号，“+”代表public，“-”代表private，“#”代表protected。 类关系表示 关联（Association）：一种拥有的关系，它使一个类知道另一个类的属性和方法。UML中，关联关系采用带普通箭头的实心线表示，指向被拥有者。双向的关联可以有两个箭头或者没有箭头，单向关联有一个箭头。 聚合（Aggregation）：整体与部分的关系。成员对象是整体对象的一部分，但是成员对象可以脱离整体对象独立存在。UML中，聚合关系采用带空心菱形的实心线表示，菱形指向整体，箭头指向部分。如：轮胎是汽车的组成部分，但是轮胎可以独立存在，因此，汽车和轮胎是聚合关系。 组合（Composition）：整体与部分的关系，但部分不能离开整体而单独存在。UML中，组合关系用带实心菱形的实心线表示，菱形指向整体，箭头指向部分。如：头与嘴巴就是组合关系。 依赖（Dependency）：使用关系。与管线关系不同的是，它是一种临时性的关系，通常在运行期间产生，并且随着运行时的变化，依赖关系也可能发生变化。依赖也有方向，双向依赖是一种非常糟糕的结构，应该杜绝产生。UML中，依赖关系用带箭头的虚线表示，箭头指向被使用者，由依赖的一方指向被依赖的一方。 泛化（Generalization）：也就是继承关系。UML中，泛化关系用带空心三角形的直线来表示，三角形指向父类。 实现（Realization）：类与接口的关系。UML中，实现关系用带空心三角形的虚线来表示，三角形指向接口。 说明各种关系的强弱顺序：泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖]]></content>
       <categories>
         <category>综合</category>
       </categories>
