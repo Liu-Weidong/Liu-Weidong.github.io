@@ -146,18 +146,18 @@
 
 
 
-  <meta name="description" content="路漫漫其修远兮，吾将上下而求索。">
+  <meta name="description" content="java虚拟机内存运行时数据区域Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。 程序计数器程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。 java虚拟机栈虚拟机栈描述的是java方法执行的内存模型。 本地方法栈java堆对于大多数应用来说，java堆是java虚拟机所管理的内存中最大的一块。java堆是被所有线程共享的一块内">
 <meta name="keywords" content="java,JVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【阅读】深入理解Java虚拟机">
 <meta property="og:url" content="http://liuweidong.club/【阅读】深入理解Java虚拟机/index.html">
-<meta property="og:site_name" content="漫漫求索">
-<meta property="og:description" content="路漫漫其修远兮，吾将上下而求索。">
+<meta property="og:site_name" content="zero">
+<meta property="og:description" content="java虚拟机内存运行时数据区域Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。 程序计数器程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。 java虚拟机栈虚拟机栈描述的是java方法执行的内存模型。 本地方法栈java堆对于大多数应用来说，java堆是java虚拟机所管理的内存中最大的一块。java堆是被所有线程共享的一块内">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-25T15:25:23.272Z">
+<meta property="og:updated_time" content="2019-04-01T15:45:06.336Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【阅读】深入理解Java虚拟机">
-<meta name="twitter:description" content="路漫漫其修远兮，吾将上下而求索。">
+<meta name="twitter:description" content="java虚拟机内存运行时数据区域Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。 程序计数器程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。 java虚拟机栈虚拟机栈描述的是java方法执行的内存模型。 本地方法栈java堆对于大多数应用来说，java堆是java虚拟机所管理的内存中最大的一块。java堆是被所有线程共享的一块内">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>【阅读】深入理解Java虚拟机 | 漫漫求索</title>
+  <title>【阅读】深入理解Java虚拟机 | zero</title>
   
 
 
@@ -233,13 +233,13 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">漫漫求索</span>
+        <span class="site-title">zero</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
     
       
-        <p class="site-subtitle">闲来无事，消遣自己</p>
+        <p class="site-subtitle">路漫漫其修远兮，吾将上下而求索。</p>
       
     
     
@@ -421,12 +421,12 @@
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuweidong">
-      <meta itemprop="description" content="路漫漫其修远兮，吾将上下而求索。">
+      <meta itemprop="description" content="闲来，消遣">
       <meta itemprop="image" content="/images/lufei.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="漫漫求索">
+      <meta itemprop="name" content="zero">
     </span>
 
     
@@ -533,7 +533,26 @@
       
 
       
-        
+        <h1 id="java虚拟机内存"><a href="#java虚拟机内存" class="headerlink" title="java虚拟机内存"></a>java虚拟机内存</h1><h2 id="运行时数据区域"><a href="#运行时数据区域" class="headerlink" title="运行时数据区域"></a>运行时数据区域</h2><p>Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。</p>
+<h3 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h3><p>程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。</p>
+<h3 id="java虚拟机栈"><a href="#java虚拟机栈" class="headerlink" title="java虚拟机栈"></a>java虚拟机栈</h3><p>虚拟机栈描述的是java方法执行的内存模型。</p>
+<h3 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h3><h3 id="java堆"><a href="#java堆" class="headerlink" title="java堆"></a>java堆</h3><p>对于大多数应用来说，java堆是java虚拟机所管理的内存中最大的一块。java堆是被所有线程共享的一块内存区域，在虚拟机启动时创建。此内存区域的唯一目的就是存放对象实例，几乎所有的对象实例都在这里分配内存。java虚拟机规范中的描述：<strong>所有的对象实例以及数组都要在堆上分配</strong>。</p>
+<h3 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h3><p>方法区与java堆一样，是各个线程共享的内存区域，用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。</p>
+<h1 id="垃圾收集器与内存分配策略"><a href="#垃圾收集器与内存分配策略" class="headerlink" title="垃圾收集器与内存分配策略"></a>垃圾收集器与内存分配策略</h1><p>思考GC需要完成的3件事情：</p>
+<ul>
+<li>哪些内存需要回收</li>
+<li>什么时候回收</li>
+<li>如何回收</li>
+</ul>
+<h2 id="垃圾收集算法"><a href="#垃圾收集算法" class="headerlink" title="垃圾收集算法"></a>垃圾收集算法</h2><h3 id="标记-清除算法"><a href="#标记-清除算法" class="headerlink" title="标记-清除算法"></a>标记-清除算法</h3><p><strong>缺点：</strong></p>
+<ol>
+<li>效率问题，标记和清除两个过程的效率都不高；</li>
+<li>空间问题，标记清除之后会产生大量不连续的内存碎片，空间碎片太多可能会导致以后在程序运行过程中需要分配较大对象时，无法找到足够的连续内存而不得不提前触发另一次垃圾收集动作。</li>
+</ol>
+<h3 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h3><p>将可用内存按容量划分为大小相等的两块，每次只使用其中的一块。当这一块的内存用完了，就将还存活着的对象复制到另外一块上面，然后再把已使用过的内存空间一次清理掉。</p>
+<h3 id="标记-整理算法"><a href="#标记-整理算法" class="headerlink" title="标记-整理算法"></a>标记-整理算法</h3><p>复制收集算法在对象存活率较高时就要进行较多的复制操作，效率将会变低。</p>
+<h3 id="分代收集算法"><a href="#分代收集算法" class="headerlink" title="分代收集算法"></a>分代收集算法</h3><h1 id="java内存模型"><a href="#java内存模型" class="headerlink" title="java内存模型"></a>java内存模型</h1><p>java内存模型（Java Memory Model，JMM）的主要目标是定义程序中各个变量的访问规则，即在虚拟机中将变量存储到内存和从内存中取出变量这样的底层细节。</p>
+
       
     </div>
 
@@ -688,15 +707,24 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/images/lufei.jpeg" alt="liuweidong">
             
               <p class="site-author-name" itemprop="name">liuweidong</p>
-              <p class="site-description motion-element" itemprop="description">路漫漫其修远兮，吾将上下而求索。</p>
+              <p class="site-description motion-element" itemprop="description">闲来，消遣</p>
           </div>
 
           
@@ -706,7 +734,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">66</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -871,6 +899,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java虚拟机内存"><span class="nav-number">1.</span> <span class="nav-text">java虚拟机内存</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#运行时数据区域"><span class="nav-number">1.1.</span> <span class="nav-text">运行时数据区域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#程序计数器"><span class="nav-number">1.1.1.</span> <span class="nav-text">程序计数器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java虚拟机栈"><span class="nav-number">1.1.2.</span> <span class="nav-text">java虚拟机栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地方法栈"><span class="nav-number">1.1.3.</span> <span class="nav-text">本地方法栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java堆"><span class="nav-number">1.1.4.</span> <span class="nav-text">java堆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法区"><span class="nav-number">1.1.5.</span> <span class="nav-text">方法区</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#垃圾收集器与内存分配策略"><span class="nav-number">2.</span> <span class="nav-text">垃圾收集器与内存分配策略</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾收集算法"><span class="nav-number">2.1.</span> <span class="nav-text">垃圾收集算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标记-清除算法"><span class="nav-number">2.1.1.</span> <span class="nav-text">标记-清除算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制算法"><span class="nav-number">2.1.2.</span> <span class="nav-text">复制算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记-整理算法"><span class="nav-number">2.1.3.</span> <span class="nav-text">标记-整理算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分代收集算法"><span class="nav-number">2.1.4.</span> <span class="nav-text">分代收集算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java内存模型"><span class="nav-number">3.</span> <span class="nav-text">java内存模型</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

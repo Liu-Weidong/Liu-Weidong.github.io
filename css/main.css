@@ -2204,7 +2204,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #39e261;
+  background: #ff9377;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3509,7 +3509,7 @@ ul.breadcrumb li+li:last-child {
   }
 }
 body {
-  background: url("https://source.unsplash.com/1600x900/daily?nature,water");
+  background: url("https://source.unsplash.com/1600x900/daily?nature");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;

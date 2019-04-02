@@ -277,6 +277,116 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[设计模式-行为型-中介者模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A1%8C%E4%B8%BA%E5%9E%8B-%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-行为型-访问者模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A1%8C%E4%B8%BA%E5%9E%8B-%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-行为型-模板方法模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A1%8C%E4%B8%BA%E5%9E%8B-%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-行为型-迭代器模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A1%8C%E4%B8%BA%E5%9E%8B-%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-行为型-备忘录模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A1%8C%E4%B8%BA%E5%9E%8B-%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-行为型-观察者模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A1%8C%E4%B8%BA%E5%9E%8B-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-行为型-命令模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A1%8C%E4%B8%BA%E5%9E%8B-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-行为型-解释器模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A1%8C%E4%B8%BA%E5%9E%8B-%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-行为型-责任链模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A1%8C%E4%B8%BA%E5%9E%8B-%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式-行为型-状态模式]]></title>
+    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A1%8C%E4%B8%BA%E5%9E%8B-%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[设计模式-行为型-策略模式]]></title>
     <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A1%8C%E4%B8%BA%E5%9E%8B-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%2F</url>
     <content type="text"></content>
@@ -444,7 +554,7 @@
   <entry>
     <title><![CDATA[【阅读】深入理解Java虚拟机]]></title>
     <url>%2F%E3%80%90%E9%98%85%E8%AF%BB%E3%80%91%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[java虚拟机内存运行时数据区域Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。 程序计数器程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。 java虚拟机栈虚拟机栈描述的是java方法执行的内存模型。 本地方法栈java堆对于大多数应用来说，java堆是java虚拟机所管理的内存中最大的一块。java堆是被所有线程共享的一块内存区域，在虚拟机启动时创建。此内存区域的唯一目的就是存放对象实例，几乎所有的对象实例都在这里分配内存。java虚拟机规范中的描述：所有的对象实例以及数组都要在堆上分配。 方法区方法区与java堆一样，是各个线程共享的内存区域，用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。 垃圾收集器与内存分配策略思考GC需要完成的3件事情： 哪些内存需要回收 什么时候回收 如何回收 垃圾收集算法标记-清除算法缺点： 效率问题，标记和清除两个过程的效率都不高； 空间问题，标记清除之后会产生大量不连续的内存碎片，空间碎片太多可能会导致以后在程序运行过程中需要分配较大对象时，无法找到足够的连续内存而不得不提前触发另一次垃圾收集动作。 复制算法将可用内存按容量划分为大小相等的两块，每次只使用其中的一块。当这一块的内存用完了，就将还存活着的对象复制到另外一块上面，然后再把已使用过的内存空间一次清理掉。 标记-整理算法复制收集算法在对象存活率较高时就要进行较多的复制操作，效率将会变低。 分代收集算法java内存模型java内存模型（Java Memory Model，JMM）的主要目标是定义程序中各个变量的访问规则，即在虚拟机中将变量存储到内存和从内存中取出变量这样的底层细节。]]></content>
       <categories>
         <category>阅读</category>
       </categories>
