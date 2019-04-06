@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[数据库]]></title>
-    <url>%2F%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
-    <content type="text"><![CDATA[SQL（Structured Query Language，结构化查询语言） 关系型数据库关系型数据库管理系统（Relational Database Management System，RDBMS） OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分布式数据库为核心的一组软件产品，是目前最流行的客户/服务器(CLIENT/SERVER)或B/S体系结构的数据库之一。 MySQL安装MySQL 简介MySQL的体系结构：采用客户/服务器体系结构。因此，在使用MySQL的时候，实际上在使用两个程序。一个是服务器程序，指的是mysqld，运行在存放你数据库的机器上。另一个是客户程序，负责连接到数据库服务器。该体系结构的好处：并发控制由服务器提供，因而不会出现两个用户同时修改同一条记录的现象。 命令【mysqld -install】安装MySQL【mysqld –initialize-insecure –user=mysql】初始化：执行命令后会在MySQL的安装目录下生成data目录并创建root用户。【net start mysql】启动服务【net stop mysql】停止服务【mysql -u root -p】登录mysql【mysql -hxx -uxx -pxx】进入mysql数据库。-h表示服务器名，-u数据库用户名，-p为密码【show databases;】显示数据库列表【mysqladmin -u用户名 -p旧密码 password 新密码】修改密码【exit】退出mysql数据库 SQLyogSQLyog是一个快速而简洁的图形化管理MySQL数据库的工具，它能够在任何地点有效地管理你的数据库，由业界著名的Webyog公司出品。 FAQ SQLyog连接数据库报错plugin caching_sha2_password could not be loaded12345678910# 登录MySQLmysql -uroot -p # 修改加密规则ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;password&apos; PASSWORD EXPIRE NEVER; # 更新一下用户的密码 ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;password&apos;; # 刷新权限FLUSH PRIVILEGES; # 重置密码alter user &apos;root&apos;@&apos;localhost&apos; identified by &apos;***123456&apos;; NavicatNavicat是一套快速、可靠并价格相当便宜的数据库管理工具，专为简化数据库的管理及降低系统管理成本而设。 MariaDBMariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。 SQL ServerSQL Server是Microsoft公司推出的关系型数据库管理系统。 AccessMicrosoft Office Access是微软把数据库引擎的图形用户界面和软件开发工具结合在一起的一个数据库管理系统。它是微软office的一个成员, 在包括专业版和更高版本的office版本里面被单独出售。 DB2IBM公司开发的一套关系型数据库管理系统，它主要的运行环境为UNIX（包括IBM自家的AIX）、Linux、IBM i（旧称OS/400）、z/OS，以及Windows服务器版本。 非关系型数据库NoSQLNoSQL（Not Only SQL）]]></content>
+    <title><![CDATA[android-API-Constraint Layout Library]]></title>
+    <url>%2Fandroid-API-ConstraintLayoutLibrary%2F</url>
+    <content type="text"><![CDATA[简介 Android Studio版本至少2.3； 添加依赖，如下：1implementation 'com.android.support.constraint:constraint-layout:1.1.3' ConstraintLayout1package android.support.constraint; ConstraintLayout]]></content>
       <categories>
-        <category>数据库</category>
+        <category>android</category>
+        <category>API</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
+        <tag>android</tag>
       </tags>
   </entry>
   <entry>
@@ -31,6 +32,18 @@
       <categories>
         <category>软件架构</category>
       </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[android-API-Android Support Library]]></title>
+    <url>%2Fandroid-API-AndroidSupportLibrary%2F</url>
+    <content type="text"><![CDATA[概述 Provides a variety of Android feature and utility APIs that are compatible with a wide &gt; range of platform versions.如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库，每一个support library向上兼容于不同的API版本。 https://developer.android.google.cn/reference/android/support/packages Android Support V4最早（2011年4月）实现的库。 support-v41implementation 'com.android.support:support-v4:25.0.0' Fragment1package android.support.v4.app; FragmentActivity1package android.support.v4.app; ViewPager1package android.support.v4.view; Android Support V7appcompat-v7AppCompatActivity1package android.support.v7.app; cardview-v7gridlayout-v7recyclerview-v7Android 5.0推出。相比ListView优点：1)封装了ViewHolder的回收复用，编写Adapter面向的是ViewHolder而不再是View了，复用的逻辑被封装了，写起来更加简单。2)插拔式的体验，高度的解耦。3)设置布局管理器控制Item的布局方式，横向、竖向、瀑布流方式。4)设置Item间隔样式。继承ItemDecoration。5)控制Item增删的动画，通过ItemAnimator进行绘制。 Design Support Library简介Google IO 2015 Material Design支持库。1implementation 'com.android.support:design:25.0.0' AppBarLayoutCollapsingToolbarLayoutCoordinatorLayoutFloatingActionButtonNavigationViewSnackbarTabLayoutTextInputLayout]]></content>
+      <categories>
+        <category>android</category>
+        <category>API</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[android-框架-图片加载]]></title>
@@ -223,6 +236,17 @@
       </categories>
   </entry>
   <entry>
+    <title><![CDATA[数据库]]></title>
+    <url>%2F%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
+    <content type="text"><![CDATA[SQL（Structured Query Language，结构化查询语言） 关系型数据库关系型数据库管理系统（Relational Database Management System，RDBMS） OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分布式数据库为核心的一组软件产品，是目前最流行的客户/服务器(CLIENT/SERVER)或B/S体系结构的数据库之一。 MySQL安装MySQL 简介MySQL的体系结构：采用客户/服务器体系结构。因此，在使用MySQL的时候，实际上在使用两个程序。一个是服务器程序，指的是mysqld，运行在存放你数据库的机器上。另一个是客户程序，负责连接到数据库服务器。该体系结构的好处：并发控制由服务器提供，因而不会出现两个用户同时修改同一条记录的现象。 命令【mysqld -install】安装MySQL【mysqld –initialize-insecure –user=mysql】初始化：执行命令后会在MySQL的安装目录下生成data目录并创建root用户。【net start mysql】启动服务【net stop mysql】停止服务【mysql -u root -p】登录mysql【mysql -hxx -uxx -pxx】进入mysql数据库。-h表示服务器名，-u数据库用户名，-p为密码【show databases;】显示数据库列表【mysqladmin -u用户名 -p旧密码 password 新密码】修改密码【exit】退出mysql数据库 SQLyogSQLyog是一个快速而简洁的图形化管理MySQL数据库的工具，它能够在任何地点有效地管理你的数据库，由业界著名的Webyog公司出品。 FAQ SQLyog连接数据库报错plugin caching_sha2_password could not be loaded12345678910# 登录MySQLmysql -uroot -p # 修改加密规则ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;password&apos; PASSWORD EXPIRE NEVER; # 更新一下用户的密码 ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;password&apos;; # 刷新权限FLUSH PRIVILEGES; # 重置密码alter user &apos;root&apos;@&apos;localhost&apos; identified by &apos;***123456&apos;; NavicatNavicat是一套快速、可靠并价格相当便宜的数据库管理工具，专为简化数据库的管理及降低系统管理成本而设。 MariaDBMariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。 SQL ServerSQL Server是Microsoft公司推出的关系型数据库管理系统。 AccessMicrosoft Office Access是微软把数据库引擎的图形用户界面和软件开发工具结合在一起的一个数据库管理系统。它是微软office的一个成员, 在包括专业版和更高版本的office版本里面被单独出售。 DB2IBM公司开发的一套关系型数据库管理系统，它主要的运行环境为UNIX（包括IBM自家的AIX）、Linux、IBM i（旧称OS/400）、z/OS，以及Windows服务器版本。 非关系型数据库NoSQLNoSQL（Not Only SQL）]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[android-框架-Log]]></title>
     <url>%2Fandroid-%E6%A1%86%E6%9E%B6-Log%2F</url>
     <content type="text"><![CDATA[Logger引言Logger项目工作原理源码解析]]></content>
@@ -400,7 +424,7 @@
   <entry>
     <title><![CDATA[设计模式-结构型-桥接模式]]></title>
     <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%BB%93%E6%9E%84%E5%9E%8B-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[桥接模式（Bridge Pattern），是结构型设计模式之一。 定义 将抽象部分与实现部分分离，使它们都可以独立地进行变化。 使用场景如果一个系统需要在构件的抽象化角色和具体化角色之间增加更多的灵活性，避免在两个层次之间建立静态的继承联系，可以通过桥接模式使它们在抽象层建立一个关联关系。一个类存在两个独立变化的维度，且这两个维度都需要进行扩展。 UML类图简单实现Android源码中的实现]]></content>
       <categories>
         <category>设计模式</category>
       </categories>
@@ -642,6 +666,17 @@
       </categories>
       <tags>
         <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Google I/O]]></title>
+    <url>%2FGoogle-IO%2F</url>
+    <content type="text"><![CDATA[2018 Google I/OAndroid P(9.0)Android Jetpack新一代组件、工具和架构指导，旨在加快开发者的Android应用开发速度。 KotlinAndroid Studio 3.2Android Studio 3.2（金丝雀版）引入了Android Jetpack支持工具，包括一款视觉导航编辑器以及全新代码重构工具。金丝雀版本同时还包含了可用于创建全新的Android App Bundle格式的构建工具、用于快速启动 Android模拟器的快照功能 (Snapshot)、给下载及安装包瘦身的新 R8 优化器、以及用于测量应用对电池续航影响的新电量分析工具 (Energy Profiler) 等。 Android App Bundle与Google Play Dynamic Delivery全新发布格式：Android App Bundle，大幅度减少应用体积。只需要在Android Studio中构建一个应用束（app bundle），可以将应用所需的全部内容都涵盖在内：所有语言、所有设备屏幕大小、所有硬件架构。用户下载应用时，Google Play的新动态交付只会传输适用于用户设备的代码和资源。Android App Bundle支持模块化，因此开发者可以随时按需交付功能，而不是仅限在安装过程中。 参考https://www.oschina.net/news/95914/2018-google-io-highlights]]></content>
+      <categories>
+        <category>综合</category>
+      </categories>
+      <tags>
+        <tag>Google</tag>
       </tags>
   </entry>
   <entry>
