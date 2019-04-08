@@ -46,36 +46,24 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-API-Android Support Library]]></title>
-    <url>%2Fandroid-API-AndroidSupportLibrary%2F</url>
-    <content type="text"><![CDATA[概述 Provides a variety of Android feature and utility APIs that are compatible with a wide &gt; range of platform versions.如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库，每一个support library向上兼容于不同的API版本。 官方参考地址：Support Library OverviewFeaturesPackagesSetupRecent Support Library RevisionsSupport Library Revision ArchiveAPI reference：Android Support Library Android Support V4最早（2011年4月）实现的库。 support-v4添加依赖：1implementation 'com.android.support:support-v4:25.0.0' DrawerLayoutFragment1package android.support.v4.app; FragmentActivity1package android.support.v4.app; NestedScrollViewViewPager1package android.support.v4.view; Android Support V7appcompat-v7AppCompatActivity1package android.support.v7.app; 继承结构：java.lang.Object ↳ android.content.Context ↳ android.content.ContextWrapper ↳ android.view.ContextThemeWrapper ↳ android.app.Activity ↳ android.support.v4.app.FragmentActivity ↳ android.support.v7.app.AppCompatActivityAppCompatActivitytheme： cardview-v7gridlayout-v7recyclerview-v7Android 5.0推出。相比ListView优点：1)封装了ViewHolder的回收复用，编写Adapter面向的是ViewHolder而不再是View了，复用的逻辑被封装了，写起来更加简单。2)插拔式的体验，高度的解耦。3)设置布局管理器控制Item的布局方式，横向、竖向、瀑布流方式。4)设置Item间隔样式。继承ItemDecoration。5)控制Item增删的动画，通过ItemAnimator进行绘制。 Design Support Library简介Google IO 2015 Material Design支持库。添加依赖：1implementation 'com.android.support:design:25.0.0' AppBarLayout继承LinearLayout，默认方向是Vertical CollapsingToolbarLayoutCoordinatorLayoutCoordinatorLayout遵循Material风格，结合AppBarLayout，CollapsingToolbarLayout等可产生各种炫酷的折叠悬浮效果。 FloatingActionButtonNavigationViewSnackbar页面底部弹出式消息。 TabLayoutTextInputLayout]]></content>
-      <categories>
-        <category>android</category>
-        <category>API</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[android-框架-图片加载]]></title>
-    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%2F</url>
-    <content type="text"><![CDATA[Fresco引言2015年3月Facebook开源的图片框架。https://www.fresco-cn.org/docs/index.html Fresco项目https://github.com/facebook/fresco 工作原理源码解析优缺点优点：缺点： 框架大，影响APK大小 使用繁琐 Glide引言2014年Google员工提出。 Glide项目https://github.com/bumptech/glide 工作原理源码解析优缺点Picasso引言2013年2月Square开源的项目。 Picasso项目https://github.com/square/picasso 工作原理源码解析优缺点universal-image-loader引言2011年9月nostra13开发。 universal-image-loader项目https://github.com/nostra13/Android-Universal-Image-Loader 工作原理源码解析优缺点]]></content>
-      <categories>
-        <category>android</category>
-        <category>框架</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[android-框架-网络请求]]></title>
     <url>%2Fandroid-%E6%A1%86%E6%9E%B6-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%2F</url>
     <content type="text"><![CDATA[引言网络请求框架本质上是将网络请求方法封装好的类库，实现异步请求和处理数据，从而实现整个网络请求模块的功能。 Retrofit简介项目工作原理源码解析OkHttp简介 An HTTP+HTTP/2 client for Android and Java applications. The OkHttp 3.12.x branch supports Android 2.3+ (API level 9+) and Java 7+. These platforms lack support for TLS 1.2 and should not be used. But because upgrading is difficult we will backport critical fixes to the 3.12.x branch through December 31, 2020. 项目项目地址：https://github.com/square/okhttp 工作原理源码解析Volley简介Volley是2013年Google I/O上发布的一款Android平台上的网络通信库。适合数据量大，需要频繁通信的网络操作。不适用文件的上传下载操作。 Android-Async-HttpAndroid源生网络请求Apache HttpClient已经不推荐使用，6.0上被删除。Google推荐在Android上使用HttpURLConnection HttpURLConnection问题 没有针对异步调用进行封装 没有线程池，网络缓存，不能重复利用请求，性能不佳 没有json解析框架]]></content>
       <categories>
         <category>android</category>
         <category>框架</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[android-API-Android Support Library]]></title>
+    <url>%2Fandroid-API-AndroidSupportLibrary%2F</url>
+    <content type="text"><![CDATA[概述 Provides a variety of Android feature and utility APIs that are compatible with a wide &gt; range of platform versions.如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库，每一个support library向上兼容于不同的API版本。 官方参考地址：Support Library OverviewFeaturesPackagesSetupRecent Support Library RevisionsSupport Library Revision ArchiveAPI reference：Android Support Library Android Support V4最早（2011年4月）实现的库。 support-v4添加依赖：1implementation 'com.android.support:support-v4:25.0.0' DrawerLayoutFragment1package android.support.v4.app; FragmentActivity1package android.support.v4.app; NestedScrollViewViewPager1package android.support.v4.view; Android Support V7appcompat-v7AppCompatActivity1package android.support.v7.app; 继承结构：java.lang.Object ↳ android.content.Context ↳ android.content.ContextWrapper ↳ android.view.ContextThemeWrapper ↳ android.app.Activity ↳ android.support.v4.app.FragmentActivity ↳ android.support.v7.app.AppCompatActivityAppCompatActivitytheme： cardview-v7gridlayout-v7recyclerview-v7Android 5.0推出。相比ListView优点：1)封装了ViewHolder的回收复用，编写Adapter面向的是ViewHolder而不再是View了，复用的逻辑被封装了，写起来更加简单。2)插拔式的体验，高度的解耦。3)设置布局管理器控制Item的布局方式，横向、竖向、瀑布流方式。4)设置Item间隔样式。继承ItemDecoration。5)控制Item增删的动画，通过ItemAnimator进行绘制。 Design Support Library简介Google IO 2015 Material Design支持库。添加依赖：1implementation 'com.android.support:design:25.0.0' AppBarLayout继承LinearLayout，默认方向是Vertical CollapsingToolbarLayoutCoordinatorLayoutCoordinatorLayout遵循Material风格，结合AppBarLayout，CollapsingToolbarLayout等可产生各种炫酷的折叠悬浮效果。 FloatingActionButtonNavigationViewSnackbar页面底部弹出式消息。 TabLayoutTextInputLayout]]></content>
+      <categories>
+        <category>android</category>
+        <category>API</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -95,15 +83,16 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-安全]]></title>
-    <url>%2Fandroid-%E5%AE%89%E5%85%A8%2F</url>
-    <content type="text"><![CDATA[混淆反编译加固梆梆加固、爱加密、娜迦、360加固保、腾讯加固、百度加固 常见APP漏洞及风险 静态破解：ApkTool、dex2jar、jd-gui、DDMS、签名工具 二次打包 本地储存数据窃取 界面截取 输入法攻击 协议抓取]]></content>
+    <title><![CDATA[android-框架-RxJava]]></title>
+    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-RxJava%2F</url>
+    <content type="text"><![CDATA[概述 RxJava: Reactive Extensions for the JVM RxJava is a Java VM implementation of Reactive Extensions: a library for composing asynchronous and event-based programs by using observable sequences. It extends the observer pattern to support sequences of data/events and adds operators that allow you to compose sequences together declaratively while abstracting away concerns about things like low-level threading, synchronization, thread-safety and concurrent data structures. GitHub地址：https://github.com/ReactiveX/RxJavamaven central：https://search.maven.org/artifact/io.reactivex.rxjava2/rxjava/2.2.8/jar Version 2.xJavadoc：http://reactivex.io/RxJava/2.x/javadoc/ single dependency: Reactive-Streams continued support for Java 6+ &amp; Android 2.3+ performance gains through design changes learned through the 1.x cycle and through Reactive-Streams-Commons research project. Java 8 lambda-friendly API non-opinionated about source of concurrency (threads, pools, event loops, fibers, actors, etc) async or synchronous execution virtual time and schedulers for parameterized concurrency Version 2.x and 1.x will live side-by-side for several years. They will have different group ids (io.reactivex.rxjava2 vs io.reactivex) and namespaces (io.reactivex vs rx).See the differences between version 1.x and 2.x in the wiki article What’s different in 2.0. Learn more about RxJava in general on the Wiki Home. Gradle compile dependency:1implementation 'io.reactivex.rxjava2:rxjava:2.x.y' Version 1.xThe 1.x version is end-of-life as of March 31, 2018. No further development, support, maintenance, PRs and updates will happen. The Javadoc of the very last version, 1.3.8, will remain accessible. 工作原理RxJava 2.2.02018年7月31日发布 RxJava 2.1.02017年4月29日发布 RxJava 2.0.02016年10月29日发布，v2.0.0What’s different in 2.0 背压策略RxJava 1.3.8(1.x EOL)2018年3月31日发布RxJava 1.x is now officially end-of-life (EOL). RxJava 1.2.22016年11月3日发布 RxJava 1.0.02014年11月18日发布，v1.0.0VersioningVersion 1.x is now a stable API and will be supported for several years.1io.reactivex:rxjava:1.0.0]]></content>
       <categories>
         <category>android</category>
-        <category>basic</category>
+        <category>框架</category>
       </categories>
       <tags>
         <tag>android</tag>
+        <tag>RxJava</tag>
       </tags>
   </entry>
   <entry>
@@ -113,18 +102,6 @@
       <categories>
         <category>android</category>
         <category>basic</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[android-框架-View-图表]]></title>
-    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-View-%E5%9B%BE%E8%A1%A8%2F</url>
-    <content type="text"><![CDATA[MPAndroidChartHelloChartsWilliamChart]]></content>
-      <categories>
-        <category>android</category>
-        <category>框架</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -145,6 +122,30 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[android-框架-图片加载]]></title>
+    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%2F</url>
+    <content type="text"><![CDATA[Fresco引言2015年3月Facebook开源的图片框架。https://www.fresco-cn.org/docs/index.html Fresco项目https://github.com/facebook/fresco 工作原理源码解析优缺点优点：缺点： 框架大，影响APK大小 使用繁琐 Glide引言2014年Google员工提出。 Glide项目https://github.com/bumptech/glide 工作原理源码解析优缺点Picasso引言2013年2月Square开源的项目。 Picasso项目https://github.com/square/picasso 工作原理源码解析优缺点universal-image-loader引言2011年9月nostra13开发。 universal-image-loader项目https://github.com/nostra13/Android-Universal-Image-Loader 工作原理源码解析优缺点]]></content>
+      <categories>
+        <category>android</category>
+        <category>框架</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[android-安全]]></title>
+    <url>%2Fandroid-%E5%AE%89%E5%85%A8%2F</url>
+    <content type="text"><![CDATA[混淆反编译加固梆梆加固、爱加密、娜迦、360加固保、腾讯加固、百度加固 常见APP漏洞及风险 静态破解：ApkTool、dex2jar、jd-gui、DDMS、签名工具 二次打包 本地储存数据窃取 界面截取 输入法攻击 协议抓取]]></content>
+      <categories>
+        <category>android</category>
+        <category>basic</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[android-框架-事件总线]]></title>
     <url>%2Fandroid-%E6%A1%86%E6%9E%B6-%E4%BA%8B%E4%BB%B6%E6%80%BB%E7%BA%BF%2F</url>
     <content type="text"><![CDATA[RxJava目前大多数开发者使用EventBus或Otto作为事件总线通信库，对于RxJava使用者来说，RxJava也可以轻松实现事件总线。 EventBusOtto]]></content>
@@ -158,16 +159,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-框架-RxJava]]></title>
-    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-RxJava%2F</url>
-    <content type="text"><![CDATA[简介项目项目地址：https://github.com/ReactiveX/RxJava版本2.x Javadoc 工作原理源码解析]]></content>
+    <title><![CDATA[android-框架-View-图表]]></title>
+    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-View-%E5%9B%BE%E8%A1%A8%2F</url>
+    <content type="text"><![CDATA[MPAndroidChartHelloChartsWilliamChart]]></content>
       <categories>
         <category>android</category>
         <category>框架</category>
       </categories>
       <tags>
         <tag>android</tag>
-        <tag>RxJava</tag>
       </tags>
   </entry>
   <entry>

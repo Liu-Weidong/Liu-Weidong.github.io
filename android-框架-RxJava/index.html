@@ -146,18 +146,18 @@
 
 
 
-  <meta name="description" content="简介项目项目地址：https://github.com/ReactiveX/RxJava版本2.x Javadoc 工作原理源码解析">
+  <meta name="description" content="概述 RxJava: Reactive Extensions for the JVM  RxJava is a Java VM implementation of Reactive Extensions: a library for composing asynchronous and event-based programs by using observable sequences. It e">
 <meta name="keywords" content="android,RxJava">
 <meta property="og:type" content="article">
 <meta property="og:title" content="android-框架-RxJava">
 <meta property="og:url" content="http://liuweidong.club/android-框架-RxJava/index.html">
 <meta property="og:site_name" content="zero">
-<meta property="og:description" content="简介项目项目地址：https://github.com/ReactiveX/RxJava版本2.x Javadoc 工作原理源码解析">
+<meta property="og:description" content="概述 RxJava: Reactive Extensions for the JVM  RxJava is a Java VM implementation of Reactive Extensions: a library for composing asynchronous and event-based programs by using observable sequences. It e">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-23T15:35:34.715Z">
+<meta property="og:updated_time" content="2019-04-08T03:57:11.581Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android-框架-RxJava">
-<meta name="twitter:description" content="简介项目项目地址：https://github.com/ReactiveX/RxJava版本2.x Javadoc 工作原理源码解析">
+<meta name="twitter:description" content="概述 RxJava: Reactive Extensions for the JVM  RxJava is a Java VM implementation of Reactive Extensions: a library for composing asynchronous and event-based programs by using observable sequences. It e">
 
 
 
@@ -460,7 +460,7 @@
                 
               
 
-              <time title="创建时间：2019-01-10 20:18:12" itemprop="dateCreated datePublished" datetime="2019-01-10T20:18:12+08:00">2019-01-10</time>
+              <time title="创建时间：2019-02-10 18:18:12" itemprop="dateCreated datePublished" datetime="2019-02-10T18:18:12+08:00">2019-02-10</time>
             
 
             
@@ -540,8 +540,32 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h1 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h1><p><strong>项目地址：</strong><br><a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="noopener">https://github.com/ReactiveX/RxJava</a><br>版本2.x <a href="http://reactivex.io/RxJava/2.x/javadoc/" target="_blank" rel="noopener">Javadoc</a></p>
-<h1 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h1><h1 id="源码解析"><a href="#源码解析" class="headerlink" title="源码解析"></a>源码解析</h1>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><blockquote>
+<p>RxJava: Reactive Extensions for the JVM</p>
+</blockquote>
+<p>RxJava is a Java VM implementation of <a href="http://reactivex.io/" target="_blank" rel="noopener">Reactive Extensions</a>: a library for composing asynchronous and event-based programs by using observable sequences.</p>
+<p>It extends the <a href="https://en.wikipedia.org/wiki/Observer_pattern" target="_blank" rel="noopener">observer pattern</a> to support sequences of data/events and adds operators that allow you to compose sequences together declaratively while abstracting away concerns about things like low-level threading, synchronization, thread-safety and concurrent data structures.</p>
+<p><strong>GitHub地址：</strong><br><a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="noopener">https://github.com/ReactiveX/RxJava</a><br><strong>maven central：</strong><br><a href="https://search.maven.org/artifact/io.reactivex.rxjava2/rxjava/2.2.8/jar" target="_blank" rel="noopener">https://search.maven.org/artifact/io.reactivex.rxjava2/rxjava/2.2.8/jar</a></p>
+<h2 id="Version-2-x"><a href="#Version-2-x" class="headerlink" title="Version 2.x"></a>Version 2.x</h2><p><strong>Javadoc：</strong><a href="http://reactivex.io/RxJava/2.x/javadoc/" target="_blank" rel="noopener">http://reactivex.io/RxJava/2.x/javadoc/</a></p>
+<ul>
+<li>single dependency: <a href="https://github.com/reactive-streams/reactive-streams-jvm" target="_blank" rel="noopener">Reactive-Streams</a></li>
+<li>continued support for Java 6+ &amp; Android 2.3+</li>
+<li>performance gains through design changes learned through the 1.x cycle and through <a href="https://github.com/reactor/reactive-streams-commons" target="_blank" rel="noopener">Reactive-Streams-Commons</a> research project.</li>
+<li>Java 8 lambda-friendly API</li>
+<li>non-opinionated about source of concurrency (threads, pools, event loops, fibers, actors, etc)</li>
+<li>async or synchronous execution</li>
+<li>virtual time and schedulers for parameterized concurrency</li>
+</ul>
+<p>Version 2.x and 1.x will live side-by-side for several years. They will have different group ids (<code>io.reactivex.rxjava2</code> vs <code>io.reactivex</code>) and namespaces (<code>io.reactivex</code> vs <code>rx</code>).<br>See the differences between version 1.x and 2.x in the wiki article <a href="https://github.com/ReactiveX/RxJava/wiki/What&#39;s-different-in-2.0" target="_blank" rel="noopener">What’s different in 2.0</a>. Learn more about RxJava in general on the <a href="https://github.com/ReactiveX/RxJava/wiki" target="_blank" rel="noopener">Wiki Home</a>.</p>
+<p><strong>Gradle compile dependency:</strong><br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">'io.reactivex.rxjava2:rxjava:2.x.y'</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Version-1-x"><a href="#Version-1-x" class="headerlink" title="Version 1.x"></a>Version 1.x</h2><p>The 1.x version is end-of-life as of March 31, 2018. No further development, support, maintenance, PRs and updates will happen. The Javadoc of the very last version, 1.3.8, will remain accessible.</p>
+<h1 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h1><h1 id="RxJava-2-2-0"><a href="#RxJava-2-2-0" class="headerlink" title="RxJava 2.2.0"></a>RxJava 2.2.0</h1><p>2018年7月31日发布</p>
+<h1 id="RxJava-2-1-0"><a href="#RxJava-2-1-0" class="headerlink" title="RxJava 2.1.0"></a>RxJava 2.1.0</h1><p>2017年4月29日发布</p>
+<h1 id="RxJava-2-0-0"><a href="#RxJava-2-0-0" class="headerlink" title="RxJava 2.0.0"></a>RxJava 2.0.0</h1><p>2016年10月29日发布，<a href="https://github.com/ReactiveX/RxJava/releases/tag/v2.0.0" target="_blank" rel="noopener">v2.0.0</a><br><a href="https://github.com/ReactiveX/RxJava/wiki/What&#39;s-different-in-2.0" target="_blank" rel="noopener">What’s different in 2.0</a></p>
+<h2 id="背压策略"><a href="#背压策略" class="headerlink" title="背压策略"></a>背压策略</h2><h1 id="RxJava-1-3-8-1-x-EOL"><a href="#RxJava-1-3-8-1-x-EOL" class="headerlink" title="RxJava 1.3.8(1.x EOL)"></a>RxJava 1.3.8(1.x EOL)</h1><p>2018年3月31日发布<br>RxJava 1.x is now officially end-of-life (EOL).</p>
+<h1 id="RxJava-1-2-2"><a href="#RxJava-1-2-2" class="headerlink" title="RxJava 1.2.2"></a>RxJava 1.2.2</h1><p>2016年11月3日发布</p>
+<h1 id="RxJava-1-0-0"><a href="#RxJava-1-0-0" class="headerlink" title="RxJava 1.0.0"></a>RxJava 1.0.0</h1><p>2014年11月18日发布，<a href="https://github.com/ReactiveX/RxJava/releases/tag/v1.0.0" target="_blank" rel="noopener">v1.0.0</a><br><strong>Versioning</strong><br>Version 1.x is now a stable API and will be supported for several years.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">io.reactivex:rxjava:1.0.0</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -636,8 +660,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/android-View-滑动/" rel="next" title="android-View-滑动">
-                <i class="fa fa-chevron-left"></i> android-View-滑动
+              <a href="/android-性能优化/" rel="next" title="android-性能优化">
+                <i class="fa fa-chevron-left"></i> android-性能优化
               </a>
             
           </div>
@@ -646,8 +670,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/android-框架-事件总线/" rel="prev" title="android-框架-事件总线">
-                android-框架-事件总线 <i class="fa fa-chevron-right"></i>
+              <a href="/android-框架-ARouter/" rel="prev" title="android-框架-ARouter">
+                android-框架-ARouter <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -903,7 +927,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目"><span class="nav-number">2.</span> <span class="nav-text">项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工作原理"><span class="nav-number">3.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#源码解析"><span class="nav-number">4.</span> <span class="nav-text">源码解析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Version-2-x"><span class="nav-number">1.1.</span> <span class="nav-text">Version 2.x</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Version-1-x"><span class="nav-number">1.2.</span> <span class="nav-text">Version 1.x</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工作原理"><span class="nav-number">2.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RxJava-2-2-0"><span class="nav-number">3.</span> <span class="nav-text">RxJava 2.2.0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RxJava-2-1-0"><span class="nav-number">4.</span> <span class="nav-text">RxJava 2.1.0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RxJava-2-0-0"><span class="nav-number">5.</span> <span class="nav-text">RxJava 2.0.0</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#背压策略"><span class="nav-number">5.1.</span> <span class="nav-text">背压策略</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RxJava-1-3-8-1-x-EOL"><span class="nav-number">6.</span> <span class="nav-text">RxJava 1.3.8(1.x EOL)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RxJava-1-2-2"><span class="nav-number">7.</span> <span class="nav-text">RxJava 1.2.2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RxJava-1-0-0"><span class="nav-number">8.</span> <span class="nav-text">RxJava 1.0.0</span></a></li></ol></div>
             
 
           </div>
