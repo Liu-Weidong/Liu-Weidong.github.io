@@ -154,7 +154,7 @@
 <meta property="og:site_name" content="zero">
 <meta property="og:description" content="线程的风险 安全性（永远不发生糟糕的事情）问题：由于多个线程要共享相同的内存地址空间，并且是并发运行，因此它们可能会访问或修改其他线程正在使用的变量。 活跃性（某件正确的事情最终会发生）问题：当某个操作无法继续执行下去时，就会发生活跃性问题。（死循环、死锁、饥饿等） 性能问题：CPU时间将更多地花在线程调度而不是线程运行上。  线程安全性正确性 原子性：原子操作是不可分割的，在执行完毕之前不会被任">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-27T10:26:18.853Z">
+<meta property="og:updated_time" content="2019-05-11T08:10:47.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【阅读】Java并发编程实战">
 <meta name="twitter:description" content="线程的风险 安全性（永远不发生糟糕的事情）问题：由于多个线程要共享相同的内存地址空间，并且是并发运行，因此它们可能会访问或修改其他线程正在使用的变量。 活跃性（某件正确的事情最终会发生）问题：当某个操作无法继续执行下去时，就会发生活跃性问题。（死循环、死锁、饥饿等） 性能问题：CPU时间将更多地花在线程调度而不是线程运行上。  线程安全性正确性 原子性：原子操作是不可分割的，在执行完毕之前不会被任">
@@ -570,9 +570,9 @@
 <ul>
 <li>对变量的写入操作不依赖变量的当前值，或者你能确保只有单个线程更新变量的值。</li>
 <li>该变量不会与其他状态变量一起纳入不变性条件中。</li>
-<li>在访问变量时不需要加锁。<h2 id="发布与逸出"><a href="#发布与逸出" class="headerlink" title="发布与逸出"></a>发布与逸出</h2><h2 id="线程封闭"><a href="#线程封闭" class="headerlink" title="线程封闭"></a>线程封闭</h2><h2 id="不变性"><a href="#不变性" class="headerlink" title="不变性"></a>不变性</h2><h2 id="安全发布"><a href="#安全发布" class="headerlink" title="安全发布"></a>安全发布</h2></li>
+<li>在访问变量时不需要加锁。</li>
 </ul>
-<h1 id="Executor框架"><a href="#Executor框架" class="headerlink" title="Executor框架"></a>Executor框架</h1><h1 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h1>
+<h2 id="发布与逸出"><a href="#发布与逸出" class="headerlink" title="发布与逸出"></a>发布与逸出</h2><h2 id="线程封闭"><a href="#线程封闭" class="headerlink" title="线程封闭"></a>线程封闭</h2><h2 id="不变性"><a href="#不变性" class="headerlink" title="不变性"></a>不变性</h2><h2 id="安全发布"><a href="#安全发布" class="headerlink" title="安全发布"></a>安全发布</h2><h1 id="Executor框架"><a href="#Executor框架" class="headerlink" title="Executor框架"></a>Executor框架</h1><h1 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h1>
       
     </div>
 
@@ -675,6 +675,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/JavaScript-知识框架/" rel="prev" title="JavaScript-知识框架">
+                JavaScript-知识框架 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -748,7 +752,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">72</span>
+                    <span class="site-state-item-count">74</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -791,7 +795,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -856,7 +862,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">26</span>
+                      
+                    
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
