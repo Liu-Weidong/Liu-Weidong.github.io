@@ -154,7 +154,7 @@
 <meta property="og:site_name" content="zero">
 <meta property="og:description" content="线程的风险 安全性（永远不发生糟糕的事情）问题：由于多个线程要共享相同的内存地址空间，并且是并发运行，因此它们可能会访问或修改其他线程正在使用的变量。 活跃性（某件正确的事情最终会发生）问题：当某个操作无法继续执行下去时，就会发生活跃性问题。（死循环、死锁、饥饿等） 性能问题：CPU时间将更多地花在线程调度而不是线程运行上。  线程安全性正确性 原子性：原子操作是不可分割的，在执行完毕之前不会被任">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-11T08:10:47.370Z">
+<meta property="og:updated_time" content="2019-05-22T15:09:13.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【阅读】Java并发编程实战">
 <meta name="twitter:description" content="线程的风险 安全性（永远不发生糟糕的事情）问题：由于多个线程要共享相同的内存地址空间，并且是并发运行，因此它们可能会访问或修改其他线程正在使用的变量。 活跃性（某件正确的事情最终会发生）问题：当某个操作无法继续执行下去时，就会发生活跃性问题。（死循环、死锁、饥饿等） 性能问题：CPU时间将更多地花在线程调度而不是线程运行上。  线程安全性正确性 原子性：原子操作是不可分割的，在执行完毕之前不会被任">
@@ -572,7 +572,14 @@
 <li>该变量不会与其他状态变量一起纳入不变性条件中。</li>
 <li>在访问变量时不需要加锁。</li>
 </ul>
-<h2 id="发布与逸出"><a href="#发布与逸出" class="headerlink" title="发布与逸出"></a>发布与逸出</h2><h2 id="线程封闭"><a href="#线程封闭" class="headerlink" title="线程封闭"></a>线程封闭</h2><h2 id="不变性"><a href="#不变性" class="headerlink" title="不变性"></a>不变性</h2><h2 id="安全发布"><a href="#安全发布" class="headerlink" title="安全发布"></a>安全发布</h2><h1 id="Executor框架"><a href="#Executor框架" class="headerlink" title="Executor框架"></a>Executor框架</h1><h1 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h1>
+<h2 id="发布与逸出"><a href="#发布与逸出" class="headerlink" title="发布与逸出"></a>发布与逸出</h2><h2 id="线程封闭"><a href="#线程封闭" class="headerlink" title="线程封闭"></a>线程封闭</h2><h2 id="不变性"><a href="#不变性" class="headerlink" title="不变性"></a>不变性</h2><h2 id="安全发布"><a href="#安全发布" class="headerlink" title="安全发布"></a>安全发布</h2><h1 id="任务执行"><a href="#任务执行" class="headerlink" title="任务执行"></a>任务执行</h1><p>大多数并发应用程序都是围绕“任务执行”来构造的：任务通常是一些抽象的且离散的工作单元。</p>
+<ol>
+<li>串行地执行任务</li>
+<li>显式地为任务创建线程（提升响应性和更高的吞吐率）</li>
+<li>无限制创建线程的不足（线程生命周期的开销非常高；资源消耗，【内存】；稳定性，在可创建线程的数量上存在一个限制。）</li>
+</ol>
+<h1 id="Executor框架"><a href="#Executor框架" class="headerlink" title="Executor框架"></a>Executor框架</h1><p><strong>java.util.concurrent</strong><br>Executor基于生产者-消费者模式，提交任务的操作相当于生产者，执行任务的线程则相当于消费者。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Executors</span></span></span><br><span class="line"><span class="class"><span class="title">ExecutorService</span> <span class="title">newFixedThreadPool</span>(<span class="title">int</span> <span class="title">nThreads</span>)</span></span><br><span class="line"><span class="class"><span class="title">ExecutorService</span> <span class="title">newCachedThreadPool</span>(<span class="title">ThreadFactory</span> <span class="title">threadFactory</span>)</span></span><br><span class="line"><span class="class"><span class="title">ExecutorService</span> <span class="title">newSingleThreadExecutor</span>()</span></span><br><span class="line"><span class="class">/*创建了一个固定长度的线程池，而且以延迟或定时的方式来执行任务，类似于<span class="title">Timer</span> */</span></span><br><span class="line"><span class="class"><span class="title">ScheduledExecutorService</span> <span class="title">newScheduledThreadPool</span>(<span class="title">int</span> <span class="title">corePoolSize</span>)</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="线程池的使用"><a href="#线程池的使用" class="headerlink" title="线程池的使用"></a>线程池的使用</h1><h1 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h1>
       
     </div>
 
@@ -797,6 +804,8 @@
                     
                       
                     
+                      
+                    
                     <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
@@ -940,7 +949,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线程的风险"><span class="nav-number">1.</span> <span class="nav-text">线程的风险</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程安全性"><span class="nav-number">2.</span> <span class="nav-text">线程安全性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象的共享"><span class="nav-number">3.</span> <span class="nav-text">对象的共享</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#可见性"><span class="nav-number">3.1.</span> <span class="nav-text">可见性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非原子的64位操作"><span class="nav-number">3.1.1.</span> <span class="nav-text">非原子的64位操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Volatile变量"><span class="nav-number">3.1.2.</span> <span class="nav-text">Volatile变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布与逸出"><span class="nav-number">3.2.</span> <span class="nav-text">发布与逸出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程封闭"><span class="nav-number">3.3.</span> <span class="nav-text">线程封闭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不变性"><span class="nav-number">3.4.</span> <span class="nav-text">不变性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全发布"><span class="nav-number">3.5.</span> <span class="nav-text">安全发布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Executor框架"><span class="nav-number">4.</span> <span class="nav-text">Executor框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java内存模型"><span class="nav-number">5.</span> <span class="nav-text">Java内存模型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线程的风险"><span class="nav-number">1.</span> <span class="nav-text">线程的风险</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程安全性"><span class="nav-number">2.</span> <span class="nav-text">线程安全性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象的共享"><span class="nav-number">3.</span> <span class="nav-text">对象的共享</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#可见性"><span class="nav-number">3.1.</span> <span class="nav-text">可见性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非原子的64位操作"><span class="nav-number">3.1.1.</span> <span class="nav-text">非原子的64位操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Volatile变量"><span class="nav-number">3.1.2.</span> <span class="nav-text">Volatile变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布与逸出"><span class="nav-number">3.2.</span> <span class="nav-text">发布与逸出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程封闭"><span class="nav-number">3.3.</span> <span class="nav-text">线程封闭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不变性"><span class="nav-number">3.4.</span> <span class="nav-text">不变性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全发布"><span class="nav-number">3.5.</span> <span class="nav-text">安全发布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#任务执行"><span class="nav-number">4.</span> <span class="nav-text">任务执行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Executor框架"><span class="nav-number">5.</span> <span class="nav-text">Executor框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程池的使用"><span class="nav-number">6.</span> <span class="nav-text">线程池的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java内存模型"><span class="nav-number">7.</span> <span class="nav-text">Java内存模型</span></a></li></ol></div>
             
 
           </div>
