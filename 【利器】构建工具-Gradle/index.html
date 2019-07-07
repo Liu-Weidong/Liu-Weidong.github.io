@@ -146,18 +146,18 @@
 
 
 
-  <meta name="description" content="GradleGradleAndroid Gradle plugin2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。  Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。">
+  <meta name="description" content="概览GradleAndroid Gradle plugin2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。  Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。 Grad">
 <meta name="keywords" content="Gradle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="构建工具-Gradle">
 <meta property="og:url" content="http://liuweidong.club/【利器】构建工具-Gradle/index.html">
 <meta property="og:site_name" content="zero">
-<meta property="og:description" content="GradleGradleAndroid Gradle plugin2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。  Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。">
+<meta property="og:description" content="概览GradleAndroid Gradle plugin2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。  Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。 Grad">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-23T05:49:02.020Z">
+<meta property="og:updated_time" content="2019-07-07T06:42:50.119Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="构建工具-Gradle">
-<meta name="twitter:description" content="GradleGradleAndroid Gradle plugin2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。  Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。">
+<meta name="twitter:description" content="概览GradleAndroid Gradle plugin2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。  Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。 Grad">
 
 
 
@@ -550,10 +550,71 @@
       
 
       
-        <h1 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h1><p><a href="https://gradle.org/" target="_blank" rel="noopener">Gradle</a><br><a href="https://developer.android.google.cn/studio/releases/gradle-plugin.html#updating-plugin" target="_blank" rel="noopener">Android Gradle plugin</a><br>2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于<code>Groovy</code>的领域专用语言（<code>DSL</code>）。</p>
+        <h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><p><a href="https://gradle.org/" target="_blank" rel="noopener">Gradle</a><br><a href="https://developer.android.google.cn/studio/releases/gradle-plugin.html#updating-plugin" target="_blank" rel="noopener">Android Gradle plugin</a><br>2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于<code>Groovy</code>的领域专用语言（<code>DSL</code>）。</p>
 <ul>
 <li>Gradle构建Android项目时，需要创建一个<strong>构建脚本</strong>，通常称为<code>build.gradle</code>。</li>
 <li>Gradle有约定优于配置的原则，即为设置和属性提供默认值。</li>
+</ul>
+<p>The following table lists which version of Gradle is required for each version of the Android Gradle plugin. For the best performance, you should use the latest possible version of both Gradle and the plugin.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Plugin version</th>
+<th style="text-align:left">Required Gradle version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1.0.0 - 1.1.3</td>
+<td style="text-align:left">2.2.1 - 2.3</td>
+</tr>
+<tr>
+<td style="text-align:left">1.2.0 - 1.3.1</td>
+<td style="text-align:left">2.2.1 - 2.9</td>
+</tr>
+<tr>
+<td style="text-align:left">1.5.0</td>
+<td style="text-align:left">2.2.1 - 2.13</td>
+</tr>
+<tr>
+<td style="text-align:left">2.0.0 - 2.1.2</td>
+<td style="text-align:left">2.10 - 2.13</td>
+</tr>
+<tr>
+<td style="text-align:left">2.1.3 - 2.2.3</td>
+<td style="text-align:left">2.14.1+</td>
+</tr>
+<tr>
+<td style="text-align:left">2.3.0+</td>
+<td style="text-align:left">3.3+</td>
+</tr>
+<tr>
+<td style="text-align:left">3.0.0+</td>
+<td style="text-align:left">4.1+</td>
+</tr>
+<tr>
+<td style="text-align:left">3.1.0+</td>
+<td style="text-align:left">4.4+</td>
+</tr>
+<tr>
+<td style="text-align:left">3.2.0 - 3.2.1</td>
+<td style="text-align:left">4.6+</td>
+</tr>
+<tr>
+<td style="text-align:left">3.3.0 - 3.3.2</td>
+<td style="text-align:left">4.10.1+</td>
+</tr>
+<tr>
+<td style="text-align:left">3.4.0+</td>
+<td style="text-align:left">5.1.1+</td>
+</tr>
+</tbody>
+</table>
+<p>You can specify the Gradle version in either the <strong>File &gt; Project Structure &gt; Project</strong> menu in Android Studio, or by editing the Gradle distribution reference in the <strong>gradle/wrapper/gradle-wrapper.properties</strong> file.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">distributionUrl = https\://services.gradle.org/distributions/gradle-5.1.1-all.zip</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<h1 id="Android-Gradle-plugin"><a href="#Android-Gradle-plugin" class="headerlink" title="Android Gradle plugin"></a>Android Gradle plugin</h1><h2 id="3-4-0-April-2019"><a href="#3-4-0-April-2019" class="headerlink" title="3.4.0 (April 2019)"></a>3.4.0 (April 2019)</h2><p>This version of the Android plugin requires the following:</p>
+<ul>
+<li><a href="https://docs.gradle.org/5.1.1/release-notes.html" target="_blank" rel="noopener">Gradle 5.1.1</a> or higher.</li>
+<li><a href="https://developer.android.google.cn/studio/releases/build-tools.html#notes" target="_blank" rel="noopener">SDK Build Tools 28.0.3</a> or higher.</li>
 </ul>
 <h1 id="Groovy"><a href="#Groovy" class="headerlink" title="Groovy"></a>Groovy</h1><p><a href="http://groovy-lang.org/" target="_blank" rel="noopener">Groovy</a><br>Groovy是一种适用于Java虚拟机的动态语言。</p>
 <h2 id="类和成员变量"><a href="#类和成员变量" class="headerlink" title="类和成员变量"></a>类和成员变量</h2><p>def：声名变量</p>
@@ -587,12 +648,8 @@
 <li>buildConfigField</li>
 <li>resValue</li>
 </ul>
-<h1 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h1><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">    maven&#123;</span><br><span class="line">        url <span class="string">"自己的服务器地址"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">    maven&#123;</span><br><span class="line">        url <span class="string">"../test"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>通过使用flatDirs添加一个常用文件夹作为仓库。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">    flatDir &#123;</span><br><span class="line">        dirs <span class="string">'libs'</span>, <span class="string">'../Framework/libs'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="本地依赖"><a href="#本地依赖" class="headerlink" title="本地依赖"></a>本地依赖</h2><p><a href="https://developer.android.google.cn/studio/build/dependencies.html" target="_blank" rel="noopener">https://developer.android.google.cn/studio/build/dependencies.html</a><br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    <span class="comment">// 依赖单个JAR文件</span></span><br><span class="line">    compile files(<span class="string">'libs/test.jar'</span>)</span><br><span class="line">    <span class="comment">// 依赖所有文件</span></span><br><span class="line">    compile fileTree(<span class="string">'libs'</span>)</span><br><span class="line">    <span class="comment">// 依赖指定文件格式，如JAR</span></span><br><span class="line">    compile fileTree(<span class="string">dir:</span> <span class="string">'libs'</span>, <span class="string">include:</span> [<span class="string">'*.jar'</span>])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h1><h2 id="本地依赖"><a href="#本地依赖" class="headerlink" title="本地依赖"></a>本地依赖</h2><p><a href="https://developer.android.google.cn/studio/build/dependencies.html" target="_blank" rel="noopener">https://developer.android.google.cn/studio/build/dependencies.html</a><br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    <span class="comment">// 依赖单个JAR文件</span></span><br><span class="line">    compile files(<span class="string">'libs/test.jar'</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 依赖所有文件</span></span><br><span class="line">    compile fileTree(<span class="string">'libs'</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 依赖指定文件格式，如JAR</span></span><br><span class="line">    compile fileTree(<span class="string">dir:</span> <span class="string">'libs'</span>, <span class="string">include:</span> [<span class="string">'*.jar'</span>])</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 远程依赖</span></span><br><span class="line">    implementation <span class="string">'com.example.android:app-magic:12.3'</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 本地库模块依赖项</span></span><br><span class="line">    implementation project(<span class="string">':mylibrary'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>原生依赖库.so文件：</strong>在模块的main目录下新建jniLibs文件夹，然后为每个平台（armeabi、mips、x86）创建子文件夹。如果此约定不生效，可以在构建文件中设置相关设置：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    sourceSets.main &#123;</span><br><span class="line">        jniLibs.srcDir <span class="string">'src/main/libs'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>依赖项目：</strong><br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    compile project(<span class="string">':Test'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>.aar文件：</strong></p>
 <ul>
 <li>添加依赖仓库文件夹</li>
@@ -606,6 +663,10 @@
 <li>当修复一些bug时，patch版本增加。</li>
 </ul>
 <p>基于以上规则，可以添加动态化版本。+</p>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p>如果您的依赖项并非本地库或文件树，Gradle会在您的build.gradle文件<strong>repositories</strong>程序块中指定的任何一个在线代码库中寻找文件。列出各代码库的顺序决定了Gradle在这些代码库中搜索各项目依赖项的顺序。<br>默认情况下，Android Studio新项目会在项目的顶级build.gradle文件中指定Google的Maven代码库和 JCenter作为代码库位置，如下所示：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        google()</span><br><span class="line">        jcenter()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果您需要的内容来自Maven中央代码库，则添加<strong>mavenCentral()</strong>如果来自本地代码库，则使用 <strong>mavenLocal()</strong><br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        google()</span><br><span class="line">        jcenter()</span><br><span class="line">        mavenCentral()</span><br><span class="line">        mavenLocal()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>或者，也可像下面这样声明特定Maven或Ivy代码库：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url <span class="string">"https://repo.example.com/maven2"</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        maven &#123;</span><br><span class="line">            url <span class="string">"file://local/repo/"</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        ivy &#123;</span><br><span class="line">            url <span class="string">"https://repo.example.com/ivy"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h2><p>通过使用flatDirs添加一个常用文件夹作为仓库。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">    flatDir &#123;</span><br><span class="line">        dirs <span class="string">'libs'</span>, <span class="string">'../Framework/libs'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h1 id="构建variant"><a href="#构建variant" class="headerlink" title="构建variant"></a>构建variant</h1><p><a href="https://developer.android.google.cn/studio/build/build-variants.html" target="_blank" rel="noopener">https://developer.android.google.cn/studio/build/build-variants.html</a></p>
 <h2 id="构建类型"><a href="#构建类型" class="headerlink" title="构建类型"></a>构建类型</h2><p><a href="https://developer.android.google.cn/studio/build/build-variants.html#build-types" target="_blank" rel="noopener">https://developer.android.google.cn/studio/build/build-variants.html#build-types</a><br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        debug &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        release &#123;</span><br><span class="line">            minifyEnabled <span class="literal">false</span></span><br><span class="line">            proguardFiles getDefaultProguardFile(<span class="string">'proguard-android.txt'</span>), <span class="string">'proguard-rules.pro'</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 用已有的构建类型属性初始化新的构建类型</span></span><br><span class="line">        staging.initWith(buildTypes.debug)</span><br><span class="line">        staging &#123;</span><br><span class="line">            applicationIdSuffix <span class="string">".staging"</span></span><br><span class="line">            versionNameSuffix <span class="string">"-staging"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>可以根据构建类型来添加依赖。如debugCompile ‘com.android.support:***:1.0.0’</p>
@@ -837,8 +898,6 @@
                     
                       
                     
-                      
-                    
                     <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
@@ -982,7 +1041,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Gradle"><span class="nav-number">1.</span> <span class="nav-text">Gradle</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Groovy"><span class="nav-number">2.</span> <span class="nav-text">Groovy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#类和成员变量"><span class="nav-number">2.1.</span> <span class="nav-text">类和成员变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">2.2.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Closures"><span class="nav-number">2.3.</span> <span class="nav-text">Closures</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">2.4.</span> <span class="nav-text">集合</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目和任务"><span class="nav-number">3.</span> <span class="nav-text">项目和任务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gradle-Wrapper"><span class="nav-number">4.</span> <span class="nav-text">Gradle Wrapper</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gradle文件"><span class="nav-number">5.</span> <span class="nav-text">gradle文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BuildConfig"><span class="nav-number">6.</span> <span class="nav-text">BuildConfig</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#依赖管理"><span class="nav-number">7.</span> <span class="nav-text">依赖管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">7.1.</span> <span class="nav-text">远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地仓库"><span class="nav-number">7.2.</span> <span class="nav-text">本地仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地依赖"><span class="nav-number">7.3.</span> <span class="nav-text">本地依赖</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构建variant"><span class="nav-number">8.</span> <span class="nav-text">构建variant</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构建类型"><span class="nav-number">8.1.</span> <span class="nav-text">构建类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#product-flavor"><span class="nav-number">8.2.</span> <span class="nav-text">product flavor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#签名配置"><span class="nav-number">8.3.</span> <span class="nav-text">签名配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加速构建"><span class="nav-number">9.</span> <span class="nav-text">加速构建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Jack和Jill"><span class="nav-number">9.1.</span> <span class="nav-text">Jack和Jill</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android-Gradle-plugin"><span class="nav-number">2.</span> <span class="nav-text">Android Gradle plugin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-0-April-2019"><span class="nav-number">2.1.</span> <span class="nav-text">3.4.0 (April 2019)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Groovy"><span class="nav-number">3.</span> <span class="nav-text">Groovy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#类和成员变量"><span class="nav-number">3.1.</span> <span class="nav-text">类和成员变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">3.2.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Closures"><span class="nav-number">3.3.</span> <span class="nav-text">Closures</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">3.4.</span> <span class="nav-text">集合</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目和任务"><span class="nav-number">4.</span> <span class="nav-text">项目和任务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gradle-Wrapper"><span class="nav-number">5.</span> <span class="nav-text">Gradle Wrapper</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gradle文件"><span class="nav-number">6.</span> <span class="nav-text">gradle文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BuildConfig"><span class="nav-number">7.</span> <span class="nav-text">BuildConfig</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#依赖管理"><span class="nav-number">8.</span> <span class="nav-text">依赖管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地依赖"><span class="nav-number">8.1.</span> <span class="nav-text">本地依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">8.2.</span> <span class="nav-text">远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地仓库"><span class="nav-number">8.3.</span> <span class="nav-text">本地仓库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构建variant"><span class="nav-number">9.</span> <span class="nav-text">构建variant</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构建类型"><span class="nav-number">9.1.</span> <span class="nav-text">构建类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#product-flavor"><span class="nav-number">9.2.</span> <span class="nav-text">product flavor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#签名配置"><span class="nav-number">9.3.</span> <span class="nav-text">签名配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加速构建"><span class="nav-number">10.</span> <span class="nav-text">加速构建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Jack和Jill"><span class="nav-number">10.1.</span> <span class="nav-text">Jack和Jill</span></a></li></ol></li></ol></div>
             
 
           </div>
