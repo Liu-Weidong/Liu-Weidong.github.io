@@ -146,18 +146,18 @@
 
 
 
-  <meta name="description" content="一次编译，到处运行。  java程序运行机制计算机高级语言按程序执行方式分为编译型和解释型。  编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码一次性“翻译”成该平台硬件执行的机器码，并包装成该平台所能识别的可执行性程序的格式，这个转换过程称为编译。（C、C++、Objective-C、Pascal等） 解释型语言指使用专门的解释器对源程序逐行解释成特定平台的机器码并立即执行的语言">
+  <meta name="description" content="一次编译，到处运行。write once,run anywhere!  java程序运行机制计算机高级语言按程序执行方式分为编译型和解释型。  编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码一次性“翻译”成该平台硬件执行的机器码，并包装成该平台所能识别的可执行性程序的格式，这个转换过程称为编译。（C、C++、Objective-C、Pascal等） 解释型语言指使用专门的解释器对">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java-知识框架">
+<meta property="og:title" content="java-基础知识">
 <meta property="og:url" content="http://liuweidong.club/java-基础知识/index.html">
 <meta property="og:site_name" content="zero">
-<meta property="og:description" content="一次编译，到处运行。  java程序运行机制计算机高级语言按程序执行方式分为编译型和解释型。  编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码一次性“翻译”成该平台硬件执行的机器码，并包装成该平台所能识别的可执行性程序的格式，这个转换过程称为编译。（C、C++、Objective-C、Pascal等） 解释型语言指使用专门的解释器对源程序逐行解释成特定平台的机器码并立即执行的语言">
+<meta property="og:description" content="一次编译，到处运行。write once,run anywhere!  java程序运行机制计算机高级语言按程序执行方式分为编译型和解释型。  编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码一次性“翻译”成该平台硬件执行的机器码，并包装成该平台所能识别的可执行性程序的格式，这个转换过程称为编译。（C、C++、Objective-C、Pascal等） 解释型语言指使用专门的解释器对">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-07T14:51:12.268Z">
+<meta property="og:updated_time" content="2019-07-15T13:13:50.482Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java-知识框架">
-<meta name="twitter:description" content="一次编译，到处运行。  java程序运行机制计算机高级语言按程序执行方式分为编译型和解释型。  编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码一次性“翻译”成该平台硬件执行的机器码，并包装成该平台所能识别的可执行性程序的格式，这个转换过程称为编译。（C、C++、Objective-C、Pascal等） 解释型语言指使用专门的解释器对源程序逐行解释成特定平台的机器码并立即执行的语言">
+<meta name="twitter:title" content="java-基础知识">
+<meta name="twitter:description" content="一次编译，到处运行。write once,run anywhere!  java程序运行机制计算机高级语言按程序执行方式分为编译型和解释型。  编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码一次性“翻译”成该平台硬件执行的机器码，并包装成该平台所能识别的可执行性程序的格式，这个转换过程称为编译。（C、C++、Objective-C、Pascal等） 解释型语言指使用专门的解释器对">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>java-知识框架 | zero</title>
+  <title>java-基础知识 | zero</title>
   
 
 
@@ -451,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java-知识框架
+          <h1 class="post-title" itemprop="name headline">java-基础知识
 
               
             
@@ -558,14 +558,15 @@
 
       
         <blockquote>
-<p>一次编译，到处运行。</p>
+<p>一次编译，到处运行。write once,run anywhere!</p>
 </blockquote>
 <h1 id="java程序运行机制"><a href="#java程序运行机制" class="headerlink" title="java程序运行机制"></a>java程序运行机制</h1><p><strong>计算机高级语言按程序执行方式分为<font color="#ff0000">编译型</font>和<font color="#ff0000">解释型</font>。</strong></p>
 <ul>
 <li>编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码<strong>一次性</strong>“翻译”成该平台硬件执行的机器码，并包装成该平台所能识别的可执行性程序的格式，这个转换过程称为编译。（C、C++、Objective-C、Pascal等）</li>
 <li>解释型语言指使用专门的解释器对源程序逐行解释成特定平台的机器码并立即执行的语言。效率低，跨平台。（Ruby、Python等）</li>
 </ul>
-<p>java语言是一种特殊的高级语言，既有解释型语言的特征，也具有编译型语言的特征，因为Java程序要经过先编译，后解释两个步骤。<br><strong>注：</strong><br>java源文件 -<strong>javac编译</strong>-&gt; .class<strong>字节码</strong>文件（与平台无关，面向<strong>JVM</strong>） -<strong>java解释执行</strong>-&gt; 特定平台的机器码（先编译、后解释）</p>
+<p>java语言是一种特殊的高级语言，既有解释型语言的特征，也具有编译型语言的特征，因为Java程序要经过先编译，后解释两个步骤。</p>
+<p><font color="#ff0000"><strong>注：</strong></font><br>java源文件 -<strong>javac编译</strong>-&gt; .class<strong>字节码</strong>文件（与平台无关，面向<strong>JVM</strong>） -<strong>java解释执行</strong>-&gt; 特定平台的机器码（先编译、后解释）</p>
 <h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><p><a href="http://liuweidong.club/【阅读】深入理解Java虚拟机/">深入理解Java虚拟机</a><br>负责解释执行字节码文件的java虚拟机。JVM就是转换器，分为向上和向下两个部分。</p>
 <h1 id="java程序结构"><a href="#java程序结构" class="headerlink" title="java程序结构"></a>java程序结构</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>java是一种强类型语言。意味着必须为每一个变量声明一种类型。<br>基本数据类型8种：<br>java中整型的范围与运行java代码的机器无关。<br><strong>注意：</strong>Java没有任何无符号类型。<br>注释：JDk 5.0中，可以使用十六进制表示浮点数值。如，0.125表示为0x1.0p-3。十六进制表示法中，使用p表示指数，而不是e。注意，尾数采用十六进制，指数采用十进制。指数的基数是2，不是10。<br>所有的浮点数值计算都遵循IEEE 754规范。<br><strong>警告：</strong>浮点数值不适用于禁止出现舍入误差的金融计算中。如果需要在数值计算中不含有任何舍入误差，就应该使用BigDecimal类。</p>
 <h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><p>&amp;与&amp;&amp;区别：&amp;&amp;具有短路功能。<br>~：按位非<br>^：按位异或</p>
@@ -750,7 +751,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://liuweidong.club/java-基础知识/" title="java-知识框架">http://liuweidong.club/java-基础知识/</a>
+    <a href="http://liuweidong.club/java-基础知识/" title="java-基础知识">http://liuweidong.club/java-基础知识/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -863,7 +864,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">76</span>
+                    <span class="site-state-item-count">78</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -908,7 +909,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">16</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -979,7 +984,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">29</span>
+                      
+                    
+                    <span class="site-state-item-count">30</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
