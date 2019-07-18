@@ -146,24 +146,25 @@
 
 
 
-  <meta name="description" content="计算机系统漫游硬件组成 总线：贯穿整个系统的是一组电子管道，称作总线，携带信息字节并负责在各个部件间传递。 I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I/O设备都通过一个控制器或适配器与I/O总线相连。 主存：主存是一个临时存储设备，在处理器执行程序时，用来存放程序和程序处理的数据。从物理上来说，主存是由一组动态随机存取存储器（DRAM）芯片组成的。从逻辑上来说，存储器是一个线性的">
+  <meta name="description" content="概述 哪些内存需要回收？ 什么时候回收？ 如何回收？  内存泄漏：分配的内存得不到及时回收。Java程序的内存分配和回收都是由JRE在后台自动进行的。（垃圾回收GC）JRE会提供一个后台线程来进行检测和控制。JVM会把程序创建的对象存放在堆空间中。运行时的数据存储区有堆（Heap）和堆栈（Stack）。 标记-清除算法该算法分为“标记”和“清除”两个阶段：首先标记出所有需要回收的对象，在标记完成后">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【阅读】深入理解计算机系统">
-<meta property="og:url" content="http://liuweidong.club/【计算机系统】深入理解计算机系统/index.html">
+<meta property="og:title" content="java-垃圾回收机制">
+<meta property="og:url" content="http://liuweidong.club/java-垃圾回收机制/index.html">
 <meta property="og:site_name" content="zero">
-<meta property="og:description" content="计算机系统漫游硬件组成 总线：贯穿整个系统的是一组电子管道，称作总线，携带信息字节并负责在各个部件间传递。 I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I/O设备都通过一个控制器或适配器与I/O总线相连。 主存：主存是一个临时存储设备，在处理器执行程序时，用来存放程序和程序处理的数据。从物理上来说，主存是由一组动态随机存取存储器（DRAM）芯片组成的。从逻辑上来说，存储器是一个线性的">
+<meta property="og:description" content="概述 哪些内存需要回收？ 什么时候回收？ 如何回收？  内存泄漏：分配的内存得不到及时回收。Java程序的内存分配和回收都是由JRE在后台自动进行的。（垃圾回收GC）JRE会提供一个后台线程来进行检测和控制。JVM会把程序创建的对象存放在堆空间中。运行时的数据存储区有堆（Heap）和堆栈（Stack）。 标记-清除算法该算法分为“标记”和“清除”两个阶段：首先标记出所有需要回收的对象，在标记完成后">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-15T13:32:22.668Z">
+<meta property="og:updated_time" content="2019-07-18T14:36:52.288Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【阅读】深入理解计算机系统">
-<meta name="twitter:description" content="计算机系统漫游硬件组成 总线：贯穿整个系统的是一组电子管道，称作总线，携带信息字节并负责在各个部件间传递。 I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I/O设备都通过一个控制器或适配器与I/O总线相连。 主存：主存是一个临时存储设备，在处理器执行程序时，用来存放程序和程序处理的数据。从物理上来说，主存是由一组动态随机存取存储器（DRAM）芯片组成的。从逻辑上来说，存储器是一个线性的">
+<meta name="twitter:title" content="java-垃圾回收机制">
+<meta name="twitter:description" content="概述 哪些内存需要回收？ 什么时候回收？ 如何回收？  内存泄漏：分配的内存得不到及时回收。Java程序的内存分配和回收都是由JRE在后台自动进行的。（垃圾回收GC）JRE会提供一个后台线程来进行检测和控制。JVM会把程序创建的对象存放在堆空间中。运行时的数据存储区有堆（Heap）和堆栈（Stack）。 标记-清除算法该算法分为“标记”和“清除”两个阶段：首先标记出所有需要回收的对象，在标记完成后">
 
 
 
 
 
 
-  <link rel="canonical" href="http://liuweidong.club/【计算机系统】深入理解计算机系统/">
+  <link rel="canonical" href="http://liuweidong.club/java-垃圾回收机制/">
 
 
 
@@ -173,7 +174,7 @@
   };
 </script>
 
-  <title>【阅读】深入理解计算机系统 | zero</title>
+  <title>java-垃圾回收机制 | zero</title>
   
 
 
@@ -433,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuweidong.club/【计算机系统】深入理解计算机系统/">
+    <link itemprop="mainEntityOfPage" href="http://liuweidong.club/java-垃圾回收机制/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuweidong">
@@ -450,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【阅读】深入理解计算机系统
+          <h1 class="post-title" itemprop="name headline">java-垃圾回收机制
 
               
             
@@ -476,7 +477,7 @@
                 
               
 
-              <time title="创建时间：2018-10-24 22:11:59" itemprop="dateCreated datePublished" datetime="2018-10-24T22:11:59+08:00">2018-10-24</time>
+              <time title="创建时间：2018-05-25 21:28:50" itemprop="dateCreated datePublished" datetime="2018-05-25T21:28:50+08:00">2018-05-25</time>
             
 
             
@@ -494,7 +495,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/计算机系统/" itemprop="url" rel="index"><span itemprop="name">计算机系统</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/Java-SE/" itemprop="url" rel="index"><span itemprop="name">Java SE</span></a></span>
 
                 
                 
@@ -513,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/【计算机系统】深入理解计算机系统/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/【计算机系统】深入理解计算机系统/" itemprop="commentCount"></span>
+                <a href="/java-垃圾回收机制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/java-垃圾回收机制/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -549,13 +557,26 @@
       
 
       
-        <h1 id="计算机系统漫游"><a href="#计算机系统漫游" class="headerlink" title="计算机系统漫游"></a>计算机系统漫游</h1><h2 id="硬件组成"><a href="#硬件组成" class="headerlink" title="硬件组成"></a>硬件组成</h2><ol>
-<li>总线：贯穿整个系统的是一组电子管道，称作总线，携带信息字节并负责在各个部件间传递。</li>
-<li>I/O设备：输入/输出设备是系统与外部世界的联系通道。每个I/O设备都通过一个控制器或适配器与I/O总线相连。</li>
-<li>主存：主存是一个临时存储设备，在处理器执行程序时，用来存放程序和程序处理的数据。从物理上来说，主存是由一组动态随机存取存储器（DRAM）芯片组成的。从逻辑上来说，存储器是一个线性的字节数组，每个字节都有其唯一的地址（数组索引）。</li>
-<li>CPU，简称处理器，是解释（或执行）存储在主存中指令的引擎。运算器：运算器又称算术逻辑单元（ALU，Arithmetic Logic Unit）。</li>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><ul>
+<li>哪些内存需要回收？</li>
+<li>什么时候回收？</li>
+<li>如何回收？</li>
+</ul>
+<p><strong>内存泄漏：</strong>分配的内存得不到及时回收。<br>Java程序的内存分配和回收都是由<code>JRE在后台自动进行</code>的。（垃圾回收GC）JRE会提供一个后台线程来进行检测和控制。<br>JVM会把程序创建的对象存放在<strong>堆</strong>空间中。运行时的数据存储区有<strong>堆（Heap）</strong>和<strong>堆栈（Stack）</strong>。</p>
+<h1 id="标记-清除算法"><a href="#标记-清除算法" class="headerlink" title="标记-清除算法"></a>标记-清除算法</h1><p>该算法分为“标记”和“清除”两个阶段：首先标记出所有需要回收的对象，在标记完成后统一回收所有被标记的对象。<br>缺点：</p>
+<ol>
+<li>效率低</li>
+<li>标记清除之后会产生大量不连续的内存碎片</li>
 </ol>
-<h2 id="并发和并行"><a href="#并发和并行" class="headerlink" title="并发和并行"></a>并发和并行</h2><p>数字计算机的整个历史中，有两个需求是驱动进步的持续动力：一个是我们想要计算机做得更多，另一个是我们想要计算机运行得更快。</p>
+<h1 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h1><p>将可用内存按容量划分为大小相等的两块，每次只使用其中的一块。当这一块的内存用完了，就将还存活着的对象复制到另外一块上面，然后再把已使用过的内存空间一次清理掉。</p>
+<h1 id="标记-整理算法"><a href="#标记-整理算法" class="headerlink" title="标记-整理算法"></a>标记-整理算法</h1><h1 id="分代收集算法"><a href="#分代收集算法" class="headerlink" title="分代收集算法"></a>分代收集算法</h1><p>一般将java堆分为新生代和老生代，这样就可以根据各个年代的特点采用最适当的收集算法。新生代中，每次垃圾收集时都发现有大批对象死去，只有少量存活，那就选用复制算法。老生代中，对象存活率高、没有额外空间对它进行分配担保，就必须使用“标记-整理”算法来进行回收。</p>
+<h1 id="软、弱和虚引用"><a href="#软、弱和虚引用" class="headerlink" title="软、弱和虚引用"></a>软、弱和虚引用</h1><p>java.lang.ref<br>SoftReference、PhantomReference、WeakReference</p>
+<ul>
+<li>强引用</li>
+<li>软引用：有可能被垃圾回收机制回收。</li>
+<li>弱引用：不管内存是否足够，总会回收该对象所占用的内存。</li>
+<li>虚引用：完全类似于没有引用。主要用于跟踪对象被垃圾回收的状态，不能单独使用，必须和引用队列联合使用。</li>
+</ul>
 
       
     </div>
@@ -623,7 +644,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://liuweidong.club/【计算机系统】深入理解计算机系统/" title="【阅读】深入理解计算机系统">http://liuweidong.club/【计算机系统】深入理解计算机系统/</a>
+    <a href="http://liuweidong.club/java-垃圾回收机制/" title="java-垃圾回收机制">http://liuweidong.club/java-垃圾回收机制/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -634,6 +655,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
+          
+        </div>
+      
 
       
       
@@ -643,8 +670,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/数据库/" rel="next" title="数据库">
-                <i class="fa fa-chevron-left"></i> 数据库
+              <a href="/【阅读】深入理解Java虚拟机/" rel="next" title="【阅读】深入理解Java虚拟机">
+                <i class="fa fa-chevron-left"></i> 【阅读】深入理解Java虚拟机
               </a>
             
           </div>
@@ -653,8 +680,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/【计算机系统】字符集与编码/" rel="prev" title="字符集与编码">
-                字符集与编码 <i class="fa fa-chevron-right"></i>
+              <a href="/设计模式-面向对象六大原则/" rel="prev" title="面向对象六大原则">
+                面向对象六大原则 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -730,7 +757,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-count">79</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -924,7 +951,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机系统漫游"><span class="nav-number">1.</span> <span class="nav-text">计算机系统漫游</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#硬件组成"><span class="nav-number">1.1.</span> <span class="nav-text">硬件组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并发和并行"><span class="nav-number">1.2.</span> <span class="nav-text">并发和并行</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标记-清除算法"><span class="nav-number">2.</span> <span class="nav-text">标记-清除算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复制算法"><span class="nav-number">3.</span> <span class="nav-text">复制算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标记-整理算法"><span class="nav-number">4.</span> <span class="nav-text">标记-整理算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分代收集算法"><span class="nav-number">5.</span> <span class="nav-text">分代收集算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#软、弱和虚引用"><span class="nav-number">6.</span> <span class="nav-text">软、弱和虚引用</span></a></li></ol></div>
             
 
           </div>
