@@ -146,25 +146,29 @@
 
 
 
-  <meta name="description" content="java虚拟机内存运行时数据区域Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。 程序计数器程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。 java虚拟机栈虚拟机栈描述的是java方法执行的内存模型。 本地方法栈java堆对于大多数应用来说，java堆是java虚拟机所管理的内存中最大的一块。java堆是被所有线程共享的一块内">
-<meta name="keywords" content="java,JVM">
+  <meta name="description" content="四大组件Activity、Service、BroadcastReceiver、ContentProvider Activityhttps://developer.android.google.cn/guide/components/activities/intro-activities 生命周期管理Activity生命周期 任务和返回栈Fragment引言Android 3.0（API级别11）中">
+<meta name="keywords" content="android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【阅读】深入理解Java虚拟机">
-<meta property="og:url" content="http://liuweidong.club/【阅读】深入理解Java虚拟机/index.html">
+<meta property="og:title" content="android-基础知识">
+<meta property="og:url" content="http://liuweidong.club/android-基础知识/index.html">
 <meta property="og:site_name" content="zero">
-<meta property="og:description" content="java虚拟机内存运行时数据区域Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。 程序计数器程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。 java虚拟机栈虚拟机栈描述的是java方法执行的内存模型。 本地方法栈java堆对于大多数应用来说，java堆是java虚拟机所管理的内存中最大的一块。java堆是被所有线程共享的一块内">
+<meta property="og:description" content="四大组件Activity、Service、BroadcastReceiver、ContentProvider Activityhttps://developer.android.google.cn/guide/components/activities/intro-activities 生命周期管理Activity生命周期 任务和返回栈Fragment引言Android 3.0（API级别11）中">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-01T15:45:06.336Z">
+<meta property="og:image" content="https://i.imgur.com/MySu93R.png">
+<meta property="og:image" content="https://i.imgur.com/u4nokhG.png">
+<meta property="og:image" content="https://i.imgur.com/3nCpXp0.png">
+<meta property="og:updated_time" content="2019-07-20T09:52:52.765Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【阅读】深入理解Java虚拟机">
-<meta name="twitter:description" content="java虚拟机内存运行时数据区域Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。 程序计数器程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。 java虚拟机栈虚拟机栈描述的是java方法执行的内存模型。 本地方法栈java堆对于大多数应用来说，java堆是java虚拟机所管理的内存中最大的一块。java堆是被所有线程共享的一块内">
+<meta name="twitter:title" content="android-基础知识">
+<meta name="twitter:description" content="四大组件Activity、Service、BroadcastReceiver、ContentProvider Activityhttps://developer.android.google.cn/guide/components/activities/intro-activities 生命周期管理Activity生命周期 任务和返回栈Fragment引言Android 3.0（API级别11）中">
+<meta name="twitter:image" content="https://i.imgur.com/MySu93R.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://liuweidong.club/【阅读】深入理解Java虚拟机/">
+  <link rel="canonical" href="http://liuweidong.club/android-基础知识/">
 
 
 
@@ -174,7 +178,7 @@
   };
 </script>
 
-  <title>【阅读】深入理解Java虚拟机 | zero</title>
+  <title>android-基础知识 | zero</title>
   
 
 
@@ -434,7 +438,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuweidong.club/【阅读】深入理解Java虚拟机/">
+    <link itemprop="mainEntityOfPage" href="http://liuweidong.club/android-基础知识/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuweidong">
@@ -451,7 +455,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【阅读】深入理解Java虚拟机
+          <h1 class="post-title" itemprop="name headline">android-基础知识
 
               
             
@@ -477,7 +481,7 @@
                 
               
 
-              <time title="创建时间：2018-05-20 20:22:57" itemprop="dateCreated datePublished" datetime="2018-05-20T20:22:57+08:00">2018-05-20</time>
+              <time title="创建时间：2018-05-01 19:35:03" itemprop="dateCreated datePublished" datetime="2018-05-01T19:35:03+08:00">2018-05-01</time>
             
 
             
@@ -495,7 +499,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/阅读/" itemprop="url" rel="index"><span itemprop="name">阅读</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/android/basic/" itemprop="url" rel="index"><span itemprop="name">basic</span></a></span>
 
                 
                 
@@ -514,8 +525,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/【阅读】深入理解Java虚拟机/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/【阅读】深入理解Java虚拟机/" itemprop="commentCount"></span>
+                <a href="/android-基础知识/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-基础知识/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -550,25 +561,104 @@
       
 
       
-        <h1 id="java虚拟机内存"><a href="#java虚拟机内存" class="headerlink" title="java虚拟机内存"></a>java虚拟机内存</h1><h2 id="运行时数据区域"><a href="#运行时数据区域" class="headerlink" title="运行时数据区域"></a>运行时数据区域</h2><p>Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。</p>
-<h3 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h3><p>程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。</p>
-<h3 id="java虚拟机栈"><a href="#java虚拟机栈" class="headerlink" title="java虚拟机栈"></a>java虚拟机栈</h3><p>虚拟机栈描述的是java方法执行的内存模型。</p>
-<h3 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h3><h3 id="java堆"><a href="#java堆" class="headerlink" title="java堆"></a>java堆</h3><p>对于大多数应用来说，java堆是java虚拟机所管理的内存中最大的一块。java堆是被所有线程共享的一块内存区域，在虚拟机启动时创建。此内存区域的唯一目的就是存放对象实例，几乎所有的对象实例都在这里分配内存。java虚拟机规范中的描述：<strong>所有的对象实例以及数组都要在堆上分配</strong>。</p>
-<h3 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h3><p>方法区与java堆一样，是各个线程共享的内存区域，用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。</p>
-<h1 id="垃圾收集器与内存分配策略"><a href="#垃圾收集器与内存分配策略" class="headerlink" title="垃圾收集器与内存分配策略"></a>垃圾收集器与内存分配策略</h1><p>思考GC需要完成的3件事情：</p>
+        <h1 id="四大组件"><a href="#四大组件" class="headerlink" title="四大组件"></a>四大组件</h1><p>Activity、Service、BroadcastReceiver、ContentProvider</p>
+<h2 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h2><p><a href="https://developer.android.google.cn/guide/components/activities/intro-activities" target="_blank" rel="noopener">https://developer.android.google.cn/guide/components/activities/intro-activities</a></p>
+<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p><a href="https://developer.android.google.cn/guide/components/activities.html#Lifecycle" target="_blank" rel="noopener">管理Activity生命周期</a><br><img src="https://i.imgur.com/MySu93R.png" width="55%" height="65%"></p>
+<h3 id="任务和返回栈"><a href="#任务和返回栈" class="headerlink" title="任务和返回栈"></a>任务和返回栈</h3><h2 id="Fragment"><a href="#Fragment" class="headerlink" title="Fragment"></a>Fragment</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>Android 3.0（API级别11）中引入了<a href="https://developer.android.google.cn/guide/components/fragments" target="_blank" rel="noopener">Fragment</a>，主要是为了给大屏幕（如平板电脑）上更加动态和灵活的 UI 设计提供支持。由于平板电脑的屏幕比手机屏幕大得多，因此可用于组合和交换 UI 组件的空间更大。利用片段实现此类设计时，您无需管理对视图层次结构的复杂更改。</p>
 <ul>
-<li>哪些内存需要回收</li>
-<li>什么时候回收</li>
-<li>如何回收</li>
+<li>Fragment表示Activity中的行为或用户界面部分。Fragment必须始终嵌入在Activity中，其生命周期直接受宿主Activity生命周期的影响。 </li>
+<li>可以将多个Fragment组合在一个Activity中来构建多窗格UI，以及在多个Activity中重复使用某个片段。</li>
+<li>可以将Fragment视为Activity的模块化组成部分，它具有自己的生命周期，能接收自己的输入事件</li>
+<li>可以在Activity运行时添加或移除Fragment</li>
 </ul>
-<h2 id="垃圾收集算法"><a href="#垃圾收集算法" class="headerlink" title="垃圾收集算法"></a>垃圾收集算法</h2><h3 id="标记-清除算法"><a href="#标记-清除算法" class="headerlink" title="标记-清除算法"></a>标记-清除算法</h3><p><strong>缺点：</strong></p>
-<ol>
-<li>效率问题，标记和清除两个过程的效率都不高；</li>
-<li>空间问题，标记清除之后会产生大量不连续的内存碎片，空间碎片太多可能会导致以后在程序运行过程中需要分配较大对象时，无法找到足够的连续内存而不得不提前触发另一次垃圾收集动作。</li>
-</ol>
-<h3 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h3><p>将可用内存按容量划分为大小相等的两块，每次只使用其中的一块。当这一块的内存用完了，就将还存活着的对象复制到另外一块上面，然后再把已使用过的内存空间一次清理掉。</p>
-<h3 id="标记-整理算法"><a href="#标记-整理算法" class="headerlink" title="标记-整理算法"></a>标记-整理算法</h3><p>复制收集算法在对象存活率较高时就要进行较多的复制操作，效率将会变低。</p>
-<h3 id="分代收集算法"><a href="#分代收集算法" class="headerlink" title="分代收集算法"></a>分代收集算法</h3><h1 id="java内存模型"><a href="#java内存模型" class="headerlink" title="java内存模型"></a>java内存模型</h1><p>java内存模型（Java Memory Model，JMM）的主要目标是定义程序中各个变量的访问规则，即在虚拟机中将变量存储到内存和从内存中取出变量这样的底层细节。</p>
+<p><strong>优势：</strong></p>
+<ul>
+<li>模块化（Modularity）：不必把所有代码全部写在Activity中，而是把代码写在各自的Fragment中。</li>
+<li>可重用（Reusability）：多个Activity可以重用一个Fragment。</li>
+<li>可适配（Adaptability）：根据硬件的屏幕尺寸、屏幕方向，能够方便地实现不同的布局，这样用户体验更好。</li>
+</ul>
+<h3 id="生命周期-1"><a href="#生命周期-1" class="headerlink" title="生命周期"></a>生命周期</h3><p><a href="https://developer.android.google.cn/guide/components/fragments#Lifecycle" target="_blank" rel="noopener">lifecycle</a><br><img src="https://i.imgur.com/u4nokhG.png" width="35%" height="40%"></p>
+<ul>
+<li>onAttach()：Fragment与Activity关联时调用。</li>
+<li>onCreate()：创建Fragment时调用。</li>
+<li>onCreateView()：首次绘制其用户界面时调用。</li>
+<li>onActivityCreated()：在Activity的onCreate()方法已返回时调用。</li>
+</ul>
+<p><strong>Activity生命周期对Fragment生命周期影响如下：</strong><br><img src="https://i.imgur.com/3nCpXp0.png" width="35%" height="40%"></p>
+<h3 id="FragmentManager"><a href="#FragmentManager" class="headerlink" title="FragmentManager"></a>FragmentManager</h3><p><a href="https://developer.android.google.cn/reference/android/app/FragmentManager.html" target="_blank" rel="noopener">FragmentManager</a></p>
+<ul>
+<li>findFragmentById()</li>
+<li>findFragmentByTag()</li>
+<li>popBackStack()：将Fragment从返回栈中弹出。</li>
+<li>addOnBackStackChangedListener()：返回栈变化监听。</li>
+</ul>
+<h3 id="FragmentTransaction"><a href="#FragmentTransaction" class="headerlink" title="FragmentTransaction"></a>FragmentTransaction</h3><p><a href="https://developer.android.google.cn/reference/android/app/FragmentTransaction.html" target="_blank" rel="noopener">FragmentTransaction</a>根据用户行为执行添加add()、移除remove()、替换replace()以及其他操作的<strong>事务</strong>。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Activity中获取FragmentTransaction实例</span></span><br><span class="line">FragmentManager fragmentManager = getFragmentManager();</span><br><span class="line">FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();</span><br><span class="line"></span><br><span class="line"><span class="comment">// add()</span></span><br><span class="line">ExampleFragment fragment = <span class="keyword">new</span> ExampleFragment();</span><br><span class="line">fragmentTransaction.add(R.id.fragment_container, fragment);</span><br><span class="line">fragmentTransaction.commit();</span><br></pre></td></tr></table></figure></p>
+<p>以下示例说明了如何将一个片段替换成另一个片段，以及如何在返回栈中保留先前状态：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create new fragment and transaction</span></span><br><span class="line">Fragment newFragment = <span class="keyword">new</span> ExampleFragment();</span><br><span class="line">FragmentTransaction transaction = getFragmentManager().beginTransaction();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Replace whatever is in the fragment_container view with this fragment,</span></span><br><span class="line"><span class="comment">// and add the transaction to the back stack</span></span><br><span class="line">transaction.replace(R.id.fragment_container, newFragment);</span><br><span class="line">transaction.addToBackStack(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Commit the transaction</span></span><br><span class="line">transaction.commit();</span><br></pre></td></tr></table></figure></p>
+<p><strong>提示：</strong>对于每个片段事务，您都可以通过在提交前调用 setTransition() 来应用过渡动画。<br>调用commit()不会立即执行事务，而是在Activity的UI线程可以执行该操作时再安排其在线程上运行。不过，如有必要，您也可以从UI 线程调用executePendingTransactions()以立即执行commit()提交的事务。通常不必这样做，除非其他线程中的作业依赖该事务。<br><strong>注意：</strong>您只能在Activity保存其状态（用户离开 Activity）之前使用commit()提交事务。如果您试图在该时间点后提交，则会引发异常。 这是因为如需恢复Activity，则提交后的状态可能会丢失。 对于丢失提交无关紧要的情况，请使用 commitAllowingStateLoss()。</p>
+<h3 id="与Activity通信"><a href="#与Activity通信" class="headerlink" title="与Activity通信"></a>与Activity通信</h3><ul>
+<li>Fragment可以通过getActivity()访问Activity实例。</li>
+<li>Activity可以通过FragmentManager对象调用findFragmentById()或findFragmentByTag()获取对Fragment的引用</li>
+</ul>
+<h2 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h2><p>Service分为两种工作状态：</p>
+<ul>
+<li>启动状态，主要用于执行后台计算。</li>
+<li>绑定状态，主要用于其他组件和Service的交互。</li>
+</ul>
+<h2 id="BroadcastReceiver"><a href="#BroadcastReceiver" class="headerlink" title="BroadcastReceiver"></a>BroadcastReceiver</h2><h2 id="ContentProvider"><a href="#ContentProvider" class="headerlink" title="ContentProvider"></a>ContentProvider</h2><h1 id="Intent"><a href="#Intent" class="headerlink" title="Intent"></a>Intent</h1><h1 id="Animator"><a href="#Animator" class="headerlink" title="Animator"></a>Animator</h1><ul>
+<li>逐帧动画：Drawable Animation。res/anim，android：oneshot是否循环播放</li>
+<li>补间动画：Tween Animation</li>
+<li>属性动画（Android 3.0）</li>
+<li>android.transition（Android 4.4）：本质属性动画。</li>
+</ul>
+<h2 id="Tween-Animation"><a href="#Tween-Animation" class="headerlink" title="Tween Animation"></a>Tween Animation</h2><p>Alpha-Scale-Translate-Rotate<br>Interpolator（插值器）</p>
+<h2 id="Property-Animation"><a href="#Property-Animation" class="headerlink" title="Property Animation"></a>Property Animation</h2><ul>
+<li>Evaluator：控制属性动画如何计算属性值的。</li>
+<li>AnimatorSet</li>
+<li>ValueAnimator</li>
+<li>ObjectAnimator：ValueAnimator子类。</li>
+</ul>
+<h2 id="android-transition"><a href="#android-transition" class="headerlink" title="android.transition"></a>android.transition</h2><h1 id="应用资源"><a href="#应用资源" class="headerlink" title="应用资源"></a>应用资源</h1><h2 id="res"><a href="#res" class="headerlink" title="res/"></a>res/</h2><p><a href="https://developer.android.google.cn/guide/topics/resources/providing-resources" target="_blank" rel="noopener">https://developer.android.google.cn/guide/topics/resources/providing-resources</a><br>应该始终外部化应用资源，如图像和代码中的字符串，有利于单独维护这些资源。此外，还应为特定设备配置提供备用资源，方法是将它们分组到专门命名的资源目录中。<br><strong>res/</strong>目录支持的资源目录，如下：</p>
+<ul>
+<li>animator/：定义属性动画的XML文件。</li>
+<li>anim/：定义渐变动画的XML文件。（属性动画也可以放在该目录，一般为了区分，首选上面的目录。）</li>
+<li>color/</li>
+<li>drawable/</li>
+<li>mipmap/：适用于不同启动器图标密度的可绘制对象文件。</li>
+<li>layout/</li>
+<li>menu/</li>
+<li>raw/：以原始形式保存的文件。但是，如需访问原始文件名和文件层次结构，则可以考虑将某些资源保存在 assets/目录下</li>
+<li>values/</li>
+<li>xml/：可以在运行时通过调用Resources.getXML()读取的任意XML文件。</li>
+</ul>
+<h2 id="提供备用资源"><a href="#提供备用资源" class="headerlink" title="提供备用资源"></a>提供备用资源</h2><p>在res/中创建一个以<code>&lt;resources_name&gt;-&lt;config_qualifier&gt;</code>形式命名的新目录。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">配置</th>
+<th style="text-align:left">限定符值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">屏幕像素密度 (dpi)</td>
+<td style="text-align:left">ldpi、mdpi、hdpi、xhdpi、xxhdpi、xxxhdpi、nodpi、tvdpi、anydpi</td>
+</tr>
+</tbody>
+</table>
+<h1 id="AndroidManifest-xml"><a href="#AndroidManifest-xml" class="headerlink" title="AndroidManifest.xml"></a>AndroidManifest.xml</h1><p><a href="https://developer.android.google.cn/guide/topics/manifest/manifest-intro" target="_blank" rel="noopener">https://developer.android.google.cn/guide/topics/manifest/manifest-intro</a><br>每个应用的根目录中都必须包含一个AndroidManifest.xml文件（且文件名精确无误）。清单文件向Android系统提供应用的必要信息，系统必须具有这些信息方可运行应用的任何代码。<br><strong>清单文件示例：</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">manifest</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">permission</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">permission-tree</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">permission-group</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">instrumentation</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-sdk</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-configuration</span> /&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-feature</span> /&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">supports-screens</span> /&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">compatible-screens</span> /&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">supports-gl-texture</span> /&gt;</span>  </span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">application</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">action</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">category</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">data</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">meta-data</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity-alias</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span> . . . <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">meta-data</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activity-alias</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">service</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span> . . . <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">meta-data</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">service</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">receiver</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span> . . . <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">meta-data</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">receiver</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">provider</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">grant-uri-permission</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">meta-data</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">path-permission</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">provider</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">uses-library</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="应用权限"><a href="#应用权限" class="headerlink" title="应用权限"></a>应用权限</h1><p><a href="https://developer.android.google.cn/guide/topics/permissions/overview" target="_blank" rel="noopener">https://developer.android.google.cn/guide/topics/permissions/overview</a></p>
+<h1 id="设备兼容性"><a href="#设备兼容性" class="headerlink" title="设备兼容性"></a>设备兼容性</h1><p><a href="https://developer.android.google.cn/guide/practices/compatibility" target="_blank" rel="noopener">https://developer.android.google.cn/guide/practices/compatibility</a></p>
+<h1 id="XML解析方式"><a href="#XML解析方式" class="headerlink" title="XML解析方式"></a>XML解析方式</h1><h2 id="SAX"><a href="#SAX" class="headerlink" title="SAX"></a>SAX</h2><h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><h2 id="Pull"><a href="#Pull" class="headerlink" title="Pull"></a>Pull</h2><h1 id="NDK-Native-Develop-Kit"><a href="#NDK-Native-Develop-Kit" class="headerlink" title="NDK(Native Develop Kit)"></a>NDK(Native Develop Kit)</h1><p><a href="https://developer.android.google.cn/ndk" target="_blank" rel="noopener">https://developer.android.google.cn/ndk</a><br>原生开发工具包（NDK）是一套工具，允许您为 Android 使用C和C++代码，并提供众多<a href="https://developer.android.google.cn/ndk/guides/stable_apis.html" target="_blank" rel="noopener">平台库</a>，您可用其管理原生Activity和访问物理设备组件，例如传感器和触摸输入。<br>借助Android Studio 2.2或更高版本，使用NDK将C和C++代码编译到原生库中，然后使用IDE集成构建系统 Gradle将您的库封装入APK。然后，Java代码可以通过<a href="https://docs.oracle.com/javase/7/docs/technotes/guides/jni/spec/jniTOC.html" target="_blank" rel="noopener">Java原生接口 (JNI)</a> 框架，调用您原生库中的函数。<br>Android Studio用于编译原生库的默认构建工具是<a href="https://cmake.org/" target="_blank" rel="noopener">CMake</a>。由于很多现有项目都使用构建工具包，因此Android Studio也支持<a href="https://developer.android.google.cn/ndk/guides/ndk-build.html" target="_blank" rel="noopener">ndk-build</a>。不过，如果您要创建新的原生库，则应使用 CMake。</p>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><ul>
+<li>在平台之间移植其应用。</li>
+<li>进一步提升设备性能，以实现低延迟时间，或运行计算密集型应用，如游戏或物理模拟。</li>
+<li>重复使用自己或其他开发者的C或C++库。</li>
+</ul>
+<h2 id="编译和调试原生代码组件"><a href="#编译和调试原生代码组件" class="headerlink" title="编译和调试原生代码组件"></a>编译和调试原生代码组件</h2><p>Android 原生开发工具包 (NDK)：这套工具允许您为 Android 使用 C 和 C++ 代码。<br>CMake：一款外部构建工具，可与 Gradle 搭配使用来构建原生库。如果您只计划使用 ndk-build，则不需要此组件。<br>LLDB：一种调试程序，Android Studio 使用它来调试原生代码。<br>安装：Tools &gt; SDK Manager</p>
+<h2 id="创建或导入原生项目"><a href="#创建或导入原生项目" class="headerlink" title="创建或导入原生项目"></a>创建或导入原生项目</h2><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><h2 id="CPU和架构"><a href="#CPU和架构" class="headerlink" title="CPU和架构"></a>CPU和架构</h2><p>使用原生代码时，硬件很重要。NDK提供各种ABI供您选择，可让您确保针对正确的架构和CPU进行编译。</p>
+<h3 id="ABI"><a href="#ABI" class="headerlink" title="ABI"></a>ABI</h3><p>不同的Android手机使用不同的CPU，进而支持不同的指令集。CPU与指令集的每种组合都有专属的应用二进制界面，即ABI。ABI可以非常精确地定义应用的机器代码在运行时如何与系统交互。您必须为应用要使用的每个CPU架构指定ABI。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://developer.android.google.cn/guide" target="_blank" rel="noopener">https://developer.android.google.cn/guide</a><br><a href="https://developer.android.google.cn/reference/packages" target="_blank" rel="noopener">https://developer.android.google.cn/reference/packages</a></p>
 
       
     </div>
@@ -636,7 +726,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://liuweidong.club/【阅读】深入理解Java虚拟机/" title="【阅读】深入理解Java虚拟机">http://liuweidong.club/【阅读】深入理解Java虚拟机/</a>
+    <a href="http://liuweidong.club/android-基础知识/" title="android-基础知识">http://liuweidong.club/android-基础知识/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -649,9 +739,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
-          
-            <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
+            <a href="/tags/android/" rel="tag"><i class="fa fa-tag"></i> android</a>
           
         </div>
       
@@ -664,8 +752,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/【综合】Cookie-Session-Token-JWT/" rel="next" title="Cookie-Session-Token-JWT">
-                <i class="fa fa-chevron-left"></i> Cookie-Session-Token-JWT
+              <a href="/android-构建流程/" rel="next" title="android-构建流程">
+                <i class="fa fa-chevron-left"></i> android-构建流程
               </a>
             
           </div>
@@ -674,8 +762,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/java-垃圾回收机制/" rel="prev" title="java-垃圾回收机制">
-                java-垃圾回收机制 <i class="fa fa-chevron-right"></i>
+              <a href="/【利器】持续集成CI/" rel="prev" title="持续集成CI">
+                持续集成CI <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -945,7 +1033,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java虚拟机内存"><span class="nav-number">1.</span> <span class="nav-text">java虚拟机内存</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#运行时数据区域"><span class="nav-number">1.1.</span> <span class="nav-text">运行时数据区域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#程序计数器"><span class="nav-number">1.1.1.</span> <span class="nav-text">程序计数器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java虚拟机栈"><span class="nav-number">1.1.2.</span> <span class="nav-text">java虚拟机栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地方法栈"><span class="nav-number">1.1.3.</span> <span class="nav-text">本地方法栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java堆"><span class="nav-number">1.1.4.</span> <span class="nav-text">java堆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法区"><span class="nav-number">1.1.5.</span> <span class="nav-text">方法区</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#垃圾收集器与内存分配策略"><span class="nav-number">2.</span> <span class="nav-text">垃圾收集器与内存分配策略</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾收集算法"><span class="nav-number">2.1.</span> <span class="nav-text">垃圾收集算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标记-清除算法"><span class="nav-number">2.1.1.</span> <span class="nav-text">标记-清除算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制算法"><span class="nav-number">2.1.2.</span> <span class="nav-text">复制算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记-整理算法"><span class="nav-number">2.1.3.</span> <span class="nav-text">标记-整理算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分代收集算法"><span class="nav-number">2.1.4.</span> <span class="nav-text">分代收集算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java内存模型"><span class="nav-number">3.</span> <span class="nav-text">java内存模型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#四大组件"><span class="nav-number">1.</span> <span class="nav-text">四大组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Activity"><span class="nav-number">1.1.</span> <span class="nav-text">Activity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生命周期"><span class="nav-number">1.1.1.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务和返回栈"><span class="nav-number">1.1.2.</span> <span class="nav-text">任务和返回栈</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fragment"><span class="nav-number">1.2.</span> <span class="nav-text">Fragment</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.2.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生命周期-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FragmentManager"><span class="nav-number">1.2.3.</span> <span class="nav-text">FragmentManager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FragmentTransaction"><span class="nav-number">1.2.4.</span> <span class="nav-text">FragmentTransaction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#与Activity通信"><span class="nav-number">1.2.5.</span> <span class="nav-text">与Activity通信</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Service"><span class="nav-number">1.3.</span> <span class="nav-text">Service</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BroadcastReceiver"><span class="nav-number">1.4.</span> <span class="nav-text">BroadcastReceiver</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ContentProvider"><span class="nav-number">1.5.</span> <span class="nav-text">ContentProvider</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Intent"><span class="nav-number">2.</span> <span class="nav-text">Intent</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Animator"><span class="nav-number">3.</span> <span class="nav-text">Animator</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tween-Animation"><span class="nav-number">3.1.</span> <span class="nav-text">Tween Animation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Property-Animation"><span class="nav-number">3.2.</span> <span class="nav-text">Property Animation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#android-transition"><span class="nav-number">3.3.</span> <span class="nav-text">android.transition</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用资源"><span class="nav-number">4.</span> <span class="nav-text">应用资源</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#res"><span class="nav-number">4.1.</span> <span class="nav-text">res/</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提供备用资源"><span class="nav-number">4.2.</span> <span class="nav-text">提供备用资源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AndroidManifest-xml"><span class="nav-number">5.</span> <span class="nav-text">AndroidManifest.xml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用权限"><span class="nav-number">6.</span> <span class="nav-text">应用权限</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设备兼容性"><span class="nav-number">7.</span> <span class="nav-text">设备兼容性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XML解析方式"><span class="nav-number">8.</span> <span class="nav-text">XML解析方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SAX"><span class="nav-number">8.1.</span> <span class="nav-text">SAX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM"><span class="nav-number">8.2.</span> <span class="nav-text">DOM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pull"><span class="nav-number">8.3.</span> <span class="nav-text">Pull</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NDK-Native-Develop-Kit"><span class="nav-number">9.</span> <span class="nav-text">NDK(Native Develop Kit)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用场景"><span class="nav-number">9.1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译和调试原生代码组件"><span class="nav-number">9.2.</span> <span class="nav-text">编译和调试原生代码组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建或导入原生项目"><span class="nav-number">9.3.</span> <span class="nav-text">创建或导入原生项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作原理"><span class="nav-number">9.4.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU和架构"><span class="nav-number">9.5.</span> <span class="nav-text">CPU和架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ABI"><span class="nav-number">9.5.1.</span> <span class="nav-text">ABI</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">10.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
