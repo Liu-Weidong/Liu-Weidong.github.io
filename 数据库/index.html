@@ -146,18 +146,18 @@
 
 
 
-  <meta name="description" content="SQL（Structured Query Language，结构化查询语言） 关系型数据库关系型数据库管理系统（Relational Database Management System，RDBMS） OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分布式数据库为核心的一组软件产品，是目前最流行的客户/服务器(CLIENT/SERVER)或B/S体系结构的数据库之一。 M">
+  <meta name="description" content="SQLSQL（Structured Query Language，结构化查询语言）  DDL：CREATE、ALTER、DROP DML：INSERT、UPDATE、DELETE DCL：定义访问权限和安全级别 DQL：数据查询语言，用来查询记录。SELECT  12345678910111213// DDL// 创建数据库create database test;create database">
 <meta name="keywords" content="数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库">
 <meta property="og:url" content="http://liuweidong.club/数据库/index.html">
 <meta property="og:site_name" content="zero">
-<meta property="og:description" content="SQL（Structured Query Language，结构化查询语言） 关系型数据库关系型数据库管理系统（Relational Database Management System，RDBMS） OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分布式数据库为核心的一组软件产品，是目前最流行的客户/服务器(CLIENT/SERVER)或B/S体系结构的数据库之一。 M">
+<meta property="og:description" content="SQLSQL（Structured Query Language，结构化查询语言）  DDL：CREATE、ALTER、DROP DML：INSERT、UPDATE、DELETE DCL：定义访问权限和安全级别 DQL：数据查询语言，用来查询记录。SELECT  12345678910111213// DDL// 创建数据库create database test;create database">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-06T04:43:15.016Z">
+<meta property="og:updated_time" content="2019-07-22T16:17:50.700Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库">
-<meta name="twitter:description" content="SQL（Structured Query Language，结构化查询语言） 关系型数据库关系型数据库管理系统（Relational Database Management System，RDBMS） OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分布式数据库为核心的一组软件产品，是目前最流行的客户/服务器(CLIENT/SERVER)或B/S体系结构的数据库之一。 M">
+<meta name="twitter:description" content="SQLSQL（Structured Query Language，结构化查询语言）  DDL：CREATE、ALTER、DROP DML：INSERT、UPDATE、DELETE DCL：定义访问权限和安全级别 DQL：数据查询语言，用来查询记录。SELECT  12345678910111213// DDL// 创建数据库create database test;create database">
 
 
 
@@ -550,11 +550,42 @@
       
 
       
-        <p>SQL（Structured Query Language，结构化查询语言）</p>
-<h1 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h1><p>关系型数据库管理系统（Relational Database Management System，RDBMS）</p>
+        <h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><p>SQL（Structured Query Language，结构化查询语言）</p>
+<ul>
+<li>DDL：CREATE、ALTER、DROP</li>
+<li>DML：INSERT、UPDATE、DELETE</li>
+<li>DCL：定义访问权限和安全级别</li>
+<li>DQL：数据查询语言，用来查询记录。SELECT</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// DDL</span><br><span class="line">// 创建数据库</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> <span class="keyword">test</span>;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> <span class="keyword">test</span> <span class="built_in">character</span> <span class="keyword">set</span> gbk;</span><br><span class="line"><span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">database</span> <span class="keyword">test</span>;</span><br><span class="line">// 修改</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">database</span> <span class="keyword">test</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</span><br><span class="line">// 删除</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">database</span> <span class="keyword">test</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">database</span>();</span><br><span class="line">// 切换数据库</span><br><span class="line"><span class="keyword">use</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 创建表</span><br><span class="line">create table people(</span><br><span class="line">    id int,</span><br><span class="line">	name varchar(5),</span><br><span class="line">	birthday date,</span><br><span class="line">	remark text </span><br><span class="line">);</span><br><span class="line">show tables;</span><br><span class="line">desc people;</span><br><span class="line">// 增加一列</span><br><span class="line">alter table people add age int;</span><br><span class="line">// 修改列的长度</span><br><span class="line">alter table people modify age int(20);</span><br><span class="line">// 删除列</span><br><span class="line">alter table people drop age;</span><br><span class="line">// 修改表名</span><br><span class="line">rename table people to user;</span><br></pre></td></tr></table></figure>
+<h1 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="[关系型数据库]"></a>[关系型数据库]</h1><p>关系型数据库管理系统（Relational Database Management System，RDBMS）</p>
 <h1 id="Oracle"><a href="#Oracle" class="headerlink" title="Oracle"></a>Oracle</h1><p>ORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以<strong>分布式数据库</strong>为核心的一组软件产品，是目前最流行的客户/服务器(CLIENT/SERVER)或B/S体系结构的数据库之一。</p>
-<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><p><a href="http://liuweidong.club/【利器】IntelliJ-IDEA/">安装MySQL</a></p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><strong>MySQL的体系结构：</strong>采用客户/服务器体系结构。因此，在使用MySQL的时候，实际上在使用两个程序。一个是服务器程序，指的是<strong>mysqld</strong>，运行在存放你数据库的机器上。另一个是客户程序，负责连接到数据库服务器。<br><strong>该体系结构的好处：</strong>并发控制由服务器提供，因而不会出现两个用户同时修改同一条记录的现象。</p>
+<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><a href="https://www.mysql.com/" target="_blank" rel="noopener">MySQL</a><br><strong>MySQL的体系结构：</strong>采用客户/服务器体系结构。因此，在使用MySQL的时候，实际上在使用两个程序。一个是服务器程序，指的是<strong>mysqld</strong>，运行在存放你数据库的机器上。另一个是客户程序，负责连接到数据库服务器。<br><strong>该体系结构的好处：</strong>并发控制由服务器提供，因而不会出现两个用户同时修改同一条记录的现象。</p>
+<h2 id="安装与使用"><a href="#安装与使用" class="headerlink" title="安装与使用"></a>安装与使用</h2><ol>
+<li><strong>下载：</strong>msi安装或zip解压缩 <a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/</a> </li>
+<li><strong>配置环境变量</strong><ul>
+<li>MYSQL_HOME（<strong>D:\swTools\mysql-8.0.15-winx64</strong>）</li>
+<li>Path（<strong>;%MYSQL_HOME%\bin</strong>）</li>
+</ul>
+</li>
+<li><p>在目录mysql-8.0.15-winx64\bin中新建文件my.ini<a href="https://blog.csdn.net/lienfeng6/article/details/78140404" target="_blank" rel="noopener">参考</a>，内容如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[mysql]</span><br><span class="line"># 设置mysql客户端默认字符集</span><br><span class="line">default-character-set=utf8 </span><br><span class="line">[mysqld]</span><br><span class="line">#设置3306端口</span><br><span class="line">port = 3306 </span><br><span class="line"># 设置mysql的安装目录</span><br><span class="line">basedir=D:\swTools\mysql-8.0.15-winx64</span><br><span class="line"># 设置mysql数据库的数据的存放目录</span><br><span class="line">datadir=D:\swTools\mysql-8.0.15-winx64\data</span><br><span class="line"># 允许最大连接数</span><br><span class="line">max_connections=200</span><br><span class="line"># 服务端使用的字符集默认为8比特编码的latin1字符集</span><br><span class="line">character-set-server=utf8</span><br><span class="line"># 创建新表时将使用的默认存储引擎</span><br><span class="line">default-storage-engine=INNODB</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>安装MySQL：</strong>以管理员身份运行cmd， 切换到目录cd D:\swTools\mysql-8.0.15-winx64\bin 中，输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld -install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>初始化：</strong>执行命令后会在MySQL的安装目录下生成data目录并创建root用户。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize-insecure --user=mysql</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>启动服务</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start mysql</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>停止服务</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net stop mysql</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Host：localhost</span><br><span class="line">Port：3306</span><br></pre></td></tr></table></figure>
 <h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><p>【mysqld -install】安装MySQL<br>【mysqld –initialize-insecure –user=mysql】初始化：执行命令后会在MySQL的安装目录下生成data目录并创建root用户。<br>【net start mysql】启动服务<br>【net stop mysql】停止服务<br>【mysql -u root -p】登录mysql<br>【mysql -hxx -uxx -pxx】进入mysql数据库。-h表示服务器名，-u数据库用户名，-p为密码<br>【show databases;】显示数据库列表<br>【mysqladmin -u用户名 -p旧密码 password 新密码】修改密码<br>【exit】退出mysql数据库</p>
 <h2 id="SQLyog"><a href="#SQLyog" class="headerlink" title="SQLyog"></a>SQLyog</h2><p>SQLyog是一个快速而简洁的图形化管理MySQL数据库的工具，它能够在任何地点有效地管理你的数据库，由业界著名的Webyog公司出品。</p>
 <h3 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h3><ol>
@@ -566,7 +597,7 @@
 <h1 id="SQL-Server"><a href="#SQL-Server" class="headerlink" title="SQL Server"></a>SQL Server</h1><p>SQL Server是Microsoft公司推出的关系型数据库管理系统。</p>
 <h1 id="Access"><a href="#Access" class="headerlink" title="Access"></a>Access</h1><p>Microsoft Office Access是微软把数据库引擎的图形用户界面和软件开发工具结合在一起的一个数据库管理系统。它是微软office的一个成员, 在包括专业版和更高版本的office版本里面被单独出售。</p>
 <h1 id="DB2"><a href="#DB2" class="headerlink" title="DB2"></a>DB2</h1><p>IBM公司开发的一套关系型数据库管理系统，它主要的运行环境为UNIX（包括IBM自家的AIX）、Linux、IBM i（旧称OS/400）、z/OS，以及Windows服务器版本。</p>
-<h1 id="非关系型数据库"><a href="#非关系型数据库" class="headerlink" title="非关系型数据库"></a>非关系型数据库</h1><h1 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h1><p>NoSQL（Not Only SQL）</p>
+<h1 id="非关系型数据库"><a href="#非关系型数据库" class="headerlink" title="[非关系型数据库]"></a>[非关系型数据库]</h1><h1 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h1><p>NoSQL（Not Only SQL）</p>
 
       
     </div>
@@ -941,7 +972,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关系型数据库"><span class="nav-number">1.</span> <span class="nav-text">关系型数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle"><span class="nav-number">2.</span> <span class="nav-text">Oracle</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL"><span class="nav-number">3.</span> <span class="nav-text">MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令"><span class="nav-number">3.2.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQLyog"><span class="nav-number">3.3.</span> <span class="nav-text">SQLyog</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FAQ"><span class="nav-number">3.3.1.</span> <span class="nav-text">FAQ</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Navicat"><span class="nav-number">3.4.</span> <span class="nav-text">Navicat</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MariaDB"><span class="nav-number">4.</span> <span class="nav-text">MariaDB</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL-Server"><span class="nav-number">5.</span> <span class="nav-text">SQL Server</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Access"><span class="nav-number">6.</span> <span class="nav-text">Access</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DB2"><span class="nav-number">7.</span> <span class="nav-text">DB2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#非关系型数据库"><span class="nav-number">8.</span> <span class="nav-text">非关系型数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NoSQL"><span class="nav-number">9.</span> <span class="nav-text">NoSQL</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL"><span class="nav-number">1.</span> <span class="nav-text">SQL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关系型数据库"><span class="nav-number">2.</span> <span class="nav-text">[关系型数据库]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle"><span class="nav-number">3.</span> <span class="nav-text">Oracle</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL"><span class="nav-number">4.</span> <span class="nav-text">MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">4.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装与使用"><span class="nav-number">4.2.</span> <span class="nav-text">安装与使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令"><span class="nav-number">4.3.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQLyog"><span class="nav-number">4.4.</span> <span class="nav-text">SQLyog</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FAQ"><span class="nav-number">4.4.1.</span> <span class="nav-text">FAQ</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Navicat"><span class="nav-number">4.5.</span> <span class="nav-text">Navicat</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MariaDB"><span class="nav-number">5.</span> <span class="nav-text">MariaDB</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL-Server"><span class="nav-number">6.</span> <span class="nav-text">SQL Server</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Access"><span class="nav-number">7.</span> <span class="nav-text">Access</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DB2"><span class="nav-number">8.</span> <span class="nav-text">DB2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#非关系型数据库"><span class="nav-number">9.</span> <span class="nav-text">[非关系型数据库]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NoSQL"><span class="nav-number">10.</span> <span class="nav-text">NoSQL</span></a></li></ol></div>
             
 
           </div>
