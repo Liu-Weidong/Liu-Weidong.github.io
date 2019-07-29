@@ -316,14 +316,33 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[数据库]]></title>
-    <url>%2F%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
-    <content type="text"><![CDATA[SQLSQL（Structured Query Language，结构化查询语言） DDL：CREATE、ALTER、DROP DML：INSERT、UPDATE、DELETE DCL：定义访问权限和安全级别 DQL：数据查询语言，用来查询记录。SELECT 12345678910111213// DDL// 创建数据库create database test;create database test character set gbk;show create database test;// 修改alter database test character set utf8;// 删除drop database test;select database();// 切换数据库use test; 1234567891011121314151617// 创建表create table people( id int, name varchar(5), birthday date, remark text );show tables;desc people;// 增加一列alter table people add age int;// 修改列的长度alter table people modify age int(20);// 删除列alter table people drop age;// 修改表名rename table people to user; [关系型数据库]关系型数据库管理系统（Relational Database Management System，RDBMS） OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分布式数据库为核心的一组软件产品，是目前最流行的客户/服务器(CLIENT/SERVER)或B/S体系结构的数据库之一。 MySQL概述MySQLMySQL的体系结构：采用客户/服务器体系结构。因此，在使用MySQL的时候，实际上在使用两个程序。一个是服务器程序，指的是mysqld，运行在存放你数据库的机器上。另一个是客户程序，负责连接到数据库服务器。该体系结构的好处：并发控制由服务器提供，因而不会出现两个用户同时修改同一条记录的现象。 安装与使用 下载：msi安装或zip解压缩 https://dev.mysql.com/downloads/mysql/ 配置环境变量 MYSQL_HOME（D:\swTools\mysql-8.0.15-winx64） Path（;%MYSQL_HOME%\bin） 在目录mysql-8.0.15-winx64\bin中新建文件my.ini参考，内容如下所示： 12345678910111213141516[mysql]# 设置mysql客户端默认字符集default-character-set=utf8 [mysqld]#设置3306端口port = 3306 # 设置mysql的安装目录basedir=D:\swTools\mysql-8.0.15-winx64# 设置mysql数据库的数据的存放目录datadir=D:\swTools\mysql-8.0.15-winx64\data# 允许最大连接数max_connections=200# 服务端使用的字符集默认为8比特编码的latin1字符集character-set-server=utf8# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB 安装MySQL：以管理员身份运行cmd， 切换到目录cd D:\swTools\mysql-8.0.15-winx64\bin 中，输入 1mysqld -install 初始化：执行命令后会在MySQL的安装目录下生成data目录并创建root用户。 1mysqld --initialize-insecure --user=mysql 启动服务 1net start mysql 停止服务 1net stop mysql 12Host：localhostPort：3306 命令【mysqld -install】安装MySQL【mysqld –initialize-insecure –user=mysql】初始化：执行命令后会在MySQL的安装目录下生成data目录并创建root用户。【net start mysql】启动服务【net stop mysql】停止服务【mysql -u root -p】登录mysql【mysql -hxx -uxx -pxx】进入mysql数据库。-h表示服务器名，-u数据库用户名，-p为密码【show databases;】显示数据库列表【mysqladmin -u用户名 -p旧密码 password 新密码】修改密码【exit】退出mysql数据库 SQLyogSQLyog是一个快速而简洁的图形化管理MySQL数据库的工具，它能够在任何地点有效地管理你的数据库，由业界著名的Webyog公司出品。 FAQ SQLyog连接数据库报错plugin caching_sha2_password could not be loaded12345678910# 登录MySQLmysql -uroot -p # 修改加密规则ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;password&apos; PASSWORD EXPIRE NEVER; # 更新一下用户的密码 ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;password&apos;; # 刷新权限FLUSH PRIVILEGES; # 重置密码alter user &apos;root&apos;@&apos;localhost&apos; identified by &apos;***123456&apos;; NavicatNavicat是一套快速、可靠并价格相当便宜的数据库管理工具，专为简化数据库的管理及降低系统管理成本而设。 MariaDBMariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。 SQL ServerSQL Server是Microsoft公司推出的关系型数据库管理系统。 AccessMicrosoft Office Access是微软把数据库引擎的图形用户界面和软件开发工具结合在一起的一个数据库管理系统。它是微软office的一个成员, 在包括专业版和更高版本的office版本里面被单独出售。 DB2IBM公司开发的一套关系型数据库管理系统，它主要的运行环境为UNIX（包括IBM自家的AIX）、Linux、IBM i（旧称OS/400）、z/OS，以及Windows服务器版本。 [非关系型数据库]NoSQLNoSQL（Not Only SQL）]]></content>
+    <title><![CDATA[MySQL详解]]></title>
+    <url>%2FMySQL%E8%AF%A6%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[概述MySQLMySQL的体系结构：采用客户/服务器体系结构。因此，在使用MySQL的时候，实际上在使用两个程序。一个是服务器程序，指的是mysqld，运行在存放你数据库的机器上。另一个是客户程序，负责连接到数据库服务器。优点：并发控制由服务器提供，因而不会出现两个用户同时修改同一条记录的现象。 安装与使用 msi安装或zip解压缩 https://dev.mysql.com/downloads/mysql/ 配置环境变量 MYSQL_HOME（D:\swTools\mysql-8.0.15-winx64） Path（;%MYSQL_HOME%\bin） 在目录mysql-8.0.15-winx64\bin中新建文件my.ini参考，内容如下所示： 12345678910111213141516[mysql]# 设置mysql客户端默认字符集default-character-set=utf8 [mysqld]#设置3306端口port = 3306 # 设置mysql的安装目录basedir=D:\swTools\mysql-8.0.15-winx64# 设置mysql数据库的数据的存放目录datadir=D:\swTools\mysql-8.0.15-winx64\data# 允许最大连接数max_connections=200# 服务端使用的字符集默认为8比特编码的latin1字符集character-set-server=utf8# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB 安装MySQL：以管理员身份运行cmd， 切换到目录cd D:\swTools\mysql-8.0.15-winx64\bin 中，输入 1mysqld -install 初始化：执行命令后会在MySQL的安装目录下生成data目录并创建root用户。 1mysqld --initialize-insecure --user=mysql 启动服务 1net start mysql 停止服务 1net stop mysql 12Host：localhostPort：3306 命令【mysqld -install】安装MySQL【mysqld –initialize-insecure –user=mysql】初始化：执行命令后会在MySQL的安装目录下生成data目录并创建root用户。【net start mysql】启动服务【net stop mysql】停止服务【mysql -u root -p】登录mysql【mysql -hxx -uxx -pxx】进入mysql数据库。-h表示服务器名，-u数据库用户名，-p为密码【show databases;】显示数据库列表【mysqladmin -u用户名 -p旧密码 password 新密码】修改密码【exit】退出mysql数据库 管理工具SQLyogSQLyog是一个快速而简洁的图形化管理MySQL数据库的工具，它能够在任何地点有效地管理你的数据库，由业界著名的Webyog公司出品。 FAQ SQLyog连接数据库报错plugin caching_sha2_password could not be loaded12345678910# 登录MySQLmysql -uroot -p # 修改加密规则ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;password&apos; PASSWORD EXPIRE NEVER; # 更新一下用户的密码 ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;password&apos;; # 刷新权限FLUSH PRIVILEGES; # 重置密码alter user &apos;root&apos;@&apos;localhost&apos; identified by &apos;***123456&apos;; NavicatNavicat是一套快速、可靠并价格相当便宜的数据库管理工具，专为简化数据库的管理及降低系统管理成本而设。]]></content>
       <categories>
-        <category>数据库</category>
+        <category>db</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[数据库详解]]></title>
+    <url>%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%A6%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[[关系型数据库]关系型数据库管理系统（Relational Database Management System，RDBMS） OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分布式数据库为核心的一组软件产品，是目前最流行的客户/服务器(CLIENT/SERVER)或B/S体系结构的数据库之一。 MySQLMariaDBMariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。 SQL ServerSQL Server是Microsoft公司推出的关系型数据库管理系统。 AccessMicrosoft Office Access是微软把数据库引擎的图形用户界面和软件开发工具结合在一起的一个数据库管理系统。它是微软office的一个成员, 在包括专业版和更高版本的office版本里面被单独出售。 DB2IBM公司开发的一套关系型数据库管理系统，它主要的运行环境为UNIX（包括IBM自家的AIX）、Linux、IBM i（旧称OS/400）、z/OS，以及Windows服务器版本。 [非关系型数据库]NoSQLNoSQL（Not Only SQL）]]></content>
+      <categories>
+        <category>db</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[SQL语句]]></title>
+    <url>%2FSQL%E8%AF%AD%E5%8F%A5%2F</url>
+    <content type="text"><![CDATA[概述SQL（Structured Query Language，结构化查询语言），分类如下： DDL：CREATE、ALTER、DROP DML：INSERT、UPDATE、DELETE DCL：定义访问权限和安全级别 DQL：数据查询语言，用来查询记录。SELECT DDL123456789101112131415【操作数据库】// 创建数据库create database test;create database test character set gbk;show create database test;// 修改数据库字符集alter database test character set utf8;// 删除数据库drop database test;select database();// 切换数据库use test; 123456789101112131415161718192021222324252627282930【操作数据表】// 创建表create table people( id int, name varchar(5), birthday date, remark text );// 查看表格的创建细节show create table 表名;// 显示所有表show tables;// 查看表信息desc 表名;alter table 表名 character set gbk;// 增加一列alter table 表名 add 列名 类型;// 修改列的长度alter table 表名 modify 列名 类型(长度);// 删除列alter table 表名 drop 列名;// 修改列名alter table 表名 change 列1 列2 类型(长度);// 修改表名rename table 表名1 to 表名2;// 删除表drop table 表名; DML123456【插入操作】insert into user (id,num,birthday,remark) values (2,'mi','2019-07-23','你好，mi'),(3,'ali','2019-07-23','你好，ali'),(4,'bd','2019-07-23','你好，bd'); 123456【修改操作】// 修改多列数据逗号隔开// 更新表中所有该列对应的数据update 表名 set 列名='2019-07-24';// 更新指定数据update 表名 set 列名='2019-07-25' where 列名='lwd'; 123456【删除操作】delete from 表名 where 列名='';// 删除表中所有记录（表结构还在）delete from 表名;// 删除表truncate table 表名; DQL123select 列名from 表名where 行条件]]></content>
+      <categories>
+        <category>db</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -365,15 +384,15 @@
     <url>%2F%E9%B8%9F%E5%93%A5%E7%9A%84Linux%E7%A7%81%E6%88%BF%E8%8F%9C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AF%87%2F</url>
     <content type="text"><![CDATA[小序Linux内核由Linux Torvalds在1991年开发。硬件 –&gt; 内核 –&gt; 系统调用 –&gt; 应用程序（加粗部分为操作系统）内核： 系统内存管理 软件程序管理 硬件设备管理 文件系统管理]]></content>
       <categories>
-        <category>操作系统</category>
+        <category>os</category>
       </categories>
   </entry>
   <entry>
     <title><![CDATA[Windows]]></title>
     <url>%2FWindows%2F</url>
-    <content type="text"><![CDATA[运行【calc】计算器【charmap】启动字符映射表【cleanmgr】打开磁盘清理工具【cmd】命令提示符【compmgmt.msc】计算机管理【explorer】打开资源管理器【mspaint】打开画图板【mstsc】远程桌面连接【notepad】打开记事【osk】打开屏幕键盘【regedit】注册表【services.msc】服务【winver】Windows版本【slmgr.vbs -dlv】查询win10激活信息【slmgr.vbs -dli】查询操作系统版本、许可证状态【slmgr.vbs -xpr】查询win10是否永久激活 cmd【cd\】切换到根目录【cd..】返回上级目录【cd 路径】打开指定目录【dir】查看目录【x:】切换盘符【md 文件夹名称】创建目录【rd 路径】删除当前指定的目录【echo a&gt;xxx.txt】创建文件 【net start】查看开启了哪些服务【net start 服务名】开启服务。如：net start mysql【net stop 服务名】停止服务。如：net stop mysql【netstat -ano|findstr 端口号】查看端口【net share】查看共享的文件【path】查看环境变量【services.msc】系统服务 【tree /f &gt; list.txt】生成目录结构树 快捷键【F2】重命名【F11】最大化/最小化活动窗口【Windows键/Ctrl+Esc】打开开始菜单【Windows键+M】最小化所有被打开的窗口【Windows键+R】打开“运行”对话框【Windows键+Break】打开“系统属性”对话框【Windows键+D】最小化/还原所有窗口【Windows键+L】锁定计算机【Windows键+E】打开资源管理器【Delete】放入回收站【Shift+Delete】彻底删除【Alt+1】标准型模式【Alt+2】科学型模式【Alt+3】切换到程序员模式【Alt+F4 】关闭当前应用程序 【Alt+Tab】切换应用程序 【Alt+D】选中地址栏【Ctrl+Shift+N】新建文件夹【Ctrl+Shift+&gt;】增大字体大小【Ctrl+Shift+&lt;】减小字体大小【Ctrl+E】选中搜索框【Ctrl+H】在文档中替换【Ctrl+Home】移动到文档的开头【Ctrl+End】移动到文档的结尾]]></content>
+    <content type="text"><![CDATA[运行【calc】计算器【charmap】启动字符映射表【cleanmgr】打开磁盘清理工具【cmd】命令提示符【compmgmt.msc】计算机管理【explorer】打开资源管理器【mspaint】打开画图板【mstsc】远程桌面连接【notepad】打开记事【osk】打开屏幕键盘【regedit】注册表【services.msc】服务【winver】Windows版本【slmgr.vbs -dlv】查询win10激活信息【slmgr.vbs -dli】查询操作系统版本、许可证状态【slmgr.vbs -xpr】查询win10是否永久激活 cmd【cd\】切换到根目录【cd..】返回上级目录【cd 路径】打开指定目录【dir】查看目录【x:】切换盘符【md 文件夹名称】创建目录【rd 路径】删除当前指定的目录【echo a&gt;xxx.txt】创建文件【echo %JAVA_HOME%】查看路径 【net start】查看开启了哪些服务【net start 服务名】开启服务。如：net start mysql【net stop 服务名】停止服务。如：net stop mysql【netstat -ano|findstr 端口号】查看端口【net share】查看共享的文件【path】查看环境变量【services.msc】系统服务 【tree /f &gt; list.txt】生成目录结构树 快捷键【F2】重命名【F11】最大化/最小化活动窗口【Windows键/Ctrl+Esc】打开开始菜单【Windows键+M】最小化所有被打开的窗口【Windows键+R】打开“运行”对话框【Windows键+Break】打开“系统属性”对话框【Windows键+D】最小化/还原所有窗口【Windows键+L】锁定计算机【Windows键+E】打开资源管理器【Delete】放入回收站【Shift+Delete】彻底删除【Alt+1】标准型模式【Alt+2】科学型模式【Alt+3】切换到程序员模式【Alt+F4 】关闭当前应用程序 【Alt+Tab】切换应用程序 【Alt+D】选中地址栏【Ctrl+Shift+N】新建文件夹【Ctrl+Shift+&gt;】增大字体大小【Ctrl+Shift+&lt;】减小字体大小【Ctrl+E】选中搜索框【Ctrl+H】在文档中替换【Ctrl+Home】移动到文档的开头【Ctrl+End】移动到文档的结尾]]></content>
       <categories>
-        <category>操作系统</category>
+        <category>os</category>
       </categories>
       <tags>
         <tag>Windows</tag>
@@ -384,11 +403,8 @@
     <url>%2F%E7%AE%97%E6%B3%95%2F</url>
     <content type="text"><![CDATA[算法基础排序堆排序堆排序的时间复杂度是O(nlgn)。 快速排序线性时间排序数据结构基本数据结构栈和队列栈和队列都是动态集合，且在其上进行DELETE操作所移除的元素是预先设定的。在栈（stack）中，被删除的是最近插入的元素：栈实现的是一种后进先出（last-in，first-out，LIFO）策略。类似的，队列（queue）中，被删去的总是在集合中存在时间最长的那个元素：队列实现的是一种先进先出（first-in，first-out，FIFO）策略。 栈上的INSERT操作称为压入（PUSH），而无元素参数的DELETE操作称为弹出（POP）。 队列 链表散列表二叉搜索树红黑树高级数据结构B树图算法基本的图算法最小生成树]]></content>
       <categories>
-        <category>算法</category>
+        <category>algorithms</category>
       </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[android-命令行工具]]></title>
@@ -827,8 +843,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[IDE-Android_Studio]]></title>
-    <url>%2F%E3%80%90%E5%88%A9%E5%99%A8%E3%80%91IDE-Android_Studio%2F</url>
+    <title><![CDATA[Android_Studio]]></title>
+    <url>%2F%E3%80%90%E5%88%A9%E5%99%A8%E3%80%91Android_Studio%2F</url>
     <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 概览Android Studio 基于Gradle的灵活构建系统 可针对所有Android设备进行开发的统一环境 Instant Run，可将变更推送到正在运行的应用，无需构建新的APK 丰富的测试工具和框架 C++和NDK支持 配置Logcat颜色Assert：#8F0005 深红Debug：#0070BB 蓝Error：#FF0006 红Info：#48BB31 绿Verbose：#BBBBBB 白Warning：#BBBB23 黄 Debug Show Execution Point Step Over：单步执行。如果当前行为方法调用（不会跳到方法内部），方法执行完后跳到下一行。 Step Into：与Step Over不同的是，会跳到方法内部（非类库的方法）。 Force Step Into：与Step Into不同的是，始终跳到方法内部。 Step Out：跳出方法，返回到该方法调用处。 Drop Frame Run to Cursor Resume Program：程序执行到下一个断点处。 Stop：停止调试。 变量观察 选中变量，右键选择Add to Watches 修改变量值，调试结果。选择Set Value 条件断点循环体内设置。 日志断点Suspend取消选中，显示日志输入框。 异常断点单击如下图标，在弹窗中新建异常断点。 变量断点方法断点在方法名所在行添加断点。 Plugins]]></content>
       <categories>
         <category>利器</category>
@@ -838,9 +854,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[IDE-IntelliJ_IDEA]]></title>
-    <url>%2F%E3%80%90%E5%88%A9%E5%99%A8%E3%80%91IDE-IntelliJ_IDEA%2F</url>
-    <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 简介IDEA是JetBrains公司的产品，总部位于捷克共和国的首都布拉格。IDEA，全称IntelliJ IDEA，是java编程语言开发的集成环境。被业界公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、各类版本工具（git、svn等）、JUnit、代码分析、创新的GUI设计等。版本： Ultimate（旗舰版，收费） Community（社区版，免费） 官方使用文档：https://www.jetbrains.com/help/idea/meet-intellij-idea.html 安装目录 \IntelliJ IDEA 2018.3.5\bin中idea64.exe.vmoptions文件，修改内存大小配置。 常用设置 Editor -&gt; General 设置鼠标滚轮修改字体大小 设置鼠标悬浮提示 设置自动导包 添加方法分隔符 -&gt; Appearance 忽略大小写提示 -&gt; Code Completion 取消单行显示tabs操作 -&gt; Editor Tabs Editor -&gt; Color Scheme 设置主题 IDEA主题 设置注释颜色 -&gt; Language Defaults -&gt; Comments Editor -&gt; Code Style Editor -&gt; File and Code Templates：设置文件头部信息/*\ @author 001* @date ${DATE}* @desc*/ Editor -&gt; File Encodings：设置项目文件编码UTF-8 Build, Execution, Deployment -&gt; Compiler：设置自动编译 File -&gt; Power Save Mode：设置为省电模式 快捷键（Keymap）模板（Template）常用模板 File | Settings | Editor | Live Templates（可以自定义） File | Settings | Editor | General | Postfix Completion（不可以自定义） 输出 sout（输出） soutp（打印形参） soutm（”当前类名.当前方法名”） soutv（打印变量值） xxx.sout for循环 fori（普通for循环） iter（增强for循环） itar（普通for循环） list遍历 list.for（增强for循环） list.fori（普通for循环遍历） list.forr（倒序遍历） 条件判断 ifn（对象==null） inn（对象!=null） xxx.nn xxx.null private static final（prsf）public static final psf psfi（int类型） psfs（String类型） 修改psfi，Template text:12public static final int $VAR1$ = $VAR2$;$END$ 自定义模板 新建Template Group，如Custom 新建Live Template 1234567891011test:public void test$VAR1$() &#123; $VAR2$&#125;pric:/** * $VAR1$ */private int $VAR2$ = $VAR3$;$END$ 断点调试创建Java Web Project静态Java Web动态Java WebNew Module -&gt; Java -&gt; Web Application Tomcat Apache Tomcat 官网下载安装包 配置环境变量 CATALINA_HOME（D:\swTools\apache-tomcat-8.5.38） Path（;%CATALINA_HOME%bin） 启动Tomcat服务：Tomcat目录/bin/startup.bat 测试安装：http://localhost:8080/ 关联 Tomcat Server -&gt; Local Maven（Build Tools）构建工具发展史：Make -&gt; Ant -&gt; Maven -&gt; Gradle配置：File | Settings | Build, Execution, Deployment | Build Tools | Maven Maven home directory：Maven安装目录 User settings file：\conf\settings.xml，可以配置本地仓库目录，镜像（VPN） 123456789101112&lt;mirror&gt; &lt;id&gt;alimaven&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;aliyun maven&lt;/name&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;&lt;/mirror&gt;&lt;mirror&gt; &lt;id&gt;repo2&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;repo2 maven&lt;/name&gt; &lt;url&gt;http://repo2.maven.org/maven2&lt;/url&gt;&lt;/mirror&gt; Local repository：settings.xml中配置本地仓库目录。 Pluginshttps://plugins.jetbrains.com/ GsonFormat 其它设置 生成JavaDoc]]></content>
+    <title><![CDATA[IntelliJ_IDEA]]></title>
+    <url>%2F%E3%80%90%E5%88%A9%E5%99%A8%E3%80%91IntelliJ_IDEA%2F</url>
+    <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 概述IDEA是JetBrains公司的产品，总部位于捷克共和国的首都布拉格。IDEA，全称IntelliJ IDEA，是java编程语言开发的集成环境。被业界公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、各类版本工具（git、svn等）、JUnit、代码分析、创新的GUI设计等。 Ultimate（旗舰版，收费） Community（社区版，免费） 官方使用文档：https://www.jetbrains.com/help/idea/meet-intellij-idea.html \IntelliJ IDEA 2018.3.5\bin中idea64.exe.vmoptions文件，修改内存大小配置。 常用设置 Editor -&gt; General 设置鼠标滚轮修改字体大小 设置鼠标悬浮提示 设置自动导包 添加方法分隔符 -&gt; Appearance 忽略大小写提示 -&gt; Code Completion 取消单行显示tabs操作 -&gt; Editor Tabs Editor -&gt; Color Scheme 设置主题 IDEA主题 设置注释颜色 -&gt; Language Defaults -&gt; Comments Editor -&gt; Code Style Editor -&gt; File and Code Templates：设置文件头部信息/*\ @author 001* @date ${DATE}* @desc*/ Editor -&gt; File Encodings：设置项目文件编码UTF-8 Build, Execution, Deployment -&gt; Compiler：设置自动编译 File -&gt; Power Save Mode：设置为省电模式 快捷键（Keymap）模板（Template）常用模板 File | Settings | Editor | Live Templates（可以自定义） File | Settings | Editor | General | Postfix Completion（不可以自定义） 输出 sout（输出） soutp（打印形参） soutm（”当前类名.当前方法名”） soutv（打印变量值） xxx.sout for循环 fori（普通for循环） iter（增强for循环） itar（普通for循环） list遍历 list.for（增强for循环） list.fori（普通for循环遍历） list.forr（倒序遍历） 条件判断 ifn（对象==null） inn（对象!=null） xxx.nn xxx.null private static final（prsf）public static final psf psfi（int类型） psfs（String类型） 修改psfi，Template text:12public static final int $VAR1$ = $VAR2$;$END$ 自定义模板 新建Template Group，如Custom 新建Live Template 1234567891011test:public void test$VAR1$() &#123; $VAR2$&#125;pric:/** * $VAR1$ */private int $VAR2$ = $VAR3$;$END$ debug新建Java Web ProjectNew -&gt; Java -&gt; Web Application web/WEB-INF下创建两个文件夹：classes和lib Project Structure ——&gt; Modules ——&gt; Paths修改第一条路径 配置Tomcat容器 Tomcat中部署项目 编写index.jsp，运行Tomcat Tomcat 下载 http://tomcat.apache.org/ 配置环境变量 CATALINA_HOME（D:\swTools\apache-tomcat-8.5.38） Path（;%CATALINA_HOME%bin） 启动：Tomcat目录/bin/startup.bat 测试安装：http://localhost:8080/ 关联 Tomcat Server -&gt; Local Tomcat的版本睡着SUN公司推出的Servlet/JSP规范不同而不同，基本上是SUN公司每推出一个版本，Tomcat也会发行新的版本以适应新的规范。 Tomcat版本 Servlet/JSP规范 JDK版本 9.0 3.0 1.9 8.0 3.0 1.8 常见问题 JAVA_HOME环境变量没有配置，startup.bat启动会失败。 端口占用。\conf\server.xml Maven（Build Tools）构建工具发展史：Make -&gt; Ant -&gt; Maven -&gt; Gradle配置：File | Settings | Build, Execution, Deployment | Build Tools | Maven Maven home directory：Maven安装目录 User settings file：\conf\settings.xml，可以配置本地仓库目录，镜像（VPN） 123456789101112&lt;mirror&gt; &lt;id&gt;alimaven&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;aliyun maven&lt;/name&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;&lt;/mirror&gt;&lt;mirror&gt; &lt;id&gt;repo2&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;repo2 maven&lt;/name&gt; &lt;url&gt;http://repo2.maven.org/maven2&lt;/url&gt;&lt;/mirror&gt; Local repository：settings.xml中配置本地仓库目录。 Pluginshttps://plugins.jetbrains.com/ GsonFormat 其它设置 生成JavaDoc]]></content>
       <categories>
         <category>利器</category>
       </categories>
