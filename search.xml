@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[java-Java EE知识框架]]></title>
-    <url>%2Fjava-JavaEE%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6%2F</url>
+    <title><![CDATA[java EE知识框架]]></title>
+    <url>%2FjavaEE%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[概述Java EE（Java Platform Enterprise Edition，Java平台企业版），最初称为J2EE，2018年3月更名为Jakarta EE。是Sun公司为企业级应用推出的标准平台，用来开发B/S架构软件。Java EE是一系列技术和标准的集合，它包括了从前端Web界面到中间件，再到后端数据库系统的一系列技术和规范。 开发工具 IntelliJ IDEA Tomcat（应用服务器） MySQL、Oracle（SQLyog，Navicat） JSPJSP（Java Server Pages），其根本是一个简化的Servlet设计。JSP页面内容由两部分组成： 静态部分：标准的HTML标签、静态的页面内容。 动态部分：&lt;%%&gt; JSP文件必须在JSP服务器内运行。 JSP文件必须生成Servlet才能执行。 每个JSP页面的第一个访问者速度很慢，因为必须等待JSP编译成Servlet。 基本语法 JSP声明的语法格式：&lt;%! 声明部分 %&gt; JSP输出表达式语法格式：&lt;%=表达式%&gt; JSP注释格式：&lt;%-- 注释内容 --%&gt; JDBC JDBC（Java DataBase Connectivity，java数据库连接）是一种用于执行SQL语句的Java API，可以为多种关系数据库提供统一访问。 持久化（Persistence），数据保存到可掉电式存储设备中以供之后使用。 发展历程： JDBC -&gt; JDO -&gt; Hibernate JDBC API包括两个层次： 面向应用的API：JDBC API，提供了应用程序对JDBC的管理连接。java.sql.* 面向数据库的API：Java Driver API，支持JDBC管理到驱动器连接。 JDBC API常用接口和类： Connection：表示与数据库创建的连接 DriverManager：注册驱动 Statement：操作数据库sql语句的对象 ResultSet：结果集或一张虚拟表 JDBC URL示例：jdbc:mysql://localhost:3306/test java后台开发路线 编程语言 网络请求 数据库 基本算法 设计模式 应用框架 中间件 推荐书籍： Java编程思想 Java并发编程实战 深入理解Java虚拟机 函数式编程思维 TCP/IP详解 鸟哥的Linux私房菜 Spring技术内幕 Elasticsearch服务器开发 工具： Git/SVN（版本控制） Jenkins（持续集成） Maven（项目管理工具） 体系结构从上到下分别是表现层（Web）、业务层（Service）、持久层（DAO，提供数据，SQL语句）。Struts和SpringMVC是Web层的框架，Spring是业务层的框架，Hibernate和MyBatis是持久层的框架。 项目结构： Web表现层 MVCM：ModelV：View，jspC：Controller，servletservicedao ServletFilter[SSH框架]Spring + Struts/Struts2 + Hibernate Struts2Struts1核心控制器就是一个Servlet。2005年之前流行Struts2以WebWork为核心，采用拦截器的机制来处理用户的请求。 下载Struts2开发包 http://struts.apache.org Hibernate传统的Java应用都是采用JDBC来访问数据库的，但传统的JDBC采用的是一种基于SQL的操作方式，这种操作方式与Java语言的面向对象特征不太一致，所以Java EE应用需要一种技术，通过这种技术能让Java以面向对象的方式操作关系数据库。ORM（Object Relation Mapping），最早的ORM是Entity EJB（Enterprise JavaBean），许多人觉得EJB非常繁琐。这种背景下，Hibernate框架应运而生。 [SSM框架]Spring + Spring MVC + Mybatis Spring简介Spring是于2003年兴起的一个轻量级的Java开发框架，由Rod Johnson创建。解决的是业务逻辑层和其他各层的松耦合问题。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。 EJB -&gt; Spring Framework -&gt; Spring Boot -&gt; Spring Cloud Spring Framework 5Spring BootSpring CloudSpring使用Spring Initializrhttps://start.spring.io/ SpringMVCSpringMVC是Spring实现的一个Web层，相当于Struts的框架，但是比Struts更加灵活和强大 MybatisMybatis是一个持久层的框架，在使用上相比Hibernate更加灵活，可以控制sql的编写，使用XML或注解进行相关的配置。 [数据库]Redis(高速缓存)MongoDBMongoDB Elasticsearch[微服务架构]DubboSpring CloudZookeeper[容器技术]DockerDocker 是一个开源的应用容器引擎，让开发者可以打包应用以及依赖包到一个可移植的容器中，然后发布到任何流行的Linux机器上，也可以实现虚拟化，容器是完全使用沙箱机制，相互之间不会有任何接口。 K8sKubernetes 是容器集群管理系统，是一个开源的平台，可以实现容器集群的自动化部署、自动扩缩容、维护等功能。 KafkaKafka 是一个分布式消息队列。具有高性能、持久化、多副本备份、横向扩展能力。生产者往队列里写消息，消费者从队列里取消息进行业务逻辑。一般在架构设计中起到解耦、削峰、异步处理的作用。 高并发负载均衡其他消息队列缓存技术Node.js]]></content>
       <categories>
         <category>java</category>
-        <category>Java EE</category>
+        <category>java EE</category>
       </categories>
       <tags>
-        <tag>java</tag>
-        <tag>Java EE</tag>
+        <tag>java EE</tag>
       </tags>
   </entry>
   <entry>
@@ -34,71 +33,68 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[web-框架]]></title>
-    <url>%2Fweb-%E6%A1%86%E6%9E%B6%2F</url>
+    <title><![CDATA[前端框架]]></title>
+    <url>%2F%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[UI框架LayuiLayui MiniUIVueVue.js 是渐进式的JS框架。只关注视图层，采用自底向上增量开发的设计。 ReactReact AngularAngularJS 诞生于2009年，由Misko Hevery等人创建，之后被Google所收购。 Web.xmlServletServlet通常被称为服务器端小程序，是运行在服务器端的程序，用于处理及响应客户端的请求。Servlet是个特殊的Java类，这个Java类必须继承HttpServlet。每个Servlet可以响应客户端的请求。Servlet提供不同的方法用于响应客户端请求。 doGet doPost doPut doDelete service()：响应客户端的所有请求。 FilterFilter可以认为是Servlet的一种加强版，主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理，是个典型的处理链。 Listener]]></content>
       <categories>
         <category>web</category>
       </categories>
       <tags>
-        <tag>Web</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-API-Constraint Layout Library]]></title>
-    <url>%2Fandroid-API-ConstraintLayoutLibrary%2F</url>
+    <title><![CDATA[android-Constraint Layout Library]]></title>
+    <url>%2Fandroid-ConstraintLayoutLibrary%2F</url>
     <content type="text"><![CDATA[简介 Android Studio版本至少2.3； 添加依赖，如下：1implementation 'com.android.support.constraint:constraint-layout:1.1.3' ConstraintLayout1package android.support.constraint; ConstraintLayout 主要是为了解决布局嵌套过多的问题，以灵活的方式定位和调整小部件。Android Studio 2.3开始，官方模板默认使用ConstraintLayout。 相对定位 layout_constraintLeft_toLeftOf layout_constraintLeft_toRightOf layout_constraintRight_toLeftOf layout_constraintRight_toRightOf layout_constraintTop_toTopOf layout_constraintTop_toBottomOf layout_constraintBottom_toTopOf layout_constraintBottom_toBottomOf layout_constraintBaseline_toBaselineOf：约束文本基线 layout_constraintStart_toEndOf layout_constraintStart_toStartOf layout_constraintEnd_toStartOf layout_constraintEnd_toEndOf 1234&lt;Button android:id="@+id/buttonA" ... /&gt;&lt;Button android:id="@+id/buttonB" ... app:layout_constraintLeft_toRightOf="@+id/buttonA" /&gt; They all take a reference id to another widget, or the parent (which will reference the parent container, i.e. the ConstraintLayout):12&lt;Button android:id="@+id/buttonB" ... app:layout_constraintLeft_toLeftOf="parent" /&gt; 边距 android:layout_marginStart android:layout_marginEnd android:layout_marginLeft android:layout_marginTop android:layout_marginRight android:layout_marginBottom 注：设置边距时，需要约束控件在ConstraintLayout里的位置。 如果目标View不可见（View.GONE）时，可以通过以下属性设置不同的边距： layout_goneMarginStart layout_goneMarginEnd layout_goneMarginLeft layout_goneMarginTop layout_goneMarginRight layout_goneMarginBottom 居中和偏移居中：1234567&lt;EditText android:id="@+id/edt" ... app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" /&gt; 偏移（赋值0-1）： layout_constraintHorizontal_bias：水平偏移 layout_constraintVertical_bias：垂直偏移 Circular positioning layout_constraintCircle : references another widget id layout_constraintCircleRadius : 组件间的中心距离 layout_constraintCircleAngle : which angle the widget should be at (in degrees, from 0 to 360) 尺寸约束 指定尺寸大小 wrap_contentandroid:minWidth ：最小宽度android:minHeight ：最小高度android:maxWidth ：最大宽度android:maxHeight ：最大高度app:layout_constrainedWidth=”true|false”app:layout_constrainedHeight=”true|false” 0dp注: MATCH_PARENT is not recommended for widgets contained in a ConstraintLayout. Similar behavior can be defined by using MATCH_CONSTRAINT with the corresponding left/right or top/bottom constraints being set to “parent”. 百分比layout_constraintWidth_min and layout_constraintHeight_min : will set the minimum size for this dimensionlayout_constraintWidth_max and layout_constraintHeight_max : will set the maximum size for this dimensionlayout_constraintWidth_percent and layout_constraintHeight_percent : will set the size of this dimension as a percentage of the parent app:layout_constraintWidth_default=”percent” app:layout_constraintHeight_default=”percent” Ratio比例123456&lt;Button android:layout_width="wrap_content" android:layout_height="0dp" app:layout_constraintDimensionRatio="1:1" /&gt; width:height 链Chain Style：链的第一个控件是这条链的链头，可以在链头中设置layout_constraintHorizontal_chainStyle、layout_constraintVertical_chainStyle CHAIN_SPREAD(default style) Weighted chain CHAIN_SPREAD_INSIDE：展开元素，链的两端贴近parent； CHAIN_PACKED：链的元素将被打包在一起。 GroupGroup将多个控件归为一组，方便隐藏或显示一组控件。 Guideline]]></content>
       <categories>
         <category>android</category>
-        <category>API</category>
+        <category>api</category>
       </categories>
       <tags>
         <tag>android</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[web-JavaScript]]></title>
-    <url>%2Fweb-JavaScript%2F</url>
+    <title><![CDATA[JavaScript详解]]></title>
+    <url>%2FJavaScript%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[JavaScript1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。12345// 对象是名/值对的集合，或字符串到值映射的集合var book = &#123; topic: "JavaScript", fat: true&#125;; JavaScript程序是用Unicode字符集编写的。 JavaScript是区分大小写的语言。 JavaScript标识符（用来对变量和函数进行命名）必须以字母、下划线、美元符开始。 数据类型、值、变量JavaScript的数据类型分为两类：原始类型（数字、字符串、布尔值、null、undefined）和对象类型。 JavaScript不区分整数值和浮点数值。所有数值均用浮点数值表示。 JavaScript中，字符串是不可变的。 12Math.pow(2,53) // 2的53次幂Math.round(.8) // =&gt; 1.0：四舍五入 jQueryjQuery是一个快速、简洁的JavaScript框架，继Prototype之后又一个优秀的JavaScript代码库。jQuery设计的宗旨是“Write Less,Do More”。发布者：John ResigjQuery 1.0：2006/01 Ajax（网络请求）Ajax（Asynchronous JavaScript and XML）]]></content>
       <categories>
         <category>web</category>
       </categories>
       <tags>
-        <tag>Web</tag>
         <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[web-CSS]]></title>
-    <url>%2Fweb-CSS%2F</url>
+    <title><![CDATA[CSS详解]]></title>
+    <url>%2FCSS%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[CSSCSS规则有两个主要的部分构成：选择器（需要改变样式的HTML元素），以及一条或多条声明。12345h1 &#123;color:green;font-size:12px;&#125; id和class选择器1234567891011121314151617181920&lt;!--CSS中id选择器以“#”来定义--&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt; &lt;title&gt;css demo&lt;/title&gt; &lt;style&gt;#para1&#123; text-align:center; color:red;&#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;p id="para1"&gt;Hello World!&lt;/p&gt;&lt;p&gt;不受该样式的影响&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; 12345678910111213141516171819&lt;!--CSS中class选择器以“.”来定义。也可以指定特定的HTML元素使用class，如p.center--&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt; &lt;title&gt;css demo&lt;/title&gt; &lt;style&gt;.center&#123; text-align:center;&#125;&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 class="center"&gt;标题居中&lt;/h1&gt;&lt;p class="center"&gt;段落居中&lt;/p&gt; &lt;/body&gt;&lt;/html&gt; CSS3选择器盒模型背景和边框文字特效2D/3D转换动画多列布局用户界面]]></content>
       <categories>
         <category>web</category>
       </categories>
       <tags>
-        <tag>Web</tag>
         <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[web-HTML]]></title>
-    <url>%2Fweb-HTML%2F</url>
+    <title><![CDATA[HTML详解]]></title>
+    <url>%2FHTML%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[常用标签123&lt;!DOCTYPE html&gt;：声明为HTML5文档。&lt;html&gt;HTML页面的根元素&lt;/html&gt;&lt;body&gt;可见的页面内容&lt;/body&gt; 12345&lt;!--页面标签--&gt;&lt;h1&gt;-&lt;h6&gt;：标题&lt;p&gt;段落&lt;/p&gt;&lt;br/&gt;：换行&lt;hr/&gt;：水平线 head标签123456789101112131415161718192021222324252627282930&lt;head&gt;&lt;!--&lt;meta&gt;标签提供了元数据，元数据不显示在页面上，但会被浏览器解析。--&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="description" content="定义网页描述内容"&gt;&lt;meta name="author" content="定义网页作者"&gt;&lt;!--3秒刷新网页--&gt;&lt;meta http-equiv="refresh" content="3"&gt;&lt;!--为搜索引擎定义关键字--&gt;&lt;meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"&gt;&lt;title&gt;网页标题&lt;/title&gt;&lt;!--标题左侧显示logo--&gt;&lt;link rel="shortcut icon" href="图片url"&gt;&lt;!--HTML文档中所有的链接标签的默认链接--&gt;&lt;base href="http://www.test.com/images/" target="_blank"&gt;&lt;!--HTML文档与外部资源之间的关系，通常用于链接到样式表--&gt;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;&lt;!--HTML文档的样式文件引用地址或自定义样式--&gt;&lt;style type="text/css"&gt;body &#123;background-color:yellow&#125;p &#123;color:green&#125;&lt;/style&gt;&lt;!--加载脚本文件--&gt;&lt;script&gt;&lt;/script&gt;&lt;/head&gt; 链接12&lt;!--使用target属性，可以定义链接在哪个窗口显示。_blank表示在新窗口显示--&gt;&lt;a href="http://www.liuweidong.club/" target="_blank"&gt;测试链接&lt;/a&gt; 图片123456789101112&lt;!--html文件与图片在不同盘符--&gt;&lt;img src="file:///f:/*.jpg" width="500" height="300"/&gt;&lt;!--html文件与图片在相同目录--&gt;&lt;img src="*.jpg" width="500" height="300"/&gt; &lt;!--html文件与image文件夹在相同目录--&gt;&lt;img src="image/*.jpg/"width="500" height="300"/&gt;&lt;!--html文件与图片的父文件夹在相同目录--&gt;&lt;img src="../image/*.jpg/"width="500" height="300"/&gt;&lt;!--网络图片--&gt;&lt;img src="http://www.test.com/images/test.png" width="500" height="300"/&gt;&lt;img src="url" alt="图片加载不出来时，替换图片的文本"/&gt; 列表12345678910111213&lt;!--无序列表--&gt;&lt;ul&gt; &lt;li&gt;A&lt;/li&gt; &lt;li&gt;B&lt;/li&gt; &lt;li&gt;C&lt;/li&gt;&lt;/ul&gt;&lt;!--有序列表，start属性可以指定从特定数字开始--&gt;&lt;ol start="3"&gt; &lt;li&gt;A&lt;/li&gt; &lt;li&gt;B&lt;/li&gt; &lt;li&gt;C&lt;/li&gt;&lt;/ol&gt; HTML CSS123456789101112131415161718&lt;!--方式一 内联样式 在HTML元素中使用"style"属性--&gt;&lt;!--background-color：背景色；font-family：字体；color：文字颜色；margin-left：左边距； text-align：文本对齐方式；--&gt;&lt;h2 style="background-color:red;"&gt;标题&lt;/h2&gt;&lt;p style="font-family:arial;color:blue;font-size:20px;margin-left:20px;"&gt;段落&lt;/p&gt;&lt;h1 style="text-align:center;"&gt;居中对齐的标题&lt;/h1&gt;&lt;!--方式二 内部样式--&gt;&lt;head&gt;&lt;style type="text/css"&gt;body &#123;background-color:yellow;&#125;p &#123;color:blue;&#125;&lt;/style&gt;&lt;/head&gt;&lt;!--方式三 外部样式--&gt;&lt;head&gt;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;&lt;/head&gt; 注意：如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。 格式化标签123456&lt;b&gt;加粗&lt;/b&gt;&lt;i&gt;斜体&lt;/i&gt;&lt;del&gt;删除&lt;/del&gt;&lt;ins&gt;下划线&lt;/ins&gt;&lt;sub&gt;下标&lt;/sub&gt;&lt;sup&gt;上标&lt;/sup&gt; 其他标签1&lt;div&gt;组合其他标签的容器&lt;/div&gt; 示例123456789101112&lt;!--html示例--&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset="utf-8"&gt; &lt;title&gt;页面标题&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;h1&gt;标题&lt;/h1&gt; &lt;p&gt;段落&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
       <categories>
         <category>web</category>
       </categories>
       <tags>
-        <tag>Web</tag>
         <tag>HTML</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-API-AndroidX]]></title>
-    <url>%2Fandroid-API-AndroidX%2F</url>
+    <title><![CDATA[android-AndroidX]]></title>
+    <url>%2Fandroid-AndroidX%2F</url>
     <content type="text"><![CDATA[概述 We hope the division between android. and androidx. makes it more obvious which APIs are bundled with the platform, and which are static libraries for app developers that work across different versions of Android. 简单地说就是新的库可以在不同的Android版本上使用。之前的话，所有support依赖库版本必须一致，如果有bug，所有依赖库版本都需要升级，存在绑定关系，且正式版的发布周期也很长。官方参考地址：官方说明AndroidX OverviewMigrating to AndroidX（迁移到AndroidX）Recent Release NotesAPI reference：AndroidX 使用与迁移新项目中使用AndroidX，需要将编译SDK设置为Android 9.0（API 28）或更高版本，并在gradle.properties文件中将以下两个Android Gradle插件标记设置为true。1234# 当前项目启用AndroidXandroid.useAndroidX=true# 是否迁移之前的依赖包android.enableJetifier=true Android Studio 3.2 Canary中添加了一键迁移的功能 Refactor -&gt; Migrate to AndroidXProperties]]></content>
       <categories>
         <category>android</category>
-        <category>API</category>
+        <category>api</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -117,12 +113,12 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-API-Android Support Library]]></title>
-    <url>%2Fandroid-API-AndroidSupportLibrary%2F</url>
+    <title><![CDATA[android-Android Support Library]]></title>
+    <url>%2Fandroid-AndroidSupportLibrary%2F</url>
     <content type="text"><![CDATA[概述 Provides a variety of Android feature and utility APIs that are compatible with a wide &gt; range of platform versions.如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库，每一个support library向上兼容于不同的API版本。 官方参考地址：Support Library OverviewFeaturesPackagesSetupRecent Support Library RevisionsSupport Library Revision ArchiveAPI reference：Android Support Library Android Support V4最早（2011年4月）实现的库。 support-v4添加依赖：1implementation 'com.android.support:support-v4:25.0.0' DrawerLayoutFragment1package android.support.v4.app; FragmentActivity1package android.support.v4.app; NestedScrollViewViewPager1package android.support.v4.view; Android Support V7appcompat-v7AppCompatActivity1package android.support.v7.app; 继承结构：java.lang.Object ↳ android.content.Context ↳ android.content.ContextWrapper ↳ android.view.ContextThemeWrapper ↳ android.app.Activity ↳ android.support.v4.app.FragmentActivity ↳ android.support.v7.app.AppCompatActivityAppCompatActivitytheme： cardview-v7gridlayout-v7recyclerview-v7Android 5.0推出。相比ListView优点：1)封装了ViewHolder的回收复用，编写Adapter面向的是ViewHolder而不再是View了，复用的逻辑被封装了，写起来更加简单。2)插拔式的体验，高度的解耦。3)设置布局管理器控制Item的布局方式，横向、竖向、瀑布流方式。4)设置Item间隔样式。继承ItemDecoration。5)控制Item增删的动画，通过ItemAnimator进行绘制。 Design Support Library简介Google IO 2015 Material Design支持库。添加依赖：1implementation 'com.android.support:design:25.0.0' AppBarLayout继承LinearLayout，默认方向是Vertical CollapsingToolbarLayoutCoordinatorLayoutCoordinatorLayout遵循Material风格，结合AppBarLayout，CollapsingToolbarLayout等可产生各种炫酷的折叠悬浮效果。 FloatingActionButtonNavigationViewSnackbar页面底部弹出式消息。 TabLayoutTextInputLayout]]></content>
       <categories>
         <category>android</category>
-        <category>API</category>
+        <category>api</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -277,12 +273,12 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-API-AndroidPlatform]]></title>
-    <url>%2Fandroid-API-AndroidPlatform%2F</url>
+    <title><![CDATA[android-AndroidPlatform]]></title>
+    <url>%2Fandroid-AndroidPlatform%2F</url>
     <content type="text"><![CDATA[android.animationAnimatorAnimatorSetValueAnimatorandroid.appActivityApplicationDatePickerDialogDialogandroid.bluetoothandroid.contentContextContextWrapperIntentandroid.databaseandroid.graphicsBitmapandroid.utilSparseArrayAndroid内部特有的API。用来替代HashMap&lt;Integer, E&gt;这种形式，使用SparseArray更加节省内存空间。HashMap是数组和链表的结合体，被称为链表散列。SparseArray是单纯数组的结合，被称为稀疏数组。Android堆区允许使用的最大内存仅仅16M。 android.viewViewViewGroupWindowandroid.webkitWebViewandroid.widgetEditTextFrameLayoutGridViewImageViewListViewTextViewToolbar]]></content>
       <categories>
         <category>android</category>
-        <category>API</category>
+        <category>api</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -304,7 +300,7 @@
     <url>%2F%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%8E%E7%BC%96%E7%A0%81%2F</url>
     <content type="text"><![CDATA[ASCII1961年提出基本的ASCII字符集共有128个字符，其中有96个可打印字符，包括常用的字母、数字、标点符号等，另外还有32个控制字符。 Bin——Dec——Hex——缩写/字符——解释00000000——0——00——NUL（null）——空字符00100000——32——20——（space）——空格00100001——33——21——!00110000——48——30——001000000——64——40——@01000001——65——41——A01100001——97——61——a01111111——127——7F——DEL (delete)——删除 ASCII大致可以分作三部分组成。第一部分是：ASCII码非打印控制字符ASCII码表上的数字0–31分配给了控制字符，用于控制像打印机等一些外围设备。例如，12代表换页/新页功能。此命令指示打印机跳到下一页的开头。第二部分是：ASCII码打印字符数字32–126分配给了能在键盘上找到的字符，当您查看或打印文档时就会出现。数字127代表 DELETE 命令。第三部分是：扩展ASCII码打印字符扩展的ASCII字符满足了对更多字符的需求。扩展的ASCII包含ASCII中已有的128个字符（数字0–32显示在下图中），又增加了128个字符，总共是256个。即使有了这些更多的字符，许多语言还是包含无法压缩到256个字符中的符号。因此，出现了一些ASCII码的变体来囊括地区性字符和符号。例如，许多软件程序把ASCII码表（又称作ISO8859-1）用于北美、西欧、澳大利亚和非洲的语言。 Unicode1990年开始研发，1994年正式公布。 UTF-8GB2312GBK]]></content>
       <categories>
-        <category>计算机系统</category>
+        <category>Computer Systems</category>
       </categories>
   </entry>
   <entry>
@@ -312,7 +308,7 @@
     <url>%2F%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%2F</url>
     <content type="text"><![CDATA[计算机硬件输入单元、输出单元、CPU内部的控制单元、算术逻辑单元、内存 总线：贯穿整个系统的是一组电子管道，称作总线，携带信息字节并负责在各个部件间传递。 I/O设备：用户输入的键盘和鼠标，用户输出的显示器，以及用于长期存储数据和程序的磁盘驱动器（磁盘）。每个I/O设备都通过一个控制器或适配器与I/O总线相连。控制器和适配器之间的区别主要是它们的封装方式。 主存：主存是一个临时存储设备，在处理器执行程序时，用来存放程序和程序处理的数据。从物理上来说，主存是由一组动态随机存取存储器（DRAM）芯片组成的。从逻辑上来说，存储器是一个线性的字节数组，每个字节都有其唯一的地址（数组索引）。 CPU，简称处理器，是解释（或执行）存储在主存中指令的引擎。运算器：运算器又称算术逻辑单元（ALU，Arithmetic Logic Unit）。 数字计算机的整个历史中，有两个需求是驱动进步的持续动力：一个是我们想要计算机做得更多，另一个是我们想要计算机运行得更快。 CPU（中央处理单元）解释（或执行）存储在主存中指令的引擎。处理器的核心是一个大小为一个字的存储设备（或寄存器），称为程序计数器（PC）。精简指令集（RISC）与复杂指令集（CISC）系统。CPU的“外频”与“倍频”：外频指的是CPU与外部组件进行数据传输/运算时的速度，倍频是CPU内部用来加速工作性能的一个倍数，两者相乘才是CPU的频率。主板芯片组分为北桥与南桥，北桥的总线称为系统总线，因为是内存传输的主要通道，所以速度较快；南桥是所谓的输入输出（I/O）总线，主要用于“联系”硬盘、USB、网卡等接口设备。 内存主存：一个临时存储设备，在处理器执行程序时，用来存放程序和程序处理的数据。从物理上来说，主存是由一组动态随机存取存储器（DRAM）芯片组成的。从逻辑上来说，存储器是一个线性的字节数组，每个字节都有其唯一的地址。 DRAM（动态随机访问内存），随机访问内存只有在通电时才能记录与使用，断电后数据就消失了。（也称挥发性内存） SRAM（静态随机访问内存）CPU内部第二层高速缓存。 ROM非挥发性内存。 硬盘与存储设备硬盘：机械手臂、磁头、盘片、主轴马达传输接口：IDE接口、SATA接口、SCSI接口缓冲存储器盘片分出扇区（Sector）和柱面（Cylinder）两种单位。扇区每个512bytes磁盘的第一个扇区记录两个重要信息：主引导分区（Master Boot Record，MBR）446bytes和分区表（partition table）64bytes 主板CMOS：记录主板上面的重要参数BIOS：写入到主板上某一块闪存或EEPROM的程序，开机执行，加载CMOS当中的参数，并尝试调用存储设备中的开机程序，进一步进入到操作系统。BIOS程序也可以修改CMOS中的数据。 操作系统操作系统内核（Kernel）直接参考硬件规格写成。系统调用（System Call）内核功能： 系统调用接口 程序管理：CPU调度机制 内存管理 文件系统管理：I/O 设备驱动]]></content>
       <categories>
-        <category>计算机系统</category>
+        <category>Computer Systems</category>
       </categories>
   </entry>
   <entry>
@@ -320,7 +316,7 @@
     <url>%2FMySQL%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[概述MySQLMySQL的体系结构：采用客户/服务器体系结构。因此，在使用MySQL的时候，实际上在使用两个程序。一个是服务器程序，指的是mysqld，运行在存放你数据库的机器上。另一个是客户程序，负责连接到数据库服务器。优点：并发控制由服务器提供，因而不会出现两个用户同时修改同一条记录的现象。 安装与使用 msi安装或zip解压缩 https://dev.mysql.com/downloads/mysql/ 配置环境变量 MYSQL_HOME（D:\swTools\mysql-8.0.15-winx64） Path（;%MYSQL_HOME%\bin） 在目录mysql-8.0.15-winx64\bin中新建文件my.ini参考，内容如下所示： 12345678910111213141516[mysql]# 设置mysql客户端默认字符集default-character-set=utf8 [mysqld]#设置3306端口port = 3306 # 设置mysql的安装目录basedir=D:\swTools\mysql-8.0.15-winx64# 设置mysql数据库的数据的存放目录datadir=D:\swTools\mysql-8.0.15-winx64\data# 允许最大连接数max_connections=200# 服务端使用的字符集默认为8比特编码的latin1字符集character-set-server=utf8# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB 安装MySQL：以管理员身份运行cmd， 切换到目录cd D:\swTools\mysql-8.0.15-winx64\bin 中，输入 1mysqld -install 初始化：执行命令后会在MySQL的安装目录下生成data目录并创建root用户。 1mysqld --initialize-insecure --user=mysql 启动服务 1net start mysql 停止服务 1net stop mysql 12Host：localhostPort：3306 命令【mysqld -install】安装MySQL【mysqld –initialize-insecure –user=mysql】初始化：执行命令后会在MySQL的安装目录下生成data目录并创建root用户。【net start mysql】启动服务【net stop mysql】停止服务【mysql -u root -p】登录mysql【mysql -hxx -uxx -pxx】进入mysql数据库。-h表示服务器名，-u数据库用户名，-p为密码【show databases;】显示数据库列表【mysqladmin -u用户名 -p旧密码 password 新密码】修改密码【exit】退出mysql数据库 管理工具SQLyogSQLyog是一个快速而简洁的图形化管理MySQL数据库的工具，它能够在任何地点有效地管理你的数据库，由业界著名的Webyog公司出品。 FAQ SQLyog连接数据库报错plugin caching_sha2_password could not be loaded12345678910# 登录MySQLmysql -uroot -p # 修改加密规则ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;password&apos; PASSWORD EXPIRE NEVER; # 更新一下用户的密码 ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;password&apos;; # 刷新权限FLUSH PRIVILEGES; # 重置密码alter user &apos;root&apos;@&apos;localhost&apos; identified by &apos;***123456&apos;; NavicatNavicat是一套快速、可靠并价格相当便宜的数据库管理工具，专为简化数据库的管理及降低系统管理成本而设。]]></content>
       <categories>
-        <category>db</category>
+        <category>database</category>
       </categories>
       <tags>
         <tag>MySQL</tag>
@@ -331,7 +327,7 @@
     <url>%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[[关系型数据库]关系型数据库管理系统（Relational Database Management System，RDBMS） OracleORACLE数据库系统是美国ORACLE公司（甲骨文）提供的以分布式数据库为核心的一组软件产品，是目前最流行的客户/服务器(CLIENT/SERVER)或B/S体系结构的数据库之一。 MySQLMariaDBMariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。 SQL ServerSQL Server是Microsoft公司推出的关系型数据库管理系统。 AccessMicrosoft Office Access是微软把数据库引擎的图形用户界面和软件开发工具结合在一起的一个数据库管理系统。它是微软office的一个成员, 在包括专业版和更高版本的office版本里面被单独出售。 DB2IBM公司开发的一套关系型数据库管理系统，它主要的运行环境为UNIX（包括IBM自家的AIX）、Linux、IBM i（旧称OS/400）、z/OS，以及Windows服务器版本。 [非关系型数据库]NoSQLNoSQL（Not Only SQL）]]></content>
       <categories>
-        <category>db</category>
+        <category>database</category>
       </categories>
   </entry>
   <entry>
@@ -339,7 +335,7 @@
     <url>%2FSQL%E8%AF%AD%E5%8F%A5%2F</url>
     <content type="text"><![CDATA[概述SQL（Structured Query Language，结构化查询语言），分类如下： DDL：CREATE、ALTER、DROP DML：INSERT、UPDATE、DELETE DCL：定义访问权限和安全级别 DQL：数据查询语言，用来查询记录。SELECT DDL123456789101112131415【操作数据库】// 创建数据库create database test;create database test character set gbk;show create database test;// 修改数据库字符集alter database test character set utf8;// 删除数据库drop database test;select database();// 切换数据库use test; 123456789101112131415161718192021222324252627282930【操作数据表】// 创建表create table people( id int, name varchar(5), birthday date, remark text );// 查看表格的创建细节show create table 表名;// 显示所有表show tables;// 查看表信息desc 表名;alter table 表名 character set gbk;// 增加一列alter table 表名 add 列名 类型;// 修改列的长度alter table 表名 modify 列名 类型(长度);// 删除列alter table 表名 drop 列名;// 修改列名alter table 表名 change 列1 列2 类型(长度);// 修改表名rename table 表名1 to 表名2;// 删除表drop table 表名; DML123456【插入操作】insert into user (id,num,birthday,remark) values (2,'mi','2019-07-23','你好，mi'),(3,'ali','2019-07-23','你好，ali'),(4,'bd','2019-07-23','你好，bd'); 123456【修改操作】// 修改多列数据逗号隔开// 更新表中所有该列对应的数据update 表名 set 列名='2019-07-24';// 更新指定数据update 表名 set 列名='2019-07-25' where 列名='lwd'; 123456【删除操作】delete from 表名 where 列名='';// 删除表中所有记录（表结构还在）delete from 表名;// 删除表truncate table 表名; DQL123select 列名from 表名where 行条件]]></content>
       <categories>
-        <category>db</category>
+        <category>database</category>
       </categories>
       <tags>
         <tag>SQL</tag>
@@ -384,7 +380,7 @@
     <url>%2F%E9%B8%9F%E5%93%A5%E7%9A%84Linux%E7%A7%81%E6%88%BF%E8%8F%9C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AF%87%2F</url>
     <content type="text"><![CDATA[小序Linux内核由Linux Torvalds在1991年开发。硬件 –&gt; 内核 –&gt; 系统调用 –&gt; 应用程序（加粗部分为操作系统）内核： 系统内存管理 软件程序管理 硬件设备管理 文件系统管理]]></content>
       <categories>
-        <category>os</category>
+        <category>OS</category>
       </categories>
   </entry>
   <entry>
@@ -392,7 +388,7 @@
     <url>%2FWindows%2F</url>
     <content type="text"><![CDATA[运行【calc】计算器【charmap】启动字符映射表【cleanmgr】打开磁盘清理工具【cmd】命令提示符【compmgmt.msc】计算机管理【explorer】打开资源管理器【mspaint】打开画图板【mstsc】远程桌面连接【notepad】打开记事【osk】打开屏幕键盘【regedit】注册表【services.msc】服务【winver】Windows版本【slmgr.vbs -dlv】查询win10激活信息【slmgr.vbs -dli】查询操作系统版本、许可证状态【slmgr.vbs -xpr】查询win10是否永久激活 cmd【cd\】切换到根目录【cd..】返回上级目录【cd 路径】打开指定目录【dir】查看目录【x:】切换盘符【md 文件夹名称】创建目录【rd 路径】删除当前指定的目录【echo a&gt;xxx.txt】创建文件【echo %JAVA_HOME%】查看路径 【net start】查看开启了哪些服务【net start 服务名】开启服务。如：net start mysql【net stop 服务名】停止服务。如：net stop mysql【netstat -ano|findstr 端口号】查看端口【net share】查看共享的文件【path】查看环境变量【services.msc】系统服务 【tree /f &gt; list.txt】生成目录结构树 快捷键【F2】重命名【F11】最大化/最小化活动窗口【Windows键/Ctrl+Esc】打开开始菜单【Windows键+M】最小化所有被打开的窗口【Windows键+R】打开“运行”对话框【Windows键+Break】打开“系统属性”对话框【Windows键+D】最小化/还原所有窗口【Windows键+L】锁定计算机【Windows键+E】打开资源管理器【Delete】放入回收站【Shift+Delete】彻底删除【Alt+1】标准型模式【Alt+2】科学型模式【Alt+3】切换到程序员模式【Alt+F4 】关闭当前应用程序 【Alt+Tab】切换应用程序 【Alt+D】选中地址栏【Ctrl+Shift+N】新建文件夹【Ctrl+Shift+&gt;】增大字体大小【Ctrl+Shift+&lt;】减小字体大小【Ctrl+E】选中搜索框【Ctrl+H】在文档中替换【Ctrl+Home】移动到文档的开头【Ctrl+End】移动到文档的结尾]]></content>
       <categories>
-        <category>os</category>
+        <category>OS</category>
       </categories>
       <tags>
         <tag>Windows</tag>
@@ -788,8 +784,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-Versions]]></title>
-    <url>%2Fandroid-Versions%2F</url>
+    <title><![CDATA[android-版本]]></title>
+    <url>%2Fandroid-%E7%89%88%E6%9C%AC%2F</url>
     <content type="text"><![CDATA[官方地址previewandroid-系统架构 android 9.0 - API 282018年8月7日发布，代号Pie。Android 9.0 Pie WIFI RTT进行室内定位Android 9添加了对IEEE 802.11mc Wi-Fi协议（也称为Wi-Fi Round-Trip-Time(RTT)）的平台支持，从而让您的应用可以利用室内定位功能。在运行Android 9且具有硬件支持的设备上，应用可以使用RTT API来测量与附近支持RTT的Wi-Fi接入点(AP)的距离。设备必须已启用位置服务并开启Wi-Fi扫描（在 Settings &gt; Location 下），同时您的应用必须具有ACCESS_FINE_LOCATION权限。 显示屏缺口支持Android 9支持最新的全面屏，其中包含为摄像头和扬声器预留空间的屏幕缺口。通过DisplayCutout类可确定非功能区域的位置和形状，这些区域不应显示内容。要确定这些屏幕缺口区域是否存在及其位置，请使用 getDisplayCutout()) 函数。 通知动画自动填充框架安全增强功能Android备份无障碍功能旋转文本设备端系统跟踪android 8.1 - API 272017年12月5日发布。 android 8.0 - API 262017年8月22日发布，代号Oreo（奥利奥）。Android 8.0 Oreo android 7.1 - API 252016年12月5日发布。 android 7.0 - API 242016年8月22日发布，代号Nougat（牛轧糖）。Android 7.0 Nougat android 6.0 - API 232015年5月28日发布，代号Marshmallow（棉花糖）。Android 6.0 Marshmallow android 5.1 - API 22android 5.0 - API 212014年10月15日发布，代号Lollipop（）Android 5.0 Lollipop扩展了Android的应用范围，从手机、平板电脑和可穿戴式设备，扩展到电视和汽车。 Material Design以性能为中心通知android 4.4W - API 20android 4.4 - API 19Android 4.4 KitKat android 4.3 - API 18android 4.2-4.2.2 - API 17android 4.1-4.1.1 - API 16android 4.0.3–4.0.4 - API 15android 4.0 - API 14android 3.2 - API 13android 3.1 - API 12android 3.0 - API 11android 2.3.3 - API 10android 2.3 - API 9android 2.2 - API 8android 2.1 - API 7android 2.0.1 - API 6android 1.6 - API 4android 1.5 - API 3android 1.1 - API 2android 1.0 - API 12008年，在Google I/O大会上，谷歌提出了Android HAL架构图。2008年9月，正式发布了Android 1.0系统。]]></content>
       <categories>
         <category>android</category>
@@ -827,7 +823,7 @@
         <category>综合</category>
       </categories>
       <tags>
-        <tag>UML类图</tag>
+        <tag>UML</tag>
       </tags>
   </entry>
   <entry>
@@ -856,7 +852,7 @@
   <entry>
     <title><![CDATA[IntelliJ_IDEA]]></title>
     <url>%2F%E3%80%90%E5%88%A9%E5%99%A8%E3%80%91IntelliJ_IDEA%2F</url>
-    <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 概述IDEA是JetBrains公司的产品，总部位于捷克共和国的首都布拉格。IDEA，全称IntelliJ IDEA，是java编程语言开发的集成环境。被业界公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、各类版本工具（git、svn等）、JUnit、代码分析、创新的GUI设计等。 Ultimate（旗舰版，收费） Community（社区版，免费） 官方使用文档：https://www.jetbrains.com/help/idea/meet-intellij-idea.html \IntelliJ IDEA 2018.3.5\bin中idea64.exe.vmoptions文件，修改内存大小配置。 常用设置 Editor -&gt; General 设置鼠标滚轮修改字体大小 设置鼠标悬浮提示 设置自动导包 添加方法分隔符 -&gt; Appearance 忽略大小写提示 -&gt; Code Completion 取消单行显示tabs操作 -&gt; Editor Tabs Editor -&gt; Color Scheme 设置主题 IDEA主题 设置注释颜色 -&gt; Language Defaults -&gt; Comments Editor -&gt; Code Style Editor -&gt; File and Code Templates：设置文件头部信息/*\ @author 001* @date ${DATE}* @desc*/ Editor -&gt; File Encodings：设置项目文件编码UTF-8 Build, Execution, Deployment -&gt; Compiler：设置自动编译 File -&gt; Power Save Mode：设置为省电模式 快捷键（Keymap）模板（Template）常用模板 File | Settings | Editor | Live Templates（可以自定义） File | Settings | Editor | General | Postfix Completion（不可以自定义） 输出 sout（输出） soutp（打印形参） soutm（”当前类名.当前方法名”） soutv（打印变量值） xxx.sout for循环 fori（普通for循环） iter（增强for循环） itar（普通for循环） list遍历 list.for（增强for循环） list.fori（普通for循环遍历） list.forr（倒序遍历） 条件判断 ifn（对象==null） inn（对象!=null） xxx.nn xxx.null private static final（prsf）public static final psf psfi（int类型） psfs（String类型） 修改psfi，Template text:12public static final int $VAR1$ = $VAR2$;$END$ 自定义模板 新建Template Group，如Custom 新建Live Template 1234567891011test:public void test$VAR1$() &#123; $VAR2$&#125;pric:/** * $VAR1$ */private int $VAR2$ = $VAR3$;$END$ debug新建Java Web ProjectNew -&gt; Java -&gt; Web Application web/WEB-INF下创建两个文件夹：classes和lib Project Structure ——&gt; Modules ——&gt; Paths修改第一条路径 配置Tomcat容器 Tomcat中部署项目 编写index.jsp，运行Tomcat Tomcat 下载 http://tomcat.apache.org/ 配置环境变量 CATALINA_HOME（D:\swTools\apache-tomcat-8.5.38） Path（;%CATALINA_HOME%bin） 启动：Tomcat目录/bin/startup.bat 测试安装：http://localhost:8080/ 关联 Tomcat Server -&gt; Local Tomcat的版本睡着SUN公司推出的Servlet/JSP规范不同而不同，基本上是SUN公司每推出一个版本，Tomcat也会发行新的版本以适应新的规范。 Tomcat版本 Servlet/JSP规范 JDK版本 9.0 3.0 1.9 8.0 3.0 1.8 常见问题 JAVA_HOME环境变量没有配置，startup.bat启动会失败。 端口占用。\conf\server.xml Maven（Build Tools）构建工具发展史：Make -&gt; Ant -&gt; Maven -&gt; Gradle配置：File | Settings | Build, Execution, Deployment | Build Tools | Maven Maven home directory：Maven安装目录 User settings file：\conf\settings.xml，可以配置本地仓库目录，镜像（VPN） 123456789101112&lt;mirror&gt; &lt;id&gt;alimaven&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;aliyun maven&lt;/name&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;&lt;/mirror&gt;&lt;mirror&gt; &lt;id&gt;repo2&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;repo2 maven&lt;/name&gt; &lt;url&gt;http://repo2.maven.org/maven2&lt;/url&gt;&lt;/mirror&gt; Local repository：settings.xml中配置本地仓库目录。 Pluginshttps://plugins.jetbrains.com/ GsonFormat 其它设置 生成JavaDoc]]></content>
+    <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 概述IDEA是JetBrains公司的产品，总部位于捷克共和国的首都布拉格。IDEA，全称IntelliJ IDEA，是java编程语言开发的集成环境。被业界公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、各类版本工具（git、svn等）、JUnit、代码分析、创新的GUI设计等。 Ultimate（旗舰版，收费） Community（社区版，免费） 官方使用文档：https://www.jetbrains.com/help/idea/meet-intellij-idea.html \IntelliJ IDEA 2018.3.5\bin中idea64.exe.vmoptions文件，修改内存大小配置。 常用设置 Editor -&gt; General 设置鼠标滚轮修改字体大小 设置鼠标悬浮提示 设置自动导包 添加方法分隔符 -&gt; Appearance 忽略大小写提示 -&gt; Code Completion 取消单行显示tabs操作 -&gt; Editor Tabs Editor -&gt; Color Scheme 设置主题 IDEA主题 设置注释颜色 -&gt; Language Defaults -&gt; Comments Editor -&gt; Code Style Editor -&gt; File and Code Templates：设置文件头部信息/*\ @author 001* @date ${DATE}* @desc*/ Editor -&gt; File Encodings：设置项目文件编码UTF-8 Build, Execution, Deployment -&gt; Compiler：设置自动编译 File -&gt; Power Save Mode：设置为省电模式 快捷键（Keymap）模板（Template）常用模板 File | Settings | Editor | Live Templates（可以自定义） File | Settings | Editor | General | Postfix Completion（不可以自定义） 输出 sout（输出） soutp（打印形参） soutm（”当前类名.当前方法名”） soutv（打印变量值） xxx.sout for循环 fori（普通for循环） iter（增强for循环） itar（普通for循环） list遍历 list.for（增强for循环） list.fori（普通for循环遍历） list.forr（倒序遍历） 条件判断 ifn（对象==null） inn（对象!=null） xxx.nn xxx.null private static final（prsf）public static final psf psfi（int类型） psfs（String类型） 修改psfi，Template text:12public static final int $VAR1$ = $VAR2$;$END$ 自定义模板 新建Template Group，如Custom 新建Live Template 1234567891011test:public void test$VAR1$() &#123; $VAR2$&#125;pric:/** * $VAR1$ */private int $VAR2$ = $VAR3$;$END$ debug新建Java Web ProjectNew -&gt; Java -&gt; Web Application web/WEB-INF下创建两个文件夹：classes和lib Project Structure ——&gt; Modules ——&gt; Paths修改第一条路径 配置Tomcat容器 Tomcat中部署项目 编写index.jsp，运行Tomcat Tomcat 下载 http://tomcat.apache.org/ 配置环境变量 CATALINA_HOME（D:\swTools\apache-tomcat-8.5.38） Path（;%CATALINA_HOME%bin） 启动：Tomcat目录/bin/startup.bat 测试安装：http://localhost:8080/ 关联 Tomcat Server -&gt; Local 发布 生成war包，放到webapps目录中。 Tomcat的版本随着SUN公司推出的Servlet/JSP规范不同而不同，基本上是SUN公司每推出一个版本，Tomcat也会发行新的版本以适应新的规范。 Tomcat版本 Servlet/JSP规范 JDK版本 9.0 3.0 1.9 8.0 3.0 1.8 常见问题 JAVA_HOME环境变量没有配置，startup.bat启动会失败。 端口占用。\conf\server.xml Maven（Build Tools）构建工具发展史：Make -&gt; Ant -&gt; Maven -&gt; Gradle配置：File | Settings | Build, Execution, Deployment | Build Tools | Maven Maven home directory：Maven安装目录 User settings file：\conf\settings.xml，可以配置本地仓库目录，镜像（VPN） 123456789101112&lt;mirror&gt; &lt;id&gt;alimaven&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;aliyun maven&lt;/name&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;&lt;/mirror&gt;&lt;mirror&gt; &lt;id&gt;repo2&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;repo2 maven&lt;/name&gt; &lt;url&gt;http://repo2.maven.org/maven2&lt;/url&gt;&lt;/mirror&gt; Local repository：settings.xml中配置本地仓库目录。 Pluginshttps://plugins.jetbrains.com/ GsonFormat 其它设置 生成JavaDoc]]></content>
       <categories>
         <category>利器</category>
       </categories>
@@ -885,10 +881,10 @@
   </entry>
   <entry>
     <title><![CDATA[Hexo-NexT主题配置]]></title>
-    <url>%2F%E3%80%90%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83%E3%80%91Hexo-NexT%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%2F</url>
+    <url>%2F%E3%80%90%E7%8E%AF%E5%A2%83%E3%80%91Hexo-NexT%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[小序博客搭建，可以参考博文 个人博客-GitHub-PagesHexo的配置文件_config.yml分两种：站点配置文件、主题配置文件。站点配置文件参考Hexo，主题配置文件参考NexT本文主要讲解主题配置文件_config.yml（文件路径：hexo目录\themes\next\_config.yml）GitHub hexo-theme-next Site Information Settings设置站点信息favicon:修改网站图标，图片保存在目录\themes\next\source\images中。footer:站点底部 since:2018站点创建时间creative_commons:文章底部添加版权信息 Menu Settings 菜单项（名称和链接） 菜单项的显示文本 菜单项对应的图标。NexT使用的是Font Awesome提供的图标，Font Awesome提供了600+的图标，可以满足绝大多数的场景。 注意：菜单点击可能报Cannot GET **，创建page就可以了，命令如下：12// name为categories、tags、about等，文件存储路径为：root\sourcehexo new page &apos;name&apos; 在source目录下会生成菜单对应文件夹，修改文件夹中的index.md文件，新增type属性，如下：12345---title: 分类date: 2018-12-16 17:03:04type: &quot;categories&quot;--- Scheme SettingsScheme是NexT提供的一种特性，可以设置不同的外观。同时，几乎所有的配置都可以在Scheme之间共用。目前NexT支持以下几种Scheme: Muse-默认Scheme，NexT最初的版本，黑白色调，大量留白 Mist-Muse的紧凑版本，整洁有序的单栏外观 Pisces-双栏Scheme，小家碧玉似的清新 Gemini-左侧网站信息及目录，块+片段结构布局 Sidebar Settings设置侧栏 sidebar:侧栏的位置 sidebar:侧栏显示的时机 avatar:头像 social:社交链接 github_banner:（网站右上角显示关注GitHub图标） Blog rolls友情链接 toc:文章目录 Post Settings reward:打赏 wechat_subscriber:微信订阅 Third Party Services Settingslocal_search:网站添加搜索needmoreshare2:内容分享 在博客根目录执行如下命令： 1git clone https://github.com/theme-next/theme-next-needmoreshare2 themes/next/source/lib/needsharebutton 主题配置文件中，搜索needmoreshare2: 评论系统 畅言 官网 12345# changyanchangyan: enable: false appid: appkey: Valine 官网 DaoVoice修改文章内链接样式在文件\themes\next\source\css\_common\components\post\post.styl末尾，添加如下代码：1234567891011// 文章内链接文本样式.post-body p a&#123; color: #0593d3; //原始链接颜色 border-bottom: none; border-bottom: 1px solid #0593d3; //底部分割线颜色 &amp;:hover &#123; color: #fc6423; //鼠标经过颜色 border-bottom: none; border-bottom: 1px solid #fc6423; //底部分割线颜色 &#125;&#125; 修改文章底部带#的标签实现效果图： \themes\next\layout_macro\post.swig中找到rel=”tag”&gt;#，将#替换为1&lt;i class="fa fa-tag"&gt;&lt;/i&gt; 文章末尾添加结束标语实现效果图： \themes\next\layout_macro中新建passage-end-tag.swig文件，添加如下代码： 12345&lt;div&gt; &#123;% if not is_index %&#125; &lt;div style="text-align:center;color: #ccc;font-size:14px;"&gt;-------------本文结束&lt;i class="fa fa-paw"&gt;&lt;/i&gt;感谢您的阅读-------------&lt;/div&gt; &#123;% endif %&#125;&lt;/div&gt; 打开\themes\next\layout_macro\post.swig文件，在post-body后，post-footer前，添加如下代码： 12345&lt;div&gt; &#123;% if not is_index %&#125; &#123;% include 'passage-end-tag.swig' %&#125; &#123;% endif %&#125;&lt;/div&gt; 修改主题配置文件_config.yml，末尾添加如下内容： 123# 文章末尾添加“本文结束”标记passage_end_tag: enabled: true 网站底部添加总访客量、总访问量方法一： 打开\themes\next\layout_partials\footer.swig文件，在copyright之前添加如下代码：1&lt;script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt; 单个用户连续点击n篇文章，记录n次访问量。123&lt;span id="busuanzi_container_site_pv"&gt; 总访问量&lt;span id="busuanzi_value_site_pv"&gt;&lt;/span&gt;次&lt;/span&gt; 单个用户连续点击n篇文章，只记录1次访客数。123&lt;span id="busuanzi_container_site_uv"&gt; 总访客数&lt;span id="busuanzi_value_site_uv"&gt;&lt;/span&gt;人次&lt;/span&gt; 方法二：主题配置文件_config.yml，搜索busuanzi_count:注：本地预览时，数字存在异常，部署云端即可恢复正常。 网站底部添加字数统计npm install hexo-wordcount –save打开文件\themes\next\layout_partials\footer.swig，末尾加上如下代码：1234&lt;div class="theme-info"&gt; &lt;div class="powered-by"&gt;&lt;/div&gt; &lt;span class="post-count"&gt;全站共&#123;&#123; totalcount(site) &#125;&#125;字&lt;/span&gt;&lt;/div&gt; 点击出现爱心效果 在目录\themes\next\source\js\src中新建文件love.js，添加如下代码： 1!function (e, t, a) &#123; function n() &#123; c(".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"), o(), r() &#125; function r() &#123; for (var e = 0; e &lt; d.length; e++)d[e].alpha &lt;= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y-- , d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = "left:" + d[e].x + "px;top:" + d[e].y + "px;opacity:" + d[e].alpha + ";transform:scale(" + d[e].scale + "," + d[e].scale + ") rotate(45deg);background:" + d[e].color + ";z-index:99999"); requestAnimationFrame(r) &#125; function o() &#123; var t = "function" == typeof e.onclick &amp;&amp; e.onclick; e.onclick = function (e) &#123; t &amp;&amp; t(), i(e) &#125; &#125; function i(e) &#123; var a = t.createElement("div"); a.className = "heart", d.push(&#123; el: a, x: e.clientX - 5, y: e.clientY - 5, scale: 1, alpha: 1, color: s() &#125;), t.body.appendChild(a) &#125; function c(e) &#123; var a = t.createElement("style"); a.type = "text/css"; try &#123; a.appendChild(t.createTextNode(e)) &#125; catch (t) &#123; a.styleSheet.cssText = e &#125; t.getElementsByTagName("head")[0].appendChild(a) &#125; function s() &#123; return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")" &#125; var d = []; e.requestAnimationFrame = function () &#123; return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) &#123; setTimeout(e, 1e3 / 60) &#125; &#125;(), n() &#125;(window, document); 打开文件\themes\next\layout_layout.swig，末尾加上如下代码： 12&lt;!-- 页面点击小红心 --&gt;&lt;script type="text/javascript" src="/js/src/love.js"&gt;&lt;/script&gt; 添加网易云音乐\themes\next\layout_macro\sidebar.swig 设置背景图片图片来源：https://source.unsplash.com打开文件themes\next\source\css_custom\custom.styl，添加如下代码：123456body &#123; background:url(https://source.unsplash.com/1600x900/daily?nature,water); background-repeat: no-repeat; background-attachment:fixed; background-position:50% 50%;&#125; 添加依赖在目录\themes\next下，开启Git Bash，执行命令。 设置动态背景canvas_nest:1git clone https://github.com/theme-next/theme-next-canvas-nest source/lib/canvas-nest 站点顶部进度条pace:1git clone https://github.com/theme-next/theme-next-pace source/lib/pace 参考https://theme-next.org/]]></content>
       <categories>
-        <category>搭建环境</category>
+        <category>环境</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -896,10 +892,10 @@
   </entry>
   <entry>
     <title><![CDATA[个人博客-GitHub-Pages]]></title>
-    <url>%2F%E3%80%90%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83%E3%80%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-GitHub-Pages%2F</url>
+    <url>%2F%E3%80%90%E7%8E%AF%E5%A2%83%E3%80%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-GitHub-Pages%2F</url>
     <content type="text"><![CDATA[小序 创建GitHub Pages 安装Git 安装Node.js 安装hexo GitHub Pages 注册GitHub账号，新建仓库，仓库名格式为（用户名.github.io），用户名必须与GitHub保持一致。 仓库中点击Settings菜单，找到GitHub Pages Choose a theme HexoHexo是一个快速、简洁且高效的博客框架。使用Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。Windows搭建Hexo博客系统并部署到GitHub 安装hexo本地环境，使用命令：npm install -g hexo 计算机本地新建保存博客文件夹 初始化hexo博客工程：hexo init 执行编译与预览命令后，hexo预览http://localhost:4000/ 命令命令[hexo n “博客名称”] 新建博客 themes主题设置 博客根目录：git clone https://github.com/theme-next/hexo-theme-next themes/next 修改站点配置文件_config.yml中theme为目标主题名称 theme-NexT主题配置文件_config.yml scheme:目前NexT支持四种Scheme menu:设置菜单 sidebar:设置侧边栏 avatar:设置头像 favicon:设置网站缩略图 plugins 安装：npm install hexo-xxx –save 卸载：npm remove hexo-xxx –save hexo部署插件 npm install hexo-deployer-git –save 修改站点配置文件_config.yml，在deploy下指定仓库路径和部署的协议 hexo g hexo d hexo-adminnpm install hexo-admin –saveHexo Admin hexo-tocnpm install hexo-toc –save文章中添加目录，在站点配置文件_config.yml中，添加如下信息：12345678910# 文章顶部添加&lt;!-- toc --&gt;，会在标题下方生成文章目录。toc: maxdepth: 3 class: toc slugify: transliteration decodeEntities: false anchor: position: after symbol: &apos;&apos; style: header-anchor 注意坑：主题为NexT时，不要安装该插件，会导致sidebar中文章目录显示错误且不跳转。 jekylljekyll jekyll themes]]></content>
       <categories>
-        <category>搭建环境</category>
+        <category>环境</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
