@@ -146,18 +146,18 @@
 
 
 
-  <meta name="description" content="概述Eclipse + Ant组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。Android Studio + Gradle组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。 Maven仓库分为两类：本地仓库和远程仓库。  本地仓库就是本地存放jar包的位置，Maven的本地仓库在最开始的时候并不会创建，而是第一次启动Maven时，">
+  <meta name="description" content="概览Eclipse + Ant组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。Android Studio + Gradle组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。Maven仓库分为两类：本地仓库和远程仓库。  本地仓库就是本地存放jar包的位置，Maven的本地仓库在最开始的时候并不会创建，而是第一次启动Maven时，在">
 <meta name="keywords" content="Maven">
 <meta property="og:type" content="article">
 <meta property="og:title" content="构建工具-Maven">
 <meta property="og:url" content="http://liuweidong.club/【利器】构建工具-Maven/index.html">
 <meta property="og:site_name" content="zero">
-<meta property="og:description" content="概述Eclipse + Ant组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。Android Studio + Gradle组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。 Maven仓库分为两类：本地仓库和远程仓库。  本地仓库就是本地存放jar包的位置，Maven的本地仓库在最开始的时候并不会创建，而是第一次启动Maven时，">
+<meta property="og:description" content="概览Eclipse + Ant组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。Android Studio + Gradle组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。Maven仓库分为两类：本地仓库和远程仓库。  本地仓库就是本地存放jar包的位置，Maven的本地仓库在最开始的时候并不会创建，而是第一次启动Maven时，在">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-09T15:59:58.228Z">
+<meta property="og:updated_time" content="2019-08-18T08:13:22.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="构建工具-Maven">
-<meta name="twitter:description" content="概述Eclipse + Ant组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。Android Studio + Gradle组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。 Maven仓库分为两类：本地仓库和远程仓库。  本地仓库就是本地存放jar包的位置，Maven的本地仓库在最开始的时候并不会创建，而是第一次启动Maven时，">
+<meta name="twitter:description" content="概览Eclipse + Ant组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。Android Studio + Gradle组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。Maven仓库分为两类：本地仓库和远程仓库。  本地仓库就是本地存放jar包的位置，Maven的本地仓库在最开始的时候并不会创建，而是第一次启动Maven时，在">
 
 
 
@@ -550,24 +550,25 @@
       
 
       
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>Eclipse + Ant组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。<br>Android Studio + Gradle组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。</p>
-<p>Maven仓库分为两类：<strong>本地仓库</strong>和<strong>远程仓库</strong>。</p>
+        <h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><p><strong>Eclipse + Ant</strong>组合的时候，引入库都是下载jar包或aar包放到lib目录下，然后添加引用。!!!不能实时更新。<br><strong>Android Studio + Gradle</strong>组合中gradle中提供了可以从远端拉取jar包和aar包引入本地。<br>Maven仓库分为两类：<strong>本地仓库</strong>和<strong>远程仓库</strong>。</p>
 <ul>
-<li>本地仓库就是本地存放jar包的位置，Maven的本地仓库在最开始的时候并不会创建，而是第一次启动Maven时，在当前用户的文件夹下建立一个.m2文件，其中存放Maven本地仓库的所有jar包。</li>
+<li>本地仓库就是本地存放jar包的位置，Maven的本地仓库在最开始的时候并不会创建，而是第一次启动Maven时，在当前用户的文件夹下建立一个<strong>.m2</strong>文件，其中存放Maven本地仓库的所有jar包。</li>
 <li>远程仓库又分为：<code>中央仓库</code>、<code>Nexus私服</code>和<code>其他公共仓库</code>。</li>
 </ul>
-<h1 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h1><p><a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">http://maven.apache.org/download.cgi</a><br><strong>环境变量配置：</strong></p>
+<h1 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h1><p><a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">http://maven.apache.org/download.cgi</a><br><strong>配置环境变量：</strong></p>
 <ul>
 <li>MAVEN_HOME——安装路径</li>
 <li>PATH——%MAVEN_HOME%\bin;</li>
 <li>【mvn -v】命令行输入，查看配置是否成功。</li>
 </ul>
-<p><strong>本地仓库配置：</strong></p>
+<p><strong>配置Maven：</strong></p>
 <ol>
-<li>打开maven的安装目录，找到文件\conf\settings.xml</li>
-<li>标签localRepository，配置本地仓库存储路径。Default: ${user.home}/.m2/repository</li>
-<li>标签mirror，配置Maven镜像</li>
+<li>打开maven的安装目录，找到文件<code>\conf\settings.xml</code></li>
+<li>标签localRepository，配置本地仓库存储路径。</li>
+<li>标签mirror，配置Maven镜像。</li>
 </ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- localRepository</span></span><br><span class="line"><span class="comment">   | The path to the local repository maven will use to store artifacts.</span></span><br><span class="line"><span class="comment">   |</span></span><br><span class="line"><span class="comment">   | Default: $&#123;user.home&#125;/.m2/repository</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>E:\mavenRepository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="Maven镜像"><a href="#Maven镜像" class="headerlink" title="Maven镜像"></a>Maven镜像</h1><p><a href="https://maven.aliyun.com/" target="_blank" rel="noopener">https://maven.aliyun.com/</a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>repo2<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>repo2 maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://repo2.maven.org/maven2<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="Maven服务源"><a href="#Maven服务源" class="headerlink" title="Maven服务源"></a>Maven服务源</h1><ul>
 <li><strong>JCenter</strong><br>托管在<code>Bintray</code>上面的Maven仓库。</li>
 <li><strong>Maven Central</strong><br>托管在<code>Sonatype</code>上面的Maven仓库。</li>
@@ -590,11 +591,16 @@
 <li>加速maven构建</li>
 <li>部署第三方构件：构件无法从远程仓库获取，如公司内部生成的私有构件。</li>
 </ul>
-<h2 id="Sonatype-Nexus"><a href="#Sonatype-Nexus" class="headerlink" title="Sonatype Nexus"></a>Sonatype Nexus</h2><h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><p><strong>下载地址：</strong></p>
+<h2 id="Sonatype-Nexus"><a href="#Sonatype-Nexus" class="headerlink" title="Sonatype Nexus"></a>Sonatype Nexus</h2><ol>
+<li><a href="https://www.sonatype.com/download-oss-sonatype" target="_blank" rel="noopener">https://www.sonatype.com/download-oss-sonatype</a></li>
+<li>自定义参数etc\nexus-default.properties</li>
+<li>启动nexus</li>
+</ol>
+<blockquote>
 <p>默认端口：8081<br><a href="http://127.0.0.1:8081/" target="_blank" rel="noopener">http://127.0.0.1:8081/</a><br><a href="http://localhost:8081/" target="_blank" rel="noopener">http://localhost:8081/</a><br>默认配置文件：C:\swTools\nexus-3.13.0-01\etc\nexus-default.properties<br>默认登录：admin/admin123</p>
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>【nexus.exe/install】安装nexus为系统服务<br>【nexus.exe/uninstall】卸载nexus为系统服务<br>【nexus.exe/start】启动nexus服务<br>【nexus.exe/stop】停止nexus服务<br>【nexus.exe/run】启动服务</p>
-<h2 id="Apache-Archiva"><a href="#Apache-Archiva" class="headerlink" title="Apache Archiva"></a>Apache Archiva</h2><h2 id="JFrog-Artifactory"><a href="#JFrog-Artifactory" class="headerlink" title="JFrog Artifactory"></a>JFrog Artifactory</h2><h1 id="Maven镜像"><a href="#Maven镜像" class="headerlink" title="Maven镜像"></a>Maven镜像</h1><p><a href="https://maven.aliyun.com/" target="_blank" rel="noopener">https://maven.aliyun.com/</a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>repo2<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>repo2 maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://repo2.maven.org/maven2<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-
+</blockquote>
+<p><strong>常用命令：</strong><br>【nexus.exe/install】安装nexus为系统服务<br>【nexus.exe/uninstall】卸载nexus为系统服务<br>【nexus.exe/start】启动nexus服务<br>【nexus.exe/stop】停止nexus服务<br>【nexus.exe/run】启动服务</p>
+<h2 id="Apache-Archiva"><a href="#Apache-Archiva" class="headerlink" title="Apache Archiva"></a>Apache Archiva</h2><h2 id="JFrog-Artifactory"><a href="#JFrog-Artifactory" class="headerlink" title="JFrog Artifactory"></a>JFrog Artifactory</h2>
       
     </div>
 
@@ -774,7 +780,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">82</span>
+                    <span class="site-state-item-count">84</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -970,7 +976,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装与配置"><span class="nav-number">2.</span> <span class="nav-text">安装与配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven服务源"><span class="nav-number">3.</span> <span class="nav-text">Maven服务源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取函数库的原理"><span class="nav-number">4.</span> <span class="nav-text">获取函数库的原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven私服"><span class="nav-number">5.</span> <span class="nav-text">Maven私服</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sonatype-Nexus"><span class="nav-number">5.1.</span> <span class="nav-text">Sonatype Nexus</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建"><span class="nav-number">5.1.1.</span> <span class="nav-text">搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">5.1.2.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apache-Archiva"><span class="nav-number">5.2.</span> <span class="nav-text">Apache Archiva</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JFrog-Artifactory"><span class="nav-number">5.3.</span> <span class="nav-text">JFrog Artifactory</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven镜像"><span class="nav-number">6.</span> <span class="nav-text">Maven镜像</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装与配置"><span class="nav-number">2.</span> <span class="nav-text">安装与配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven镜像"><span class="nav-number">3.</span> <span class="nav-text">Maven镜像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven服务源"><span class="nav-number">4.</span> <span class="nav-text">Maven服务源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取函数库的原理"><span class="nav-number">5.</span> <span class="nav-text">获取函数库的原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven私服"><span class="nav-number">6.</span> <span class="nav-text">Maven私服</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sonatype-Nexus"><span class="nav-number">6.1.</span> <span class="nav-text">Sonatype Nexus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apache-Archiva"><span class="nav-number">6.2.</span> <span class="nav-text">Apache Archiva</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JFrog-Artifactory"><span class="nav-number">6.3.</span> <span class="nav-text">JFrog Artifactory</span></a></li></ol></li></ol></div>
             
 
           </div>
