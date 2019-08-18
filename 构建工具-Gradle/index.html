@@ -146,18 +146,18 @@
 
 
 
-  <meta name="description" content="概述Gradle2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。  Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。 Gradle有约定优于配置的原则，即为设置和属性提">
+  <meta name="description" content="概览Gradle2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。  Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。 Gradle有约定优于配置的原则，即为设置和属性提">
 <meta name="keywords" content="Gradle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="构建工具-Gradle">
 <meta property="og:url" content="http://liuweidong.club/构建工具-Gradle/index.html">
 <meta property="og:site_name" content="zero">
-<meta property="og:description" content="概述Gradle2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。  Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。 Gradle有约定优于配置的原则，即为设置和属性提">
+<meta property="og:description" content="概览Gradle2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。  Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。 Gradle有约定优于配置的原则，即为设置和属性提">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-14T13:31:40.665Z">
+<meta property="og:updated_time" content="2019-08-18T12:32:48.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="构建工具-Gradle">
-<meta name="twitter:description" content="概述Gradle2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。  Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。 Gradle有约定优于配置的原则，即为设置和属性提">
+<meta name="twitter:description" content="概览Gradle2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于Groovy的领域专用语言（DSL）。  Gradle构建Android项目时，需要创建一个构建脚本，通常称为build.gradle。 Gradle有约定优于配置的原则，即为设置和属性提">
 
 
 
@@ -550,81 +550,13 @@
       
 
       
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><a href="https://gradle.org/" target="_blank" rel="noopener">Gradle</a><br>2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于<code>Groovy</code>的领域专用语言（<code>DSL</code>）。</p>
+        <h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><p><a href="https://gradle.org/" target="_blank" rel="noopener">Gradle</a><br>2013年5月，谷歌发布Android Studio（基于JetBrains的IntelliJ IDEA），并对Gradle进行了支持。Gradle构建脚本的书写没有基于传统的XML文件，而是基于<code>Groovy</code>的领域专用语言（<code>DSL</code>）。</p>
 <ul>
 <li>Gradle构建Android项目时，需要创建一个<strong>构建脚本</strong>，通常称为<code>build.gradle</code>。</li>
 <li>Gradle有约定优于配置的原则，即为设置和属性提供默认值。</li>
 </ul>
 <p>You can specify the Gradle version in either the <strong>File &gt; Project Structure &gt; Project</strong> menu in Android Studio, or by editing the Gradle distribution reference in the <strong>gradle/wrapper/gradle-wrapper.properties</strong> file.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">distributionUrl = https\://services.gradle.org/distributions/gradle-5.1.1-all.zip</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<h1 id="Android-Gradle-plugin"><a href="#Android-Gradle-plugin" class="headerlink" title="Android Gradle plugin"></a>Android Gradle plugin</h1><p><a href="https://developer.android.google.cn/studio/releases/gradle-plugin.html#updating-plugin" target="_blank" rel="noopener">Android Gradle plugin</a><br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        <span class="comment">// Gradle 4.1 and higher include support for Google's Maven repo using</span></span><br><span class="line">        <span class="comment">// the google() method. And you need to include this repo to download</span></span><br><span class="line">        <span class="comment">// Android Gradle plugin 3.0.0 or higher.</span></span><br><span class="line">        google()</span><br><span class="line">        jcenter()</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath <span class="string">'com.android.tools.build:gradle:3.4.1'</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// <span class="doctag">NOTE:</span> Do not place your application dependencies here; they belong</span></span><br><span class="line">        <span class="comment">// in the individual module build.gradle files</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>The following table lists which version of Gradle is required for each version of the Android Gradle plugin. For the best performance, you should use the latest possible version of both Gradle and the plugin.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Plugin version</th>
-<th style="text-align:left">Gradle version</th>
-<th>Build Tools</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1.0.0 - 1.1.3</td>
-<td style="text-align:left">2.2.1 - 2.3</td>
-</tr>
-<tr>
-<td style="text-align:left">1.2.0 - 1.3.1</td>
-<td style="text-align:left">2.2.1 - 2.9</td>
-</tr>
-<tr>
-<td style="text-align:left">1.5.0</td>
-<td style="text-align:left">2.2.1 - 2.13</td>
-</tr>
-<tr>
-<td style="text-align:left">2.0.0 - 2.1.2</td>
-<td style="text-align:left">2.10 - 2.13</td>
-</tr>
-<tr>
-<td style="text-align:left">2.1.3 - 2.2.3</td>
-<td style="text-align:left">2.14.1+</td>
-</tr>
-<tr>
-<td style="text-align:left">2.3.0+</td>
-<td style="text-align:left">3.3+</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>3.0.0+</strong></td>
-<td style="text-align:left"><strong>4.1+</strong></td>
-<td><strong>26.0.2+</strong></td>
-</tr>
-<tr>
-<td style="text-align:left">3.1.0+</td>
-<td style="text-align:left">4.4+</td>
-</tr>
-<tr>
-<td style="text-align:left">3.2.0 - 3.2.1</td>
-<td style="text-align:left">4.6+</td>
-</tr>
-<tr>
-<td style="text-align:left">3.3.0 - 3.3.2</td>
-<td style="text-align:left">4.10.1+</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>3.4.0+</strong></td>
-<td style="text-align:left"><strong>5.1.1+</strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="3-4-0-April-2019"><a href="#3-4-0-April-2019" class="headerlink" title="3.4.0 (April 2019)"></a>3.4.0 (April 2019)</h2><p>This version of the Android plugin requires the following:</p>
-<ul>
-<li><a href="https://docs.gradle.org/5.1.1/release-notes.html" target="_blank" rel="noopener">Gradle 5.1.1</a> or higher.</li>
-<li><a href="https://developer.android.google.cn/studio/releases/build-tools.html#notes" target="_blank" rel="noopener">SDK Build Tools 28.0.3</a> or higher.</li>
-</ul>
-<h2 id="3-3-0-January-2019"><a href="#3-3-0-January-2019" class="headerlink" title="3.3.0 (January 2019)"></a>3.3.0 (January 2019)</h2><h2 id="3-2-0-September-2018"><a href="#3-2-0-September-2018" class="headerlink" title="3.2.0 (September 2018)"></a>3.2.0 (September 2018)</h2><h2 id="3-1-0-March-2018"><a href="#3-1-0-March-2018" class="headerlink" title="3.1.0 (March 2018)"></a>3.1.0 (March 2018)</h2><h2 id="3-0-0-October-2017"><a href="#3-0-0-October-2017" class="headerlink" title="3.0.0 (October 2017)"></a>3.0.0 (October 2017)</h2><p>This version of the Android plugin requires the following:</p>
-<ul>
-<li>Gradle 4.1 or higher. To learn more, read the section about updating Gradle.</li>
-<li>Build Tools 26.0.2 or higher. With this update, you no longer need to specify a version for the build tools—the plugin uses the minimum required version by default. So, you can now remove the <code>android.buildToolsVersion</code> property.</li>
-</ul>
-<h3 id="Optimizations"><a href="#Optimizations" class="headerlink" title="Optimizations"></a>Optimizations</h3><h1 id="Groovy"><a href="#Groovy" class="headerlink" title="Groovy"></a>Groovy</h1><p><a href="http://groovy-lang.org/" target="_blank" rel="noopener">Groovy</a><br>Groovy是一种适用于Java虚拟机的动态语言。</p>
+<h1 id="Groovy"><a href="#Groovy" class="headerlink" title="Groovy"></a>Groovy</h1><p><a href="http://groovy-lang.org/" target="_blank" rel="noopener">Groovy</a><br>Groovy是一种适用于Java虚拟机的动态语言。</p>
 <h2 id="类和成员变量"><a href="#类和成员变量" class="headerlink" title="类和成员变量"></a>类和成员变量</h2><p>def：声名变量</p>
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>在Groovy中，方法的最后一行通常默认返回，即使没有使用return关键字。</p>
 <h2 id="Closures"><a href="#Closures" class="headerlink" title="Closures"></a>Closures</h2><p>Closures是匿名代码块，可以接受参数和返回值。</p>
@@ -1057,7 +989,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android-Gradle-plugin"><span class="nav-number">2.</span> <span class="nav-text">Android Gradle plugin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-0-April-2019"><span class="nav-number">2.1.</span> <span class="nav-text">3.4.0 (April 2019)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-0-January-2019"><span class="nav-number">2.2.</span> <span class="nav-text">3.3.0 (January 2019)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-0-September-2018"><span class="nav-number">2.3.</span> <span class="nav-text">3.2.0 (September 2018)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-0-March-2018"><span class="nav-number">2.4.</span> <span class="nav-text">3.1.0 (March 2018)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-0-0-October-2017"><span class="nav-number">2.5.</span> <span class="nav-text">3.0.0 (October 2017)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Optimizations"><span class="nav-number">2.5.1.</span> <span class="nav-text">Optimizations</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Groovy"><span class="nav-number">3.</span> <span class="nav-text">Groovy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#类和成员变量"><span class="nav-number">3.1.</span> <span class="nav-text">类和成员变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">3.2.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Closures"><span class="nav-number">3.3.</span> <span class="nav-text">Closures</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">3.4.</span> <span class="nav-text">集合</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目和任务"><span class="nav-number">4.</span> <span class="nav-text">项目和任务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gradle-Wrapper"><span class="nav-number">5.</span> <span class="nav-text">Gradle Wrapper</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gradle文件"><span class="nav-number">6.</span> <span class="nav-text">gradle文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BuildConfig"><span class="nav-number">7.</span> <span class="nav-text">BuildConfig</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#依赖管理"><span class="nav-number">8.</span> <span class="nav-text">依赖管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地依赖"><span class="nav-number">8.1.</span> <span class="nav-text">本地依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">8.2.</span> <span class="nav-text">远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地仓库"><span class="nav-number">8.3.</span> <span class="nav-text">本地仓库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构建variant"><span class="nav-number">9.</span> <span class="nav-text">构建variant</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构建类型"><span class="nav-number">9.1.</span> <span class="nav-text">构建类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#product-flavor"><span class="nav-number">9.2.</span> <span class="nav-text">product flavor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#签名配置"><span class="nav-number">9.3.</span> <span class="nav-text">签名配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加速构建"><span class="nav-number">10.</span> <span class="nav-text">加速构建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Jack和Jill"><span class="nav-number">10.1.</span> <span class="nav-text">Jack和Jill</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Groovy"><span class="nav-number">2.</span> <span class="nav-text">Groovy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#类和成员变量"><span class="nav-number">2.1.</span> <span class="nav-text">类和成员变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">2.2.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Closures"><span class="nav-number">2.3.</span> <span class="nav-text">Closures</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">2.4.</span> <span class="nav-text">集合</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目和任务"><span class="nav-number">3.</span> <span class="nav-text">项目和任务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gradle-Wrapper"><span class="nav-number">4.</span> <span class="nav-text">Gradle Wrapper</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gradle文件"><span class="nav-number">5.</span> <span class="nav-text">gradle文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BuildConfig"><span class="nav-number">6.</span> <span class="nav-text">BuildConfig</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#依赖管理"><span class="nav-number">7.</span> <span class="nav-text">依赖管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地依赖"><span class="nav-number">7.1.</span> <span class="nav-text">本地依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">7.2.</span> <span class="nav-text">远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地仓库"><span class="nav-number">7.3.</span> <span class="nav-text">本地仓库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构建variant"><span class="nav-number">8.</span> <span class="nav-text">构建variant</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构建类型"><span class="nav-number">8.1.</span> <span class="nav-text">构建类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#product-flavor"><span class="nav-number">8.2.</span> <span class="nav-text">product flavor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#签名配置"><span class="nav-number">8.3.</span> <span class="nav-text">签名配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加速构建"><span class="nav-number">9.</span> <span class="nav-text">加速构建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Jack和Jill"><span class="nav-number">9.1.</span> <span class="nav-text">Jack和Jill</span></a></li></ol></li></ol></div>
             
 
           </div>
