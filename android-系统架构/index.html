@@ -146,22 +146,18 @@
 
 
 
-  <meta name="description" content="平台架构Android是一种基于Linux的自由及开放源代码的操作系统，主要使用在智能手机、平板电脑等设备上。下图所示为Android平台的主要组件。 Linux kernelAndroid平台的基础是Linux内核。使用Linux内核可让Android利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。在操作系统级别，Android平台不仅提供Linux内核的安全功能，而且还提供安">
+  <meta name="description" content="Linux kernelAndroid平台的基础是Linux内核。使用Linux内核可让Android利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。在操作系统级别，Android平台不仅提供Linux内核的安全功能，而且还提供安全的进程间通信（IPC）机制，以便在不同进程中运行的应用之间安全通信。操作系统级别的这些安全功能旨在确保即使是原生代码也要受应用沙盒的限制。Linux内">
 <meta name="keywords" content="android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="android-系统架构">
 <meta property="og:url" content="http://liuweidong.club/android-系统架构/index.html">
 <meta property="og:site_name" content="zero">
-<meta property="og:description" content="平台架构Android是一种基于Linux的自由及开放源代码的操作系统，主要使用在智能手机、平板电脑等设备上。下图所示为Android平台的主要组件。 Linux kernelAndroid平台的基础是Linux内核。使用Linux内核可让Android利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。在操作系统级别，Android平台不仅提供Linux内核的安全功能，而且还提供安">
+<meta property="og:description" content="Linux kernelAndroid平台的基础是Linux内核。使用Linux内核可让Android利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。在操作系统级别，Android平台不仅提供Linux内核的安全功能，而且还提供安全的进程间通信（IPC）机制，以便在不同进程中运行的应用之间安全通信。操作系统级别的这些安全功能旨在确保即使是原生代码也要受应用沙盒的限制。Linux内">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.imgur.com/VLjLQ8V.png">
-<meta property="og:image" content="https://i.imgur.com/EdzgmhF.png">
-<meta property="og:image" content="https://i.imgur.com/pY7RDG3.png">
-<meta property="og:updated_time" content="2019-03-23T05:40:22.154Z">
+<meta property="og:updated_time" content="2019-08-22T14:23:39.378Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android-系统架构">
-<meta name="twitter:description" content="平台架构Android是一种基于Linux的自由及开放源代码的操作系统，主要使用在智能手机、平板电脑等设备上。下图所示为Android平台的主要组件。 Linux kernelAndroid平台的基础是Linux内核。使用Linux内核可让Android利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。在操作系统级别，Android平台不仅提供Linux内核的安全功能，而且还提供安">
-<meta name="twitter:image" content="https://i.imgur.com/VLjLQ8V.png">
+<meta name="twitter:description" content="Linux kernelAndroid平台的基础是Linux内核。使用Linux内核可让Android利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。在操作系统级别，Android平台不仅提供Linux内核的安全功能，而且还提供安全的进程间通信（IPC）机制，以便在不同进程中运行的应用之间安全通信。操作系统级别的这些安全功能旨在确保即使是原生代码也要受应用沙盒的限制。Linux内">
 
 
 
@@ -561,8 +557,7 @@
       
 
       
-        <h1 id="平台架构"><a href="#平台架构" class="headerlink" title="平台架构"></a>平台架构</h1><p>Android是一种基于Linux的自由及开放源代码的操作系统，主要使用在智能手机、平板电脑等设备上。下图所示为Android平台的主要组件。<br><img src="https://i.imgur.com/VLjLQ8V.png" width="65%" height="65%" alt="Android软件栈"></p>
-<h1 id="Linux-kernel"><a href="#Linux-kernel" class="headerlink" title="Linux kernel"></a>Linux kernel</h1><p>Android平台的基础是Linux内核。<br>使用Linux内核可让Android利用<a href="https://source.android.google.cn/security/overview/kernel-security.html" target="_blank" rel="noopener">主要安全功能</a>，并且允许设备制造商为著名的内核开发硬件驱动程序。<br>在操作系统级别，Android平台不仅提供Linux内核的安全功能，而且还提供安全的进程间通信（IPC）机制，以便在不同进程中运行的应用之间安全通信。操作系统级别的这些安全功能旨在确保即使是原生代码也要受应用沙盒的限制。<br>Linux内核为Android提供了一些关键的安全功能，包括：</p>
+        <h1 id="Linux-kernel"><a href="#Linux-kernel" class="headerlink" title="Linux kernel"></a>Linux kernel</h1><p>Android平台的基础是Linux内核。<br>使用Linux内核可让Android利用<a href="https://source.android.google.cn/security/overview/kernel-security.html" target="_blank" rel="noopener">主要安全功能</a>，并且允许设备制造商为著名的内核开发硬件驱动程序。<br>在操作系统级别，Android平台不仅提供Linux内核的安全功能，而且还提供安全的进程间通信（IPC）机制，以便在不同进程中运行的应用之间安全通信。操作系统级别的这些安全功能旨在确保即使是原生代码也要受应用沙盒的限制。<br>Linux内核为Android提供了一些关键的安全功能，包括：</p>
 <ul>
 <li>基于用户的权限模式</li>
 <li>进程隔离</li>
@@ -571,8 +566,7 @@
 </ul>
 <p>Android的应用安全性是由<a href="https://source.android.google.cn/security/app-sandbox" target="_blank" rel="noopener">应用沙盒</a>强制实施的。</p>
 <h1 id="HAL"><a href="#HAL" class="headerlink" title="HAL"></a>HAL</h1><p>硬件抽象层（HAL）提供标准界面，向更高级别的Java API框架显示设备硬件功能。HAL包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如<a href="https://source.android.google.cn/devices/camera/index.html" target="_blank" rel="noopener">相机</a>或<a href="https://source.android.google.cn/devices/bluetooth.html" target="_blank" rel="noopener">蓝牙</a>模块。当Java API框架要求访问设备硬件时，Android系统将为该硬件组件加载库模块。</p>
-<h2 id="相机"><a href="#相机" class="headerlink" title="相机"></a>相机</h2><p><img src="https://i.imgur.com/EdzgmhF.png" alt=""></p>
-<h2 id="蓝牙"><a href="#蓝牙" class="headerlink" title="蓝牙"></a>蓝牙</h2><h3 id="Android-8-0-架构"><a href="#Android-8-0-架构" class="headerlink" title="Android 8.0 架构"></a>Android 8.0 架构</h3><p>蓝牙应用通过Binder与蓝牙进程进行通信。蓝牙进程使用JNI与蓝牙堆栈通信，并向开发者提供对各种蓝牙配置文件的访问权限。<br><img src="https://i.imgur.com/pY7RDG3.png" alt="Android 8.0 蓝牙架构"><br><a href="https://developer.android.google.cn/reference/android/bluetooth/package-summary.html" target="_blank" rel="noopener">android.bluetooth</a></p>
+<h2 id="相机"><a href="#相机" class="headerlink" title="相机"></a>相机</h2><h2 id="蓝牙"><a href="#蓝牙" class="headerlink" title="蓝牙"></a>蓝牙</h2><h3 id="Android-8-0-架构"><a href="#Android-8-0-架构" class="headerlink" title="Android 8.0 架构"></a>Android 8.0 架构</h3><p>蓝牙应用通过Binder与蓝牙进程进行通信。蓝牙进程使用JNI与蓝牙堆栈通信，并向开发者提供对各种蓝牙配置文件的访问权限。<br><a href="https://developer.android.google.cn/reference/android/bluetooth/package-summary.html" target="_blank" rel="noopener">android.bluetooth</a></p>
 <h1 id="原生C-C-库"><a href="#原生C-C-库" class="headerlink" title="原生C/C++库"></a>原生C/C++库</h1><p>许多核心Android系统组件和服务（例如ART和HAL）构建自原生代码，需要以C和C++编写的原生库。Android 平台提供Java框架API以向应用显示其中部分原生库的功能。例如，您可以通过Android框架的<a href="https://developer.android.google.cn/reference/android/opengl/package-summary" target="_blank" rel="noopener">Java OpenGL API</a>访问<a href="https://developer.android.google.cn/guide/topics/graphics/opengl" target="_blank" rel="noopener">OpenGL ES</a>，以支持在应用中绘制和操作2D和3D图形。<br>如果开发的是需要C或C++代码的应用，可以使用<a href="https://developer.android.google.cn/ndk/" target="_blank" rel="noopener">Android NDK</a>直接从原生代码访问某些<a href="https://developer.android.google.cn/ndk/guides/stable_apis" target="_blank" rel="noopener">原生平台库</a>。</p>
 <h1 id="Android-Runtime"><a href="#Android-Runtime" class="headerlink" title="Android Runtime"></a>Android Runtime</h1><p>Android 5.0（API 21）或更高版本，每个应用都在其自己的进程中运行，并且有其自己的<a href="https://source.android.google.cn/devices/tech/dalvik/index.html" target="_blank" rel="noopener">Android Runtime（ART）</a>实例。ART编写为通过执行<code>DEX文件</code>在低内存设备上运行多个虚拟机，DEX文件是一种专为Android设计的字节码格式，经过优化，使用的内存很少。编译工具链（例如<a href="https://source.android.google.cn/source/jack.html" target="_blank" rel="noopener">Jack</a><strong>已被弃用</strong>）将Java源代码编译为DEX字节码，使其可在Android平台上运行。<br>ART的部分主要功能包括：</p>
 <ul>
@@ -581,7 +575,7 @@
 <li>更好的调试支持，包括专用采样分析器、详细的诊断异常和崩溃报告，并且能够设置监视点以监控特定字段</li>
 </ul>
 <p>Android 5.0（API 21）之前，<strong>Dalvik</strong>是Android Runtime。如果您的应用在ART上运行效果很好，那么它应该也可在 Dalvik 上运行，但反过来不一定。<br>Android还包含一套核心运行时库，可提供Java API框架使用的Java 编程语言大部分功能，包括一些<a href="https://developer.android.google.cn/guide/platform/j8-jack" target="_blank" rel="noopener">Java 8语言功能</a>。</p>
-<h1 id="Java-API框架"><a href="#Java-API框架" class="headerlink" title="Java API框架"></a>Java API框架</h1><p>您可通过以Java语言编写的API使用Android OS的整个功能集。这些API形成创建Android应用所需的构建块，它们可简化核心模块化系统组件和服务的重复使用，包括以下组件和服务：</p>
+<h1 id="Java-API-Framework"><a href="#Java-API-Framework" class="headerlink" title="Java API Framework"></a>Java API Framework</h1><p>您可通过以Java语言编写的API使用Android OS的整个功能集。这些API形成创建Android应用所需的构建块，它们可简化核心模块化系统组件和服务的重复使用，包括以下组件和服务：</p>
 <ul>
 <li>丰富、可扩展的<a href="https://developer.android.google.cn/guide/topics/ui/overview" target="_blank" rel="noopener">视图系统</a>，可用以构建应用的 UI，包括列表、网格、文本框、按钮甚至可嵌入的网络浏览器</li>
 <li><a href="https://developer.android.google.cn/guide/topics/resources/overview" target="_blank" rel="noopener">资源管理器</a>，用于访问非代码资源，例如本地化的字符串、图形和布局文件</li>
@@ -943,7 +937,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#平台架构"><span class="nav-number">1.</span> <span class="nav-text">平台架构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux-kernel"><span class="nav-number">2.</span> <span class="nav-text">Linux kernel</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HAL"><span class="nav-number">3.</span> <span class="nav-text">HAL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#相机"><span class="nav-number">3.1.</span> <span class="nav-text">相机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#蓝牙"><span class="nav-number">3.2.</span> <span class="nav-text">蓝牙</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-8-0-架构"><span class="nav-number">3.2.1.</span> <span class="nav-text">Android 8.0 架构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原生C-C-库"><span class="nav-number">4.</span> <span class="nav-text">原生C/C++库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android-Runtime"><span class="nav-number">5.</span> <span class="nav-text">Android Runtime</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-API框架"><span class="nav-number">6.</span> <span class="nav-text">Java API框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用程序层"><span class="nav-number">7.</span> <span class="nav-text">应用程序层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">8.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux-kernel"><span class="nav-number">1.</span> <span class="nav-text">Linux kernel</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HAL"><span class="nav-number">2.</span> <span class="nav-text">HAL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#相机"><span class="nav-number">2.1.</span> <span class="nav-text">相机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#蓝牙"><span class="nav-number">2.2.</span> <span class="nav-text">蓝牙</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-8-0-架构"><span class="nav-number">2.2.1.</span> <span class="nav-text">Android 8.0 架构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原生C-C-库"><span class="nav-number">3.</span> <span class="nav-text">原生C/C++库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android-Runtime"><span class="nav-number">4.</span> <span class="nav-text">Android Runtime</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-API-Framework"><span class="nav-number">5.</span> <span class="nav-text">Java API Framework</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用程序层"><span class="nav-number">6.</span> <span class="nav-text">应用程序层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
