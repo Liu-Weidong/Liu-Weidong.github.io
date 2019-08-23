@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端框架-Vue]]></title>
+    <url>%2F%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6-Vue%2F</url>
+    <content type="text"><![CDATA[概览Vue.js 是渐进式的JS框架。只关注视图层，采用自底向上增量开发的设计。 环境 WebStorm Node.js 命令|:-|:-||npm install vue-cli -g||]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Spring]]></title>
     <url>%2FSpring%2F</url>
     <content type="text"><![CDATA[概述Spring是于2003年兴起的一个轻量级的Java开发框架，由Rod Johnson创建。解决的是业务逻辑层和其他各层的松耦合问题。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。 EJB -&gt; Spring Framework -&gt; Spring Boot -&gt; Spring Cloud Spring Initializr:https://start.spring.io/ 优点体系结构Spring Framework下载jar包：http://repo.springsource.org/libs-release-local/org/springframework/spring/3.2.0.RELEASE/spring-framework-3.2.0.RELEASE-dist.zip项目地址：https://github.com/spring-projects/spring-framework Spring Boot项目地址：https://github.com/spring-projects/spring-boot Spring Cloud]]></content>
@@ -47,13 +58,10 @@
   <entry>
     <title><![CDATA[前端框架]]></title>
     <url>%2F%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%2F</url>
-    <content type="text"><![CDATA[UI框架LayuiLayui MiniUIVueVue.js 是渐进式的JS框架。只关注视图层，采用自底向上增量开发的设计。 ReactReact AngularAngularJS 诞生于2009年，由Misko Hevery等人创建，之后被Google所收购。 Web.xmlServletServlet通常被称为服务器端小程序，是运行在服务器端的程序，用于处理及响应客户端的请求。Servlet是个特殊的Java类，这个Java类必须继承HttpServlet。每个Servlet可以响应客户端的请求。Servlet提供不同的方法用于响应客户端请求。 doGet doPost doPut doDelete service()：响应客户端的所有请求。 FilterFilter可以认为是Servlet的一种加强版，主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理，是个典型的处理链。 Listener]]></content>
+    <content type="text"><![CDATA[UI框架LayuiLayui MiniUIVueReactReact AngularAngularJS 诞生于2009年，由Misko Hevery等人创建，之后被Google所收购。 Web.xmlServletServlet通常被称为服务器端小程序，是运行在服务器端的程序，用于处理及响应客户端的请求。Servlet是个特殊的Java类，这个Java类必须继承HttpServlet。每个Servlet可以响应客户端的请求。Servlet提供不同的方法用于响应客户端请求。 doGet doPost doPut doDelete service()：响应客户端的所有请求。 FilterFilter可以认为是Servlet的一种加强版，主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理，是个典型的处理链。 Listener]]></content>
       <categories>
-        <category>web</category>
+        <category>前端</category>
       </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[android-Constraint Layout Library]]></title>
@@ -61,7 +69,7 @@
     <content type="text"><![CDATA[简介 Android Studio版本至少2.3； 添加依赖，如下：1implementation 'com.android.support.constraint:constraint-layout:1.1.3' ConstraintLayout1package android.support.constraint; ConstraintLayout 主要是为了解决布局嵌套过多的问题，以灵活的方式定位和调整小部件。Android Studio 2.3开始，官方模板默认使用ConstraintLayout。 相对定位 layout_constraintLeft_toLeftOf layout_constraintLeft_toRightOf layout_constraintRight_toLeftOf layout_constraintRight_toRightOf layout_constraintTop_toTopOf layout_constraintTop_toBottomOf layout_constraintBottom_toTopOf layout_constraintBottom_toBottomOf layout_constraintBaseline_toBaselineOf：约束文本基线 layout_constraintStart_toEndOf layout_constraintStart_toStartOf layout_constraintEnd_toStartOf layout_constraintEnd_toEndOf 1234&lt;Button android:id="@+id/buttonA" ... /&gt;&lt;Button android:id="@+id/buttonB" ... app:layout_constraintLeft_toRightOf="@+id/buttonA" /&gt; They all take a reference id to another widget, or the parent (which will reference the parent container, i.e. the ConstraintLayout):12&lt;Button android:id="@+id/buttonB" ... app:layout_constraintLeft_toLeftOf="parent" /&gt; 边距 android:layout_marginStart android:layout_marginEnd android:layout_marginLeft android:layout_marginTop android:layout_marginRight android:layout_marginBottom 注：设置边距时，需要约束控件在ConstraintLayout里的位置。 如果目标View不可见（View.GONE）时，可以通过以下属性设置不同的边距： layout_goneMarginStart layout_goneMarginEnd layout_goneMarginLeft layout_goneMarginTop layout_goneMarginRight layout_goneMarginBottom 居中和偏移居中：1234567&lt;EditText android:id="@+id/edt" ... app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" /&gt; 偏移（赋值0-1）： layout_constraintHorizontal_bias：水平偏移 layout_constraintVertical_bias：垂直偏移 Circular positioning layout_constraintCircle : references another widget id layout_constraintCircleRadius : 组件间的中心距离 layout_constraintCircleAngle : which angle the widget should be at (in degrees, from 0 to 360) 尺寸约束 指定尺寸大小 wrap_contentandroid:minWidth ：最小宽度android:minHeight ：最小高度android:maxWidth ：最大宽度android:maxHeight ：最大高度app:layout_constrainedWidth=”true|false”app:layout_constrainedHeight=”true|false” 0dp注: MATCH_PARENT is not recommended for widgets contained in a ConstraintLayout. Similar behavior can be defined by using MATCH_CONSTRAINT with the corresponding left/right or top/bottom constraints being set to “parent”. 百分比layout_constraintWidth_min and layout_constraintHeight_min : will set the minimum size for this dimensionlayout_constraintWidth_max and layout_constraintHeight_max : will set the maximum size for this dimensionlayout_constraintWidth_percent and layout_constraintHeight_percent : will set the size of this dimension as a percentage of the parent app:layout_constraintWidth_default=”percent” app:layout_constraintHeight_default=”percent” Ratio比例123456&lt;Button android:layout_width="wrap_content" android:layout_height="0dp" app:layout_constraintDimensionRatio="1:1" /&gt; width:height 链Chain Style：链的第一个控件是这条链的链头，可以在链头中设置layout_constraintHorizontal_chainStyle、layout_constraintVertical_chainStyle CHAIN_SPREAD(default style) Weighted chain CHAIN_SPREAD_INSIDE：展开元素，链的两端贴近parent； CHAIN_PACKED：链的元素将被打包在一起。 GroupGroup将多个控件归为一组，方便隐藏或显示一组控件。 Guideline]]></content>
       <categories>
         <category>android</category>
-        <category>api</category>
+        <category>API</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -72,7 +80,7 @@
     <url>%2FJavaScript%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[JavaScript1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。12345// 对象是名/值对的集合，或字符串到值映射的集合var book = &#123; topic: "JavaScript", fat: true&#125;; JavaScript程序是用Unicode字符集编写的。 JavaScript是区分大小写的语言。 JavaScript标识符（用来对变量和函数进行命名）必须以字母、下划线、美元符开始。 数据类型、值、变量JavaScript的数据类型分为两类：原始类型（数字、字符串、布尔值、null、undefined）和对象类型。 JavaScript不区分整数值和浮点数值。所有数值均用浮点数值表示。 JavaScript中，字符串是不可变的。 12Math.pow(2,53) // 2的53次幂Math.round(.8) // =&gt; 1.0：四舍五入 jQueryjQuery是一个快速、简洁的JavaScript框架，继Prototype之后又一个优秀的JavaScript代码库。jQuery设计的宗旨是“Write Less,Do More”。发布者：John ResigjQuery 1.0：2006/01 Ajax（网络请求）Ajax（Asynchronous JavaScript and XML）]]></content>
       <categories>
-        <category>web</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -83,7 +91,7 @@
     <url>%2FCSS%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[CSSCSS规则有两个主要的部分构成：选择器（需要改变样式的HTML元素），以及一条或多条声明。12345h1 &#123;color:green;font-size:12px;&#125; id和class选择器1234567891011121314151617181920&lt;!--CSS中id选择器以“#”来定义--&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt; &lt;title&gt;css demo&lt;/title&gt; &lt;style&gt;#para1&#123; text-align:center; color:red;&#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;p id="para1"&gt;Hello World!&lt;/p&gt;&lt;p&gt;不受该样式的影响&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; 12345678910111213141516171819&lt;!--CSS中class选择器以“.”来定义。也可以指定特定的HTML元素使用class，如p.center--&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt; &lt;title&gt;css demo&lt;/title&gt; &lt;style&gt;.center&#123; text-align:center;&#125;&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 class="center"&gt;标题居中&lt;/h1&gt;&lt;p class="center"&gt;段落居中&lt;/p&gt; &lt;/body&gt;&lt;/html&gt; CSS3选择器盒模型背景和边框文字特效2D/3D转换动画多列布局用户界面]]></content>
       <categories>
-        <category>web</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>CSS</tag>
@@ -94,7 +102,7 @@
     <url>%2FHTML%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[常用标签123&lt;!DOCTYPE html&gt;：声明为HTML5文档。&lt;html&gt;HTML页面的根元素&lt;/html&gt;&lt;body&gt;可见的页面内容&lt;/body&gt; 12345&lt;!--页面标签--&gt;&lt;h1&gt;-&lt;h6&gt;：标题&lt;p&gt;段落&lt;/p&gt;&lt;br/&gt;：换行&lt;hr/&gt;：水平线 head标签123456789101112131415161718192021222324252627282930&lt;head&gt;&lt;!--&lt;meta&gt;标签提供了元数据，元数据不显示在页面上，但会被浏览器解析。--&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="description" content="定义网页描述内容"&gt;&lt;meta name="author" content="定义网页作者"&gt;&lt;!--3秒刷新网页--&gt;&lt;meta http-equiv="refresh" content="3"&gt;&lt;!--为搜索引擎定义关键字--&gt;&lt;meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"&gt;&lt;title&gt;网页标题&lt;/title&gt;&lt;!--标题左侧显示logo--&gt;&lt;link rel="shortcut icon" href="图片url"&gt;&lt;!--HTML文档中所有的链接标签的默认链接--&gt;&lt;base href="http://www.test.com/images/" target="_blank"&gt;&lt;!--HTML文档与外部资源之间的关系，通常用于链接到样式表--&gt;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;&lt;!--HTML文档的样式文件引用地址或自定义样式--&gt;&lt;style type="text/css"&gt;body &#123;background-color:yellow&#125;p &#123;color:green&#125;&lt;/style&gt;&lt;!--加载脚本文件--&gt;&lt;script&gt;&lt;/script&gt;&lt;/head&gt; 链接12&lt;!--使用target属性，可以定义链接在哪个窗口显示。_blank表示在新窗口显示--&gt;&lt;a href="http://www.liuweidong.club/" target="_blank"&gt;测试链接&lt;/a&gt; 图片123456789101112&lt;!--html文件与图片在不同盘符--&gt;&lt;img src="file:///f:/*.jpg" width="500" height="300"/&gt;&lt;!--html文件与图片在相同目录--&gt;&lt;img src="*.jpg" width="500" height="300"/&gt; &lt;!--html文件与image文件夹在相同目录--&gt;&lt;img src="image/*.jpg/"width="500" height="300"/&gt;&lt;!--html文件与图片的父文件夹在相同目录--&gt;&lt;img src="../image/*.jpg/"width="500" height="300"/&gt;&lt;!--网络图片--&gt;&lt;img src="http://www.test.com/images/test.png" width="500" height="300"/&gt;&lt;img src="url" alt="图片加载不出来时，替换图片的文本"/&gt; 列表12345678910111213&lt;!--无序列表--&gt;&lt;ul&gt; &lt;li&gt;A&lt;/li&gt; &lt;li&gt;B&lt;/li&gt; &lt;li&gt;C&lt;/li&gt;&lt;/ul&gt;&lt;!--有序列表，start属性可以指定从特定数字开始--&gt;&lt;ol start="3"&gt; &lt;li&gt;A&lt;/li&gt; &lt;li&gt;B&lt;/li&gt; &lt;li&gt;C&lt;/li&gt;&lt;/ol&gt; HTML CSS123456789101112131415161718&lt;!--方式一 内联样式 在HTML元素中使用"style"属性--&gt;&lt;!--background-color：背景色；font-family：字体；color：文字颜色；margin-left：左边距； text-align：文本对齐方式；--&gt;&lt;h2 style="background-color:red;"&gt;标题&lt;/h2&gt;&lt;p style="font-family:arial;color:blue;font-size:20px;margin-left:20px;"&gt;段落&lt;/p&gt;&lt;h1 style="text-align:center;"&gt;居中对齐的标题&lt;/h1&gt;&lt;!--方式二 内部样式--&gt;&lt;head&gt;&lt;style type="text/css"&gt;body &#123;background-color:yellow;&#125;p &#123;color:blue;&#125;&lt;/style&gt;&lt;/head&gt;&lt;!--方式三 外部样式--&gt;&lt;head&gt;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;&lt;/head&gt; 注意：如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。 格式化标签123456&lt;b&gt;加粗&lt;/b&gt;&lt;i&gt;斜体&lt;/i&gt;&lt;del&gt;删除&lt;/del&gt;&lt;ins&gt;下划线&lt;/ins&gt;&lt;sub&gt;下标&lt;/sub&gt;&lt;sup&gt;上标&lt;/sup&gt; 其他标签1&lt;div&gt;组合其他标签的容器&lt;/div&gt; 示例123456789101112&lt;!--html示例--&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset="utf-8"&gt; &lt;title&gt;页面标题&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;h1&gt;标题&lt;/h1&gt; &lt;p&gt;段落&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
       <categories>
-        <category>web</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>HTML</tag>
@@ -106,7 +114,7 @@
     <content type="text"><![CDATA[概述 We hope the division between android. and androidx. makes it more obvious which APIs are bundled with the platform, and which are static libraries for app developers that work across different versions of Android. 简单地说就是新的库可以在不同的Android版本上使用。之前的话，所有support依赖库版本必须一致，如果有bug，所有依赖库版本都需要升级，存在绑定关系，且正式版的发布周期也很长。官方参考地址：官方说明AndroidX OverviewMigrating to AndroidX（迁移到AndroidX）Recent Release NotesAPI reference：AndroidX 使用与迁移新项目中使用AndroidX，需要将编译SDK设置为Android 9.0（API 28）或更高版本，并在gradle.properties文件中将以下两个Android Gradle插件标记设置为true。1234# 当前项目启用AndroidXandroid.useAndroidX=true# 是否迁移之前的依赖包android.enableJetifier=true Android Studio 3.2 Canary中添加了一键迁移的功能 Refactor -&gt; Migrate to AndroidXProperties]]></content>
       <categories>
         <category>android</category>
-        <category>api</category>
+        <category>API</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -130,7 +138,7 @@
     <content type="text"><![CDATA[概述 Provides a variety of Android feature and utility APIs that are compatible with a wide &gt; range of platform versions.如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库，每一个support library向上兼容于不同的API版本。 官方参考地址：Support Library OverviewFeaturesPackagesSetupRecent Support Library RevisionsSupport Library Revision ArchiveAPI reference：Android Support Library Android Support V4最早（2011年4月）实现的库。 support-v4添加依赖：1implementation 'com.android.support:support-v4:25.0.0' DrawerLayoutFragment1package android.support.v4.app; FragmentActivity1package android.support.v4.app; NestedScrollViewViewPager1package android.support.v4.view; Android Support V7appcompat-v7AppCompatActivity1package android.support.v7.app; 继承结构：java.lang.Object ↳ android.content.Context ↳ android.content.ContextWrapper ↳ android.view.ContextThemeWrapper ↳ android.app.Activity ↳ android.support.v4.app.FragmentActivity ↳ android.support.v7.app.AppCompatActivityAppCompatActivitytheme： cardview-v7gridlayout-v7recyclerview-v7Android 5.0推出。相比ListView优点：1)封装了ViewHolder的回收复用，编写Adapter面向的是ViewHolder而不再是View了，复用的逻辑被封装了，写起来更加简单。2)插拔式的体验，高度的解耦。3)设置布局管理器控制Item的布局方式，横向、竖向、瀑布流方式。4)设置Item间隔样式。继承ItemDecoration。5)控制Item增删的动画，通过ItemAnimator进行绘制。 Design Support Library简介Google IO 2015 Material Design支持库。添加依赖：1implementation 'com.android.support:design:25.0.0' AppBarLayout继承LinearLayout，默认方向是Vertical CollapsingToolbarLayoutCoordinatorLayoutCoordinatorLayout遵循Material风格，结合AppBarLayout，CollapsingToolbarLayout等可产生各种炫酷的折叠悬浮效果。 FloatingActionButtonNavigationViewSnackbar页面底部弹出式消息。 TabLayoutTextInputLayout]]></content>
       <categories>
         <category>android</category>
-        <category>api</category>
+        <category>API</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -308,12 +316,12 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-AndroidPlatform]]></title>
+    <title><![CDATA[android-Android Platform]]></title>
     <url>%2Fandroid-AndroidPlatform%2F</url>
     <content type="text"><![CDATA[android.animationAnimatorAnimatorSetValueAnimatorandroid.appActivityApplicationDatePickerDialogDialogandroid.bluetoothandroid.contentContextContextWrapperIntentandroid.databaseandroid.graphicsBitmapandroid.utilSparseArrayAndroid内部特有的API。用来替代HashMap&lt;Integer, E&gt;这种形式，使用SparseArray更加节省内存空间。HashMap是数组和链表的结合体，被称为链表散列。SparseArray是单纯数组的结合，被称为稀疏数组。Android堆区允许使用的最大内存仅仅16M。 android.viewViewViewGroupWindowandroid.webkitWebViewandroid.widgetEditTextFrameLayoutGridViewImageViewListViewTextViewToolbar]]></content>
       <categories>
         <category>android</category>
-        <category>api</category>
+        <category>API</category>
       </categories>
       <tags>
         <tag>android</tag>
