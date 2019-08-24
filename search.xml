@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[前端框架-Vue]]></title>
     <url>%2F%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6-Vue%2F</url>
-    <content type="text"><![CDATA[概览Vue.js 是渐进式的JS框架。只关注视图层，采用自底向上增量开发的设计。 环境 WebStorm Node.js 命令|:-|:-||npm install vue-cli -g||]]></content>
+    <content type="text"><![CDATA[概览Vue.js 是渐进式的JS框架。只关注视图层，采用自底向上增量开发的设计。官方仓库：https://github.com/vuejs兼容性Vue 不支持 IE8 及以下版本，因为 Vue 使用了 IE8 无法模拟的 ECMAScript 5 特性。但它支持所有兼容 ECMAScript 5 的浏览器。更新日志https://github.com/vuejs/vue/releasesVue Devtools在使用 Vue 时，我们推荐在你的浏览器上安装 Vue Devtools。它允许你在一个更友好的界面中审查和调试 Vue 应用。 npmhttps://www.npmjs.cn/config12345678// 如：key=registry，设置地址npm config set &lt;key&gt; &lt;value&gt;// 如：key=registry，默认地址：https://registry.npmjs.org/npm config get &lt;key&gt;npm config listnpm config edit install123456// 升级npmnpm install npm@latest -g// 本地安装，在当前的目录下创建一个 node_modules 的目录npm install &lt;package_name&gt;// 全局安装，npm install -g &lt;package_name&gt; root12// npm根目录npm root [-g] uninstall12// 全局卸载npm uninstall -g &lt;package_name&gt; Vue CLIVue CLI是一个基于 Vue.js 进行快速开发的完整系统。源代码 @vue/cli @vue/cli-service 项目目录│ .babelrc（babel编译参数）│ .editorconfig（代码格式）│ .eslintignore│ .eslintrc.js│ .gitignore│ .postcssrc.js（转换css工具）│ index.html（主页）│ package.json（项目配置）│ README.md（项目说明）│├─build（webpack相关配置文件）│ build.js（生产环境构建）│ check-versions.js（检查npm、node版本）│ logo.png│ utils.js│ vue-loader.conf.js│ webpack.base.conf.js（webpack基础配置）│ webpack.dev.conf.js（webpack开发环境配置）│ webpack.prod.conf.js（webpack生产环境配置）│├─config（vue基本配置文件）│ dev.env.js（项目开发环境配置）│ index.js（项目主要配置）│ prod.env.js（项目生产环境配置）│ test.env.js│├─src│ │ App.vue（根组件）│ │ main.js（入口文件）│ ││ ├─assets│ │ logo.png│ ││ ├─components（公共组件）│ │ HelloWorld.vue│ ││ └─router（路由）│ index.js│├─static（静态资源） package.json文件： scripts：指定了运行脚本命令的npm命令行缩写 dependencies：项目运行所依赖的模块 devDependencies：项目开发所需要的模块 12npm install &lt;package_name&gt; --savenpm install &lt;package_name&gt; --save-dev @vue/cli (3.x)安装：123npm install -g @vue/cli# ORyarn global add @vue/cli vue-cli (1.x or 2.x)https://github.com/vuejs/vue-cli/tree/v2#vue-cli–安装：1npm install -g vue-cli Vue Routerhttps://router.vuejs.org/zh/ 环境安装开发工具： WebStorm Node.js（npm将自动安装） 配置开发环境：https://npm.taobao.org/ 安装淘宝镜像：npm install -g cnpm –registry=https://registry.npm.taobao.org 安装webpack：cnpm install -g webpack 安装vue-cli：cnpm install -g vue-cli，验证命令vue -V]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -76,8 +76,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[JavaScript详解]]></title>
-    <url>%2FJavaScript%E8%AF%A6%E8%A7%A3%2F</url>
+    <title><![CDATA[前端-JavaScript]]></title>
+    <url>%2F%E5%89%8D%E7%AB%AF-JavaScript%2F</url>
     <content type="text"><![CDATA[JavaScript1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。12345// 对象是名/值对的集合，或字符串到值映射的集合var book = &#123; topic: "JavaScript", fat: true&#125;; JavaScript程序是用Unicode字符集编写的。 JavaScript是区分大小写的语言。 JavaScript标识符（用来对变量和函数进行命名）必须以字母、下划线、美元符开始。 数据类型、值、变量JavaScript的数据类型分为两类：原始类型（数字、字符串、布尔值、null、undefined）和对象类型。 JavaScript不区分整数值和浮点数值。所有数值均用浮点数值表示。 JavaScript中，字符串是不可变的。 12Math.pow(2,53) // 2的53次幂Math.round(.8) // =&gt; 1.0：四舍五入 jQueryjQuery是一个快速、简洁的JavaScript框架，继Prototype之后又一个优秀的JavaScript代码库。jQuery设计的宗旨是“Write Less,Do More”。发布者：John ResigjQuery 1.0：2006/01 Ajax（网络请求）Ajax（Asynchronous JavaScript and XML）]]></content>
       <categories>
         <category>前端</category>
@@ -87,8 +87,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[CSS详解]]></title>
-    <url>%2FCSS%E8%AF%A6%E8%A7%A3%2F</url>
+    <title><![CDATA[前端-CSS]]></title>
+    <url>%2F%E5%89%8D%E7%AB%AF-CSS%2F</url>
     <content type="text"><![CDATA[CSSCSS规则有两个主要的部分构成：选择器（需要改变样式的HTML元素），以及一条或多条声明。12345h1 &#123;color:green;font-size:12px;&#125; id和class选择器1234567891011121314151617181920&lt;!--CSS中id选择器以“#”来定义--&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt; &lt;title&gt;css demo&lt;/title&gt; &lt;style&gt;#para1&#123; text-align:center; color:red;&#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;p id="para1"&gt;Hello World!&lt;/p&gt;&lt;p&gt;不受该样式的影响&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; 12345678910111213141516171819&lt;!--CSS中class选择器以“.”来定义。也可以指定特定的HTML元素使用class，如p.center--&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt; &lt;title&gt;css demo&lt;/title&gt; &lt;style&gt;.center&#123; text-align:center;&#125;&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 class="center"&gt;标题居中&lt;/h1&gt;&lt;p class="center"&gt;段落居中&lt;/p&gt; &lt;/body&gt;&lt;/html&gt; CSS3选择器盒模型背景和边框文字特效2D/3D转换动画多列布局用户界面]]></content>
       <categories>
         <category>前端</category>
@@ -98,8 +98,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[HTML详解]]></title>
-    <url>%2FHTML%E8%AF%A6%E8%A7%A3%2F</url>
+    <title><![CDATA[前端-HTML]]></title>
+    <url>%2F%E5%89%8D%E7%AB%AF-HTML%2F</url>
     <content type="text"><![CDATA[常用标签123&lt;!DOCTYPE html&gt;：声明为HTML5文档。&lt;html&gt;HTML页面的根元素&lt;/html&gt;&lt;body&gt;可见的页面内容&lt;/body&gt; 12345&lt;!--页面标签--&gt;&lt;h1&gt;-&lt;h6&gt;：标题&lt;p&gt;段落&lt;/p&gt;&lt;br/&gt;：换行&lt;hr/&gt;：水平线 head标签123456789101112131415161718192021222324252627282930&lt;head&gt;&lt;!--&lt;meta&gt;标签提供了元数据，元数据不显示在页面上，但会被浏览器解析。--&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="description" content="定义网页描述内容"&gt;&lt;meta name="author" content="定义网页作者"&gt;&lt;!--3秒刷新网页--&gt;&lt;meta http-equiv="refresh" content="3"&gt;&lt;!--为搜索引擎定义关键字--&gt;&lt;meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"&gt;&lt;title&gt;网页标题&lt;/title&gt;&lt;!--标题左侧显示logo--&gt;&lt;link rel="shortcut icon" href="图片url"&gt;&lt;!--HTML文档中所有的链接标签的默认链接--&gt;&lt;base href="http://www.test.com/images/" target="_blank"&gt;&lt;!--HTML文档与外部资源之间的关系，通常用于链接到样式表--&gt;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;&lt;!--HTML文档的样式文件引用地址或自定义样式--&gt;&lt;style type="text/css"&gt;body &#123;background-color:yellow&#125;p &#123;color:green&#125;&lt;/style&gt;&lt;!--加载脚本文件--&gt;&lt;script&gt;&lt;/script&gt;&lt;/head&gt; 链接12&lt;!--使用target属性，可以定义链接在哪个窗口显示。_blank表示在新窗口显示--&gt;&lt;a href="http://www.liuweidong.club/" target="_blank"&gt;测试链接&lt;/a&gt; 图片123456789101112&lt;!--html文件与图片在不同盘符--&gt;&lt;img src="file:///f:/*.jpg" width="500" height="300"/&gt;&lt;!--html文件与图片在相同目录--&gt;&lt;img src="*.jpg" width="500" height="300"/&gt; &lt;!--html文件与image文件夹在相同目录--&gt;&lt;img src="image/*.jpg/"width="500" height="300"/&gt;&lt;!--html文件与图片的父文件夹在相同目录--&gt;&lt;img src="../image/*.jpg/"width="500" height="300"/&gt;&lt;!--网络图片--&gt;&lt;img src="http://www.test.com/images/test.png" width="500" height="300"/&gt;&lt;img src="url" alt="图片加载不出来时，替换图片的文本"/&gt; 列表12345678910111213&lt;!--无序列表--&gt;&lt;ul&gt; &lt;li&gt;A&lt;/li&gt; &lt;li&gt;B&lt;/li&gt; &lt;li&gt;C&lt;/li&gt;&lt;/ul&gt;&lt;!--有序列表，start属性可以指定从特定数字开始--&gt;&lt;ol start="3"&gt; &lt;li&gt;A&lt;/li&gt; &lt;li&gt;B&lt;/li&gt; &lt;li&gt;C&lt;/li&gt;&lt;/ol&gt; HTML CSS123456789101112131415161718&lt;!--方式一 内联样式 在HTML元素中使用"style"属性--&gt;&lt;!--background-color：背景色；font-family：字体；color：文字颜色；margin-left：左边距； text-align：文本对齐方式；--&gt;&lt;h2 style="background-color:red;"&gt;标题&lt;/h2&gt;&lt;p style="font-family:arial;color:blue;font-size:20px;margin-left:20px;"&gt;段落&lt;/p&gt;&lt;h1 style="text-align:center;"&gt;居中对齐的标题&lt;/h1&gt;&lt;!--方式二 内部样式--&gt;&lt;head&gt;&lt;style type="text/css"&gt;body &#123;background-color:yellow;&#125;p &#123;color:blue;&#125;&lt;/style&gt;&lt;/head&gt;&lt;!--方式三 外部样式--&gt;&lt;head&gt;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;&lt;/head&gt; 注意：如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。 格式化标签123456&lt;b&gt;加粗&lt;/b&gt;&lt;i&gt;斜体&lt;/i&gt;&lt;del&gt;删除&lt;/del&gt;&lt;ins&gt;下划线&lt;/ins&gt;&lt;sub&gt;下标&lt;/sub&gt;&lt;sup&gt;上标&lt;/sup&gt; 其他标签1&lt;div&gt;组合其他标签的容器&lt;/div&gt; 示例123456789101112&lt;!--html示例--&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset="utf-8"&gt; &lt;title&gt;页面标题&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;h1&gt;标题&lt;/h1&gt; &lt;p&gt;段落&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
       <categories>
         <category>前端</category>
@@ -912,8 +912,8 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Markdown语法]]></title>
-    <url>%2FMarkdown%E8%AF%AD%E6%B3%95%2F</url>
+    <title><![CDATA[教程-Markdown语法]]></title>
+    <url>%2F%E6%95%99%E7%A8%8B-Markdown%E8%AF%AD%E6%B3%95%2F</url>
     <content type="text"><![CDATA[简介Markdown是一种轻量级的标记语言，将作者从繁杂的排版工作中解放出来，实现易读易写的文章写作。 Windows平台编辑器 MarkdownPad一款全功能的编辑器。 标题 #：H1 ##：H2 ###：H3 文本 加粗：文本左右分别添加两个* 斜体：文本左右分别添加一个* 加粗斜体：文本左右分别添加三个* 删除线：文本左右分别添加两个~ 文本颜色： 1&lt;font color="#ff0000"&gt;颜色文本&lt;/font&gt; 文本增加背景色：文本左右分别添加一个反引号 ` 引用在引用的文本前面添加&gt;，且可以嵌套，&gt;&gt;或&gt;&gt;&gt; 图片 Markdown显示图片语法： 1![图片说明](https://i.imgur.com/4u0hKYA.jpg) 效果如下图： 固定图片显示大小： 1&lt;img src="https://i.imgur.com/4u0hKYA.jpg" width=200 height=200 /&gt; 效果如下图： 图片按比例显示： 1&lt;img src="https://i.imgur.com/4u0hKYA.jpg" width=25% height=25% /&gt; 效果如下图： 链接Markdown显示连接语法：1[链接显示文本]（https://www.baidu.com） 列表 无序列表 有序列表：数字 + . + 空格 第一点 第二点 分隔线一行连续使用三个或以上的-或* 代码 每一行前面加一个tab或4个空格可以标记一个代码片段，效果如下图：public int main() { reutrn 0; } 连续三个反引号`（需要代码高亮的话，加上代码类型），键盘上数字1前面按键，如下图：效果如下图：12345public class main &#123; public static void main(String[] args)&#123; System.out.println("hello java"); &#125; &#125; 表格123|标题1|标题2|标题3||:---|:---:|---:||第一行第一列|01|第一行第三列| 注意：表格语句上一行必须为空行，否则表格无效。效果如下图： 标题1 标题2 标题3 第一行第一列 01 第一行第三列 说明： :-表示居左对齐；:-:表示居中对齐；-:表示居右对齐 -至少有一个 流程图]]></content>
       <categories>
         <category>利器</category>
