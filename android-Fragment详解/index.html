@@ -146,25 +146,25 @@
 
 
 
-  <meta name="description" content="简介 Android Studio版本至少2.3； 添加依赖，如下：1implementation &apos;com.android.support.constraint:constraint-layout:1.1.3&apos;   ConstraintLayout1package android.support.constraint; ConstraintLayout 主要是为了解决布局嵌套过多的问题，以灵活的">
-<meta name="keywords" content="android">
+  <meta name="description" content="概览Android 3.0（API级别11）中引入了Fragment，主要是为了给大屏幕（如平板电脑）上更加动态和灵活的 UI 设计提供支持。由于平板电脑的屏幕比手机屏幕大得多，因此可用于组合和交换 UI 组件的空间更大。利用片段实现此类设计时，您无需管理对视图层次结构的复杂更改。  Fragment表示Activity中的行为或用户界面部分。Fragment必须始终嵌入在Activity中，其生">
+<meta name="keywords" content="Fragment">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android-Constraint Layout Library">
-<meta property="og:url" content="https://liuweidong.club/android-ConstraintLayoutLibrary/index.html">
+<meta property="og:title" content="android-Fragment详解">
+<meta property="og:url" content="https://liuweidong.club/android-Fragment详解/index.html">
 <meta property="og:site_name" content="刘卫东">
-<meta property="og:description" content="简介 Android Studio版本至少2.3； 添加依赖，如下：1implementation &apos;com.android.support.constraint:constraint-layout:1.1.3&apos;   ConstraintLayout1package android.support.constraint; ConstraintLayout 主要是为了解决布局嵌套过多的问题，以灵活的">
+<meta property="og:description" content="概览Android 3.0（API级别11）中引入了Fragment，主要是为了给大屏幕（如平板电脑）上更加动态和灵活的 UI 设计提供支持。由于平板电脑的屏幕比手机屏幕大得多，因此可用于组合和交换 UI 组件的空间更大。利用片段实现此类设计时，您无需管理对视图层次结构的复杂更改。  Fragment表示Activity中的行为或用户界面部分。Fragment必须始终嵌入在Activity中，其生">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-23T16:11:41.092Z">
+<meta property="og:updated_time" content="2019-08-31T14:07:07.876Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android-Constraint Layout Library">
-<meta name="twitter:description" content="简介 Android Studio版本至少2.3； 添加依赖，如下：1implementation &apos;com.android.support.constraint:constraint-layout:1.1.3&apos;   ConstraintLayout1package android.support.constraint; ConstraintLayout 主要是为了解决布局嵌套过多的问题，以灵活的">
+<meta name="twitter:title" content="android-Fragment详解">
+<meta name="twitter:description" content="概览Android 3.0（API级别11）中引入了Fragment，主要是为了给大屏幕（如平板电脑）上更加动态和灵活的 UI 设计提供支持。由于平板电脑的屏幕比手机屏幕大得多，因此可用于组合和交换 UI 组件的空间更大。利用片段实现此类设计时，您无需管理对视图层次结构的复杂更改。  Fragment表示Activity中的行为或用户界面部分。Fragment必须始终嵌入在Activity中，其生">
 
 
 
 
 
 
-  <link rel="canonical" href="https://liuweidong.club/android-ConstraintLayoutLibrary/">
+  <link rel="canonical" href="https://liuweidong.club/android-Fragment详解/">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>android-Constraint Layout Library | 刘卫东</title>
+  <title>android-Fragment详解 | 刘卫东</title>
   
 
 
@@ -434,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/android-ConstraintLayoutLibrary/">
+    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/android-Fragment详解/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuweidong">
@@ -451,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">android-Constraint Layout Library
+          <h1 class="post-title" itemprop="name headline">android-Fragment详解
 
               
             
@@ -477,7 +477,7 @@
                 
               
 
-              <time title="创建时间：2019-04-06 12:38:20" itemprop="dateCreated datePublished" datetime="2019-04-06T12:38:20+08:00">2019-04-06</time>
+              <time title="创建时间：2018-05-02 19:00:13" itemprop="dateCreated datePublished" datetime="2018-05-02T19:00:13+08:00">2018-05-02</time>
             
 
             
@@ -521,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/android-ConstraintLayoutLibrary/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/android-ConstraintLayoutLibrary/" itemprop="commentCount"></span>
+                <a href="/android-Fragment详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-Fragment详解/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,82 +557,41 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><ol>
-<li>Android Studio版本至少2.3；</li>
-<li>添加依赖，如下：<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">'com.android.support.constraint:constraint-layout:1.1.3'</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="ConstraintLayout"><a href="#ConstraintLayout" class="headerlink" title="ConstraintLayout"></a>ConstraintLayout</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> android.support.constraint;</span><br></pre></td></tr></table></figure>
-<p><a href="https://developer.android.google.cn/reference/android/support/constraint/ConstraintLayout" target="_blank" rel="noopener">ConstraintLayout</a> 主要是为了解决布局嵌套过多的问题，以灵活的方式定位和调整小部件。Android Studio 2.3开始，官方模板默认使用ConstraintLayout。</p>
-<h2 id="相对定位"><a href="#相对定位" class="headerlink" title="相对定位"></a>相对定位</h2><ol>
-<li>layout_constraintLeft_toLeftOf</li>
-<li>layout_constraintLeft_toRightOf</li>
-<li>layout_constraintRight_toLeftOf</li>
-<li>layout_constraintRight_toRightOf</li>
-<li>layout_constraintTop_toTopOf</li>
-<li>layout_constraintTop_toBottomOf</li>
-<li>layout_constraintBottom_toTopOf</li>
-<li>layout_constraintBottom_toBottomOf</li>
-<li><strong>layout_constraintBaseline_toBaselineOf</strong>：约束文本基线</li>
-<li>layout_constraintStart_toEndOf</li>
-<li>layout_constraintStart_toStartOf</li>
-<li>layout_constraintEnd_toStartOf</li>
-<li>layout_constraintEnd_toEndOf</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">android:id</span>=<span class="string">"@+id/buttonA"</span> <span class="attr">...</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">android:id</span>=<span class="string">"@+id/buttonB"</span> <span class="attr">...</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintLeft_toRightOf</span>=<span class="string">"@+id/buttonA"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<p>They all take a reference <strong>id</strong> to another widget, or the <strong>parent</strong> (which will reference the parent container, i.e. the ConstraintLayout):<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">android:id</span>=<span class="string">"@+id/buttonB"</span> <span class="attr">...</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintLeft_toLeftOf</span>=<span class="string">"parent"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="边距"><a href="#边距" class="headerlink" title="边距"></a>边距</h2><ol>
-<li>android:layout_marginStart</li>
-<li>android:layout_marginEnd</li>
-<li>android:layout_marginLeft</li>
-<li>android:layout_marginTop</li>
-<li>android:layout_marginRight</li>
-<li>android:layout_marginBottom</li>
-</ol>
-<p><strong>注：</strong>设置边距时，需要约束控件在ConstraintLayout里的位置。</p>
-<p><strong>如果目标View不可见（View.GONE）时，可以通过以下属性设置不同的边距：</strong></p>
-<ol>
-<li>layout_goneMarginStart</li>
-<li>layout_goneMarginEnd</li>
-<li>layout_goneMarginLeft</li>
-<li>layout_goneMarginTop</li>
-<li>layout_goneMarginRight</li>
-<li>layout_goneMarginBottom</li>
-</ol>
-<h2 id="居中和偏移"><a href="#居中和偏移" class="headerlink" title="居中和偏移"></a>居中和偏移</h2><p><strong>居中：</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">EditText</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/edt"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">...</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">"parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintLeft_toLeftOf</span>=<span class="string">"parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintRight_toRightOf</span>=<span class="string">"parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintTop_toTopOf</span>=<span class="string">"parent"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>偏移（赋值0-1）：</strong></p>
-<ol>
-<li><strong>layout_constraintHorizontal_bias</strong>：水平偏移</li>
-<li><strong>layout_constraintVertical_bias</strong>：垂直偏移</li>
-</ol>
-<h2 id="Circular-positioning"><a href="#Circular-positioning" class="headerlink" title="Circular positioning"></a>Circular positioning</h2><ol>
-<li><strong>layout_constraintCircle</strong> : references another widget id</li>
-<li><strong>layout_constraintCircleRadius</strong> : 组件间的中心距离</li>
-<li><strong>layout_constraintCircleAngle</strong> : which angle the widget should be at (in degrees, from 0 to 360)</li>
-</ol>
-<h2 id="尺寸约束"><a href="#尺寸约束" class="headerlink" title="尺寸约束"></a>尺寸约束</h2><ol>
-<li><strong>指定尺寸大小</strong></li>
-<li><strong>wrap_content</strong><br><strong>android:minWidth</strong> ：最小宽度<br><strong>android:minHeight</strong> ：最小高度<br><strong>android:maxWidth</strong> ：最大宽度<br><strong>android:maxHeight</strong> ：最大高度<br>app:<strong>layout_constrainedWidth</strong>=”true|false”<br>app:<strong>layout_constrainedHeight</strong>=”true|false”</li>
-<li><strong>0dp</strong><br><strong>注:</strong> <code>MATCH_PARENT</code> is not recommended for widgets contained in a ConstraintLayout. Similar behavior can be defined by using MATCH_CONSTRAINT with the corresponding left/right or top/bottom constraints being set to “parent”.</li>
-<li><strong>百分比</strong><br><strong>layout_constraintWidth_min</strong> and <strong>layout_constraintHeight_min</strong> : will set the minimum size for this dimension<br><strong>layout_constraintWidth_max</strong> and <strong>layout_constraintHeight_max</strong> : will set the maximum size for this dimension<br><strong>layout_constraintWidth_percent</strong> and <strong>layout_constraintHeight_percent</strong> : will set the size of this dimension as a percentage of the parent</li>
-</ol>
+        <h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><p>Android 3.0（API级别11）中引入了<a href="https://developer.android.google.cn/guide/components/fragments" target="_blank" rel="noopener">Fragment</a>，主要是为了给大屏幕（如平板电脑）上更加动态和灵活的 UI 设计提供支持。由于平板电脑的屏幕比手机屏幕大得多，因此可用于组合和交换 UI 组件的空间更大。利用片段实现此类设计时，您无需管理对视图层次结构的复杂更改。</p>
 <ul>
-<li>app:<strong>layout_constraintWidth_default</strong>=”percent”</li>
-<li>app:<strong>layout_constraintHeight_default</strong>=”percent”</li>
+<li>Fragment表示Activity中的行为或用户界面部分。Fragment必须始终嵌入在Activity中，其生命周期直接受宿主Activity生命周期的影响。 </li>
+<li>可以将多个Fragment组合在一个Activity中来构建多窗格UI，以及在多个Activity中重复使用某个片段。</li>
+<li>可以将Fragment视为Activity的模块化组成部分，它具有自己的生命周期，能接收自己的输入事件。</li>
+<li>可以在Activity运行时添加或移除Fragment。</li>
 </ul>
-<ol start="5">
-<li><strong>Ratio比例</strong><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"0dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:layout_constraintDimensionRatio</span>=<span class="string">"1:1"</span> /&gt;</span></span><br><span class="line">    </span><br><span class="line">width:height</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="链"><a href="#链" class="headerlink" title="链"></a>链</h2><p><strong>Chain Style</strong>：链的第一个控件是这条链的链头，可以在链头中设置<br><strong>layout_constraintHorizontal_chainStyle</strong>、<strong>layout_constraintVertical_chainStyle</strong> </p>
+<p><strong>优势：</strong></p>
 <ul>
-<li>CHAIN_SPREAD(default style)</li>
-<li>Weighted chain</li>
-<li>CHAIN_SPREAD_INSIDE：展开元素，链的两端贴近parent；</li>
-<li>CHAIN_PACKED：链的元素将被打包在一起。</li>
+<li>模块化（Modularity）：不必把所有代码全部写在Activity中，而是把代码写在各自的Fragment中。</li>
+<li>可重用（Reusability）：多个Activity可以重用一个Fragment。</li>
+<li>可适配（Adaptability）：根据硬件的屏幕尺寸、屏幕方向，能够方便地实现不同的布局，这样用户体验更好。</li>
 </ul>
-<h1 id="Group"><a href="#Group" class="headerlink" title="Group"></a>Group</h1><p>Group将多个控件归为一组，方便隐藏或显示一组控件。</p>
-<h1 id="Guideline"><a href="#Guideline" class="headerlink" title="Guideline"></a>Guideline</h1>
+<h1 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h1><p><a href="https://developer.android.google.cn/guide/components/fragments#Lifecycle" target="_blank" rel="noopener">lifecycle</a></p>
+<ul>
+<li>onAttach()：Fragment与Activity关联时调用。</li>
+<li>onCreate()：创建Fragment时调用。</li>
+<li>onCreateView()：首次绘制其用户界面时调用。</li>
+<li>onActivityCreated()：在Activity的onCreate()方法已返回时调用。</li>
+</ul>
+<h1 id="FragmentManager"><a href="#FragmentManager" class="headerlink" title="FragmentManager"></a>FragmentManager</h1><p><a href="https://developer.android.google.cn/reference/android/app/FragmentManager.html" target="_blank" rel="noopener">FragmentManager</a></p>
+<ul>
+<li>findFragmentById()</li>
+<li>findFragmentByTag()</li>
+<li>popBackStack()：将Fragment从返回栈中弹出。</li>
+<li>addOnBackStackChangedListener()：返回栈变化监听。</li>
+</ul>
+<h1 id="FragmentTransaction"><a href="#FragmentTransaction" class="headerlink" title="FragmentTransaction"></a>FragmentTransaction</h1><p><a href="https://developer.android.google.cn/reference/android/app/FragmentTransaction.html" target="_blank" rel="noopener">FragmentTransaction</a>根据用户行为执行添加add()、移除remove()、替换replace()以及其他操作的<strong>事务</strong>。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Activity中获取FragmentTransaction实例</span></span><br><span class="line">FragmentManager fragmentManager = getFragmentManager();</span><br><span class="line">FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();</span><br><span class="line"></span><br><span class="line"><span class="comment">// add()</span></span><br><span class="line">ExampleFragment fragment = <span class="keyword">new</span> ExampleFragment();</span><br><span class="line">fragmentTransaction.add(R.id.fragment_container, fragment);</span><br><span class="line">fragmentTransaction.commit();</span><br></pre></td></tr></table></figure></p>
+<p>以下示例说明了如何将一个片段替换成另一个片段，以及如何在返回栈中保留先前状态：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create new fragment and transaction</span></span><br><span class="line">Fragment newFragment = <span class="keyword">new</span> ExampleFragment();</span><br><span class="line">FragmentTransaction transaction = getFragmentManager().beginTransaction();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Replace whatever is in the fragment_container view with this fragment,</span></span><br><span class="line"><span class="comment">// and add the transaction to the back stack</span></span><br><span class="line">transaction.replace(R.id.fragment_container, newFragment);</span><br><span class="line">transaction.addToBackStack(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Commit the transaction</span></span><br><span class="line">transaction.commit();</span><br></pre></td></tr></table></figure></p>
+<p><strong>提示：</strong>对于每个片段事务，您都可以通过在提交前调用 setTransition() 来应用过渡动画。<br>调用commit()不会立即执行事务，而是在Activity的UI线程可以执行该操作时再安排其在线程上运行。不过，如有必要，您也可以从UI 线程调用executePendingTransactions()以立即执行commit()提交的事务。通常不必这样做，除非其他线程中的作业依赖该事务。<br><strong>注意：</strong>您只能在Activity保存其状态（用户离开 Activity）之前使用commit()提交事务。如果您试图在该时间点后提交，则会引发异常。 这是因为如需恢复Activity，则提交后的状态可能会丢失。 对于丢失提交无关紧要的情况，请使用 commitAllowingStateLoss()。</p>
+<h1 id="与Activity通信"><a href="#与Activity通信" class="headerlink" title="与Activity通信"></a>与Activity通信</h1><ul>
+<li>Fragment可以通过getActivity()访问Activity实例。</li>
+<li>Activity可以通过FragmentManager对象调用findFragmentById()或findFragmentByTag()获取对Fragment的引用</li>
+</ul>
+
       
     </div>
 
@@ -699,7 +658,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liuweidong.club/android-ConstraintLayoutLibrary/" title="android-Constraint Layout Library">https://liuweidong.club/android-ConstraintLayoutLibrary/</a>
+    <a href="https://liuweidong.club/android-Fragment详解/" title="android-Fragment详解">https://liuweidong.club/android-Fragment详解/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -712,7 +671,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/android/" rel="tag"><i class="fa fa-tag"></i> android</a>
+            <a href="/tags/Fragment/" rel="tag"><i class="fa fa-tag"></i> Fragment</a>
           
         </div>
       
@@ -725,8 +684,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/JavaScript-基础知识/" rel="next" title="JavaScript-基础知识">
-                <i class="fa fa-chevron-left"></i> JavaScript-基础知识
+              <a href="/android-基础知识/" rel="next" title="android-基础知识">
+                <i class="fa fa-chevron-left"></i> android-基础知识
               </a>
             
           </div>
@@ -735,8 +694,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/前端框架/" rel="prev" title="前端框架">
-                前端框架 <i class="fa fa-chevron-right"></i>
+              <a href="/持续集成CI/" rel="prev" title="持续集成CI">
+                持续集成CI <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1012,7 +971,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ConstraintLayout"><span class="nav-number">2.</span> <span class="nav-text">ConstraintLayout</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#相对定位"><span class="nav-number">2.1.</span> <span class="nav-text">相对定位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#边距"><span class="nav-number">2.2.</span> <span class="nav-text">边距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#居中和偏移"><span class="nav-number">2.3.</span> <span class="nav-text">居中和偏移</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Circular-positioning"><span class="nav-number">2.4.</span> <span class="nav-text">Circular positioning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#尺寸约束"><span class="nav-number">2.5.</span> <span class="nav-text">尺寸约束</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链"><span class="nav-number">2.6.</span> <span class="nav-text">链</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Group"><span class="nav-number">3.</span> <span class="nav-text">Group</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Guideline"><span class="nav-number">4.</span> <span class="nav-text">Guideline</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生命周期"><span class="nav-number">2.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FragmentManager"><span class="nav-number">3.</span> <span class="nav-text">FragmentManager</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FragmentTransaction"><span class="nav-number">4.</span> <span class="nav-text">FragmentTransaction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#与Activity通信"><span class="nav-number">5.</span> <span class="nav-text">与Activity通信</span></a></li></ol></div>
             
 
           </div>
