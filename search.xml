@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[前端框架-Vue]]></title>
-    <url>%2F%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6-Vue%2F</url>
+    <title><![CDATA[android-FAQ]]></title>
+    <url>%2Fandroid-FAQ%2F</url>
+    <content type="text"><![CDATA[使用scheme协议唤起外部app]]></content>
+      <categories>
+        <category>android</category>
+        <category>进阶</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端-框架-Vue]]></title>
+    <url>%2F%E5%89%8D%E7%AB%AF-%E6%A1%86%E6%9E%B6-Vue%2F</url>
     <content type="text"><![CDATA[概览Vue.js 是渐进式的JS框架。只关注视图层，采用自底向上增量开发的设计。官方仓库：https://github.com/vuejs兼容性Vue 不支持 IE8 及以下版本，因为 Vue 使用了 IE8 无法模拟的 ECMAScript 5 特性。但它支持所有兼容 ECMAScript 5 的浏览器。更新日志https://github.com/vuejs/vue/releasesVue Devtools在使用 Vue 时，我们推荐在你的浏览器上安装 Vue Devtools。它允许你在一个更友好的界面中审查和调试 Vue 应用。 npmhttps://www.npmjs.cn/config12345678// 如：key=registry，设置地址npm config set &lt;key&gt; &lt;value&gt;// 如：key=registry，默认地址：https://registry.npmjs.org/npm config get &lt;key&gt;npm config listnpm config edit install123456// 升级npmnpm install npm@latest -g// 本地安装，在当前的目录下创建一个 node_modules 的目录npm install &lt;package_name&gt;// 全局安装，npm install -g &lt;package_name&gt; root12// npm根目录npm root [-g] uninstall12// 全局卸载npm uninstall -g &lt;package_name&gt; Vue CLIVue CLI是一个基于 Vue.js 进行快速开发的完整系统。源代码 @vue/cli @vue/cli-service 项目目录│ .babelrc（babel编译参数）│ .editorconfig（代码格式）│ .eslintignore│ .eslintrc.js│ .gitignore│ .postcssrc.js（转换css工具）│ index.html（主页）│ package.json（项目配置）│ README.md（项目说明）│├─build（webpack相关配置文件）│ build.js（生产环境构建）│ check-versions.js（检查npm、node版本）│ logo.png│ utils.js│ vue-loader.conf.js│ webpack.base.conf.js（webpack基础配置）│ webpack.dev.conf.js（webpack开发环境配置）│ webpack.prod.conf.js（webpack生产环境配置）│├─config（vue基本配置文件）│ dev.env.js（项目开发环境配置）│ index.js（项目主要配置）│ prod.env.js（项目生产环境配置）│ test.env.js│├─src│ │ App.vue（根组件）│ │ main.js（入口文件）│ ││ ├─assets│ │ logo.png│ ││ ├─components（公共组件）│ │ HelloWorld.vue│ ││ └─router（路由）│ index.js│├─static（静态资源） package.json文件： scripts：指定了运行脚本命令的npm命令行缩写 dependencies：项目运行所依赖的模块 devDependencies：项目开发所需要的模块 12npm install &lt;package_name&gt; --savenpm install &lt;package_name&gt; --save-dev @vue/cli (3.x)安装：123npm install -g @vue/cli# ORyarn global add @vue/cli vue-cli (1.x or 2.x)https://github.com/vuejs/vue-cli/tree/v2#vue-cli–安装：1npm install -g vue-cli Vue Routerhttps://router.vuejs.org/zh/ 环境安装开发工具： WebStorm Node.js（npm将自动安装） 配置开发环境：https://npm.taobao.org/ 安装淘宝镜像：npm install -g cnpm –registry=https://registry.npm.taobao.org 安装webpack：cnpm install -g webpack 安装vue-cli：cnpm install -g vue-cli，验证命令vue -V main.js123456789101112131415// The Vue build version to load with the `import` command// (runtime-only or standalone) has been set in webpack.base.conf with an alias.import Vue from 'vue'import App from './App'import router from './router'Vue.config.productionTip = false/* eslint-disable no-new */new Vue(&#123; el: '#app', router, components: &#123; App &#125;, template: '&lt;App/&gt;'&#125;)]]></content>
       <categories>
         <category>前端</category>
@@ -12,8 +24,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Spring]]></title>
-    <url>%2FSpring%2F</url>
+    <title><![CDATA[java-框架-Spring]]></title>
+    <url>%2Fjava-%E6%A1%86%E6%9E%B6-Spring%2F</url>
     <content type="text"><![CDATA[概述Spring是于2003年兴起的一个轻量级的Java开发框架，由Rod Johnson创建。解决的是业务逻辑层和其他各层的松耦合问题。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。 EJB -&gt; Spring Framework -&gt; Spring Boot -&gt; Spring Cloud Spring Initializr:https://start.spring.io/ 优点体系结构Spring Framework下载jar包：http://repo.springsource.org/libs-release-local/org/springframework/spring/3.2.0.RELEASE/spring-framework-3.2.0.RELEASE-dist.zip项目地址：https://github.com/spring-projects/spring-framework Spring Boot项目地址：https://github.com/spring-projects/spring-boot Spring Cloud]]></content>
       <categories>
         <category>java</category>
@@ -21,6 +33,7 @@
       </categories>
       <tags>
         <tag>java</tag>
+        <tag>Spring</tag>
       </tags>
   </entry>
   <entry>
@@ -56,14 +69,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[前端框架]]></title>
-    <url>%2F%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%2F</url>
-    <content type="text"><![CDATA[UI框架LayuiLayui MiniUIVueReactReact AngularAngularJS 诞生于2009年，由Misko Hevery等人创建，之后被Google所收购。 Web.xmlServletServlet通常被称为服务器端小程序，是运行在服务器端的程序，用于处理及响应客户端的请求。Servlet是个特殊的Java类，这个Java类必须继承HttpServlet。每个Servlet可以响应客户端的请求。Servlet提供不同的方法用于响应客户端请求。 doGet doPost doPut doDelete service()：响应客户端的所有请求。 FilterFilter可以认为是Servlet的一种加强版，主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理，是个典型的处理链。 Listener]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[android-Constraint Layout Library]]></title>
     <url>%2Fandroid-ConstraintLayoutLibrary%2F</url>
     <content type="text"><![CDATA[简介 Android Studio版本至少2.3； 添加依赖，如下：1implementation 'com.android.support.constraint:constraint-layout:1.1.3' ConstraintLayout1package android.support.constraint; ConstraintLayout 主要是为了解决布局嵌套过多的问题，以灵活的方式定位和调整小部件。Android Studio 2.3开始，官方模板默认使用ConstraintLayout。 相对定位 layout_constraintLeft_toLeftOf layout_constraintLeft_toRightOf layout_constraintRight_toLeftOf layout_constraintRight_toRightOf layout_constraintTop_toTopOf layout_constraintTop_toBottomOf layout_constraintBottom_toTopOf layout_constraintBottom_toBottomOf layout_constraintBaseline_toBaselineOf：约束文本基线 layout_constraintStart_toEndOf layout_constraintStart_toStartOf layout_constraintEnd_toStartOf layout_constraintEnd_toEndOf 1234&lt;Button android:id="@+id/buttonA" ... /&gt;&lt;Button android:id="@+id/buttonB" ... app:layout_constraintLeft_toRightOf="@+id/buttonA" /&gt; They all take a reference id to another widget, or the parent (which will reference the parent container, i.e. the ConstraintLayout):12&lt;Button android:id="@+id/buttonB" ... app:layout_constraintLeft_toLeftOf="parent" /&gt; 边距 android:layout_marginStart android:layout_marginEnd android:layout_marginLeft android:layout_marginTop android:layout_marginRight android:layout_marginBottom 注：设置边距时，需要约束控件在ConstraintLayout里的位置。 如果目标View不可见（View.GONE）时，可以通过以下属性设置不同的边距： layout_goneMarginStart layout_goneMarginEnd layout_goneMarginLeft layout_goneMarginTop layout_goneMarginRight layout_goneMarginBottom 居中和偏移居中：1234567&lt;EditText android:id="@+id/edt" ... app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" /&gt; 偏移（赋值0-1）： layout_constraintHorizontal_bias：水平偏移 layout_constraintVertical_bias：垂直偏移 Circular positioning layout_constraintCircle : references another widget id layout_constraintCircleRadius : 组件间的中心距离 layout_constraintCircleAngle : which angle the widget should be at (in degrees, from 0 to 360) 尺寸约束 指定尺寸大小 wrap_contentandroid:minWidth ：最小宽度android:minHeight ：最小高度android:maxWidth ：最大宽度android:maxHeight ：最大高度app:layout_constrainedWidth=”true|false”app:layout_constrainedHeight=”true|false” 0dp注: MATCH_PARENT is not recommended for widgets contained in a ConstraintLayout. Similar behavior can be defined by using MATCH_CONSTRAINT with the corresponding left/right or top/bottom constraints being set to “parent”. 百分比layout_constraintWidth_min and layout_constraintHeight_min : will set the minimum size for this dimensionlayout_constraintWidth_max and layout_constraintHeight_max : will set the maximum size for this dimensionlayout_constraintWidth_percent and layout_constraintHeight_percent : will set the size of this dimension as a percentage of the parent app:layout_constraintWidth_default=”percent” app:layout_constraintHeight_default=”percent” Ratio比例123456&lt;Button android:layout_width="wrap_content" android:layout_height="0dp" app:layout_constraintDimensionRatio="1:1" /&gt; width:height 链Chain Style：链的第一个控件是这条链的链头，可以在链头中设置layout_constraintHorizontal_chainStyle、layout_constraintVertical_chainStyle CHAIN_SPREAD(default style) Weighted chain CHAIN_SPREAD_INSIDE：展开元素，链的两端贴近parent； CHAIN_PACKED：链的元素将被打包在一起。 GroupGroup将多个控件归为一组，方便隐藏或显示一组控件。 Guideline]]></content>
@@ -76,42 +81,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[JavaScript-基础知识]]></title>
-    <url>%2FJavaScript-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
-    <content type="text"><![CDATA[概览1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。12345// 对象是名/值对的集合，或字符串到值映射的集合var book = &#123; topic: "JavaScript", fat: true&#125;; JavaScript程序是用Unicode字符集编写的。 JavaScript是区分大小写的语言。 JavaScript标识符（用来对变量和函数进行命名）必须以字母、下划线、美元符开始。 类型、变量、语句JavaScript的数据类型分为两类：原始类型（数字、字符串、布尔值、null、undefined）和对象类型。 JavaScript不区分整数值和浮点数值。所有数值均用浮点数值表示。 JavaScript中，字符串是不可变的。 12Math.pow(2,53) // 2的53次幂Math.round(.8) // =&gt; 1.0：四舍五入 表达式和运算符对象数组函数类和模块ECMAScript历史版本http://www.ecma-international.org/publications/standards/Ecma-262.htm ES10（2019）ES9（2018）ES8（2017/6）ES7（2016/3）ES6（2015/6） 类 模块化 箭头函数 函数参数默认值 模板字符串：字符串拼接更加简洁。${} 解构赋值 延展操作符 对象属性简写 Promise 支持let与const import {xxx} from xxx：输入其他模块功能export：模块对外接口export default ES5（2009/11）jQueryjQuery是一个快速、简洁的JavaScript框架，继Prototype之后又一个优秀的JavaScript代码库。jQuery设计的宗旨是“Write Less,Do More”。发布者：John ResigjQuery 1.0：2006/01 Ajax（网络请求）Ajax（Asynchronous JavaScript and XML）]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[CSS基础知识]]></title>
-    <url>%2FCSS%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
-    <content type="text"><![CDATA[简介CSS指层叠样式表 (Cascading Style Sheets)。CSS语法由两个主要的部分构成：选择器（HTML元素），以及一条或多条声明：12345678910/*添加注释*/selector, ...selector5 &#123; property: value; ...&#125; p &#123; color: red; text-align: center;&#125; 标签选择器：A {} id选择器：#name {} 类选择器：.name {} 派生选择器：A B {} .name A {} 或 #name A {} 属性选择器：[属性] {}、[属性=xxx] {}、[属性~=xxx] {} A&gt;B {} 通用选择器：* {} 相邻选择器：A+B {} A~B {} CSS的创建内联样式 &gt; 内部样式 &gt; 外部样式 &gt; 浏览器默认样式外部样式：123&lt;head&gt; &lt;link rel="stylesheet" type="text/css" href="mystyle.css" /&gt;&lt;/head&gt; 内部样式：12345678910111213&lt;head&gt; &lt;style&gt; hr &#123; color: red; &#125; p &#123; margin-left: 10px; &#125; body &#123; background-image: url("images/xxx.gif"); &#125; &lt;/style&gt;&lt;/head&gt; 内联样式：1&lt;p style="color: red;margin-top: 10px"&gt;这是一个段落&lt;/p&gt; 背景（background） 属性 说明 值 版本 background background-attachment background-color background-image background-position background-repeat 文本（text） 属性 说明 值 版本 color 颜色 red、#ff0000、rgb(255,0,0)、inherit CSS1 direction 方向 ltr(默认)、rtl、inherit CSS2 line-height 行高 CSS1 letter-spacing text-align text-decoration 向文本添加修饰 text-indent 缩进元素中文本的首行 text-shadow text-transform unicode-bidi white-space word-spacing 字体（font） 属性 说明 值 版本 font font-family font-size font-size-adjust font-stretch font-style font-variant font-weight 粗细 链接列表（list）表格轮廓（outline）position（定位）overflowfloat（浮动）CSS发展历程CSS32005年12月，W3C开始CSS3标准的制定。 参考https://www.w3school.com.cn/index.html]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[HTML基础知识]]></title>
-    <url>%2FHTML%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
-    <content type="text"><![CDATA[基础123&lt;!DOCTYPE html&gt;：声明为HTML5文档。&lt;html&gt;根元素&lt;/html&gt;&lt;body&gt;页面内容&lt;/body&gt; 1234567&lt;!--页面标签--&gt;&lt;h1&gt;-&lt;h6&gt;：HTML标题&lt;p&gt;段落&lt;/p&gt;&lt;br/&gt;：换行&lt;hr/&gt;：水平线&lt;div&gt;组合其他标签的容器&lt;/div&gt; head12345678910111213141516171819202122232425262728293031&lt;head&gt;&lt;!--&lt;meta&gt;标签提供了元数据，元数据不显示在页面上，但会被浏览器解析。--&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="description" content="定义网页描述内容"&gt;&lt;meta name="author" content="定义网页作者"&gt;&lt;!--3秒刷新网页--&gt;&lt;meta http-equiv="refresh" content="3"&gt;&lt;!--为搜索引擎定义关键字--&gt;&lt;meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"&gt;&lt;title&gt;网页标题&lt;/title&gt;&lt;!--标题左侧显示logo--&gt;&lt;link rel="shortcut icon" href="图片url"&gt;&lt;!--HTML文档中所有的链接标签的默认链接--&gt;&lt;base href="http://www.test.com/images/" target="_blank"&gt;&lt;!--HTML文档与外部资源之间的关系，通常用于链接到样式表--&gt;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;&lt;!--HTML文档的样式文件引用地址或自定义样式--&gt;&lt;style type="text/css"&gt;body &#123;background-color:yellow&#125;p &#123;color:green&#125;&lt;/style&gt;&lt;!--加载脚本文件--&gt;&lt;script&gt; ...&lt;/script&gt;&lt;/head&gt; 链接12&lt;!--使用target属性，可以定义链接在哪个窗口显示。_blank表示在新窗口显示--&gt;&lt;a href="http://www.liuweidong.club/" target="_blank"&gt;测试链接&lt;/a&gt; 图片123456789101112&lt;!--html文件与图片在不同盘符--&gt;&lt;img src="file:///f:/*.jpg" width="500" height="300"/&gt;&lt;!--html文件与图片在相同目录--&gt;&lt;img src="*.jpg" width="500" height="300"/&gt; &lt;!--html文件与image文件夹在相同目录--&gt;&lt;img src="image/*.jpg/"width="500" height="300"/&gt;&lt;!--html文件与图片的父文件夹在相同目录--&gt;&lt;img src="../image/*.jpg/"width="500" height="300"/&gt;&lt;!--网络图片--&gt;&lt;img src="http://www.test.com/images/test.png" width="500" height="300"/&gt;&lt;img src="url" alt="图片加载不出来时，替换图片的文本"/&gt; 列表12345678910111213&lt;!--无序列表--&gt;&lt;ul&gt; &lt;li&gt;A&lt;/li&gt; &lt;li&gt;B&lt;/li&gt; &lt;li&gt;C&lt;/li&gt;&lt;/ul&gt;&lt;!--有序列表，start属性可以指定从特定数字开始--&gt;&lt;ol start="3"&gt; &lt;li&gt;A&lt;/li&gt; &lt;li&gt;B&lt;/li&gt; &lt;li&gt;C&lt;/li&gt;&lt;/ol&gt; 格式化123456&lt;b&gt;加粗&lt;/b&gt;&lt;i&gt;斜体&lt;/i&gt;&lt;del&gt;删除&lt;/del&gt;&lt;ins&gt;下划线&lt;/ins&gt;&lt;sub&gt;下标&lt;/sub&gt;&lt;sup&gt;上标&lt;/sup&gt; HTML CSS123456789101112131415161718&lt;!--方式一 内联样式 在HTML元素中使用"style"属性--&gt;&lt;!--background-color：背景色；font-family：字体；color：文字颜色；margin-left：左边距； text-align：文本对齐方式；--&gt;&lt;h2 style="background-color:red;"&gt;标题&lt;/h2&gt;&lt;p style="font-family:arial;color:blue;font-size:20px;margin-left:20px;"&gt;段落&lt;/p&gt;&lt;h1 style="text-align:center;"&gt;居中对齐的标题&lt;/h1&gt;&lt;!--方式二 内部样式--&gt;&lt;head&gt;&lt;style type="text/css"&gt;body &#123;background-color:yellow;&#125;p &#123;color:blue;&#125;&lt;/style&gt;&lt;/head&gt;&lt;!--方式三 外部样式--&gt;&lt;head&gt;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;&lt;/head&gt; 注意：如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。 HTML发展历程HTML5（2014/10/28）12345678910&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt; &lt;meta charset="UTF-8"&gt; &lt;title&gt;Title&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt; 废弃元素：123456789101112&lt;acronym&gt;&lt;applet&gt;&lt;basefont&gt;&lt;big&gt;&lt;center&gt;&lt;dir&gt;&lt;font&gt;&lt;frame&gt;&lt;frameset&gt;&lt;noframes&gt;&lt;strike&gt;&lt;tt&gt;]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[android-AndroidX]]></title>
     <url>%2Fandroid-AndroidX%2F</url>
-    <content type="text"><![CDATA[概述 We hope the division between android. and androidx. makes it more obvious which APIs are bundled with the platform, and which are static libraries for app developers that work across different versions of Android. 简单地说就是新的库可以在不同的Android版本上使用。之前的话，所有support依赖库版本必须一致，如果有bug，所有依赖库版本都需要升级，存在绑定关系，且正式版的发布周期也很长。官方参考地址：官方说明AndroidX OverviewMigrating to AndroidX（迁移到AndroidX）Recent Release NotesAPI reference：AndroidX 使用与迁移新项目中使用AndroidX，需要将编译SDK设置为Android 9.0（API 28）或更高版本，并在gradle.properties文件中将以下两个Android Gradle插件标记设置为true。1234# 当前项目启用AndroidXandroid.useAndroidX=true# 是否迁移之前的依赖包android.enableJetifier=true Android Studio 3.2 Canary中添加了一键迁移的功能 Refactor -&gt; Migrate to AndroidXProperties]]></content>
+    <content type="text"><![CDATA[概览 We hope the division between android.* and androidx.* makes it more obvious which APIs are bundled with the platform, and which are static libraries for app developers that work across different versions of Android. 简单地说就是新的库可以在不同的Android版本上使用。之前的话，所有support依赖库版本必须一致，如果有bug，所有依赖库版本都需要升级，存在绑定关系，且正式版的发布周期也很长。androidx软件包使用严格的语义版本控制官方参考地址：AndroidX OverviewMigrating to AndroidX（迁移到AndroidX）Recent Release NotesAPI reference：AndroidX 使用与迁移新项目中使用AndroidX，需要将编译SDK设置为Android 9.0（API 28）或更高版本，并在gradle.properties文件中将以下两个Android Gradle插件标记设置为true。1234# 当前项目启用AndroidXandroid.useAndroidX=true# 是否迁移之前的依赖包android.enableJetifier=true Android Studio 3.2 Canary中添加了一键迁移的功能 Refactor -&gt; Migrate to AndroidXProperties]]></content>
       <categories>
         <category>android</category>
         <category>API</category>
@@ -230,6 +202,47 @@
       </categories>
       <tags>
         <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端框架]]></title>
+    <url>%2F%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[UI框架LayuiLayui MiniUIVueReactReact AngularAngularJS 诞生于2009年，由Misko Hevery等人创建，之后被Google所收购。 Web.xmlServletServlet通常被称为服务器端小程序，是运行在服务器端的程序，用于处理及响应客户端的请求。Servlet是个特殊的Java类，这个Java类必须继承HttpServlet。每个Servlet可以响应客户端的请求。Servlet提供不同的方法用于响应客户端请求。 doGet doPost doPut doDelete service()：响应客户端的所有请求。 FilterFilter可以认为是Servlet的一种加强版，主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理，是个典型的处理链。 Listener]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript-基础知识]]></title>
+    <url>%2FJavaScript-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[概览1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。12345// 对象是名/值对的集合，或字符串到值映射的集合var book = &#123; topic: "JavaScript", fat: true&#125;; JavaScript程序是用Unicode字符集编写的。 JavaScript是区分大小写的语言。 JavaScript标识符（用来对变量和函数进行命名）必须以字母、下划线、美元符开始。 类型、变量、语句JavaScript的数据类型分为两类：原始类型（数字、字符串、布尔值、null、undefined）和对象类型。 JavaScript不区分整数值和浮点数值。所有数值均用浮点数值表示。 JavaScript中，字符串是不可变的。 12Math.pow(2,53) // 2的53次幂Math.round(.8) // =&gt; 1.0：四舍五入 表达式和运算符对象数组函数类和模块ECMAScript历史版本http://www.ecma-international.org/publications/standards/Ecma-262.htm ES10（2019）ES9（2018）ES8（2017/6）ES7（2016/3）ES6（2015/6） 类 模块化 箭头函数 函数参数默认值 模板字符串：字符串拼接更加简洁。${} 解构赋值 延展操作符 对象属性简写 Promise 支持let与const import {xxx} from xxx：输入其他模块功能export：模块对外接口export default ES5（2009/11）jQueryjQuery是一个快速、简洁的JavaScript框架，继Prototype之后又一个优秀的JavaScript代码库。jQuery设计的宗旨是“Write Less,Do More”。发布者：John ResigjQuery 1.0：2006/01 Ajax（网络请求）Ajax（Asynchronous JavaScript and XML）]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS基础知识]]></title>
+    <url>%2FCSS%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[简介CSS指层叠样式表 (Cascading Style Sheets)。CSS语法由两个主要的部分构成：选择器（HTML元素），以及一条或多条声明：12345678910/*添加注释*/selector, ...selector5 &#123; property: value; ...&#125; p &#123; color: red; text-align: center;&#125; 标签选择器：A {} id选择器：#name {} 类选择器：.name {} 派生选择器：A B {} .name A {} 或 #name A {} 属性选择器：[属性] {}、[属性=xxx] {}、[属性~=xxx] {} A&gt;B {} 通用选择器：* {} 相邻选择器：A+B {} A~B {} CSS的创建内联样式 &gt; 内部样式 &gt; 外部样式 &gt; 浏览器默认样式外部样式：123&lt;head&gt; &lt;link rel="stylesheet" type="text/css" href="mystyle.css" /&gt;&lt;/head&gt; 内部样式：12345678910111213&lt;head&gt; &lt;style&gt; hr &#123; color: red; &#125; p &#123; margin-left: 10px; &#125; body &#123; background-image: url("images/xxx.gif"); &#125; &lt;/style&gt;&lt;/head&gt; 内联样式：1&lt;p style="color: red;margin-top: 10px"&gt;这是一个段落&lt;/p&gt; 背景（background） 属性 说明 值 版本 background background-attachment background-color background-image background-position background-repeat 文本（text） 属性 说明 值 版本 color 颜色 red、#ff0000、rgb(255,0,0)、inherit CSS1 direction 方向 ltr(默认)、rtl、inherit CSS2 line-height 行高 CSS1 letter-spacing text-align text-decoration 向文本添加修饰 text-indent 缩进元素中文本的首行 text-shadow text-transform unicode-bidi white-space word-spacing 字体（font） 属性 说明 值 版本 font font-family font-size font-size-adjust font-stretch font-style font-variant font-weight 粗细 链接列表（list）表格轮廓（outline）position（定位）overflowfloat（浮动）CSS发展历程CSS32005年12月，W3C开始CSS3标准的制定。 参考https://www.w3school.com.cn/index.html]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML基础知识]]></title>
+    <url>%2FHTML%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[基础123&lt;!DOCTYPE html&gt;：声明为HTML5文档。&lt;html&gt;根元素&lt;/html&gt;&lt;body&gt;页面内容&lt;/body&gt; 1234567&lt;!--页面标签--&gt;&lt;h1&gt;-&lt;h6&gt;：HTML标题&lt;p&gt;段落&lt;/p&gt;&lt;br/&gt;：换行&lt;hr/&gt;：水平线&lt;div&gt;组合其他标签的容器&lt;/div&gt; head12345678910111213141516171819202122232425262728293031&lt;head&gt;&lt;!--&lt;meta&gt;标签提供了元数据，元数据不显示在页面上，但会被浏览器解析。--&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="description" content="定义网页描述内容"&gt;&lt;meta name="author" content="定义网页作者"&gt;&lt;!--3秒刷新网页--&gt;&lt;meta http-equiv="refresh" content="3"&gt;&lt;!--为搜索引擎定义关键字--&gt;&lt;meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"&gt;&lt;title&gt;网页标题&lt;/title&gt;&lt;!--标题左侧显示logo--&gt;&lt;link rel="shortcut icon" href="图片url"&gt;&lt;!--HTML文档中所有的链接标签的默认链接--&gt;&lt;base href="http://www.test.com/images/" target="_blank"&gt;&lt;!--HTML文档与外部资源之间的关系，通常用于链接到样式表--&gt;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;&lt;!--HTML文档的样式文件引用地址或自定义样式--&gt;&lt;style type="text/css"&gt;body &#123;background-color:yellow&#125;p &#123;color:green&#125;&lt;/style&gt;&lt;!--加载脚本文件--&gt;&lt;script&gt; ...&lt;/script&gt;&lt;/head&gt; 链接12&lt;!--使用target属性，可以定义链接在哪个窗口显示。_blank表示在新窗口显示--&gt;&lt;a href="http://www.liuweidong.club/" target="_blank"&gt;测试链接&lt;/a&gt; 图片123456789101112&lt;!--html文件与图片在不同盘符--&gt;&lt;img src="file:///f:/*.jpg" width="500" height="300"/&gt;&lt;!--html文件与图片在相同目录--&gt;&lt;img src="*.jpg" width="500" height="300"/&gt; &lt;!--html文件与image文件夹在相同目录--&gt;&lt;img src="image/*.jpg/"width="500" height="300"/&gt;&lt;!--html文件与图片的父文件夹在相同目录--&gt;&lt;img src="../image/*.jpg/"width="500" height="300"/&gt;&lt;!--网络图片--&gt;&lt;img src="http://www.test.com/images/test.png" width="500" height="300"/&gt;&lt;img src="url" alt="图片加载不出来时，替换图片的文本"/&gt; 列表12345678910111213&lt;!--无序列表--&gt;&lt;ul&gt; &lt;li&gt;A&lt;/li&gt; &lt;li&gt;B&lt;/li&gt; &lt;li&gt;C&lt;/li&gt;&lt;/ul&gt;&lt;!--有序列表，start属性可以指定从特定数字开始--&gt;&lt;ol start="3"&gt; &lt;li&gt;A&lt;/li&gt; &lt;li&gt;B&lt;/li&gt; &lt;li&gt;C&lt;/li&gt;&lt;/ol&gt; 格式化123456&lt;b&gt;加粗&lt;/b&gt;&lt;i&gt;斜体&lt;/i&gt;&lt;del&gt;删除&lt;/del&gt;&lt;ins&gt;下划线&lt;/ins&gt;&lt;sub&gt;下标&lt;/sub&gt;&lt;sup&gt;上标&lt;/sup&gt; HTML CSS123456789101112131415161718&lt;!--方式一 内联样式 在HTML元素中使用"style"属性--&gt;&lt;!--background-color：背景色；font-family：字体；color：文字颜色；margin-left：左边距； text-align：文本对齐方式；--&gt;&lt;h2 style="background-color:red;"&gt;标题&lt;/h2&gt;&lt;p style="font-family:arial;color:blue;font-size:20px;margin-left:20px;"&gt;段落&lt;/p&gt;&lt;h1 style="text-align:center;"&gt;居中对齐的标题&lt;/h1&gt;&lt;!--方式二 内部样式--&gt;&lt;head&gt;&lt;style type="text/css"&gt;body &#123;background-color:yellow;&#125;p &#123;color:blue;&#125;&lt;/style&gt;&lt;/head&gt;&lt;!--方式三 外部样式--&gt;&lt;head&gt;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;&lt;/head&gt; 注意：如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。 HTML发展历程HTML5（2014/10/28）12345678910&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt; &lt;meta charset="UTF-8"&gt; &lt;title&gt;Title&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt; 废弃元素：123456789101112&lt;acronym&gt;&lt;applet&gt;&lt;basefont&gt;&lt;big&gt;&lt;center&gt;&lt;dir&gt;&lt;font&gt;&lt;frame&gt;&lt;frameset&gt;&lt;noframes&gt;&lt;strike&gt;&lt;tt&gt;]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
       </tags>
   </entry>
   <entry>
@@ -942,7 +955,7 @@
   <entry>
     <title><![CDATA[记忆百科]]></title>
     <url>%2F%E8%AE%B0%E5%BF%86%E7%99%BE%E7%A7%91%2F</url>
-    <content type="text"><![CDATA[软件开发工具 工具 说明 官网 IntelliJ IDEA 编码IDE https://www.jetbrains.com/idea/download Navicat 数据库管理工具 http://www.formysql.com/xiazai.html SQLyog 数据库管理工具 PowerDesigner 数据库设计 http://powerdesigner.de/ RedisDesktop redis客户端连接工具 https://redisdesktop.com/download Robomongo mongo客户端连接工具 https://robomongo.org/download Axure 原型设计 https://www.axure.com/ SwitchHosts 本地host管理 https://oldj.github.io/SwitchHosts/ X-shell Linux远程连接工具 http://www.netsarang.com/download/software.html MindMaster 思维导图设计 http://www.edrawsoft.cn/mindmaster ProcessOn 流程图绘制 https://www.processon.com/ ScreenToGif gif录制 https://www.screentogif.com/ PicPick 图片处理工具 https://picpick.app/zh/ Snipaste 屏幕截图工具 https://www.snipaste.com/ IT界三大定律 摩尔定律 反摩尔定律 安迪比尔定律What Andy gives, Bill takes away. 软件产品版本标识按照测试过程标识： Alpha版：预览版或内部测试版，一般不向外部发布，会有很多Bug。 Beta版：公测版。 RC版：Release Candidate候选版本。也叫做Gamma版本。 护眼色 色调：85；饱和度：123；亮度：205 R：199；G：237；B：204 色值：#C7EDCC]]></content>
+    <content type="text"><![CDATA[软件开发工具 工具 说明 官网 IntelliJ IDEA 编码IDE https://www.jetbrains.com/idea/download Navicat 数据库管理工具 http://www.formysql.com/xiazai.html SQLyog 数据库管理工具 PowerDesigner 数据库设计 http://powerdesigner.de/ RedisDesktop redis客户端连接工具 https://redisdesktop.com/download Robomongo mongo客户端连接工具 https://robomongo.org/download Axure 原型设计 https://www.axure.com/ SwitchHosts 本地host管理 https://oldj.github.io/SwitchHosts/ X-shell Linux远程连接工具 http://www.netsarang.com/download/software.html MindMaster 思维导图设计 http://www.edrawsoft.cn/mindmaster ProcessOn 流程图绘制 https://www.processon.com/ ScreenToGif gif录制 https://www.screentogif.com/ PicPick 图片处理工具 https://picpick.app/zh/ Snipaste 屏幕截图工具 https://www.snipaste.com/ IT界三大定律 摩尔定律 反摩尔定律 安迪比尔定律What Andy gives, Bill takes away. 护眼色 色调：85；饱和度：123；亮度：205 R：199；G：237；B：204 色值：#C7EDCC]]></content>
       <categories>
         <category>综合</category>
       </categories>
