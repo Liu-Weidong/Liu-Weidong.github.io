@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[java-加密与解密的艺术]]></title>
+    <url>%2Fjava-%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86%E7%9A%84%E8%89%BA%E6%9C%AF%2F</url>
+    <content type="text"><![CDATA[Base64Base64基于64个字符的编码算法。（A-Z,a-z,0-9,+/=）最后一个字符是等号，它是用来补位的。 消息摘要算法消息摘要算法包含MD（Message Digest，消息摘要算法）、SHA（Secure Hash Algorithm，安全散列算法）和MAC（Message Authentication Code，消息认证码算法）共3大系列，常用于验证数据的完整性，是数字签名算法的核心算法。消息摘要算法一直是非对称加密算法中一项举足轻重的关键性算法。消息摘要算法又称为散列算法，其核心在于散列函数的单向性。通过散列函数可得到对应的散列值，不可反推。 MD5MD5算法是典型的消息摘要算法，其前身有MD2、MD3和MD4算法。不论是哪种MD算法，都需要获得一个随机长度的信息并产生一个128位的信息摘要。 SHASHA算法基于MD4算法基础上，新一代的消息摘要算法。与MD算法不同之处在于摘要长度，SHA算法的摘要长度更长，安全性更高。SHA算法目前共有SHA-1、SHA-224、SHA-256、SHA-384和SHA-512五种算法，通常将后四种算法称为SHA-2算法。 MAC对称加密算法DESDESedeAES非对称加密算法RSA第一个既能用于数据加密也能用于数字签名的算法。 数字签名算法数字签名算法可以看做是一种带有密钥的消息摘要算法，并且这种密钥包含了公钥和私钥。也就是说，数字签名算法是非对称加密算法和消息摘要算法的结合体。 RSADSAECDSA数字证书安全协议HTTPS协议（附加了SSL/TLS协议的HTTP协议）为数字证书提供了最佳的应用环境。]]></content>
+      <categories>
+        <category>java</category>
+        <category>Java SE</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[android-FAQ]]></title>
     <url>%2Fandroid-FAQ%2F</url>
     <content type="text"><![CDATA[使用scheme协议唤起外部app]]></content>
