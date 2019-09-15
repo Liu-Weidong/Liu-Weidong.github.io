@@ -154,7 +154,7 @@
 <meta property="og:site_name" content="刘卫东">
 <meta property="og:description" content="概览 We hope the division between android.* and androidx.* makes it more obvious which APIs are bundled with the platform, and which are static libraries for app developers that work across different ve">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-04T12:53:09.158Z">
+<meta property="og:updated_time" content="2019-09-14T07:25:50.021Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android-AndroidX">
 <meta name="twitter:description" content="概览 We hope the division between android.* and androidx.* makes it more obvious which APIs are bundled with the platform, and which are static libraries for app developers that work across different ve">
@@ -560,7 +560,12 @@
         <h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><blockquote>
 <p>We hope the division between <strong>android.*</strong> and <strong>androidx.*</strong> makes it more obvious which APIs are bundled with the platform, and which are static libraries for app developers that work across different versions of Android.</p>
 </blockquote>
-<p>简单地说就是新的库可以在不同的Android版本上使用。之前的话，所有support依赖库版本必须一致，如果有bug，所有依赖库版本都需要升级，存在绑定关系，且正式版的发布周期也很长。<br><code>androidx</code>软件包使用严格的<a href="https://semver.org/" target="_blank" rel="noopener">语义版本控制</a><br><strong>官方参考地址：</strong><br><a href="https://developer.android.google.cn/jetpack/androidx" target="_blank" rel="noopener">AndroidX Overview</a><br><a href="https://developer.android.google.cn/jetpack/androidx/migrate" target="_blank" rel="noopener">Migrating to AndroidX（迁移到AndroidX）</a><br><a href="https://developer.android.google.cn/jetpack/androidx/releases" target="_blank" rel="noopener">Recent Release Notes</a><br><strong>API reference：</strong><br><a href="https://developer.android.google.cn/reference/androidx/packages" target="_blank" rel="noopener">AndroidX</a></p>
+<ul>
+<li>Android 9.0（API 28）发布后，新版支持库<a href="https://developer.android.google.cn/jetpack/androidx" target="_blank" rel="noopener">AndroidX</a>也随之诞生，它属于Jetpack。</li>
+<li>简单地说就是新的库可以在不同的Android版本上使用。之前的话，所有support依赖库版本必须一致，如果有bug，所有依赖库版本都需要升级，存在绑定关系，且正式版的发布周期也很长。</li>
+<li><code>androidx</code>软件包使用严格的<a href="https://semver.org/" target="_blank" rel="noopener">语义版本控制</a></li>
+</ul>
+<p><strong>官方参考地址：</strong><br><a href="https://developer.android.google.cn/jetpack/androidx" target="_blank" rel="noopener">AndroidX Overview</a><br><a href="https://developer.android.google.cn/jetpack/androidx/migrate" target="_blank" rel="noopener">Migrating to AndroidX（迁移到AndroidX）</a><br><a href="https://developer.android.google.cn/jetpack/androidx/releases" target="_blank" rel="noopener">Recent Release Notes</a><br><strong>API reference：</strong><br><a href="https://developer.android.google.cn/reference/androidx/packages" target="_blank" rel="noopener">AndroidX</a></p>
 <h1 id="使用与迁移"><a href="#使用与迁移" class="headerlink" title="使用与迁移"></a>使用与迁移</h1><p>新项目中使用AndroidX，需要将编译SDK设置为Android 9.0（API 28）或更高版本，并在gradle.properties文件中将以下两个Android Gradle插件标记设置为true。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 当前项目启用AndroidX</span><br><span class="line">android.useAndroidX=<span class="keyword">true</span></span><br><span class="line"># 是否迁移之前的依赖包</span><br><span class="line">android.enableJetifier=<span class="keyword">true</span></span><br></pre></td></tr></table></figure></p>
 <p>Android Studio 3.2 Canary中添加了一键迁移的功能 <code>Refactor -&gt; Migrate to AndroidX</code><br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html" target="_blank" rel="noopener">Properties</a></p>
 
