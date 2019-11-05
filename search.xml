@@ -13,18 +13,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-FAQ]]></title>
-    <url>%2Fandroid-FAQ%2F</url>
-    <content type="text"><![CDATA[使用scheme协议唤起外部app]]></content>
-      <categories>
-        <category>android</category>
-        <category>进阶</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[前端-框架-Vue]]></title>
     <url>%2F%E5%89%8D%E7%AB%AF-%E6%A1%86%E6%9E%B6-Vue%2F</url>
     <content type="text"><![CDATA[概览Vue.js 是渐进式的JS框架。只关注视图层，采用自底向上增量开发的设计。官方仓库：https://github.com/vuejs兼容性Vue 不支持 IE8 及以下版本，因为 Vue 使用了 IE8 无法模拟的 ECMAScript 5 特性。但它支持所有兼容 ECMAScript 5 的浏览器。更新日志https://github.com/vuejs/vue/releasesVue Devtools在使用 Vue 时，我们推荐在你的浏览器上安装 Vue Devtools。它允许你在一个更友好的界面中审查和调试 Vue 应用。 npmhttps://www.npmjs.cn/config12345678// 如：key=registry，设置地址npm config set &lt;key&gt; &lt;value&gt;// 如：key=registry，默认地址：https://registry.npmjs.org/npm config get &lt;key&gt;npm config listnpm config edit install123456// 升级npmnpm install npm@latest -g// 本地安装，在当前的目录下创建一个 node_modules 的目录npm install &lt;package_name&gt;// 全局安装，npm install -g &lt;package_name&gt; root12// npm根目录npm root [-g] uninstall12// 全局卸载npm uninstall -g &lt;package_name&gt; Vue CLIVue CLI是一个基于 Vue.js 进行快速开发的完整系统。源代码 @vue/cli @vue/cli-service 项目目录│ .babelrc（babel编译参数）│ .editorconfig（代码格式）│ .eslintignore│ .eslintrc.js│ .gitignore│ .postcssrc.js（转换css工具）│ index.html（主页）│ package.json（项目配置）│ README.md（项目说明）│├─build（webpack相关配置文件）│ build.js（生产环境构建）│ check-versions.js（检查npm、node版本）│ logo.png│ utils.js│ vue-loader.conf.js│ webpack.base.conf.js（webpack基础配置）│ webpack.dev.conf.js（webpack开发环境配置）│ webpack.prod.conf.js（webpack生产环境配置）│├─config（vue基本配置文件）│ dev.env.js（项目开发环境配置）│ index.js（项目主要配置）│ prod.env.js（项目生产环境配置）│ test.env.js│├─src│ │ App.vue（根组件）│ │ main.js（入口文件）│ ││ ├─assets│ │ logo.png│ ││ ├─components（公共组件）│ │ HelloWorld.vue│ ││ └─router（路由）│ index.js│├─static（静态资源） package.json文件： scripts：指定了运行脚本命令的npm命令行缩写 dependencies：项目运行所依赖的模块 devDependencies：项目开发所需要的模块 12npm install &lt;package_name&gt; --savenpm install &lt;package_name&gt; --save-dev @vue/cli (3.x)安装：123npm install -g @vue/cli# ORyarn global add @vue/cli vue-cli (1.x or 2.x)https://github.com/vuejs/vue-cli/tree/v2#vue-cli–安装：1npm install -g vue-cli Vue Routerhttps://router.vuejs.org/zh/ 环境安装开发工具： WebStorm Node.js（npm将自动安装） 配置开发环境：https://npm.taobao.org/ 安装淘宝镜像：npm install -g cnpm –registry=https://registry.npm.taobao.org 安装webpack：cnpm install -g webpack 安装vue-cli：cnpm install -g vue-cli，验证命令vue -V main.js123456789101112131415// The Vue build version to load with the `import` command// (runtime-only or standalone) has been set in webpack.base.conf with an alias.import Vue from 'vue'import App from './App'import router from './router'Vue.config.productionTip = false/* eslint-disable no-new */new Vue(&#123; el: '#app', router, components: &#123; App &#125;, template: '&lt;App/&gt;'&#125;)]]></content>
@@ -329,6 +317,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[android-解析-Handler]]></title>
+    <url>%2Fandroid-%E8%A7%A3%E6%9E%90-Handler%2F</url>
+    <content type="text"><![CDATA[背景有时候需要在子线程中进行耗时的I/O操作，读取文件或者访问网络等，当耗时操作完成以后可能需要在UI上做一些改变，由于Android开发规范的限制，不能在子线程中访问UI控件，否则就会触发程序异常，这个时候通过Handler就可以将更新UI的操作切换到主线程中执行。 主要用途 to schedule messages and runnables to be executed as some point in the future; to enqueue an action to be performed on a different thread than your own. 相关类 Looper（消息循环） Message（消息） MessageQueue（存储消息） Handler]]></content>
+      <categories>
+        <category>android</category>
+        <category>API</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[android-widget]]></title>
     <url>%2Fandroid-widget%2F</url>
     <content type="text"></content>
@@ -378,6 +378,18 @@
       <categories>
         <category>Computer Systems</category>
       </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[android-应用专题]]></title>
+    <url>%2Fandroid-%E5%BA%94%E7%94%A8%E4%B8%93%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[Android Studio Gradle NDK 数据库 日志 性能 加密]]></content>
+      <categories>
+        <category>android</category>
+        <category>应用专题</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[MySQL详解]]></title>
@@ -747,6 +759,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[android-FAQ]]></title>
+    <url>%2Fandroid-FAQ%2F</url>
+    <content type="text"><![CDATA[使用scheme协议唤起外部app]]></content>
+      <categories>
+        <category>android</category>
+        <category>基础</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[面向对象六大原则]]></title>
     <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99%2F</url>
     <content type="text"><![CDATA[概览系统开发过程中，最难的不是完成系统的开发工作，而是在于后续的升级、维护过程中让系统能够拥抱变化。拥抱变化也就意味着在满足需求且不破坏系统稳定性的前提下保持高可扩展性、高内聚、低耦合，经历各版本的变更之后依然保持清晰、灵活、稳定的系统架构。当然，这是比较理想的情况，但我们必须朝着这个方向去努力，那么遵循面向对象六大原则就是我们走向灵活软件之路所迈出的第一步。 软件的可维护性和可复用性。 好的系统设计应该具备如下三个性质： 可扩展性（Extensibility） 灵活性（Flexibility） 可插入性（Pluggability） 可维护性较低的系统设计，通常有如下几个原因： 复用率低（Immobility） 黏度过高（Viscosity） 脆弱 僵硬 这些原则并不是孤立存在的，它们相互依赖，相互补充。 开闭原则（OCP）Open Close Principle，缩写OCP。开闭原则由Bertrand Meyer（勃兰特·梅耶）于1988年出版的《面向对象软件构造》一书中提出。抽象化是开闭原则的关键。 定义：软件中的对象（类、模块、函数等）应该对于扩展是开放的，对于修改是封闭的。 软件开发过程中，最不会变化的就是变化本事。 依赖倒置原则（DIP）Dependence Inversion Principle，缩写DIP。 定义：依赖倒置原则指代了一种特定的解耦形式，使得高层次的模块不依赖于低层次模块的实现细节的目的，依赖模块被颠倒了。 高层模块不应该依赖低层模块，两者都应该依赖其抽象 抽象不应该依赖细节 细节应该依赖抽象 java语言中，抽象就是指接口或抽象类，两者都不可以直接被实例化；细节就是实现类。高层模块就是调用端，低层模块就是具体实现类。 里氏替换原则（LSP）Liskov Substitution Principle，缩写LSP。 定义：所有引用基类的地方必须能透明地使用其子类的对象。 单一职责原则（SRP）Single Responsibility Principle，缩写SRP。 定义：就一个类而言，应该仅有一个引起它变化的原因。 接口隔离原则（ISP）InterfaceSegregation Principles，缩写ISP。 定义：客户端不应该依赖它不需要的接口。 迪米特原则（LOD）Law of Demeter，缩写LOD，也称为最少知识原则。 定义：一个对象应该对其他对象有最少的了解。 Only talk to your immedate friends。只与直接的朋友通信。？？？每个对象都必然会与其他对象有耦合关系，两个对象之间的耦合就称为朋友关系，如依赖、关联、组合、聚合等。 类应该对自己需要耦合或调用的类知道得最少，类的内部如何实现与调用者或依赖者没有关系，调用者或者依赖者只需要知道它需要的方法即可，其他的可一概不用管。类与类之间关系越密切，耦合度越大，当一个类发生改变时，对另一个类的影响也越大。软件总的原则：低耦合、高内聚。]]></content>
@@ -945,7 +969,7 @@
   <entry>
     <title><![CDATA[教程-Android-Studio]]></title>
     <url>%2F%E6%95%99%E7%A8%8B-Android-Studio%2F</url>
-    <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 概览探索 Android Studio 基于Gradle的灵活构建系统 可针对所有Android设备进行开发的统一环境 Instant Run，可将变更推送到正在运行的应用，无需构建新的APK 丰富的测试工具和框架 C++和NDK支持 配置buildGradle 依赖项管理指南12345678910dependencies &#123; // Dependency on a local library module implementation project(":mylibrary") // Dependency on local binaries implementation fileTree(dir: 'libs', include: ['*.jar']) // Dependency on a remote binary implementation 'com.example.android:app-magic:12.3'&#125; Debug Show Execution Point Step Over：单步执行。如果当前行为方法调用（不会跳到方法内部），方法执行完后跳到下一行。 Step Into：与Step Over不同的是，会跳到方法内部（非类库的方法）。 Force Step Into：与Step Into不同的是，始终跳到方法内部。 Step Out：跳出方法，返回到该方法调用处。 Drop Frame Run to Cursor Resume Program：程序执行到下一个断点处。 Stop：停止调试。 变量观察 选中变量，右键选择Add to Watches 修改变量值，调试结果。选择Set Value 条件断点循环体内设置。 日志断点Suspend取消选中，显示日志输入框。 异常断点单击如下图标，在弹窗中新建异常断点。 变量断点方法断点在方法名所在行添加断点。 Plugins其他配置Logcat颜色Assert：#8F0005 深红Debug：#0070BB 蓝Error：#FF0006 红Info：#48BB31 绿Verbose：#BBBBBB 白Warning：#BBBB23 黄 Android Gradle plugin简介Android Gradle plugin12345678910111213141516buildscript &#123; repositories &#123; // Gradle 4.1 and higher include support for Google's Maven repo using // the google() method. And you need to include this repo to download // Android Gradle plugin 3.0.0 or higher. google() jcenter() ... &#125; dependencies &#123; classpath 'com.android.tools.build:gradle:3.4.1' // NOTE: Do not place your application dependencies here; they belong // in the individual module build.gradle files &#125;&#125; The following table lists which version of Gradle is required for each version of the Android Gradle plugin. For the best performance, you should use the latest possible version of both Gradle and the plugin. Plugin version Gradle version Build Tools 1.0.0 - 1.1.3 2.2.1 - 2.3 1.2.0 - 1.3.1 2.2.1 - 2.9 1.5.0 2.2.1 - 2.13 2.0.0 - 2.1.2 2.10 - 2.13 2.1.3 - 2.2.3 2.14.1+ 2.3.0+ 3.3+ 3.0.0+ 4.1+ 26.0.2+ 3.1.0+ 4.4+ 3.2.0 - 3.2.1 4.6+ 3.3.0 - 3.3.2 4.10.1+ 3.4.0 - 3.4.1 5.1.1+ 3.5.0 5.4.1+ 3.5.0 (August 2019)This version of the Android plugin requires the following: Gradle 5.4.1 or higher. SDK Build Tools 28.0.3 or higher. 3.4.0 (April 2019)This version of the Android plugin requires the following: Gradle 5.1.1 or higher. SDK Build Tools 28.0.3 or higher. 3.3.0 (January 2019)3.2.0 (September 2018)3.1.0 (March 2018)3.0.0 (October 2017)This version of the Android plugin requires the following: Gradle 4.1 or higher. To learn more, read the section about updating Gradle. Build Tools 26.0.2 or higher. With this update, you no longer need to specify a version for the build tools—the plugin uses the minimum required version by default. So, you can now remove the android.buildToolsVersion property. Optimizations历史版本3.5 (August 2019)system health, feature polish, and fixing bugs. Project Marble: Feature polish Apply Changes App deployment flow Improved Gradle sync and cache detection Improved build error output Project Upgrades Layout Editor Data Binding Improved support for C/C++ projects Build Variants panel improvements for single variant sync Side-by-side versions of the NDK Chrome OS Support Conditional delivery for dynamic feature modules IntelliJ IDEA 2019.1 Android Gradle plugin 3.5.0 updates 3.4 (April 2019)3.4.2 (July 2019)3.4.1 (May 2019)3.4.0 IntelliJ IDEA 2018.3.4 Android Gradle plugin 3.4.0 New Project Structure Dialog Variables Modules Dependencies Build Variants Suggestions New Resource Manager R8 enabled by default New intention action to quickly import dependencies R8gradle.properties可以做如下设置：1234# Disables R8 for Android Library modules only.android.enableR8.libraries = false# Disables R8 for all modules.android.enableR8 = false Note: For a given build type, if you set useProguard to false in your app module’s build.gradle file, the Android Gradle plugin uses R8 to shrink your app’s code for that build type, regardless of whether you disable R8 in your project’s gradle.properties file. 3.3 (January 2019) IntelliJ IDEA 2018.2.2 Delete unused Android Studio directories Lint improvements Create New Project wizard Profiler updates Automatic downloading of SDK components Support for Clang-Tidy CMake version 3.10.2 3.0 (October 2017) Android Plugin for Gradle 3.0.0 Kotlin support Java 8 language features support Android Profiler replaces the Android Monitor tool APK profiling and debugging Device File Explorer This replaces the filesystem tool available in DDMS. Instant Apps support Android Things modules 物联网设备上的应用开发 Adaptive Icons wizard Support for font resources URL intent-filter validator Preview for D8 DEX compiler Google’s Maven repository Android Studio 3.0 includes an optional new DEX compiler called D8. It will eventually replace the DX compiler, but you can opt-in to use the new D8 compiler now. Native debugging with Android Studio no longer supports 32-bit Windows.]]></content>
+    <content type="text"><![CDATA[工欲善其事，必先利其器。——《论语·卫灵公》 概览探索 Android Studio 基于Gradle的灵活构建系统 可针对所有Android设备进行开发的统一环境 Instant Run，可将变更推送到正在运行的应用，无需构建新的APK 丰富的测试工具和框架 C++和NDK支持 配置buildGradle 依赖项管理指南12345678910dependencies &#123; // Dependency on a local library module implementation project(":mylibrary") // Dependency on local binaries implementation fileTree(dir: 'libs', include: ['*.jar']) // Dependency on a remote binary implementation 'com.example.android:app-magic:12.3'&#125; Debug Show Execution Point Step Over：单步执行。如果当前行为方法调用（不会跳到方法内部），方法执行完后跳到下一行。 Step Into：与Step Over不同的是，会跳到方法内部（非类库的方法）。 Force Step Into：与Step Into不同的是，始终跳到方法内部。 Step Out：跳出方法，返回到该方法调用处。 Drop Frame Run to Cursor Resume Program：程序执行到下一个断点处。 Stop：停止调试。 变量观察 选中变量，右键选择Add to Watches 修改变量值，调试结果。选择Set Value 条件断点循环体内设置。 日志断点Suspend取消选中，显示日志输入框。 异常断点单击如下图标，在弹窗中新建异常断点。 变量断点方法断点在方法名所在行添加断点。 Plugins其他配置Logcat颜色Assert：#8F0005 深红Debug：#0070BB 蓝Error：#FF0006 红Info：#48BB31 绿Verbose：#BBBBBB 白Warning：#BBBB23 黄 Android Gradle plugin简介Android Gradle plugin12345678910111213141516buildscript &#123; repositories &#123; // Gradle 4.1 and higher include support for Google's Maven repo using // the google() method. And you need to include this repo to download // Android Gradle plugin 3.0.0 or higher. google() jcenter() ... &#125; dependencies &#123; classpath 'com.android.tools.build:gradle:3.4.1' // NOTE: Do not place your application dependencies here; they belong // in the individual module build.gradle files &#125;&#125; The following table lists which version of Gradle is required for each version of the Android Gradle plugin. For the best performance, you should use the latest possible version of both Gradle and the plugin. Plugin version Gradle version Build Tools 1.0.0 - 1.1.3 2.2.1 - 2.3 1.2.0 - 1.3.1 2.2.1 - 2.9 1.5.0 2.2.1 - 2.13 2.0.0 - 2.1.2 2.10 - 2.13 2.1.3 - 2.2.3 2.14.1+ 2.3.0+ 3.3+ 3.0.0+ 4.1+ 26.0.2+ 3.1.0+ 4.4+ 3.2.0 - 3.2.1 4.6+ 3.3.0 - 3.3.2 4.10.1+ 3.4.0 - 3.4.1 5.1.1+ 3.5.0 5.4.1+ 3.5.0 (August 2019)This version of the Android plugin requires the following: Gradle 5.4.1 or higher. SDK Build Tools 28.0.3 or higher. 3.4.0 (April 2019)This version of the Android plugin requires the following: Gradle 5.1.1 or higher. SDK Build Tools 28.0.3 or higher. 3.3.0 (January 2019)3.2.0 (September 2018)3.1.0 (March 2018)3.0.0 (October 2017)This version of the Android plugin requires the following: Gradle 4.1 or higher. To learn more, read the section about updating Gradle. Build Tools 26.0.2 or higher. With this update, you no longer need to specify a version for the build tools—the plugin uses the minimum required version by default. So, you can now remove the android.buildToolsVersion property. Optimizations历史版本3.5 (August 2019)3.5.1 (September 2019) system health, feature polish, and fixing bugs. Project Marble: Feature polish Apply Changes App deployment flow Improved Gradle sync and cache detection Improved build error output Project Upgrades Layout Editor Data Binding Improved support for C/C++ projects Build Variants panel improvements for single variant sync Side-by-side versions of the NDK Chrome OS Support Conditional delivery for dynamic feature modules IntelliJ IDEA 2019.1 Android Gradle plugin 3.5.0 updates 3.4 (April 2019)3.4.2 (July 2019)3.4.1 (May 2019)3.4.0 IntelliJ IDEA 2018.3.4 Android Gradle plugin 3.4.0 New Project Structure Dialog Variables Modules Dependencies Build Variants Suggestions New Resource Manager R8 enabled by default New intention action to quickly import dependencies R8gradle.properties可以做如下设置：1234# Disables R8 for Android Library modules only.android.enableR8.libraries = false# Disables R8 for all modules.android.enableR8 = false Note: For a given build type, if you set useProguard to false in your app module’s build.gradle file, the Android Gradle plugin uses R8 to shrink your app’s code for that build type, regardless of whether you disable R8 in your project’s gradle.properties file. 3.3 (January 2019) IntelliJ IDEA 2018.2.2 Delete unused Android Studio directories Lint improvements Create New Project wizard Profiler updates Automatic downloading of SDK components Support for Clang-Tidy CMake version 3.10.2 3.0 (October 2017) Android Plugin for Gradle 3.0.0 Kotlin support Java 8 language features support Android Profiler replaces the Android Monitor tool APK profiling and debugging Device File Explorer This replaces the filesystem tool available in DDMS. Instant Apps support Android Things modules 物联网设备上的应用开发 Adaptive Icons wizard Support for font resources URL intent-filter validator Preview for D8 DEX compiler Google’s Maven repository Android Studio 3.0 includes an optional new DEX compiler called D8. It will eventually replace the DX compiler, but you can opt-in to use the new D8 compiler now. Native debugging with Android Studio no longer supports 32-bit Windows.]]></content>
       <categories>
         <category>利器</category>
       </categories>
