@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[android-内存泄漏]]></title>
+    <url>%2Fandroid-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%2F</url>
+    <content type="text"><![CDATA[内存泄漏（Memory Leak）是指程序中己动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果。 java虚拟机内存管理运行时数据区 所有线程共享的数据区：方法区（存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据）、堆（存放对象实例） 独享：虚拟机栈（执行java方法服务）、本地方法栈（Native方法服务）、程序计数器 优化分为两个方面 开发过程中避免写出有内存泄漏的代码（制定编码规范） 借助一些分析工具找出潜在的内存泄漏 触发场景持有activity对象 单例模式 静态变量 匿名内部类 属性动画 使用Handler，Activity销毁时removeCallbacksAndMessages(null); 资源未关闭（如数据库游标没有关闭，文件流没有关闭） Bitmap 分析工具LeakCanaryhttps://github.com/square/leakcanary]]></content>
+      <categories>
+        <category>android</category>
+        <category>进阶</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[android-性能优化]]></title>
+    <url>%2Fandroid-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[代码优化 避免创建过多的对象，进行过多的内存分配操作； 不要过多使用枚举，枚举占用的内存空间要比整型大； 常量请使用static final来修饰； 使用Android特有的数据结构，比如SparseArray和Pair等； 适当使用软引用和弱引用； 采用内存缓存和磁盘缓存； 尽量采用静态内部类，避免潜在的由于内部类而导致的内存泄漏。 java引用 强引用 软引用：当内存空间不足时，对象才被回收。 弱引用：不论当前内存空间是否不足，都回收。 虚引用：本质只是标记，跟踪对象被垃圾回收的活动。 线程优化线程优化的思想是采用线程池，避免程序中存在大量的Thread。 线程池可以重用内部的线程，从而避免了线程的创建和销毁所带来的性能开销。 线程池可以有效控制线程池的最大并发数，避免大量的线程因互相抢占资源从而导致阻塞现象的发生。 布局优化 include标签：共享布局。 merge 标签：减少布局层次。 ViewStub 标签：实现延迟加载，使用的时候再加载，提高了程序初始化时的性能。 尽量使用CompoundDrawable 使用Lint 绘制优化View的onDraw方法要避免执行大量的操作。 不要创建新的局部对象，因为onDraw方法可能会被频繁调用，会在一瞬间产生大量的临时对象，不仅占用了内存而且还会导致系统更加频繁gc，降低了程序的执行效率。 不要做耗时的任务，也不能执行成千上万次的循环操作，尽管每次循环都很轻量级，但是大量的循环仍然十分抢占CPU的时间片，这会造成View的绘制过程不流畅。Google官方给出的性能优化典范中的标准，View的绘制帧率保证60fps是最佳的，这就要求每帧的绘制时间不超过16ms（1000/60），虽然程序很难保证16ms这个时间，但是尽量降低onDraw方法的复杂度总是切实有效的。 响应速度优化响应速度优化的核心思想是避免在主线程中做耗时操作。如果在主线程中做太多事情，会导致Activity启动时出现黑屏现象，甚至出现ANR。Android规定，Activity如果5秒之内无法响应屏幕触摸事件或键盘输入事件就会出现ANR，而BroadcastReceiver如果10秒内还未执行完操作也会出现ANR。定位ANR？当一个进程发生ANR以后，系统会在/data/anr目录下创建一个文件traces.txt。 图片优化图片格式JPEG、PNG、GIF、BMP、WebP（Android 4.0）应用开发中能够使用的编码格式只有三种：JPEG、PNG、WebP，图片格式可以通过查看Bitmap类的CompressFormat确定。应用层使用GIF格式，需引入第三方库。 JPEG：有损压缩图像标准格式，不支持透明和多帧动画。 PNG：无损压缩图片格式，支持完整的透明通道，从图像处理领域讲，JPEG只有RGB三个通道，而PNG有ARGB四个通道。 GIF：古老的图片格式，诞生于1987。支持多帧动画。 WebP：Google在2010年发布，支持有损和无损压缩、支持完整的透明通道、也支持多帧动画。 图片压缩PNG图片压缩工具： 无损压缩ImageOptim：通过优化PNG压缩参数，移除冗余元数据以及非必需的颜色设置文件等方式。 有损压缩ImageAlpha 有损压缩TinyPNG PNG/JPEG转换为WebP：4.0以上直接使用，以下通过第三方库Webp-android-backport实现。Google测试，无损压缩后的WebP比PNG 文件少了45%的文件大小，通过其他压缩工具之后，依然减少约28%的文件大小。WebP转换的工具可以选择智图和iSparta等。 尽量使用NinePatch格式的PNG图：.9.png 图片缓存网络优化避免DNS解析DNS是域名系统，根据应用请求所用的域名URL去网络映射表中查找对应IP地址，可能需要上百毫秒，可能存在DNS劫持的危险。 合并网络请求一次完整的HTTP请求，首先进行DNS查找，接着通过TCP三次握手，从而建立连接；如果是HTTPS请求，还需要经过TLS握手成功后连接才建立。 离线缓存Android中，典型的是使用LruCache实现内存缓存，DiskLruCache实现外存缓存。 压缩数据大小减少网络上面传输的数据，对于客户端来说，可以对发送给服务端的数据进行gzip压缩；同时选用更优的数据传输格式。 合理选择超时策略监听ConnectivityManager.CONNECTIVITY_ACTION变化获取最新的网络类型。 使用CDNCDN全称是内容分发网络，基本思想是尽可能避开网络上可能影响数据传输速度和稳定性的环节，从而实现更快、更稳定的数据传输。CDN加速能够缓解电信核心网络延迟带来的影响。 电量优化]]></content>
+      <categories>
+        <category>android</category>
+        <category>进阶</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[java-加密那些事]]></title>
     <url>%2Fjava-%E5%8A%A0%E5%AF%86%E9%82%A3%E4%BA%9B%E4%BA%8B%2F</url>
     <content type="text"><![CDATA[Base64Base64最早应用于解决电子邮件传输的问题。Base64基于64个字符的编码算法，（A-Z,a-z,0-9,+/=）最后一个字符是等号，它是用来补位的。 消息摘要算法消息摘要算法包含MD（Message Digest，消息摘要算法）、SHA（Secure Hash Algorithm，安全散列算法）和MAC（Message Authentication Code，消息认证码算法）共3大系列，常用于验证数据的完整性，是数字签名算法的核心算法。消息摘要算法一直是非对称加密算法中一项举足轻重的关键性算法。消息摘要算法又称为散列算法，其核心在于散列函数的单向性。通过散列函数可得到对应的散列值，不可反推。 MD5MD5算法是典型的消息摘要算法，其前身有MD2、MD3和MD4算法。不论是哪种MD算法，都需要获得一个随机长度的信息并产生一个128位的信息摘要。 SHASHA算法基于MD4算法基础上，新一代的消息摘要算法。与MD算法不同之处在于摘要长度，SHA算法的摘要长度更长，安全性更高。SHA算法目前共有SHA-1、SHA-224、SHA-256、SHA-384和SHA-512五种算法，通常将后四种算法称为SHA-2算法。 MAC对称加密算法对称密码体制要求加密与解密使用同一个共享密钥，解密是加密的逆运算。 DES三重DESAES非对称加密算法非对称密码体制的加密密钥和解密密钥不相同，分为公钥与私钥。 RSA第一个既能用于数据加密也能用于数字签名的算法。 数字签名算法数字签名算法可以看做是一种带有密钥的消息摘要算法，并且这种密钥包含了公钥和私钥。也就是说，数字签名算法是非对称加密算法和消息摘要算法的结合体。 RSADSAECDSA数字证书安全协议HTTPS协议（附加了SSL/TLS协议的HTTP协议）为数字证书提供了最佳的应用环境。 参考 《Java加密与解密的艺术》]]></content>
@@ -140,18 +164,6 @@
       <tags>
         <tag>android</tag>
         <tag>RxJava</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[android-性能优化]]></title>
-    <url>%2Fandroid-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%2F</url>
-    <content type="text"><![CDATA[布局优化 include标签共享布局 ViewStub标签实现延迟加载：页面是从服务端获取数据进行展现的。 merge标签减少布局层次 尽量使用CompoundDrawable 使用Lint 代码优化 不要做冗余的工作。 尽量避免进行过多的内存分配操作。 Java中引用方式 强引用 软引用：当内存空间不足时，对象才被回收。 弱引用：不论当前内存空间是否不足，都回收。 虚引用：本质只是标记，跟踪对象被垃圾回收的活动。 避免使用非必要的对象代码重构电量优化网络优化避免DNS解析DNS是域名系统，根据应用请求所用的域名URL去网络映射表中查找对应IP地址，可能需要上百毫秒，可能存在DNS劫持的危险。 合并网络请求一次完整的HTTP请求，首先进行DNS查找，接着通过TCP三次握手，从而建立连接；如果是HTTPS请求，还需要经过TLS握手成功后连接才建立。 离线缓存Android中，典型的是使用LruCache实现内存缓存，DiskLruCache实现外存缓存。 压缩数据大小减少网络上面传输的数据，对于客户端来说，可以对发送给服务端的数据进行gzip压缩；同时选用更优的数据传输格式。 合理选择超时策略监听ConnectivityManager.CONNECTIVITY_ACTION变化获取最新的网络类型。 使用CDNCDN全称是内容分发网络，基本思想是尽可能避开网络上可能影响数据传输速度和稳定性的环节，从而实现更快、更稳定的数据传输。CDN加速能够缓解电信核心网络延迟带来的影响。 图片优化图片格式JPEG、PNG、GIF、BMP、WebP（Android 4.0）应用开发中能够使用的编码格式只有三种：JPEG、PNG、WebP，图片格式可以通过查看Bitmap类的CompressFormat确定。应用层使用GIF格式，需引入第三方库。 JPEG：有损压缩图像标准格式，不支持透明和多帧动画。 PNG：无损压缩图片格式，支持完整的透明通道，从图像处理领域讲，JPEG只有RGB三个通道，而PNG有ARGB四个通道。 GIF：古老的图片格式，诞生于1987。支持多帧动画。 WebP：Google在2010年发布，支持有损和无损压缩、支持完整的透明通道、也支持多帧动画。 图片压缩PNG图片压缩工具： 无损压缩ImageOptim：通过优化PNG压缩参数，移除冗余元数据以及非必需的颜色设置文件等方式。 有损压缩ImageAlpha 有损压缩TinyPNG PNG/JPEG转换为WebP：4.0以上直接使用，以下通过第三方库Webp-android-backport实现。Google测试，无损压缩后的WebP比PNG 文件少了45%的文件大小，通过其他压缩工具之后，依然减少约28%的文件大小。WebP转换的工具可以选择智图和iSparta等。 尽量使用NinePatch格式的PNG图：.9.png 图片缓存开源框架LeakCanary]]></content>
-      <categories>
-        <category>android</category>
-        <category>进阶</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
       </tags>
   </entry>
   <entry>
@@ -761,7 +773,7 @@
   <entry>
     <title><![CDATA[android-FAQ]]></title>
     <url>%2Fandroid-FAQ%2F</url>
-    <content type="text"><![CDATA[使用scheme协议唤起外部app]]></content>
+    <content type="text"><![CDATA[进程间通信进程保活使用scheme协议唤起外部app]]></content>
       <categories>
         <category>android</category>
         <category>基础</category>
