@@ -146,25 +146,25 @@
 
 
 
-  <meta name="description" content="RxPermissions概览工作原理源码解析Dagger2概览工作原理源码解析LitePal概览工作原理源码解析ButterKnife概览工作原理源码解析">
+  <meta name="description" content="网络请求   名称 开发者 时间 备注     Retrofit Square     OkHttp Square     Volley Google 2013年    Android-Async-Http      Apache HttpClient   Android 6.0上被删除   HttpURLConnection      异步分发通信   名称 开发者 时间 备注     RxJa">
 <meta name="keywords" content="android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android-框架">
-<meta property="og:url" content="https://liuweidong.club/android-框架/index.html">
+<meta property="og:title" content="android-全家桶">
+<meta property="og:url" content="https://liuweidong.club/android-全家桶/index.html">
 <meta property="og:site_name" content="青年码匠">
-<meta property="og:description" content="RxPermissions概览工作原理源码解析Dagger2概览工作原理源码解析LitePal概览工作原理源码解析ButterKnife概览工作原理源码解析">
+<meta property="og:description" content="网络请求   名称 开发者 时间 备注     Retrofit Square     OkHttp Square     Volley Google 2013年    Android-Async-Http      Apache HttpClient   Android 6.0上被删除   HttpURLConnection      异步分发通信   名称 开发者 时间 备注     RxJa">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-15T15:42:10.216Z">
+<meta property="og:updated_time" content="2020-02-24T15:20:09.440Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android-框架">
-<meta name="twitter:description" content="RxPermissions概览工作原理源码解析Dagger2概览工作原理源码解析LitePal概览工作原理源码解析ButterKnife概览工作原理源码解析">
+<meta name="twitter:title" content="android-全家桶">
+<meta name="twitter:description" content="网络请求   名称 开发者 时间 备注     Retrofit Square     OkHttp Square     Volley Google 2013年    Android-Async-Http      Apache HttpClient   Android 6.0上被删除   HttpURLConnection      异步分发通信   名称 开发者 时间 备注     RxJa">
 
 
 
 
 
 
-  <link rel="canonical" href="https://liuweidong.club/android-框架/">
+  <link rel="canonical" href="https://liuweidong.club/android-全家桶/">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>android-框架 | 青年码匠</title>
+  <title>android-全家桶 | 青年码匠</title>
   
 
 
@@ -434,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/android-框架/">
+    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/android-全家桶/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuweidong">
@@ -451,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">android-框架
+          <h1 class="post-title" itemprop="name headline">android-全家桶
 
               
             
@@ -477,7 +477,7 @@
                 
               
 
-              <time title="创建时间：2018-11-20 20:24:02" itemprop="dateCreated datePublished" datetime="2018-11-20T20:24:02+08:00">2018-11-20</time>
+              <time title="创建时间：2020-02-20 19:24:02" itemprop="dateCreated datePublished" datetime="2020-02-20T19:24:02+08:00">2020-02-20</time>
             
 
             
@@ -521,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/android-框架/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/android-框架/" itemprop="commentCount"></span>
+                <a href="/android-全家桶/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-全家桶/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,7 +557,109 @@
       
 
       
-        <h1 id="RxPermissions"><a href="#RxPermissions" class="headerlink" title="RxPermissions"></a>RxPermissions</h1><h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><h2 id="源码解析"><a href="#源码解析" class="headerlink" title="源码解析"></a>源码解析</h2><h1 id="Dagger2"><a href="#Dagger2" class="headerlink" title="Dagger2"></a>Dagger2</h1><h2 id="概览-1"><a href="#概览-1" class="headerlink" title="概览"></a>概览</h2><h2 id="工作原理-1"><a href="#工作原理-1" class="headerlink" title="工作原理"></a>工作原理</h2><h2 id="源码解析-1"><a href="#源码解析-1" class="headerlink" title="源码解析"></a>源码解析</h2><h1 id="LitePal"><a href="#LitePal" class="headerlink" title="LitePal"></a>LitePal</h1><h2 id="概览-2"><a href="#概览-2" class="headerlink" title="概览"></a>概览</h2><h2 id="工作原理-2"><a href="#工作原理-2" class="headerlink" title="工作原理"></a>工作原理</h2><h2 id="源码解析-2"><a href="#源码解析-2" class="headerlink" title="源码解析"></a>源码解析</h2><h1 id="ButterKnife"><a href="#ButterKnife" class="headerlink" title="ButterKnife"></a>ButterKnife</h1><h2 id="概览-3"><a href="#概览-3" class="headerlink" title="概览"></a>概览</h2><h2 id="工作原理-3"><a href="#工作原理-3" class="headerlink" title="工作原理"></a>工作原理</h2><h2 id="源码解析-3"><a href="#源码解析-3" class="headerlink" title="源码解析"></a>源码解析</h2>
+        <h1 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">开发者</th>
+<th style="text-align:left">时间</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Retrofit</td>
+<td style="text-align:left">Square</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">OkHttp</td>
+<td style="text-align:left">Square</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Volley</td>
+<td style="text-align:left">Google</td>
+<td style="text-align:left">2013年</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Android-Async-Http</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Apache HttpClient</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Android 6.0上被删除</td>
+</tr>
+<tr>
+<td style="text-align:left">HttpURLConnection</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="异步分发通信"><a href="#异步分发通信" class="headerlink" title="异步分发通信"></a>异步分发通信</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">开发者</th>
+<th style="text-align:left">时间</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">RxJava</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">AsyncTask</td>
+<td style="text-align:left">Google</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">原生</td>
+</tr>
+</tbody>
+</table>
+<h1 id="图片加载"><a href="#图片加载" class="headerlink" title="图片加载"></a>图片加载</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">开发者</th>
+<th style="text-align:left">时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Fresco</td>
+<td style="text-align:left">Facebook</td>
+<td style="text-align:left">2015年3月</td>
+</tr>
+<tr>
+<td style="text-align:left">Glide</td>
+<td style="text-align:left">Google</td>
+<td style="text-align:left">2014年</td>
+</tr>
+<tr>
+<td style="text-align:left">Picasso</td>
+<td style="text-align:left">Square</td>
+<td style="text-align:left">2013年2月</td>
+</tr>
+<tr>
+<td style="text-align:left">Universal-Image-Loader</td>
+<td style="text-align:left">nostra13</td>
+<td style="text-align:left">2011年9月</td>
+</tr>
+</tbody>
+</table>
+<h1 id="日志打印"><a href="#日志打印" class="headerlink" title="日志打印"></a>日志打印</h1><h1 id="ARouter"><a href="#ARouter" class="headerlink" title="ARouter"></a>ARouter</h1><h1 id="RxPermissions"><a href="#RxPermissions" class="headerlink" title="RxPermissions"></a>RxPermissions</h1><h1 id="Dagger2"><a href="#Dagger2" class="headerlink" title="Dagger2"></a>Dagger2</h1><h1 id="LitePal"><a href="#LitePal" class="headerlink" title="LitePal"></a>LitePal</h1><h1 id="ButterKnife"><a href="#ButterKnife" class="headerlink" title="ButterKnife"></a>ButterKnife</h1>
       
     </div>
 
@@ -624,7 +726,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liuweidong.club/android-框架/" title="android-框架">https://liuweidong.club/android-框架/</a>
+    <a href="https://liuweidong.club/android-全家桶/" title="android-全家桶">https://liuweidong.club/android-全家桶/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -650,8 +752,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/android-widget-图表/" rel="next" title="android-widget-图表">
-                <i class="fa fa-chevron-left"></i> android-widget-图表
+              <a href="/android-内存泄漏/" rel="next" title="android-内存泄漏">
+                <i class="fa fa-chevron-left"></i> android-内存泄漏
               </a>
             
           </div>
@@ -660,8 +762,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/TCP-IP详解/" rel="prev" title="TCP-IP详解">
-                TCP-IP详解 <i class="fa fa-chevron-right"></i>
+              <a href="/移动端跨平台技术分析/" rel="prev" title="移动端跨平台技术分析">
+                移动端跨平台技术分析 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -792,9 +894,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -947,7 +1047,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RxPermissions"><span class="nav-number">1.</span> <span class="nav-text">RxPermissions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作原理"><span class="nav-number">1.2.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码解析"><span class="nav-number">1.3.</span> <span class="nav-text">源码解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dagger2"><span class="nav-number">2.</span> <span class="nav-text">Dagger2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览-1"><span class="nav-number">2.1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作原理-1"><span class="nav-number">2.2.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码解析-1"><span class="nav-number">2.3.</span> <span class="nav-text">源码解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LitePal"><span class="nav-number">3.</span> <span class="nav-text">LitePal</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览-2"><span class="nav-number">3.1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作原理-2"><span class="nav-number">3.2.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码解析-2"><span class="nav-number">3.3.</span> <span class="nav-text">源码解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ButterKnife"><span class="nav-number">4.</span> <span class="nav-text">ButterKnife</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览-3"><span class="nav-number">4.1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作原理-3"><span class="nav-number">4.2.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码解析-3"><span class="nav-number">4.3.</span> <span class="nav-text">源码解析</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络请求"><span class="nav-number">1.</span> <span class="nav-text">网络请求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步分发通信"><span class="nav-number">2.</span> <span class="nav-text">异步分发通信</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图片加载"><span class="nav-number">3.</span> <span class="nav-text">图片加载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日志打印"><span class="nav-number">4.</span> <span class="nav-text">日志打印</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ARouter"><span class="nav-number">5.</span> <span class="nav-text">ARouter</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RxPermissions"><span class="nav-number">6.</span> <span class="nav-text">RxPermissions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dagger2"><span class="nav-number">7.</span> <span class="nav-text">Dagger2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LitePal"><span class="nav-number">8.</span> <span class="nav-text">LitePal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ButterKnife"><span class="nav-number">9.</span> <span class="nav-text">ButterKnife</span></a></li></ol></div>
             
 
           </div>

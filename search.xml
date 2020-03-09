@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[移动端跨平台技术分析]]></title>
+    <url>%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90%2F</url>
+    <content type="text"><![CDATA[Web框架 AngularJS（2009） React（2013） Vue.js（2013） Angular2 移动端跨平台框架 WebView React Native（2015） Weex（2016） Flutter（2018） React Native A framework for building native apps with React.Learn once, write anywhere. RN是Facebook于2015年4月开源的跨平台移动应用开发框架，是早先开源的JS框架React在原生移动应用平台的衍生产物，支持iOS和安卓两大平台。 React Native中文网：https://reactnative.cn/GitHub仓库：https://github.com/facebook/react-native Weex A framework for building Mobile cross-platform UI. Weex于2017年2月24日迁移至Apache基金会。 官网：https://weex.apache.org/GitHub仓库：https://github.com/apache/incubator-weexWeex中文讨论网站：https://segmentfault.com/t/weex Flutter Flutter makes it easy and fast to build beautiful mobile apps. Flutter中文网：https://flutterchina.club/GitHub仓库：https://github.com/flutter/flutter]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[android-全家桶]]></title>
+    <url>%2Fandroid-%E5%85%A8%E5%AE%B6%E6%A1%B6%2F</url>
+    <content type="text"><![CDATA[网络请求 名称 开发者 时间 备注 Retrofit Square OkHttp Square Volley Google 2013年 Android-Async-Http Apache HttpClient Android 6.0上被删除 HttpURLConnection 异步分发通信 名称 开发者 时间 备注 RxJava AsyncTask Google 原生 图片加载 名称 开发者 时间 Fresco Facebook 2015年3月 Glide Google 2014年 Picasso Square 2013年2月 Universal-Image-Loader nostra13 2011年9月 日志打印ARouterRxPermissionsDagger2LitePalButterKnife]]></content>
+      <categories>
+        <category>android</category>
+        <category>框架</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[android-内存泄漏]]></title>
     <url>%2Fandroid-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%2F</url>
     <content type="text"><![CDATA[内存泄漏（Memory Leak）是指程序中己动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果。 java虚拟机内存管理运行时数据区 所有线程共享的数据区：方法区（存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据）、堆（存放对象实例） 独享：虚拟机栈（执行java方法服务）、本地方法栈（Native方法服务）、程序计数器 优化分为两个方面 开发过程中避免写出有内存泄漏的代码（制定编码规范） 借助一些分析工具找出潜在的内存泄漏 触发场景持有activity对象 单例模式 静态变量 匿名内部类 属性动画 使用Handler，Activity销毁时removeCallbacksAndMessages(null); 资源未关闭（如数据库游标没有关闭，文件流没有关闭） Bitmap 分析工具LeakCanaryhttps://github.com/square/leakcanary]]></content>
@@ -119,7 +139,7 @@
   <entry>
     <title><![CDATA[android-框架-网络请求]]></title>
     <url>%2Fandroid-%E6%A1%86%E6%9E%B6-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%2F</url>
-    <content type="text"><![CDATA[Retrofit概览与OkHttp共同出自于Square。主要作者Android大神JakeWharton 工作原理源码解析OkHttp概览 An HTTP+HTTP/2 client for Android and Java applications. The OkHttp 3.12.x branch supports Android 2.3+ (API level 9+) and Java 7+. These platforms lack support for TLS 1.2 and should not be used. But because upgrading is difficult we will backport critical fixes to the 3.12.x branch through December 31, 2020.项目地址https://github.com/square/okhttphttps://square.github.io/okhttp/版本4.0.0（2019-06-26）3.5.0（2016-11-30）3.4.1（2016-07-10）3.0.0（2016-01-13）2.0.0（2014-06-21）1.0.0（2013-05-06）Initial release. 工作原理源码解析Volley概览Volley是2013年Google I/O上发布的一款Android平台上的网络通信库。适合数据量大，需要频繁通信的网络操作。不适用文件的上传下载操作。 Android-Async-HttpAndroid源生网络请求Apache HttpClient已经不推荐使用，6.0上被删除。Google推荐在Android上使用HttpURLConnection HttpURLConnection问题 没有针对异步调用进行封装 没有线程池，网络缓存，不能重复利用请求，性能不佳 没有json解析框架]]></content>
+    <content type="text"><![CDATA[Retrofit概览与OkHttp共同出自于Square。主要作者Android大神JakeWharton 工作原理源码解析OkHttp概览 An HTTP+HTTP/2 client for Android and Java applications. The OkHttp 3.12.x branch supports Android 2.3+ (API level 9+) and Java 7+. These platforms lack support for TLS 1.2 and should not be used. But because upgrading is difficult we will backport critical fixes to the 3.12.x branch through December 31, 2020.项目地址https://github.com/square/okhttphttps://square.github.io/okhttp/版本4.0.0（2019-06-26）3.5.0（2016-11-30）3.4.1（2016-07-10）3.0.0（2016-01-13）2.0.0（2014-06-21）1.0.0（2013-05-06）Initial release. 工作原理源码解析Volley概览Volley是2013年Google I/O上发布的一款Android平台上的网络通信库。适合数据量大，需要频繁通信的网络操作。不适用文件的上传下载操作。 Android-Async-HttpAndroid原生网络请求Apache HttpClient已经不推荐使用，6.0上被删除。Google推荐在Android上使用HttpURLConnection HttpURLConnection问题 没有针对异步调用进行封装 没有线程池，网络缓存，不能重复利用请求，性能不佳 没有json解析框架]]></content>
       <categories>
         <category>android</category>
         <category>框架</category>
@@ -317,18 +337,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-框架]]></title>
-    <url>%2Fandroid-%E6%A1%86%E6%9E%B6%2F</url>
-    <content type="text"><![CDATA[RxPermissions概览工作原理源码解析Dagger2概览工作原理源码解析LitePal概览工作原理源码解析ButterKnife概览工作原理源码解析]]></content>
-      <categories>
-        <category>android</category>
-        <category>框架</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[android-widget-图表]]></title>
     <url>%2Fandroid-widget-%E5%9B%BE%E8%A1%A8%2F</url>
     <content type="text"><![CDATA[MPAndroidChartHelloChartsWilliamChart]]></content>
@@ -402,18 +410,6 @@
       <categories>
         <category>Computer Systems</category>
       </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[android-应用专题]]></title>
-    <url>%2Fandroid-%E5%BA%94%E7%94%A8%E4%B8%93%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[Android Studio Gradle NDK 数据库 日志 性能 加密]]></content>
-      <categories>
-        <category>android</category>
-        <category>应用专题</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[MySQL详解]]></title>
