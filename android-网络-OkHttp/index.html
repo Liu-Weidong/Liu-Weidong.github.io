@@ -146,25 +146,25 @@
 
 
 
-  <meta name="description" content="Retrofit概览与OkHttp共同出自于Square。主要作者Android大神JakeWharton 工作原理源码解析OkHttp概览 An HTTP+HTTP/2 client for Android and Java applications.   The OkHttp 3.12.x branch supports Android 2.3+ (API level 9+) and Java">
+  <meta name="description" content="概览官网https://square.github.io/okhttp/项目地址https://github.com/square/okhttpMavenhttps://search.maven.org/artifact/com.squareup.okhttp3/okhttp 工作原理源码解析历史版本4.xhttps://square.github.io/okhttp/changelog/ 4.4">
 <meta name="keywords" content="android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android-框架-网络请求">
-<meta property="og:url" content="https://liuweidong.club/android-框架-网络请求/index.html">
+<meta property="og:title" content="android-网络-OkHttp">
+<meta property="og:url" content="https://liuweidong.club/android-网络-OkHttp/index.html">
 <meta property="og:site_name" content="青年码匠">
-<meta property="og:description" content="Retrofit概览与OkHttp共同出自于Square。主要作者Android大神JakeWharton 工作原理源码解析OkHttp概览 An HTTP+HTTP/2 client for Android and Java applications.   The OkHttp 3.12.x branch supports Android 2.3+ (API level 9+) and Java">
+<meta property="og:description" content="概览官网https://square.github.io/okhttp/项目地址https://github.com/square/okhttpMavenhttps://search.maven.org/artifact/com.squareup.okhttp3/okhttp 工作原理源码解析历史版本4.xhttps://square.github.io/okhttp/changelog/ 4.4">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-24T14:44:21.627Z">
+<meta property="og:updated_time" content="2020-03-15T00:47:21.187Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android-框架-网络请求">
-<meta name="twitter:description" content="Retrofit概览与OkHttp共同出自于Square。主要作者Android大神JakeWharton 工作原理源码解析OkHttp概览 An HTTP+HTTP/2 client for Android and Java applications.   The OkHttp 3.12.x branch supports Android 2.3+ (API level 9+) and Java">
+<meta name="twitter:title" content="android-网络-OkHttp">
+<meta name="twitter:description" content="概览官网https://square.github.io/okhttp/项目地址https://github.com/square/okhttpMavenhttps://search.maven.org/artifact/com.squareup.okhttp3/okhttp 工作原理源码解析历史版本4.xhttps://square.github.io/okhttp/changelog/ 4.4">
 
 
 
 
 
 
-  <link rel="canonical" href="https://liuweidong.club/android-框架-网络请求/">
+  <link rel="canonical" href="https://liuweidong.club/android-网络-OkHttp/">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>android-框架-网络请求 | 青年码匠</title>
+  <title>android-网络-OkHttp | 青年码匠</title>
   
 
 
@@ -434,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/android-框架-网络请求/">
+    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/android-网络-OkHttp/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuweidong">
@@ -451,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">android-框架-网络请求
+          <h1 class="post-title" itemprop="name headline">android-网络-OkHttp
 
               
             
@@ -477,7 +477,7 @@
                 
               
 
-              <time title="创建时间：2019-03-03 11:15:50" itemprop="dateCreated datePublished" datetime="2019-03-03T11:15:50+08:00">2019-03-03</time>
+              <time title="创建时间：2019-04-06 18:15:50" itemprop="dateCreated datePublished" datetime="2019-04-06T18:15:50+08:00">2019-04-06</time>
             
 
             
@@ -521,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/android-框架-网络请求/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/android-框架-网络请求/" itemprop="commentCount"></span>
+                <a href="/android-网络-OkHttp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-网络-OkHttp/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,18 +557,21 @@
       
 
       
-        <h1 id="Retrofit"><a href="#Retrofit" class="headerlink" title="Retrofit"></a>Retrofit</h1><h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>与OkHttp共同出自于Square。主要作者Android大神JakeWharton</p>
-<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><h2 id="源码解析"><a href="#源码解析" class="headerlink" title="源码解析"></a>源码解析</h2><h1 id="OkHttp"><a href="#OkHttp" class="headerlink" title="OkHttp"></a>OkHttp</h1><h2 id="概览-1"><a href="#概览-1" class="headerlink" title="概览"></a>概览</h2><blockquote>
-<p>An HTTP+HTTP/2 client for Android and Java applications. </p>
-</blockquote>
-<p>The OkHttp 3.12.x branch supports Android 2.3+ (API level 9+) and Java 7+. These platforms lack support for TLS 1.2 and should not be used. But because upgrading is difficult we will backport critical fixes to the 3.12.x branch through December 31, 2020.<br><strong>项目地址</strong><br><a href="https://github.com/square/okhttp" target="_blank" rel="noopener">https://github.com/square/okhttp</a><br><a href="https://square.github.io/okhttp/" target="_blank" rel="noopener">https://square.github.io/okhttp/</a><br><strong>版本</strong><br>4.0.0（2019-06-26）<br>3.5.0（2016-11-30）<br>3.4.1（2016-07-10）<br>3.0.0（2016-01-13）<br>2.0.0（2014-06-21）<br>1.0.0（2013-05-06）Initial release.</p>
-<h2 id="工作原理-1"><a href="#工作原理-1" class="headerlink" title="工作原理"></a>工作原理</h2><h2 id="源码解析-1"><a href="#源码解析-1" class="headerlink" title="源码解析"></a>源码解析</h2><h1 id="Volley"><a href="#Volley" class="headerlink" title="Volley"></a>Volley</h1><h2 id="概览-2"><a href="#概览-2" class="headerlink" title="概览"></a>概览</h2><p>Volley是2013年Google I/O上发布的一款Android平台上的网络通信库。适合数据量大，需要频繁通信的网络操作。不适用文件的上传下载操作。</p>
-<h1 id="Android-Async-Http"><a href="#Android-Async-Http" class="headerlink" title="Android-Async-Http"></a>Android-Async-Http</h1><h1 id="Android原生网络请求"><a href="#Android原生网络请求" class="headerlink" title="Android原生网络请求"></a>Android原生网络请求</h1><h2 id="Apache-HttpClient"><a href="#Apache-HttpClient" class="headerlink" title="Apache HttpClient"></a>Apache HttpClient</h2><p>已经不推荐使用，6.0上被删除。Google推荐在Android上使用HttpURLConnection</p>
-<h2 id="HttpURLConnection"><a href="#HttpURLConnection" class="headerlink" title="HttpURLConnection"></a>HttpURLConnection</h2><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
-<li>没有针对异步调用进行封装</li>
-<li>没有线程池，网络缓存，不能重复利用请求，性能不佳</li>
-<li>没有json解析框架</li>
-</ul>
+        <h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><p><strong>官网</strong><br><a href="https://square.github.io/okhttp/" target="_blank" rel="noopener">https://square.github.io/okhttp/</a><br><strong>项目地址</strong><br><a href="https://github.com/square/okhttp" target="_blank" rel="noopener">https://github.com/square/okhttp</a><br><strong>Maven</strong><br><a href="https://search.maven.org/artifact/com.squareup.okhttp3/okhttp" target="_blank" rel="noopener">https://search.maven.org/artifact/com.squareup.okhttp3/okhttp</a></p>
+<h1 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h1><h1 id="源码解析"><a href="#源码解析" class="headerlink" title="源码解析"></a>源码解析</h1><h1 id="历史版本"><a href="#历史版本" class="headerlink" title="历史版本"></a>历史版本</h1><h2 id="4-x"><a href="#4-x" class="headerlink" title="4.x"></a>4.x</h2><p><a href="https://square.github.io/okhttp/changelog/" target="_blank" rel="noopener">https://square.github.io/okhttp/changelog/</a></p>
+<h3 id="4-4-0（2020-02-17）"><a href="#4-4-0（2020-02-17）" class="headerlink" title="4.4.0（2020-02-17）"></a>4.4.0（2020-02-17）</h3><h3 id="4-3-0（2019-12-31）"><a href="#4-3-0（2019-12-31）" class="headerlink" title="4.3.0（2019-12-31）"></a>4.3.0（2019-12-31）</h3><h3 id="4-2-0（2019-09-10）"><a href="#4-2-0（2019-09-10）" class="headerlink" title="4.2.0（2019-09-10）"></a>4.2.0（2019-09-10）</h3><h3 id="4-1-0（2019-08-12）"><a href="#4-1-0（2019-08-12）" class="headerlink" title="4.1.0（2019-08-12）"></a>4.1.0（2019-08-12）</h3><h3 id="4-0-0（2019-06-26）"><a href="#4-0-0（2019-06-26）" class="headerlink" title="4.0.0（2019-06-26）"></a>4.0.0（2019-06-26）</h3><p><a href="https://square.github.io/okhttp/upgrading_to_okhttp_4/" target="_blank" rel="noopener">https://square.github.io/okhttp/upgrading_to_okhttp_4/</a></p>
+<h3 id="4-0-0-RC3（2019-06-24）"><a href="#4-0-0-RC3（2019-06-24）" class="headerlink" title="4.0.0-RC3（2019-06-24）"></a>4.0.0-RC3（2019-06-24）</h3><h3 id="4-0-0-RC2（2019-06-21）"><a href="#4-0-0-RC2（2019-06-21）" class="headerlink" title="4.0.0-RC2（2019-06-21）"></a>4.0.0-RC2（2019-06-21）</h3><h3 id="4-0-0-RC1（2019-06-03）"><a href="#4-0-0-RC1（2019-06-03）" class="headerlink" title="4.0.0-RC1（2019-06-03）"></a>4.0.0-RC1（2019-06-03）</h3><p>First stable preview of OkHttp 4.<br>4.0.0-alpha01（2019-05-09）</p>
+<h2 id="3-x"><a href="#3-x" class="headerlink" title="3.x"></a>3.x</h2><p><a href="https://square.github.io/okhttp/changelog_3x/" target="_blank" rel="noopener">https://square.github.io/okhttp/changelog_3x/</a></p>
+<h3 id="3-14-0（2019-03-14）"><a href="#3-14-0（2019-03-14）" class="headerlink" title="3.14.0（2019-03-14）"></a>3.14.0（2019-03-14）</h3><h3 id="3-5-0（2016-12-02）"><a href="#3-5-0（2016-12-02）" class="headerlink" title="3.5.0（2016-12-02）"></a>3.5.0（2016-12-02）</h3><h3 id="3-4-1（2016-07-10）"><a href="#3-4-1（2016-07-10）" class="headerlink" title="3.4.1（2016-07-10）"></a>3.4.1（2016-07-10）</h3><h3 id="3-0-0（2016-01-13）"><a href="#3-0-0（2016-01-13）" class="headerlink" title="3.0.0（2016-01-13）"></a>3.0.0（2016-01-13）</h3><h3 id="3-0-0-RC1（2016-01-02）"><a href="#3-0-0-RC1（2016-01-02）" class="headerlink" title="3.0.0-RC1（2016-01-02）"></a>3.0.0-RC1（2016-01-02）</h3><p>改变项目的包名com.squareup.okhttp为okhttp3。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Maven group ID为com.squareup.okhttp3</span></span><br><span class="line">implementation <span class="string">'com.squareup.okhttp3:okhttp:3.x.x'</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="https://jakewharton.com/java-interoperability-policy-for-major-version-updates/" target="_blank" rel="noopener">https://jakewharton.com/java-interoperability-policy-for-major-version-updates/</a><br>For major version updates in significantly foundational libraries we will take the following steps:</p>
+<ol>
+<li>重命名java包名为包括版本号</li>
+<li>将库名作为Maven group ID的一部分</li>
+<li>重命名Maven group ID包含版本号</li>
+</ol>
+<h2 id="2-x"><a href="#2-x" class="headerlink" title="2.x"></a>2.x</h2><p><a href="https://square.github.io/okhttp/changelog_2x/" target="_blank" rel="noopener">https://square.github.io/okhttp/changelog_2x/</a></p>
+<h3 id="2-0-0（2014-06-21）"><a href="#2-0-0（2014-06-21）" class="headerlink" title="2.0.0（2014-06-21）"></a>2.0.0（2014-06-21）</h3><h3 id="2-0-0-RC1（2014-05-23）"><a href="#2-0-0-RC1（2014-05-23）" class="headerlink" title="2.0.0-RC1（2014-05-23）"></a>2.0.0-RC1（2014-05-23）</h3><h2 id="1-x"><a href="#1-x" class="headerlink" title="1.x"></a>1.x</h2><p><a href="https://square.github.io/okhttp/changelog_1x/" target="_blank" rel="noopener">https://square.github.io/okhttp/changelog_1x/</a></p>
+<h3 id="1-6-0（2014-05-23）"><a href="#1-6-0（2014-05-23）" class="headerlink" title="1.6.0（2014-05-23）"></a>1.6.0（2014-05-23）</h3><h3 id="1-5-0（2014-03-07）"><a href="#1-5-0（2014-03-07）" class="headerlink" title="1.5.0（2014-03-07）"></a>1.5.0（2014-03-07）</h3><h3 id="1-0-0（2013-05-06）"><a href="#1-0-0（2013-05-06）" class="headerlink" title="1.0.0（2013-05-06）"></a>1.0.0（2013-05-06）</h3><p>Initial release.<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.squareup.okhttp<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>okhttp<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>(insert latest version)<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -636,7 +639,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liuweidong.club/android-框架-网络请求/" title="android-框架-网络请求">https://liuweidong.club/android-框架-网络请求/</a>
+    <a href="https://liuweidong.club/android-网络-OkHttp/" title="android-网络-OkHttp">https://liuweidong.club/android-网络-OkHttp/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -662,8 +665,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/android-AndroidSupportLibrary/" rel="next" title="android-Android Support Library">
-                <i class="fa fa-chevron-left"></i> android-Android Support Library
+              <a href="/android-网络请求/" rel="next" title="android-网络请求">
+                <i class="fa fa-chevron-left"></i> android-网络请求
               </a>
             
           </div>
@@ -672,8 +675,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/android-AndroidX/" rel="prev" title="android-AndroidX">
-                android-AndroidX <i class="fa fa-chevron-right"></i>
+              <a href="/java-并发编程实战/" rel="prev" title="java-并发编程实战">
+                java-并发编程实战 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -957,7 +960,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Retrofit"><span class="nav-number">1.</span> <span class="nav-text">Retrofit</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作原理"><span class="nav-number">1.2.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码解析"><span class="nav-number">1.3.</span> <span class="nav-text">源码解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OkHttp"><span class="nav-number">2.</span> <span class="nav-text">OkHttp</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览-1"><span class="nav-number">2.1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作原理-1"><span class="nav-number">2.2.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码解析-1"><span class="nav-number">2.3.</span> <span class="nav-text">源码解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Volley"><span class="nav-number">3.</span> <span class="nav-text">Volley</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览-2"><span class="nav-number">3.1.</span> <span class="nav-text">概览</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android-Async-Http"><span class="nav-number">4.</span> <span class="nav-text">Android-Async-Http</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android原生网络请求"><span class="nav-number">5.</span> <span class="nav-text">Android原生网络请求</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Apache-HttpClient"><span class="nav-number">5.1.</span> <span class="nav-text">Apache HttpClient</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HttpURLConnection"><span class="nav-number">5.2.</span> <span class="nav-text">HttpURLConnection</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">5.3.</span> <span class="nav-text">问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工作原理"><span class="nav-number">2.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#源码解析"><span class="nav-number">3.</span> <span class="nav-text">源码解析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#历史版本"><span class="nav-number">4.</span> <span class="nav-text">历史版本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-x"><span class="nav-number">4.1.</span> <span class="nav-text">4.x</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-0（2020-02-17）"><span class="nav-number">4.1.1.</span> <span class="nav-text">4.4.0（2020-02-17）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-0（2019-12-31）"><span class="nav-number">4.1.2.</span> <span class="nav-text">4.3.0（2019-12-31）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-0（2019-09-10）"><span class="nav-number">4.1.3.</span> <span class="nav-text">4.2.0（2019-09-10）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-0（2019-08-12）"><span class="nav-number">4.1.4.</span> <span class="nav-text">4.1.0（2019-08-12）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-0-0（2019-06-26）"><span class="nav-number">4.1.5.</span> <span class="nav-text">4.0.0（2019-06-26）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-0-0-RC3（2019-06-24）"><span class="nav-number">4.1.6.</span> <span class="nav-text">4.0.0-RC3（2019-06-24）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-0-0-RC2（2019-06-21）"><span class="nav-number">4.1.7.</span> <span class="nav-text">4.0.0-RC2（2019-06-21）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-0-0-RC1（2019-06-03）"><span class="nav-number">4.1.8.</span> <span class="nav-text">4.0.0-RC1（2019-06-03）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-x"><span class="nav-number">4.2.</span> <span class="nav-text">3.x</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-14-0（2019-03-14）"><span class="nav-number">4.2.1.</span> <span class="nav-text">3.14.0（2019-03-14）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-0（2016-12-02）"><span class="nav-number">4.2.2.</span> <span class="nav-text">3.5.0（2016-12-02）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-1（2016-07-10）"><span class="nav-number">4.2.3.</span> <span class="nav-text">3.4.1（2016-07-10）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-0-0（2016-01-13）"><span class="nav-number">4.2.4.</span> <span class="nav-text">3.0.0（2016-01-13）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-0-0-RC1（2016-01-02）"><span class="nav-number">4.2.5.</span> <span class="nav-text">3.0.0-RC1（2016-01-02）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-x"><span class="nav-number">4.3.</span> <span class="nav-text">2.x</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-0-0（2014-06-21）"><span class="nav-number">4.3.1.</span> <span class="nav-text">2.0.0（2014-06-21）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-0-0-RC1（2014-05-23）"><span class="nav-number">4.3.2.</span> <span class="nav-text">2.0.0-RC1（2014-05-23）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-x"><span class="nav-number">4.4.</span> <span class="nav-text">1.x</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-0（2014-05-23）"><span class="nav-number">4.4.1.</span> <span class="nav-text">1.6.0（2014-05-23）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-0（2014-03-07）"><span class="nav-number">4.4.2.</span> <span class="nav-text">1.5.0（2014-03-07）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-0-0（2013-05-06）"><span class="nav-number">4.4.3.</span> <span class="nav-text">1.0.0（2013-05-06）</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
