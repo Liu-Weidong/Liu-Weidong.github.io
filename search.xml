@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[移动端跨平台技术分析]]></title>
     <url>%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90%2F</url>
-    <content type="text"><![CDATA[Web框架 AngularJS（2009） React（2013） Vue.js（2013） Angular2 移动端跨平台框架 WebView React Native（2015） Weex（2016） Flutter（2018） Vue.jsReact Native A framework for building native apps with React.Learn once, write anywhere. RN是Facebook于2015年4月开源的跨平台移动应用开发框架，是早先开源的JS框架React在原生移动应用平台的衍生产物，支持iOS和安卓两大平台。 React Native中文网：https://reactnative.cn/项目地址：https://github.com/facebook/react-native Weex A framework for building Mobile cross-platform UI. Weex于2017年2月24日迁移至Apache基金会。 官网：https://weex.apache.org/项目地址：https://github.com/apache/incubator-weexWeex中文讨论网站：https://segmentfault.com/t/weex Flutter Flutter makes it easy and fast to build beautiful mobile apps. Flutter中文网：https://flutterchina.club/项目地址：https://github.com/flutter/flutter]]></content>
+    <content type="text"><![CDATA[Web框架 Angular（2009） React（2013） Vue.js（2013） Angular2 移动端跨平台框架 WebView React Native（2015） Weex（2016） Flutter（2018） Vue.jsReact Native A framework for building native apps with React.Learn once, write anywhere. RN是Facebook于2015年4月开源的跨平台移动应用开发框架，是早先开源的JS框架React在原生移动应用平台的衍生产物，支持iOS和安卓两大平台。 React Native中文网：https://reactnative.cn/项目地址：https://github.com/facebook/react-native Weex A framework for building Mobile cross-platform UI. Weex于2017年2月24日迁移至Apache基金会。 官网：https://weex.apache.org/项目地址：https://github.com/apache/incubator-weexWeex中文讨论网站：https://segmentfault.com/t/weex Flutter Flutter makes it easy and fast to build beautiful mobile apps. Flutter中文网：https://flutterchina.club/项目地址：https://github.com/flutter/flutter]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -279,21 +279,9 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[JavaScript-jQuery]]></title>
-    <url>%2FJavaScript-jQuery%2F</url>
-    <content type="text"><![CDATA[jQuery是一个快速、简洁的JavaScript框架，继Prototype之后又一个优秀的JavaScript代码库。jQuery设计的宗旨是“Write Less,Do More”。发布者：John ResigjQuery 1.0：2006/01]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>jQuery</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[JavaScript]]></title>
-    <url>%2FJavaScript%2F</url>
-    <content type="text"><![CDATA[概览1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。 JavaScript程序是用Unicode字符集编写的。 JavaScript是区分大小写的语言。 JavaScript标识符（用来对变量和函数进行命名）必须以字母、下划线、美元符开始。 JavaScript不区分整数值和浮点数值。JavaScript中的所有数字均用浮点数值表示。 JavaScript中，字符串是不可变的。 基本语法数据类型分为两类：原始类型（数字、字符串、布尔值、null、undefined）和对象类型。JS中变量是无类型的，变量可以被赋予任何类型的值，同样一个变量也可以重新赋予不同类型的值。使用var关键字来声明变量。 变量作用域 函数定义是可以嵌套的。 JavaScript使用了函数作用域(function scope)：变量在声明它们的函数体以及这个函数体嵌套的任意函数体内都是有定义的。 1234567var scope = "global";function f() &#123; console.log(scope);// 输出“undefined”，而不是“global” var scope = "local";// 变量在这里赋值初始化，但变量本身在函数体内任何地方均是有定义的 console.log(scope);// 输出“local”&#125;f() 全局变量在程序中始终都是有定义的；局部变量在声明它的函数体内以及其所嵌套的函数内始终是有定义的。 对象JavaScript除了字符串、数字、true、false、null和undefined之外，其他值都是对象。创建对象的方式： 对象直接量。由若干名/值对组成的映射表，名/值对中间用冒号分隔，之间用逗号分隔，整个映射表用花括号括起来。属性名可以是JavaScript标识符也可以是字符串直接量；属性值可以是任意类型的JavaScript表达式。 12345678910// 没有任何属性的对象var empty = &#123;&#125;; // 两个属性var p = &#123;id: 3, age: 56&#125;;var phone = &#123; "s color": "red", manufacture: &#123; name: "xx" &#125;&#125;; 通过new创建对象。 console console.log() console.error() console.warn() console.info() ECMAScript历史版本ECMA（欧洲计算机制造协会）http://www.ecma-international.org/publications/standards/Ecma-262.htm ES10（2019）ES9（2018）ES8（2017/6）ES7（2016/3）ES6（2015/6） 类 模块化 箭头函数 函数参数默认值 模板字符串：字符串拼接更加简洁。${} 解构赋值 延展操作符 对象属性简写 Promise 支持let与const import {xxx} from xxx：输入其他模块功能export：模块对外接口export default ES5（2009/11）]]></content>
+    <title><![CDATA[JavaScript-基础知识]]></title>
+    <url>%2FJavaScript-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[概览1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。 JavaScript程序是用Unicode字符集编写的。 JavaScript是区分大小写的语言。 JavaScript标识符（用来对变量和函数进行命名）必须以字母、下划线、美元符开始。 JavaScript不区分整数值和浮点数值。JavaScript中的所有数字均用浮点数值表示。 JavaScript中，字符串是不可变的。 基本语法数据类型分为两类：原始类型（数字、字符串、布尔值、null、undefined）和对象类型。JS中变量是无类型的，变量可以被赋予任何类型的值，同样一个变量也可以重新赋予不同类型的值。使用var关键字来声明变量。 变量作用域 函数定义是可以嵌套的。 JavaScript使用了函数作用域(function scope)：变量在声明它们的函数体以及这个函数体嵌套的任意函数体内都是有定义的。 1234567var scope = "global";function f() &#123; console.log(scope);// 输出“undefined”，而不是“global” var scope = "local";// 变量在这里赋值初始化，但变量本身在函数体内任何地方均是有定义的 console.log(scope);// 输出“local”&#125;f() 全局变量在程序中始终都是有定义的；局部变量在声明它的函数体内以及其所嵌套的函数内始终是有定义的。 对象JavaScript除了字符串、数字、true、false、null和undefined之外，其他值都是对象。创建对象的方式： 对象直接量。由若干名/值对组成的映射表，名/值对中间用冒号分隔，之间用逗号分隔，整个映射表用花括号括起来。属性名可以是JavaScript标识符也可以是字符串直接量；属性值可以是任意类型的JavaScript表达式。 12345678910// 没有任何属性的对象var empty = &#123;&#125;; // 两个属性var p = &#123;id: 3, age: 56&#125;;var phone = &#123; "s color": "red", manufacture: &#123; name: "xx" &#125;&#125;; 通过new创建对象。 console console.log() console.error() console.warn() console.info()]]></content>
       <categories>
         <category>JavaScript</category>
       </categories>
@@ -422,7 +410,7 @@
     <url>%2F%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%8E%E7%BC%96%E7%A0%81%2F</url>
     <content type="text"><![CDATA[ASCII1961年提出基本的ASCII字符集共有128个字符，其中有96个可打印字符，包括常用的字母、数字、标点符号等，另外还有32个控制字符。 Bin——Dec——Hex——缩写/字符——解释00000000——0——00——NUL（null）——空字符00100000——32——20——（space）——空格00100001——33——21——!00110000——48——30——001000000——64——40——@01000001——65——41——A01100001——97——61——a01111111——127——7F——DEL (delete)——删除 ASCII大致可以分作三部分组成。第一部分是：ASCII码非打印控制字符ASCII码表上的数字0–31分配给了控制字符，用于控制像打印机等一些外围设备。例如，12代表换页/新页功能。此命令指示打印机跳到下一页的开头。第二部分是：ASCII码打印字符数字32–126分配给了能在键盘上找到的字符，当您查看或打印文档时就会出现。数字127代表 DELETE 命令。第三部分是：扩展ASCII码打印字符扩展的ASCII字符满足了对更多字符的需求。扩展的ASCII包含ASCII中已有的128个字符（数字0–32显示在下图中），又增加了128个字符，总共是256个。即使有了这些更多的字符，许多语言还是包含无法压缩到256个字符中的符号。因此，出现了一些ASCII码的变体来囊括地区性字符和符号。例如，许多软件程序把ASCII码表（又称作ISO8859-1）用于北美、西欧、澳大利亚和非洲的语言。 Unicode1990年开始研发，1994年正式公布。 UTF-8GB2312GBK]]></content>
       <categories>
-        <category>Computer Systems</category>
+        <category>计算机系统</category>
       </categories>
   </entry>
   <entry>
@@ -430,7 +418,7 @@
     <url>%2F%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%2F</url>
     <content type="text"><![CDATA[计算机硬件输入单元、输出单元、CPU内部的控制单元、算术逻辑单元、内存 总线：贯穿整个系统的是一组电子管道，称作总线，携带信息字节并负责在各个部件间传递。 I/O设备：用户输入的键盘和鼠标，用户输出的显示器，以及用于长期存储数据和程序的磁盘驱动器（磁盘）。每个I/O设备都通过一个控制器或适配器与I/O总线相连。控制器和适配器之间的区别主要是它们的封装方式。 主存：主存是一个临时存储设备，在处理器执行程序时，用来存放程序和程序处理的数据。从物理上来说，主存是由一组动态随机存取存储器（DRAM）芯片组成的。从逻辑上来说，存储器是一个线性的字节数组，每个字节都有其唯一的地址（数组索引）。 CPU，简称处理器，是解释（或执行）存储在主存中指令的引擎。运算器：运算器又称算术逻辑单元（ALU，Arithmetic Logic Unit）。 数字计算机的整个历史中，有两个需求是驱动进步的持续动力：一个是我们想要计算机做得更多，另一个是我们想要计算机运行得更快。 CPU（中央处理单元）解释（或执行）存储在主存中指令的引擎。处理器的核心是一个大小为一个字的存储设备（或寄存器），称为程序计数器（PC）。精简指令集（RISC）与复杂指令集（CISC）系统。CPU的“外频”与“倍频”：外频指的是CPU与外部组件进行数据传输/运算时的速度，倍频是CPU内部用来加速工作性能的一个倍数，两者相乘才是CPU的频率。主板芯片组分为北桥与南桥，北桥的总线称为系统总线，因为是内存传输的主要通道，所以速度较快；南桥是所谓的输入输出（I/O）总线，主要用于“联系”硬盘、USB、网卡等接口设备。 内存主存：一个临时存储设备，在处理器执行程序时，用来存放程序和程序处理的数据。从物理上来说，主存是由一组动态随机存取存储器（DRAM）芯片组成的。从逻辑上来说，存储器是一个线性的字节数组，每个字节都有其唯一的地址。 DRAM（动态随机访问内存），随机访问内存只有在通电时才能记录与使用，断电后数据就消失了。（也称挥发性内存） SRAM（静态随机访问内存）CPU内部第二层高速缓存。 ROM非挥发性内存。 硬盘与存储设备硬盘：机械手臂、磁头、盘片、主轴马达传输接口：IDE接口、SATA接口、SCSI接口缓冲存储器盘片分出扇区（Sector）和柱面（Cylinder）两种单位。扇区每个512bytes磁盘的第一个扇区记录两个重要信息：主引导分区（Master Boot Record，MBR）446bytes和分区表（partition table）64bytes 主板CMOS：记录主板上面的重要参数BIOS：写入到主板上某一块闪存或EEPROM的程序，开机执行，加载CMOS当中的参数，并尝试调用存储设备中的开机程序，进一步进入到操作系统。BIOS程序也可以修改CMOS中的数据。 操作系统操作系统内核（Kernel）直接参考硬件规格写成。系统调用（System Call）内核功能： 系统调用接口 程序管理：CPU调度机制 内存管理 文件系统管理：I/O 设备驱动]]></content>
       <categories>
-        <category>Computer Systems</category>
+        <category>计算机系统</category>
       </categories>
   </entry>
   <entry>
@@ -974,8 +962,8 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[java-基础-Map]]></title>
-    <url>%2Fjava-%E5%9F%BA%E7%A1%80-Map%2F</url>
+    <title><![CDATA[java-Map详解]]></title>
+    <url>%2Fjava-Map%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"></content>
       <categories>
         <category>java</category>
@@ -986,8 +974,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[java-基础-List]]></title>
-    <url>%2Fjava-%E5%9F%BA%E7%A1%80-List%2F</url>
+    <title><![CDATA[java-List详解]]></title>
+    <url>%2Fjava-List%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"></content>
       <categories>
         <category>java</category>
