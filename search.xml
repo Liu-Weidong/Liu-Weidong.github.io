@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[移动端跨平台技术分析]]></title>
-    <url>%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90%2F</url>
-    <content type="text"><![CDATA[Web框架 Angular（2009） React（2013） Vue.js（2013） Angular2 移动端跨平台框架 WebView React Native（2015） Weex（2016） Flutter（2018） Vue.jsReact Native A framework for building native apps with React.Learn once, write anywhere. RN是Facebook于2015年4月开源的跨平台移动应用开发框架，是早先开源的JS框架React在原生移动应用平台的衍生产物，支持iOS和安卓两大平台。 React Native中文网：https://reactnative.cn/项目地址：https://github.com/facebook/react-native Weex A framework for building Mobile cross-platform UI. Weex于2017年2月24日迁移至Apache基金会。 官网：https://weex.apache.org/项目地址：https://github.com/apache/incubator-weexWeex中文讨论网站：https://segmentfault.com/t/weex Flutter Flutter makes it easy and fast to build beautiful mobile apps. Flutter中文网：https://flutterchina.club/项目地址：https://github.com/flutter/flutter]]></content>
+    <title><![CDATA[跨平台技术分析]]></title>
+    <url>%2F%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90%2F</url>
+    <content type="text"><![CDATA[简介根据跨平台原理，可以分为如下几类： HTML5+原生+Cordova JavaScript+原生渲染（React Native、Weex、快应用） 自绘引擎（Flutter） Vue.js(2013)React Native(2015)Facebook在2015.9.15发布了React Native for Android，把JavaScript开发技术扩展到了Android平台。http://reactnative.dev/React Native中文网：https://reactnative.cn/项目地址：https://github.com/facebook/react-native Weex(2016) A framework for building Mobile cross-platform UI. Weex于2017年2月24日迁移至Apache基金会。 官网：https://weex.apache.org/项目地址：https://github.com/apache/incubator-weexWeex中文讨论网站：https://segmentfault.com/t/weex Flutter(2018) Flutter makes it easy and fast to build beautiful mobile apps. Flutter中文网：https://flutterchina.club/项目地址：https://github.com/flutter/flutter]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -54,17 +54,6 @@
       </categories>
       <tags>
         <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[跨平台框架-Flutter]]></title>
-    <url>%2F%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%A1%86%E6%9E%B6-Flutter%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>Flutter</tag>
       </tags>
   </entry>
   <entry>
