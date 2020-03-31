@@ -146,25 +146,25 @@
 
 
 
-  <meta name="description" content="闲来，消遣。">
-<meta name="keywords" content="java">
+  <meta name="description" content="四大组件ActivityBroadcastReceiverServiceService分为两种工作状态：  启动状态，主要用于执行后台计算。 绑定状态，主要用于其他组件和Service的交互。  ContentProviderIntenthttps://developer.android.google.cn/guide/components/intents-filters.html Animato">
+<meta name="keywords" content="android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java-Map详解">
-<meta property="og:url" content="https://liuweidong.club/java-Map详解/index.html">
+<meta property="og:title" content="android-基础">
+<meta property="og:url" content="https://liuweidong.club/android-基础/index.html">
 <meta property="og:site_name" content="Liu Weidong">
-<meta property="og:description" content="闲来，消遣。">
+<meta property="og:description" content="四大组件ActivityBroadcastReceiverServiceService分为两种工作状态：  启动状态，主要用于执行后台计算。 绑定状态，主要用于其他组件和Service的交互。  ContentProviderIntenthttps://developer.android.google.cn/guide/components/intents-filters.html Animato">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-28T15:59:43.111Z">
+<meta property="og:updated_time" content="2020-03-31T14:29:30.024Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java-Map详解">
-<meta name="twitter:description" content="闲来，消遣。">
+<meta name="twitter:title" content="android-基础">
+<meta name="twitter:description" content="四大组件ActivityBroadcastReceiverServiceService分为两种工作状态：  启动状态，主要用于执行后台计算。 绑定状态，主要用于其他组件和Service的交互。  ContentProviderIntenthttps://developer.android.google.cn/guide/components/intents-filters.html Animato">
 
 
 
 
 
 
-  <link rel="canonical" href="https://liuweidong.club/java-Map详解/">
+  <link rel="canonical" href="https://liuweidong.club/android-基础/">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>java-Map详解 | Liu Weidong</title>
+  <title>android-基础 | Liu Weidong</title>
   
 
 
@@ -434,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/java-Map详解/">
+    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/android-基础/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Weidong">
@@ -451,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java-Map详解
+          <h1 class="post-title" itemprop="name headline">android-基础
 
               
             
@@ -477,7 +477,7 @@
                 
               
 
-              <time title="创建时间：2018-03-29 20:43:49" itemprop="dateCreated datePublished" datetime="2018-03-29T20:43:49+08:00">2018-03-29</time>
+              <time title="创建时间：2018-05-01 19:35:03" itemprop="dateCreated datePublished" datetime="2018-05-01T19:35:03+08:00">2018-05-01</time>
             
 
             
@@ -495,14 +495,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/Java-SE/" itemprop="url" rel="index"><span itemprop="name">Java SE</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/android/基础/" itemprop="url" rel="index"><span itemprop="name">基础</span></a></span>
 
                 
                 
@@ -521,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/java-Map详解/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/java-Map详解/" itemprop="commentCount"></span>
+                <a href="/android-基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-基础/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,7 +557,65 @@
       
 
       
-        
+        <h1 id="四大组件"><a href="#四大组件" class="headerlink" title="四大组件"></a>四大组件</h1><h2 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h2><h2 id="BroadcastReceiver"><a href="#BroadcastReceiver" class="headerlink" title="BroadcastReceiver"></a>BroadcastReceiver</h2><h2 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h2><p>Service分为两种工作状态：</p>
+<ul>
+<li>启动状态，主要用于执行后台计算。</li>
+<li>绑定状态，主要用于其他组件和Service的交互。</li>
+</ul>
+<h2 id="ContentProvider"><a href="#ContentProvider" class="headerlink" title="ContentProvider"></a>ContentProvider</h2><h1 id="Intent"><a href="#Intent" class="headerlink" title="Intent"></a>Intent</h1><p><a href="https://developer.android.google.cn/guide/components/intents-filters.html" target="_blank" rel="noopener">https://developer.android.google.cn/guide/components/intents-filters.html</a></p>
+<h1 id="Animator"><a href="#Animator" class="headerlink" title="Animator"></a>Animator</h1><ul>
+<li>逐帧动画：Drawable Animation。res/anim，android：oneshot是否循环播放</li>
+<li>补间动画：Tween Animation</li>
+<li>属性动画（Android 3.0）</li>
+<li>android.transition（Android 4.4）：本质属性动画。</li>
+</ul>
+<h2 id="Tween-Animation"><a href="#Tween-Animation" class="headerlink" title="Tween Animation"></a>Tween Animation</h2><p>Alpha-Scale-Translate-Rotate<br>Interpolator（插值器）</p>
+<h2 id="Property-Animation"><a href="#Property-Animation" class="headerlink" title="Property Animation"></a>Property Animation</h2><ul>
+<li>Evaluator：控制属性动画如何计算属性值的。</li>
+<li>AnimatorSet</li>
+<li>ValueAnimator</li>
+<li>ObjectAnimator：ValueAnimator子类。</li>
+</ul>
+<h2 id="android-transition"><a href="#android-transition" class="headerlink" title="android.transition"></a>android.transition</h2><h1 id="应用资源"><a href="#应用资源" class="headerlink" title="应用资源"></a>应用资源</h1><h2 id="res"><a href="#res" class="headerlink" title="res/"></a>res/</h2><p><a href="https://developer.android.google.cn/guide/topics/resources/providing-resources" target="_blank" rel="noopener">https://developer.android.google.cn/guide/topics/resources/providing-resources</a><br>应该始终外部化应用资源，如图像和代码中的字符串，有利于单独维护这些资源。此外，还应为特定设备配置提供备用资源，方法是将它们分组到专门命名的资源目录中。<br><strong>res/</strong>目录支持的资源目录，如下：</p>
+<ul>
+<li>animator/：定义属性动画的XML文件。</li>
+<li>anim/：定义渐变动画的XML文件。（属性动画也可以放在该目录，一般为了区分，首选上面的目录。）</li>
+<li>color/</li>
+<li>drawable/</li>
+<li>mipmap/：适用于不同启动器图标密度的可绘制对象文件。</li>
+<li>layout/</li>
+<li>menu/</li>
+<li>raw/：以原始形式保存的文件。但是，如需访问原始文件名和文件层次结构，则可以考虑将某些资源保存在 assets/目录下</li>
+<li>values/</li>
+<li>xml/：可以在运行时通过调用Resources.getXML()读取的任意XML文件。</li>
+</ul>
+<h2 id="提供备用资源"><a href="#提供备用资源" class="headerlink" title="提供备用资源"></a>提供备用资源</h2><p>在res/中创建一个以<code>&lt;resources_name&gt;-&lt;config_qualifier&gt;</code>形式命名的新目录。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">配置</th>
+<th style="text-align:left">限定符值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">屏幕像素密度 (dpi)</td>
+<td style="text-align:left">ldpi、mdpi、hdpi、xhdpi、xxhdpi、xxxhdpi、nodpi、tvdpi、anydpi</td>
+</tr>
+</tbody>
+</table>
+<h1 id="XML解析方式"><a href="#XML解析方式" class="headerlink" title="XML解析方式"></a>XML解析方式</h1><h2 id="SAX"><a href="#SAX" class="headerlink" title="SAX"></a>SAX</h2><h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><h2 id="Pull"><a href="#Pull" class="headerlink" title="Pull"></a>Pull</h2><h1 id="NDK-Native-Develop-Kit"><a href="#NDK-Native-Develop-Kit" class="headerlink" title="NDK(Native Develop Kit)"></a>NDK(Native Develop Kit)</h1><p><a href="https://developer.android.google.cn/ndk" target="_blank" rel="noopener">https://developer.android.google.cn/ndk</a><br>原生开发工具包（NDK）是一套工具，允许您为 Android 使用C和C++代码，并提供众多<a href="https://developer.android.google.cn/ndk/guides/stable_apis.html" target="_blank" rel="noopener">平台库</a>，您可用其管理原生Activity和访问物理设备组件，例如传感器和触摸输入。<br>借助Android Studio 2.2或更高版本，使用NDK将C和C++代码编译到原生库中，然后使用IDE集成构建系统 Gradle将您的库封装入APK。然后，Java代码可以通过<a href="https://docs.oracle.com/javase/7/docs/technotes/guides/jni/spec/jniTOC.html" target="_blank" rel="noopener">Java原生接口 (JNI)</a> 框架，调用您原生库中的函数。<br>Android Studio用于编译原生库的默认构建工具是<a href="https://cmake.org/" target="_blank" rel="noopener">CMake</a>。由于很多现有项目都使用构建工具包，因此Android Studio也支持<a href="https://developer.android.google.cn/ndk/guides/ndk-build.html" target="_blank" rel="noopener">ndk-build</a>。不过，如果您要创建新的原生库，则应使用 CMake。</p>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><ul>
+<li>在平台之间移植其应用。</li>
+<li>进一步提升设备性能，以实现低延迟时间，或运行计算密集型应用，如游戏或物理模拟。</li>
+<li>重复使用自己或其他开发者的C或C++库。</li>
+</ul>
+<h2 id="编译和调试原生代码组件"><a href="#编译和调试原生代码组件" class="headerlink" title="编译和调试原生代码组件"></a>编译和调试原生代码组件</h2><p>Android 原生开发工具包 (NDK)：这套工具允许您为 Android 使用 C 和 C++ 代码。<br>CMake：一款外部构建工具，可与 Gradle 搭配使用来构建原生库。如果您只计划使用 ndk-build，则不需要此组件。<br>LLDB：一种调试程序，Android Studio 使用它来调试原生代码。<br>安装：Tools &gt; SDK Manager</p>
+<h2 id="创建或导入原生项目"><a href="#创建或导入原生项目" class="headerlink" title="创建或导入原生项目"></a>创建或导入原生项目</h2><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><h2 id="CPU和架构"><a href="#CPU和架构" class="headerlink" title="CPU和架构"></a>CPU和架构</h2><p>使用原生代码时，硬件很重要。NDK提供各种ABI供您选择，可让您确保针对正确的架构和CPU进行编译。</p>
+<h3 id="ABI"><a href="#ABI" class="headerlink" title="ABI"></a>ABI</h3><p>不同的Android手机使用不同的CPU，进而支持不同的指令集。CPU与指令集的每种组合都有专属的应用二进制界面，即ABI。ABI可以非常精确地定义应用的机器代码在运行时如何与系统交互。您必须为应用要使用的每个CPU架构指定ABI。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://developer.android.google.cn/guide" target="_blank" rel="noopener">开发者指南</a><br><a href="https://developer.android.google.cn/reference/packages" target="_blank" rel="noopener">API reference</a></p>
+
       
     </div>
 
@@ -624,7 +682,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liuweidong.club/java-Map详解/" title="java-Map详解">https://liuweidong.club/java-Map详解/</a>
+    <a href="https://liuweidong.club/android-基础/" title="android-基础">https://liuweidong.club/android-基础/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -637,7 +695,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
+            <a href="/tags/android/" rel="tag"><i class="fa fa-tag"></i> android</a>
           
         </div>
       
@@ -650,8 +708,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/java-List详解/" rel="next" title="java-List详解">
-                <i class="fa fa-chevron-left"></i> java-List详解
+              <a href="/android-系统架构/" rel="next" title="android-系统架构">
+                <i class="fa fa-chevron-left"></i> android-系统架构
               </a>
             
           </div>
@@ -660,8 +718,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Google-IO/" rel="prev" title="Google I/O">
-                Google I/O <i class="fa fa-chevron-right"></i>
+              <a href="/android-API-Activity/" rel="prev" title="android-API-Activity">
+                android-API-Activity <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -710,8 +768,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -728,7 +795,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">98</span>
+                    <span class="site-state-item-count">91</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -779,11 +846,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -862,9 +925,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -914,6 +975,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#四大组件"><span class="nav-text">四大组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Activity"><span class="nav-text">Activity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BroadcastReceiver"><span class="nav-text">BroadcastReceiver</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Service"><span class="nav-text">Service</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ContentProvider"><span class="nav-text">ContentProvider</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Intent"><span class="nav-text">Intent</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Animator"><span class="nav-text">Animator</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tween-Animation"><span class="nav-text">Tween Animation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Property-Animation"><span class="nav-text">Property Animation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#android-transition"><span class="nav-text">android.transition</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用资源"><span class="nav-text">应用资源</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#res"><span class="nav-text">res/</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提供备用资源"><span class="nav-text">提供备用资源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XML解析方式"><span class="nav-text">XML解析方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SAX"><span class="nav-text">SAX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM"><span class="nav-text">DOM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pull"><span class="nav-text">Pull</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NDK-Native-Develop-Kit"><span class="nav-text">NDK(Native Develop Kit)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用场景"><span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译和调试原生代码组件"><span class="nav-text">编译和调试原生代码组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建或导入原生项目"><span class="nav-text">创建或导入原生项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作原理"><span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU和架构"><span class="nav-text">CPU和架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ABI"><span class="nav-text">ABI</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

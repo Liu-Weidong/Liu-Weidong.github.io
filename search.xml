@@ -9,9 +9,17 @@
       </categories>
   </entry>
   <entry>
+    <title><![CDATA[软件架构]]></title>
+    <url>%2F%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%2F</url>
+    <content type="text"><![CDATA[引言 软件架构（Software Architecture）是一系列相关的抽象模式，用于指导大型软件系统各个方面的设计。软件架构是一个系统的草图。软件架构描述的对象是直接构成系统的抽象组件。各个组件之间的连接则明确和相对细致地描述组件之间的通讯。在实现阶段，这些抽象组件被细化为实际的组件，如具体某个类或对象。轻量级JavaEE（Struts+Spring+Hibernate）重量级JavaEE（JSF+EJB+JPA） 架构模式是描述软件系统里的基本的结构组织或纲要。从定义上来看，它是在指导我们如何组织代码，是一种具有指导意义的思想，如解决系统的数据与显示分离的问题，AOP、IOC、ORM、MVC等。 框架是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法；另一种定义认为，框架是可被应用开发者定制的应用骨架。前者是从应用方面而后者是从目的方面给出的定义。Struts、MyBatis等。 设计模式是一套被反复使用、多数人知道的、经过分类编目的、代码设计经验的总结。从定义上看，它涉及到了代码级别，侧重于解决实际的现实问题。 分层架构分层架构（layered architecture）是最常见的软件架构，也是事实上的标准架构。将软件分成若干个水平层，每一层都有清晰的角色和分工，不需要知道其他层的细节。层与层之间通过接口通信。虽然没有明确约定，软件一定要分成多少层，但是四层的结构最常见。 表现层（presentation）：用户界面，负责视觉和用户互动 业务层（business）：实现业务逻辑 持久层（persistence）：提供数据，SQL语句放在这一层 数据层（database）：保存数据 事件驱动架构事件驱动架构（Event Driven Architecture，EDA）一个事件驱动框架（EDA）定义了一个设计和实现一个应用系统的方法学，在这个系统里事件可传输于松散耦合的组件和服务之间。 微核架构微核架构（microkernel architecture）又称为”插件架构”（plug-in architecture），指的是软件的内核相对较小，主要功能和业务逻辑都通过插件实现。内核（core）通常只包含系统运行的最小功能。插件则是互相独立的，插件之间的通信，应该减少到最低，避免出现互相依赖的问题。优点： 良好的功能延伸性（extensibility），需要什么功能，开发一个插件即可 功能之间是隔离的，插件可以独立的加载和卸载，使得它比较容易部署 可定制性高，适应不同的开发需要 可以渐进式地开发，逐步增加功能 缺点： 扩展性（scalability）差，内核通常是一个独立单元，不容易做成分布式 开发难度相对较高，因为涉及到插件与内核的通信，以及内部的插件登记机制 微服务架构微服务架构（microservices architecture）是服务导向架构（service-oriented architecture，缩写 SOA）的升级。每一个服务就是一个独立的部署单元（separately deployed unit）。这些单元都是分布式的，互相解耦，通过远程通信协议（比如REST、SOAP）联系。 云架构云结构（cloud architecture）主要解决扩展性和并发的问题，是最容易扩展的架构。它的高扩展性，主要原因是没使用中央数据库，而是把数据都复制到内存中，变成可复制的内存数据单元。然后，业务处理能力封装成一个个处理单元（prcessing unit）。访问量增加，就新建处理单元；访问量减少，就关闭处理单元。由于没有中央数据库，所以扩展性的最大瓶颈消失了。由于每个处理单元的数据都在内存里，最好要进行数据持久化。这个模式主要分成两部分：处理单元（processing unit）和虚拟中间件（virtualized middleware）。 处理单元：实现业务逻辑 虚拟中间件：负责通信、保持sessions、数据复制、分布式处理、处理单元的部署。]]></content>
+      <categories>
+        <category>软件架构</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[android-全家桶]]></title>
     <url>%2Fandroid-%E5%85%A8%E5%AE%B6%E6%A1%B6%2F</url>
-    <content type="text"><![CDATA[网络 名称 开发者 时间 备注 Retrofit Square OkHttp Square 2013-05-06 Volley Google 2013年 Android-Async-Http Apache HttpClient Apache API 23:Android 6.0上被删除 HttpURLConnection JDK java.net包下 异步分发通信 名称 开发者 时间 备注 RxJava AsyncTask Google 原生 图片加载 名称 开发者 时间 Fresco Facebook 2015年3月 Glide Google 2014年 Picasso Square 2013年2月 Universal-Image-Loader nostra13 2011年9月 日志打印ARouterRxPermissionsDagger2LitePalButterKnife]]></content>
+    <content type="text"><![CDATA[网络 名称 开发者 时间 备注 Retrofit Square JakeWharton OkHttp Square 2013-05-06 Volley Google 2013 适合数据量大，需要频繁通信的网络操作。不适用文件的上传下载操作。 Android-Async-Http Apache HttpClient Apache API 23:Android 6.0上被删除 HttpURLConnection JDK java.net包下 异步分发通信 名称 开发者 时间 备注 RxJava AsyncTask Google 原生 图片加载 名称 开发者 时间 Fresco Facebook 2015年3月 Glide Google 2014年 Picasso Square 2013年2月 Universal-Image-Loader nostra13 2011年9月 日志打印ARouterRxPermissionsDagger2LitePalButterKnife]]></content>
       <categories>
         <category>android</category>
         <category>框架</category>
@@ -84,7 +92,7 @@
     <content type="text"><![CDATA[概述Spring是于2003年兴起的一个轻量级的Java开发框架，由Rod Johnson创建。解决的是业务逻辑层和其他各层的松耦合问题。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。 EJB -&gt; Spring Framework -&gt; Spring Boot -&gt; Spring Cloud Spring Initializr:https://start.spring.io/ 优点体系结构Spring Framework下载jar包：http://repo.springsource.org/libs-release-local/org/springframework/spring/3.2.0.RELEASE/spring-framework-3.2.0.RELEASE-dist.zip项目地址：https://github.com/spring-projects/spring-framework Spring Boot项目地址：https://github.com/spring-projects/spring-boot Spring Cloud]]></content>
       <categories>
         <category>java</category>
-        <category>框架</category>
+        <category>java EE</category>
       </categories>
       <tags>
         <tag>java</tag>
@@ -102,14 +110,6 @@
       <tags>
         <tag>java EE</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[软件架构]]></title>
-    <url>%2F%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%2F</url>
-    <content type="text"><![CDATA[引言 软件架构（Software Architecture）是一系列相关的抽象模式，用于指导大型软件系统各个方面的设计。软件架构是一个系统的草图。软件架构描述的对象是直接构成系统的抽象组件。各个组件之间的连接则明确和相对细致地描述组件之间的通讯。在实现阶段，这些抽象组件被细化为实际的组件，如具体某个类或对象。轻量级JavaEE（Struts+Spring+Hibernate）重量级JavaEE（JSF+EJB+JPA） 架构模式是描述软件系统里的基本的结构组织或纲要。从定义上来看，它是在指导我们如何组织代码，是一种具有指导意义的思想，如解决系统的数据与显示分离的问题，AOP、IOC、ORM、MVC等。 框架是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法；另一种定义认为，框架是可被应用开发者定制的应用骨架。前者是从应用方面而后者是从目的方面给出的定义。Struts、MyBatis等。 设计模式是一套被反复使用、多数人知道的、经过分类编目的、代码设计经验的总结。从定义上看，它涉及到了代码级别，侧重于解决实际的现实问题。 分层架构分层架构（layered architecture）是最常见的软件架构，也是事实上的标准架构。将软件分成若干个水平层，每一层都有清晰的角色和分工，不需要知道其他层的细节。层与层之间通过接口通信。虽然没有明确约定，软件一定要分成多少层，但是四层的结构最常见。 表现层（presentation）：用户界面，负责视觉和用户互动 业务层（business）：实现业务逻辑 持久层（persistence）：提供数据，SQL语句放在这一层 数据层（database）：保存数据 事件驱动架构事件驱动架构（Event Driven Architecture，EDA）一个事件驱动框架（EDA）定义了一个设计和实现一个应用系统的方法学，在这个系统里事件可传输于松散耦合的组件和服务之间。 微核架构微核架构（microkernel architecture）又称为”插件架构”（plug-in architecture），指的是软件的内核相对较小，主要功能和业务逻辑都通过插件实现。内核（core）通常只包含系统运行的最小功能。插件则是互相独立的，插件之间的通信，应该减少到最低，避免出现互相依赖的问题。优点： 良好的功能延伸性（extensibility），需要什么功能，开发一个插件即可 功能之间是隔离的，插件可以独立的加载和卸载，使得它比较容易部署 可定制性高，适应不同的开发需要 可以渐进式地开发，逐步增加功能 缺点： 扩展性（scalability）差，内核通常是一个独立单元，不容易做成分布式 开发难度相对较高，因为涉及到插件与内核的通信，以及内部的插件登记机制 微服务架构微服务架构（microservices architecture）是服务导向架构（service-oriented architecture，缩写 SOA）的升级。每一个服务就是一个独立的部署单元（separately deployed unit）。这些单元都是分布式的，互相解耦，通过远程通信协议（比如REST、SOAP）联系。 云架构云结构（cloud architecture）主要解决扩展性和并发的问题，是最容易扩展的架构。它的高扩展性，主要原因是没使用中央数据库，而是把数据都复制到内存中，变成可复制的内存数据单元。然后，业务处理能力封装成一个个处理单元（prcessing unit）。访问量增加，就新建处理单元；访问量减少，就关闭处理单元。由于没有中央数据库，所以扩展性的最大瓶颈消失了。由于每个处理单元的数据都在内存里，最好要进行数据持久化。这个模式主要分成两部分：处理单元（processing unit）和虚拟中间件（virtualized middleware）。 处理单元：实现业务逻辑 虚拟中间件：负责通信、保持sessions、数据复制、分布式处理、处理单元的部署。]]></content>
-      <categories>
-        <category>软件架构</category>
-      </categories>
   </entry>
   <entry>
     <title><![CDATA[java-并发]]></title>
@@ -136,24 +136,12 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-网络请求]]></title>
-    <url>%2Fandroid-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%2F</url>
-    <content type="text"><![CDATA[Retrofit概览与OkHttp共同出自于Square。主要作者Android大神JakeWharton 工作原理源码解析Volley概览Volley是2013年Google I/O上发布的一款Android平台上的网络通信库。适合数据量大，需要频繁通信的网络操作。不适用文件的上传下载操作。 Android-Async-HttpAndroid原生网络请求Apache HttpClient已经不推荐使用，6.0上被删除。Google推荐在Android上使用HttpURLConnection HttpURLConnection问题 没有针对异步调用进行封装 没有线程池，网络缓存，不能重复利用请求，性能不佳 没有json解析框架]]></content>
-      <categories>
-        <category>android</category>
-        <category>框架</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[android-AndroidX]]></title>
     <url>%2Fandroid-AndroidX%2F</url>
     <content type="text"><![CDATA[概览 We hope the division between android.* and androidx.* makes it more obvious which APIs are bundled with the platform, and which are static libraries for app developers that work across different versions of Android. Android 9.0（API 28）发布后，新版支持库AndroidX也随之诞生，它属于Jetpack。 简单地说就是新的库可以在不同的Android版本上使用。之前的话，所有support依赖库版本必须一致，如果有bug，所有依赖库版本都需要升级，存在绑定关系，且正式版的发布周期也很长。 androidx软件包使用严格的语义版本控制 官方参考地址：AndroidX OverviewMigrating to AndroidX（迁移到AndroidX）Recent Release NotesAPI reference：AndroidX 使用与迁移新项目中使用AndroidX，需要将编译SDK设置为Android 9.0（API 28）或更高版本，并在gradle.properties文件中将以下两个Android Gradle插件标记设置为true。1234# 当前项目启用AndroidXandroid.useAndroidX=true# 是否迁移之前的依赖包android.enableJetifier=true Android Studio 3.2 Canary中添加了一键迁移的功能 Refactor -&gt; Migrate to AndroidXProperties]]></content>
       <categories>
         <category>android</category>
-        <category>API</category>
+        <category>基础</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -165,7 +153,7 @@
     <content type="text"><![CDATA[简介 Android Studio版本至少2.3； 添加依赖，如下：1implementation 'com.android.support.constraint:constraint-layout:1.1.3' ConstraintLayout1package android.support.constraint; ConstraintLayout 主要是为了解决布局嵌套过多的问题，以灵活的方式定位和调整小部件。Android Studio 2.3开始，官方模板默认使用ConstraintLayout。 相对定位 layout_constraintLeft_toLeftOf layout_constraintLeft_toRightOf layout_constraintRight_toLeftOf layout_constraintRight_toRightOf layout_constraintTop_toTopOf layout_constraintTop_toBottomOf layout_constraintBottom_toTopOf layout_constraintBottom_toBottomOf layout_constraintBaseline_toBaselineOf：约束文本基线 layout_constraintStart_toEndOf layout_constraintStart_toStartOf layout_constraintEnd_toStartOf layout_constraintEnd_toEndOf 1234&lt;Button android:id="@+id/buttonA" ... /&gt;&lt;Button android:id="@+id/buttonB" ... app:layout_constraintLeft_toRightOf="@+id/buttonA" /&gt; They all take a reference id to another widget, or the parent (which will reference the parent container, i.e. the ConstraintLayout):12&lt;Button android:id="@+id/buttonB" ... app:layout_constraintLeft_toLeftOf="parent" /&gt; 边距 android:layout_marginStart android:layout_marginEnd android:layout_marginLeft android:layout_marginTop android:layout_marginRight android:layout_marginBottom 注：设置边距时，需要约束控件在ConstraintLayout里的位置。 如果目标View不可见（View.GONE）时，可以通过以下属性设置不同的边距： layout_goneMarginStart layout_goneMarginEnd layout_goneMarginLeft layout_goneMarginTop layout_goneMarginRight layout_goneMarginBottom 居中和偏移居中：1234567&lt;EditText android:id="@+id/edt" ... app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" /&gt; 偏移（赋值0-1）： layout_constraintHorizontal_bias：水平偏移 layout_constraintVertical_bias：垂直偏移 Circular positioning layout_constraintCircle : references another widget id layout_constraintCircleRadius : 组件间的中心距离 layout_constraintCircleAngle : which angle the widget should be at (in degrees, from 0 to 360) 尺寸约束 指定尺寸大小 wrap_contentandroid:minWidth ：最小宽度android:minHeight ：最小高度android:maxWidth ：最大宽度android:maxHeight ：最大高度app:layout_constrainedWidth=”true|false”app:layout_constrainedHeight=”true|false” 0dp注: MATCH_PARENT is not recommended for widgets contained in a ConstraintLayout. Similar behavior can be defined by using MATCH_CONSTRAINT with the corresponding left/right or top/bottom constraints being set to “parent”. 百分比layout_constraintWidth_min and layout_constraintHeight_min : will set the minimum size for this dimensionlayout_constraintWidth_max and layout_constraintHeight_max : will set the maximum size for this dimensionlayout_constraintWidth_percent and layout_constraintHeight_percent : will set the size of this dimension as a percentage of the parent app:layout_constraintWidth_default=”percent” app:layout_constraintHeight_default=”percent” Ratio比例123456&lt;Button android:layout_width="wrap_content" android:layout_height="0dp" app:layout_constraintDimensionRatio="1:1" /&gt; width:height 链Chain Style：链的第一个控件是这条链的链头，可以在链头中设置layout_constraintHorizontal_chainStyle、layout_constraintVertical_chainStyle CHAIN_SPREAD(default style) Weighted chain CHAIN_SPREAD_INSIDE：展开元素，链的两端贴近parent； CHAIN_PACKED：链的元素将被打包在一起。 GroupGroup将多个控件归为一组，方便隐藏或显示一组控件。 Guideline]]></content>
       <categories>
         <category>android</category>
-        <category>API</category>
+        <category>基础</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -177,7 +165,7 @@
     <content type="text"><![CDATA[概述 Provides a variety of Android feature and utility APIs that are compatible with a wide &gt; range of platform versions.如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库，每一个support library向上兼容于不同的API版本。 官方参考地址：Support Library OverviewFeaturesPackagesSetupRecent Support Library RevisionsSupport Library Revision ArchiveAPI reference：Android Support Library support-v42011年4月发布。添加依赖：12implementation 'com.android.support:support-v4:25.0.0'implementation 'com.android.support:support-fragment:28.0.0' DrawerLayoutFragment1package android.support.v4.app; NestedScrollViewViewPager1package android.support.v4.view; support-fragment1com.android.support:support-fragment:28.0.0-alpha1 FragmentActivity123456java.lang.Object ↳ android.content.Context ↳ android.content.ContextWrapper ↳ android.view.ContextThemeWrapper ↳ android.app.Activity ↳ android.support.v4.app.FragmentActivity FragmentTabHost123456java.lang.Object ↳ android.view.View ↳ android.view.ViewGroup ↳ android.widget.FrameLayout ↳ android.widget.TabHost ↳ android.support.v4.app.FragmentTabHost appcompat-v72014年I/O大会发布。 AppCompatActivity1package android.support.v7.app; 继承结构：java.lang.Object ↳ android.content.Context ↳ android.content.ContextWrapper ↳ android.view.ContextThemeWrapper ↳ android.app.Activity ↳ android.support.v4.app.FragmentActivity ↳ android.support.v7.app.AppCompatActivityAppCompatActivitytheme： cardview-v7gridlayout-v7recyclerview-v7Android 5.0推出。相比ListView优点：1)封装了ViewHolder的回收复用，编写Adapter面向的是ViewHolder而不再是View了，复用的逻辑被封装了，写起来更加简单。2)插拔式的体验，高度的解耦。3)设置布局管理器控制Item的布局方式，横向、竖向、瀑布流方式。4)设置Item间隔样式。继承ItemDecoration。5)控制Item增删的动画，通过ItemAnimator进行绘制。 Design Support LibraryGoogle IO 2015 Material Design支持库。添加依赖：1implementation 'com.android.support:design:25.0.0' AppBarLayout继承LinearLayout，默认方向是Vertical CollapsingToolbarLayoutCoordinatorLayoutCoordinatorLayout遵循Material风格，结合AppBarLayout，CollapsingToolbarLayout等可产生各种炫酷的折叠悬浮效果。 FloatingActionButtonNavigationViewSnackbar页面底部弹出式消息。 TabLayoutTextInputLayoutandroidxandroid 9.0开始，将会使用androidx来替换support库。v7:28.0.0为support库的终结版本。12implementation &apos;androidx.appcompat:appcompat:1.0.2&apos;implementation &apos;androidx.constraintlayout:constraintlayout:1.1.3&apos;]]></content>
       <categories>
         <category>android</category>
-        <category>API</category>
+        <category>基础</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -262,15 +250,15 @@
   <entry>
     <title><![CDATA[Web框架]]></title>
     <url>%2FWeb%E6%A1%86%E6%9E%B6%2F</url>
-    <content type="text"><![CDATA[UI框架LayuiLayui MiniUIVueReactReact AngularAngularJS 诞生于2009年，由Misko Hevery等人创建，之后被Google所收购。 Web.xmlServletServlet通常被称为服务器端小程序，是运行在服务器端的程序，用于处理及响应客户端的请求。Servlet是个特殊的Java类，这个Java类必须继承HttpServlet。每个Servlet可以响应客户端的请求。Servlet提供不同的方法用于响应客户端请求。 doGet doPost doPut doDelete service()：响应客户端的所有请求。 FilterFilter可以认为是Servlet的一种加强版，主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理，是个典型的处理链。 Listener]]></content>
+    <content type="text"><![CDATA[UI框架LayuiLayui MiniUIReactReact AngularAngularJS 诞生于2009年，由Misko Hevery等人创建，之后被Google所收购。 Web.xmlServletServlet通常被称为服务器端小程序，是运行在服务器端的程序，用于处理及响应客户端的请求。Servlet是个特殊的Java类，这个Java类必须继承HttpServlet。每个Servlet可以响应客户端的请求。Servlet提供不同的方法用于响应客户端请求。 doGet doPost doPut doDelete service()：响应客户端的所有请求。 FilterFilter可以认为是Servlet的一种加强版，主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理，是个典型的处理链。 Listener]]></content>
       <categories>
         <category>前端</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[JavaScript-基础知识]]></title>
-    <url>%2FJavaScript-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
-    <content type="text"><![CDATA[概览1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。 JavaScript程序是用Unicode字符集编写的。 JavaScript是区分大小写的语言。 JavaScript标识符（用来对变量和函数进行命名）必须以字母、下划线、美元符开始。 JavaScript不区分整数值和浮点数值。JavaScript中的所有数字均用浮点数值表示。 JavaScript中，字符串是不可变的。 基本语法数据类型分为两类：原始类型（数字、字符串、布尔值、null、undefined）和对象类型。JS中变量是无类型的，变量可以被赋予任何类型的值，同样一个变量也可以重新赋予不同类型的值。使用var关键字来声明变量。 变量作用域 函数定义是可以嵌套的。 JavaScript使用了函数作用域(function scope)：变量在声明它们的函数体以及这个函数体嵌套的任意函数体内都是有定义的。 1234567var scope = "global";function f() &#123; console.log(scope);// 输出“undefined”，而不是“global” var scope = "local";// 变量在这里赋值初始化，但变量本身在函数体内任何地方均是有定义的 console.log(scope);// 输出“local”&#125;f() 全局变量在程序中始终都是有定义的；局部变量在声明它的函数体内以及其所嵌套的函数内始终是有定义的。 对象JavaScript除了字符串、数字、true、false、null和undefined之外，其他值都是对象。创建对象的方式： 对象直接量。由若干名/值对组成的映射表，名/值对中间用冒号分隔，之间用逗号分隔，整个映射表用花括号括起来。属性名可以是JavaScript标识符也可以是字符串直接量；属性值可以是任意类型的JavaScript表达式。 12345678910// 没有任何属性的对象var empty = &#123;&#125;; // 两个属性var p = &#123;id: 3, age: 56&#125;;var phone = &#123; "s color": "red", manufacture: &#123; name: "xx" &#125;&#125;; 通过new创建对象。 console console.log() console.error() console.warn() console.info()]]></content>
+    <title><![CDATA[JavaScript-基础]]></title>
+    <url>%2FJavaScript-%E5%9F%BA%E7%A1%80%2F</url>
+    <content type="text"><![CDATA[概览 1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。JavaScript是按ECMAScript规范实现的一种脚本语言，其他的还有JScript、ActionScript。这三种语言还提供了ECMA规范外的额外功能。 完整的JavaScript实现由3个不同部分组成： ECMAScript：核心 文档对象模型（DOM）：是HTML和XML的应用程序接口。DOM将把整个页面规划成由节点层级构成的文档。 浏览器对象模型（BOM） 基础概念： 程序是用Unicode字符集编写的。 区分大小写。 产量是弱类型的。 每行结尾的分号可有可无。 标识符（用来对变量和函数进行命名）必须以字母、下划线、美元符开始。 不区分整数值和浮点数值。所有数字均用浮点数值表示。 字符串是不可变的。 数据类型数据类型分为两类： 原始类型（5种：Number、String、Boolean、null、undefined） 对象类型 ECMAScript没有字符类型，可用双引号或单引号声明字符串。布尔值、数字、字符串的原始值的有趣之处在于它们是伪对象，这意味着它们实际上具有属性和方法。 Number类型ECMAScript默认把具有6个或6个以上前导0的浮点数转换成科学计数法。Number.MAX_VALUENumber.MIN_VALUENaN（Not a Number）表示非数。不能用于算术计算；它与自身不相等。函数isNaN String类型字符串字面量是由双引号或单引号声明的。而Java则是用双引号声明字符串，用单引号声明字符。由于ECMAScript没有字符类型，所以可使用这两种表示法中的任何一种。 类型转换JavaScript可以自由地进行数据类型转换。字符串转换成数字：parseInt()和parseFloat()。强制类型转换 引用类型对象是属性的集合，每个属性都由“名/值对”构成。 Object类 Boolean Number String 变量、常量变量是无类型的，变量可以被赋予任何类型的值，同样一个变量也可以重新赋予不同类型的值。使用var关键字来声明变量。当声明的变量未初始化时，该变量的默认值是undefined。123// 如果未在声名语句中指定变量初始值，默认初始值为undefinedvar i;var i, j; 变量作用域 函数定义是可以嵌套的。 JavaScript使用了函数作用域(function scope)：变量在声明它们的函数体以及这个函数体嵌套的任意函数体内都是有定义的。 1234567var scope = "global";function f() &#123; console.log(scope);// 输出“undefined”，而不是“global” var scope = "local";// 变量在这里赋值初始化，但变量本身在函数体内任何地方均是有定义的 console.log(scope);// 输出“local”&#125;f() 全局变量在程序中始终都是有定义的；局部变量在声明它的函数体内以及其所嵌套的函数内始终是有定义的。 运算符与表达式运算符分类： 算术运算符：+、-、*、/、%等 一元操作：++、– 逻辑运算符：!、&amp;&amp;、|| 关系运算符 赋值操作：=、复合赋值（+=、-=、*=、/=） 特殊运算符：delete、instanceof、typeof typeof：检测操作数类型delete：删除属性\=\=\=：判断恒等，无类型转换返回true!==：判断非恒等 语句 条件语句：if/else、switch 循环语句：while、do/while、for、for/in 跳转语句，让解释器跳转至程序的其他部分继续执行，如break、return、throw JavaScript中没有块级作用域，在语句块（花括号括起来的多条语句）中声名的变量并不是语句块私有的。 对象JavaScript除了字符串、数字、true、false、null和undefined之外，其他值都是对象。创建对象的方式： 对象直接量。由若干名/值对组成的映射表，名/值对中间用冒号分隔，之间用逗号分隔，整个映射表用花括号括起来。属性名可以是JavaScript标识符也可以是字符串直接量；属性值可以是任意类型的JavaScript表达式。 12345678910// 没有任何属性的对象var empty = &#123;&#125;; // 两个属性var p = &#123;id: 3, age: 56&#125;;var phone = &#123; "s color": "red", manufacture: &#123; name: "xx" &#125;&#125;; 通过new创建对象。 函数JavaScript里，函数即对象，程序可以随意操控它们。JavaScript的函数可以嵌套在其他函数中定义，这样它们就可以访问它们被定义时所处的作用域中的任何变量。123456// 函数定义两种写法var f = function(x) &#123; return x+1; &#125;function f(x) &#123; return x+1; &#125; 1234567function p(o) &#123; for(var p in o) &#123; console.log(p + ":" + o[p] + "\n"); &#125;&#125;var s = &#123;x:1, y:2&#125;;p(s) 数组console console.log() console.error() console.warn() console.info() 常用浏览器 Chrome Internet Explorer：简称IE。 Firefox Safari Opera 参考 JavaScript权威指南（第6版） JavaScript高级程序设计（第3版） Nicholas C.Zakas 著]]></content>
       <categories>
         <category>JavaScript</category>
       </categories>
@@ -360,12 +348,12 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-解析-Handler]]></title>
-    <url>%2Fandroid-%E8%A7%A3%E6%9E%90-Handler%2F</url>
+    <title><![CDATA[android-API-Handler]]></title>
+    <url>%2Fandroid-API-Handler%2F</url>
     <content type="text"><![CDATA[背景有时候需要在子线程中进行耗时的I/O操作，读取文件或者访问网络等，当耗时操作完成以后可能需要在UI上做一些改变，由于Android开发规范的限制，不能在子线程中访问UI控件，否则就会触发程序异常，这个时候通过Handler就可以将更新UI的操作切换到主线程中执行。 主要用途 to schedule messages and runnables to be executed as some point in the future; to enqueue an action to be performed on a different thread than your own. 相关类 Looper（消息循环） Message（消息） MessageQueue（存储消息） Handler]]></content>
       <categories>
         <category>android</category>
-        <category>API</category>
+        <category>基础</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -377,7 +365,7 @@
     <content type="text"><![CDATA[android.animationAnimatorAnimatorSetValueAnimatorandroid.appActivityApplicationDatePickerDialogDialogandroid.bluetoothandroid.contentContextContextWrapperIntentandroid.databaseandroid.graphicsBitmapandroid.utilSparseArrayAndroid内部特有的API。用来替代HashMap&lt;Integer, E&gt;这种形式，使用SparseArray更加节省内存空间。HashMap是数组和链表的结合体，被称为链表散列。SparseArray是单纯数组的结合，被称为稀疏数组。Android堆区允许使用的最大内存仅仅16M。 android.viewViewViewGroupWindowandroid.webkitWebViewandroid.widgetEditTextFrameLayoutGridViewImageViewListViewTabHost12345java.lang.Object ↳ android.view.View ↳ android.view.ViewGroup ↳ android.widget.FrameLayout ↳ android.widget.TabHost TextViewToolbar]]></content>
       <categories>
         <category>android</category>
-        <category>API</category>
+        <category>基础</category>
       </categories>
       <tags>
         <tag>android</tag>
@@ -475,16 +463,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[鸟哥的Linux私房菜 基础学习篇]]></title>
-    <url>%2FOS-%E9%B8%9F%E5%93%A5%E7%9A%84Linux%E7%A7%81%E6%88%BF%E8%8F%9C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AF%87%2F</url>
-    <content type="text"><![CDATA[小序Linux内核由Linux Torvalds在1991年开发。硬件 –&gt; 内核 –&gt; 系统调用 –&gt; 应用程序（加粗部分为操作系统）内核： 系统内存管理 软件程序管理 硬件设备管理 文件系统管理]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[Windows]]></title>
-    <url>%2FOS-Windows%2F</url>
+    <title><![CDATA[操作系统-Windows]]></title>
+    <url>%2F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-Windows%2F</url>
     <content type="text"><![CDATA[运行【calc】计算器【charmap】启动字符映射表【cleanmgr】打开磁盘清理工具【cmd】命令提示符【compmgmt.msc】计算机管理【explorer】打开资源管理器【mspaint】打开画图板【mstsc】远程桌面连接【notepad】打开记事【osk】打开屏幕键盘【regedit】注册表【services.msc】服务【winver】Windows版本【slmgr.vbs -dlv】查询win10激活信息【slmgr.vbs -dli】查询操作系统版本、许可证状态【slmgr.vbs -xpr】查询win10是否永久激活 cmd【cd\】切换到根目录【cd..】返回上级目录【cd 路径】打开指定目录【dir】查看目录【x:】切换盘符【md 文件夹名称】创建目录【rd 路径】删除当前指定的目录【echo a&gt;xxx.txt】创建文件【echo %JAVA_HOME%】查看路径 【net start】查看开启了哪些服务【net start 服务名】开启服务。如：net start mysql【net stop 服务名】停止服务。如：net stop mysql【netstat -ano|findstr 端口号】查看端口【net share】查看共享的文件【path】查看环境变量【services.msc】系统服务 【tree /f &gt; list.txt】生成目录结构树 快捷键【F2】重命名【F11】最大化/最小化活动窗口【Windows键/Ctrl+Esc】打开开始菜单【Windows键+M】最小化所有被打开的窗口【Windows键+R】打开“运行”对话框【Windows键+Break】打开“系统属性”对话框【Windows键+D】最小化/还原所有窗口【Windows键+L】锁定计算机【Windows键+E】打开资源管理器【Delete】放入回收站【Shift+Delete】彻底删除【Alt+1】标准型模式【Alt+2】科学型模式【Alt+3】切换到程序员模式【Alt+F4 】关闭当前应用程序 【Alt+Tab】切换应用程序 【Alt+D】选中地址栏【Ctrl+Shift+N】新建文件夹【Ctrl+Shift+&gt;】增大字体大小【Ctrl+Shift+&lt;】减小字体大小【Ctrl+E】选中搜索框【Ctrl+H】在文档中替换【Ctrl+Home】移动到文档的开头【Ctrl+End】移动到文档的结尾]]></content>
       <categories>
         <category>操作系统</category>
@@ -767,29 +747,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[设计模式(23)]]></title>
-    <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F(23)%2F</url>
-    <content type="text"><![CDATA[创建型模式(5) 单例模式 Builder模式 工厂方法模式 抽象工厂模式 原型模式 结构型模式(7) 代理模式 组合模式 适配器模式 装饰模式 享元模式 外观模式 桥接模式 行为型模式(11) 策略模式 状态模式 责任链模式 解释器模式 命令模式 观察者模式 备忘录模式 迭代器模式 模板方法模式 访问者模式 中介者模式]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>设计模式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[android-FAQ]]></title>
-    <url>%2Fandroid-FAQ%2F</url>
-    <content type="text"><![CDATA[进程间通信进程保活使用scheme协议唤起外部app]]></content>
-      <categories>
-        <category>android</category>
-        <category>基础</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[面向对象六大原则]]></title>
     <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99%2F</url>
     <content type="text"><![CDATA[概览系统开发过程中，最难的不是完成系统的开发工作，而是在于后续的升级、维护过程中让系统能够拥抱变化。拥抱变化也就意味着在满足需求且不破坏系统稳定性的前提下保持高可扩展性、高内聚、低耦合，经历各版本的变更之后依然保持清晰、灵活、稳定的系统架构。当然，这是比较理想的情况，但我们必须朝着这个方向去努力，那么遵循面向对象六大原则就是我们走向灵活软件之路所迈出的第一步。 软件的可维护性和可复用性。 好的系统设计应该具备如下三个性质： 可扩展性（Extensibility） 灵活性（Flexibility） 可插入性（Pluggability） 可维护性较低的系统设计，通常有如下几个原因： 复用率低（Immobility） 黏度过高（Viscosity） 脆弱 僵硬 这些原则并不是孤立存在的，它们相互依赖，相互补充。 开闭原则（OCP）Open Close Principle，缩写OCP。开闭原则由Bertrand Meyer（勃兰特·梅耶）于1988年出版的《面向对象软件构造》一书中提出。抽象化是开闭原则的关键。 定义：软件中的对象（类、模块、函数等）应该对于扩展是开放的，对于修改是封闭的。 软件开发过程中，最不会变化的就是变化本事。 依赖倒置原则（DIP）Dependence Inversion Principle，缩写DIP。 定义：依赖倒置原则指代了一种特定的解耦形式，使得高层次的模块不依赖于低层次模块的实现细节的目的，依赖模块被颠倒了。 高层模块不应该依赖低层模块，两者都应该依赖其抽象 抽象不应该依赖细节 细节应该依赖抽象 java语言中，抽象就是指接口或抽象类，两者都不可以直接被实例化；细节就是实现类。高层模块就是调用端，低层模块就是具体实现类。 里氏替换原则（LSP）Liskov Substitution Principle，缩写LSP。 定义：所有引用基类的地方必须能透明地使用其子类的对象。 单一职责原则（SRP）Single Responsibility Principle，缩写SRP。 定义：就一个类而言，应该仅有一个引起它变化的原因。 接口隔离原则（ISP）InterfaceSegregation Principles，缩写ISP。 定义：客户端不应该依赖它不需要的接口。 迪米特原则（LOD）Law of Demeter，缩写LOD，也称为最少知识原则。 定义：一个对象应该对其他对象有最少的了解。 Only talk to your immedate friends。只与直接的朋友通信。？？？每个对象都必然会与其他对象有耦合关系，两个对象之间的耦合就称为朋友关系，如依赖、关联、组合、聚合等。 类应该对自己需要耦合或调用的类知道得最少，类的内部如何实现与调用者或依赖者没有关系，调用者或者依赖者只需要知道它需要的方法即可，其他的可一概不用管。类与类之间关系越密切，耦合度越大，当一个类发生改变时，对另一个类的影响也越大。软件总的原则：低耦合、高内聚。]]></content>
@@ -837,17 +794,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[HTTP详解]]></title>
-    <url>%2FHTTP%E8%AF%A6%E8%A7%A3%2F</url>
-    <content type="text"><![CDATA[资源URI（Uniform Resource Identifier，统一资源标识符） URL（Uniform Resource Locator，统一资源定位符） URN（Uniform Resource Name，统一资源名称） 1&lt;scheme&gt;://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;/&lt;path&gt;;&lt;params&gt;?&lt;query&gt;#&lt;frag&gt; 事务报文连接HTTPSHTTPS就是在HTTP和TCP之间插入了一个（称为TLS或SSL）密码加密层。]]></content>
-      <categories>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>HTTP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[持续集成CI]]></title>
     <url>%2F%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90CI%2F</url>
     <content type="text"><![CDATA[引言持续集成是一种软件开发实践，团队内开发成员经常集成工作，。每次集成通过自动化的构建（编译、自动化测试）来验证，从而尽早发现集成错误。Martin Fowler文章：https://martinfowler.com/articles/continuousIntegration.html Jenkins简介Jenkins最初由Sun Microsystems公司在2005年作为Hudson发布的。多年来，已经成长为Java社区最流行的CI系统。Jenkins的强大之处在于它的插件系统。如果构建系统中有新的功能需求，可以创建一个新的插件来扩展Jenkins的能力。 设置 Manage Jenkins | Configure System，Global properties添加如下环境变量：ANDROID_HOME和JAVA_HOME Manage Jenkins | Manage Plugins，安装Gradle插件。 配置VCS仓库，以便Jenkins知道从哪里获取项目源码。 Invoke Gradle script PluginsSonarQubeSonarQube Scanner for Jenkins TeamCityTravis CI如果项目仓库是在GitHub上托管的，则可以使用Travis CI来自动构建。]]></content>
@@ -859,8 +805,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-Fragment详解]]></title>
-    <url>%2Fandroid-Fragment%E8%AF%A6%E8%A7%A3%2F</url>
+    <title><![CDATA[android-API-Fragment]]></title>
+    <url>%2Fandroid-API-Fragment%2F</url>
     <content type="text"><![CDATA[概览Android 3.0（API级别11）中引入了Fragment，主要是为了给大屏幕（如平板电脑）上更加动态和灵活的 UI 设计提供支持。由于平板电脑的屏幕比手机屏幕大得多，因此可用于组合和交换 UI 组件的空间更大。利用片段实现此类设计时，您无需管理对视图层次结构的复杂更改。 Fragment表示Activity中的行为或用户界面部分。Fragment必须始终嵌入在Activity中，其生命周期直接受宿主Activity生命周期的影响。 可以将多个Fragment组合在一个Activity中来构建多窗格UI，以及在多个Activity中重复使用某个片段。 可以将Fragment视为Activity的模块化组成部分，它具有自己的生命周期，能接收自己的输入事件。 可以在Activity运行时添加或移除Fragment。 优势： 模块化（Modularity）：不必把所有代码全部写在Activity中，而是把代码写在各自的Fragment中。 可重用（Reusability）：多个Activity可以重用一个Fragment。 可适配（Adaptability）：根据硬件的屏幕尺寸、屏幕方向，能够方便地实现不同的布局，这样用户体验更好。 生命周期lifecycle onAttach()：Fragment与Activity关联时调用。 onCreate()：创建Fragment时调用。 onCreateView()：首次绘制其用户界面时调用。 onActivityCreated()：在Activity的onCreate()方法已返回时调用。 FragmentManagerFragmentManager findFragmentById() findFragmentByTag() popBackStack()：将Fragment从返回栈中弹出。 addOnBackStackChangedListener()：返回栈变化监听。 FragmentTransactionFragmentTransaction根据用户行为执行添加add()、移除remove()、替换replace()以及其他操作的事务。12345678// Activity中获取FragmentTransaction实例FragmentManager fragmentManager = getFragmentManager();FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();// add()ExampleFragment fragment = new ExampleFragment();fragmentTransaction.add(R.id.fragment_container, fragment);fragmentTransaction.commit(); 以下示例说明了如何将一个片段替换成另一个片段，以及如何在返回栈中保留先前状态：1234567891011// Create new fragment and transactionFragment newFragment = new ExampleFragment();FragmentTransaction transaction = getFragmentManager().beginTransaction();// Replace whatever is in the fragment_container view with this fragment,// and add the transaction to the back stacktransaction.replace(R.id.fragment_container, newFragment);transaction.addToBackStack(null);// Commit the transactiontransaction.commit(); 提示：对于每个片段事务，您都可以通过在提交前调用 setTransition() 来应用过渡动画。调用commit()不会立即执行事务，而是在Activity的UI线程可以执行该操作时再安排其在线程上运行。不过，如有必要，您也可以从UI 线程调用executePendingTransactions()以立即执行commit()提交的事务。通常不必这样做，除非其他线程中的作业依赖该事务。注意：您只能在Activity保存其状态（用户离开 Activity）之前使用commit()提交事务。如果您试图在该时间点后提交，则会引发异常。 这是因为如需恢复Activity，则提交后的状态可能会丢失。 对于丢失提交无关紧要的情况，请使用 commitAllowingStateLoss()。 与Activity通信 Fragment可以通过getActivity()访问Activity实例。 Activity可以通过FragmentManager对象调用findFragmentById()或findFragmentByTag()获取对Fragment的引用]]></content>
       <categories>
         <category>android</category>
@@ -883,8 +829,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-Activity详解]]></title>
-    <url>%2Fandroid-Activity%E8%AF%A6%E8%A7%A3%2F</url>
+    <title><![CDATA[android-API-Activity]]></title>
+    <url>%2Fandroid-API-Activity%2F</url>
     <content type="text"><![CDATA[生命周期管理Activity生命周期 任务和返回栈参考https://developer.android.google.cn/guide/components/activities/intro-activities]]></content>
       <categories>
         <category>android</category>
@@ -895,21 +841,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-基础知识]]></title>
-    <url>%2Fandroid-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <title><![CDATA[android-基础]]></title>
+    <url>%2Fandroid-%E5%9F%BA%E7%A1%80%2F</url>
     <content type="text"><![CDATA[四大组件ActivityBroadcastReceiverServiceService分为两种工作状态： 启动状态，主要用于执行后台计算。 绑定状态，主要用于其他组件和Service的交互。 ContentProviderIntenthttps://developer.android.google.cn/guide/components/intents-filters.html Animator 逐帧动画：Drawable Animation。res/anim，android：oneshot是否循环播放 补间动画：Tween Animation 属性动画（Android 3.0） android.transition（Android 4.4）：本质属性动画。 Tween AnimationAlpha-Scale-Translate-RotateInterpolator（插值器） Property Animation Evaluator：控制属性动画如何计算属性值的。 AnimatorSet ValueAnimator ObjectAnimator：ValueAnimator子类。 android.transition应用资源res/https://developer.android.google.cn/guide/topics/resources/providing-resources应该始终外部化应用资源，如图像和代码中的字符串，有利于单独维护这些资源。此外，还应为特定设备配置提供备用资源，方法是将它们分组到专门命名的资源目录中。res/目录支持的资源目录，如下： animator/：定义属性动画的XML文件。 anim/：定义渐变动画的XML文件。（属性动画也可以放在该目录，一般为了区分，首选上面的目录。） color/ drawable/ mipmap/：适用于不同启动器图标密度的可绘制对象文件。 layout/ menu/ raw/：以原始形式保存的文件。但是，如需访问原始文件名和文件层次结构，则可以考虑将某些资源保存在 assets/目录下 values/ xml/：可以在运行时通过调用Resources.getXML()读取的任意XML文件。 提供备用资源在res/中创建一个以&lt;resources_name&gt;-&lt;config_qualifier&gt;形式命名的新目录。 配置 限定符值 说明 屏幕像素密度 (dpi) ldpi、mdpi、hdpi、xhdpi、xxhdpi、xxxhdpi、nodpi、tvdpi、anydpi XML解析方式SAXDOMPullNDK(Native Develop Kit)https://developer.android.google.cn/ndk原生开发工具包（NDK）是一套工具，允许您为 Android 使用C和C++代码，并提供众多平台库，您可用其管理原生Activity和访问物理设备组件，例如传感器和触摸输入。借助Android Studio 2.2或更高版本，使用NDK将C和C++代码编译到原生库中，然后使用IDE集成构建系统 Gradle将您的库封装入APK。然后，Java代码可以通过Java原生接口 (JNI) 框架，调用您原生库中的函数。Android Studio用于编译原生库的默认构建工具是CMake。由于很多现有项目都使用构建工具包，因此Android Studio也支持ndk-build。不过，如果您要创建新的原生库，则应使用 CMake。 使用场景 在平台之间移植其应用。 进一步提升设备性能，以实现低延迟时间，或运行计算密集型应用，如游戏或物理模拟。 重复使用自己或其他开发者的C或C++库。 编译和调试原生代码组件Android 原生开发工具包 (NDK)：这套工具允许您为 Android 使用 C 和 C++ 代码。CMake：一款外部构建工具，可与 Gradle 搭配使用来构建原生库。如果您只计划使用 ndk-build，则不需要此组件。LLDB：一种调试程序，Android Studio 使用它来调试原生代码。安装：Tools &gt; SDK Manager 创建或导入原生项目工作原理CPU和架构使用原生代码时，硬件很重要。NDK提供各种ABI供您选择，可让您确保针对正确的架构和CPU进行编译。 ABI不同的Android手机使用不同的CPU，进而支持不同的指令集。CPU与指令集的每种组合都有专属的应用二进制界面，即ABI。ABI可以非常精确地定义应用的机器代码在运行时如何与系统交互。您必须为应用要使用的每个CPU架构指定ABI。 参考开发者指南API reference]]></content>
-      <categories>
-        <category>android</category>
-        <category>基础</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[android-构建流程]]></title>
-    <url>%2Fandroid-%E6%9E%84%E5%BB%BA%E6%B5%81%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[构建流程典型Android应用模块的构建流程通常遵循下列步骤： 编译器将源代码转换成DEX（Dalvik Executable）文件，将所有其他内容转换成已编译资源。 APK打包器将DEX文件和已编译资源合并成单个APK。 APK打包器使用调试或发布密钥库签署您的APK 生成最终APK之前，打包器会使用zipalign工具对应用进行优化，减少其在设备上运行时占用的内存。 应用签名https://developer.android.google.cn/studio/build/configure-apk-splits.html 参考https://developer.android.google.cn/studio/build]]></content>
       <categories>
         <category>android</category>
         <category>基础</category>
@@ -943,16 +877,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Google I/O]]></title>
-    <url>%2FGoogle-IO%2F</url>
-    <content type="text"><![CDATA[2019 Google I/O2019年5月8日 Android Q2018 Google I/O2018年5月8日 Android P(9.0)主打智能、简单和更健康的数字生活。 Android Jetpack新一代组件、工具和架构指导，旨在加快开发者的Android应用开发速度。 KotlinAndroid Studio 3.2Android Studio 3.2（金丝雀版）引入了Android Jetpack支持工具，包括一款视觉导航编辑器以及全新代码重构工具。金丝雀版本同时还包含了可用于创建全新的Android App Bundle格式的构建工具、用于快速启动 Android模拟器的快照功能 (Snapshot)、给下载及安装包瘦身的新 R8 优化器、以及用于测量应用对电池续航影响的新电量分析工具 (Energy Profiler) 等。 Android App Bundle与Google Play Dynamic Delivery全新发布格式：Android App Bundle，大幅度减少应用体积。只需要在Android Studio中构建一个应用束（app bundle），可以将应用所需的全部内容都涵盖在内：所有语言、所有设备屏幕大小、所有硬件架构。用户下载应用时，Google Play的新动态交付只会传输适用于用户设备的代码和资源。Android App Bundle支持模块化，因此开发者可以随时按需交付功能，而不是仅限在安装过程中。 参考https://www.oschina.net/news/95914/2018-google-io-highlights]]></content>
-      <categories>
-        <category>综合</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[java-Map详解]]></title>
-    <url>%2Fjava-Map%E8%AF%A6%E8%A7%A3%2F</url>
+    <title><![CDATA[java-集合-Map]]></title>
+    <url>%2Fjava-%E9%9B%86%E5%90%88-Map%2F</url>
     <content type="text"></content>
       <categories>
         <category>java</category>
@@ -963,8 +889,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[java-List详解]]></title>
-    <url>%2Fjava-List%E8%AF%A6%E8%A7%A3%2F</url>
+    <title><![CDATA[java-集合-List]]></title>
+    <url>%2Fjava-%E9%9B%86%E5%90%88-List%2F</url>
     <content type="text"></content>
       <categories>
         <category>java</category>

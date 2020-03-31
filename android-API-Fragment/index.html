@@ -146,27 +146,25 @@
 
 
 
-  <meta name="description" content="构建流程典型Android应用模块的构建流程通常遵循下列步骤：  编译器将源代码转换成DEX（Dalvik Executable）文件，将所有其他内容转换成已编译资源。 APK打包器将DEX文件和已编译资源合并成单个APK。 APK打包器使用调试或发布密钥库签署您的APK 生成最终APK之前，打包器会使用zipalign工具对应用进行优化，减少其在设备上运行时占用的内存。  应用签名https:/">
-<meta name="keywords" content="android">
+  <meta name="description" content="概览Android 3.0（API级别11）中引入了Fragment，主要是为了给大屏幕（如平板电脑）上更加动态和灵活的 UI 设计提供支持。由于平板电脑的屏幕比手机屏幕大得多，因此可用于组合和交换 UI 组件的空间更大。利用片段实现此类设计时，您无需管理对视图层次结构的复杂更改。  Fragment表示Activity中的行为或用户界面部分。Fragment必须始终嵌入在Activity中，其生">
+<meta name="keywords" content="Fragment">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android-构建流程">
-<meta property="og:url" content="https://liuweidong.club/android-构建流程/index.html">
+<meta property="og:title" content="android-API-Fragment">
+<meta property="og:url" content="https://liuweidong.club/android-API-Fragment/index.html">
 <meta property="og:site_name" content="Liu Weidong">
-<meta property="og:description" content="构建流程典型Android应用模块的构建流程通常遵循下列步骤：  编译器将源代码转换成DEX（Dalvik Executable）文件，将所有其他内容转换成已编译资源。 APK打包器将DEX文件和已编译资源合并成单个APK。 APK打包器使用调试或发布密钥库签署您的APK 生成最终APK之前，打包器会使用zipalign工具对应用进行优化，减少其在设备上运行时占用的内存。  应用签名https:/">
+<meta property="og:description" content="概览Android 3.0（API级别11）中引入了Fragment，主要是为了给大屏幕（如平板电脑）上更加动态和灵活的 UI 设计提供支持。由于平板电脑的屏幕比手机屏幕大得多，因此可用于组合和交换 UI 组件的空间更大。利用片段实现此类设计时，您无需管理对视图层次结构的复杂更改。  Fragment表示Activity中的行为或用户界面部分。Fragment必须始终嵌入在Activity中，其生">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.imgur.com/3k3TofS.png">
-<meta property="og:updated_time" content="2019-08-30T14:50:13.442Z">
+<meta property="og:updated_time" content="2020-03-31T14:34:10.282Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android-构建流程">
-<meta name="twitter:description" content="构建流程典型Android应用模块的构建流程通常遵循下列步骤：  编译器将源代码转换成DEX（Dalvik Executable）文件，将所有其他内容转换成已编译资源。 APK打包器将DEX文件和已编译资源合并成单个APK。 APK打包器使用调试或发布密钥库签署您的APK 生成最终APK之前，打包器会使用zipalign工具对应用进行优化，减少其在设备上运行时占用的内存。  应用签名https:/">
-<meta name="twitter:image" content="https://i.imgur.com/3k3TofS.png">
+<meta name="twitter:title" content="android-API-Fragment">
+<meta name="twitter:description" content="概览Android 3.0（API级别11）中引入了Fragment，主要是为了给大屏幕（如平板电脑）上更加动态和灵活的 UI 设计提供支持。由于平板电脑的屏幕比手机屏幕大得多，因此可用于组合和交换 UI 组件的空间更大。利用片段实现此类设计时，您无需管理对视图层次结构的复杂更改。  Fragment表示Activity中的行为或用户界面部分。Fragment必须始终嵌入在Activity中，其生">
 
 
 
 
 
 
-  <link rel="canonical" href="https://liuweidong.club/android-构建流程/">
+  <link rel="canonical" href="https://liuweidong.club/android-API-Fragment/">
 
 
 
@@ -176,7 +174,7 @@
   };
 </script>
 
-  <title>android-构建流程 | Liu Weidong</title>
+  <title>android-API-Fragment | Liu Weidong</title>
   
 
 
@@ -436,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/android-构建流程/">
+    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/android-API-Fragment/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Weidong">
@@ -453,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">android-构建流程
+          <h1 class="post-title" itemprop="name headline">android-API-Fragment
 
               
             
@@ -479,7 +477,7 @@
                 
               
 
-              <time title="创建时间：2018-04-23 20:59:16" itemprop="dateCreated datePublished" datetime="2018-04-23T20:59:16+08:00">2018-04-23</time>
+              <time title="创建时间：2018-05-04 20:00:05" itemprop="dateCreated datePublished" datetime="2018-05-04T20:00:05+08:00">2018-05-04</time>
             
 
             
@@ -523,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/android-构建流程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/android-构建流程/" itemprop="commentCount"></span>
+                <a href="/android-API-Fragment/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/android-API-Fragment/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -559,15 +557,40 @@
       
 
       
-        <h1 id="构建流程"><a href="#构建流程" class="headerlink" title="构建流程"></a>构建流程</h1><p><img src="https://i.imgur.com/3k3TofS.png" width="55%" height="65%"><br>典型Android应用模块的构建流程通常遵循下列步骤：</p>
-<ol>
-<li>编译器将源代码转换成DEX（Dalvik Executable）文件，将所有其他内容转换成已编译资源。</li>
-<li>APK打包器将DEX文件和已编译资源合并成单个APK。</li>
-<li>APK打包器使用调试或发布密钥库签署您的APK</li>
-<li>生成最终APK之前，打包器会使用<a href="https://developer.android.google.cn/studio/command-line/zipalign.html" target="_blank" rel="noopener">zipalign</a>工具对应用进行优化，减少其在设备上运行时占用的内存。</li>
-</ol>
-<p><a href="https://developer.android.google.cn/studio/publish/app-signing.html#studio" target="_blank" rel="noopener">应用签名</a><br><a href="https://developer.android.google.cn/studio/build/configure-apk-splits.html" target="_blank" rel="noopener">https://developer.android.google.cn/studio/build/configure-apk-splits.html</a></p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://developer.android.google.cn/studio/build" target="_blank" rel="noopener">https://developer.android.google.cn/studio/build</a></p>
+        <h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><p>Android 3.0（API级别11）中引入了<a href="https://developer.android.google.cn/guide/components/fragments" target="_blank" rel="noopener">Fragment</a>，主要是为了给大屏幕（如平板电脑）上更加动态和灵活的 UI 设计提供支持。由于平板电脑的屏幕比手机屏幕大得多，因此可用于组合和交换 UI 组件的空间更大。利用片段实现此类设计时，您无需管理对视图层次结构的复杂更改。</p>
+<ul>
+<li>Fragment表示Activity中的行为或用户界面部分。Fragment必须始终嵌入在Activity中，其生命周期直接受宿主Activity生命周期的影响。 </li>
+<li>可以将多个Fragment组合在一个Activity中来构建多窗格UI，以及在多个Activity中重复使用某个片段。</li>
+<li>可以将Fragment视为Activity的模块化组成部分，它具有自己的生命周期，能接收自己的输入事件。</li>
+<li>可以在Activity运行时添加或移除Fragment。</li>
+</ul>
+<p><strong>优势：</strong></p>
+<ul>
+<li>模块化（Modularity）：不必把所有代码全部写在Activity中，而是把代码写在各自的Fragment中。</li>
+<li>可重用（Reusability）：多个Activity可以重用一个Fragment。</li>
+<li>可适配（Adaptability）：根据硬件的屏幕尺寸、屏幕方向，能够方便地实现不同的布局，这样用户体验更好。</li>
+</ul>
+<h1 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h1><p><a href="https://developer.android.google.cn/guide/components/fragments#Lifecycle" target="_blank" rel="noopener">lifecycle</a></p>
+<ul>
+<li>onAttach()：Fragment与Activity关联时调用。</li>
+<li>onCreate()：创建Fragment时调用。</li>
+<li>onCreateView()：首次绘制其用户界面时调用。</li>
+<li>onActivityCreated()：在Activity的onCreate()方法已返回时调用。</li>
+</ul>
+<h1 id="FragmentManager"><a href="#FragmentManager" class="headerlink" title="FragmentManager"></a>FragmentManager</h1><p><a href="https://developer.android.google.cn/reference/android/app/FragmentManager.html" target="_blank" rel="noopener">FragmentManager</a></p>
+<ul>
+<li>findFragmentById()</li>
+<li>findFragmentByTag()</li>
+<li>popBackStack()：将Fragment从返回栈中弹出。</li>
+<li>addOnBackStackChangedListener()：返回栈变化监听。</li>
+</ul>
+<h1 id="FragmentTransaction"><a href="#FragmentTransaction" class="headerlink" title="FragmentTransaction"></a>FragmentTransaction</h1><p><a href="https://developer.android.google.cn/reference/android/app/FragmentTransaction.html" target="_blank" rel="noopener">FragmentTransaction</a>根据用户行为执行添加add()、移除remove()、替换replace()以及其他操作的<strong>事务</strong>。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Activity中获取FragmentTransaction实例</span></span><br><span class="line">FragmentManager fragmentManager = getFragmentManager();</span><br><span class="line">FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();</span><br><span class="line"></span><br><span class="line"><span class="comment">// add()</span></span><br><span class="line">ExampleFragment fragment = <span class="keyword">new</span> ExampleFragment();</span><br><span class="line">fragmentTransaction.add(R.id.fragment_container, fragment);</span><br><span class="line">fragmentTransaction.commit();</span><br></pre></td></tr></table></figure></p>
+<p>以下示例说明了如何将一个片段替换成另一个片段，以及如何在返回栈中保留先前状态：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create new fragment and transaction</span></span><br><span class="line">Fragment newFragment = <span class="keyword">new</span> ExampleFragment();</span><br><span class="line">FragmentTransaction transaction = getFragmentManager().beginTransaction();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Replace whatever is in the fragment_container view with this fragment,</span></span><br><span class="line"><span class="comment">// and add the transaction to the back stack</span></span><br><span class="line">transaction.replace(R.id.fragment_container, newFragment);</span><br><span class="line">transaction.addToBackStack(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Commit the transaction</span></span><br><span class="line">transaction.commit();</span><br></pre></td></tr></table></figure></p>
+<p><strong>提示：</strong>对于每个片段事务，您都可以通过在提交前调用 setTransition() 来应用过渡动画。<br>调用commit()不会立即执行事务，而是在Activity的UI线程可以执行该操作时再安排其在线程上运行。不过，如有必要，您也可以从UI 线程调用executePendingTransactions()以立即执行commit()提交的事务。通常不必这样做，除非其他线程中的作业依赖该事务。<br><strong>注意：</strong>您只能在Activity保存其状态（用户离开 Activity）之前使用commit()提交事务。如果您试图在该时间点后提交，则会引发异常。 这是因为如需恢复Activity，则提交后的状态可能会丢失。 对于丢失提交无关紧要的情况，请使用 commitAllowingStateLoss()。</p>
+<h1 id="与Activity通信"><a href="#与Activity通信" class="headerlink" title="与Activity通信"></a>与Activity通信</h1><ul>
+<li>Fragment可以通过getActivity()访问Activity实例。</li>
+<li>Activity可以通过FragmentManager对象调用findFragmentById()或findFragmentByTag()获取对Fragment的引用</li>
+</ul>
 
       
     </div>
@@ -635,7 +658,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liuweidong.club/android-构建流程/" title="android-构建流程">https://liuweidong.club/android-构建流程/</a>
+    <a href="https://liuweidong.club/android-API-Fragment/" title="android-API-Fragment">https://liuweidong.club/android-API-Fragment/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -648,7 +671,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/android/" rel="tag"><i class="fa fa-tag"></i> android</a>
+            <a href="/tags/Fragment/" rel="tag"><i class="fa fa-tag"></i> Fragment</a>
           
         </div>
       
@@ -661,8 +684,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/android-系统架构/" rel="next" title="android-系统架构">
-                <i class="fa fa-chevron-left"></i> android-系统架构
+              <a href="/android-AndroidManifest/" rel="next" title="android-AndroidManifest.xml">
+                <i class="fa fa-chevron-left"></i> android-AndroidManifest.xml
               </a>
             
           </div>
@@ -671,8 +694,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/android-基础知识/" rel="prev" title="android-基础知识">
-                android-基础知识 <i class="fa fa-chevron-right"></i>
+              <a href="/持续集成CI/" rel="prev" title="持续集成CI">
+                持续集成CI <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -748,7 +771,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">98</span>
+                    <span class="site-state-item-count">91</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -799,11 +822,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -882,9 +901,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -945,7 +962,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#构建流程"><span class="nav-text">构建流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概览"><span class="nav-text">概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生命周期"><span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FragmentManager"><span class="nav-text">FragmentManager</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FragmentTransaction"><span class="nav-text">FragmentTransaction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#与Activity通信"><span class="nav-text">与Activity通信</span></a></li></ol></div>
             
 
           </div>
