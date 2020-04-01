@@ -146,25 +146,25 @@
 
 
 
-  <meta name="description" content="异常Java中异常对象都是派生于java.lang.Throwable类的一个实例。  Exception Error  throwsthrows：用于声明该方法可能抛出的异常。 throwthrow：抛出实际的异常。 try catch finallyJava7开始一个catch块可以捕获多种类型的异常。|隔开；捕获多种类型的异常时，异常变量有隐式的final修饰；异常对象常用方法：getMes">
+  <meta name="description" content="闲来，消遣。">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java-基础-异常">
-<meta property="og:url" content="https://liuweidong.club/java-基础-异常/index.html">
+<meta property="og:title" content="java-HashMap原理">
+<meta property="og:url" content="https://liuweidong.club/java-HashMap原理/index.html">
 <meta property="og:site_name" content="Liu Weidong">
-<meta property="og:description" content="异常Java中异常对象都是派生于java.lang.Throwable类的一个实例。  Exception Error  throwsthrows：用于声明该方法可能抛出的异常。 throwthrow：抛出实际的异常。 try catch finallyJava7开始一个catch块可以捕获多种类型的异常。|隔开；捕获多种类型的异常时，异常变量有隐式的final修饰；异常对象常用方法：getMes">
+<meta property="og:description" content="闲来，消遣。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-23T12:57:50.843Z">
+<meta property="og:updated_time" content="2020-04-01T15:26:57.860Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java-基础-异常">
-<meta name="twitter:description" content="异常Java中异常对象都是派生于java.lang.Throwable类的一个实例。  Exception Error  throwsthrows：用于声明该方法可能抛出的异常。 throwthrow：抛出实际的异常。 try catch finallyJava7开始一个catch块可以捕获多种类型的异常。|隔开；捕获多种类型的异常时，异常变量有隐式的final修饰；异常对象常用方法：getMes">
+<meta name="twitter:title" content="java-HashMap原理">
+<meta name="twitter:description" content="闲来，消遣。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://liuweidong.club/java-基础-异常/">
+  <link rel="canonical" href="https://liuweidong.club/java-HashMap原理/">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>java-基础-异常 | Liu Weidong</title>
+  <title>java-HashMap原理 | Liu Weidong</title>
   
 
 
@@ -434,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/java-基础-异常/">
+    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/java-HashMap原理/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Weidong">
@@ -451,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java-基础-异常
+          <h1 class="post-title" itemprop="name headline">java-HashMap原理
 
               
             
@@ -477,7 +477,7 @@
                 
               
 
-              <time title="创建时间：2018-03-26 20:43:49" itemprop="dateCreated datePublished" datetime="2018-03-26T20:43:49+08:00">2018-03-26</time>
+              <time title="创建时间：2018-03-29 20:43:49" itemprop="dateCreated datePublished" datetime="2018-03-29T20:43:49+08:00">2018-03-29</time>
             
 
             
@@ -521,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/java-基础-异常/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/java-基础-异常/" itemprop="commentCount"></span>
+                <a href="/java-HashMap原理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/java-HashMap原理/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,15 +557,7 @@
       
 
       
-        <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p>Java中异常对象都是派生于<strong>java.lang.Throwable</strong>类的一个实例。</p>
-<ol>
-<li>Exception</li>
-<li>Error</li>
-</ol>
-<h1 id="throws"><a href="#throws" class="headerlink" title="throws"></a>throws</h1><p>throws：用于声明该方法可能抛出的异常。</p>
-<h1 id="throw"><a href="#throw" class="headerlink" title="throw"></a>throw</h1><p>throw：抛出实际的异常。</p>
-<h1 id="try-catch-finally"><a href="#try-catch-finally" class="headerlink" title="try catch finally"></a>try catch finally</h1><p>Java7开始一个catch块可以捕获多种类型的异常。|隔开；捕获多种类型的异常时，异常变量有隐式的final修饰；<br>异常对象常用方法：<br>getMessage()：返回异常的详细描述字符串；<br>printStackTrace()：将该异常的跟踪栈信息输出到标准错误输出；<br>printStackTrace(PrintStream s)：将该异常的跟踪栈信息输出到指定输出流；<br>getStackTrace()：返回该异常的跟踪栈信息；<br>System.exit(1)语句退出虚拟机，finally将失去执行的机会。</p>
-
+        
       
     </div>
 
@@ -632,7 +624,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liuweidong.club/java-基础-异常/" title="java-基础-异常">https://liuweidong.club/java-基础-异常/</a>
+    <a href="https://liuweidong.club/java-HashMap原理/" title="java-HashMap原理">https://liuweidong.club/java-HashMap原理/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -658,8 +650,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/java-基础知识/" rel="next" title="java-基础知识">
-                <i class="fa fa-chevron-left"></i> java-基础知识
+              <a href="/java-集合/" rel="next" title="java-集合">
+                <i class="fa fa-chevron-left"></i> java-集合
               </a>
             
           </div>
@@ -668,8 +660,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/java-基础-集合/" rel="prev" title="java-基础-集合">
-                java-基础-集合 <i class="fa fa-chevron-right"></i>
+              <a href="/java-网络编程/" rel="prev" title="java-网络编程">
+                java-网络编程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -718,17 +710,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -796,7 +779,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -925,23 +910,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#异常"><span class="nav-text">异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#throws"><span class="nav-text">throws</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#throw"><span class="nav-text">throw</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#try-catch-finally"><span class="nav-text">try catch finally</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       

@@ -146,25 +146,25 @@
 
 
 
-  <meta name="description" content="概述所有的集合类都位于java.util包下，后来为了处理多线程环境下的并发安全问题，Java 5还在java.util.concurrent包下提供了一些多线程支持的集合类。Java的集合类主要由两个接口派生而出：Collection和Map，是Java集合框架的根接口，这两个接口又包含了一些子接口或实现类。 Collection子接口如下所示：  Set（无序，元素不可重复） List（有序，">
+  <meta name="description" content="异常Java中异常对象都是派生于java.lang.Throwable类的一个实例。  Exception Error  throwsthrows：用于声明该方法可能抛出的异常。 throwthrow：抛出实际的异常。 try catch finallyJava7开始一个catch块可以捕获多种类型的异常。|隔开；捕获多种类型的异常时，异常变量有隐式的final修饰；异常对象常用方法：getMes">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java-基础-集合">
-<meta property="og:url" content="https://liuweidong.club/java-基础-集合/index.html">
+<meta property="og:title" content="java-异常">
+<meta property="og:url" content="https://liuweidong.club/java-异常/index.html">
 <meta property="og:site_name" content="Liu Weidong">
-<meta property="og:description" content="概述所有的集合类都位于java.util包下，后来为了处理多线程环境下的并发安全问题，Java 5还在java.util.concurrent包下提供了一些多线程支持的集合类。Java的集合类主要由两个接口派生而出：Collection和Map，是Java集合框架的根接口，这两个接口又包含了一些子接口或实现类。 Collection子接口如下所示：  Set（无序，元素不可重复） List（有序，">
+<meta property="og:description" content="异常Java中异常对象都是派生于java.lang.Throwable类的一个实例。  Exception Error  throwsthrows：用于声明该方法可能抛出的异常。 throwthrow：抛出实际的异常。 try catch finallyJava7开始一个catch块可以捕获多种类型的异常。|隔开；捕获多种类型的异常时，异常变量有隐式的final修饰；异常对象常用方法：getMes">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-23T15:26:57.778Z">
+<meta property="og:updated_time" content="2020-04-01T15:21:31.645Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java-基础-集合">
-<meta name="twitter:description" content="概述所有的集合类都位于java.util包下，后来为了处理多线程环境下的并发安全问题，Java 5还在java.util.concurrent包下提供了一些多线程支持的集合类。Java的集合类主要由两个接口派生而出：Collection和Map，是Java集合框架的根接口，这两个接口又包含了一些子接口或实现类。 Collection子接口如下所示：  Set（无序，元素不可重复） List（有序，">
+<meta name="twitter:title" content="java-异常">
+<meta name="twitter:description" content="异常Java中异常对象都是派生于java.lang.Throwable类的一个实例。  Exception Error  throwsthrows：用于声明该方法可能抛出的异常。 throwthrow：抛出实际的异常。 try catch finallyJava7开始一个catch块可以捕获多种类型的异常。|隔开；捕获多种类型的异常时，异常变量有隐式的final修饰；异常对象常用方法：getMes">
 
 
 
 
 
 
-  <link rel="canonical" href="https://liuweidong.club/java-基础-集合/">
+  <link rel="canonical" href="https://liuweidong.club/java-异常/">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>java-基础-集合 | Liu Weidong</title>
+  <title>java-异常 | Liu Weidong</title>
   
 
 
@@ -434,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/java-基础-集合/">
+    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/java-异常/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Weidong">
@@ -451,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java-基础-集合
+          <h1 class="post-title" itemprop="name headline">java-异常
 
               
             
@@ -477,7 +477,7 @@
                 
               
 
-              <time title="创建时间：2018-03-27 20:43:49" itemprop="dateCreated datePublished" datetime="2018-03-27T20:43:49+08:00">2018-03-27</time>
+              <time title="创建时间：2018-03-26 20:43:49" itemprop="dateCreated datePublished" datetime="2018-03-26T20:43:49+08:00">2018-03-26</time>
             
 
             
@@ -521,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/java-基础-集合/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/java-基础-集合/" itemprop="commentCount"></span>
+                <a href="/java-异常/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/java-异常/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,21 +557,14 @@
       
 
       
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>所有的集合类都位于<strong>java.util</strong>包下，后来为了处理多线程环境下的并发安全问题，Java 5还在<strong>java.util.concurrent</strong>包下提供了一些多线程支持的集合类。<br>Java的集合类主要由两个接口派生而出：<strong>Collection</strong>和<strong>Map</strong>，是Java集合框架的根接口，这两个接口又包含了一些子接口或实现类。</p>
-<h1 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h1><p><strong>子接口</strong>如下所示：</p>
+        <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p>Java中异常对象都是派生于<strong>java.lang.Throwable</strong>类的一个实例。</p>
 <ol>
-<li>Set（无序，元素不可重复）</li>
-<li>List（有序，元素可以重复）</li>
-<li>Queue（队列）</li>
+<li>Exception</li>
+<li>Error</li>
 </ol>
-<p>Collection接口定义的方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// java.util</span></span><br><span class="line"><span class="comment">// public interface Collection&lt;E&gt; extends Iterable&lt;E&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(Object o)</span></span>;</span><br><span class="line"><span class="comment">// 返回Iterator对象，用于遍历集合里的元素。</span></span><br><span class="line"><span class="function">Iterator&lt;E&gt; <span class="title">iterator</span><span class="params">()</span></span>;</span><br><span class="line"><span class="comment">// 将集合转换成数组</span></span><br><span class="line">Object[] toArray();</span><br><span class="line"><span class="function">Iterator&lt;E&gt; <span class="title">iterator</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">remove</span><span class="params">(Object o)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">containsAll</span><span class="params">(Collection&lt;?&gt; c)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">addAll</span><span class="params">(Collection&lt;? entends E&gt; c)</span></span>;</span><br><span class="line"><span class="comment">// 取交集</span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">retainAll</span><span class="params">(Collection&lt;?&gt; c)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure></p>
-<h1 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h1><p>迭代器。Iterator仅用于遍历集合，Iterator本身并不提供盛装对象的能力。如果需要创建Iterator对象，则必须有一个被迭代的集合。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// java.util</span></span><br><span class="line"><span class="comment">// public interface Iterator&lt;E&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function">E <span class="title">next</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">remove</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperationException(<span class="string">"remove"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">forEachRemaining</span><span class="params">(Consumer&lt;? <span class="keyword">super</span> E&gt; action)</span> </span>&#123;</span><br><span class="line">    Objects.requireNonNull(action);</span><br><span class="line">    <span class="keyword">while</span> (hasNext())</span><br><span class="line">        action.accept(next());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>注：</strong>Iterator迭代访问Collection集合元素时，Collection集合里的元素不能被改变。</p>
-<h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><p>Map保存的每项数据都是key-value对。Map中key是不可以重复的，key用于标识集合里的每项数据。</p>
-<ol>
-<li>HashMap</li>
-<li>TreeMap</li>
-</ol>
+<h1 id="throws"><a href="#throws" class="headerlink" title="throws"></a>throws</h1><p>throws：用于声明该方法可能抛出的异常。</p>
+<h1 id="throw"><a href="#throw" class="headerlink" title="throw"></a>throw</h1><p>throw：抛出实际的异常。</p>
+<h1 id="try-catch-finally"><a href="#try-catch-finally" class="headerlink" title="try catch finally"></a>try catch finally</h1><p>Java7开始一个catch块可以捕获多种类型的异常。|隔开；捕获多种类型的异常时，异常变量有隐式的final修饰；<br>异常对象常用方法：<br>getMessage()：返回异常的详细描述字符串；<br>printStackTrace()：将该异常的跟踪栈信息输出到标准错误输出；<br>printStackTrace(PrintStream s)：将该异常的跟踪栈信息输出到指定输出流；<br>getStackTrace()：返回该异常的跟踪栈信息；<br>System.exit(1)语句退出虚拟机，finally将失去执行的机会。</p>
 
       
     </div>
@@ -639,7 +632,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liuweidong.club/java-基础-集合/" title="java-基础-集合">https://liuweidong.club/java-基础-集合/</a>
+    <a href="https://liuweidong.club/java-异常/" title="java-异常">https://liuweidong.club/java-异常/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -665,8 +658,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/java-基础-异常/" rel="next" title="java-基础-异常">
-                <i class="fa fa-chevron-left"></i> java-基础-异常
+              <a href="/java-基础知识/" rel="next" title="java-基础知识">
+                <i class="fa fa-chevron-left"></i> java-基础知识
               </a>
             
           </div>
@@ -675,8 +668,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/java-集合-List/" rel="prev" title="java-集合-List">
-                java-集合-List <i class="fa fa-chevron-right"></i>
+              <a href="/java-集合/" rel="prev" title="java-集合">
+                java-集合 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -803,7 +796,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -943,7 +938,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Collection"><span class="nav-text">Collection</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Iterator"><span class="nav-text">Iterator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map"><span class="nav-text">Map</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#异常"><span class="nav-text">异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#throws"><span class="nav-text">throws</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#throw"><span class="nav-text">throw</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#try-catch-finally"><span class="nav-text">try catch finally</span></a></li></ol></div>
             
 
           </div>
