@@ -146,25 +146,25 @@
 
 
 
-  <meta name="description" content="一次编译，到处运行。write once,run anywhere!  java程序运行机制计算机高级语言按程序执行方式分为编译型和解释型。  编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码一次性“翻译”成该平台硬件执行的机器码，并包装成该平台所能识别的可执行性程序的格式，这个转换过程称为编译。（C、C++、Objective-C、Pascal等） 解释型语言指使用专门的解释器对">
+  <meta name="description" content="一次编译，到处运行。write once,run anywhere!  概览java语言是一种特殊的高级语言，既有解释型语言的特征，也具有编译型语言的特征，因为Java程序要经过先编译，后解释两个步骤。java源文件 ——javac编译——&amp;gt; .class字节码文件（与平台无关，面向JVM） ——java解释执行——&amp;gt; 特定平台的机器码 标识符和关键字分隔符：分号（;）、花括号（{}">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java-基础">
-<meta property="og:url" content="https://liuweidong.club/java-基础/index.html">
+<meta property="og:title" content="java-基础知识">
+<meta property="og:url" content="https://liuweidong.club/java-基础知识/index.html">
 <meta property="og:site_name" content="Liu Weidong">
-<meta property="og:description" content="一次编译，到处运行。write once,run anywhere!  java程序运行机制计算机高级语言按程序执行方式分为编译型和解释型。  编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码一次性“翻译”成该平台硬件执行的机器码，并包装成该平台所能识别的可执行性程序的格式，这个转换过程称为编译。（C、C++、Objective-C、Pascal等） 解释型语言指使用专门的解释器对">
+<meta property="og:description" content="一次编译，到处运行。write once,run anywhere!  概览java语言是一种特殊的高级语言，既有解释型语言的特征，也具有编译型语言的特征，因为Java程序要经过先编译，后解释两个步骤。java源文件 ——javac编译——&amp;gt; .class字节码文件（与平台无关，面向JVM） ——java解释执行——&amp;gt; 特定平台的机器码 标识符和关键字分隔符：分号（;）、花括号（{}">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-23T12:30:28.668Z">
+<meta property="og:updated_time" content="2020-04-01T13:43:57.417Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java-基础">
-<meta name="twitter:description" content="一次编译，到处运行。write once,run anywhere!  java程序运行机制计算机高级语言按程序执行方式分为编译型和解释型。  编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码一次性“翻译”成该平台硬件执行的机器码，并包装成该平台所能识别的可执行性程序的格式，这个转换过程称为编译。（C、C++、Objective-C、Pascal等） 解释型语言指使用专门的解释器对">
+<meta name="twitter:title" content="java-基础知识">
+<meta name="twitter:description" content="一次编译，到处运行。write once,run anywhere!  概览java语言是一种特殊的高级语言，既有解释型语言的特征，也具有编译型语言的特征，因为Java程序要经过先编译，后解释两个步骤。java源文件 ——javac编译——&amp;gt; .class字节码文件（与平台无关，面向JVM） ——java解释执行——&amp;gt; 特定平台的机器码 标识符和关键字分隔符：分号（;）、花括号（{}">
 
 
 
 
 
 
-  <link rel="canonical" href="https://liuweidong.club/java-基础/">
+  <link rel="canonical" href="https://liuweidong.club/java-基础知识/">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>java-基础 | Liu Weidong</title>
+  <title>java-基础知识 | Liu Weidong</title>
   
 
 
@@ -434,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/java-基础/">
+    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/java-基础知识/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Weidong">
@@ -451,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java-基础
+          <h1 class="post-title" itemprop="name headline">java-基础知识
 
               
             
@@ -521,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/java-基础/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/java-基础/" itemprop="commentCount"></span>
+                <a href="/java-基础知识/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/java-基础知识/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -560,21 +560,35 @@
         <blockquote>
 <p>一次编译，到处运行。write once,run anywhere!</p>
 </blockquote>
-<h1 id="java程序运行机制"><a href="#java程序运行机制" class="headerlink" title="java程序运行机制"></a>java程序运行机制</h1><p><strong>计算机高级语言按程序执行方式分为<font color="#ff0000">编译型</font>和<font color="#ff0000">解释型</font>。</strong></p>
-<ul>
-<li>编译型语言指使用专门的编译器，针对特定平台将某种高级语言源代码<strong>一次性</strong>“翻译”成该平台硬件执行的机器码，并包装成该平台所能识别的可执行性程序的格式，这个转换过程称为编译。（C、C++、Objective-C、Pascal等）</li>
-<li>解释型语言指使用专门的解释器对源程序逐行解释成特定平台的机器码并立即执行的语言。效率低，跨平台。（Ruby、Python等）</li>
-</ul>
-<p>java语言是一种特殊的高级语言，既有解释型语言的特征，也具有编译型语言的特征，因为Java程序要经过先编译，后解释两个步骤。<br><strong>java源文件 ——javac编译——&gt; .class字节码文件（与平台无关，面向JVM） ——java解释执行——&gt; 特定平台的机器码</strong></p>
-<h1 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h1><ol>
-<li>安装JDK</li>
-<li>配置环境变量path，classpath</li>
-<li>安装开发工具 <a href="http://www.liuweidong.club/【利器】IDE-IntelliJ_IDEA/" target="_blank" rel="noopener">IntelliJ IDEA</a></li>
+<h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><p>java语言是一种特殊的高级语言，既有解释型语言的特征，也具有编译型语言的特征，因为Java程序要经过先编译，后解释两个步骤。<br><strong>java源文件 ——javac编译——&gt; .class字节码文件（与平台无关，面向JVM） ——java解释执行——&gt; 特定平台的机器码</strong></p>
+<h1 id="标识符和关键字"><a href="#标识符和关键字" class="headerlink" title="标识符和关键字"></a>标识符和关键字</h1><p><strong>分隔符：</strong>分号（;）、花括号（{}）、方括号（[]）、圆括号（()）、空格、圆点（.）<br><strong>标识符</strong>就是用于给程序中变量、类、方法命名的符号。Java语言的标识符必须以字母、下划线、美元符开头，后面可以跟任意数目的字母、数字、下划线和美元符。</p>
+<blockquote>
+<p>Java语言是区分大小写的。</p>
+</blockquote>
+<p>Java中所有的关键字都是小写的。</p>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>Java是<strong>强类型语言</strong>，强类型包含两方面的含义：</p>
+<ol>
+<li>所有的变量必须先声明、后使用</li>
+<li>指定类型的变量只能接受类型与之匹配的值</li>
 </ol>
-<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>java是一种强类型语言。意味着必须为每一个变量声明一种类型。<br>基本数据类型8种：<br>java中整型的范围与运行java代码的机器无关。<br><strong>注意：</strong>Java没有任何无符号类型。<br>注释：JDk 5.0中，可以使用十六进制表示浮点数值。如，0.125表示为0x1.0p-3。十六进制表示法中，使用p表示指数，而不是e。注意，尾数采用十六进制，指数采用十进制。指数的基数是2，不是10。<br>所有的浮点数值计算都遵循IEEE 754规范。<br><strong>警告：</strong>浮点数值不适用于禁止出现舍入误差的金融计算中。如果需要在数值计算中不含有任何舍入误差，就应该使用BigDecimal类。</p>
-<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><p>&amp;与&amp;&amp;区别：&amp;&amp;具有短路功能。<br>~：按位非<br>^：按位异或</p>
-<h2 id="移位运算"><a href="#移位运算" class="headerlink" title="移位运算"></a>移位运算</h2><p><code>&gt;&gt;</code>：右移运算符，右移n位相当于除以2的n次方<br><code>&lt;&lt;</code>：左移运算符，左移n位相当于乘以2的n次方<br><code>&gt;&gt;&gt;</code>：无符号右移<br>例：2乘以8最有效率的方法是，2&lt;&lt;3；因为位运算是CPU直接支持的，效率最高。</p>
-<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ol>
+<p>Java数据类型分为两类：<strong>基本类型</strong>和<strong>引用类型</strong>。<br><strong>8中基本数据类型：</strong></p>
+<ul>
+<li>byte：1个字节（-128~127）</li>
+<li>short：2个字节</li>
+<li>int：4个字节</li>
+<li>long：8个字节</li>
+<li>float：4个字节</li>
+<li>double：8个字节</li>
+<li>char：2个字节</li>
+<li>boolean</li>
+</ul>
+<p>Java中整数值有4种表示方式：十进制、二进制（0B）、八进制（0）、十六进制（0X）</p>
+<p><strong>注意：</strong>Java没有任何无符号类型。<br>注释：JDk 5.0中，可以使用十六进制表示浮点数值。如，0.125表示为0x1.0p-3。十六进制表示法中，使用p表示指数，而不是e。注意，尾数采用十六进制，指数采用十进制。指数的基数是2，不是10。<br>所有的浮点数值计算都遵循IEEE 754规范。<br><strong>警告：</strong>浮点数值不适用于禁止出现舍入误差的金融计算中。如果需要在数值计算中不含有任何舍入误差，就应该使用BigDecimal类。</p>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><ul>
+<li>位运算<br>&amp;：按位与<br>~：按位非<br>^：按位异或</li>
+<li>移位运算<br><code>&gt;&gt;</code>：右移运算符，右移n位相当于除以2的n次方<br><code>&lt;&lt;</code>：左移运算符，左移n位相当于乘以2的n次方<br><code>&gt;&gt;&gt;</code>：无符号右移<br>例：2乘以8最有效率的方法是，2&lt;&lt;3；因为位运算是CPU直接支持的，效率最高。</li>
+</ul>
+<h1 id="控制流"><a href="#控制流" class="headerlink" title="控制流"></a>控制流</h1><ol>
 <li>分支结构：if和switch</li>
 <li>循环结构：while、do while、for、foreach（JDK 5支持）</li>
 </ol>
@@ -584,7 +598,7 @@
 <li><strong>静态初始化</strong>：arrayName = new type[]{element1,element2…}</li>
 <li><strong>动态初始化</strong>：arrayName = new type[length]</li>
 </ol>
-<p>数组是一种引用数据类型，数组引用变量只是一个引用，数组元素和数组变量在内存里是分开存放的。实际的数组对象存储在堆（Heap）内存中；如果引用该数组对象的数组引用变量是局部变量，存储在栈（Stack）内存中。</p>
+<p>数组是一种<strong>引用数据类型</strong>，数组引用变量只是一个引用，数组元素和数组变量在内存里是分开存放的。实际的数组对象存储在堆（Heap）内存中；如果引用该数组对象的数组引用变量是局部变量，存储在栈（Stack）内存中。</p>
 <blockquote>
 <p><strong>每个方法执行时，建立自己的内存栈，方法内部定义的变量将会逐个放入这块栈内存里，方法结束，内存栈自然销毁；在程序中创建一个对象时，这个对象被保存到运行时数据区，方便反复利用，这个运行时数据区就是堆内存。</strong></p>
 </blockquote>
@@ -684,8 +698,6 @@
 <li>UDP（用户数据报协议）</li>
 </ul>
 <p><strong>Socket</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 简单UDP数据传输</span></span><br><span class="line"><span class="comment">// 发送者</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Sender</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        DatagramSocket sender = <span class="keyword">new</span> DatagramSocket();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">byte</span>[] data = <span class="string">"hello socket"</span>.getBytes(<span class="string">"UTF-8"</span>);</span><br><span class="line">        DatagramPacket packet = <span class="keyword">new</span> DatagramPacket(data, data.length, Inet4Address.getByName(<span class="string">"192.168.x.x"</span>), <span class="number">5001</span>);</span><br><span class="line"></span><br><span class="line">        sender.send(packet);</span><br><span class="line">        sender.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 接收者</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Receiver</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        DatagramSocket receiver = <span class="keyword">new</span> DatagramSocket(<span class="number">5001</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">byte</span>[] data = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">        DatagramPacket packet = <span class="keyword">new</span> DatagramPacket(data, data.length);</span><br><span class="line"></span><br><span class="line">        receiver.receive(packet);</span><br><span class="line">        receiver.close();</span><br><span class="line">        System.out.println(<span class="string">"接收数据："</span> + <span class="keyword">new</span> String(data, <span class="string">"UTF-8"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="JNI"><a href="#JNI" class="headerlink" title="JNI"></a>JNI</h2><p>JNI（Java Native Interface）</p>
-<h2 id="JAR"><a href="#JAR" class="headerlink" title="JAR"></a>JAR</h2><p>Java Archive File<br>JAR</p>
 
       
     </div>
@@ -753,7 +765,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liuweidong.club/java-基础/" title="java-基础">https://liuweidong.club/java-基础/</a>
+    <a href="https://liuweidong.club/java-基础知识/" title="java-基础知识">https://liuweidong.club/java-基础知识/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -1057,7 +1069,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java程序运行机制"><span class="nav-text">java程序运行机制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建环境"><span class="nav-text">搭建环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#位运算"><span class="nav-text">位运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移位运算"><span class="nav-text">移位运算</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流程控制"><span class="nav-text">流程控制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-text">数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象"><span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三大特性"><span class="nav-text">三大特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#封装"><span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多态"><span class="nav-text">多态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-text">关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#abstract"><span class="nav-text">abstract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final"><span class="nav-text">final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static"><span class="nav-text">static</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#volatile"><span class="nav-text">volatile</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口"><span class="nav-text">接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部类"><span class="nav-text">内部类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名内部类"><span class="nav-text">匿名内部类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#枚举"><span class="nav-text">枚举</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型"><span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合"><span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#List"><span class="nav-text">List</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vector"><span class="nav-text">Vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedList"><span class="nav-text">LinkedList</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set"><span class="nav-text">Set</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashSet"><span class="nav-text">HashSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedHashSet"><span class="nav-text">LinkedHashSet</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map"><span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap"><span class="nav-text">HashMap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TreeMap"><span class="nav-text">TreeMap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hashtable"><span class="nav-text">Hashtable</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collections"><span class="nav-text">Collections</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反射"><span class="nav-text">反射</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注解"><span class="nav-text">[注解]</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Target"><span class="nav-text">@Target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Retention"><span class="nav-text">@Retention</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#序列化"><span class="nav-text">序列化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IO"><span class="nav-text">IO</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言-1"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File"><span class="nav-text">File</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO流"><span class="nav-text">IO流</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络编程"><span class="nav-text">网络编程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JNI"><span class="nav-text">JNI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JAR"><span class="nav-text">JAR</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概览"><span class="nav-text">概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标识符和关键字"><span class="nav-text">标识符和关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#控制流"><span class="nav-text">控制流</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-text">数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象"><span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三大特性"><span class="nav-text">三大特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#封装"><span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多态"><span class="nav-text">多态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-text">关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#abstract"><span class="nav-text">abstract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final"><span class="nav-text">final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static"><span class="nav-text">static</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#volatile"><span class="nav-text">volatile</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口"><span class="nav-text">接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部类"><span class="nav-text">内部类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名内部类"><span class="nav-text">匿名内部类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#枚举"><span class="nav-text">枚举</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型"><span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合"><span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#List"><span class="nav-text">List</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vector"><span class="nav-text">Vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedList"><span class="nav-text">LinkedList</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set"><span class="nav-text">Set</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashSet"><span class="nav-text">HashSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedHashSet"><span class="nav-text">LinkedHashSet</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map"><span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap"><span class="nav-text">HashMap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TreeMap"><span class="nav-text">TreeMap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hashtable"><span class="nav-text">Hashtable</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collections"><span class="nav-text">Collections</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反射"><span class="nav-text">反射</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注解"><span class="nav-text">[注解]</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Target"><span class="nav-text">@Target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Retention"><span class="nav-text">@Retention</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#序列化"><span class="nav-text">序列化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IO"><span class="nav-text">IO</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言-1"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File"><span class="nav-text">File</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO流"><span class="nav-text">IO流</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络编程"><span class="nav-text">网络编程</span></a></li></ol></div>
             
 
           </div>
