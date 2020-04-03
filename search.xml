@@ -9,16 +9,16 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[软件架构]]></title>
-    <url>%2F%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%2F</url>
+    <title><![CDATA[软件架构详解]]></title>
+    <url>%2F%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[引言 软件架构（Software Architecture）是一系列相关的抽象模式，用于指导大型软件系统各个方面的设计。软件架构是一个系统的草图。软件架构描述的对象是直接构成系统的抽象组件。各个组件之间的连接则明确和相对细致地描述组件之间的通讯。在实现阶段，这些抽象组件被细化为实际的组件，如具体某个类或对象。轻量级JavaEE（Struts+Spring+Hibernate）重量级JavaEE（JSF+EJB+JPA） 架构模式是描述软件系统里的基本的结构组织或纲要。从定义上来看，它是在指导我们如何组织代码，是一种具有指导意义的思想，如解决系统的数据与显示分离的问题，AOP、IOC、ORM、MVC等。 框架是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法；另一种定义认为，框架是可被应用开发者定制的应用骨架。前者是从应用方面而后者是从目的方面给出的定义。Struts、MyBatis等。 设计模式是一套被反复使用、多数人知道的、经过分类编目的、代码设计经验的总结。从定义上看，它涉及到了代码级别，侧重于解决实际的现实问题。 分层架构分层架构（layered architecture）是最常见的软件架构，也是事实上的标准架构。将软件分成若干个水平层，每一层都有清晰的角色和分工，不需要知道其他层的细节。层与层之间通过接口通信。虽然没有明确约定，软件一定要分成多少层，但是四层的结构最常见。 表现层（presentation）：用户界面，负责视觉和用户互动 业务层（business）：实现业务逻辑 持久层（persistence）：提供数据，SQL语句放在这一层 数据层（database）：保存数据 事件驱动架构事件驱动架构（Event Driven Architecture，EDA）一个事件驱动框架（EDA）定义了一个设计和实现一个应用系统的方法学，在这个系统里事件可传输于松散耦合的组件和服务之间。 微核架构微核架构（microkernel architecture）又称为”插件架构”（plug-in architecture），指的是软件的内核相对较小，主要功能和业务逻辑都通过插件实现。内核（core）通常只包含系统运行的最小功能。插件则是互相独立的，插件之间的通信，应该减少到最低，避免出现互相依赖的问题。优点： 良好的功能延伸性（extensibility），需要什么功能，开发一个插件即可 功能之间是隔离的，插件可以独立的加载和卸载，使得它比较容易部署 可定制性高，适应不同的开发需要 可以渐进式地开发，逐步增加功能 缺点： 扩展性（scalability）差，内核通常是一个独立单元，不容易做成分布式 开发难度相对较高，因为涉及到插件与内核的通信，以及内部的插件登记机制 微服务架构微服务架构（microservices architecture）是服务导向架构（service-oriented architecture，缩写 SOA）的升级。每一个服务就是一个独立的部署单元（separately deployed unit）。这些单元都是分布式的，互相解耦，通过远程通信协议（比如REST、SOAP）联系。 云架构云结构（cloud architecture）主要解决扩展性和并发的问题，是最容易扩展的架构。它的高扩展性，主要原因是没使用中央数据库，而是把数据都复制到内存中，变成可复制的内存数据单元。然后，业务处理能力封装成一个个处理单元（prcessing unit）。访问量增加，就新建处理单元；访问量减少，就关闭处理单元。由于没有中央数据库，所以扩展性的最大瓶颈消失了。由于每个处理单元的数据都在内存里，最好要进行数据持久化。这个模式主要分成两部分：处理单元（processing unit）和虚拟中间件（virtualized middleware）。 处理单元：实现业务逻辑 虚拟中间件：负责通信、保持sessions、数据复制、分布式处理、处理单元的部署。]]></content>
       <categories>
         <category>软件架构</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[android-全家桶]]></title>
-    <url>%2Fandroid-%E5%85%A8%E5%AE%B6%E6%A1%B6%2F</url>
+    <title><![CDATA[android-框架篇-全家桶]]></title>
+    <url>%2Fandroid-%E6%A1%86%E6%9E%B6%E7%AF%87-%E5%85%A8%E5%AE%B6%E6%A1%B6%2F</url>
     <content type="text"><![CDATA[网络 名称 开发者 时间 备注 Retrofit Square JakeWharton OkHttp Square 2013-05-06 Volley Google 2013 适合数据量大，需要频繁通信的网络操作。不适用文件的上传下载操作。 Android-Async-Http Apache HttpClient Apache API 23:Android 6.0上被删除 HttpURLConnection JDK java.net包下 异步分发通信 名称 开发者 时间 备注 RxJava AsyncTask Google 原生 图片加载 名称 开发者 时间 Fresco Facebook 2015年3月 Glide Google 2014年 Picasso Square 2013年2月 Universal-Image-Loader nostra13 2011年9月 日志打印ARouterRxPermissionsDagger2LitePalButterKnife]]></content>
       <categories>
         <category>android</category>
@@ -29,8 +29,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-内存泄漏]]></title>
-    <url>%2Fandroid-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%2F</url>
+    <title><![CDATA[android-性能篇-内存泄漏]]></title>
+    <url>%2Fandroid-%E6%80%A7%E8%83%BD%E7%AF%87-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%2F</url>
     <content type="text"><![CDATA[内存泄漏（Memory Leak）是指程序中己动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果。 java虚拟机内存管理运行时数据区 所有线程共享的数据区：方法区（存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据）、堆（存放对象实例） 独享：虚拟机栈（执行java方法服务）、本地方法栈（Native方法服务）、程序计数器 优化分为两个方面 开发过程中避免写出有内存泄漏的代码（制定编码规范） 借助一些分析工具找出潜在的内存泄漏 触发场景持有activity对象 单例模式 静态变量 匿名内部类 属性动画 使用Handler，Activity销毁时removeCallbacksAndMessages(null); 资源未关闭（如数据库游标没有关闭，文件流没有关闭） Bitmap 分析工具LeakCanaryhttps://github.com/square/leakcanary]]></content>
       <categories>
         <category>android</category>
@@ -65,8 +65,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[跨平台框架-Vue]]></title>
-    <url>%2F%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%A1%86%E6%9E%B6-Vue%2F</url>
+    <title><![CDATA[跨平台-框架篇-Vue]]></title>
+    <url>%2F%E8%B7%A8%E5%B9%B3%E5%8F%B0-%E6%A1%86%E6%9E%B6%E7%AF%87-Vue%2F</url>
     <content type="text"><![CDATA[概览官网：https://cn.vuejs.org/项目地址：https://github.com/vuejs更新日志：https://github.com/vuejs/vue/releases兼容性：Vue 不支持 IE8 及以下版本，因为 Vue 使用了 IE8 无法模拟的 ECMAScript 5 特性。但它支持所有兼容 ECMAScript 5 的浏览器。Vue Devtools：在使用 Vue 时，我们推荐在你的浏览器上安装 Vue Devtools。它允许你在一个更友好的界面中审查和调试Vue应用。 Vue CLIVue CLI：https://cli.vuejs.org/zh/是一个基于 Vue.js 进行快速开发的完整系统。项目地址：https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue @vue/cli @vue/cli-service 项目目录│ .babelrc（babel编译参数）│ .editorconfig（代码格式）│ .eslintignore│ .eslintrc.js│ .gitignore│ .postcssrc.js（转换css工具）│ index.html（主页）│ package.json（项目配置）│ README.md（项目说明）│├─build（webpack相关配置文件）│ build.js（生产环境构建）│ check-versions.js（检查npm、node版本）│ logo.png│ utils.js│ vue-loader.conf.js│ webpack.base.conf.js（webpack基础配置）│ webpack.dev.conf.js（webpack开发环境配置）│ webpack.prod.conf.js（webpack生产环境配置）│├─config（vue基本配置文件）│ dev.env.js（项目开发环境配置）│ index.js（项目主要配置）│ prod.env.js（项目生产环境配置）│ test.env.js│├─src│ │ App.vue（根组件）│ │ main.js（入口文件）│ ││ ├─assets│ │ logo.png│ ││ ├─components（公共组件）│ │ HelloWorld.vue│ ││ └─router（路由）│ index.js│├─static（静态资源） package.json文件： scripts：指定了运行脚本命令的npm命令行缩写 dependencies：项目运行所依赖的模块 devDependencies：项目开发所需要的模块 12npm install &lt;package_name&gt; --savenpm install &lt;package_name&gt; --save-dev @vue/cli (3.x)安装：123npm install -g @vue/cli# ORyarn global add @vue/cli vue-cli (1.x or 2.x)https://github.com/vuejs/vue-cli/tree/v2#vue-cli–安装：1npm install -g vue-cli Vue Routerhttps://router.vuejs.org/zh/ 环境安装开发工具： WebStorm Node.js（npm将自动安装） 配置开发环境：https://npm.taobao.org/ 安装淘宝镜像：npm install -g cnpm –registry=https://registry.npm.taobao.org 安装webpack：cnpm install -g webpack 安装vue-cli：cnpm install -g vue-cli，验证命令vue -V main.js123456789101112131415// The Vue build version to load with the `import` command// (runtime-only or standalone) has been set in webpack.base.conf with an alias.import Vue from 'vue'import App from './App'import router from './router'Vue.config.productionTip = false/* eslint-disable no-new */new Vue(&#123; el: '#app', router, components: &#123; App &#125;, template: '&lt;App/&gt;'&#125;)]]></content>
       <categories>
         <category>前端</category>
@@ -87,8 +87,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[java-框架-Spring]]></title>
-    <url>%2Fjava-%E6%A1%86%E6%9E%B6-Spring%2F</url>
+    <title><![CDATA[java-框架篇-Spring]]></title>
+    <url>%2Fjava-%E6%A1%86%E6%9E%B6%E7%AF%87-Spring%2F</url>
     <content type="text"><![CDATA[概述Spring是于2003年兴起的一个轻量级的Java开发框架，由Rod Johnson创建。解决的是业务逻辑层和其他各层的松耦合问题。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。 EJB -&gt; Spring Framework -&gt; Spring Boot -&gt; Spring Cloud Spring Initializr:https://start.spring.io/ 优点体系结构Spring Framework下载jar包：http://repo.springsource.org/libs-release-local/org/springframework/spring/3.2.0.RELEASE/spring-framework-3.2.0.RELEASE-dist.zip项目地址：https://github.com/spring-projects/spring-framework Spring Boot项目地址：https://github.com/spring-projects/spring-boot Spring Cloud]]></content>
       <categories>
         <category>java</category>
@@ -113,7 +113,7 @@
   </entry>
   <entry>
     <title><![CDATA[java-并发]]></title>
-    <url>%2Fjava-%E5%B9%B6%E5%8F%91%2F</url>
+    <url>%2Fjava-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E5%B9%B6%E5%8F%91%2F</url>
     <content type="text"><![CDATA[线程的风险 安全性（永远不发生糟糕的事情）问题：由于多个线程要共享相同的内存地址空间，并且是并发运行，因此它们可能会访问或修改其他线程正在使用的变量。 活跃性（某件正确的事情最终会发生）问题：当某个操作无法继续执行下去时，就会发生活跃性问题。（死循环、死锁、饥饿等） 性能问题：CPU时间将更多地花在线程调度而不是线程运行上。 线程安全性正确性 原子性：原子操作是不可分割的，在执行完毕之前不会被任何其它任务或事件中断。加锁机制 对象的共享同步另一个重要的方面：内存可见性（Memory Visibility）。我们不仅希望防止某个线程正在使用对象状态而另一个线程在同时修改该状态，而且希望确保当一个线程修改了对象状态后，其他线程能够看到发生的状态变化。 可见性 重排序在没有同步的情况下，编译器、处理器以及运行时等都可能对操作的执行顺序进行一些意想不到的调整。在缺乏足够同步的多线程程序中，要想对内存操作的执行顺序进行判断，几乎无法得出正确的结论。 非原子的64位操作非volatile类型的64位数值变量（double和long）。Java内存模型要求，变量的读取操作和写入操作都必须是原子操作，但对于非volatile类型的long和double变量，JVM允许将64位的读操作或写操作分解为两个32位的操作。在多线程中，可能会读取到某个值得高32位和另一个值的低32位。 Volatile变量Java语言提供了一种稍弱的同步机制，即volatile变量，用来确保将变量的更新操作通知到其他线程。编译器与运行时都会注意到这个变量是共享的，不会讲该变量上的操作与其他内存操作一起重排序。volatile变量不会被缓存在寄存器或者对其他处理器不可见的地方。 加锁机制既可以确保可见性又可以确保原子性，而volatile变量只能确保可见性。 当且仅当满足以下所有条件时，才应该使用volatile变量： 对变量的写入操作不依赖变量的当前值，或者你能确保只有单个线程更新变量的值。 该变量不会与其他状态变量一起纳入不变性条件中。 在访问变量时不需要加锁。 发布与逸出线程封闭不变性安全发布任务执行大多数并发应用程序都是围绕“任务执行”来构造的：任务通常是一些抽象的且离散的工作单元。 串行地执行任务 显式地为任务创建线程（提升响应性和更高的吞吐率） 无限制创建线程的不足（线程生命周期的开销非常高；资源消耗，【内存】；稳定性，在可创建线程的数量上存在一个限制。） Executor框架java.util.concurrentExecutor基于生产者-消费者模式，提交任务的操作相当于生产者，执行任务的线程则相当于消费者。123456class ExecutorsExecutorService newFixedThreadPool(int nThreads)ExecutorService newCachedThreadPool(ThreadFactory threadFactory)ExecutorService newSingleThreadExecutor()/*创建了一个固定长度的线程池，而且以延迟或定时的方式来执行任务，类似于Timer */ScheduledExecutorService newScheduledThreadPool(int corePoolSize) 线程池的使用Java内存模型]]></content>
       <categories>
         <category>java</category>
@@ -124,8 +124,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-网络-OkHttp]]></title>
-    <url>%2Fandroid-%E7%BD%91%E7%BB%9C-OkHttp%2F</url>
+    <title><![CDATA[android-框架篇-OkHttp]]></title>
+    <url>%2Fandroid-%E6%A1%86%E6%9E%B6%E7%AF%87-OkHttp%2F</url>
     <content type="text"><![CDATA[概览官网https://square.github.io/okhttp/项目地址https://github.com/square/okhttpMavenhttps://search.maven.org/artifact/com.squareup.okhttp3/okhttp 工作原理源码解析历史版本4.xhttps://square.github.io/okhttp/changelog/ 4.4.0（2020-02-17）4.3.0（2019-12-31）4.2.0（2019-09-10）4.1.0（2019-08-12）4.0.0（2019-06-26）https://square.github.io/okhttp/upgrading_to_okhttp_4/ 4.0.0-RC3（2019-06-24）4.0.0-RC2（2019-06-21）4.0.0-RC1（2019-06-03）First stable preview of OkHttp 4.4.0.0-alpha01（2019-05-09） 3.xhttps://square.github.io/okhttp/changelog_3x/ 3.14.0（2019-03-14）3.5.0（2016-12-02）3.4.1（2016-07-10）3.0.0（2016-01-13）3.0.0-RC1（2016-01-02）改变项目的包名com.squareup.okhttp为okhttp3。12// Maven group ID为com.squareup.okhttp3implementation 'com.squareup.okhttp3:okhttp:3.x.x' https://jakewharton.com/java-interoperability-policy-for-major-version-updates/For major version updates in significantly foundational libraries we will take the following steps: 重命名java包名为包括版本号 将库名作为Maven group ID的一部分 重命名Maven group ID包含版本号 2.xhttps://square.github.io/okhttp/changelog_2x/ 2.0.0（2014-06-21）2.0.0-RC1（2014-05-23）1.xhttps://square.github.io/okhttp/changelog_1x/ 1.6.0（2014-05-23）1.5.0（2014-03-07）1.0.0（2013-05-06）Initial release.12345&lt;dependency&gt; &lt;groupId&gt;com.squareup.okhttp&lt;/groupId&gt; &lt;artifactId&gt;okhttp&lt;/artifactId&gt; &lt;version&gt;(insert latest version)&lt;/version&gt;&lt;/dependency&gt;]]></content>
       <categories>
         <category>android</category>
@@ -172,8 +172,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-框架-ARouter]]></title>
-    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-ARouter%2F</url>
+    <title><![CDATA[android-框架篇-ARouter]]></title>
+    <url>%2Fandroid-%E6%A1%86%E6%9E%B6%E7%AF%87-ARouter%2F</url>
     <content type="text"><![CDATA[概览 A framework for assisting in the renovation of Android componentization.帮助Android APP进行组件化改造的路由框架——支持模块间的路由、通信、解耦 GitHub地址：https://github.com/alibaba/ARouter模块：arouter-apiarouter-compilerarouter-register：注册插件进行路由表的自动加载(power by AutoRegister)arouter-idea-plugin：使用IDE插件导航到目标类，Android Studio插件市场中搜索ARouter Helper 背景随着项目的发展，功能模块增多，无法避免面临以下问题： 项目编译时间变长 代码牵一发而动全身，项目维护难度增大 耦合代码与业务造成冲突，极大降低开发效率 组件化应运而生： 使功能模块可以独立开发、编译调试，降低项目编译时间提高开发效率 使功能模块间进行解耦 组件化问题：代码解耦的同时阻断了彼此的通信。Android原生可以实现，但是造成代码耦合，违背组件化目的，有没有简单易管理的通信方案？ARouter应运而生 应用场景 外部URL映射到内部页面，以及参数传递与解析 跨模块页面跳转，模块间解耦 拦截跳转过程，处理登录、埋点等逻辑 跨模块API调用，通过控制反转来做组件解耦 工作原理使用声明拦截器拦截跳转过程，面向切面编程123456789101112131415161718// 比较经典的应用就是在跳转过程中处理登陆事件，这样就不需要在目标页重复做登陆检查// 拦截器会在跳转之间执行，多个拦截器会按优先级顺序依次执行@Interceptor(priority = 8, name = "测试用拦截器")public class TestInterceptor implements IInterceptor &#123; @Override public void process(Postcard postcard, InterceptorCallback callback) &#123; ... callback.onContinue(postcard); // 处理完成，交还控制权 // callback.onInterrupt(new RuntimeException("我觉得有点异常"));// 觉得有问题，中断路由流程 // 以上两种至少需要调用其中一种，否则不会继续路由 &#125; @Override public void init(Context context) &#123; // 拦截器的初始化，会在sdk初始化的时候调用该方法，仅会调用一次 &#125;&#125; 源码解析源码分为arouter-annotation、arouter-api、arouter-compiler三部分 arouter-annotation声名注解： @Autowired @Interceptor @Route 123456789101112131415161718192021222324252627282930@Target(&#123;ElementType.TYPE&#125;)@Retention(RetentionPolicy.CLASS)public @interface Route &#123; /** * Path of route */ String path(); /** * Used to merger routes, the group name MUST BE USE THE COMMON WORDS !!! */ String group() default ""; /** * Name of route, used to generate javadoc. */ String name() default ""; /** * Extra data, can be set by user. * Ps. U should use the integer num sign the switch, by bits. 10001010101010 */ int extras() default Integer.MIN_VALUE; /** * The priority of route. */ int priority() default -1;&#125;]]></content>
       <categories>
         <category>android</category>
@@ -185,8 +185,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-框架-RxJava]]></title>
-    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-RxJava%2F</url>
+    <title><![CDATA[android-框架篇-RxJava]]></title>
+    <url>%2Fandroid-%E6%A1%86%E6%9E%B6%E7%AF%87-RxJava%2F</url>
     <content type="text"><![CDATA[概览 RxJava: Reactive Extensions for the JVM RxJava is a Java VM implementation of Reactive Extensions: a library for composing asynchronous and event-based programs by using observable sequences. It extends the observer pattern to support sequences of data/events and adds operators that allow you to compose sequences together declaratively while abstracting away concerns about things like low-level threading, synchronization, thread-safety and concurrent data structures. GitHub地址：https://github.com/ReactiveX/RxJavamaven central：https://search.maven.org/search?q=io.reactivex.rxjavahttps://search.maven.org/artifact/io.reactivex.rxjava2/rxjava/2.2.8/jar Version 2.xJavadoc：http://reactivex.io/RxJava/2.x/javadoc/ single dependency: Reactive-Streams continued support for Java 6+ &amp; Android 2.3+ performance gains through design changes learned through the 1.x cycle and through Reactive-Streams-Commons research project. Java 8 lambda-friendly API non-opinionated about source of concurrency (threads, pools, event loops, fibers, actors, etc) async or synchronous execution virtual time and schedulers for parameterized concurrency Version 2.x and 1.x will live side-by-side for several years. They will have different group ids (io.reactivex.rxjava2 vs io.reactivex) and namespaces (io.reactivex vs rx).See the differences between version 1.x and 2.x in the wiki article What’s different in 2.0. Learn more about RxJava in general on the Wiki Home. Gradle依赖:1implementation 'io.reactivex.rxjava2:rxjava:2.x.y' Version 1.xJavadoc：http://reactivex.io/RxJava/1.x/javadoc/The 1.x version is end-of-life as of March 31, 2018. No further development, support, maintenance, PRs and updates will happen. The Javadoc of the very last version, 1.3.8, will remain accessible. 工作原理RxJava 2.2.02018年7月31日发布 RxJava 2.1.02017年4月29日发布 RxJava 2.0.02016年10月29日发布，v2.0.0What’s different in 2.0 背压策略RxJava 1.3.8(1.x EOL)2018年3月31日发布RxJava 1.x is now officially end-of-life (EOL). RxJava 1.2.22016年11月3日发布 RxJava 1.0.02014年11月18日发布，v1.0.0VersioningVersion 1.x is now a stable API and will be supported for several years.1io.reactivex:rxjava:1.0.0]]></content>
       <categories>
         <category>android</category>
@@ -212,8 +212,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-框架-图片加载]]></title>
-    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%2F</url>
+    <title><![CDATA[android-框架篇-图片加载]]></title>
+    <url>%2Fandroid-%E6%A1%86%E6%9E%B6%E7%AF%87-%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%2F</url>
     <content type="text"><![CDATA[Fresco概览2015年3月Facebook开源的图片框架。https://www.fresco-cn.org/docs/index.html项目地址：https://github.com/facebook/fresco 工作原理源码解析优缺点优点：缺点： 框架大，影响APK大小 使用繁琐 Glide概览2014年Google员工在Picasso基础上进行优化。项目地址：https://github.com/bumptech/glide 工作原理源码解析优缺点Picasso概览2013年2月Square开源的项目。项目地址：https://github.com/square/picasso 工作原理源码解析优缺点Universal-Image-Loader概览2011年9月nostra13开发。项目地址：https://github.com/nostra13/Android-Universal-Image-Loader 工作原理源码解析优缺点]]></content>
       <categories>
         <category>android</category>
@@ -224,8 +224,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-安全]]></title>
-    <url>%2Fandroid-%E5%AE%89%E5%85%A8%2F</url>
+    <title><![CDATA[android-安全篇]]></title>
+    <url>%2Fandroid-%E5%AE%89%E5%85%A8%E7%AF%87%2F</url>
     <content type="text"><![CDATA[混淆反编译加固梆梆加固、爱加密、娜迦、360加固保、腾讯加固、百度加固 常见APP漏洞及风险 静态破解：ApkTool、dex2jar、jd-gui、DDMS、签名工具 二次打包 本地储存数据窃取 界面截取 输入法攻击 协议抓取]]></content>
       <categories>
         <category>android</category>
@@ -236,8 +236,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-框架-异步分发通信]]></title>
-    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-%E5%BC%82%E6%AD%A5%E5%88%86%E5%8F%91%E9%80%9A%E4%BF%A1%2F</url>
+    <title><![CDATA[android-框架篇-异步分发通信]]></title>
+    <url>%2Fandroid-%E6%A1%86%E6%9E%B6%E7%AF%87-%E5%BC%82%E6%AD%A5%E5%88%86%E5%8F%91%E9%80%9A%E4%BF%A1%2F</url>
     <content type="text"><![CDATA[RxJava目前大多数开发者使用EventBus或Otto作为事件总线通信库，对于RxJava使用者来说，RxJava也可以轻松实现事件总线。 EventBusOttoRxAndroidRxBinding]]></content>
       <categories>
         <category>android</category>
@@ -256,8 +256,8 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[JavaScript-基础知识]]></title>
-    <url>%2FJavaScript-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <title><![CDATA[JavaScript-学习篇-基础知识]]></title>
+    <url>%2FJavaScript-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
     <content type="text"><![CDATA[概览 1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。JavaScript是按ECMAScript规范实现的一种脚本语言，其他的还有JScript、ActionScript。这三种语言还提供了ECMA规范外的额外功能。 完整的JavaScript实现由3个不同部分组成： ECMAScript：核心 文档对象模型（DOM）：是HTML和XML的应用程序接口。DOM将把整个页面规划成由节点层级构成的文档。 浏览器对象模型（BOM） 基础概念： 程序是用Unicode字符集编写的。 区分大小写。 产量是弱类型的。 每行结尾的分号可有可无。 标识符（用来对变量和函数进行命名）必须以字母、下划线、美元符开始。 不区分整数值和浮点数值。所有数字均用浮点数值表示。 字符串是不可变的。 数据类型数据类型分为两类： 原始类型（5种：Number、String、Boolean、null、undefined） 对象类型 ECMAScript没有字符类型，可用双引号或单引号声明字符串。布尔值、数字、字符串的原始值的有趣之处在于它们是伪对象，这意味着它们实际上具有属性和方法。 Number类型ECMAScript默认把具有6个或6个以上前导0的浮点数转换成科学计数法。Number.MAX_VALUENumber.MIN_VALUENaN（Not a Number）表示非数。不能用于算术计算；它与自身不相等。函数isNaN String类型字符串字面量是由双引号或单引号声明的。而Java则是用双引号声明字符串，用单引号声明字符。由于ECMAScript没有字符类型，所以可使用这两种表示法中的任何一种。 类型转换JavaScript可以自由地进行数据类型转换。字符串转换成数字：parseInt()和parseFloat()。强制类型转换 引用类型对象是属性的集合，每个属性都由“名/值对”构成。 Object类 Boolean Number String 变量、常量变量是无类型的，变量可以被赋予任何类型的值，同样一个变量也可以重新赋予不同类型的值。使用var关键字来声明变量。当声明的变量未初始化时，该变量的默认值是undefined。123// 如果未在声名语句中指定变量初始值，默认初始值为undefinedvar i;var i, j; 变量作用域 函数定义是可以嵌套的。 JavaScript使用了函数作用域(function scope)：变量在声明它们的函数体以及这个函数体嵌套的任意函数体内都是有定义的。 1234567var scope = "global";function f() &#123; console.log(scope);// 输出“undefined”，而不是“global” var scope = "local";// 变量在这里赋值初始化，但变量本身在函数体内任何地方均是有定义的 console.log(scope);// 输出“local”&#125;f() 全局变量在程序中始终都是有定义的；局部变量在声明它的函数体内以及其所嵌套的函数内始终是有定义的。 运算符与表达式运算符分类： 算术运算符：+、-、*、/、%等 一元操作：++、– 逻辑运算符：!、&amp;&amp;、|| 关系运算符 赋值操作：=、复合赋值（+=、-=、*=、/=） 特殊运算符：delete、instanceof、typeof typeof：检测操作数类型delete：删除属性\=\=\=：判断恒等，无类型转换返回true!==：判断非恒等 语句 条件语句：if/else、switch 循环语句：while、do/while、for、for/in 跳转语句，让解释器跳转至程序的其他部分继续执行，如break、return、throw JavaScript中没有块级作用域，在语句块（花括号括起来的多条语句）中声名的变量并不是语句块私有的。 对象JavaScript除了字符串、数字、true、false、null和undefined之外，其他值都是对象。创建对象的方式： 对象直接量。由若干名/值对组成的映射表，名/值对中间用冒号分隔，之间用逗号分隔，整个映射表用花括号括起来。属性名可以是JavaScript标识符也可以是字符串直接量；属性值可以是任意类型的JavaScript表达式。 12345678910// 没有任何属性的对象var empty = &#123;&#125;; // 两个属性var p = &#123;id: 3, age: 56&#125;;var phone = &#123; "s color": "red", manufacture: &#123; name: "xx" &#125;&#125;; 通过new创建对象。 函数JavaScript里，函数即对象，程序可以随意操控它们。JavaScript的函数可以嵌套在其他函数中定义，这样它们就可以访问它们被定义时所处的作用域中的任何变量。123456// 函数定义两种写法var f = function(x) &#123; return x+1; &#125;function f(x) &#123; return x+1; &#125; 1234567function p(o) &#123; for(var p in o) &#123; console.log(p + ":" + o[p] + "\n"); &#125;&#125;var s = &#123;x:1, y:2&#125;;p(s) 数组console console.log() console.error() console.warn() console.info() 常用浏览器 Chrome Internet Explorer：简称IE。 Firefox Safari Opera 参考 JavaScript权威指南（第6版） JavaScript高级程序设计（第3版） Nicholas C.Zakas 著]]></content>
       <categories>
         <category>JavaScript</category>
@@ -267,8 +267,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[CSS基础知识]]></title>
-    <url>%2FCSS%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <title><![CDATA[CSS-学习篇-基础知识]]></title>
+    <url>%2FCSS-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
     <content type="text"><![CDATA[简介CSS指层叠样式表 (Cascading Style Sheets)。CSS语法由两个主要的部分构成：选择器（HTML元素），以及一条或多条声明：12345678910/*添加注释*/selector, ...selector5 &#123; property: value; ...&#125; p &#123; color: red; text-align: center;&#125; 标签选择器：A {} id选择器：#name {} 类选择器：.name {} 派生选择器：A B {} .name A {} 或 #name A {} 属性选择器：[属性] {}、[属性=xxx] {}、[属性~=xxx] {} A&gt;B {} 通用选择器：* {} 相邻选择器：A+B {} A~B {} CSS的创建内联样式 &gt; 内部样式 &gt; 外部样式 &gt; 浏览器默认样式外部样式：123&lt;head&gt; &lt;link rel="stylesheet" type="text/css" href="mystyle.css" /&gt;&lt;/head&gt; 内部样式：12345678910111213&lt;head&gt; &lt;style&gt; hr &#123; color: red; &#125; p &#123; margin-left: 10px; &#125; body &#123; background-image: url("images/xxx.gif"); &#125; &lt;/style&gt;&lt;/head&gt; 内联样式：1&lt;p style="color: red;margin-top: 10px"&gt;这是一个段落&lt;/p&gt; 背景（background） 属性 说明 值 版本 background background-attachment background-color background-image background-position background-repeat 文本（text） 属性 说明 值 版本 color 颜色 red、#ff0000、rgb(255,0,0)、inherit CSS1 direction 方向 ltr(默认)、rtl、inherit CSS2 line-height 行高 CSS1 letter-spacing text-align text-decoration 向文本添加修饰 text-indent 缩进元素中文本的首行 text-shadow text-transform unicode-bidi white-space word-spacing 字体（font） 属性 说明 值 版本 font font-family font-size font-size-adjust font-stretch font-style font-variant font-weight 粗细 链接列表（list）表格轮廓（outline）position（定位）overflowfloat（浮动）CSS发展历程CSS32005年12月，W3C开始CSS3标准的制定。 参考https://www.w3school.com.cn/index.html]]></content>
       <categories>
         <category>前端</category>
@@ -278,8 +278,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[HTML基础知识]]></title>
-    <url>%2FHTML%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <title><![CDATA[HTML-学习篇-基础知识]]></title>
+    <url>%2FHTML-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
     <content type="text"><![CDATA[基础123&lt;!DOCTYPE html&gt;：声明为HTML5文档。&lt;html&gt;根元素&lt;/html&gt;&lt;body&gt;页面内容&lt;/body&gt; 1234567&lt;!--页面标签--&gt;&lt;h1&gt;-&lt;h6&gt;：HTML标题&lt;p&gt;段落&lt;/p&gt;&lt;br/&gt;：换行&lt;hr/&gt;：水平线&lt;div&gt;组合其他标签的容器&lt;/div&gt; head12345678910111213141516171819202122232425262728293031&lt;head&gt;&lt;!--&lt;meta&gt;标签提供了元数据，元数据不显示在页面上，但会被浏览器解析。--&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="description" content="定义网页描述内容"&gt;&lt;meta name="author" content="定义网页作者"&gt;&lt;!--3秒刷新网页--&gt;&lt;meta http-equiv="refresh" content="3"&gt;&lt;!--为搜索引擎定义关键字--&gt;&lt;meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"&gt;&lt;title&gt;网页标题&lt;/title&gt;&lt;!--标题左侧显示logo--&gt;&lt;link rel="shortcut icon" href="图片url"&gt;&lt;!--HTML文档中所有的链接标签的默认链接--&gt;&lt;base href="http://www.test.com/images/" target="_blank"&gt;&lt;!--HTML文档与外部资源之间的关系，通常用于链接到样式表--&gt;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;&lt;!--HTML文档的样式文件引用地址或自定义样式--&gt;&lt;style type="text/css"&gt;body &#123;background-color:yellow&#125;p &#123;color:green&#125;&lt;/style&gt;&lt;!--加载脚本文件--&gt;&lt;script&gt; ...&lt;/script&gt;&lt;/head&gt; 链接12&lt;!--使用target属性，可以定义链接在哪个窗口显示。_blank表示在新窗口显示--&gt;&lt;a href="http://www.liuweidong.club/" target="_blank"&gt;测试链接&lt;/a&gt; 图片123456789101112&lt;!--html文件与图片在不同盘符--&gt;&lt;img src="file:///f:/*.jpg" width="500" height="300"/&gt;&lt;!--html文件与图片在相同目录--&gt;&lt;img src="*.jpg" width="500" height="300"/&gt; &lt;!--html文件与image文件夹在相同目录--&gt;&lt;img src="image/*.jpg/"width="500" height="300"/&gt;&lt;!--html文件与图片的父文件夹在相同目录--&gt;&lt;img src="../image/*.jpg/"width="500" height="300"/&gt;&lt;!--网络图片--&gt;&lt;img src="http://www.test.com/images/test.png" width="500" height="300"/&gt;&lt;img src="url" alt="图片加载不出来时，替换图片的文本"/&gt; 列表12345678910111213&lt;!--无序列表--&gt;&lt;ul&gt; &lt;li&gt;A&lt;/li&gt; &lt;li&gt;B&lt;/li&gt; &lt;li&gt;C&lt;/li&gt;&lt;/ul&gt;&lt;!--有序列表，start属性可以指定从特定数字开始--&gt;&lt;ol start="3"&gt; &lt;li&gt;A&lt;/li&gt; &lt;li&gt;B&lt;/li&gt; &lt;li&gt;C&lt;/li&gt;&lt;/ol&gt; 格式化123456&lt;b&gt;加粗&lt;/b&gt;&lt;i&gt;斜体&lt;/i&gt;&lt;del&gt;删除&lt;/del&gt;&lt;ins&gt;下划线&lt;/ins&gt;&lt;sub&gt;下标&lt;/sub&gt;&lt;sup&gt;上标&lt;/sup&gt; HTML CSS123456789101112131415161718&lt;!--方式一 内联样式 在HTML元素中使用"style"属性--&gt;&lt;!--background-color：背景色；font-family：字体；color：文字颜色；margin-left：左边距； text-align：文本对齐方式；--&gt;&lt;h2 style="background-color:red;"&gt;标题&lt;/h2&gt;&lt;p style="font-family:arial;color:blue;font-size:20px;margin-left:20px;"&gt;段落&lt;/p&gt;&lt;h1 style="text-align:center;"&gt;居中对齐的标题&lt;/h1&gt;&lt;!--方式二 内部样式--&gt;&lt;head&gt;&lt;style type="text/css"&gt;body &#123;background-color:yellow;&#125;p &#123;color:blue;&#125;&lt;/style&gt;&lt;/head&gt;&lt;!--方式三 外部样式--&gt;&lt;head&gt;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;&lt;/head&gt; 注意：如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。 HTML发展历程HTML5（2014/10/28）12345678910&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt; &lt;meta charset="UTF-8"&gt; &lt;title&gt;Title&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt; 废弃元素：123456789101112&lt;acronym&gt;&lt;applet&gt;&lt;basefont&gt;&lt;big&gt;&lt;center&gt;&lt;dir&gt;&lt;font&gt;&lt;frame&gt;&lt;frameset&gt;&lt;noframes&gt;&lt;strike&gt;&lt;tt&gt;]]></content>
       <categories>
         <category>前端</category>
@@ -289,8 +289,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-View-滑动]]></title>
-    <url>%2Fandroid-View-%E6%BB%91%E5%8A%A8%2F</url>
+    <title><![CDATA[android-学习篇-View滑动]]></title>
+    <url>%2Fandroid-%E5%AD%A6%E4%B9%A0%E7%AF%87-View%E6%BB%91%E5%8A%A8%2F</url>
     <content type="text"><![CDATA[滑动是实现绚丽的自定义控件的基础。 基础知识MotionEvent事件类型 ACTION_DOWN：手指刚接触屏幕 ACTION_MOVE：手指在屏幕上移动 ACTION_UP：手指从屏幕上松开的一瞬间 getX/getY：相对于当前View左上角的坐标getRawX/getRawY：相对于手机屏幕左上角的坐标 TouchSlop系统所能识别的滑动最小距离。常量值，与设备有关。1ViewConfiguration.get(getContext()).getScaledTouchSlop() VelocityTracker速度追踪，手指在滑动过程中的速度（一段时间内手指滑过的像素数）。123456789101112// onTouchEvent方法中使用VelocityTracker velocityTracker = VelocityTracker.obtain();velocityTracker.addMovement(event);// 滑动速度velocityTracker.computeCurrentVelocity(1000);int xVelocity = (int) velocityTracker.getXVelocity();int yVelocity = (int) velocityTracker.getYVelocity();// 重置回收velocityTracker.clear();velocityTracker.recycle(); 滑动冲突]]></content>
       <categories>
         <category>android</category>
@@ -301,8 +301,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-View-事件分发]]></title>
-    <url>%2Fandroid-View-%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%2F</url>
+    <title><![CDATA[android-学习篇-View事件分发机制]]></title>
+    <url>%2Fandroid-%E5%AD%A6%E4%B9%A0%E7%AF%87-View%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6%2F</url>
     <content type="text"><![CDATA[点击事件的分发，其实就是对MotionEvent事件的分发过程，产生MotionEvent后，系统需要把这个事件传递给一个具体的View，而这个传递的过程就是分发过程。 事件传递的三个阶段： 分发（Dispatch）：事件分发对应dispatchTouchEvent方法。方法返回值true表示事件被当前视图消费掉，不再继续分发事件；方法返回值是super.dispatchTouchEvent表示继续分发该事件。如果当前视图是ViewGroup及其子类，则会调用onInterceptTouchEvent方法判定是否拦截该事件。 拦截（Intercept）：事件拦截对应onInterceptTouchEvent方法，这个方法只在ViewGroup及其子类中存在，在View和Activity中是不存在的。返回true，不会继续传递给子View，返回false或父类同名方法，则事件会继续传递给子View。 消费（Consume）：事件的消费对应着onTouchEvent。方法返回值true表示当前视图可以处理对应的事件，事件不会向上传递给父视图；返回值为false表示当前视图不处理这个事件，事件会传递给父视图的onTouchEvent方法进行处理。]]></content>
       <categories>
         <category>android</category>
@@ -313,8 +313,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-View-工作原理]]></title>
-    <url>%2Fandroid-View-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%2F</url>
+    <title><![CDATA[android-学习篇-View工作原理]]></title>
+    <url>%2Fandroid-%E5%AD%A6%E4%B9%A0%E7%AF%87-View%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%2F</url>
     <content type="text"><![CDATA[UI层级Android UI层级如下图： Activity是Android的四大组件之一，与用户交互的窗口。 Window是抽象类，具体实现类是PhoneWindow。Android中的视图都是附加在Window上的，因此Window实际是View的直接管理者，Window和View通过ViewRootImpl来建立联系。Activity中的方法setContentView也是通过Window来完成的。（接口WindowManager继承ViewManager） Activity对象被创建完毕后，会将DecorView添加到Window中，同时会创建ViewRootImpl对象，并将ViewRootImpl对象和DecorView建立关联。 基础知识MeasureSpec32位int值，高2位表示SpecMode测量模式，低30位表示SpecSize某种测量模式下的规格大小。 SpecMode UNSPECIFIED：不指定测量模式。父视图没有限制子视图的大小，子视图可以是想要的任何尺寸。 EXACTLY：精确测量模式。View的测量值就是SpecSize。match_parent AT_MOST：最大值模式。子视图的尺寸可以是不超过父视图允许的最大尺寸的任何尺寸。wrap_content LayoutParamsView绘制流程Measure（测量） [View的测量过程] View的measure（final，子类不能重写该方法）方法进行测量，measure方法会调用View的onMeasure方法。源码如下：123456789101112131415161718192021222324252627282930protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) &#123; setMeasuredDimension(getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec), getDefaultSize(getSuggestedMinimumHeight(), heightMeasureSpec));&#125;/** * Utility to return a default size. Uses the supplied size if the * MeasureSpec imposed no constraints. Will get larger if allowed * by the MeasureSpec. * * @param size Default size for this view * @param measureSpec Constraints imposed by the parent * @return The size this view should be. */public static int getDefaultSize(int size, int measureSpec) &#123; int result = size; int specMode = MeasureSpec.getMode(measureSpec); int specSize = MeasureSpec.getSize(measureSpec); switch (specMode) &#123; case MeasureSpec.UNSPECIFIED: result = size; break; case MeasureSpec.AT_MOST: case MeasureSpec.EXACTLY: result = specSize; break; &#125; return result;&#125; [ViewGroup的测量过程] ViewGroup测量完自身后，还会遍历调用所有子View的measure方法。ViewGroup为抽象类，因此没有重写View的onMeasure方法，但是提供了方法measureChildren。源码如下：12345678910111213141516171819202122232425262728293031323334353637383940/** * Ask all of the children of this view to measure themselves, taking into * account both the MeasureSpec requirements for this view and its padding. * We skip children that are in the GONE state The heavy lifting is done in * getChildMeasureSpec. * * @param widthMeasureSpec The width requirements for this view * @param heightMeasureSpec The height requirements for this view */protected void measureChildren(int widthMeasureSpec, int heightMeasureSpec) &#123; final int size = mChildrenCount; final View[] children = mChildren; for (int i = 0; i &lt; size; ++i) &#123; final View child = children[i]; if ((child.mViewFlags &amp; VISIBILITY_MASK) != GONE) &#123; measureChild(child, widthMeasureSpec, heightMeasureSpec); &#125; &#125;&#125;/** * Ask one of the children of this view to measure itself, taking into * account both the MeasureSpec requirements for this view and its padding. * The heavy lifting is done in getChildMeasureSpec. * * @param child The child to measure * @param parentWidthMeasureSpec The width requirements for this view * @param parentHeightMeasureSpec The height requirements for this view */protected void measureChild(View child, int parentWidthMeasureSpec, int parentHeightMeasureSpec) &#123; final LayoutParams lp = child.getLayoutParams(); final int childWidthMeasureSpec = getChildMeasureSpec(parentWidthMeasureSpec, mPaddingLeft + mPaddingRight, lp.width); final int childHeightMeasureSpec = getChildMeasureSpec(parentHeightMeasureSpec, mPaddingTop + mPaddingBottom, lp.height); child.measure(childWidthMeasureSpec, childHeightMeasureSpec);&#125; 注意：测量完成后，通过getMeasuredWidth与getMeasuredHeight获取宽高。onMeasure方法中可能不准确，在onLayout方法中获取比较靠谱。 Activity中获取View宽高的方式：方法1：view.post(runnable)，将runnable添加到消息队列的末尾，等待Looper调用时，View完成初始化。方法2：Activity中重写方法onWindowFocusChanged。弊端：页面焦点改变时，该方法就会被调用。方法3：ViewTreeObserver - onGlobalLayoutListener，View树的状态发生改变或内部View可见性发生改变时，onGlobalLayout方法将被回调。弊端：onGlobalLayout会被多次调用。方法4：measure(int widthMeasureSpec, int heightMeasureSpec) Layout（布局）Draw（绘制）]]></content>
       <categories>
         <category>android</category>
@@ -336,8 +336,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-widget-图表]]></title>
-    <url>%2Fandroid-widget-%E5%9B%BE%E8%A1%A8%2F</url>
+    <title><![CDATA[android-组件篇-图表]]></title>
+    <url>%2Fandroid-%E7%BB%84%E4%BB%B6%E7%AF%87-%E5%9B%BE%E8%A1%A8%2F</url>
     <content type="text"><![CDATA[MPAndroidChartHelloChartsWilliamChart]]></content>
       <categories>
         <category>android</category>
@@ -348,8 +348,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-API-Handler]]></title>
-    <url>%2Fandroid-API-Handler%2F</url>
+    <title><![CDATA[android-学习篇-Handler]]></title>
+    <url>%2Fandroid-%E5%AD%A6%E4%B9%A0%E7%AF%87-Handler%2F</url>
     <content type="text"><![CDATA[背景有时候需要在子线程中进行耗时的I/O操作，读取文件或者访问网络等，当耗时操作完成以后可能需要在UI上做一些改变，由于Android开发规范的限制，不能在子线程中访问UI控件，否则就会触发程序异常，这个时候通过Handler就可以将更新UI的操作切换到主线程中执行。 主要用途 to schedule messages and runnables to be executed as some point in the future; to enqueue an action to be performed on a different thread than your own. 相关类 Looper（消息循环） Message（消息） MessageQueue（存储消息） Handler]]></content>
       <categories>
         <category>android</category>
@@ -429,8 +429,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-框架-日志打印]]></title>
-    <url>%2Fandroid-%E6%A1%86%E6%9E%B6-%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0%2F</url>
+    <title><![CDATA[android-框架篇-日志打印]]></title>
+    <url>%2Fandroid-%E6%A1%86%E6%9E%B6%E7%AF%87-%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0%2F</url>
     <content type="text"><![CDATA[Logger概览工作原理源码解析]]></content>
       <categories>
         <category>android</category>
@@ -747,7 +747,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[面向对象六大原则]]></title>
+    <title><![CDATA[设计模式-面向对象六大原则]]></title>
     <url>%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99%2F</url>
     <content type="text"><![CDATA[概览系统开发过程中，最难的不是完成系统的开发工作，而是在于后续的升级、维护过程中让系统能够拥抱变化。拥抱变化也就意味着在满足需求且不破坏系统稳定性的前提下保持高可扩展性、高内聚、低耦合，经历各版本的变更之后依然保持清晰、灵活、稳定的系统架构。当然，这是比较理想的情况，但我们必须朝着这个方向去努力，那么遵循面向对象六大原则就是我们走向灵活软件之路所迈出的第一步。 软件的可维护性和可复用性。 好的系统设计应该具备如下三个性质： 可扩展性（Extensibility） 灵活性（Flexibility） 可插入性（Pluggability） 可维护性较低的系统设计，通常有如下几个原因： 复用率低（Immobility） 黏度过高（Viscosity） 脆弱 僵硬 这些原则并不是孤立存在的，它们相互依赖，相互补充。 开闭原则（OCP）Open Close Principle，缩写OCP。开闭原则由Bertrand Meyer（勃兰特·梅耶）于1988年出版的《面向对象软件构造》一书中提出。抽象化是开闭原则的关键。 定义：软件中的对象（类、模块、函数等）应该对于扩展是开放的，对于修改是封闭的。 软件开发过程中，最不会变化的就是变化本事。 依赖倒置原则（DIP）Dependence Inversion Principle，缩写DIP。 定义：依赖倒置原则指代了一种特定的解耦形式，使得高层次的模块不依赖于低层次模块的实现细节的目的，依赖模块被颠倒了。 高层模块不应该依赖低层模块，两者都应该依赖其抽象 抽象不应该依赖细节 细节应该依赖抽象 java语言中，抽象就是指接口或抽象类，两者都不可以直接被实例化；细节就是实现类。高层模块就是调用端，低层模块就是具体实现类。 里氏替换原则（LSP）Liskov Substitution Principle，缩写LSP。 定义：所有引用基类的地方必须能透明地使用其子类的对象。 单一职责原则（SRP）Single Responsibility Principle，缩写SRP。 定义：就一个类而言，应该仅有一个引起它变化的原因。 接口隔离原则（ISP）InterfaceSegregation Principles，缩写ISP。 定义：客户端不应该依赖它不需要的接口。 迪米特原则（LOD）Law of Demeter，缩写LOD，也称为最少知识原则。 定义：一个对象应该对其他对象有最少的了解。 Only talk to your immedate friends。只与直接的朋友通信。？？？每个对象都必然会与其他对象有耦合关系，两个对象之间的耦合就称为朋友关系，如依赖、关联、组合、聚合等。 类应该对自己需要耦合或调用的类知道得最少，类的内部如何实现与调用者或依赖者没有关系，调用者或者依赖者只需要知道它需要的方法即可，其他的可一概不用管。类与类之间关系越密切，耦合度越大，当一个类发生改变时，对另一个类的影响也越大。软件总的原则：低耦合、高内聚。]]></content>
       <categories>
@@ -770,8 +770,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[java-JVM]]></title>
-    <url>%2Fjava-JVM%2F</url>
+    <title><![CDATA[java-虚拟机JVM]]></title>
+    <url>%2Fjava-%E8%99%9A%E6%8B%9F%E6%9C%BAJVM%2F</url>
     <content type="text"><![CDATA[java内存区域Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。 程序计数器 栈 本地方法栈 堆 方法区 方法区（加载类信息）—入栈—&gt;栈（方法执行）——&gt;堆（存储对象实例）方法执行时入栈，执行完后出栈。 程序计数器程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。 栈与程序计数器一样，Java虚拟机栈也是线程私有的，它的生命周期与线程相同。虚拟机栈描述的是java方法执行的内存模型：每个方法在执行的同时都会创建一个栈帧用于存储局部变量表、操作数栈、动态链接、方法出口等信息。 本地方法栈与虚拟机栈所发挥的作用是非常相似的，它们之间的区别不过是虚拟机栈为虚拟机执行Java方法（也就是字节码）服务，而本地方法栈则为虚拟机使用到的Native方法服务。 堆对于大多数应用来说，java堆是java虚拟机所管理的内存中最大的一块。java堆是被所有线程共享的一块内存区域，在虚拟机启动时创建。此内存区域的唯一目的就是存放对象实例，几乎所有的对象实例都在这里分配内存。java虚拟机规范中的描述：所有的对象实例以及数组都要在堆上分配，但是随着JIT编译器的发展与逃逸分析技术逐渐成熟，栈上分配、标量替换优化技术将会导致一些微妙的变化发生，所有的对象都分配在堆上也逐渐变得不是那么”绝对“了。从内存回收的角度来看，由于现在收集器基本都采用分代收集算法，所以Java堆中还可以细分为：新生代和老年代；再细致一点的有Eden空间、From Survivor空间、To Survivor空间等。 方法区方法区与java堆一样，是各个线程共享的内存区域，用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。 垃圾收集器与内存分配策略思考GC需要完成的3件事情： 哪些内存需要回收 什么时候回收 如何回收 垃圾收集算法标记-清除算法缺点： 效率问题，标记和清除两个过程的效率都不高； 空间问题，标记清除之后会产生大量不连续的内存碎片，空间碎片太多可能会导致以后在程序运行过程中需要分配较大对象时，无法找到足够的连续内存而不得不提前触发另一次垃圾收集动作。 复制算法将可用内存按容量划分为大小相等的两块，每次只使用其中的一块。当这一块的内存用完了，就将还存活着的对象复制到另外一块上面，然后再把已使用过的内存空间一次清理掉。 标记-整理算法复制收集算法在对象存活率较高时就要进行较多的复制操作，效率将会变低。 分代收集算法java内存模型java内存模型（Java Memory Model，JMM）的主要目标是定义程序中各个变量的访问规则，即在虚拟机中将变量存储到内存和从内存中取出变量这样的底层细节。]]></content>
       <categories>
         <category>java</category>
@@ -804,8 +804,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-API-Fragment]]></title>
-    <url>%2Fandroid-API-Fragment%2F</url>
+    <title><![CDATA[android-学习篇-Fragment]]></title>
+    <url>%2Fandroid-%E5%AD%A6%E4%B9%A0%E7%AF%87-Fragment%2F</url>
     <content type="text"><![CDATA[概览Android 3.0（API级别11）中引入了Fragment，主要是为了给大屏幕（如平板电脑）上更加动态和灵活的 UI 设计提供支持。由于平板电脑的屏幕比手机屏幕大得多，因此可用于组合和交换 UI 组件的空间更大。利用片段实现此类设计时，您无需管理对视图层次结构的复杂更改。 Fragment表示Activity中的行为或用户界面部分。Fragment必须始终嵌入在Activity中，其生命周期直接受宿主Activity生命周期的影响。 可以将多个Fragment组合在一个Activity中来构建多窗格UI，以及在多个Activity中重复使用某个片段。 可以将Fragment视为Activity的模块化组成部分，它具有自己的生命周期，能接收自己的输入事件。 可以在Activity运行时添加或移除Fragment。 优势： 模块化（Modularity）：不必把所有代码全部写在Activity中，而是把代码写在各自的Fragment中。 可重用（Reusability）：多个Activity可以重用一个Fragment。 可适配（Adaptability）：根据硬件的屏幕尺寸、屏幕方向，能够方便地实现不同的布局，这样用户体验更好。 生命周期lifecycle onAttach()：Fragment与Activity关联时调用。 onCreate()：创建Fragment时调用。 onCreateView()：首次绘制其用户界面时调用。 onActivityCreated()：在Activity的onCreate()方法已返回时调用。 FragmentManagerFragmentManager findFragmentById() findFragmentByTag() popBackStack()：将Fragment从返回栈中弹出。 addOnBackStackChangedListener()：返回栈变化监听。 FragmentTransactionFragmentTransaction根据用户行为执行添加add()、移除remove()、替换replace()以及其他操作的事务。12345678// Activity中获取FragmentTransaction实例FragmentManager fragmentManager = getFragmentManager();FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();// add()ExampleFragment fragment = new ExampleFragment();fragmentTransaction.add(R.id.fragment_container, fragment);fragmentTransaction.commit(); 以下示例说明了如何将一个片段替换成另一个片段，以及如何在返回栈中保留先前状态：1234567891011// Create new fragment and transactionFragment newFragment = new ExampleFragment();FragmentTransaction transaction = getFragmentManager().beginTransaction();// Replace whatever is in the fragment_container view with this fragment,// and add the transaction to the back stacktransaction.replace(R.id.fragment_container, newFragment);transaction.addToBackStack(null);// Commit the transactiontransaction.commit(); 提示：对于每个片段事务，您都可以通过在提交前调用 setTransition() 来应用过渡动画。调用commit()不会立即执行事务，而是在Activity的UI线程可以执行该操作时再安排其在线程上运行。不过，如有必要，您也可以从UI 线程调用executePendingTransactions()以立即执行commit()提交的事务。通常不必这样做，除非其他线程中的作业依赖该事务。注意：您只能在Activity保存其状态（用户离开 Activity）之前使用commit()提交事务。如果您试图在该时间点后提交，则会引发异常。 这是因为如需恢复Activity，则提交后的状态可能会丢失。 对于丢失提交无关紧要的情况，请使用 commitAllowingStateLoss()。 与Activity通信 Fragment可以通过getActivity()访问Activity实例。 Activity可以通过FragmentManager对象调用findFragmentById()或findFragmentByTag()获取对Fragment的引用]]></content>
       <categories>
         <category>android</category>
@@ -816,8 +816,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-AndroidManifest.xml]]></title>
-    <url>%2Fandroid-AndroidManifest%2F</url>
+    <title><![CDATA[android-学习篇-AndroidManifest]]></title>
+    <url>%2Fandroid-%E5%AD%A6%E4%B9%A0%E7%AF%87-AndroidManifest%2F</url>
     <content type="text"><![CDATA[概览官方文档每个应用的根目录中都必须包含一个AndroidManifest.xml文件（且文件名精确无误）。清单文件向Android系统提供应用的必要信息，系统必须具有这些信息方可运行应用的任何代码。清单文件示例：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;manifest&gt; &lt;uses-permission /&gt; &lt;permission /&gt; &lt;permission-tree /&gt; &lt;permission-group /&gt; &lt;instrumentation /&gt; &lt;uses-sdk /&gt; &lt;uses-configuration /&gt; &lt;uses-feature /&gt; &lt;supports-screens /&gt; &lt;compatible-screens /&gt; &lt;supports-gl-texture /&gt; &lt;application&gt; &lt;activity&gt; &lt;intent-filter&gt; &lt;action /&gt; &lt;category /&gt; &lt;data /&gt; &lt;/intent-filter&gt; &lt;meta-data /&gt; &lt;/activity&gt; &lt;activity-alias&gt; &lt;intent-filter&gt; . . . &lt;/intent-filter&gt; &lt;meta-data /&gt; &lt;/activity-alias&gt; &lt;service&gt; &lt;intent-filter&gt; . . . &lt;/intent-filter&gt; &lt;meta-data/&gt; &lt;/service&gt; &lt;receiver&gt; &lt;intent-filter&gt; . . . &lt;/intent-filter&gt; &lt;meta-data /&gt; &lt;/receiver&gt; &lt;provider&gt; &lt;grant-uri-permission /&gt; &lt;meta-data /&gt; &lt;path-permission /&gt; &lt;/provider&gt; &lt;uses-library /&gt; &lt;/application&gt;&lt;/manifest&gt; action在intent-filter内部使用。1&lt;action android:name="string" /&gt; activity1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859&lt;activity android:allowEmbedded=["true" | "false"] android:allowTaskReparenting=["true" | "false"] android:alwaysRetainTaskState=["true" | "false"] android:autoRemoveFromRecents=["true" | "false"] android:banner="drawable resource" android:clearTaskOnLaunch=["true" | "false"] android:colorMode=[ "hdr" | "wideColorGamut"] android:configChanges=["mcc", "mnc", "locale", "touchscreen", "keyboard", "keyboardHidden", "navigation", "screenLayout", "fontScale", "uiMode", "orientation", "density", "screenSize", "smallestScreenSize"] android:directBootAware=["true" | "false"] android:documentLaunchMode=["intoExisting" | "always" | "none" | "never"] android:enabled=["true" | "false"] android:excludeFromRecents=["true" | "false"] android:exported=["true" | "false"] android:finishOnTaskLaunch=["true" | "false"] android:hardwareAccelerated=["true" | "false"] android:icon="drawable resource" android:immersive=["true" | "false"] android:label="string resource" android:launchMode=["standard" | "singleTop" | "singleTask" | "singleInstance"] android:lockTaskMode=["normal" | "never" | "if_whitelisted" | "always"] android:maxRecents="integer" android:maxAspectRatio="float" android:multiprocess=["true" | "false"] android:name="string" android:noHistory=["true" | "false"] android:parentActivityName="string" android:persistableMode=["persistRootOnly" | "persistAcrossReboots" | "persistNever"] android:permission="string" android:process="string" android:relinquishTaskIdentity=["true" | "false"] android:resizeableActivity=["true" | "false"] android:screenOrientation=["unspecified" | "behind" | "landscape" | "portrait" | "reverseLandscape" | "reversePortrait" | "sensorLandscape" | "sensorPortrait" | "userLandscape" | "userPortrait" | "sensor" | "fullSensor" | "nosensor" | "user" | "fullUser" | "locked"] android:showForAllUsers=["true" | "false"] android:stateNotNeeded=["true" | "false"] android:supportsPictureInPicture=["true" | "false"] android:taskAffinity="string" android:theme="resource or theme" android:uiOptions=["none" | "splitActionBarWhenNarrow"] android:windowSoftInputMode=["stateUnspecified", "stateUnchanged", "stateHidden", "stateAlwaysHidden", "stateVisible", "stateAlwaysVisible", "adjustUnspecified", "adjustResize", "adjustPan"] &gt; . . .&lt;/activity&gt; 可包含：intent-filtermeta-datalayout application 属性 说明 添加版本 android:allowBackup 是否允许用户备份应用信息 Android 2.2 android:roundIcon 只适用7.1，被8.0系统应用图标适配替代 Android 7.1 android:supportsRtl 支持从右到左布局 Android 4.2 注意：android:allowBackup=”true”，安全漏洞问题。Android 8.0自适应图标方案（res\mipmap-anydpi-v26）： foreground：需要显示的主icon background：底层背景图案 Mask：遮罩，由手机设备厂商提供 123456789101112131415&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.android.exp"&gt; &lt;application android:name=".MyApplication" android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme"&gt; &lt;/application&gt;&lt;/manifest&gt; categorydata在intent-filter内部使用。1234567&lt;data android:scheme="string" android:host="string" android:port="string" android:path="string" android:pathPattern="string" android:pathPrefix="string" android:mimeType="string" /&gt; intent-filtermanifestmeta-datauses-configurationuses-featureuses-libraryuses-permission官方文档1234&lt;manifest ... &gt; &lt;uses-permission android:name="android.permission.SEND_SMS"/&gt; ...&lt;/manifest&gt; uses-permission-sdk-23uses-sdk清单文件示例1234567891011121314151617181920212223242526272829303132&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.example.myapp"&gt; &lt;!-- Beware that these values are overridden by the build.gradle file --&gt; &lt;uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26" /&gt; &lt;application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/AppTheme"&gt; &lt;!-- This name is resolved to com.example.myapp.MainActivity based upon the package attribute --&gt; &lt;activity android:name=".MainActivity"&gt; &lt;intent-filter&gt; &lt;action android:name="android.intent.action.MAIN" /&gt; &lt;category android:name="android.intent.category.LAUNCHER" /&gt; &lt;/intent-filter&gt; &lt;/activity&gt; &lt;activity android:name=".DisplayMessageActivity" android:parentActivityName=".MainActivity" /&gt; &lt;/application&gt;&lt;/manifest&gt;]]></content>
       <categories>
         <category>android</category>
@@ -828,8 +828,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-API-Activity]]></title>
-    <url>%2Fandroid-API-Activity%2F</url>
+    <title><![CDATA[android-学习篇-Activity]]></title>
+    <url>%2Fandroid-%E5%AD%A6%E4%B9%A0%E7%AF%87-Activity%2F</url>
     <content type="text"><![CDATA[&lt;activity>1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162&lt;activity android:allowEmbedded=["true" | "false"] android:allowTaskReparenting=["true" | "false"] android:alwaysRetainTaskState=["true" | "false"] android:autoRemoveFromRecents=["true" | "false"] android:banner="drawable resource" android:clearTaskOnLaunch=["true" | "false"] android:colorMode=[ "hdr" | "wideColorGamut"] android:configChanges=["mcc", "mnc", "locale", "touchscreen", "keyboard", "keyboardHidden", "navigation", "screenLayout", "fontScale", "uiMode", "orientation", "density", "screenSize", "smallestScreenSize"] android:directBootAware=["true" | "false"] android:documentLaunchMode=["intoExisting" | "always" | "none" | "never"] android:enabled=["true" | "false"] android:excludeFromRecents=["true" | "false"] android:exported=["true" | "false"] android:finishOnTaskLaunch=["true" | "false"] android:hardwareAccelerated=["true" | "false"] android:icon="drawable resource" android:immersive=["true" | "false"] android:label="string resource" android:launchMode=["standard" | "singleTop" | "singleTask" | "singleInstance"] android:lockTaskMode=["normal" | "never" | "if_whitelisted" | "always"] android:maxRecents="integer" android:maxAspectRatio="float" android:multiprocess=["true" | "false"] android:name="string" android:noHistory=["true" | "false"] android:parentActivityName="string" android:persistableMode=["persistRootOnly" | "persistAcrossReboots" | "persistNever"] android:permission="string" android:process="string" android:relinquishTaskIdentity=["true" | "false"] android:resizeableActivity=["true" | "false"] android:screenOrientation=["unspecified" | "behind" | "landscape" | "portrait" | "reverseLandscape" | "reversePortrait" | "sensorLandscape" | "sensorPortrait" | "userLandscape" | "userPortrait" | "sensor" | "fullSensor" | "nosensor" | "user" | "fullUser" | "locked"] android:showForAllUsers=["true" | "false"] android:stateNotNeeded=["true" | "false"] android:supportsPictureInPicture=["true" | "false"] android:taskAffinity="string" android:theme="resource or theme" android:uiOptions=["none" | "splitActionBarWhenNarrow"] android:windowSoftInputMode=["stateUnspecified", "stateUnchanged", "stateHidden", "stateAlwaysHidden", "stateVisible", "stateAlwaysVisible", "adjustUnspecified", "adjustResize", "adjustPan"] &gt; &lt;intent-filter&gt; &lt;meta-data&gt; &lt;layout&gt; . . .&lt;/activity&gt; 详细介绍 生命周期 onCreate() onStart() onResume() onPause() onStop() onDestroy() 保存和恢复状态onSaveInstanceState()onRestoreInstanceState() 注意：当用户显式关闭 Activity 时，或者在其他情况下调用 finish() 时，系统不会调用onSaveInstanceState() Activity间导航startActivity()startActivityForResult() 任务和返回栈任务是用户在执行某项工作时与之互动的一系列 Activity 的集合。这些 Activity 按照每个 Activity 打开的顺序排列在一个返回堆栈中。Android 7.0（API 24）及更高版本支持多窗口环境，当应用在这种环境中同时运行时，系统会单独管理每个窗口的任务；而每个窗口可能包含多项任务。 Android 7.0支持分屏模式。 Android 8.0 开始，应用可以将自身置于画中画模式，从而使其能在用户浏览其他应用或与之交互时继续显示内容。 启动模式 standard singleTop singleTask singleInstance]]></content>
       <categories>
         <category>android</category>
@@ -840,8 +840,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-基础]]></title>
-    <url>%2Fandroid-%E5%9F%BA%E7%A1%80%2F</url>
+    <title><![CDATA[android-学习篇-基础知识]]></title>
+    <url>%2Fandroid-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
     <content type="text"><![CDATA[四大组件ActivityBroadcastReceiverServiceService分为两种工作状态： 启动状态，主要用于执行后台计算。 绑定状态，主要用于其他组件和Service的交互。 ContentProviderIntenthttps://developer.android.google.cn/guide/components/intents-filters.html Animator 逐帧动画：Drawable Animation。res/anim，android：oneshot是否循环播放 补间动画：Tween Animation 属性动画（Android 3.0） android.transition（Android 4.4）：本质属性动画。 Tween AnimationAlpha-Scale-Translate-RotateInterpolator（插值器） Property Animation Evaluator：控制属性动画如何计算属性值的。 AnimatorSet ValueAnimator ObjectAnimator：ValueAnimator子类。 android.transition应用资源res/https://developer.android.google.cn/guide/topics/resources/providing-resources应该始终外部化应用资源，如图像和代码中的字符串，有利于单独维护这些资源。此外，还应为特定设备配置提供备用资源，方法是将它们分组到专门命名的资源目录中。res/目录支持的资源目录，如下： animator/：定义属性动画的XML文件。 anim/：定义渐变动画的XML文件。（属性动画也可以放在该目录，一般为了区分，首选上面的目录。） color/ drawable/ mipmap/：适用于不同启动器图标密度的可绘制对象文件。 layout/ menu/ raw/：以原始形式保存的文件。但是，如需访问原始文件名和文件层次结构，则可以考虑将某些资源保存在 assets/目录下 values/ xml/：可以在运行时通过调用Resources.getXML()读取的任意XML文件。 提供备用资源在res/中创建一个以&lt;resources_name&gt;-&lt;config_qualifier&gt;形式命名的新目录。 配置 限定符值 说明 屏幕像素密度 (dpi) ldpi、mdpi、hdpi、xhdpi、xxhdpi、xxxhdpi、nodpi、tvdpi、anydpi XML解析方式SAXDOMPullNDK(Native Develop Kit)https://developer.android.google.cn/ndk原生开发工具包（NDK）是一套工具，允许您为 Android 使用C和C++代码，并提供众多平台库，您可用其管理原生Activity和访问物理设备组件，例如传感器和触摸输入。借助Android Studio 2.2或更高版本，使用NDK将C和C++代码编译到原生库中，然后使用IDE集成构建系统 Gradle将您的库封装入APK。然后，Java代码可以通过Java原生接口 (JNI) 框架，调用您原生库中的函数。Android Studio用于编译原生库的默认构建工具是CMake。由于很多现有项目都使用构建工具包，因此Android Studio也支持ndk-build。不过，如果您要创建新的原生库，则应使用 CMake。 使用场景 在平台之间移植其应用。 进一步提升设备性能，以实现低延迟时间，或运行计算密集型应用，如游戏或物理模拟。 重复使用自己或其他开发者的C或C++库。 编译和调试原生代码组件Android 原生开发工具包 (NDK)：这套工具允许您为 Android 使用 C 和 C++ 代码。CMake：一款外部构建工具，可与 Gradle 搭配使用来构建原生库。如果您只计划使用 ndk-build，则不需要此组件。LLDB：一种调试程序，Android Studio 使用它来调试原生代码。安装：Tools &gt; SDK Manager 创建或导入原生项目工作原理CPU和架构使用原生代码时，硬件很重要。NDK提供各种ABI供您选择，可让您确保针对正确的架构和CPU进行编译。 ABI不同的Android手机使用不同的CPU，进而支持不同的指令集。CPU与指令集的每种组合都有专属的应用二进制界面，即ABI。ABI可以非常精确地定义应用的机器代码在运行时如何与系统交互。您必须为应用要使用的每个CPU架构指定ABI。 参考开发者指南API reference]]></content>
       <categories>
         <category>android</category>
@@ -852,8 +852,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[android-系统架构]]></title>
-    <url>%2Fandroid-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F</url>
+    <title><![CDATA[android-学习篇-系统架构]]></title>
+    <url>%2Fandroid-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F</url>
     <content type="text"><![CDATA[Linux kernelAndroid平台的基础是Linux内核。使用Linux内核可让Android利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。在操作系统级别，Android平台不仅提供Linux内核的安全功能，而且还提供安全的进程间通信（IPC）机制，以便在不同进程中运行的应用之间安全通信。操作系统级别的这些安全功能旨在确保即使是原生代码也要受应用沙盒的限制。Linux内核为Android提供了一些关键的安全功能，包括： 基于用户的权限模式 进程隔离 用于实现安全IPC的可扩展机制 能够移除内核中不必要的和可能不安全的部分 Android的应用安全性是由应用沙盒强制实施的。 HAL硬件抽象层（HAL）提供标准界面，向更高级别的Java API框架显示设备硬件功能。HAL包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当Java API框架要求访问设备硬件时，Android系统将为该硬件组件加载库模块。 相机蓝牙Android 8.0 架构蓝牙应用通过Binder与蓝牙进程进行通信。蓝牙进程使用JNI与蓝牙堆栈通信，并向开发者提供对各种蓝牙配置文件的访问权限。android.bluetooth 原生C/C++库许多核心Android系统组件和服务（例如ART和HAL）构建自原生代码，需要以C和C++编写的原生库。Android 平台提供Java框架API以向应用显示其中部分原生库的功能。例如，您可以通过Android框架的Java OpenGL API访问OpenGL ES，以支持在应用中绘制和操作2D和3D图形。如果开发的是需要C或C++代码的应用，可以使用Android NDK直接从原生代码访问某些原生平台库。 Android RuntimeAndroid 5.0（API 21）或更高版本，每个应用都在其自己的进程中运行，并且有其自己的Android Runtime（ART）实例。ART编写为通过执行DEX文件在低内存设备上运行多个虚拟机，DEX文件是一种专为Android设计的字节码格式，经过优化，使用的内存很少。编译工具链（例如Jack已被弃用）将Java源代码编译为DEX字节码，使其可在Android平台上运行。ART的部分主要功能包括： 预先 (AOT) 和即时 (JIT) 编译 优化的垃圾回收 (GC) 更好的调试支持，包括专用采样分析器、详细的诊断异常和崩溃报告，并且能够设置监视点以监控特定字段 Android 5.0（API 21）之前，Dalvik是Android Runtime。如果您的应用在ART上运行效果很好，那么它应该也可在 Dalvik 上运行，但反过来不一定。Android还包含一套核心运行时库，可提供Java API框架使用的Java 编程语言大部分功能，包括一些Java 8语言功能。 Java API Framework您可通过以Java语言编写的API使用Android OS的整个功能集。这些API形成创建Android应用所需的构建块，它们可简化核心模块化系统组件和服务的重复使用，包括以下组件和服务： 丰富、可扩展的视图系统，可用以构建应用的 UI，包括列表、网格、文本框、按钮甚至可嵌入的网络浏览器 资源管理器，用于访问非代码资源，例如本地化的字符串、图形和布局文件 通知管理器，可让所有应用在状态栏中显示自定义提醒 Activity管理器，用于管理应用的生命周期，提供常见的导航返回栈 内容提供程序，可让应用访问其他应用（例如“联系人”应用）中的数据或者共享其自己的数据开发者可以完全访问Android系统应用使用的框架API。 应用程序层用户直接可见的应用程序。 参考https://developer.android.google.cn/guide/platform/]]></content>
       <categories>
         <category>android</category>
@@ -866,7 +866,7 @@
   <entry>
     <title><![CDATA[android-历史版本]]></title>
     <url>%2Fandroid-%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC%2F</url>
-    <content type="text"><![CDATA[官方地址android-系统架构preview android 10 - API 292019年9月10日发布。 支持可折叠 5G网络 智能回复通知 黑色主题 手势导航 Settings Panels Sharing shortcuts 提升用户隐私 安全 相机和媒体 Connectivity Android foundations Faster updates, fresher code android 9.0 - API 282018年8月7日发布，代号Pie。Android 9.0 Pie WIFI RTT进行室内定位Android 9添加了对IEEE 802.11mc Wi-Fi协议（也称为Wi-Fi Round-Trip-Time(RTT)）的平台支持，从而让您的应用可以利用室内定位功能。在运行Android 9且具有硬件支持的设备上，应用可以使用RTT API来测量与附近支持RTT的Wi-Fi接入点(AP)的距离。设备必须已启用位置服务并开启Wi-Fi扫描（在 Settings &gt; Location 下），同时您的应用必须具有ACCESS_FINE_LOCATION权限。 显示屏缺口支持Android 9支持最新的全面屏，其中包含为摄像头和扬声器预留空间的屏幕缺口。通过DisplayCutout类可确定非功能区域的位置和形状，这些区域不应显示内容。要确定这些屏幕缺口区域是否存在及其位置，请使用 getDisplayCutout()) 函数。 通知动画自动填充框架安全增强功能Android备份无障碍功能旋转文本设备端系统跟踪android 8.1 - API 272017年12月5日发布。 android 8.0 - API 262017年8月22日发布，代号Oreo（奥利奥）。Android 8.0 Oreo android 7.1 - API 252016年12月5日发布。 android 7.0 - API 242016年8月22日发布，代号Nougat（牛轧糖）。Android 7.0 Nougat android 6.0 - API 232015年5月28日发布，代号Marshmallow（棉花糖）。Android 6.0 Marshmallow android 5.1 - API 22android 5.0 - API 212014年10月15日发布，代号Lollipop（）Android 5.0 Lollipop扩展了Android的应用范围，从手机、平板电脑和可穿戴式设备，扩展到电视和汽车。 Material Design以性能为中心通知android 4.4W - API 20android 4.4 - API 19Android 4.4 KitKat android 4.3 - API 18android 4.2-4.2.2 - API 17android 4.1-4.1.1 - API 16android 4.0.3–4.0.4 - API 15android 4.0 - API 14android 3.2 - API 13android 3.1 - API 12android 3.0 - API 11android 2.3.3 - API 10android 2.3 - API 9android 2.2 - API 8android 2.1 - API 7android 2.0.1 - API 6android 1.6 - API 4android 1.5 - API 3android 1.1 - API 2android 1.0 - API 12008年，在Google I/O大会上，谷歌提出了Android HAL架构图。2008年9月，正式发布了Android 1.0系统。]]></content>
+    <content type="text"><![CDATA[官方地址android-系统架构preview android 10 - API 292019年9月10日发布。 支持可折叠 5G网络 智能回复通知 黑色主题 手势导航 Settings Panels Sharing shortcuts 提升用户隐私 安全 相机和媒体 Connectivity Android foundations Faster updates, fresher code android 9.0 - API 282018年8月7日发布，代号Pie。Android 9.0 Pie WIFI RTT进行室内定位Android 9添加了对IEEE 802.11mc Wi-Fi协议（也称为Wi-Fi Round-Trip-Time(RTT)）的平台支持，从而让您的应用可以利用室内定位功能。在运行Android 9且具有硬件支持的设备上，应用可以使用RTT API来测量与附近支持RTT的Wi-Fi接入点(AP)的距离。设备必须已启用位置服务并开启Wi-Fi扫描（在 Settings &gt; Location 下），同时您的应用必须具有ACCESS_FINE_LOCATION权限。 显示屏缺口支持Android 9支持最新的全面屏，其中包含为摄像头和扬声器预留空间的屏幕缺口。通过DisplayCutout类可确定非功能区域的位置和形状，这些区域不应显示内容。要确定这些屏幕缺口区域是否存在及其位置，请使用 getDisplayCutout()) 函数。 通知动画自动填充框架安全增强功能Android备份无障碍功能旋转文本设备端系统跟踪android 8.1 - API 272017年12月5日发布。 android 8.0 - API 262017年8月22日发布，代号Oreo（奥利奥）。Android 8.0 Oreo android 7.1 - API 252016年12月5日发布。 android 7.0 - API 242016年8月22日发布，代号Nougat（牛轧糖）。Android 7.0 Nougat android 6.0 - API 232015年5月28日发布，代号Marshmallow（棉花糖）。Android 6.0 Marshmallow android 5.1 - API 22android 5.0 - API 212014年10月15日发布，代号Lollipop（）Android 5.0 Lollipop扩展了Android的应用范围，从手机、平板电脑和可穿戴式设备，扩展到电视和汽车。 Material Design以性能为中心通知android 4.4W - API 20android 4.4 - API 19Android 4.4 KitKat android 4.3 - API 18android 4.2-4.2.2 - API 17android 4.1-4.1.1 - API 16android 4.0.3–4.0.4 - API 15android 4.0 - API 14android 1.0 - API 12008年，在Google I/O大会上，谷歌提出了Android HAL架构图。2008年9月，正式发布了Android 1.0系统。]]></content>
       <categories>
         <category>android</category>
         <category>基础</category>
@@ -876,8 +876,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[java-网络编程]]></title>
-    <url>%2Fjava-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%2F</url>
+    <title><![CDATA[java-学习篇-网络编程]]></title>
+    <url>%2Fjava-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[基础知识IP地址 IPv4：4个字节。 IPv6：16个字节。 端口号 每个程序在设备上的唯一标识 端口号范围为0~65535 常用端口mysql(3306)；oracle(1521)；web(80)；tomcat(8080) 协议 TCP（传输控制协议）：面向连接的、可靠的字节流服务。 UDP（用户数据报协议） Socket123456789101112131415161718192021222324252627// 简单UDP数据传输// 发送者public class Sender &#123; public static void main(String[] args) throws Exception &#123; DatagramSocket sender = new DatagramSocket(); byte[] data = "hello socket".getBytes("UTF-8"); DatagramPacket packet = new DatagramPacket(data, data.length, Inet4Address.getByName("192.168.x.x"), 5001); sender.send(packet); sender.close(); &#125;&#125;// 接收者public class Receiver &#123; public static void main(String[] args) throws IOException &#123; DatagramSocket receiver = new DatagramSocket(5001); byte[] data = new byte[1024]; DatagramPacket packet = new DatagramPacket(data, data.length); receiver.receive(packet); receiver.close(); System.out.println("接收数据：" + new String(data, "UTF-8")); &#125;&#125;]]></content>
       <categories>
         <category>java</category>
@@ -889,7 +889,7 @@
   </entry>
   <entry>
     <title><![CDATA[java-HashMap原理]]></title>
-    <url>%2Fjava-HashMap%E5%8E%9F%E7%90%86%2F</url>
+    <url>%2Fjava-%E5%8E%9F%E7%90%86%E7%AF%87-HashMap%2F</url>
     <content type="text"></content>
       <categories>
         <category>java</category>
@@ -900,8 +900,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[java-集合]]></title>
-    <url>%2Fjava-%E9%9B%86%E5%90%88%2F</url>
+    <title><![CDATA[java-学习篇-集合]]></title>
+    <url>%2Fjava-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E9%9B%86%E5%90%88%2F</url>
     <content type="text"><![CDATA[概述所有的集合类都位于java.util包下，后来为了处理多线程环境下的并发安全问题，Java 5还在java.util.concurrent包下提供了一些多线程支持的集合类。Java的集合类主要由两个接口派生而出：Collection和Map，是Java集合框架的根接口，这两个接口又包含了一些子接口或实现类。 Collection子接口如下所示： Set（无序，元素不可重复） List（有序，元素可以重复） Queue（队列） Collection接口定义的方法：123456789101112131415161718// java.utilpublic interface Collection&lt;E&gt; extends Iterable&lt;E&gt;int size();boolean isEmpty();boolean contains(Object o);// 返回Iterator对象，用于遍历集合里的元素。Iterator&lt;E&gt; iterator();// 将集合转换成数组Object[] toArray();Iterator&lt;E&gt; iterator();boolean add(E e);boolean remove(Object o);boolean containsAll(Collection&lt;?&gt; c);boolean addAll(Collection&lt;? entends E&gt; c);// 取交集boolean retainAll(Collection&lt;?&gt; c);void clear(); 遍历集合 Java 8使用Lambda表达式来遍历集合元素（Iterable接口新增forEach默认方法） Iterator（迭代器） Java 5提供foreach IteratorIterator仅用于遍历集合，Iterator本身并不提供盛装对象的能力。如果需要创建Iterator对象，则必须有一个被迭代的集合。12345678910111213141516// java.utilpublic interface Iterator&lt;E&gt;// 如果被迭代的集合元素还没有被遍历完，则返回trueboolean hasNext();// 返回集合里的下一个元素E next();default void remove() &#123; throw new UnsupportedOperationException("remove");&#125;// java 8为Iterator新增的默认方法default void forEachRemaining(Consumer&lt;? super E&gt; action) &#123; Objects.requireNonNull(action); while (hasNext()) action.accept(next());&#125; 注：Iterator迭代访问Collection集合元素时，Collection集合里的元素不能被改变。 List元素有序、可重复的集合。1public interface List&lt;E&gt; extends Collection&lt;E&gt; ArrayList线程不安全 LinkedListLinkedList与ArrayList、ArrayDeque的实现机制完全不同，后者内部以数组的形式来保存集合中的元素，随机访问有较好性能；而LinkedList内部以链表的形式来保存元素，插入、删除元素时性能比较好。 Vector线程安全，比ArrayList的性能低。子类Stack SetHashSetLinkedHashSetSortedSet(接口)TreeSetEnumSetQueuePriorityQueueDeque(接口)双端队列。 ArrayDequeArrayList和ArrayDeque两个集合类的实现机制基本相似，底层都采用一个动态的、可重分配的Object[]数组来存储集合元素，当集合元素超出了该数组的容量时，系统会在底层重新分配一个Object[]数组来存储集合元素。 MapMap保存的每项数据都是key-value对。Map中key是不可以重复的，key用于标识集合里的每项数据。 HashMap 线程不安全 可以使用null作为key或value。 LinkedHashMap父类为HashMap SortedMap(接口)实现类TreeMap。 TreeMapTreeMap就是一个红黑树数据结构，每个key-value对即作为红黑树的一个节点。 EnumMapHashtable]]></content>
       <categories>
         <category>java</category>
@@ -912,9 +912,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[java-异常]]></title>
-    <url>%2Fjava-%E5%BC%82%E5%B8%B8%2F</url>
-    <content type="text"><![CDATA[异常Java中异常对象都是派生于java.lang.Throwable类的一个实例。 Exception Error throwsthrows：用于声明该方法可能抛出的异常。 throwthrow：抛出实际的异常。 try catch finallyJava7开始一个catch块可以捕获多种类型的异常。|隔开；捕获多种类型的异常时，异常变量有隐式的final修饰；异常对象常用方法：getMessage()：返回异常的详细描述字符串；printStackTrace()：将该异常的跟踪栈信息输出到标准错误输出；printStackTrace(PrintStream s)：将该异常的跟踪栈信息输出到指定输出流；getStackTrace()：返回该异常的跟踪栈信息；System.exit(1)语句退出虚拟机，finally将失去执行的机会。]]></content>
+    <title><![CDATA[java-学习篇-异常]]></title>
+    <url>%2Fjava-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E5%BC%82%E5%B8%B8%2F</url>
+    <content type="text"><![CDATA[异常Java中异常对象都是派生于java.lang.Throwable类的一个实例。 Exception Error 关键字 try catch finally throw throws throwsthrows：用于声明该方法可能抛出的异常。 throwthrow：抛出实际的异常。 try catch finallyJava7开始一个catch块可以捕获多种类型的异常。|隔开；捕获多种类型的异常时，异常变量有隐式的final修饰；异常对象常用方法：getMessage()：返回异常的详细描述字符串；printStackTrace()：将该异常的跟踪栈信息输出到标准错误输出；printStackTrace(PrintStream s)：将该异常的跟踪栈信息输出到指定输出流；getStackTrace()：返回该异常的跟踪栈信息；System.exit(1)语句退出虚拟机，finally将失去执行的机会。]]></content>
       <categories>
         <category>java</category>
         <category>Java SE</category>
@@ -924,8 +924,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[java-基础知识]]></title>
-    <url>%2Fjava-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <title><![CDATA[java-学习篇-基础知识]]></title>
+    <url>%2Fjava-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
     <content type="text"><![CDATA[一次编译，到处运行。write once,run anywhere! 标识符和关键字分隔符：分号（;）、花括号（{}）、方括号（[]）、圆括号（()）、空格、圆点（.）标识符就是用于给程序中变量、类、方法命名的符号。Java语言的标识符必须以字母、下划线、美元符开头，后面可以跟任意数目的字母、数字、下划线和美元符。 Java语言是区分大小写的。 Java中所有的关键字都是小写的。 数据类型Java是强类型语言，强类型包含两方面的含义： 所有的变量必须先声明、后使用 指定类型的变量只能接受类型与之匹配的值 Java数据类型分为两类：基本类型和引用类型。8中基本数据类型： byte：1个字节（-128~127） short：2个字节 int：4个字节 long：8个字节 float：4个字节 double：8个字节 char：2个字节 boolean：1个字节 引用数据类型：类、接口、数组、枚举、注解 Java中整数值有4种表示方式：十进制、二进制（0B）、八进制（0）、十六进制（0X） 原码：最高位为符号位，0代表正数，1代表负数。反码：正数的反码是原码；负数的反码在原码基础上，符号位不变，其他位取反。补码：正数的补码是原码；负数的补码是其反码加1。为了解决原码做减法的问题，出现了反码；为了解决-0，出现了补码。计算机是以补码的形式保存所有的整数。8位二进制，原码与反码表示范围是[-127,127]，而使用补码表示范围是[-128,127] 字符集与编码 Java语言所提供的7种数值类型之间可以相互转换，两种转换方式：自动类型转换和强制类型转换。 运算符 算术运算符 赋值运算符 比较运算符 逻辑运算符 位运算符：&amp;、|、~（按位非）、^（按位异或）、&lt;&lt;（左移运算符）、&gt;&gt;（右移运算符）、&gt;&gt;&gt;（无符号右移运算符） 类型相关运算符 &gt;&gt;：右移运算符，右移n位相当于除以2的n次方&lt;&lt;：左移运算符，左移n位相当于乘以2的n次方&gt;&gt;&gt;：无符号右移例：2乘以8最有效率的方法是，2&lt;&lt;3；因为位运算是CPU直接支持的，效率最高。 控制流 分支结构：if和switch 循环结构：while、do while、for、foreach（JDK 5支持） foreach:for (type variableName : array | collection) {// variableName 自动迭代访问每个元素…}switch支持byte、short、char、int、枚举类型、String（Java 7支持）do {//至少执行一次} while();break不仅结束其所在的循环，还可以直接结束其外层循环。跳出多重循环时，可以使外层的循环条件表达式的结果受到里层循环体代码的控制。 数组数组的初始化完成，在内存中所占的空间将被固定下来，因此数组长度不可改变。 静态初始化：arrayName = new type[]{element1,element2…} 动态初始化：arrayName = new type[length] 数组是一种引用数据类型，数组引用变量只是一个引用，数组元素和数组变量在内存里是分开存放的。实际的数组对象存储在堆（Heap）内存中；如果引用该数组对象的数组引用变量是局部变量，存储在栈（Stack）内存中。 每个方法执行时，建立自己的内存栈，方法内部定义的变量将会逐个放入这块栈内存里，方法结束，内存栈自然销毁；在程序中创建一个对象时，这个对象被保存到运行时数据区，方便反复利用，这个运行时数据区就是堆内存。 面向对象类是对象的抽象；对象则是类的实例。类不是一种具体存在，实例才是具体存在。类：类加载、类验证、类准备、类解析、类初始化。“基于对象”（JavaScript）没有继承的特点；java不允许直接访问对象，而是通过对对象的引用来操作对象。 引用变量（指针）里存放的仅仅是一个引用（地址值），它指向实际的对象。堆内存里的对象可以有多个引用，即多个引用变量指向同一个对象。 this总是指向调用该方法的对象。最大的作用就是让类中一个方法，访问该类里的另一个方法或实例变量。 java里方法的参数传递方式只有一种：值传递。（副本） java把内存划分为两种：栈内存和堆内存。栈内存当超过变量的作用域后，java会自动释放为该变量分配的内存空间；堆内存用来存放由new创建的对象和数组，在堆中分配的内存，由java虚拟机的自动垃圾回收器来管理。 JDK 1.5后，Java允许定义形参个数可变的参数。只能处于最后一个形参，类型后（…），多个参数值被当成数组传入。 封装继承 overload（重载） override（方法覆盖） super当程序创建一个子类对象时，系统不仅会为该类中定义的实例变量分配内存，也会为它从父类继承得到的所有实例变量分配内存。 多态java引用变量有两个类型：编译时类型和运行时类型。编译时类型由声明该变量时使用的类型决定，运行时类型由实际赋给该变量的对象决定。如果编译时类型和运行时类型不一致，就出现多态。 static static修饰的成员不能访问没有static修饰的成员。 static修饰的成员表明它属于这个类本身，而不属于该类的单个实例。 finalfinal修饰变量称为常量。常量命名规范，字母大写，单词间用下划线分开。如public static final KEY_MAN; final成员变量可以指定默认值，也可以在构造器或初始化块中分配初始值。 final修饰的形参不能赋值 final引用类型变量，引用地址不变，但对象属性可以发生改变。 final方法不可被重写，Object类getClass()；可以被重载。 final类不可以有子类 抽象类抽象方法和抽象类： 抽象类里可以没有抽象方法。抽象方法不能有方法体。 抽象类不能被实例化。抽象类的构造器不能用于创建实例，主要用于被其子类调用。 final和abstract永远不能同时使用。（abstract修饰类只能被继承，修饰方法必须由子类重写；fina修饰类不能被继承，修饰方法不能被重写） abstract不能用于修饰成员变量和局部变量；不能修饰构造器。 static和abstract不能同时修饰某个方法，但可以同时修饰内部类。abstract修饰方法不能定义为private访问权限。 抽象类体现的是一种模板模式的设计。 接口内部类内部类主要用于设计具有相互协作关系的类集合。 匿名内部类匿名内部类适合创建只需要一次使用的类。 匿名内部类不能是抽象类。 匿名内部类不能定义构造器。匿名内部类没有类名。 枚举Java从JDK1.5开始支持枚举。添加了抽象类java.lang.Enum，在枚举中可以定义属性、构造方法、普通方法、抽象方法。一个Java源文件最多只能定义一个public访问权限的枚举类，且该Java源文件必须和该枚举类的类名相同。可以像使用普通的类一样使用枚举，编译器做了些什么？欲知详情，最有效的途径就是查看生成的字节码。 泛型Java SE 5新增泛型（实现了参数化类型的概念）概念。编写可以应用于各种类型的代码。类型参数，用尖括号括住，放在类名后面。然后在使用这个类的时候，再用实际的类型替换此类型参数。元组（&lt;A,B,C…&gt;） 注解引言每当创建描述符性质的类或接口时，一旦其中包含了重复性的工作，那就可以考虑使用注解来简化与自动化该过程。Android中有两种应用方式，一种方式是基于反射的，即在程序的运行期间获取类信息进行反射调用；另一种是使用注解处理，在编译期间生成许多代码，然后在运行期间通过调用这些代码来实现目标功能。Java中注解分为标准注解和元注解。标准注解是Java为我们提供的预定义的注解，共有四种：@Override、@Deprecated、@SuppressWarnnings和@SafeVarags。元注解是用来提供给用户自定义注解用的，共有五种（截止Java8） @Target定义注解将应用于什么地方（如是一个方法或一个域）ElementType @Retention定义该注解在哪一个级别可用。RetentionPolicy枚举： SOURCE：注解将被编译器丢弃 CLASS：注解在class文件中使用，但会被JVM丢弃 RUNTIME：在运行期保留注解，可以通过反射读取注解的信息 IO引言输入、输出流分为字节流和字符流。Java的IO流使用一种装饰器设计模式，将IO流分为底层节点流和上层处理流。Java 7在java.nio新的IO API，称为NIO 2。Java对象的序列化机制，使用序列化机制可以把内存中的Java对象转换成二进制字节流，就可以把Java对象存储到磁盘里，或者在网络上传输Java对象。这是Java提供分布式编程的重要基础。 FileIO流对象序列化对象序列化（Serializable）：将一个对象编码成一个字节流。代价：一旦一个类被发布，就大大降低了“改变这个类的实现”的灵活性；增加了出现bug和安全漏洞的可能性；随着类发行新的版本，相关的测试负担也增加了。 类加载机制与反射https://www.cnblogs.com/whgk/p/6122036.htmlJava中获得Class对象通常三种方式： Class.forName(String className) 调用某个类的class属性来获取该类对应的Class对象。 调用某个对象的getClass()方法。 1和2都是直接根据类来取得该类的Class对象，相比之下，第二种优势： 代码更安全。编译阶段可以检查需要访问的Class对象是否存在。 程序性能更好。因无需调用方法。]]></content>
       <categories>
         <category>java</category>
