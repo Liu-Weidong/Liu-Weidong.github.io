@@ -146,25 +146,25 @@
 
 
 
-  <meta name="description" content="闲来，消遣。">
-<meta name="keywords" content="java">
+  <meta name="description" content="概述 哪些内存需要回收？ 什么时候回收？ 如何回收？  程序计数器、虚拟机栈、本地方法栈3个区域随线程而生，随线程而灭；栈中的栈帧随着方法的进入和退出而有条不紊地执行着出栈和入栈操作。而java堆和方法区则不一样，只有在程序运行期间才能知道会创建哪些对象，这部分内存的分配和回收都是动态的，垃圾收集器所关注的是这部分内存。 内存泄漏：分配的内存得不到及时回收。Java程序的内存分配和回收都是由JRE">
+<meta name="keywords" content="JVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java-HashMap原理">
-<meta property="og:url" content="https://liuweidong.club/java-原理篇-HashMap/index.html">
+<meta property="og:title" content="java垃圾收集器与内存分配策略">
+<meta property="og:url" content="https://liuweidong.club/java垃圾收集器与内存分配策略/index.html">
 <meta property="og:site_name" content="Liu Weidong">
-<meta property="og:description" content="闲来，消遣。">
+<meta property="og:description" content="概述 哪些内存需要回收？ 什么时候回收？ 如何回收？  程序计数器、虚拟机栈、本地方法栈3个区域随线程而生，随线程而灭；栈中的栈帧随着方法的进入和退出而有条不紊地执行着出栈和入栈操作。而java堆和方法区则不一样，只有在程序运行期间才能知道会创建哪些对象，这部分内存的分配和回收都是动态的，垃圾收集器所关注的是这部分内存。 内存泄漏：分配的内存得不到及时回收。Java程序的内存分配和回收都是由JRE">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-01T15:26:57.860Z">
+<meta property="og:updated_time" content="2020-04-05T05:09:42.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java-HashMap原理">
-<meta name="twitter:description" content="闲来，消遣。">
+<meta name="twitter:title" content="java垃圾收集器与内存分配策略">
+<meta name="twitter:description" content="概述 哪些内存需要回收？ 什么时候回收？ 如何回收？  程序计数器、虚拟机栈、本地方法栈3个区域随线程而生，随线程而灭；栈中的栈帧随着方法的进入和退出而有条不紊地执行着出栈和入栈操作。而java堆和方法区则不一样，只有在程序运行期间才能知道会创建哪些对象，这部分内存的分配和回收都是动态的，垃圾收集器所关注的是这部分内存。 内存泄漏：分配的内存得不到及时回收。Java程序的内存分配和回收都是由JRE">
 
 
 
 
 
 
-  <link rel="canonical" href="https://liuweidong.club/java-原理篇-HashMap/">
+  <link rel="canonical" href="https://liuweidong.club/java垃圾收集器与内存分配策略/">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>java-HashMap原理 | Liu Weidong</title>
+  <title>java垃圾收集器与内存分配策略 | Liu Weidong</title>
   
 
 
@@ -434,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/java-原理篇-HashMap/">
+    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/java垃圾收集器与内存分配策略/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Weidong">
@@ -451,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java-HashMap原理
+          <h1 class="post-title" itemprop="name headline">java垃圾收集器与内存分配策略
 
               
             
@@ -477,7 +477,7 @@
                 
               
 
-              <time title="创建时间：2018-03-29 20:43:49" itemprop="dateCreated datePublished" datetime="2018-03-29T20:43:49+08:00">2018-03-29</time>
+              <time title="创建时间：2019-10-02 21:28:50" itemprop="dateCreated datePublished" datetime="2019-10-02T21:28:50+08:00">2019-10-02</time>
             
 
             
@@ -502,7 +502,7 @@
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/Java-SE/" itemprop="url" rel="index"><span itemprop="name">Java SE</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
 
                 
                 
@@ -521,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/java-原理篇-HashMap/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/java-原理篇-HashMap/" itemprop="commentCount"></span>
+                <a href="/java垃圾收集器与内存分配策略/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/java垃圾收集器与内存分配策略/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,7 +557,41 @@
       
 
       
-        
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><ul>
+<li>哪些内存需要回收？</li>
+<li>什么时候回收？</li>
+<li>如何回收？</li>
+</ul>
+<p>程序计数器、虚拟机栈、本地方法栈3个区域随线程而生，随线程而灭；栈中的栈帧随着方法的进入和退出而有条不紊地执行着出栈和入栈操作。而java堆和方法区则不一样，只有在程序运行期间才能知道会创建哪些对象，这部分内存的分配和回收都是动态的，垃圾收集器所关注的是这部分内存。</p>
+<p><strong>内存泄漏：</strong>分配的内存得不到及时回收。<br>Java程序的内存分配和回收都是由<code>JRE在后台自动进行</code>的。（垃圾回收GC）JRE会提供一个后台线程来进行检测和控制。</p>
+<h1 id="【对象是否存活算法】"><a href="#【对象是否存活算法】" class="headerlink" title="【对象是否存活算法】"></a>【对象是否存活算法】</h1><h1 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h1><p>主流的java虚拟机没有选用引用计数算法来管理内存，主要的原因是它很难解决对象之间相互循环引用的问题。</p>
+<h1 id="可达性分析算法"><a href="#可达性分析算法" class="headerlink" title="可达性分析算法"></a>可达性分析算法</h1><p>基本思路是通过一系列的称为“<strong>GC Roots</strong>”的对象作为起始点，从这些节点开始向下搜索，搜索所走过的路径称为引用链，当一个对象到GC Roots没有任何引用链相连（用图论的话来说，就是从GC Roots到这个对象不可达）时，则证明此对象是不可用的。<br>java语言中，可作为GC Roots的对象包括下面几种：</p>
+<ul>
+<li>虚拟机栈中引用的对象。 </li>
+<li>方法区中类静态属性引用的对象。</li>
+<li>方法区中常量引用的对象。</li>
+<li>本地方法栈中JNI引用的对象。</li>
+</ul>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><ul>
+<li><strong>强引用</strong>：只要强引用还存在，垃圾收集器永远不会回收掉被引用的对象。</li>
+<li><strong>软引用</strong>：SoftReference，系统将要发生内存溢出异常之前，将会把这些对象列进回收范围之中进行第二次回收。如果这次回收还没有足够的内存，才会抛出内存溢出异常。</li>
+<li><strong>弱引用</strong>：WeakReference，当垃圾收集器工作时，不管当前内存是否足够，总会回收该对象所占用的内存。</li>
+<li><strong>虚引用</strong>：PhantomReference，完全类似于没有引用。主要用于跟踪对象被垃圾回收的状态，不能单独使用，必须和引用队列联合使用。</li>
+</ul>
+<h1 id="【垃圾收集算法】"><a href="#【垃圾收集算法】" class="headerlink" title="【垃圾收集算法】"></a>【垃圾收集算法】</h1><h1 id="标记-清除算法"><a href="#标记-清除算法" class="headerlink" title="标记-清除算法"></a>标记-清除算法</h1><p>该算法分为“标记”和“清除”两个阶段：首先标记出所有需要回收的对象，在标记完成后统一回收所有被标记的对象。<br><strong>缺点：</strong></p>
+<ol>
+<li>效率低</li>
+<li>空间问题，标记清除之后会产生大量不连续的内存碎片，空间碎片太多可能会导致以后在程序运行过程中需要分配较大对象时，无法找到足够的连续内存而不得不提前触发另一次垃圾收集动作。</li>
+</ol>
+<h1 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h1><p>将可用内存按容量<strong>划分为大小相等的两块</strong>，<strong>每次只使用其中的一块</strong>。当这一块的内存用完了，就将还<strong>存活着的对象复制到另外一块</strong>上面，然后再<strong>把已使用过的内存空间一次清理掉</strong>。<br><strong>缺点</strong>：复制收集算法在对象存活率较高时就要进行较多的复制操作，效率将会变低。</p>
+<h1 id="标记-整理算法"><a href="#标记-整理算法" class="headerlink" title="标记-整理算法"></a>标记-整理算法</h1><p>标记过程仍然与“标记-清除”算法一样，但后续步骤不是直接对可回收对象进行清理，而是让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。</p>
+<h1 id="分代收集算法"><a href="#分代收集算法" class="headerlink" title="分代收集算法"></a>分代收集算法</h1><p>一般将java堆分为<strong>新生代</strong>和<strong>老年代</strong>，这样就可以根据各个年代的特点采用最适当的收集算法。新生代中，每次垃圾收集时都发现有大批对象死去，只有少量存活，那就选用<strong>复制算法</strong>。老生代中，对象存活率高、没有额外空间对它进行分配担保，就必须使用<strong>“标记-整理”算法</strong>来进行回收。</p>
+<h1 id="【垃圾收集器】"><a href="#【垃圾收集器】" class="headerlink" title="【垃圾收集器】"></a>【垃圾收集器】</h1><p>如果说收集算法是内存回收的方法论，那么垃圾收集器就是内存回收的具体实现。</p>
+<h1 id="【内存分配】"><a href="#【内存分配】" class="headerlink" title="【内存分配】"></a>【内存分配】</h1><p>大多数情况下，对象在新生代Eden区中分配。当Eden区没有足够空间进行分配时，虚拟机将发起一次Minor GC。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li>深入理解Java虚拟机 第2版</li>
+</ul>
+
       
     </div>
 
@@ -624,7 +658,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liuweidong.club/java-原理篇-HashMap/" title="java-HashMap原理">https://liuweidong.club/java-原理篇-HashMap/</a>
+    <a href="https://liuweidong.club/java垃圾收集器与内存分配策略/" title="java垃圾收集器与内存分配策略">https://liuweidong.club/java垃圾收集器与内存分配策略/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -637,7 +671,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
+            <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
           
         </div>
       
@@ -650,8 +684,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/java-学习篇-集合/" rel="next" title="java-学习篇-集合">
-                <i class="fa fa-chevron-left"></i> java-学习篇-集合
+              <a href="/java虚拟机内存结构/" rel="next" title="java虚拟机内存结构">
+                <i class="fa fa-chevron-left"></i> java虚拟机内存结构
               </a>
             
           </div>
@@ -660,8 +694,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/java-学习篇-网络编程/" rel="prev" title="java-学习篇-网络编程">
-                java-学习篇-网络编程 <i class="fa fa-chevron-right"></i>
+              <a href="/java内存模型/" rel="prev" title="java内存模型">
+                java内存模型 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -710,8 +744,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -728,7 +771,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">91</span>
+                    <span class="site-state-item-count">92</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -910,6 +953,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【对象是否存活算法】"><span class="nav-text">【对象是否存活算法】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用计数算法"><span class="nav-text">引用计数算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可达性分析算法"><span class="nav-text">可达性分析算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用"><span class="nav-text">引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【垃圾收集算法】"><span class="nav-text">【垃圾收集算法】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标记-清除算法"><span class="nav-text">标记-清除算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复制算法"><span class="nav-text">复制算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标记-整理算法"><span class="nav-text">标记-整理算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分代收集算法"><span class="nav-text">分代收集算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【垃圾收集器】"><span class="nav-text">【垃圾收集器】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【内存分配】"><span class="nav-text">【内存分配】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

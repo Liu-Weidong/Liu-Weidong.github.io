@@ -146,25 +146,25 @@
 
 
 
-  <meta name="description" content="背景有时候需要在子线程中进行耗时的I/O操作，读取文件或者访问网络等，当耗时操作完成以后可能需要在UI上做一些改变，由于Android开发规范的限制，不能在子线程中访问UI控件，否则就会触发程序异常，这个时候通过Handler就可以将更新UI的操作切换到主线程中执行。  主要用途 to schedule messages and runnables to be executed as some p">
-<meta name="keywords" content="android">
+  <meta name="description" content="代码编译的结果从本地机器码转变为字节码，是存储格式发展的一小步，却是编程语言发展的一大步。  Class类文件的结构Class文件是一组以8位字节为基础单位的二进制流，各个数据项目严格按照顺序紧凑地排列在Class文件之中，中间没有添加任何分隔符，这使得整个Class文件中存储的内容几乎全部是程序运行的必要数据，没有空隙存在。 类加载机制虚拟机把描述类的数据从class文件加载到内存，并对数据进">
+<meta name="keywords" content="JVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android-学习篇-Handler">
-<meta property="og:url" content="https://liuweidong.club/android-学习篇-Handler/index.html">
+<meta property="og:title" content="虚拟机类加载机制">
+<meta property="og:url" content="https://liuweidong.club/虚拟机类加载机制/index.html">
 <meta property="og:site_name" content="Liu Weidong">
-<meta property="og:description" content="背景有时候需要在子线程中进行耗时的I/O操作，读取文件或者访问网络等，当耗时操作完成以后可能需要在UI上做一些改变，由于Android开发规范的限制，不能在子线程中访问UI控件，否则就会触发程序异常，这个时候通过Handler就可以将更新UI的操作切换到主线程中执行。  主要用途 to schedule messages and runnables to be executed as some p">
+<meta property="og:description" content="代码编译的结果从本地机器码转变为字节码，是存储格式发展的一小步，却是编程语言发展的一大步。  Class类文件的结构Class文件是一组以8位字节为基础单位的二进制流，各个数据项目严格按照顺序紧凑地排列在Class文件之中，中间没有添加任何分隔符，这使得整个Class文件中存储的内容几乎全部是程序运行的必要数据，没有空隙存在。 类加载机制虚拟机把描述类的数据从class文件加载到内存，并对数据进">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-03T13:04:20.788Z">
+<meta property="og:updated_time" content="2020-04-05T05:57:09.781Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android-学习篇-Handler">
-<meta name="twitter:description" content="背景有时候需要在子线程中进行耗时的I/O操作，读取文件或者访问网络等，当耗时操作完成以后可能需要在UI上做一些改变，由于Android开发规范的限制，不能在子线程中访问UI控件，否则就会触发程序异常，这个时候通过Handler就可以将更新UI的操作切换到主线程中执行。  主要用途 to schedule messages and runnables to be executed as some p">
+<meta name="twitter:title" content="虚拟机类加载机制">
+<meta name="twitter:description" content="代码编译的结果从本地机器码转变为字节码，是存储格式发展的一小步，却是编程语言发展的一大步。  Class类文件的结构Class文件是一组以8位字节为基础单位的二进制流，各个数据项目严格按照顺序紧凑地排列在Class文件之中，中间没有添加任何分隔符，这使得整个Class文件中存储的内容几乎全部是程序运行的必要数据，没有空隙存在。 类加载机制虚拟机把描述类的数据从class文件加载到内存，并对数据进">
 
 
 
 
 
 
-  <link rel="canonical" href="https://liuweidong.club/android-学习篇-Handler/">
+  <link rel="canonical" href="https://liuweidong.club/虚拟机类加载机制/">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>android-学习篇-Handler | Liu Weidong</title>
+  <title>虚拟机类加载机制 | Liu Weidong</title>
   
 
 
@@ -434,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/android-学习篇-Handler/">
+    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/虚拟机类加载机制/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Weidong">
@@ -451,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">android-学习篇-Handler
+          <h1 class="post-title" itemprop="name headline">虚拟机类加载机制
 
               
             
@@ -477,7 +477,7 @@
                 
               
 
-              <time title="创建时间：2018-11-18 22:43:46" itemprop="dateCreated datePublished" datetime="2018-11-18T22:43:46+08:00">2018-11-18</time>
+              <time title="创建时间：2020-04-05 13:23:49" itemprop="dateCreated datePublished" datetime="2020-04-05T13:23:49+08:00">2020-04-05</time>
             
 
             
@@ -495,14 +495,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/android/基础/" itemprop="url" rel="index"><span itemprop="name">基础</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
 
                 
                 
@@ -521,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/android-学习篇-Handler/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/android-学习篇-Handler/" itemprop="commentCount"></span>
+                <a href="/虚拟机类加载机制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/虚拟机类加载机制/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,16 +557,22 @@
       
 
       
-        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>有时候需要在子线程中进行耗时的I/O操作，读取文件或者访问网络等，当耗时操作完成以后可能需要在UI上做一些改变，由于Android开发规范的限制，不能在子线程中访问UI控件，否则就会触发程序异常，这个时候通过Handler就可以将更新UI的操作切换到主线程中执行。 </p>
-<h1 id="主要用途"><a href="#主要用途" class="headerlink" title="主要用途"></a>主要用途</h1><ol>
-<li>to schedule messages and runnables to be executed as some point in the future;</li>
-<li>to enqueue an action to be performed on a different thread than your own.</li>
+        <blockquote>
+<p>代码编译的结果从本地机器码转变为字节码，是存储格式发展的一小步，却是编程语言发展的一大步。</p>
+</blockquote>
+<h1 id="Class类文件的结构"><a href="#Class类文件的结构" class="headerlink" title="Class类文件的结构"></a>Class类文件的结构</h1><p>Class文件是一组以8位字节为基础单位的二进制流，各个数据项目严格按照顺序紧凑地排列在Class文件之中，中间没有添加任何分隔符，这使得整个Class文件中存储的内容几乎全部是程序运行的必要数据，没有空隙存在。</p>
+<h1 id="类加载机制"><a href="#类加载机制" class="headerlink" title="类加载机制"></a>类加载机制</h1><p>虚拟机把描述类的数据从class文件加载到内存，并对数据进行校验、转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型，这就是虚拟机的类加载机制。</p>
+<p>类加载生命周期包括：加载、验证、准备、解析、初始化、使用和卸载7个阶段。其中验证、准备、解析3个部分统称为连接。</p>
+<p>虚拟机规范严格规定了有且只有5种情况必须立即对类进行初始化：</p>
+<ol>
+<li>遇到new、getstatic、putstatic或invokestatic这4条字节码指令时，如果类没有进行过初始化，则需要先触发其初始化。</li>
+<li>使用java.lang.reflect包的方法对类进行反射调用的时候</li>
+<li>当初始化一个类的时候，如果发现其父类还没有进行初始化，则需要先触发其父类的初始化。</li>
+<li>当虚拟机启动时，用户需要指定一个要执行的主类，虚拟机会先初始化这个主类。</li>
 </ol>
-<h1 id="相关类"><a href="#相关类" class="headerlink" title="相关类"></a>相关类</h1><ul>
-<li>Looper（消息循环）</li>
-<li>Message（消息）</li>
-<li>MessageQueue（存储消息）</li>
-<li>Handler</li>
+<h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><h1 id="类加载器"><a href="#类加载器" class="headerlink" title="类加载器"></a>类加载器</h1><p>从Java虚拟机的角度来讲，只存在两种不同的类加载器：一种是启动类加载器，这个类加载器使用C++语言实现，是虚拟机自身的一部分；另一种就是所有其他的类加载器，这些都由Java语言实现，独立于虚拟机外部，并且全都继承自抽象类java.lang.ClassLoader。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li>深入理解Java虚拟机 第2版</li>
 </ul>
 
       
@@ -635,7 +641,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liuweidong.club/android-学习篇-Handler/" title="android-学习篇-Handler">https://liuweidong.club/android-学习篇-Handler/</a>
+    <a href="https://liuweidong.club/虚拟机类加载机制/" title="虚拟机类加载机制">https://liuweidong.club/虚拟机类加载机制/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -648,7 +654,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/android/" rel="tag"><i class="fa fa-tag"></i> android</a>
+            <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
           
         </div>
       
@@ -661,8 +667,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/android-AndroidPlatform/" rel="next" title="android-Android Platform">
-                <i class="fa fa-chevron-left"></i> android-Android Platform
+              <a href="/跨平台技术分析/" rel="next" title="跨平台技术分析">
+                <i class="fa fa-chevron-left"></i> 跨平台技术分析
               </a>
             
           </div>
@@ -670,10 +676,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/android-组件篇-图表/" rel="prev" title="android-组件篇-图表">
-                android-组件篇-图表 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -748,7 +750,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">91</span>
+                    <span class="site-state-item-count">92</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -941,7 +943,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主要用途"><span class="nav-text">主要用途</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关类"><span class="nav-text">相关类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Class类文件的结构"><span class="nav-text">Class类文件的结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类加载机制"><span class="nav-text">类加载机制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#加载"><span class="nav-text">加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#验证"><span class="nav-text">验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解析"><span class="nav-text">解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化"><span class="nav-text">初始化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类加载器"><span class="nav-text">类加载器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

@@ -146,25 +146,25 @@
 
 
 
-  <meta name="description" content="java内存区域Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。  程序计数器 栈 本地方法栈 堆 方法区  方法区（加载类信息）—入栈—&amp;gt;栈（方法执行）——&amp;gt;堆（存储对象实例）方法执行时入栈，执行完后出栈。 程序计数器程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。 栈与程序计数器一样，Java虚拟机栈也是线程私有">
+  <meta name="description" content="概述Java虚拟机规范中试图定义一种Java内存模型（JMM）来屏蔽掉各种硬件和操作系统的内存访问差异，以实现让Java程序在各种平台下都能达到一致的内存访问效果。经过长时间的验证和修订，在JDK 1.5（实现了JSR-133）发布后，Java内存模型已经成熟和完善起来了。 主内存与工作内存Java内存模型规定了所有的变量都存储在主内存中，每个线程都有自己的工作内存，线程的工作内存中保存了被该线程">
 <meta name="keywords" content="JVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java-虚拟机JVM">
-<meta property="og:url" content="https://liuweidong.club/java-虚拟机JVM/index.html">
+<meta property="og:title" content="java内存模型">
+<meta property="og:url" content="https://liuweidong.club/java内存模型/index.html">
 <meta property="og:site_name" content="Liu Weidong">
-<meta property="og:description" content="java内存区域Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。  程序计数器 栈 本地方法栈 堆 方法区  方法区（加载类信息）—入栈—&amp;gt;栈（方法执行）——&amp;gt;堆（存储对象实例）方法执行时入栈，执行完后出栈。 程序计数器程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。 栈与程序计数器一样，Java虚拟机栈也是线程私有">
+<meta property="og:description" content="概述Java虚拟机规范中试图定义一种Java内存模型（JMM）来屏蔽掉各种硬件和操作系统的内存访问差异，以实现让Java程序在各种平台下都能达到一致的内存访问效果。经过长时间的验证和修订，在JDK 1.5（实现了JSR-133）发布后，Java内存模型已经成熟和完善起来了。 主内存与工作内存Java内存模型规定了所有的变量都存储在主内存中，每个线程都有自己的工作内存，线程的工作内存中保存了被该线程">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-03T13:14:17.776Z">
+<meta property="og:updated_time" content="2020-04-05T08:01:06.509Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java-虚拟机JVM">
-<meta name="twitter:description" content="java内存区域Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。  程序计数器 栈 本地方法栈 堆 方法区  方法区（加载类信息）—入栈—&amp;gt;栈（方法执行）——&amp;gt;堆（存储对象实例）方法执行时入栈，执行完后出栈。 程序计数器程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。 栈与程序计数器一样，Java虚拟机栈也是线程私有">
+<meta name="twitter:title" content="java内存模型">
+<meta name="twitter:description" content="概述Java虚拟机规范中试图定义一种Java内存模型（JMM）来屏蔽掉各种硬件和操作系统的内存访问差异，以实现让Java程序在各种平台下都能达到一致的内存访问效果。经过长时间的验证和修订，在JDK 1.5（实现了JSR-133）发布后，Java内存模型已经成熟和完善起来了。 主内存与工作内存Java内存模型规定了所有的变量都存储在主内存中，每个线程都有自己的工作内存，线程的工作内存中保存了被该线程">
 
 
 
 
 
 
-  <link rel="canonical" href="https://liuweidong.club/java-虚拟机JVM/">
+  <link rel="canonical" href="https://liuweidong.club/java内存模型/">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>java-虚拟机JVM | Liu Weidong</title>
+  <title>java内存模型 | Liu Weidong</title>
   
 
 
@@ -434,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/java-虚拟机JVM/">
+    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/java内存模型/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Weidong">
@@ -451,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java-虚拟机JVM
+          <h1 class="post-title" itemprop="name headline">java内存模型
 
               
             
@@ -477,7 +477,7 @@
                 
               
 
-              <time title="创建时间：2018-05-20 20:22:57" itemprop="dateCreated datePublished" datetime="2018-05-20T20:22:57+08:00">2018-05-20</time>
+              <time title="创建时间：2019-10-04 20:32:33" itemprop="dateCreated datePublished" datetime="2019-10-04T20:32:33+08:00">2019-10-04</time>
             
 
             
@@ -521,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/java-虚拟机JVM/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/java-虚拟机JVM/" itemprop="commentCount"></span>
+                <a href="/java内存模型/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/java内存模型/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,34 +557,26 @@
       
 
       
-        <h1 id="java内存区域"><a href="#java内存区域" class="headerlink" title="java内存区域"></a>java内存区域</h1><p>Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。</p>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>Java虚拟机规范中试图定义一种Java内存模型（JMM）来屏蔽掉各种硬件和操作系统的内存访问差异，以实现让Java程序在各种平台下都能达到一致的内存访问效果。<br>经过长时间的验证和修订，在JDK 1.5（实现了JSR-133）发布后，Java内存模型已经成熟和完善起来了。</p>
+<h1 id="主内存与工作内存"><a href="#主内存与工作内存" class="headerlink" title="主内存与工作内存"></a>主内存与工作内存</h1><p>Java内存模型规定了<strong>所有的变量都存储在主内存</strong>中，每个线程都有自己的<strong>工作内存</strong>，线程的工作内存中保存了被该线程使用到的变量的<strong>主内存副本拷贝</strong>，线程对变量的所有操作（读取、赋值等）都必须在工作内存中进行，而不能直接读写主内存中的变量。<br>不同的线程之间也无法直接访问对方工作内存中的变量，线程间变量值的传递均需要通过主内存来完成。</p>
+<h1 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h1><p>变量定义为volatile之后，具备两种特性：</p>
 <ol>
-<li>程序计数器</li>
-<li><strong>栈</strong></li>
-<li>本地方法栈</li>
-<li><strong>堆</strong></li>
-<li><strong>方法区</strong></li>
+<li>保证此变量对所有线程的可见性，当一条线程修改了这个变量的值，新值对于其他线程来说是可以立即得知的。</li>
+<li>禁止指令重排序优化，普通的变量仅仅会保证在该方法的执行过程中所有依赖赋值结果的地方都能获取到正确的结果，而不能保证变量赋值操作的顺序与程序代码中的执行顺序一致。</li>
 </ol>
-<p>方法区（加载类信息）—入栈—&gt;栈（方法执行）——&gt;堆（存储对象实例）<br>方法执行时入栈，执行完后出栈。</p>
-<h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2><p>程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。</p>
-<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>与程序计数器一样，Java虚拟机栈也是线程私有的，它的生命周期与线程相同。虚拟机栈描述的是java方法执行的内存模型：每个方法在执行的同时都会创建一个栈帧用于存储局部变量表、操作数栈、动态链接、方法出口等信息。</p>
-<h2 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h2><p>与虚拟机栈所发挥的作用是非常相似的，它们之间的区别不过是虚拟机栈为虚拟机执行Java方法（也就是字节码）服务，而本地方法栈则为虚拟机使用到的Native方法服务。</p>
-<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><p>对于大多数应用来说，java堆是java虚拟机所管理的内存中最大的一块。java堆是被所有线程共享的一块内存区域，在虚拟机启动时创建。此内存区域的唯一目的就是存放对象实例，几乎所有的对象实例都在这里分配内存。java虚拟机规范中的描述：<strong>所有的对象实例以及数组都要在堆上分配</strong>，但是随着JIT编译器的发展与逃逸分析技术逐渐成熟，栈上分配、标量替换优化技术将会导致一些微妙的变化发生，所有的对象都分配在堆上也逐渐变得不是那么”绝对“了。<br>从内存回收的角度来看，由于现在收集器基本都采用分代收集算法，所以Java堆中还可以细分为：新生代和老年代；再细致一点的有Eden空间、From Survivor空间、To Survivor空间等。</p>
-<h2 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h2><p>方法区与java堆一样，是各个线程共享的内存区域，用于存储已被虚拟机加载的<strong>类信息</strong>、<strong>常量</strong>、<strong>静态变量</strong>、即时编译器编译后的代码等数据。</p>
-<h1 id="垃圾收集器与内存分配策略"><a href="#垃圾收集器与内存分配策略" class="headerlink" title="垃圾收集器与内存分配策略"></a>垃圾收集器与内存分配策略</h1><p>思考GC需要完成的3件事情：</p>
+<blockquote>
+<p><strong>内存屏障</strong>（指令重排时不能把后面的指令重排序到内存屏障之前的位置）</p>
+</blockquote>
+<p><strong>volatile变量的运算在并发下是安全的？</strong><br>volatile变量在各个线程的工作内存中不存在一致性问题（在各个线程的工作内存中，volatile变量也可以存在不一致的情况，但由于每次使用之前都要先刷新，执行引擎看不到不一致的情况，因此可以认为不存在一致性问题），但是java里面的<strong>运算并非原子操作</strong>（i++），导致volatile变量的运算在并发下一样是不安全的。</p>
+<h1 id="原子性、可见性与有序性"><a href="#原子性、可见性与有序性" class="headerlink" title="原子性、可见性与有序性"></a>原子性、可见性与有序性</h1><p>Java内存模型是围绕着在并发过程中如何处理原子性、可见性和有序性这3个特征来建立的。</p>
 <ul>
-<li>哪些内存需要回收</li>
-<li>什么时候回收</li>
-<li>如何回收</li>
+<li><strong>原子性</strong></li>
+<li><strong>可见性</strong>：可见性是指当一个线程修改了共享变量的值，其他线程能够立即得知这个修改。</li>
+<li><strong>有序性</strong></li>
 </ul>
-<h2 id="垃圾收集算法"><a href="#垃圾收集算法" class="headerlink" title="垃圾收集算法"></a>垃圾收集算法</h2><h3 id="标记-清除算法"><a href="#标记-清除算法" class="headerlink" title="标记-清除算法"></a>标记-清除算法</h3><p><strong>缺点：</strong></p>
-<ol>
-<li>效率问题，标记和清除两个过程的效率都不高；</li>
-<li>空间问题，标记清除之后会产生大量不连续的内存碎片，空间碎片太多可能会导致以后在程序运行过程中需要分配较大对象时，无法找到足够的连续内存而不得不提前触发另一次垃圾收集动作。</li>
-</ol>
-<h3 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h3><p>将可用内存按容量划分为大小相等的两块，每次只使用其中的一块。当这一块的内存用完了，就将还存活着的对象复制到另外一块上面，然后再把已使用过的内存空间一次清理掉。</p>
-<h3 id="标记-整理算法"><a href="#标记-整理算法" class="headerlink" title="标记-整理算法"></a>标记-整理算法</h3><p>复制收集算法在对象存活率较高时就要进行较多的复制操作，效率将会变低。</p>
-<h3 id="分代收集算法"><a href="#分代收集算法" class="headerlink" title="分代收集算法"></a>分代收集算法</h3><h1 id="java内存模型"><a href="#java内存模型" class="headerlink" title="java内存模型"></a>java内存模型</h1><p>java内存模型（Java Memory Model，JMM）的主要目标是定义程序中各个变量的访问规则，即在虚拟机中将变量存储到内存和从内存中取出变量这样的底层细节。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li>深入理解Java虚拟机 第2版</li>
+</ul>
 
       
     </div>
@@ -652,7 +644,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liuweidong.club/java-虚拟机JVM/" title="java-虚拟机JVM">https://liuweidong.club/java-虚拟机JVM/</a>
+    <a href="https://liuweidong.club/java内存模型/" title="java内存模型">https://liuweidong.club/java内存模型/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -678,8 +670,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Cookie-Session-Token-JWT/" rel="next" title="Cookie-Session-Token-JWT">
-                <i class="fa fa-chevron-left"></i> Cookie-Session-Token-JWT
+              <a href="/java垃圾收集器与内存分配策略/" rel="next" title="java垃圾收集器与内存分配策略">
+                <i class="fa fa-chevron-left"></i> java垃圾收集器与内存分配策略
               </a>
             
           </div>
@@ -688,8 +680,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/java-垃圾回收机制/" rel="prev" title="java-垃圾回收机制">
-                java-垃圾回收机制 <i class="fa fa-chevron-right"></i>
+              <a href="/软件架构详解/" rel="prev" title="软件架构详解">
+                软件架构详解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -765,7 +757,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">90</span>
+                    <span class="site-state-item-count">92</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -958,7 +950,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java内存区域"><span class="nav-text">java内存区域</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序计数器"><span class="nav-text">程序计数器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈"><span class="nav-text">栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地方法栈"><span class="nav-text">本地方法栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆"><span class="nav-text">堆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法区"><span class="nav-text">方法区</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#垃圾收集器与内存分配策略"><span class="nav-text">垃圾收集器与内存分配策略</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾收集算法"><span class="nav-text">垃圾收集算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标记-清除算法"><span class="nav-text">标记-清除算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制算法"><span class="nav-text">复制算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记-整理算法"><span class="nav-text">标记-整理算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分代收集算法"><span class="nav-text">分代收集算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java内存模型"><span class="nav-text">java内存模型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主内存与工作内存"><span class="nav-text">主内存与工作内存</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#volatile"><span class="nav-text">volatile</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原子性、可见性与有序性"><span class="nav-text">原子性、可见性与有序性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

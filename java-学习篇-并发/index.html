@@ -146,18 +146,18 @@
 
 
 
-  <meta name="description" content="线程的风险 安全性（永远不发生糟糕的事情）问题：由于多个线程要共享相同的内存地址空间，并且是并发运行，因此它们可能会访问或修改其他线程正在使用的变量。 活跃性（某件正确的事情最终会发生）问题：当某个操作无法继续执行下去时，就会发生活跃性问题。（死循环、死锁、饥饿等） 性能问题：CPU时间将更多地花在线程调度而不是线程运行上。  线程安全性正确性 原子性：原子操作是不可分割的，在执行完毕之前不会被任">
+  <meta name="description" content="线程安全性正确性 原子性：原子操作是不可分割的，在执行完毕之前不会被任何其它任务或事件中断。加锁机制 对象的共享同步另一个重要的方面：内存可见性（Memory Visibility）。我们不仅希望防止某个线程正在使用对象状态而另一个线程在同时修改该状态，而且希望确保当一个线程修改了对象状态后，其他线程能够看到发生的状态变化。 可见性 重排序在没有同步的情况下，编译器、处理器以及运行时等都可能对操作">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java-并发">
 <meta property="og:url" content="https://liuweidong.club/java-学习篇-并发/index.html">
 <meta property="og:site_name" content="Liu Weidong">
-<meta property="og:description" content="线程的风险 安全性（永远不发生糟糕的事情）问题：由于多个线程要共享相同的内存地址空间，并且是并发运行，因此它们可能会访问或修改其他线程正在使用的变量。 活跃性（某件正确的事情最终会发生）问题：当某个操作无法继续执行下去时，就会发生活跃性问题。（死循环、死锁、饥饿等） 性能问题：CPU时间将更多地花在线程调度而不是线程运行上。  线程安全性正确性 原子性：原子操作是不可分割的，在执行完毕之前不会被任">
+<meta property="og:description" content="线程安全性正确性 原子性：原子操作是不可分割的，在执行完毕之前不会被任何其它任务或事件中断。加锁机制 对象的共享同步另一个重要的方面：内存可见性（Memory Visibility）。我们不仅希望防止某个线程正在使用对象状态而另一个线程在同时修改该状态，而且希望确保当一个线程修改了对象状态后，其他线程能够看到发生的状态变化。 可见性 重排序在没有同步的情况下，编译器、处理器以及运行时等都可能对操作">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-23T12:51:41.133Z">
+<meta property="og:updated_time" content="2020-04-05T13:09:33.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java-并发">
-<meta name="twitter:description" content="线程的风险 安全性（永远不发生糟糕的事情）问题：由于多个线程要共享相同的内存地址空间，并且是并发运行，因此它们可能会访问或修改其他线程正在使用的变量。 活跃性（某件正确的事情最终会发生）问题：当某个操作无法继续执行下去时，就会发生活跃性问题。（死循环、死锁、饥饿等） 性能问题：CPU时间将更多地花在线程调度而不是线程运行上。  线程安全性正确性 原子性：原子操作是不可分割的，在执行完毕之前不会被任">
+<meta name="twitter:description" content="线程安全性正确性 原子性：原子操作是不可分割的，在执行完毕之前不会被任何其它任务或事件中断。加锁机制 对象的共享同步另一个重要的方面：内存可见性（Memory Visibility）。我们不仅希望防止某个线程正在使用对象状态而另一个线程在同时修改该状态，而且希望确保当一个线程修改了对象状态后，其他线程能够看到发生的状态变化。 可见性 重排序在没有同步的情况下，编译器、处理器以及运行时等都可能对操作">
 
 
 
@@ -557,12 +557,7 @@
       
 
       
-        <h1 id="线程的风险"><a href="#线程的风险" class="headerlink" title="线程的风险"></a>线程的风险</h1><ol>
-<li><strong>安全性（永远不发生糟糕的事情）问题</strong>：由于多个线程要共享相同的内存地址空间，并且是并发运行，因此它们可能会访问或修改其他线程正在使用的变量。</li>
-<li><strong>活跃性（某件正确的事情最终会发生）问题</strong>：当某个操作无法继续执行下去时，就会发生活跃性问题。（死循环、死锁、饥饿等）</li>
-<li><strong>性能问题</strong>：CPU时间将更多地花在<code>线程调度</code>而不是线程运行上。</li>
-</ol>
-<h1 id="线程安全性"><a href="#线程安全性" class="headerlink" title="线程安全性"></a>线程安全性</h1><p>正确性</p>
+        <h1 id="线程安全性"><a href="#线程安全性" class="headerlink" title="线程安全性"></a>线程安全性</h1><p>正确性</p>
 <p><font color="#ff0000"><strong>原子性</strong></font>：原子操作是不可分割的，在执行完毕之前不会被任何其它任务或事件中断。<br>加锁机制</p>
 <h1 id="对象的共享"><a href="#对象的共享" class="headerlink" title="对象的共享"></a>对象的共享</h1><p>同步另一个重要的方面：<strong>内存可见性</strong>（Memory Visibility）。我们不仅希望<code>防止</code>某个线程正在使用对象状态而另一个线程在同时修改该状态，而且希望确保当一个线程修改了对象状态后，其他线程能够看到发生的状态变化。</p>
 <h2 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h2><blockquote>
@@ -586,7 +581,7 @@
 <li>无限制创建线程的不足（线程生命周期的开销非常高；资源消耗，【内存】；稳定性，在可创建线程的数量上存在一个限制。）</li>
 </ol>
 <h1 id="Executor框架"><a href="#Executor框架" class="headerlink" title="Executor框架"></a>Executor框架</h1><p><strong>java.util.concurrent</strong><br>Executor基于生产者-消费者模式，提交任务的操作相当于生产者，执行任务的线程则相当于消费者。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Executors</span></span></span><br><span class="line"><span class="class"><span class="title">ExecutorService</span> <span class="title">newFixedThreadPool</span>(<span class="title">int</span> <span class="title">nThreads</span>)</span></span><br><span class="line"><span class="class"><span class="title">ExecutorService</span> <span class="title">newCachedThreadPool</span>(<span class="title">ThreadFactory</span> <span class="title">threadFactory</span>)</span></span><br><span class="line"><span class="class"><span class="title">ExecutorService</span> <span class="title">newSingleThreadExecutor</span>()</span></span><br><span class="line"><span class="class">/*创建了一个固定长度的线程池，而且以延迟或定时的方式来执行任务，类似于<span class="title">Timer</span> */</span></span><br><span class="line"><span class="class"><span class="title">ScheduledExecutorService</span> <span class="title">newScheduledThreadPool</span>(<span class="title">int</span> <span class="title">corePoolSize</span>)</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="线程池的使用"><a href="#线程池的使用" class="headerlink" title="线程池的使用"></a>线程池的使用</h1><h1 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h1>
+
       
     </div>
 
@@ -766,7 +761,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">90</span>
+                    <span class="site-state-item-count">92</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -959,7 +954,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线程的风险"><span class="nav-text">线程的风险</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程安全性"><span class="nav-text">线程安全性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象的共享"><span class="nav-text">对象的共享</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#可见性"><span class="nav-text">可见性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非原子的64位操作"><span class="nav-text">非原子的64位操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Volatile变量"><span class="nav-text">Volatile变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布与逸出"><span class="nav-text">发布与逸出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程封闭"><span class="nav-text">线程封闭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不变性"><span class="nav-text">不变性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全发布"><span class="nav-text">安全发布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#任务执行"><span class="nav-text">任务执行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Executor框架"><span class="nav-text">Executor框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程池的使用"><span class="nav-text">线程池的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java内存模型"><span class="nav-text">Java内存模型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线程安全性"><span class="nav-text">线程安全性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象的共享"><span class="nav-text">对象的共享</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#可见性"><span class="nav-text">可见性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非原子的64位操作"><span class="nav-text">非原子的64位操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Volatile变量"><span class="nav-text">Volatile变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布与逸出"><span class="nav-text">发布与逸出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程封闭"><span class="nav-text">线程封闭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不变性"><span class="nav-text">不变性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全发布"><span class="nav-text">安全发布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#任务执行"><span class="nav-text">任务执行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Executor框架"><span class="nav-text">Executor框架</span></a></li></ol></div>
             
 
           </div>
