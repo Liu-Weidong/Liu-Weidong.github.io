@@ -146,24 +146,25 @@
 
 
 
-  <meta name="description" content="简介根据跨平台原理，可以分为如下几类：  HTML5+原生+Cordova JavaScript+原生渲染（React Native、Weex、快应用） 自绘引擎（Flutter）  Vue.js(2013)React Native(2015)Facebook在2015.9.15发布了React Native for Android，把JavaScript开发技术扩展到了Android平台。htt">
+  <meta name="description" content="概述Java虚拟机规范中试图定义一种Java内存模型（JMM）来屏蔽掉各种硬件和操作系统的内存访问差异，以实现让Java程序在各种平台下都能达到一致的内存访问效果。经过长时间的验证和修订，在JDK 1.5（实现了JSR-133）发布后，Java内存模型已经成熟和完善起来了。 主内存与工作内存Java内存模型规定了所有的变量都存储在主内存中，每个线程都有自己的工作内存，线程的工作内存中保存了被该线程">
+<meta name="keywords" content="JVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="跨平台技术分析">
-<meta property="og:url" content="https://liuweidong.club/跨平台技术分析/index.html">
+<meta property="og:title" content="java内存模型详解">
+<meta property="og:url" content="https://liuweidong.club/java内存模型详解/index.html">
 <meta property="og:site_name" content="Liu Weidong">
-<meta property="og:description" content="简介根据跨平台原理，可以分为如下几类：  HTML5+原生+Cordova JavaScript+原生渲染（React Native、Weex、快应用） 自绘引擎（Flutter）  Vue.js(2013)React Native(2015)Facebook在2015.9.15发布了React Native for Android，把JavaScript开发技术扩展到了Android平台。htt">
+<meta property="og:description" content="概述Java虚拟机规范中试图定义一种Java内存模型（JMM）来屏蔽掉各种硬件和操作系统的内存访问差异，以实现让Java程序在各种平台下都能达到一致的内存访问效果。经过长时间的验证和修订，在JDK 1.5（实现了JSR-133）发布后，Java内存模型已经成熟和完善起来了。 主内存与工作内存Java内存模型规定了所有的变量都存储在主内存中，每个线程都有自己的工作内存，线程的工作内存中保存了被该线程">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-30T11:34:27.638Z">
+<meta property="og:updated_time" content="2020-05-11T15:28:29.919Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跨平台技术分析">
-<meta name="twitter:description" content="简介根据跨平台原理，可以分为如下几类：  HTML5+原生+Cordova JavaScript+原生渲染（React Native、Weex、快应用） 自绘引擎（Flutter）  Vue.js(2013)React Native(2015)Facebook在2015.9.15发布了React Native for Android，把JavaScript开发技术扩展到了Android平台。htt">
+<meta name="twitter:title" content="java内存模型详解">
+<meta name="twitter:description" content="概述Java虚拟机规范中试图定义一种Java内存模型（JMM）来屏蔽掉各种硬件和操作系统的内存访问差异，以实现让Java程序在各种平台下都能达到一致的内存访问效果。经过长时间的验证和修订，在JDK 1.5（实现了JSR-133）发布后，Java内存模型已经成熟和完善起来了。 主内存与工作内存Java内存模型规定了所有的变量都存储在主内存中，每个线程都有自己的工作内存，线程的工作内存中保存了被该线程">
 
 
 
 
 
 
-  <link rel="canonical" href="https://liuweidong.club/跨平台技术分析/">
+  <link rel="canonical" href="https://liuweidong.club/java内存模型详解/">
 
 
 
@@ -173,7 +174,7 @@
   };
 </script>
 
-  <title>跨平台技术分析 | Liu Weidong</title>
+  <title>java内存模型详解 | Liu Weidong</title>
   
 
 
@@ -433,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/跨平台技术分析/">
+    <link itemprop="mainEntityOfPage" href="https://liuweidong.club/java内存模型详解/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Weidong">
@@ -450,7 +451,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">跨平台技术分析
+          <h1 class="post-title" itemprop="name headline">java内存模型详解
 
               
             
@@ -476,7 +477,7 @@
                 
               
 
-              <time title="创建时间：2020-03-09 22:57:46" itemprop="dateCreated datePublished" datetime="2020-03-09T22:57:46+08:00">2020-03-09</time>
+              <time title="创建时间：2019-10-04 20:32:33" itemprop="dateCreated datePublished" datetime="2019-10-04T20:32:33+08:00">2019-10-04</time>
             
 
             
@@ -494,7 +495,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/java/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
 
                 
                 
@@ -513,8 +521,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/跨平台技术分析/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/跨平台技术分析/" itemprop="commentCount"></span>
+                <a href="/java内存模型详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/java内存模型详解/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -549,22 +557,26 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><strong>根据跨平台原理，可以分为如下几类：</strong></p>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>Java虚拟机规范中试图定义一种Java内存模型（JMM）来屏蔽掉各种硬件和操作系统的内存访问差异，以实现让Java程序在各种平台下都能达到一致的内存访问效果。<br>经过长时间的验证和修订，在JDK 1.5（实现了JSR-133）发布后，Java内存模型已经成熟和完善起来了。</p>
+<h1 id="主内存与工作内存"><a href="#主内存与工作内存" class="headerlink" title="主内存与工作内存"></a>主内存与工作内存</h1><p>Java内存模型规定了<strong>所有的变量都存储在主内存</strong>中，每个线程都有自己的<strong>工作内存</strong>，线程的工作内存中保存了被该线程使用到的变量的<strong>主内存副本拷贝</strong>，线程对变量的所有操作（读取、赋值等）都必须在工作内存中进行，而不能直接读写主内存中的变量。<br>不同的线程之间也无法直接访问对方工作内存中的变量，线程间变量值的传递均需要通过主内存来完成。</p>
+<h1 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h1><p>变量定义为volatile之后，具备两种特性：</p>
 <ol>
-<li>HTML5+原生+Cordova</li>
-<li>JavaScript+原生渲染（React Native、Weex、快应用）</li>
-<li>自绘引擎（Flutter）</li>
+<li>保证此变量对所有线程的可见性，当一条线程修改了这个变量的值，新值对于其他线程来说是可以立即得知的。</li>
+<li>禁止指令重排序优化，普通的变量仅仅会保证在该方法的执行过程中所有依赖赋值结果的地方都能获取到正确的结果，而不能保证变量赋值操作的顺序与程序代码中的执行顺序一致。</li>
 </ol>
-<h1 id="Vue-js-2013"><a href="#Vue-js-2013" class="headerlink" title="Vue.js(2013)"></a>Vue.js(2013)</h1><h1 id="React-Native-2015"><a href="#React-Native-2015" class="headerlink" title="React Native(2015)"></a>React Native(2015)</h1><p>Facebook在2015.9.15发布了React Native for Android，把JavaScript开发技术扩展到了Android平台。<br><a href="http://reactnative.dev/" target="_blank" rel="noopener">http://reactnative.dev/</a><br><strong>React Native中文网：</strong><a href="https://reactnative.cn/" target="_blank" rel="noopener">https://reactnative.cn/</a><br><strong>项目地址：</strong><a href="https://github.com/facebook/react-native" target="_blank" rel="noopener">https://github.com/facebook/react-native</a></p>
-<h1 id="Weex-2016"><a href="#Weex-2016" class="headerlink" title="Weex(2016)"></a>Weex(2016)</h1><blockquote>
-<p>A framework for building Mobile cross-platform UI.</p>
+<blockquote>
+<p><strong>内存屏障</strong>（指令重排时不能把后面的指令重排序到内存屏障之前的位置）</p>
 </blockquote>
-<p>Weex于2017年2月24日迁移至Apache基金会。</p>
-<p><strong>官网：</strong><a href="https://weex.apache.org/" target="_blank" rel="noopener">https://weex.apache.org/</a><br><strong>项目地址：</strong><a href="https://github.com/apache/incubator-weex" target="_blank" rel="noopener">https://github.com/apache/incubator-weex</a><br><strong>Weex中文讨论网站：</strong><a href="https://segmentfault.com/t/weex" target="_blank" rel="noopener">https://segmentfault.com/t/weex</a></p>
-<h1 id="Flutter-2018"><a href="#Flutter-2018" class="headerlink" title="Flutter(2018)"></a>Flutter(2018)</h1><blockquote>
-<p>Flutter makes it easy and fast to build beautiful mobile apps. </p>
-</blockquote>
-<p><strong>Flutter中文网：</strong><a href="https://flutterchina.club/" target="_blank" rel="noopener">https://flutterchina.club/</a><br><strong>项目地址：</strong><a href="https://github.com/flutter/flutter" target="_blank" rel="noopener">https://github.com/flutter/flutter</a></p>
+<p><strong>volatile变量的运算在并发下是安全的？</strong><br>volatile变量在各个线程的工作内存中不存在一致性问题（在各个线程的工作内存中，volatile变量也可以存在不一致的情况，但由于每次使用之前都要先刷新，执行引擎看不到不一致的情况，因此可以认为不存在一致性问题），但是java里面的<strong>运算并非原子操作</strong>（i++），导致volatile变量的运算在并发下一样是不安全的。</p>
+<h1 id="原子性、可见性与有序性"><a href="#原子性、可见性与有序性" class="headerlink" title="原子性、可见性与有序性"></a>原子性、可见性与有序性</h1><p>Java内存模型是围绕着在并发过程中如何处理原子性、可见性和有序性这3个特征来建立的。</p>
+<ul>
+<li><strong>原子性</strong></li>
+<li><strong>可见性</strong>：可见性是指当一个线程修改了共享变量的值，其他线程能够立即得知这个修改。</li>
+<li><strong>有序性</strong></li>
+</ul>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li>深入理解Java虚拟机 第2版</li>
+</ul>
 
       
     </div>
@@ -632,7 +644,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liuweidong.club/跨平台技术分析/" title="跨平台技术分析">https://liuweidong.club/跨平台技术分析/</a>
+    <a href="https://liuweidong.club/java内存模型详解/" title="java内存模型详解">https://liuweidong.club/java内存模型详解/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -643,6 +655,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
+          
+        </div>
+      
 
       
       
@@ -652,8 +670,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/软件架构详解/" rel="next" title="软件架构详解">
-                <i class="fa fa-chevron-left"></i> 软件架构详解
+              <a href="/java垃圾收集器与内存分配策略/" rel="next" title="java垃圾收集器与内存分配策略">
+                <i class="fa fa-chevron-left"></i> java垃圾收集器与内存分配策略
               </a>
             
           </div>
@@ -662,8 +680,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/虚拟机类加载机制/" rel="prev" title="虚拟机类加载机制">
-                虚拟机类加载机制 <i class="fa fa-chevron-right"></i>
+              <a href="/软件架构详解/" rel="prev" title="软件架构详解">
+                软件架构详解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -788,11 +806,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -932,7 +946,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue-js-2013"><span class="nav-text">Vue.js(2013)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#React-Native-2015"><span class="nav-text">React Native(2015)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Weex-2016"><span class="nav-text">Weex(2016)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Flutter-2018"><span class="nav-text">Flutter(2018)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主内存与工作内存"><span class="nav-text">主内存与工作内存</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#volatile"><span class="nav-text">volatile</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原子性、可见性与有序性"><span class="nav-text">原子性、可见性与有序性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

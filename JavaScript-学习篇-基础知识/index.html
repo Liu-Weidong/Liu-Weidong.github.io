@@ -147,14 +147,14 @@
 
 
   <meta name="description" content="概览 1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。JavaScript是按ECMAScript规范实现的一种脚本语言，其他的还有JScript、ActionScript。这三种语言还提供了ECMA规范外的额外功能。  完整的JavaScript实现由3个不同部分组成：  ECMAScript：核心 文档对象模型（DOM）：是HTML和XML的">
-<meta name="keywords" content="JavaScript">
+<meta name="keywords" content="javaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript-学习篇-基础知识">
 <meta property="og:url" content="https://liuweidong.club/JavaScript-学习篇-基础知识/index.html">
 <meta property="og:site_name" content="Liu Weidong">
 <meta property="og:description" content="概览 1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。JavaScript是按ECMAScript规范实现的一种脚本语言，其他的还有JScript、ActionScript。这三种语言还提供了ECMA规范外的额外功能。  完整的JavaScript实现由3个不同部分组成：  ECMAScript：核心 文档对象模型（DOM）：是HTML和XML的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-03T13:13:55.281Z">
+<meta property="og:updated_time" content="2020-05-11T15:19:32.030Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript-学习篇-基础知识">
 <meta name="twitter:description" content="概览 1995年，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。JavaScript是按ECMAScript规范实现的一种脚本语言，其他的还有JScript、ActionScript。这三种语言还提供了ECMA规范外的额外功能。  完整的JavaScript实现由3个不同部分组成：  ECMAScript：核心 文档对象模型（DOM）：是HTML和XML的">
@@ -495,7 +495,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/javaScript/" itemprop="url" rel="index"><span itemprop="name">javaScript</span></a></span>
 
                 
                 
@@ -585,7 +585,7 @@
 <li>Number</li>
 <li>String</li>
 </ul>
-<h1 id="变量、常量"><a href="#变量、常量" class="headerlink" title="变量、常量"></a>变量、常量</h1><p>变量是无类型的，变量可以被<strong>赋予任何类型的值</strong>，同样一个变量也可以<strong>重新赋予不同类型的值</strong>。<br>使用<strong>var</strong>关键字来声明变量。当声明的变量未初始化时，该变量的默认值是undefined。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果未在声名语句中指定变量初始值，默认初始值为undefined</span></span><br><span class="line"><span class="keyword">var</span> i;</span><br><span class="line"><span class="keyword">var</span> i, j;</span><br></pre></td></tr></table></figure></p>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>变量是无类型的，变量可以被<strong>赋予任何类型的值</strong>，同样一个变量也可以<strong>重新赋予不同类型的值</strong>。<br>使用<strong>var</strong>关键字来声明变量。当声明的变量未初始化时，该变量的默认值是undefined。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果未在声名语句中指定变量初始值，默认初始值为undefined</span></span><br><span class="line"><span class="keyword">var</span> i;</span><br><span class="line"><span class="keyword">var</span> i, j;</span><br></pre></td></tr></table></figure></p>
 <p><strong>变量作用域</strong></p>
 <ul>
 <li>函数定义是可以嵌套的。</li>
@@ -611,7 +611,7 @@
 <li>跳转语句，让解释器跳转至程序的其他部分继续执行，如break、return、throw</li>
 </ul>
 <p>JavaScript中没有块级作用域，在语句块（花括号括起来的多条语句）中声名的变量并不是语句块私有的。</p>
-<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><p>JavaScript除了字符串、数字、true、false、null和undefined之外，其他值都是对象。<br><strong>创建对象的方式：</strong></p>
+<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><p>JavaScript 除了字符串、数字、true、false、null和undefined之外，其他值都是对象。<br><strong>创建对象的方式：</strong></p>
 <ul>
 <li><p>对象直接量。由若干名/值对组成的映射表，名/值对中间用冒号分隔，之间用逗号分隔，整个映射表用花括号括起来。属性名可以是JavaScript标识符也可以是字符串直接量；属性值可以是任意类型的JavaScript表达式。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 没有任何属性的对象</span></span><br><span class="line"><span class="keyword">var</span> empty = &#123;&#125;; </span><br><span class="line"><span class="comment">// 两个属性</span></span><br><span class="line"><span class="keyword">var</span> p = &#123;<span class="attr">id</span>: <span class="number">3</span>, <span class="attr">age</span>: <span class="number">56</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> phone = &#123;</span><br><span class="line">    <span class="string">"s color"</span>: <span class="string">"red"</span>,</span><br><span class="line">    manufacture: &#123;</span><br><span class="line">        name: <span class="string">"xx"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -619,15 +619,15 @@
 <li><p>通过new创建对象。</p>
 </li>
 </ul>
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>JavaScript里，函数即对象，程序可以随意操控它们。<br>JavaScript的函数可以嵌套在其他函数中定义，这样它们就可以访问它们被定义时所处的作用域中的任何变量。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数定义两种写法</span></span><br><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123; <span class="keyword">return</span> x+<span class="number">1</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>) </span>&#123; </span><br><span class="line">    <span class="keyword">return</span> x+<span class="number">1</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>JavaScript里，函数即对象，程序可以随意操控它们。<br>JavaScript的函数可以嵌套在其他函数中定义，这样它们就可以访问它们被定义时所处的作用域中的任何变量。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数定义两种写法</span></span><br><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123; <span class="keyword">return</span> x+<span class="number">1</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>) </span>&#123; </span><br><span class="line">    <span class="keyword">return</span> x+<span class="number">1</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">p</span>(<span class="params">o</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> p <span class="keyword">in</span> o) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(p + <span class="string">":"</span> + o[p] + <span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> s = &#123;<span class="attr">x</span>:<span class="number">1</span>, <span class="attr">y</span>:<span class="number">2</span>&#125;;</span><br><span class="line">p(s)</span><br></pre></td></tr></table></figure>
-<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h1 id="console"><a href="#console" class="headerlink" title="console"></a>console</h1><ul>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="console"><a href="#console" class="headerlink" title="console"></a>console</h2><ul>
 <li>console.log()</li>
 <li>console.error()</li>
 <li>console.warn()</li>
 <li>console.info()</li>
 </ul>
-<h1 id="常用浏览器"><a href="#常用浏览器" class="headerlink" title="常用浏览器"></a>常用浏览器</h1><ul>
+<h2 id="常用浏览器"><a href="#常用浏览器" class="headerlink" title="常用浏览器"></a>常用浏览器</h2><ul>
 <li>Chrome</li>
 <li>Internet Explorer：简称IE。</li>
 <li>Firefox</li>
@@ -635,8 +635,8 @@
 <li>Opera</li>
 </ul>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li>JavaScript权威指南（第6版）</li>
-<li>JavaScript高级程序设计（第3版） Nicholas C.Zakas 著</li>
+<li>JavaScript 权威指南 第6版</li>
+<li>JavaScript 高级程序设计 第3版</li>
 </ul>
 
       
@@ -718,7 +718,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+            <a href="/tags/javaScript/" rel="tag"><i class="fa fa-tag"></i> javaScript</a>
           
         </div>
       
@@ -731,8 +731,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/CSS-学习篇-基础知识/" rel="next" title="CSS-学习篇-基础知识">
-                <i class="fa fa-chevron-left"></i> CSS-学习篇-基础知识
+              <a href="/web技术：CSS基础知识/" rel="next" title="web技术：CSS基础知识">
+                <i class="fa fa-chevron-left"></i> web技术：CSS基础知识
               </a>
             
           </div>
@@ -867,11 +867,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1011,7 +1007,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概览"><span class="nav-text">概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量、常量"><span class="nav-text">变量、常量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符与表达式"><span class="nav-text">运算符与表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语句"><span class="nav-text">语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象"><span class="nav-text">对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-text">函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-text">数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#console"><span class="nav-text">console</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用浏览器"><span class="nav-text">常用浏览器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概览"><span class="nav-text">概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量"><span class="nav-text">变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符与表达式"><span class="nav-text">运算符与表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语句"><span class="nav-text">语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象"><span class="nav-text">对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-text">数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-text">函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#console"><span class="nav-text">console</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用浏览器"><span class="nav-text">常用浏览器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

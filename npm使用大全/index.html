@@ -146,18 +146,18 @@
 
 
 
-  <meta name="description" content="https://www.npmjs.cn/config12345678// 如：key=registry，设置地址npm config set &amp;lt;key&amp;gt; &amp;lt;value&amp;gt;// 如：key=registry，默认地址：https://registry.npmjs.org/npm config get &amp;lt;key&amp;gt;npm config listnpm config e">
+  <meta name="description" content="概述中文文档 package.json英文文档中文文档 The best way to manage locally installed npm packages is to create a package.json file.A package.json must have:  “name” all lowercase one word, no spaces dashes and unders">
 <meta name="keywords" content="npm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="npm使用大全">
 <meta property="og:url" content="https://liuweidong.club/npm使用大全/index.html">
 <meta property="og:site_name" content="Liu Weidong">
-<meta property="og:description" content="https://www.npmjs.cn/config12345678// 如：key=registry，设置地址npm config set &amp;lt;key&amp;gt; &amp;lt;value&amp;gt;// 如：key=registry，默认地址：https://registry.npmjs.org/npm config get &amp;lt;key&amp;gt;npm config listnpm config e">
+<meta property="og:description" content="概述中文文档 package.json英文文档中文文档 The best way to manage locally installed npm packages is to create a package.json file.A package.json must have:  “name” all lowercase one word, no spaces dashes and unders">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-11T08:34:32.288Z">
+<meta property="og:updated_time" content="2020-05-11T15:33:00.475Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="npm使用大全">
-<meta name="twitter:description" content="https://www.npmjs.cn/config12345678// 如：key=registry，设置地址npm config set &amp;lt;key&amp;gt; &amp;lt;value&amp;gt;// 如：key=registry，默认地址：https://registry.npmjs.org/npm config get &amp;lt;key&amp;gt;npm config listnpm config e">
+<meta name="twitter:description" content="概述中文文档 package.json英文文档中文文档 The best way to manage locally installed npm packages is to create a package.json file.A package.json must have:  “name” all lowercase one word, no spaces dashes and unders">
 
 
 
@@ -550,10 +550,53 @@
       
 
       
-        <p><a href="https://www.npmjs.cn/" target="_blank" rel="noopener">https://www.npmjs.cn/</a><br><strong>config</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 如：key=registry，设置地址</span><br><span class="line">npm config set &lt;key&gt; &lt;value&gt;</span><br><span class="line"></span><br><span class="line">// 如：key=registry，默认地址：https://registry.npmjs.org/</span><br><span class="line">npm config get &lt;key&gt;</span><br><span class="line"></span><br><span class="line">npm config list</span><br><span class="line">npm config edit</span><br></pre></td></tr></table></figure></p>
-<p><strong>install</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 升级npm</span><br><span class="line">npm install npm@latest -g</span><br><span class="line">// 本地安装，在当前的目录下创建一个 node_modules 的目录</span><br><span class="line">npm install &lt;package_name&gt;</span><br><span class="line">// 全局安装，</span><br><span class="line">npm install -g &lt;package_name&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>root</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// npm根目录</span><br><span class="line">npm root [-g]</span><br></pre></td></tr></table></figure></p>
-<p><strong>uninstall</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 全局卸载</span><br><span class="line">npm uninstall -g &lt;package_name&gt;</span><br></pre></td></tr></table></figure></p>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><a href="https://www.npmjs.cn/" target="_blank" rel="noopener">中文文档</a></p>
+<h1 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h1><p><a href="https://docs.npmjs.com/files/package.json" target="_blank" rel="noopener">英文文档</a><br><a href="https://github.com/ericdum/mujiang.info/issues/6/" target="_blank" rel="noopener">中文文档</a></p>
+<p>The best way to manage locally installed npm packages is to create a package.json file.<br><strong>A package.json must have:</strong></p>
+<ul>
+<li>“name”<ul>
+<li>all lowercase</li>
+<li>one word, no spaces</li>
+<li>dashes and underscores allowed</li>
+</ul>
+</li>
+<li>“version”<ul>
+<li>in the form of x.x.x</li>
+<li>follows <a href="https://docs.npmjs.com/about-semantic-versioning" target="_blank" rel="noopener">semver spec</a></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"my-package"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>创建 package.json</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line">// 创建一个默认的 package.json</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure></p>
+<p><strong>package.json 中相关属性如下所示：</strong></p>
+<ul>
+<li>name: 当前目录名称</li>
+<li>version: 总是1.0.0</li>
+<li>dependencies: These packages are required by your application in production.</li>
+<li>devDependencies: These packages are only needed for development and testing.</li>
+</ul>
+<p><strong>项目对模块的依赖可以使用下面的 3 种方法来表示（假设当前版本号是 1.1.0 ）：</strong></p>
+<ul>
+<li>兼容模块新发布的补丁版本：~1.1.0、1.1.x、1.1</li>
+<li>兼容模块新发布的小版本、补丁版本：^1.1.0、1.x、1</li>
+<li>兼容模块新发布的大版本、小版本、补丁版本：*、x<h1 id="config"><a href="#config" class="headerlink" title="config"></a>config</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 如：key=registry，设置地址</span><br><span class="line">npm config set &lt;key&gt; &lt;value&gt;</span><br><span class="line">// 设置淘宝npm地址</span><br><span class="line">npm config set registry http://registry.npm.taobao.org/</span><br><span class="line"></span><br><span class="line">// 如：key=registry，默认地址：https://registry.npmjs.org/</span><br><span class="line">npm config get &lt;key&gt;</span><br><span class="line"></span><br><span class="line">// 显示所有配置</span><br><span class="line">npm config list</span><br><span class="line">// 打开配置文件</span><br><span class="line">npm config edit</span><br><span class="line">npm config ls -l</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>修改全局安装包路径</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set prefix &quot;E:\xxx\npm-global&quot;</span><br><span class="line">npm config set cache &quot;E:\xxx\npm-cache&quot;</span><br></pre></td></tr></table></figure></p>
+<h1 id="install"><a href="#install" class="headerlink" title="install"></a>install</h1><p><strong>安装npm包分两种：</strong></p>
+<ul>
+<li>本地安装：自己模块依赖于某个包。</li>
+<li>全局安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 本地安装，在当前的目录下创建一个 node_modules 的目录</span><br><span class="line">npm install &lt;package_name&gt;</span><br><span class="line">// 全局安装</span><br><span class="line">npm install -g &lt;package_name&gt;</span><br><span class="line"></span><br><span class="line">// -S, --save 安装包信息将加入到dependencies（生产阶段的依赖）</span><br><span class="line">npm install &lt;package_name&gt; -S</span><br><span class="line">// -D, --save-dev 安装包信息将加入到devDependencies（开发阶段的依赖）</span><br><span class="line">npm install &lt;package_name&gt; -D</span><br></pre></td></tr></table></figure>
+<p><strong>本地安装后包的文件目录在哪？</strong><br>上述命令执行之后将会在当前的目录下创建一个 <code>node_modules</code> 的目录（如果不存在的话），然后将下载的包保存到这个目录下。</p>
+<p><strong>全局安装后包的文件目录在哪？</strong><br>默认的安装路径为<code>C:\Users\xxx\AppData\Roaming\npm</code>，缓存路径为<code>C:\Users\xxx\AppData\Roaming\npm_cache</code>，其中xxx根据自己是自己系统的用户名。</p>
+<p><strong>会安装哪个版本的包？</strong><br>本地目录中如果没有 <code>package.json</code> 这个文件的话，那么最新版本的包会被安装。<br>如果存在 <code>package.json</code> 文件，则会在 <code>package.json</code> 文件中查找针对这个包所约定的<a href="https://www.npmjs.cn/getting-started/semantic-versioning/" target="_blank" rel="noopener">语义化版本规则</a>，然后安装符合此规则的最新版本。</p>
+<h1 id="uninstall"><a href="#uninstall" class="headerlink" title="uninstall"></a>uninstall</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 删除 node_modules 目录下面的包</span><br><span class="line">npm uninstall &lt;package_name&gt;</span><br><span class="line"></span><br><span class="line">// 从 package.json 文件中删除依赖，需要在命令后添加参数 --save</span><br><span class="line">npm uninstall --save &lt;package_name&gt;</span><br><span class="line">npm uninstall --save-dev &lt;package_name&gt;</span><br><span class="line"></span><br><span class="line">// 全局卸载</span><br><span class="line">npm uninstall -g &lt;package_name&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="root"><a href="#root" class="headerlink" title="root"></a>root</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 输出 node_modules 的路径</span><br><span class="line">npm root [-g]</span><br></pre></td></tr></table></figure>
+<h1 id="update"><a href="#update" class="headerlink" title="update"></a>update</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update -g &lt;package_name&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="淘宝npm镜像"><a href="#淘宝npm镜像" class="headerlink" title="淘宝npm镜像"></a>淘宝npm镜像</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>可以使用cnpm替换npm</p>
 
       
     </div>
@@ -707,8 +750,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -774,11 +826,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -907,6 +955,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#package-json"><span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#config"><span class="nav-text">config</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#install"><span class="nav-text">install</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#uninstall"><span class="nav-text">uninstall</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#root"><span class="nav-text">root</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#update"><span class="nav-text">update</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#淘宝npm镜像"><span class="nav-text">淘宝npm镜像</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
