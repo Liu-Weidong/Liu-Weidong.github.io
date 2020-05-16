@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[java-学习篇-锁]]></title>
+    <url>%2Fjava-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E9%94%81%2F</url>
+    <content type="text"><![CDATA[简介java 5.0 之前，协调对共享对象的访问时可以使用的机制只有 synchronized 和 volatile。java 5.0 新增了 Lock 接口，与内置加锁机制不同的是，Lock 提供了一种无条件的、可轮询的、定时的以及可中断的锁获取操作，所有加锁和解锁的方法都是显式的。 java 中往往是按照是否含有某一特性来定义锁，通过特性将锁进行分组归类。 公平锁 / 非公平锁（多线程竞争资源是否排队？） 乐观锁 / 悲观锁（线程是否锁同步资源？） 可重入锁 / 非可重入锁（一个线程中多个流程是否可以获取同一把锁？） 独享锁 / 共享锁（多线程是否可以共享一把锁？） 互斥锁 / 读写锁 偏向锁 / 轻量级锁 / 重量级锁 自旋锁 / 自适应自旋锁（同步资源被锁住，线程是否阻塞？） 分段锁 相关接口： Lock ReadWriteLock 相关类： ReentrantLock ReentrantReadWriteLock AbstractQueuedSynchronizer 公平锁 / 非公平锁公平锁是指多个线程按照申请锁的顺序来获取锁，线程直接进入队列中排队，队列中的第一个线程才能获得锁。优点是等待锁的线程不会饿死。缺点是整体吞吐率相对非公平锁要低，等待队列中除第一个线程以外的所有线程都会阻塞，CPU 唤醒阻塞线程的开销比非公平锁大。 非公平锁是多个线程加锁时直接尝试获取锁，获取不到才会到等待队列的队尾等待。非公平锁有可能出现后申请锁的线程先获取锁的场景。优点是可以减少唤起线程的开销，整体的吞吐率高。缺点是处于等待队列中的线程可能会饿死，或者等很久才会获得锁。 java 中 ReentrantLock 默认使用非公平锁，也可以通过构造器来显示的指定使用公平锁。 总结：公平锁通过同步队列来实现多个线程按照申请锁的顺序来获取锁，从而实现公平的特性。 乐观锁 / 悲观锁乐观锁认为一个线程使用数据时不会有别的线程修改数据，所以不会加锁。但是在更新数据的时候去判断之前有没有别的线程更新了这个数据。没有被更新，成功写入；被更新，则根据不同的实现方式执行不同的操作（如报错或自动重试）。乐观锁在 java 中的使用，是无锁编程，最常采用的是 CAS 算法，java 原子类中的递增操作就通过 CAS 自旋实现的。 悲观锁认为一个线程在使用数据时一定会有别的线程来修改数据，所以获取数据时先上锁。java中，synchronized 关键字和 Lock 的实现类都是悲观锁。 CAS（Compare And Swap 比较与交换），是一种无锁算法。不使用锁的情况下实现多线程之间的变量同步。java.util.concurrent.atomic 包中的原子类就是通过 CAS 来实现了乐观锁。CAS 算法涉及到三个操作数： 需要读写的内存值 V 进行比较的值 A 要写入的新值 B 当且仅当 V 的值等于 A 时，CAS 通过原子方式用新值 B 来更新 V 的值，否则不会执行任何操作。CAS 问题： ABA 问题。CAS 需要在操作值的时候检查内存值是否发生变化，没有发生变化才会更新内存值。ABA 问题的解决思路就是在变量前面添加版本号，每次变量更新的时候都把版本号加一，A-B-A变成了1A-2B-3A。JDK 1.5 提供了 AtomicStampedReference 类来解决ABA问题，具体操作封装在 compareAndSet()。 循环时间长开销大。 只能保证一个共享变量的原子操作。JDK 1.5 提供了 AtomicReference 类来保证引用对象之间的原子性，可以把多个变量放在一个对象里来进行 CAS 操作。 总结： 乐观锁适合读操作多的场景，可以提高吞吐量。 悲观锁适合写操作多的场景，加锁可以保证写操作时数据正确。 可重入锁可重入锁又名递归锁，是指在同一个线程在外层方法获取锁的时候，在进入该线程的内层方法会自动获取锁。不会因为之前已经获取过还没释放而阻塞。java 中 ReentrantLock 和 synchronized 都是可重入锁，优点是可一定程度避免死锁。 独享锁 / 共享锁独享锁也叫排它锁，是指该锁一次只能被一个线程所持有。共享锁是指该锁可被多个线程所持有。获得共享锁的线程只能读数据，不能修改数据。 对于 ReentrantLock 而言，其是独享锁。但是 ReentrantReadWriteLock，其读锁（ReadLock）是共享锁，其写锁（WriteLock）是独享锁。读锁的共享锁可保证并发读非常高效，而读写、写读、写写的过程是互斥的。独享锁与共享锁也是通过 AQS 来实现的，通过实现不同的方法，来实现独享或共享。 互斥锁 / 读写锁上面讲的独享锁/共享锁就是一种广义的说法，互斥锁/读写锁就是具体的实现。 互斥锁在 java 中的具体实现就是 ReentrantLock。 读写锁在 java 中的具体实现就是 ReentrantReadWriteLock 偏向锁 / 轻量级锁 / 重量级锁这三种锁是指锁的状态，专门针对 synchronized。在 java 5 通过引入锁升级的机制来实现高效synchronized。这三种锁的状态是通过对象监视器在对象头中的字段来表明的。 偏向锁是指一段同步代码一直被一个线程所访问，那么该线程会自动获取锁，降低获取锁的代价。轻量级锁是指当锁是偏向锁的时候，被另一个线程所访问，偏向锁就会升级为轻量级锁，其他线程会通过自旋的形式尝试获取锁，不会阻塞，提高性能。重量级锁是指当锁为轻量级锁的时候，另一个线程虽然是自旋，但自旋不会一直持续下去，当自旋一定次数的时候，还没有获取到锁，就会进入阻塞，该锁膨胀为重量级锁。 自旋锁 / 自适应自旋锁自旋锁是指尝试获取锁的线程不会立即阻塞，而是采用循环的方式去尝试获取锁。优点是减少线程上下文切换的消耗，缺点是循环会消耗CPU。所以，自旋锁等待的时间必须要有一定的限度，如果自旋超过了限定次数（默认10次）没有成功获得锁，就应当挂起线程。 自适应意味着自旋的次数不再固定，而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定。 分段锁分段锁其实是一种锁的设计，并不是具体的一种锁，对于 ConcurrentHashMap 而言，其并发的实现就是通过分段锁的形式来实现高效的并发操作。ConcurrentHashMap 中的分段锁称为 Segment，它即类似于 HashMap（JDK7与JDK8中HashMap的实现）的结构，即内部拥有一个 Entry 数组，数组中的每个元素又是一个链表；同时又是一个ReentrantLock（Segment 继承了 ReentrantLock)。当需要 put 元素的时候，并不是对整个 hashmap 进行加锁，而是先通过 hashcode 来知道他要放在那一个分段中，然后对这个分段进行加锁，所以当多线程 put 的时候，只要不是放在一个分段中，就实现了真正的并行的插入。在统计 size 的时候，可就是获取 hashmap 全局信息的时候，就需要获取所有的分段锁才能统计。分段锁的设计目的是细化锁的粒度，当操作不需要更新整个数组的时候，就仅仅针对数组中的一项进行加锁操作。 AQSAbstractQueuedSynchronized 抽象队列式的同步器，AQS 定义了一套多线程访问共享资源的同步器框架，许多同步类实现都依赖于它。AQS 维护了一个 volatile int state（代表共享资源）和一个线程等待队列。AQS 定义两种资源共享方式：EXCLUSIVE（独占） 和 SHARED（共享）。 synchronizedReentrantLockReentrantReadWriteLock参考 Java 8 源码]]></content>
+      <categories>
+        <category>java</category>
+        <category>Java SE</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[虚拟机类加载机制]]></title>
     <url>%2F%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%2F</url>
     <content type="text"><![CDATA[代码编译的结果从本地机器码转变为字节码，是存储格式发展的一小步，却是编程语言发展的一大步。 Class类文件的结构Class文件是一组以8位字节为基础单位的二进制流，各个数据项目严格按照顺序紧凑地排列在Class文件之中，中间没有添加任何分隔符，这使得整个Class文件中存储的内容几乎全部是程序运行的必要数据，没有空隙存在。 类加载机制虚拟机把描述类的数据从class文件加载到内存，并对数据进行校验、转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型，这就是虚拟机的类加载机制。 类加载生命周期包括：加载、验证、准备、解析、初始化、使用和卸载7个阶段。其中验证、准备、解析3个部分统称为连接。 虚拟机规范严格规定了有且只有5种情况必须立即对类进行初始化： 遇到new、getstatic、putstatic或invokestatic这4条字节码指令时，如果类没有进行过初始化，则需要先触发其初始化。 使用java.lang.reflect包的方法对类进行反射调用的时候 当初始化一个类的时候，如果发现其父类还没有进行初始化，则需要先触发其父类的初始化。 当虚拟机启动时，用户需要指定一个要执行的主类，虚拟机会先初始化这个主类。 加载验证准备解析初始化类加载器从Java虚拟机的角度来讲，只存在两种不同的类加载器：一种是启动类加载器，这个类加载器使用C++语言实现，是虚拟机自身的一部分；另一种就是所有其他的类加载器，这些都由Java语言实现，独立于虚拟机外部，并且全都继承自抽象类java.lang.ClassLoader。 参考 深入理解Java虚拟机 第2版]]></content>
@@ -113,8 +125,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[跨平台技术Vue]]></title>
-    <url>%2F%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%8A%80%E6%9C%AFVue%2F</url>
+    <title><![CDATA[web框架：Vue.js]]></title>
+    <url>%2Fweb%E6%A1%86%E6%9E%B6%EF%BC%9AVue.js%2F</url>
     <content type="text"><![CDATA[概述官网Vue Devtools：在使用 Vue 时，我们推荐在你的浏览器上安装 Vue Devtools。它允许你在一个更友好的界面中审查和调试Vue应用。 Vue CLIVue CLI：https://cli.vuejs.org/zh/是一个基于 Vue.js 进行快速开发的完整系统。项目地址：https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue @vue/cli @vue/cli-service 项目目录│ .babelrc（babel编译参数）│ .editorconfig（代码格式）│ .eslintignore│ .eslintrc.js│ .gitignore│ .postcssrc.js（转换css工具）│ index.html（主页）│ package.json（项目配置）│ README.md（项目说明）│├─build（webpack相关配置文件）│ build.js（生产环境构建）│ check-versions.js（检查npm、node版本）│ logo.png│ utils.js│ vue-loader.conf.js│ webpack.base.conf.js（webpack基础配置）│ webpack.dev.conf.js（webpack开发环境配置）│ webpack.prod.conf.js（webpack生产环境配置）│├─config（vue基本配置文件）│ dev.env.js（项目开发环境配置）│ index.js（项目主要配置）│ prod.env.js（项目生产环境配置）│ test.env.js│├─src│ │ App.vue（根组件）│ │ main.js（入口文件）│ ││ ├─assets│ │ logo.png│ ││ ├─components（公共组件）│ │ HelloWorld.vue│ ││ └─router（路由）│ index.js│├─static（静态资源） Vue Routerhttps://router.vuejs.org/zh/ main.js123456789101112131415// The Vue build version to load with the `import` command// (runtime-only or standalone) has been set in webpack.base.conf with an alias.import Vue from 'vue'import App from './App'import router from './router'Vue.config.productionTip = false/* eslint-disable no-new */new Vue(&#123; el: '#app', router, components: &#123; App &#125;, template: '&lt;App/&gt;'&#125;)]]></content>
       <categories>
         <category>前端</category>
@@ -284,8 +296,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Web框架]]></title>
-    <url>%2FWeb%E6%A1%86%E6%9E%B6%2F</url>
+    <title><![CDATA[web框架]]></title>
+    <url>%2Fweb%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[UI框架LayuiLayui MiniUIReactReact AngularAngularJS 诞生于2009年，由Misko Hevery等人创建，之后被Google所收购。 Web.xmlServletServlet通常被称为服务器端小程序，是运行在服务器端的程序，用于处理及响应客户端的请求。Servlet是个特殊的Java类，这个Java类必须继承HttpServlet。每个Servlet可以响应客户端的请求。Servlet提供不同的方法用于响应客户端请求。 doGet doPost doPut doDelete service()：响应客户端的所有请求。 FilterFilter可以认为是Servlet的一种加强版，主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理，是个典型的处理链。 Listener]]></content>
       <categories>
         <category>前端</category>
@@ -888,8 +900,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[java-学习篇-集合]]></title>
-    <url>%2Fjava-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E9%9B%86%E5%90%88%2F</url>
+    <title><![CDATA[java-学习篇-集合大全]]></title>
+    <url>%2Fjava-%E5%AD%A6%E4%B9%A0%E7%AF%87-%E9%9B%86%E5%90%88%E5%A4%A7%E5%85%A8%2F</url>
     <content type="text"><![CDATA[概述所有的集合类都位于java.util包下，后来为了处理多线程环境下的并发安全问题，Java 5还在java.util.concurrent包下提供了一些多线程支持的集合类。Java的集合类主要由两个接口派生而出：Collection和Map，是Java集合框架的根接口，这两个接口又包含了一些子接口或实现类。 Collection子接口如下所示： Set（无序，元素不可重复） List（有序，元素可以重复） Queue（队列） Collection接口定义的方法：123456789101112131415161718// java.utilpublic interface Collection&lt;E&gt; extends Iterable&lt;E&gt;int size();boolean isEmpty();boolean contains(Object o);// 返回Iterator对象，用于遍历集合里的元素。Iterator&lt;E&gt; iterator();// 将集合转换成数组Object[] toArray();Iterator&lt;E&gt; iterator();boolean add(E e);boolean remove(Object o);boolean containsAll(Collection&lt;?&gt; c);boolean addAll(Collection&lt;? entends E&gt; c);// 取交集boolean retainAll(Collection&lt;?&gt; c);void clear(); 遍历集合 Java 8使用Lambda表达式来遍历集合元素（Iterable接口新增forEach默认方法） Iterator（迭代器） Java 5提供foreach IteratorIterator仅用于遍历集合，Iterator本身并不提供盛装对象的能力。如果需要创建Iterator对象，则必须有一个被迭代的集合。12345678910111213141516// java.utilpublic interface Iterator&lt;E&gt;// 如果被迭代的集合元素还没有被遍历完，则返回trueboolean hasNext();// 返回集合里的下一个元素E next();default void remove() &#123; throw new UnsupportedOperationException("remove");&#125;// java 8为Iterator新增的默认方法default void forEachRemaining(Consumer&lt;? super E&gt; action) &#123; Objects.requireNonNull(action); while (hasNext()) action.accept(next());&#125; 注：Iterator迭代访问Collection集合元素时，Collection集合里的元素不能被改变。 List元素有序、可重复的集合。1public interface List&lt;E&gt; extends Collection&lt;E&gt; ArrayList线程不安全 LinkedListLinkedList与ArrayList、ArrayDeque的实现机制完全不同，后者内部以数组的形式来保存集合中的元素，随机访问有较好性能；而LinkedList内部以链表的形式来保存元素，插入、删除元素时性能比较好。 Vector线程安全，比ArrayList的性能低。子类Stack SetHashSetLinkedHashSetSortedSet(接口)TreeSetEnumSetQueuePriorityQueueDeque(接口)双端队列。 ArrayDequeArrayList和ArrayDeque两个集合类的实现机制基本相似，底层都采用一个动态的、可重分配的Object[]数组来存储集合元素，当集合元素超出了该数组的容量时，系统会在底层重新分配一个Object[]数组来存储集合元素。 MapMap保存的每项数据都是key-value对。Map中key是不可以重复的，key用于标识集合里的每项数据。 HashMap 线程不安全 可以使用null作为key或value。 LinkedHashMap父类为HashMap SortedMap(接口)实现类TreeMap。 TreeMapTreeMap就是一个红黑树数据结构，每个key-value对即作为红黑树的一个节点。 EnumMapHashtable]]></content>
       <categories>
         <category>java</category>
