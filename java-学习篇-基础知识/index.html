@@ -146,18 +146,18 @@
 
 
 
-  <meta name="description" content="一次编译，到处运行。write once,run anywhere!  标识符和关键字分隔符：分号（;）、花括号（{}）、方括号（[]）、圆括号（()）、空格、圆点（.）标识符就是用于给程序中变量、类、方法命名的符号。Java语言的标识符必须以字母、下划线、美元符开头，后面可以跟任意数目的字母、数字、下划线和美元符。  Java语言是区分大小写的。  Java中所有的关键字都是小写的。 数据类型">
+  <meta name="description" content="面向对象与java面向对象的三种基本特征：继承、封装、多态。  封装：将对象的实现细节隐藏起来，通过一些公用方法来暴露该对象的功能。 继承：面向对象实现软件复用的重要手段。 多态：子类对象可以直接赋给父类变量，但运行时依然表现出子类的行为特征，这意味着同一个类型的对象在执行同一个方法时，可能表现出多种行为特征。  当程序创建一个子类对象时，系统不仅会为该类中定义的实例变量分配内存，也会为它从父类继">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java-学习篇-基础知识">
 <meta property="og:url" content="https://liuweidong.club/java-学习篇-基础知识/index.html">
 <meta property="og:site_name" content="Liu Weidong">
-<meta property="og:description" content="一次编译，到处运行。write once,run anywhere!  标识符和关键字分隔符：分号（;）、花括号（{}）、方括号（[]）、圆括号（()）、空格、圆点（.）标识符就是用于给程序中变量、类、方法命名的符号。Java语言的标识符必须以字母、下划线、美元符开头，后面可以跟任意数目的字母、数字、下划线和美元符。  Java语言是区分大小写的。  Java中所有的关键字都是小写的。 数据类型">
+<meta property="og:description" content="面向对象与java面向对象的三种基本特征：继承、封装、多态。  封装：将对象的实现细节隐藏起来，通过一些公用方法来暴露该对象的功能。 继承：面向对象实现软件复用的重要手段。 多态：子类对象可以直接赋给父类变量，但运行时依然表现出子类的行为特征，这意味着同一个类型的对象在执行同一个方法时，可能表现出多种行为特征。  当程序创建一个子类对象时，系统不仅会为该类中定义的实例变量分配内存，也会为它从父类继">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-03T14:52:12.849Z">
+<meta property="og:updated_time" content="2020-05-16T11:46:48.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java-学习篇-基础知识">
-<meta name="twitter:description" content="一次编译，到处运行。write once,run anywhere!  标识符和关键字分隔符：分号（;）、花括号（{}）、方括号（[]）、圆括号（()）、空格、圆点（.）标识符就是用于给程序中变量、类、方法命名的符号。Java语言的标识符必须以字母、下划线、美元符开头，后面可以跟任意数目的字母、数字、下划线和美元符。  Java语言是区分大小写的。  Java中所有的关键字都是小写的。 数据类型">
+<meta name="twitter:description" content="面向对象与java面向对象的三种基本特征：继承、封装、多态。  封装：将对象的实现细节隐藏起来，通过一些公用方法来暴露该对象的功能。 继承：面向对象实现软件复用的重要手段。 多态：子类对象可以直接赋给父类变量，但运行时依然表现出子类的行为特征，这意味着同一个类型的对象在执行同一个方法时，可能表现出多种行为特征。  当程序创建一个子类对象时，系统不仅会为该类中定义的实例变量分配内存，也会为它从父类继">
 
 
 
@@ -557,22 +557,28 @@
       
 
       
-        <blockquote>
-<p>一次编译，到处运行。write once,run anywhere!</p>
-</blockquote>
-<h1 id="标识符和关键字"><a href="#标识符和关键字" class="headerlink" title="标识符和关键字"></a>标识符和关键字</h1><p><strong>分隔符：</strong>分号（;）、花括号（{}）、方括号（[]）、圆括号（()）、空格、圆点（.）<br><strong>标识符</strong>就是用于给程序中变量、类、方法命名的符号。Java语言的标识符必须以字母、下划线、美元符开头，后面可以跟任意数目的字母、数字、下划线和美元符。</p>
-<blockquote>
-<p>Java语言是区分大小写的。</p>
-</blockquote>
-<p>Java中所有的关键字都是小写的。</p>
-<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>Java是<strong>强类型语言</strong>，强类型包含两方面的含义：</p>
+        <h1 id="面向对象与java"><a href="#面向对象与java" class="headerlink" title="面向对象与java"></a>面向对象与java</h1><p>面向对象的三种基本特征：继承、封装、多态。</p>
+<ul>
+<li><strong>封装</strong>：将对象的实现细节隐藏起来，通过一些公用方法来暴露该对象的功能。</li>
+<li><strong>继承</strong>：面向对象实现软件复用的重要手段。</li>
+<li><strong>多态</strong>：子类对象可以直接赋给父类变量，但运行时依然表现出子类的行为特征，这意味着同一个类型的对象在执行同一个方法时，可能表现出多种行为特征。</li>
+</ul>
+<p>当程序创建一个子类对象时，系统不仅会为该类中定义的实例变量分配内存，也会为它从父类继承得到的所有实例变量分配内存。</p>
+<p>类是具有共同属性、共同方法的一类事物。类是对象的抽象；对象则是类的实例。<br>java不允许直接访问对象，而是通过对对象的引用来操作对象。</p>
+<ul>
+<li>引用变量（指针）里存放的仅仅是一个引用（地址值），它指向实际的对象。堆内存里的对象可以有多个引用，即多个引用变量指向同一个对象。</li>
+<li><code>this</code> 总是指向调用该方法的对象。最大的作用就是让类中一个方法，访问该类里的另一个方法或实例变量。</li>
+<li>java把内存划分为两种：<code>栈内存</code>和<code>堆内存</code>。栈内存当超过变量的作用域后，java会自动释放为该变量分配的内存空间；堆内存用来存放由new创建的对象和数组，在堆中分配的内存，由java虚拟机的自动垃圾回收器来管理。</li>
+</ul>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>java 是<strong>强类型语言</strong>，强类型包含两方面的含义：</p>
 <ol>
 <li>所有的变量必须先声明、后使用</li>
 <li>指定类型的变量只能接受类型与之匹配的值</li>
 </ol>
-<p>Java数据类型分为两类：<strong>基本类型</strong>和<strong>引用类型</strong>。<br><strong>8中基本数据类型：</strong></p>
+<p>java数据类型分为两类：<strong>基本类型</strong>和<strong>引用类型</strong>。</p>
+<p><strong>8中基本数据类型</strong></p>
 <ul>
-<li>byte：1个字节（-128~127）</li>
+<li>byte：1个字节（-128 ~ 127）</li>
 <li>short：2个字节</li>
 <li>int：4个字节</li>
 <li>long：8个字节</li>
@@ -581,13 +587,13 @@
 <li>char：2个字节</li>
 <li>boolean：1个字节</li>
 </ul>
-<p><strong>引用数据类型：</strong>类、接口、数组、枚举、注解</p>
-<p>Java中整数值有4种表示方式：十进制、二进制（0B）、八进制（0）、十六进制（0X）</p>
+<p><strong>引用数据类型</strong><br>类、接口、数组</p>
+<p>java中整数值有4种表示方式：十进制、二进制（0B）、八进制（0）、十六进制（0X）</p>
 <blockquote>
 <p><strong>原码</strong>：最高位为符号位，0代表正数，1代表负数。<br><strong>反码</strong>：正数的反码是原码；负数的反码在原码基础上，符号位不变，其他位取反。<br><strong>补码</strong>：正数的补码是原码；负数的补码是其反码加1。<br>为了解决原码做减法的问题，出现了反码；为了解决-0，出现了补码。<strong>计算机是以补码的形式保存所有的整数。</strong>8位二进制，原码与反码表示范围是[-127,127]，而使用补码表示范围是[-128,127]</p>
 </blockquote>
 <p><a href="https://www.liuweidong.club/%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%8E%E7%BC%96%E7%A0%81/" target="_blank" rel="noopener">字符集与编码</a></p>
-<p>Java语言所提供的7种数值类型之间可以相互转换，两种转换方式：自动类型转换和强制类型转换。</p>
+<p>java语言所提供的7种数值类型之间可以相互转换，两种转换方式：<code>自动类型转换</code>和<code>强制类型转换</code>。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 强制类型转换语法格式。大转小</span></span><br><span class="line">(targetType)value</span><br></pre></td></tr></table></figure></p>
 <h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><ul>
 <li>算术运算符</li>
 <li>赋值运算符</li>
@@ -597,7 +603,7 @@
 <li>类型相关运算符</li>
 </ul>
 <p><code>&gt;&gt;</code>：右移运算符，右移n位相当于除以2的n次方<br><code>&lt;&lt;</code>：左移运算符，左移n位相当于乘以2的n次方<br><code>&gt;&gt;&gt;</code>：无符号右移<br>例：2乘以8最有效率的方法是，2&lt;&lt;3；因为位运算是CPU直接支持的，效率最高。</p>
-<h1 id="控制流"><a href="#控制流" class="headerlink" title="控制流"></a>控制流</h1><ol>
+<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ol>
 <li>分支结构：if和switch</li>
 <li>循环结构：while、do while、for、foreach（JDK 5支持）</li>
 </ol>
@@ -607,73 +613,100 @@
 <li><strong>静态初始化</strong>：arrayName = new type[]{element1,element2…}</li>
 <li><strong>动态初始化</strong>：arrayName = new type[length]</li>
 </ol>
-<p>数组是一种<strong>引用数据类型</strong>，数组引用变量只是一个引用，数组元素和数组变量在内存里是分开存放的。实际的数组对象存储在堆（Heap）内存中；如果引用该数组对象的数组引用变量是局部变量，存储在栈（Stack）内存中。</p>
+<p>数组是一种引用数据类型，数组引用变量只是一个引用，数组元素和数组变量在内存里是分开存放的。实际的数组对象存储在堆（Heap）内存中；如果引用该数组对象的数组引用变量是局部变量，存储在栈（Stack）内存中。</p>
 <blockquote>
 <p><strong>每个方法执行时，建立自己的内存栈，方法内部定义的变量将会逐个放入这块栈内存里，方法结束，内存栈自然销毁；在程序中创建一个对象时，这个对象被保存到运行时数据区，方便反复利用，这个运行时数据区就是堆内存。</strong></p>
 </blockquote>
-<h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><p><code>类是对象的抽象；对象则是类的实例。类不是一种具体存在，实例才是具体存在。</code><br>类：类加载、类验证、类准备、类解析、类初始化。<br>“基于对象”（JavaScript）没有继承的特点；<br>java不允许直接访问对象，而是通过对对象的引用来操作对象。</p>
-<ul>
-<li>引用变量（指针）里存放的仅仅是一个引用（地址值），它指向实际的对象。堆内存里的对象可以有多个引用，即多个引用变量指向同一个对象。</li>
-<li><strong>this</strong>总是指向调用该方法的对象。最大的作用就是让类中一个方法，访问该类里的另一个方法或实例变量。</li>
-<li>java里方法的参数传递方式只有一种：值传递。（副本）</li>
-<li>java把内存划分为两种：<strong>栈内存</strong>和<strong>堆内存</strong>。栈内存当超过变量的作用域后，java会自动释放为该变量分配的内存空间；堆内存用来存放由new创建的对象和数组，在堆中分配的内存，由java虚拟机的自动垃圾回收器来管理。</li>
-<li>JDK 1.5后，Java允许定义形参个数可变的参数。只能处于最后一个形参，类型后（…），多个参数值被当成数组传入。</li>
-</ul>
-<h1 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h1><h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><ul>
-<li>overload（重载）</li>
-<li>override（方法覆盖）</li>
-</ul>
-<p><strong>super</strong><br>当程序创建一个子类对象时，系统不仅会为该类中定义的实例变量分配内存，也会为它从父类继承得到的所有实例变量分配内存。</p>
-<h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><p>java引用变量有两个类型：编译时类型和运行时类型。<br>编译时类型由声明该变量时使用的类型决定，运行时类型由实际赋给该变量的对象决定。如果编译时类型和运行时类型不一致，就出现多态。</p>
-<h1 id="static"><a href="#static" class="headerlink" title="static"></a>static</h1><ol>
+<h1 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h1><p><strong><em>static</em></strong></p>
+<ol>
 <li>static修饰的成员不能访问没有static修饰的成员。</li>
 <li>static修饰的成员表明它属于这个类本身，而不属于该类的单个实例。</li>
 </ol>
-<h1 id="final"><a href="#final" class="headerlink" title="final"></a>final</h1><p>final修饰变量称为常量。常量命名规范，字母大写，单词间用下划线分开。如<strong>public static final</strong> KEY_MAN;</p>
+<p><strong><em>final</em></strong><br>final修饰变量称为常量。常量命名规范，字母大写，单词间用下划线分开。如<strong>public static final</strong> KEY_MAN;</p>
 <ol>
-<li><strong>final成员变量</strong>可以指定默认值，也可以在构造器或初始化块中分配初始值。</li>
+<li><strong>final 成员变量</strong>可以指定默认值，也可以在构造器或初始化块中分配初始值。</li>
 <li>final修饰的形参不能赋值</li>
-<li><strong>final引用类型变量</strong>，引用地址不变，但对象属性可以发生改变。</li>
-<li><strong>final方法</strong>不可被重写，Object类getClass()；可以被重载。</li>
-<li><strong>final类</strong>不可以有子类</li>
+<li><strong>final 引用类型变量</strong>，引用地址不变，但对象属性可以发生改变。</li>
+<li><strong>final 方法</strong>不可被重写，Object类getClass()；可以被重载。</li>
+<li><strong>final 类</strong>不可以有子类</li>
 </ol>
-<h1 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h1><p><strong>抽象方法和抽象类：</strong></p>
+<p><em>default</em><br>java 8 中新增的关键字。</p>
+<p><strong><em>transient</em></strong></p>
+<h1 id="抽象类与接口"><a href="#抽象类与接口" class="headerlink" title="抽象类与接口"></a>抽象类与接口</h1><p><strong>抽象（abstract）</strong></p>
 <ul>
 <li>抽象类里可以没有抽象方法。抽象方法不能有方法体。</li>
-<li>抽象类不能被实例化。抽象类的构造器不能用于创建实例，主要用于被其子类调用。</li>
-<li>final和abstract永远不能同时使用。（abstract修饰类只能被继承，修饰方法必须由子类重写；fina修饰类不能被继承，修饰方法不能被重写）</li>
-<li>abstract不能用于修饰成员变量和局部变量；不能修饰构造器。</li>
-<li>static和abstract不能同时修饰某个方法，但可以同时修饰内部类。abstract修饰方法不能定义为private访问权限。</li>
+<li>抽象类<code>不能被实例化</code>。抽象类的构造器不能用于创建实例，主要用于被其子类调用。</li>
+<li>final 和 abstract 永远不能同时使用。（abstract修饰类只能被继承，修饰方法必须由子类重写；fina修饰类不能被继承，修饰方法不能被重写）</li>
+<li>abstract 不能用于修饰成员变量和局部变量；不能修饰构造方法。</li>
+<li>static 和 abstract 不能同时修饰某个方法，但可以同时修饰内部类。abstract 修饰方法不能定义为private 访问权限。</li>
 </ul>
-<p>抽象类体现的是一种模板模式的设计。</p>
-<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><p>内部类主要用于设计具有相互协作关系的类集合。</p>
-<h2 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h2><p>匿名内部类适合创建只需要一次使用的类。</p>
+<p>抽象类体现的是一种模板模式的设计，抽象类作为多个子类的通用模板，子类在抽象类的基础上进行扩展、改造。</p>
+<p><strong>接口（interface）</strong><br>接口里不能包含普通方法，接口里的所有方法都是抽象方法。Java 8 对接口进行了改进，允许在接口中定义默认方法，默认方法可以提供方法实现。<br>一个接口可以有多个直接父接口，但接口只能继承接口，不能继承类。<br>接口里可以包含成员变量（只能是静态常量）、方法（只能是抽象实例方法、类方法或默认方法）、内部类（包括内部接口、枚举）</p>
+<blockquote>
+<p>接口中定义成员变量时，不管是否使用 public static final 修饰符，接口里的成员变量总是使用这三个修饰符来修饰；</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// java 8 允许在接口中定义类方法、默认方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"接口中定义静态方法"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"默认方法"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">empty</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><p>内部类主要用于设计具有相互协作关系的类集合。<br>内部类比外部类可以多使用三个修饰符：private、protected、static</p>
+<p><strong><em>非静态内部类</em></strong><br><strong><em>静态内部类</em></strong><br>static 修饰一个内部类时，则这个内部类就属于外部类本身，而不属于外部类的某个对象。<br><strong><em>局部内部类</em></strong><br>在方法内部定义一个内部类时，称为局部内部类。<br><strong><em>匿名内部类</em></strong><br>匿名内部类适合创建只需要一次使用的类。</p>
 <ul>
-<li>匿名内部类不能是抽象类。</li>
-<li>匿名内部类不能定义构造器。匿名内部类没有类名。</li>
+<li>匿名内部类<code>不能是抽象类</code>。系统创建匿名内部类时，会立即创建匿名内部类的对象。</li>
+<li>匿名内部类<code>不能定义构造器</code>。匿名内部类没有类名，所以无法定义构造方法，可以定义初始化块。</li>
 </ul>
-<h1 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h1><p>Java从JDK1.5开始支持枚举。添加了抽象类java.lang.Enum，在枚举中可以定义属性、构造方法、普通方法、抽象方法。<br>一个Java源文件最多只能定义一个public访问权限的枚举类，且该Java源文件必须和该枚举类的类名相同。<br>可以像使用普通的类一样使用枚举，编译器做了些什么？欲知详情，最有效的途径就是查看生成的字节码。</p>
-<h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><p><strong>Java SE 5</strong>新增泛型（实现了参数化类型的概念）概念。编写可以应用于各种类型的代码。<br>类型参数，用尖括号括住，放在类名后面。然后在使用这个类的时候，再用实际的类型替换此类型参数。<br>元组（&lt;A,B,C…&gt;）</p>
-<h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>每当创建描述符性质的类或接口时，一旦其中包含了重复性的工作，那就可以考虑使用注解来简化与自动化该过程。<br>Android中有两种应用方式，一种方式是基于反射的，即在程序的运行期间获取类信息进行反射调用；另一种是使用注解处理，在编译期间生成许多代码，然后在运行期间通过调用这些代码来实现目标功能。<br>Java中注解分为<code>标准注解</code>和<code>元注解</code>。标准注解是Java为我们提供的预定义的注解，共有四种：@Override、@Deprecated、@SuppressWarnnings和@SafeVarags。元注解是用来提供给用户自定义注解用的，共有五种（截止Java8）</p>
-<h2 id="Target"><a href="#Target" class="headerlink" title="@Target"></a>@Target</h2><p>定义注解将应用于什么地方（如是一个方法或一个域）ElementType</p>
-<h2 id="Retention"><a href="#Retention" class="headerlink" title="@Retention"></a>@Retention</h2><p>定义该注解在哪一个级别可用。<br>RetentionPolicy枚举：</p>
+<h1 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h1><p>java 5 开始支持枚举（关键字 <code>enum</code>）。添加了抽象类 <code>java.lang.Enum</code>，在枚举中可以定义属性、构造方法、普通方法、抽象方法。<br>可以像使用普通的类一样使用枚举，编译器做了些什么？欲知详情，最有效的途径就是查看生成的字节码。<br>枚举类与普通类的区别？</p>
+<ul>
+<li>枚举类默认继承了 java.lang.Enum 类，而不是默认继承 Object 类</li>
+<li>枚举类不能派生子类。默认使用 final 修饰</li>
+<li>枚举类的所有实例必须在枚举类的第一行显式列出，否则这个枚举类永远都不能产生实例。</li>
+</ul>
+<h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><p><strong>Java SE 5</strong>新增泛型（实现了参数化类型的概念）概念。编写可以应用于各种类型的代码。<br>类型参数，用尖括号括住，放在类名后面。然后在使用这个类的时候，再用实际的类型替换此类型参数。<br><strong><em>泛型方法</em></strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 &lt;T, S&gt; 返回值类型 方法名(形参列表) &#123;</span><br><span class="line">    <span class="comment">// 方法体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><p>java将所有的非正常情况分为两种：异常（<code>Exception</code>）和错误（<code>Error</code>），它们都继承 <code>Throwable</code>。<br>Error一般指与虚拟机相关的问题，如系统崩溃、虚拟机错误、动态链接失败等，这种错误无法恢复或不可能捕获，将导致应用程序中断。</p>
+<p>java中异常机制关键字，try、catch、finally、throw、throws</p>
+<ul>
+<li>throw：抛出一个实际的异常，可以单独作为语句使用，抛出一个具体的异常对象。</li>
+<li>throws：声明方法可能抛出的异常。调用该方法时，表明该方法希望它的调用者来处理该异常。</li>
+</ul>
+<p>java的异常分为两大类：Checked 异常和 Runtime 异常。<br><strong><em>常见异常类型：</em></strong></p>
+<ul>
+<li>IndexOutOfBoundsException</li>
+<li>IllegalStateException</li>
+<li>NumberFormatException</li>
+<li>NullPointerException</li>
+<li>…</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// java 7 开始，可以使用一个catch块捕获多种类型的异常，使用竖线（|）隔开</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// 可能发生异常的代码</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (IndexOutOfBoundsException|NumberFormatException ie) &#123;</span><br><span class="line">    <span class="comment">// 处理捕获的异常</span></span><br><span class="line">    <span class="comment">// 捕获多种异常时，异常变量默认有 final 修饰，以下代码错误</span></span><br><span class="line">    ie = <span class="keyword">new</span> NullPointerException();</span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">    <span class="comment">// 捕获一种异常时，异常变量没有 final 修饰</span></span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    <span class="comment">// 资源回收</span></span><br><span class="line">    <span class="comment">// 总会被执行。如果在异常处理代码中使用System.exit(1);语句来退出虚拟机，则finally块失去执行的机会。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><p>每当创建描述符性质的类或接口时，一旦其中包含了重复性的工作，那就可以考虑使用注解来简化与自动化该过程。<br>Android中有两种应用方式，一种方式是基于反射的，即在程序的运行期间获取类信息进行反射调用；另一种是使用注解处理，在编译期间生成许多代码，然后在运行期间通过调用这些代码来实现目标功能。<br>Java中注解分为<code>标准注解</code>和<code>元注解</code>。标准注解是Java为我们提供的预定义的注解，共有四种：@Override、@Deprecated、@SuppressWarnnings和@SafeVarags。元注解是用来提供给用户自定义注解用的，共有五种（截止Java8）<br> @Target<br>定义注解将应用于什么地方（如是一个方法或一个域）ElementType<br>@Retention<br>定义该注解在哪一个级别可用。<br>RetentionPolicy枚举：</p>
 <ul>
 <li>SOURCE：注解将被编译器丢弃</li>
 <li>CLASS：注解在class文件中使用，但会被JVM丢弃</li>
 <li>RUNTIME：在运行期保留注解，可以通过反射读取注解的信息</li>
 </ul>
-<h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><h1 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h1><h2 id="引言-1"><a href="#引言-1" class="headerlink" title="引言"></a>引言</h2><p>输入、输出流分为字节流和字符流。<br>Java的IO流使用一种装饰器设计模式，将IO流分为底层节点流和上层处理流。<br>Java 7在java.nio新的IO API，称为NIO 2。<br>Java对象的序列化机制，使用序列化机制可以把内存中的Java对象转换成二进制字节流，就可以把Java对象存储到磁盘里，或者在网络上传输Java对象。这是Java提供分布式编程的重要基础。</p>
-<h2 id="File"><a href="#File" class="headerlink" title="File"></a>File</h2><h2 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h2><h2 id="对象序列化"><a href="#对象序列化" class="headerlink" title="对象序列化"></a>对象序列化</h2><p>对象序列化（Serializable）：将一个对象编码成一个字节流。<br><strong>代价：</strong>一旦一个类被发布，就大大降低了“改变这个类的实现”的灵活性；增加了出现bug和安全漏洞的可能性；随着类发行新的版本，相关的测试负担也增加了。</p>
-<h1 id="类加载机制与反射"><a href="#类加载机制与反射" class="headerlink" title="类加载机制与反射"></a>类加载机制与反射</h1><p><a href="https://www.cnblogs.com/whgk/p/6122036.html" target="_blank" rel="noopener">https://www.cnblogs.com/whgk/p/6122036.html</a><br>Java中获得Class对象通常三种方式：</p>
+<h1 id="IO（输入-输出）"><a href="#IO（输入-输出）" class="headerlink" title="IO（输入/输出）"></a>IO（输入/输出）</h1><p>输入、输出流分为<code>字节流</code>和<code>字符流</code>。<br>Java的IO流使用一种<code>装饰器设计模式</code>，将IO流分为底层节点流和上层处理流。<br>Java 7在 <code>java.nio</code> 新的IO API，称为 NIO 2。</p>
+<p><strong><em>File 类</em></strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> java.io;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">File</span> <span class="keyword">implements</span> <span class="title">Serializable</span>, <span class="title">Comparable</span>&lt;<span class="title">File</span>&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">// 访问文件名相关的方法</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">String</span> <span class="title">getName</span>() // 返回此 <span class="title">File</span> 对象所表示的文件名或路径名（如果是路径，则返回最后一级子路径名）</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">String</span> <span class="title">getPath</span>() // 返回此 <span class="title">File</span> 对象所对应的路径名</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">// 文件检测相关的方法</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">boolean</span> <span class="title">exists</span>() // 判断 <span class="title">File</span> 对象所对应的文件或目录是否存在</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">boolean</span> <span class="title">isFile</span>() // 判断 <span class="title">File</span> 对象所对应的是否是文件，而不是目录</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">boolean</span> <span class="title">isDirectory</span>() // 判断 <span class="title">File</span> 对象所对应的是否是目录，而不是文件</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">// 文件操作相关的方法</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">boolean</span> <span class="title">createNewFile</span>() <span class="title">throws</span> <span class="title">IOException</span></span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">boolean</span> <span class="title">delete</span>()</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">// 目录操作相关的方法</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">boolean</span> <span class="title">mkdir</span>() // 试图创建一个 <span class="title">File</span> 对象所对应的目录</span></span><br></pre></td></tr></table></figure></p>
+<p><strong><em>输入流和输出流</em></strong><br>java的输入流主要由 <code>InputStream</code> 和 <code>Reader</code> 作为基类，而输出流则由 <code>OutputStream</code> 和 <code>Writer</code> 作为基类。都是一些抽象基类，无法直接创建实例。<br><strong><em>字节流和字符流</em></strong><br>字节流操作的数据单元是8位的字节，而字符流操作的数据单元是16位的字符。<br>字节流主要由 InputStream 和 OutputStream 作为基类，而字符流则主要由 Reader 和 Writer 作为基类。<br><strong><em>节点流和处理流</em></strong><br>按照流的角色来分，可以分为节点流和处理流。</p>
+<p><strong><em>相关类</em></strong></p>
+<ul>
+<li>FileInputStream</li>
+<li>FileReader</li>
+<li>FilterOutputStream</li>
+</ul>
+<p><strong><em>对象序列化</em></strong><br>对象序列化（<code>Serializable</code>）：将一个对象编码成一个字节流。<br>java对象的序列化机制，使用序列化机制可以把内存中的java对象转换成二进制字节流，就可以把java对象存储到磁盘里，或者在网络上传输java对象。这是java提供分布式编程的重要基础。</p>
+<h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><p>java 中获得 Class 对象通常三种方式：</p>
 <ul>
 <li>Class.forName(String className)</li>
-<li>调用某个类的class属性来获取该类对应的Class对象。</li>
-<li>调用某个对象的getClass()方法。</li>
+<li>调用某个类的 class 属性来获取该类对应的 Class 对象。</li>
+<li>调用某个对象的 getClass() 方法。</li>
 </ul>
-<p>1和2都是直接根据类来取得该类的Class对象，相比之下，第二种优势：</p>
+<p>反射可以获取哪些信息？</p>
 <ul>
-<li>代码更安全。编译阶段可以检查需要访问的Class对象是否存在。</li>
-<li>程序性能更好。因无需调用方法。</li>
+<li>获取指定构造器</li>
+<li>获取成员变量</li>
+<li>获得方法</li>
+</ul>
+<h1 id="Lambda-表达式"><a href="#Lambda-表达式" class="headerlink" title="Lambda 表达式"></a>Lambda 表达式</h1><p>java 8 新增</p>
+<ul>
+<li>新参列表。允许省略形参类型。只有一个参数时，可以省略圆括号。</li>
+<li>箭头（-&gt;）。</li>
+<li>代码块。只包含一条语句时，可以省略花括号。</li>
 </ul>
 
       
@@ -1044,7 +1077,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标识符和关键字"><span class="nav-text">标识符和关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#控制流"><span class="nav-text">控制流</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-text">数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象"><span class="nav-text">面向对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#封装"><span class="nav-text">封装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承"><span class="nav-text">继承</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多态"><span class="nav-text">多态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#static"><span class="nav-text">static</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#final"><span class="nav-text">final</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#抽象类"><span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口"><span class="nav-text">接口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类"><span class="nav-text">内部类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名内部类"><span class="nav-text">匿名内部类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#枚举"><span class="nav-text">枚举</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型"><span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注解"><span class="nav-text">注解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Target"><span class="nav-text">@Target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Retention"><span class="nav-text">@Retention</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常"><span class="nav-text">异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IO"><span class="nav-text">IO</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言-1"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File"><span class="nav-text">File</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO流"><span class="nav-text">IO流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象序列化"><span class="nav-text">对象序列化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类加载机制与反射"><span class="nav-text">类加载机制与反射</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象与java"><span class="nav-text">面向对象与java</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流程控制"><span class="nav-text">流程控制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-text">数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关键字"><span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#抽象类与接口"><span class="nav-text">抽象类与接口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类"><span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#枚举类"><span class="nav-text">枚举类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型"><span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常处理"><span class="nav-text">异常处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注解"><span class="nav-text">注解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IO（输入-输出）"><span class="nav-text">IO（输入/输出）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反射"><span class="nav-text">反射</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lambda-表达式"><span class="nav-text">Lambda 表达式</span></a></li></ol></div>
             
 
           </div>
